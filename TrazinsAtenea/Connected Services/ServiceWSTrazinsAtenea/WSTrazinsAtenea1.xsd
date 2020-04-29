@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://WSTrazinsAtenea.com" elementFormDefault="qualified" targetNamespace="http://WSTrazinsAtenea.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Caja_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caja" nillable="true" type="tns:Caja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Caja">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activa" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CHIdPropietario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CajaId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CajaId_CodigoCaja" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoCaja" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EspId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Especialidad_Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HosIdPropietario" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Caja" nillable="true" type="tns:Caja" />
+  <xs:complexType name="BaseModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuditMaquina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AuditProceso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AuditUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HosId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseModel" nillable="true" type="tns:BaseModel" />
+  <xs:element name="Caja_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Caja_SelectResult" nillable="true" type="tns:ArrayOfCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfCaja">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Caja" nillable="true" type="tns:Caja" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCaja" nillable="true" type="tns:ArrayOfCaja" />
+  <xs:element name="Caja_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caja" nillable="true" type="tns:Caja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Caja_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Caja_InsertResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Caja_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caja" nillable="true" type="tns:Caja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Caja_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Caja_UpdateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
