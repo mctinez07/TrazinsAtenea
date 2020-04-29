@@ -145,9 +145,6 @@
   <ItemGroup>
     <None Include="Resources\ic_arrow_drop_down.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>ROBOCOPY "$(TargetDir) " "$(TargetDir)libs\ " /XF *.exe *.config *.manifest /XD libs logs data /E /IS /MOVE
