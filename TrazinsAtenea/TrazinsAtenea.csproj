@@ -62,6 +62,12 @@
     <Compile Include="Controls\DoubleLabelMenu.Designer.cs">
       <DependentUpon>DoubleLabelMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Inventory\InventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inventory\InventoryForm.Designer.cs">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GlobalResources\TrazinsAtenea.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -77,6 +83,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\DoubleLabelMenu.resx">
       <DependentUpon>DoubleLabelMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inventory\InventoryForm.resx">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GlobalResources\TrazinsAtenea.en-GB.resx" />
     <EmbeddedResource Include="GlobalResources\TrazinsAtenea.fr.resx" />
