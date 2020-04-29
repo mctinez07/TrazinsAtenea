@@ -38,10 +38,11 @@
             this.dlmLoginInfo = new TrazinsAtenea.Controls.DoubleLabelMenu();
             this.tmrMain = new System.Windows.Forms.Timer(this.components);
             this.cmsExit = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cmsMainMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsiInventory = new System.Windows.Forms.ToolStripMenuItem();
             this.tsiChangeUser = new System.Windows.Forms.ToolStripMenuItem();
             this.tsiExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsMainMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsiInventory = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlMainBody = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pnlMainHedaer)).BeginInit();
             this.pnlMainHedaer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlMainTimer)).BeginInit();
@@ -50,6 +51,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.cmsExit.SuspendLayout();
             this.cmsMainMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlMainBody)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMainHedaer
@@ -153,7 +155,19 @@
             this.tsiChangeUser,
             this.tsiExit});
             this.cmsExit.Name = "cmsExit";
-            this.cmsExit.Size = new System.Drawing.Size(249, 90);
+            this.cmsExit.Size = new System.Drawing.Size(249, 68);
+            // 
+            // tsiChangeUser
+            // 
+            this.tsiChangeUser.Name = "tsiChangeUser";
+            this.tsiChangeUser.Size = new System.Drawing.Size(248, 32);
+            this.tsiChangeUser.Text = "Cambiar de usuar";
+            // 
+            // tsiExit
+            // 
+            this.tsiExit.Name = "tsiExit";
+            this.tsiExit.Size = new System.Drawing.Size(248, 32);
+            this.tsiExit.Text = "tsiExit";
             // 
             // cmsMainMenu
             // 
@@ -169,17 +183,18 @@
             this.tsiInventory.Size = new System.Drawing.Size(248, 44);
             this.tsiInventory.Text = "Inventario";
             // 
-            // tsiChangeUser
+            // pnlMainBody
             // 
-            this.tsiChangeUser.Name = "tsiChangeUser";
-            this.tsiChangeUser.Size = new System.Drawing.Size(167, 22);
-            this.tsiChangeUser.Text = "Cambiar de usuar";
-            // 
-            // tsiExit
-            // 
-            this.tsiExit.Name = "tsiExit";
-            this.tsiExit.Size = new System.Drawing.Size(167, 22);
-            this.tsiExit.Text = "tsiExit";
+            this.pnlMainBody.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
+            this.pnlMainBody.Appearance.Options.UseBackColor = true;
+            this.pnlMainBody.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnlMainBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMainBody.Location = new System.Drawing.Point(0, 54);
+            this.pnlMainBody.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
+            this.pnlMainBody.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnlMainBody.Name = "pnlMainBody";
+            this.pnlMainBody.Size = new System.Drawing.Size(1384, 702);
+            this.pnlMainBody.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -189,6 +204,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1384, 756);
+            this.Controls.Add(this.pnlMainBody);
             this.Controls.Add(this.pnlMainHedaer);
             this.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -206,6 +222,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.cmsExit.ResumeLayout(false);
             this.cmsMainMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pnlMainBody)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -225,5 +242,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsiInventory;
         private System.Windows.Forms.ToolStripMenuItem tsiChangeUser;
         private System.Windows.Forms.ToolStripMenuItem tsiExit;
+        private DevExpress.XtraEditors.PanelControl pnlMainBody;
     }
 }
