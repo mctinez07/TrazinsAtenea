@@ -63,9 +63,49 @@ namespace TrazinsAtenea.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap caja_18x18 {
+            get {
+                object obj = ResourceManager.GetObject("caja-18x18", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_arrow_drop_down {
             get {
                 object obj = ResourceManager.GetObject("ic_arrow_drop_down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap instrumental_18x18 {
+            get {
+                object obj = ResourceManager.GetObject("instrumental-18x18", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap material_especial_18x18 {
+            get {
+                object obj = ResourceManager.GetObject("material_especial-18x18", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap materialgenerico_18x18 {
+            get {
+                object obj = ResourceManager.GetObject("materialgenerico-18x18", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

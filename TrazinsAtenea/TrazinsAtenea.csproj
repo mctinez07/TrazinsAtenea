@@ -154,6 +154,18 @@
   <ItemGroup>
     <None Include="Resources\ic_arrow_drop_down.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caja-18x18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instrumental-18x18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\materialgenerico-18x18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material_especial-18x18.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>ROBOCOPY "$(TargetDir) " "$(TargetDir)libs\ " /XF *.exe *.config *.manifest /XD libs logs data /E /IS /MOVE
