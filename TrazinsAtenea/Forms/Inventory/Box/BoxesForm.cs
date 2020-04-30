@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using TrazinsAtenea.GlobalEngine;
 
 namespace TrazinsAtenea.Forms.Inventory.Box
 {
@@ -17,5 +18,19 @@ namespace TrazinsAtenea.Forms.Inventory.Box
         {
             InitializeComponent();
         }
+
+        private void BoxesForm_Load(object sender, EventArgs e)
+        {
+            ServiceWSTrazinsAtenea.WSTrazinsAteneaClient service = new ServiceWSTrazinsAtenea.WSTrazinsAteneaClient();
+
+            var boxes = service.Caja_Select(new ServiceWSTrazinsAtenea.Caja() { HosId = "002", ChId = "002" });
+
+            gdcBoxes.DataSource = boxes;
+
+            gdcSpeciality.Caption = Engine.GetLanguageResource(gdcSpeciality.Name);
+            
+        }
+
+        
     }
 }

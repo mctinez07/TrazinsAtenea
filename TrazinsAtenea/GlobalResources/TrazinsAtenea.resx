@@ -130,4 +130,7 @@
   <data name="Caducity" xml:space="preserve">
     <value>Caducidad</value>
   </data>
+  <data name="Speciality" xml:space="preserve">
+    <value>Especialidad</value>
+  </data>
 </root>

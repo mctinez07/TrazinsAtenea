@@ -1,4 +1,6 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +14,7 @@ namespace TrazinsAtenea.GlobalEngine
 {
     public class Engine
     {
-        //Metodo para obtener el texto a mostrar.
+        //Método para obtener el texto a mostrar.
         public static string GetLanguageResource(string resource)
         {
             //El nombre del recurso tiene que coincidir con el del control
@@ -21,9 +23,9 @@ namespace TrazinsAtenea.GlobalEngine
             Assembly assembly = Assembly.Load("TrazinsAtenea");
 
             ResourceManager rm = new ResourceManager("TrazinsAtenea.GlobalResources.TrazinsAtenea", assembly);
-            var e = rm.GetString(resourceKey);
+            var result = rm.GetString(resourceKey);
             
-            return e;
+            return result;
         }
 
         //Método para abrir los formularios en los paneles.

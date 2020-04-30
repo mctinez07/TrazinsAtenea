@@ -142,6 +142,15 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Especialidad.
+        /// </summary>
+        internal static string Speciality {
+            get {
+                return ResourceManager.GetString("Speciality", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Situación Especial.
         /// </summary>
         internal static string SpecialSituation {

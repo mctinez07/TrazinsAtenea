@@ -130,4 +130,7 @@
   <data name="External" xml:space="preserve">
     <value>External</value>
   </data>
+  <data name="Speciality" xml:space="preserve">
+    <value>Speciality</value>
+  </data>
 </root>
