@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using TrazinsAtenea.Controls;
 using TrazinsAtenea.Forms.Inventory;
+using TrazinsAtenea.GlobalEngine;
 
 namespace TrazinsAtenea
 {
@@ -136,8 +137,8 @@ namespace TrazinsAtenea
             switch (element.Name)
             {
                 case "tsiInventory":                                       
-                    btnMainMenu.Text = GlobalResources.TrazinsAtenea.Inventory;
-                    OpenForm(new InventoryForm());
+                    btnMainMenu.Text = GlobalResources.TrazinsAtenea.Inventory;                  
+                    Engine.OpenForm(new InventoryForm(), pnlMainBody);
                     break;
                 case "tsiExit":
                     MessageBox.Show("Exit");
@@ -151,25 +152,7 @@ namespace TrazinsAtenea
             };
         }
 
-        #endregion
-
-        //Poner también en modulo general??
-        private void OpenForm(object Form)
-        {
-            if (this.pnlMainBody.Controls.Count > 0)
-            {
-                this.pnlMainBody.Controls.RemoveAt(0);
-            }
-
-            Form frm = Form as Form;
-
-            frm.TopLevel = false;
-            frm.Dock = DockStyle.Fill;
-
-            this.pnlMainBody.Controls.Add(frm);
-            this.pnlMainBody.Tag = frm;
-            frm.Show();
-        }
+        #endregion        
 
         private void tmrMain_Tick(object sender, EventArgs e)
         {

@@ -99,7 +99,7 @@
             this.btnLocate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
             this.btnLocate.FlatAppearance.BorderSize = 2;
             this.btnLocate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocate.Location = new System.Drawing.Point(132, 6);
+            this.btnLocate.Location = new System.Drawing.Point(153, 6);
             this.btnLocate.Name = "btnLocate";
             this.btnLocate.Size = new System.Drawing.Size(48, 48);
             this.btnLocate.TabIndex = 1;
@@ -291,6 +291,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InventoryForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.InventoryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnlInventoryMenu)).EndInit();
             this.pnlInventoryMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnlLocateButtons)).EndInit();

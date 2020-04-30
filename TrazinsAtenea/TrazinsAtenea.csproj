@@ -77,6 +77,7 @@
     <Compile Include="Forms\Inventory\InventoryForm.Designer.cs">
       <DependentUpon>InventoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalEngine\Engine.cs" />
     <Compile Include="GlobalResources\TrazinsAtenea.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
