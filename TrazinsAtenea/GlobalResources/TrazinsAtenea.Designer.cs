@@ -61,6 +61,24 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Caja.
+        /// </summary>
+        internal static string Box {
+            get {
+                return ResourceManager.GetString("Box", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Caducidad.
+        /// </summary>
+        internal static string Caducity {
+            get {
+                return ResourceManager.GetString("Caducity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Cambiar de usuario.
         /// </summary>
         internal static string ChangeUser {
@@ -79,6 +97,33 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Externo.
+        /// </summary>
+        internal static string External {
+            get {
+                return ResourceManager.GetString("External", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Genérico.
+        /// </summary>
+        internal static string Generic {
+            get {
+                return ResourceManager.GetString("Generic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Suelto.
+        /// </summary>
+        internal static string Instrumental {
+            get {
+                return ResourceManager.GetString("Instrumental", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Inventario.
         /// </summary>
         internal static string Inventory {
@@ -93,6 +138,15 @@ namespace TrazinsAtenea.GlobalResources {
         internal static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Situación Especial.
+        /// </summary>
+        internal static string SpecialSituation {
+            get {
+                return ResourceManager.GetString("SpecialSituation", resourceCulture);
             }
         }
         

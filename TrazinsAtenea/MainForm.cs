@@ -23,10 +23,18 @@ namespace TrazinsAtenea
             dlmLoginInfo.SetValues("María García", "TAP");
 
             lblMainTimer.Text = DateTime.Now.ToString();
+            //Traducir();
+        }
+        
+        // Metodo para probar las traducciones.
+        private void Traducir()
+        {
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-GB");
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
+            
             LoadHeaderMenu(btnMainMenu, cmsMainMenu);
             LoadHeaderMenu(dlmLoginInfo, cmsExit);
         }
@@ -65,8 +73,8 @@ namespace TrazinsAtenea
 
                 item.Padding = new Padding(5);
 
-                //Obtener la traducción del elemento                
-                item.Text = GetResource(item.Name);
+                //Obtener la traducción del elemento
+                item.Text = Engine.GetLanguageResource(item.Name);
 
                 item.Click += new EventHandler(ContextMenuItem_Click);
                 item.TextAlign = ContentAlignment.BottomLeft;
@@ -107,25 +115,7 @@ namespace TrazinsAtenea
 
                 crtl.ContextMenuStrip.Show(this, Posicion);
             };
-        }
-
-        //Obtiene el recurso para el multilenguaje.
-        //Poner en bases. Modificarlo para cualquier control??
-        //El valor del tag lo puedo usar para saber que recurso coger.
-        private string GetResource(string value)
-        {
-            switch (value)
-            {
-                case "tsiChangeUser":
-                    return GlobalResources.TrazinsAtenea.ChangeUser;
-                case "tsiExit":
-                    return GlobalResources.TrazinsAtenea.Exit;
-                case "tsiInventory":
-                    return GlobalResources.TrazinsAtenea.Inventory;
-                default:
-                    return string.Empty;
-            }
-        }
+        }        
 
         private void ContextMenuItem_Click(object sender, EventArgs e)
         {

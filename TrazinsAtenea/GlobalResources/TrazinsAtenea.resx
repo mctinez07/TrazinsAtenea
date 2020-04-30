@@ -112,4 +112,22 @@
   <data name="Washes" xml:space="preserve">
     <value>Lavados</value>
   </data>
+  <data name="Box" xml:space="preserve">
+    <value>Caja</value>
+  </data>
+  <data name="Instrumental" xml:space="preserve">
+    <value>Suelto</value>
+  </data>
+  <data name="Generic" xml:space="preserve">
+    <value>Genérico</value>
+  </data>
+  <data name="External" xml:space="preserve">
+    <value>Externo</value>
+  </data>
+  <data name="SpecialSituation" xml:space="preserve">
+    <value>Situación Especial</value>
+  </data>
+  <data name="Caducity" xml:space="preserve">
+    <value>Caducidad</value>
+  </data>
 </root>

@@ -22,6 +22,15 @@ namespace TrazinsAtenea.Forms.Inventory
 
         private void InventoryForm_Load(object sender, EventArgs e)
         {
+            foreach (Control item in this.pnlInventoryMenu.Controls)
+            {
+                if (!string.IsNullOrEmpty(item.Text))
+                {
+                    var a = Engine.GetLanguageResource(item.Name);
+                    item.Text = a;
+                }
+            }
+            
             Engine.OpenForm(new BoxesForm(), pnlInventoryBody);
         }
     }

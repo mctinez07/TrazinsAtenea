@@ -35,7 +35,7 @@
             this.separatorControl6 = new DevExpress.XtraEditors.SeparatorControl();
             this.btnCaducity = new DevExpress.XtraEditors.SimpleButton();
             this.separatorControl5 = new DevExpress.XtraEditors.SeparatorControl();
-            this.btnSitEspecial = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSpecialSituation = new DevExpress.XtraEditors.SimpleButton();
             this.separatorControl4 = new DevExpress.XtraEditors.SeparatorControl();
             this.btnExternal = new DevExpress.XtraEditors.SimpleButton();
             this.separatorControl3 = new DevExpress.XtraEditors.SeparatorControl();
@@ -43,7 +43,7 @@
             this.separatorControl2 = new DevExpress.XtraEditors.SeparatorControl();
             this.btnInstrumental = new DevExpress.XtraEditors.SimpleButton();
             this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
-            this.btnBoxes = new DevExpress.XtraEditors.SimpleButton();
+            this.btnBox = new DevExpress.XtraEditors.SimpleButton();
             this.pnlInventoryBody = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pnlInventoryMenu)).BeginInit();
             this.pnlInventoryMenu.SuspendLayout();
@@ -65,7 +65,7 @@
             this.pnlInventoryMenu.Controls.Add(this.separatorControl6);
             this.pnlInventoryMenu.Controls.Add(this.btnCaducity);
             this.pnlInventoryMenu.Controls.Add(this.separatorControl5);
-            this.pnlInventoryMenu.Controls.Add(this.btnSitEspecial);
+            this.pnlInventoryMenu.Controls.Add(this.btnSpecialSituation);
             this.pnlInventoryMenu.Controls.Add(this.separatorControl4);
             this.pnlInventoryMenu.Controls.Add(this.btnExternal);
             this.pnlInventoryMenu.Controls.Add(this.separatorControl3);
@@ -73,7 +73,7 @@
             this.pnlInventoryMenu.Controls.Add(this.separatorControl2);
             this.pnlInventoryMenu.Controls.Add(this.btnInstrumental);
             this.pnlInventoryMenu.Controls.Add(this.separatorControl1);
-            this.pnlInventoryMenu.Controls.Add(this.btnBoxes);
+            this.pnlInventoryMenu.Controls.Add(this.btnBox);
             this.pnlInventoryMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlInventoryMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlInventoryMenu.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
@@ -123,7 +123,7 @@
             // 
             this.separatorControl6.Dock = System.Windows.Forms.DockStyle.Left;
             this.separatorControl6.LineOrientation = System.Windows.Forms.Orientation.Vertical;
-            this.separatorControl6.Location = new System.Drawing.Point(856, 0);
+            this.separatorControl6.Location = new System.Drawing.Point(1016, 0);
             this.separatorControl6.Name = "separatorControl6";
             this.separatorControl6.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.separatorControl6.Size = new System.Drawing.Size(10, 60);
@@ -136,9 +136,9 @@
             this.btnCaducity.Appearance.Options.UseBackColor = true;
             this.btnCaducity.Appearance.Options.UseFont = true;
             this.btnCaducity.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnCaducity.Location = new System.Drawing.Point(744, 0);
+            this.btnCaducity.Location = new System.Drawing.Point(869, 0);
             this.btnCaducity.Name = "btnCaducity";
-            this.btnCaducity.Size = new System.Drawing.Size(112, 60);
+            this.btnCaducity.Size = new System.Drawing.Size(147, 60);
             this.btnCaducity.TabIndex = 10;
             this.btnCaducity.Text = "CADUCIDAD";
             // 
@@ -146,32 +146,32 @@
             // 
             this.separatorControl5.Dock = System.Windows.Forms.DockStyle.Left;
             this.separatorControl5.LineOrientation = System.Windows.Forms.Orientation.Vertical;
-            this.separatorControl5.Location = new System.Drawing.Point(734, 0);
+            this.separatorControl5.Location = new System.Drawing.Point(859, 0);
             this.separatorControl5.Name = "separatorControl5";
             this.separatorControl5.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.separatorControl5.Size = new System.Drawing.Size(10, 60);
             this.separatorControl5.TabIndex = 9;
             // 
-            // btnSitEspecial
+            // btnSpecialSituation
             // 
-            this.btnSitEspecial.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            this.btnSitEspecial.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSitEspecial.Appearance.Options.UseBackColor = true;
-            this.btnSitEspecial.Appearance.Options.UseFont = true;
-            this.btnSitEspecial.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnSitEspecial.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.material_especial_18x18;
-            this.btnSitEspecial.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnSitEspecial.Location = new System.Drawing.Point(503, 0);
-            this.btnSitEspecial.Name = "btnSitEspecial";
-            this.btnSitEspecial.Size = new System.Drawing.Size(231, 60);
-            this.btnSitEspecial.TabIndex = 8;
-            this.btnSitEspecial.Text = "SITUACIÓN ESPECIAL";
+            this.btnSpecialSituation.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            this.btnSpecialSituation.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSpecialSituation.Appearance.Options.UseBackColor = true;
+            this.btnSpecialSituation.Appearance.Options.UseFont = true;
+            this.btnSpecialSituation.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnSpecialSituation.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.material_especial_18x18;
+            this.btnSpecialSituation.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnSpecialSituation.Location = new System.Drawing.Point(628, 0);
+            this.btnSpecialSituation.Name = "btnSpecialSituation";
+            this.btnSpecialSituation.Size = new System.Drawing.Size(231, 60);
+            this.btnSpecialSituation.TabIndex = 8;
+            this.btnSpecialSituation.Text = "SITUACIÓN ESPECIAL";
             // 
             // separatorControl4
             // 
             this.separatorControl4.Dock = System.Windows.Forms.DockStyle.Left;
             this.separatorControl4.LineOrientation = System.Windows.Forms.Orientation.Vertical;
-            this.separatorControl4.Location = new System.Drawing.Point(493, 0);
+            this.separatorControl4.Location = new System.Drawing.Point(618, 0);
             this.separatorControl4.Name = "separatorControl4";
             this.separatorControl4.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.separatorControl4.Size = new System.Drawing.Size(10, 60);
@@ -184,9 +184,9 @@
             this.btnExternal.Appearance.Options.UseBackColor = true;
             this.btnExternal.Appearance.Options.UseFont = true;
             this.btnExternal.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnExternal.Location = new System.Drawing.Point(381, 0);
+            this.btnExternal.Location = new System.Drawing.Point(471, 0);
             this.btnExternal.Name = "btnExternal";
-            this.btnExternal.Size = new System.Drawing.Size(112, 60);
+            this.btnExternal.Size = new System.Drawing.Size(147, 60);
             this.btnExternal.TabIndex = 6;
             this.btnExternal.Text = "EXTERNO";
             // 
@@ -194,7 +194,7 @@
             // 
             this.separatorControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.separatorControl3.LineOrientation = System.Windows.Forms.Orientation.Vertical;
-            this.separatorControl3.Location = new System.Drawing.Point(371, 0);
+            this.separatorControl3.Location = new System.Drawing.Point(461, 0);
             this.separatorControl3.Name = "separatorControl3";
             this.separatorControl3.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.separatorControl3.Size = new System.Drawing.Size(10, 60);
@@ -209,9 +209,9 @@
             this.btnGeneric.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnGeneric.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.materialgenerico_18x18;
             this.btnGeneric.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnGeneric.Location = new System.Drawing.Point(232, 0);
+            this.btnGeneric.Location = new System.Drawing.Point(314, 0);
             this.btnGeneric.Name = "btnGeneric";
-            this.btnGeneric.Size = new System.Drawing.Size(139, 60);
+            this.btnGeneric.Size = new System.Drawing.Size(147, 60);
             this.btnGeneric.TabIndex = 4;
             this.btnGeneric.Text = "GENÉRICO";
             // 
@@ -219,7 +219,7 @@
             // 
             this.separatorControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.separatorControl2.LineOrientation = System.Windows.Forms.Orientation.Vertical;
-            this.separatorControl2.Location = new System.Drawing.Point(222, 0);
+            this.separatorControl2.Location = new System.Drawing.Point(304, 0);
             this.separatorControl2.Name = "separatorControl2";
             this.separatorControl2.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.separatorControl2.Size = new System.Drawing.Size(10, 60);
@@ -234,9 +234,9 @@
             this.btnInstrumental.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnInstrumental.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.instrumental_18x18;
             this.btnInstrumental.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnInstrumental.Location = new System.Drawing.Point(116, 0);
+            this.btnInstrumental.Location = new System.Drawing.Point(157, 0);
             this.btnInstrumental.Name = "btnInstrumental";
-            this.btnInstrumental.Size = new System.Drawing.Size(106, 60);
+            this.btnInstrumental.Size = new System.Drawing.Size(147, 60);
             this.btnInstrumental.TabIndex = 2;
             this.btnInstrumental.Text = "SUELTO";
             // 
@@ -244,26 +244,26 @@
             // 
             this.separatorControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.separatorControl1.LineOrientation = System.Windows.Forms.Orientation.Vertical;
-            this.separatorControl1.Location = new System.Drawing.Point(106, 0);
+            this.separatorControl1.Location = new System.Drawing.Point(147, 0);
             this.separatorControl1.Name = "separatorControl1";
             this.separatorControl1.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.separatorControl1.Size = new System.Drawing.Size(10, 60);
             this.separatorControl1.TabIndex = 1;
             // 
-            // btnBoxes
+            // btnBox
             // 
-            this.btnBoxes.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            this.btnBoxes.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBoxes.Appearance.Options.UseBackColor = true;
-            this.btnBoxes.Appearance.Options.UseFont = true;
-            this.btnBoxes.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnBoxes.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.caja_18x18;
-            this.btnBoxes.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnBoxes.Location = new System.Drawing.Point(0, 0);
-            this.btnBoxes.Name = "btnBoxes";
-            this.btnBoxes.Size = new System.Drawing.Size(106, 60);
-            this.btnBoxes.TabIndex = 0;
-            this.btnBoxes.Text = "CAJAS";
+            this.btnBox.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            this.btnBox.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBox.Appearance.Options.UseBackColor = true;
+            this.btnBox.Appearance.Options.UseFont = true;
+            this.btnBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnBox.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.caja_18x18;
+            this.btnBox.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnBox.Location = new System.Drawing.Point(0, 0);
+            this.btnBox.Name = "btnBox";
+            this.btnBox.Size = new System.Drawing.Size(147, 60);
+            this.btnBox.TabIndex = 0;
+            this.btnBox.Text = "CAJA";
             // 
             // pnlInventoryBody
             // 
@@ -311,12 +311,12 @@
 
         private DevExpress.XtraEditors.PanelControl pnlInventoryMenu;
         private DevExpress.XtraEditors.PanelControl pnlInventoryBody;
-        private DevExpress.XtraEditors.SimpleButton btnBoxes;
+        private DevExpress.XtraEditors.SimpleButton btnBox;
         private DevExpress.XtraEditors.SeparatorControl separatorControl1;
         private DevExpress.XtraEditors.SeparatorControl separatorControl6;
         private DevExpress.XtraEditors.SimpleButton btnCaducity;
         private DevExpress.XtraEditors.SeparatorControl separatorControl5;
-        private DevExpress.XtraEditors.SimpleButton btnSitEspecial;
+        private DevExpress.XtraEditors.SimpleButton btnSpecialSituation;
         private DevExpress.XtraEditors.SeparatorControl separatorControl4;
         private DevExpress.XtraEditors.SimpleButton btnExternal;
         private DevExpress.XtraEditors.SeparatorControl separatorControl3;
