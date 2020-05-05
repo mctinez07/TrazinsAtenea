@@ -33,26 +33,33 @@ namespace SqlEngine
 
         public static void InitializeBindingDB(bool Failover)
         {
-            if (Failover)
+            try
             {
-                //BBDD_Trazins = "packet size=4096;user id=" + ModLibrerias.ClaseEnlaceBBDD.UserTrazins + ";data source=\'TCP:" + ModLibrerias.ClaseEnlaceBBDD.IPTrazins + ModLibrerias.ClaseEnlaceBBDD.InstanciaTrazins + "\'; Failover Partner=\'" + ModLibrerias.ClaseEnlaceBBDD.IPTrazinsFailover + ModLibrerias.ClaseEnlaceBBDD.InstanciaTrazinsFailover + "\';persist security info=True;initial catalog=WSHNSGZ;password=" + ModLibrerias.ClaseEnlaceBBDD.PasswTrazins + ";Pooling=False;Connection TimeOut=300";
-                //Cuando hay nombre de instancia
-                //BBDD_Trazins = "Data Source = \'" + ModLibrerias.ClaseEnlaceBBDD.IPTrazins + ModLibrerias.ClaseEnlaceBBDD.InstanciaTrazins + "\'; Initial Catalog = WSTrazins; User Id = " + ModLibrerias.ClaseEnlaceBBDD.UserTrazins + "; Password = " + ModLibrerias.ClaseEnlaceBBDD.PasswTrazins + ";persist security info=True;Pooling=False;Connection TimeOut=300";
-                ConnectionDB = "Data Source = " + ConnectionBuilder.ClassBindingConnection.IP + ";Initial Catalog = " + ConnectionBuilder.ClassBindingConnection.Catalog + "; User Id = " + ConnectionBuilder.ClassBindingConnection.User + "; Password = " + ConnectionBuilder.ClassBindingConnection.Passw + ";persist security info=True;Pooling=False;Connection TimeOut=300";
-                //Para saltar el plantilla
-                //BBDD_Trazins = "Data Source = \'localhost\\WSTrazins\'; Initial Catalog = WSHNSGZ; User Id = sa; Password = W$Tr4zin$;persist security info=True;Pooling=False;Connection TimeOut=300";
+                if (Failover)
+                {
+                    //BBDD_Trazins = "packet size=4096;user id=" + ModLibrerias.ClaseEnlaceBBDD.UserTrazins + ";data source=\'TCP:" + ModLibrerias.ClaseEnlaceBBDD.IPTrazins + ModLibrerias.ClaseEnlaceBBDD.InstanciaTrazins + "\'; Failover Partner=\'" + ModLibrerias.ClaseEnlaceBBDD.IPTrazinsFailover + ModLibrerias.ClaseEnlaceBBDD.InstanciaTrazinsFailover + "\';persist security info=True;initial catalog=WSHNSGZ;password=" + ModLibrerias.ClaseEnlaceBBDD.PasswTrazins + ";Pooling=False;Connection TimeOut=300";
+                    //Cuando hay nombre de instancia
+                    //BBDD_Trazins = "Data Source = \'" + ModLibrerias.ClaseEnlaceBBDD.IPTrazins + ModLibrerias.ClaseEnlaceBBDD.InstanciaTrazins + "\'; Initial Catalog = WSTrazins; User Id = " + ModLibrerias.ClaseEnlaceBBDD.UserTrazins + "; Password = " + ModLibrerias.ClaseEnlaceBBDD.PasswTrazins + ";persist security info=True;Pooling=False;Connection TimeOut=300";
+                    ConnectionDB = "Data Source = " + ConnectionBuilder.ClassBindingConnection.IP + ";Initial Catalog = " + ConnectionBuilder.ClassBindingConnection.Catalog + "; User Id = " + ConnectionBuilder.ClassBindingConnection.User + "; Password = " + ConnectionBuilder.ClassBindingConnection.Passw + ";persist security info=True;Pooling=False;Connection TimeOut=300";
+                    //Para saltar el plantilla
+                    //BBDD_Trazins = "Data Source = \'localhost\\WSTrazins\'; Initial Catalog = WSHNSGZ; User Id = sa; Password = W$Tr4zin$;persist security info=True;Pooling=False;Connection TimeOut=300";
 
+
+                }
+                else
+                {
+                    //BBDD_Trazins = "packet size=4096;user id=" + ModLibrerias.ClaseEnlaceBBDD.UserTrazins + ";data source=\'TCP:" + ModLibrerias.ClaseEnlaceBBDD.IPTrazins + ModLibrerias.ClaseEnlaceBBDD.InstanciaTrazins + "\';persist security info=True;initial catalog=WSHNSGZ;password=" + ModLibrerias.ClaseEnlaceBBDD.PasswTrazins + ";Pooling=False;Connection TimeOut=300";
+                    //BBDD_Trazins = "Data Source = \'" + ModLibrerias.ClaseEnlaceBBDD.IPTrazins + ModLibrerias.ClaseEnlaceBBDD.InstanciaTrazins + "\'; Initial Catalog = WSTrazins; User Id = " + ModLibrerias.ClaseEnlaceBBDD.UserTrazins + "; Password = " + ModLibrerias.ClaseEnlaceBBDD.PasswTrazins + ";persist security info=True;Pooling=False;Connection TimeOut=300";
+                    ConnectionDB = "Data Source = " + ConnectionBuilder.ClassBindingConnection.IP + ";Initial Catalog = " + ConnectionBuilder.ClassBindingConnection.Catalog + "; User Id = " + ConnectionBuilder.ClassBindingConnection.User + "; Password = " + ConnectionBuilder.ClassBindingConnection.Passw + ";persist security info=True;Pooling=False;Connection TimeOut=300";
+                    //BBDD_Trazins = "Data Source = \'localhost\\WSTrazins\'; Initial Catalog = WSHNSGZ; User Id = sa; Password = W$Tr4zin$;persist security info=True;Pooling=False;Connection TimeOut=300";
+                }
 
             }
-            else
+            catch (Exception ex)
             {
-                //BBDD_Trazins = "packet size=4096;user id=" + ModLibrerias.ClaseEnlaceBBDD.UserTrazins + ";data source=\'TCP:" + ModLibrerias.ClaseEnlaceBBDD.IPTrazins + ModLibrerias.ClaseEnlaceBBDD.InstanciaTrazins + "\';persist security info=True;initial catalog=WSHNSGZ;password=" + ModLibrerias.ClaseEnlaceBBDD.PasswTrazins + ";Pooling=False;Connection TimeOut=300";
-                //BBDD_Trazins = "Data Source = \'" + ModLibrerias.ClaseEnlaceBBDD.IPTrazins + ModLibrerias.ClaseEnlaceBBDD.InstanciaTrazins + "\'; Initial Catalog = WSTrazins; User Id = " + ModLibrerias.ClaseEnlaceBBDD.UserTrazins + "; Password = " + ModLibrerias.ClaseEnlaceBBDD.PasswTrazins + ";persist security info=True;Pooling=False;Connection TimeOut=300";
-                ConnectionDB = "Data Source = " + ConnectionBuilder.ClassBindingConnection.IP + ";Initial Catalog = " + ConnectionBuilder.ClassBindingConnection.Catalog + "; User Id = " + ConnectionBuilder.ClassBindingConnection.User + "; Password = " + ConnectionBuilder.ClassBindingConnection.Passw + ";persist security info=True;Pooling=False;Connection TimeOut=300";
-                //BBDD_Trazins = "Data Source = \'localhost\\WSTrazins\'; Initial Catalog = WSHNSGZ; User Id = sa; Password = W$Tr4zin$;persist security info=True;Pooling=False;Connection TimeOut=300";
-            }
 
-
+                throw new Exception("Error en InicializeBindingDB: " + ex.Message);
+            } 
         }
 
         public static string CNX_DB()
@@ -63,19 +70,36 @@ namespace SqlEngine
         //Creamos la conexión.
         public static SqlConnection OpenConnection()
         {
-            Connection = new SqlConnection(ConnectionDB);
-            Connection.Open();
-            return Connection;
+            try
+            {
+                Connection = new SqlConnection(ConnectionDB);
+                Connection.Open();
+                return Connection;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error en OpenConnection: " + ex.Message);
+            }
+            
         }
 
         //Cerrar conexión
         public static void FinishConnection()
         {
-            if (Connection.State == ConnectionState.Open)
+            try
             {
-                Connection.Close();
-                Connection.Dispose();
+                if (Connection.State == ConnectionState.Open)
+                {
+                    Connection.Close();
+                    Connection.Dispose();
+                }
             }
+            catch (Exception ex)
+            {
+                throw new Exception("Error en FinishConnection: " + ex.Message);
+            }
+            
         }
 
         #endregion
@@ -84,92 +108,147 @@ namespace SqlEngine
 
         public static List<T> IsSelect<T>(T model)
         {
-            //Abrimos la conexión
-            OpenConnection();
+            try
+            {
+                //Abrimos la conexión
+                OpenConnection();
 
-            //Buscar el nombre del modelo
-            string command = GetModelType(model) + "_Select";
+                //Buscar el nombre del modelo
+                string command = GetModelType(model) + "_Select";
 
-            //Crear el SqlCommand según el modelo y los parámetros del procdure.
-            var sqlCommand = CreateSqlCmd(Connection, command, model);
+                //Crear el SqlCommand según el modelo y los parámetros del procdure.
+                var sqlCommand = CreateSqlCmd(Connection, command, model);
 
-            return QueryTypeSelect(sqlCommand, model);
+                return QueryTypeSelect(sqlCommand, model);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error en IsSelect: "+ ex.Message);
+            }
+           
 
         }
 
         public static string IsInsert<T>(T model)
         {
-            OpenConnection();
-            string command = GetModelType(model) + "_Insert";
+            try
+            {
+                OpenConnection();
+                string command = GetModelType(model) + "_Insert";
 
-            var sqlCommand = CreateSqlCmd(Connection, command, model);
+                var sqlCommand = CreateSqlCmd(Connection, command, model);
 
-            return QueryTypeExecuteNonQuery(sqlCommand);
+                return QueryTypeExecuteNonQuery(sqlCommand);
 
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error en IsInsert: " + ex.Message);
+            }
         }
 
         public static string IsUpdate<T>(T model)
         {
-            OpenConnection();
-            string command = GetModelType(model) + "_Update";
+            try
+            {
+                OpenConnection();
+                string command = GetModelType(model) + "_Update";
 
-            var sqlCommand = CreateSqlCmd(Connection, command, model);
+                var sqlCommand = CreateSqlCmd(Connection, command, model);
 
-            return QueryTypeExecuteNonQuery(sqlCommand);
+                return QueryTypeExecuteNonQuery(sqlCommand);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error en IsUpdate:" + ex.Message);
+            }
+            
         }
 
         public static string IsDelete<T>(T model)
         {
-            OpenConnection();
-            string command = GetModelType(model) + "_Delete";
+            try
+            {
+                OpenConnection();
+                string command = GetModelType(model) + "_Delete";
 
-            var sqlCommand = CreateSqlCmd(Connection, command, model);
+                var sqlCommand = CreateSqlCmd(Connection, command, model);
 
-            return QueryTypeExecuteNonQuery(sqlCommand);
+                return QueryTypeExecuteNonQuery(sqlCommand);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception ("Error en IsDelete: " + ex.Message);
+            }
+            
         }
 
         private static string GetModelType<T>(T model)
         {
-            return model.GetType().Name;
+            try
+            {
+                return model.GetType().Name;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception ("Error en GetModelType: " + ex.Message);
+            }
+            
         }
 
         private static SqlCommand CreateSqlCmd<T>(SqlConnection con, string command, T modelo)
         {
-            SqlParameter[] discoveredParameters;
-
-            SqlCommand SqlCmd = new SqlCommand
+            try
             {
-                Connection = con,
-                CommandText = command,
-                CommandType = CommandType.StoredProcedure
-            };
+                SqlParameter[] discoveredParameters;
 
-            //Obtener los parámetros del procedure
-            SqlCommandBuilder.DeriveParameters(SqlCmd);
+                SqlCommand SqlCmd = new SqlCommand
+                {
+                    Connection = con,
+                    CommandText = command,
+                    CommandType = CommandType.StoredProcedure
+                };
 
-            discoveredParameters = new SqlParameter[SqlCmd.Parameters.Count - 1 + 1];
-            SqlCmd.Parameters.CopyTo(discoveredParameters, 0);
+                //Obtener los parámetros del procedure
+                SqlCommandBuilder.DeriveParameters(SqlCmd);
 
-            //Obtener las propiedades que necesita el procedure
-            var Properties = modelo.GetType().GetProperties();
+                discoveredParameters = new SqlParameter[SqlCmd.Parameters.Count - 1 + 1];
+                SqlCmd.Parameters.CopyTo(discoveredParameters, 0);
 
-            List<PropertyInfo> result = new List<PropertyInfo>();
-            foreach (var item in discoveredParameters)
-            {
-                var item1 = item.ParameterName.Remove(0, 1);
-                PropertyInfo e = Properties.Where(p => p.Name.Equals(item1)).FirstOrDefault();
-                result.Add(e);
+                //Obtener las propiedades que necesita el procedure
+                var Properties = modelo.GetType().GetProperties();
+
+                List<PropertyInfo> result = new List<PropertyInfo>();
+                foreach (var item in discoveredParameters)
+                {
+                    var item1 = item.ParameterName.Remove(0, 1);
+                    PropertyInfo e = Properties.Where(p => p.Name.Equals(item1)).FirstOrDefault();
+                    result.Add(e);
+                }
+
+                //Ya tenemos los propiedades que necesita el procedure
+                //Quitamos los valores nulos para evitar errores
+                foreach (PropertyInfo property in result.Where(p => p != null))
+                {
+                    var SqlParameter = discoveredParameters.FirstOrDefault((d) => string.Equals(d.ParameterName, "@" + property.Name, StringComparison.InvariantCultureIgnoreCase));
+                    SqlParameter.Value = property.GetValue(modelo) ?? (object)DBNull.Value;
+                }
+
+                return SqlCmd;
+
             }
-
-            //Ya tenemos los propiedades que necesita el procedure
-            //Quitamos los valores nulos para evitar errores
-            foreach (PropertyInfo property in result.Where(p => p != null))
+            catch (Exception ex)
             {
-                var SqlParameter = discoveredParameters.FirstOrDefault((d) => string.Equals(d.ParameterName, "@" + property.Name, StringComparison.InvariantCultureIgnoreCase));
-                SqlParameter.Value = property.GetValue(modelo) ?? (object)DBNull.Value;
-            }                      
 
-            return SqlCmd;
+                throw new Exception("Error en CreateSqlCmd: "+ ex.Message);
+            }
+            
         }
 
         #endregion
@@ -222,7 +301,7 @@ namespace SqlEngine
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new Exception("Error en QueryTypeSelect: " + ex.Message);
             }
             finally
             {

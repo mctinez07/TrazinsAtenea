@@ -34,9 +34,15 @@ namespace TrazinsAtenea
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            
-            LoadHeaderMenu(btnMainMenu, cmsMainMenu);
-            LoadHeaderMenu(dlmLoginInfo, cmsExit);
+            try
+            {
+                LoadHeaderMenu(btnMainMenu, cmsMainMenu);
+                LoadHeaderMenu(dlmLoginInfo, cmsExit);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en MainForm_Shown: " + ex.Message);
+            }
         }
 
         #region Gestión Botones menú principal 
