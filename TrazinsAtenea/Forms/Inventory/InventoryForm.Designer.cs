@@ -99,7 +99,7 @@
             this.btnLocate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
             this.btnLocate.FlatAppearance.BorderSize = 2;
             this.btnLocate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocate.Location = new System.Drawing.Point(153, 6);
+            this.btnLocate.Location = new System.Drawing.Point(146, 6);
             this.btnLocate.Name = "btnLocate";
             this.btnLocate.Size = new System.Drawing.Size(48, 48);
             this.btnLocate.TabIndex = 1;
@@ -112,7 +112,7 @@
             this.btnRead.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
             this.btnRead.FlatAppearance.BorderSize = 2;
             this.btnRead.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRead.Location = new System.Drawing.Point(207, 6);
+            this.btnRead.Location = new System.Drawing.Point(216, 6);
             this.btnRead.Name = "btnRead";
             this.btnRead.Size = new System.Drawing.Size(48, 48);
             this.btnRead.TabIndex = 0;

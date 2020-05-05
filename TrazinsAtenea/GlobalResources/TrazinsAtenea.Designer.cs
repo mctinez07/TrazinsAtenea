@@ -88,6 +88,15 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Código Caja/Id.
+        /// </summary>
+        internal static string Code {
+            get {
+                return ResourceManager.GetString("Code", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Salir.
         /// </summary>
         internal static string Exit {
@@ -115,6 +124,15 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Ver Histórico.
+        /// </summary>
+        internal static string Historical {
+            get {
+                return ResourceManager.GetString("Historical", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Suelto.
         /// </summary>
         internal static string Instrumental {
@@ -133,11 +151,56 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Localización.
+        /// </summary>
+        internal static string Locate {
+            get {
+                return ResourceManager.GetString("Locate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar caja.
+        /// </summary>
+        internal static string ModifyBox {
+            get {
+                return ResourceManager.GetString("ModifyBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar Instrumental.
+        /// </summary>
+        internal static string ModifyInstrumental {
+            get {
+                return ResourceManager.GetString("ModifyInstrumental", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Nombre.
         /// </summary>
         internal static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nuevo.
+        /// </summary>
+        internal static string New {
+            get {
+                return ResourceManager.GetString("New", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nueva Caja.
+        /// </summary>
+        internal static string NewBoxTitle {
+            get {
+                return ResourceManager.GetString("NewBoxTitle", resourceCulture);
             }
         }
         
@@ -156,6 +219,15 @@ namespace TrazinsAtenea.GlobalResources {
         internal static string SpecialSituation {
             get {
                 return ResourceManager.GetString("SpecialSituation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ubicación.
+        /// </summary>
+        internal static string Ubication {
+            get {
+                return ResourceManager.GetString("Ubication", resourceCulture);
             }
         }
         

@@ -133,4 +133,28 @@
   <data name="Speciality" xml:space="preserve">
     <value>Speciality</value>
   </data>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="Locate" xml:space="preserve">
+    <value>Locate</value>
+  </data>
+  <data name="Ubication" xml:space="preserve">
+    <value>Ubication</value>
+  </data>
+  <data name="Historical" xml:space="preserve">
+    <value>Show Historical</value>
+  </data>
+  <data name="ModifyInstrumental" xml:space="preserve">
+    <value>Modify instrumental</value>
+  </data>
+  <data name="ModifyBox" xml:space="preserve">
+    <value>Modify box</value>
+  </data>
+  <data name="NewBoxTitle" xml:space="preserve">
+    <value>New Box</value>
+  </data>
 </root>

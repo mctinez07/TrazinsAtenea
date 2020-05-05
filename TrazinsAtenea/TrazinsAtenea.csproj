@@ -65,11 +65,23 @@
     <Compile Include="Controls\DoubleLabelMenu.Designer.cs">
       <DependentUpon>DoubleLabelMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Inventory\Box\BoxDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inventory\Box\BoxDetailsForm.Designer.cs">
+      <DependentUpon>BoxDetailsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Inventory\Box\BoxesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Inventory\Box\BoxesForm.Designer.cs">
       <DependentUpon>BoxesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inventory\Box\BoxManagmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inventory\Box\BoxManagmentForm.Designer.cs">
+      <DependentUpon>BoxManagmentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Inventory\InventoryForm.cs">
       <SubType>Form</SubType>
@@ -96,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inventory\Box\BoxesForm.resx">
       <DependentUpon>BoxesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inventory\Box\BoxManagmentForm.resx">
+      <DependentUpon>BoxManagmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inventory\InventoryForm.resx">
       <DependentUpon>InventoryForm.cs</DependentUpon>
@@ -182,6 +197,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Forms\Inventory\Instrumental\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_back-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caja-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caja-24x24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -63,9 +63,39 @@ namespace TrazinsAtenea.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow_back_48x48 {
+            get {
+                object obj = ResourceManager.GetObject("arrow_back-48x48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap caja_18x18 {
             get {
                 object obj = ResourceManager.GetObject("caja-18x18", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap caja_24x24 {
+            get {
+                object obj = ResourceManager.GetObject("caja-24x24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap caja_48x48 {
+            get {
+                object obj = ResourceManager.GetObject("caja-48x48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

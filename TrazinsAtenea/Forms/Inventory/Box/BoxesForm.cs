@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using TrazinsAtenea.GlobalEngine;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Columns;
 
 namespace TrazinsAtenea.Forms.Inventory.Box
 {
@@ -21,18 +23,47 @@ namespace TrazinsAtenea.Forms.Inventory.Box
 
         private void BoxesForm_Load(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-            ServiceWSTrazinsAtenea.WSTrazinsAteneaClient service = new ServiceWSTrazinsAtenea.WSTrazinsAteneaClient();
+            try
+            {
+                //Mostrar que está cargando datos
+                Cursor.Current = Cursors.WaitCursor;
 
-            var boxes = service.Caja_Select(new ServiceWSTrazinsAtenea.Caja() { HosId = "002", ChId = "002" });
+                ServiceWSTrazinsAtenea.WSTrazinsAteneaClient service = new ServiceWSTrazinsAtenea.WSTrazinsAteneaClient();
 
-            gdcBoxes.DataSource = boxes;
+                var boxes = service.Caja_Select(new ServiceWSTrazinsAtenea.Caja() { HosId = "002", ChId = "002" });
 
-            gdcSpeciality.Caption = Engine.GetLanguageResource(gdcSpeciality.Name);
-            Cursor.Current = Cursors.Default;
-            
+                gdcBoxes.DataSource = boxes;
+                
+
+                GridFormat(gdvBoxes);
+                btnNew.Text = Engine.GetLanguageResource(btnNew.Name);
+                btnNew.Focus();
+
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en BoxesForm_Load: " + ex.Message);
+            }
         }
 
-        
+        private void GridFormat(GridView gridView)
+        {
+            foreach (GridColumn item in gridView.Columns)
+            {
+                item.Caption = Engine.GetLanguageResource(item.Name);
+            }
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            BoxManagmentForm frm = new BoxManagmentForm();
+            frm.ShowDialog();
+        }
+
+        private void BoxesForm_Shown(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
