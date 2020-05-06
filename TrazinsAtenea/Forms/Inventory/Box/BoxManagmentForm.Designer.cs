@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.pnlHeader = new DevExpress.XtraEditors.PanelControl();
-            this.btnHistorical = new System.Windows.Forms.Button();
-            this.btnModifyInstrumental = new System.Windows.Forms.Button();
-            this.btnModifyBox = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.lblNewBoxTitle = new DevExpress.XtraEditors.LabelControl();
             this.spcBackArrow = new DevExpress.XtraEditors.SeparatorControl();
             this.pcbBack = new System.Windows.Forms.PictureBox();
@@ -48,9 +47,8 @@
             this.pnlHeader.Appearance.Options.UseBackColor = true;
             this.pnlHeader.Appearance.Options.UseBorderColor = true;
             this.pnlHeader.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.pnlHeader.Controls.Add(this.btnHistorical);
-            this.pnlHeader.Controls.Add(this.btnModifyInstrumental);
-            this.pnlHeader.Controls.Add(this.btnModifyBox);
+            this.pnlHeader.Controls.Add(this.btnExit);
+            this.pnlHeader.Controls.Add(this.btnSave);
             this.pnlHeader.Controls.Add(this.lblNewBoxTitle);
             this.pnlHeader.Controls.Add(this.spcBackArrow);
             this.pnlHeader.Controls.Add(this.pcbBack);
@@ -59,56 +57,41 @@
             this.pnlHeader.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.pnlHeader.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1938, 75);
+            this.pnlHeader.Size = new System.Drawing.Size(1384, 75);
             this.pnlHeader.TabIndex = 0;
             // 
-            // btnHistorical
+            // btnExit
             // 
-            this.btnHistorical.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHistorical.BackColor = System.Drawing.Color.White;
-            this.btnHistorical.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
-            this.btnHistorical.FlatAppearance.BorderSize = 2;
-            this.btnHistorical.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorical.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorical.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
-            this.btnHistorical.Location = new System.Drawing.Point(1306, 13);
-            this.btnHistorical.Name = "btnHistorical";
-            this.btnHistorical.Size = new System.Drawing.Size(191, 48);
-            this.btnHistorical.TabIndex = 5;
-            this.btnHistorical.Text = " Ver Histórico";
-            this.btnHistorical.UseVisualStyleBackColor = false;
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackColor = System.Drawing.Color.White;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
+            this.btnExit.FlatAppearance.BorderSize = 2;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
+            this.btnExit.Location = new System.Drawing.Point(1193, 13);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(74, 48);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "Salir";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnModifyInstrumental
+            // btnSave
             // 
-            this.btnModifyInstrumental.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModifyInstrumental.BackColor = System.Drawing.Color.White;
-            this.btnModifyInstrumental.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
-            this.btnModifyInstrumental.FlatAppearance.BorderSize = 2;
-            this.btnModifyInstrumental.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModifyInstrumental.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModifyInstrumental.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
-            this.btnModifyInstrumental.Location = new System.Drawing.Point(1503, 13);
-            this.btnModifyInstrumental.Name = "btnModifyInstrumental";
-            this.btnModifyInstrumental.Size = new System.Drawing.Size(251, 48);
-            this.btnModifyInstrumental.TabIndex = 4;
-            this.btnModifyInstrumental.Text = "Modificar Instrumental";
-            this.btnModifyInstrumental.UseVisualStyleBackColor = false;
-            // 
-            // btnModifyBox
-            // 
-            this.btnModifyBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModifyBox.BackColor = System.Drawing.Color.White;
-            this.btnModifyBox.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
-            this.btnModifyBox.FlatAppearance.BorderSize = 2;
-            this.btnModifyBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModifyBox.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModifyBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
-            this.btnModifyBox.Location = new System.Drawing.Point(1760, 13);
-            this.btnModifyBox.Name = "btnModifyBox";
-            this.btnModifyBox.Size = new System.Drawing.Size(166, 48);
-            this.btnModifyBox.TabIndex = 3;
-            this.btnModifyBox.Text = "Modificar caja";
-            this.btnModifyBox.UseVisualStyleBackColor = false;
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
+            this.btnSave.FlatAppearance.BorderSize = 2;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(1273, 13);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(106, 48);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
             // lblNewBoxTitle
             // 
@@ -153,7 +136,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1938, 1068);
+            this.ClientSize = new System.Drawing.Size(1384, 756);
             this.Controls.Add(this.pnlHeader);
             this.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -178,8 +161,7 @@
         private System.Windows.Forms.PictureBox pcbBack;
         private DevExpress.XtraEditors.SeparatorControl spcBackArrow;
         private DevExpress.XtraEditors.LabelControl lblNewBoxTitle;
-        private System.Windows.Forms.Button btnModifyBox;
-        private System.Windows.Forms.Button btnModifyInstrumental;
-        private System.Windows.Forms.Button btnHistorical;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnSave;
     }
 }

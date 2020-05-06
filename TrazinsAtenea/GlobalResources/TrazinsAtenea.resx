@@ -157,4 +157,7 @@
   <data name="NewBoxTitle" xml:space="preserve">
     <value>Nueva Caja</value>
   </data>
+  <data name="Save" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
 </root>

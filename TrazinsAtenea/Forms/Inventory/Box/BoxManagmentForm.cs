@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using TrazinsAtenea.GlobalEngine;
+using TrazinsAtenea.Forms.GlobalForms;
 
 namespace TrazinsAtenea.Forms.Inventory.Box
 {
@@ -37,6 +38,13 @@ namespace TrazinsAtenea.Forms.Inventory.Box
         private void BoxManagmentForm_Load(object sender, EventArgs e)
         {
             MultilanguageFormat();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            MessageForm frm = new MessageForm();
+            frm.ShowDialog();
+            
         }
     }
 }
