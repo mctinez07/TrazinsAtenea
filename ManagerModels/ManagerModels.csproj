@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ClassBaseConnection.cs" />
     <Compile Include="Inventory\CajaManager.cs" />
+    <Compile Include="Messages\MensajesManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

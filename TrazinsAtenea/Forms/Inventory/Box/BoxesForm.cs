@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using TrazinsAtenea.GlobalEngine;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Columns;
+using TrazinsAtenea.ServiceWSTrazinsAtenea;
 
 namespace TrazinsAtenea.Forms.Inventory.Box
 {
@@ -28,12 +29,11 @@ namespace TrazinsAtenea.Forms.Inventory.Box
                 //Mostrar que está cargando datos
                 Cursor.Current = Cursors.WaitCursor;
 
-                ServiceWSTrazinsAtenea.WSTrazinsAteneaClient service = new ServiceWSTrazinsAtenea.WSTrazinsAteneaClient();
+                WSTrazinsAteneaClient service = new WSTrazinsAteneaClient();
 
-                var boxes = service.Caja_Select(new ServiceWSTrazinsAtenea.Caja() { HosId = "002", ChId = "002" });
-
-                gdcBoxes.DataSource = boxes;
+                var boxes = service.Caja_Select_List(new Caja() { HosId = "002", ChId = "002" });
                 
+                gdcBoxes.DataSource = boxes;                
 
                 GridFormat(gdvBoxes);
                 btnNew.Text = Engine.GetLanguageResource(btnNew.Name);

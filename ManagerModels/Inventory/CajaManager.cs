@@ -10,7 +10,12 @@ namespace ManagerModels.Inventory
 {
     public static class CajaManager
     {
-        public static List<Caja> Caja_Select(Caja caja)
+        public static List<Caja> Caja_Select_List(Caja caja)
+        {
+            return MainSqlEngine.IsSelectList(caja);
+        }
+
+        public static Caja Caja_Select(Caja caja)
         {
             return MainSqlEngine.IsSelect(caja);
         }

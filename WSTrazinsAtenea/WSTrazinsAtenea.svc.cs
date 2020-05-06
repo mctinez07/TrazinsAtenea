@@ -7,6 +7,8 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using Models.Messages;
+using ManagerModels.Messages;
 
 namespace WSTrazinsAtenea
 {
@@ -20,14 +22,28 @@ namespace WSTrazinsAtenea
             return CajaManager.Caja_Insert(caja);
         }
 
-        public List<Caja> Caja_Select(Caja caja)
+        public Caja Caja_Select(Caja caja)
         {
             return CajaManager.Caja_Select(caja);
+        }
+
+        public List<Caja> Caja_Select_List(Caja caja)
+        {
+            return CajaManager.Caja_Select_List(caja);
         }
 
         public string Caja_Update(Caja caja)
         {
             return CajaManager.Caja_Update(caja);
+        }
+
+        #endregion
+
+        #region Mensajes
+
+        public Mensaje Mensaje_Select(Mensaje mensaje)
+        {
+            return MensajesManager.Mensaje_Select(mensaje);
         }
 
         #endregion

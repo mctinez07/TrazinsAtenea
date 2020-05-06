@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://WSTrazinsAtenea.com" elementFormDefault="qualified" targetNamespace="http://WSTrazinsAtenea.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="Caja_Select">
+  <xs:element name="Caja_Select_List">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="caja" nillable="true" type="tns:Caja" />
@@ -35,10 +35,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="BaseModel" nillable="true" type="tns:BaseModel" />
-  <xs:element name="Caja_SelectResponse">
+  <xs:element name="Caja_Select_ListResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Caja_SelectResult" nillable="true" type="tns:ArrayOfCaja" />
+        <xs:element minOccurs="0" name="Caja_Select_ListResult" nillable="true" type="tns:ArrayOfCaja" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -48,6 +48,20 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfCaja" nillable="true" type="tns:ArrayOfCaja" />
+  <xs:element name="Caja_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caja" nillable="true" type="tns:Caja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Caja_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Caja_SelectResult" nillable="true" type="tns:Caja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Caja_Insert">
     <xs:complexType>
       <xs:sequence>
@@ -73,6 +87,28 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Caja_UpdateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Mensaje_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mensaje" nillable="true" type="tns:Mensaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Mensaje">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Texto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Mensaje" nillable="true" type="tns:Mensaje" />
+  <xs:element name="Mensaje_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Mensaje_SelectResult" nillable="true" type="tns:Mensaje" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

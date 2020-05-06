@@ -106,7 +106,7 @@ namespace SqlEngine
 
         #region Gestión Tipo Query
 
-        public static List<T> IsSelect<T>(T model)
+        public static List<T> IsSelectList<T>(T model)
         {
             try
             {
@@ -125,10 +125,32 @@ namespace SqlEngine
             catch (Exception ex)
             {
 
-                throw new Exception("Error en IsSelect: "+ ex.Message);
+                throw new Exception("Error en IsSelectList: "+ ex.Message);
             }
            
 
+        }
+
+        public static T IsSelect<T>(T model)
+        {
+            try
+            {
+                OpenConnection();
+
+                string command = GetModelType(model) + "_Select";
+
+                var sqlCommand = CreateSqlCmd(Connection, command, model);
+
+                //Solo devolvemos un registro
+                return QueryTypeSelect(sqlCommand, model).FirstOrDefault();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception ("Error en IsSelect: "+ ex.Message);
+            }
+            
         }
 
         public static string IsInsert<T>(T model)

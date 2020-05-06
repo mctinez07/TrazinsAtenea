@@ -1,4 +1,5 @@
 ﻿using Models.Inventory;
+using Models.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,13 +20,23 @@ namespace WSTrazinsAtenea
         #region Cajas
 
         [OperationContract]
-        List<Caja> Caja_Select(Caja caja);
+        List<Caja> Caja_Select_List(Caja caja);
+
+        [OperationContract]
+        Caja Caja_Select(Caja caja);
 
         [OperationContract]
         string Caja_Insert(Caja caja);
 
         [OperationContract]
         string Caja_Update(Caja caja);
+
+        #endregion
+
+        #region Mensajes
+
+        [OperationContract]
+        Mensaje Mensaje_Select(Mensaje mensaje); 
 
         #endregion
 

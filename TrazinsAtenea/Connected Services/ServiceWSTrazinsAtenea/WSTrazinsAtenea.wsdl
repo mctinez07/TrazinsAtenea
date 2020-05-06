@@ -6,6 +6,12 @@
       <xsd:import schemaLocation="http://localhost:53110/WSTrazinsAtenea.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IWSTrazinsAtenea_Caja_Select_List_InputMessage">
+    <wsdl:part name="parameters" element="tns:Caja_Select_List" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Caja_Select_List_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Caja_Select_ListResponse" />
+  </wsdl:message>
   <wsdl:message name="IWSTrazinsAtenea_Caja_Select_InputMessage">
     <wsdl:part name="parameters" element="tns:Caja_Select" />
   </wsdl:message>
@@ -24,7 +30,17 @@
   <wsdl:message name="IWSTrazinsAtenea_Caja_Update_OutputMessage">
     <wsdl:part name="parameters" element="tns:Caja_UpdateResponse" />
   </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Mensaje_Select_InputMessage">
+    <wsdl:part name="parameters" element="tns:Mensaje_Select" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Mensaje_Select_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Mensaje_SelectResponse" />
+  </wsdl:message>
   <wsdl:portType name="IWSTrazinsAtenea">
+    <wsdl:operation name="Caja_Select_List">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_List" message="tns:IWSTrazinsAtenea_Caja_Select_List_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_ListResponse" message="tns:IWSTrazinsAtenea_Caja_Select_List_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Caja_Select">
       <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select" message="tns:IWSTrazinsAtenea_Caja_Select_InputMessage" />
       <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_SelectResponse" message="tns:IWSTrazinsAtenea_Caja_Select_OutputMessage" />
@@ -37,9 +53,22 @@
       <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Update" message="tns:IWSTrazinsAtenea_Caja_Update_InputMessage" />
       <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_UpdateResponse" message="tns:IWSTrazinsAtenea_Caja_Update_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="Mensaje_Select">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_Select" message="tns:IWSTrazinsAtenea_Mensaje_Select_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_SelectResponse" message="tns:IWSTrazinsAtenea_Mensaje_Select_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IWSTrazinsAtenea" type="tns:IWSTrazinsAtenea">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Caja_Select_List">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Caja_Select">
       <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select" style="document" />
       <wsdl:input>
@@ -60,6 +89,15 @@
     </wsdl:operation>
     <wsdl:operation name="Caja_Update">
       <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mensaje_Select">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_Select" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
