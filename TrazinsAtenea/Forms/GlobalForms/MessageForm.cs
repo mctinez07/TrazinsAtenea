@@ -15,8 +15,10 @@ namespace TrazinsAtenea.Forms.GlobalForms
     public partial class MessageForm : DevExpress.XtraEditors.XtraForm
     {
         private string Lang;
+
         //Pendiente desarrollo recuperar mensaje desde DB
         //Es posible que cambie el titulo según el tipo de mensaje.
+
         public MessageForm()
         {
             InitializeComponent();

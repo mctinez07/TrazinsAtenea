@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrazinsAtenea.ServiceWSTrazinsAtenea;
 
 namespace TrazinsAtenea.GlobalEngine
 {
@@ -23,6 +24,8 @@ namespace TrazinsAtenea.GlobalEngine
 
         public string AuditUsuario { get; set; }
 
+        public WSTrazinsAteneaClient Service;
+
         #endregion
 
         #region Constructor
@@ -33,6 +36,9 @@ namespace TrazinsAtenea.GlobalEngine
             this.ChId = "002";
             this.HosId = "002";
             this.AuditUsuario = "andres";
+
+            //Instanciamos el Web Service
+            this.Service = new WSTrazinsAteneaClient();
 
         }
 

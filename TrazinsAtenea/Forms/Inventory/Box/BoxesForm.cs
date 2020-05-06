@@ -18,6 +18,7 @@ namespace TrazinsAtenea.Forms.Inventory.Box
     public partial class BoxesForm : DevExpress.XtraEditors.XtraForm
     {
         private BaseModelClient BaseModel;
+
         public BoxesForm()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace TrazinsAtenea.Forms.Inventory.Box
                 //Mostrar que está cargando datos
                 Cursor.Current = Cursors.WaitCursor;
 
-                WSTrazinsAteneaClient service = new WSTrazinsAteneaClient();
+                var service = BaseModel.Service;
 
                 var boxes = service.Caja_Select_List(new Caja() { HosId = BaseModel.HosId, ChId = BaseModel.ChId });
                 
