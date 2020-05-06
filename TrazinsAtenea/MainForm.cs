@@ -29,7 +29,7 @@ namespace TrazinsAtenea
         // Metodo para probar las traducciones.
         private void Traducir()
         {
-            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-GB");
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-GB");            
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
