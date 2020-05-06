@@ -17,9 +17,11 @@ namespace TrazinsAtenea.Forms.Inventory.Box
 {
     public partial class BoxesForm : DevExpress.XtraEditors.XtraForm
     {
+        private BaseModelClient BaseModel;
         public BoxesForm()
         {
             InitializeComponent();
+            this.BaseModel = BaseModelClient.Instance;
         }
 
         private void BoxesForm_Load(object sender, EventArgs e)
@@ -31,7 +33,7 @@ namespace TrazinsAtenea.Forms.Inventory.Box
 
                 WSTrazinsAteneaClient service = new WSTrazinsAteneaClient();
 
-                var boxes = service.Caja_Select_List(new Caja() { HosId = "002", ChId = "002" });
+                var boxes = service.Caja_Select_List(new Caja() { HosId = BaseModel.HosId, ChId = BaseModel.ChId });
                 
                 gdcBoxes.DataSource = boxes;                
 
