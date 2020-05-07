@@ -1,6 +1,6 @@
-﻿namespace TrazinsAtenea.Forms.Inventory.Box
+﻿namespace TrazinsAtenea.Forms.Inventory.Set
 {
-    partial class BoxesForm
+    partial class SetsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gdcBoxes = new DevExpress.XtraGrid.GridControl();
-            this.gdvBoxes = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gdcSet = new DevExpress.XtraGrid.GridControl();
+            this.gdvSets = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gvcSpeciality = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gvcCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gvcBox = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -38,60 +38,60 @@
             this.gvcActive = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pnlNewItem = new DevExpress.XtraEditors.PanelControl();
             this.btnNew = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.gdcBoxes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gdvBoxes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdcSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdvSets)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlNewItem)).BeginInit();
             this.pnlNewItem.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gdcBoxes
+            // gdcSet
             // 
-            this.gdcBoxes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gdcBoxes.Location = new System.Drawing.Point(0, 62);
-            this.gdcBoxes.MainView = this.gdvBoxes;
-            this.gdcBoxes.Name = "gdcBoxes";
-            this.gdcBoxes.Size = new System.Drawing.Size(1384, 694);
-            this.gdcBoxes.TabIndex = 0;
-            this.gdcBoxes.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gdvBoxes});
+            this.gdcSet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gdcSet.Location = new System.Drawing.Point(0, 62);
+            this.gdcSet.MainView = this.gdvSets;
+            this.gdcSet.Name = "gdcSet";
+            this.gdcSet.Size = new System.Drawing.Size(1384, 694);
+            this.gdcSet.TabIndex = 3;
+            this.gdcSet.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gdvSets});
             // 
-            // gdvBoxes
+            // gdvSets
             // 
-            this.gdvBoxes.Appearance.GroupPanel.BackColor = System.Drawing.Color.White;
-            this.gdvBoxes.Appearance.GroupPanel.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gdvBoxes.Appearance.GroupPanel.Options.UseBackColor = true;
-            this.gdvBoxes.Appearance.GroupPanel.Options.UseFont = true;
-            this.gdvBoxes.Appearance.GroupRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            this.gdvBoxes.Appearance.GroupRow.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gdvBoxes.Appearance.GroupRow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
-            this.gdvBoxes.Appearance.GroupRow.Options.UseBackColor = true;
-            this.gdvBoxes.Appearance.GroupRow.Options.UseFont = true;
-            this.gdvBoxes.Appearance.GroupRow.Options.UseForeColor = true;
-            this.gdvBoxes.Appearance.HeaderPanel.BackColor = System.Drawing.Color.White;
-            this.gdvBoxes.Appearance.HeaderPanel.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gdvBoxes.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
-            this.gdvBoxes.Appearance.HeaderPanel.Options.UseBackColor = true;
-            this.gdvBoxes.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gdvBoxes.Appearance.HeaderPanel.Options.UseForeColor = true;
-            this.gdvBoxes.Appearance.HideSelectionRow.BackColor = System.Drawing.Color.White;
-            this.gdvBoxes.Appearance.HideSelectionRow.Options.UseBackColor = true;
-            this.gdvBoxes.Appearance.Row.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gdvBoxes.Appearance.Row.Options.UseFont = true;
-            this.gdvBoxes.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gdvSets.Appearance.GroupPanel.BackColor = System.Drawing.Color.White;
+            this.gdvSets.Appearance.GroupPanel.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdvSets.Appearance.GroupPanel.Options.UseBackColor = true;
+            this.gdvSets.Appearance.GroupPanel.Options.UseFont = true;
+            this.gdvSets.Appearance.GroupRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            this.gdvSets.Appearance.GroupRow.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdvSets.Appearance.GroupRow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
+            this.gdvSets.Appearance.GroupRow.Options.UseBackColor = true;
+            this.gdvSets.Appearance.GroupRow.Options.UseFont = true;
+            this.gdvSets.Appearance.GroupRow.Options.UseForeColor = true;
+            this.gdvSets.Appearance.HeaderPanel.BackColor = System.Drawing.Color.White;
+            this.gdvSets.Appearance.HeaderPanel.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdvSets.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
+            this.gdvSets.Appearance.HeaderPanel.Options.UseBackColor = true;
+            this.gdvSets.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gdvSets.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.gdvSets.Appearance.HideSelectionRow.BackColor = System.Drawing.Color.White;
+            this.gdvSets.Appearance.HideSelectionRow.Options.UseBackColor = true;
+            this.gdvSets.Appearance.Row.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdvSets.Appearance.Row.Options.UseFont = true;
+            this.gdvSets.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gvcSpeciality,
             this.gvcCode,
             this.gvcBox,
             this.gvcLocate,
             this.gvcUbication,
             this.gvcActive});
-            this.gdvBoxes.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.None;
-            this.gdvBoxes.GridControl = this.gdcBoxes;
-            this.gdvBoxes.Name = "gdvBoxes";
-            this.gdvBoxes.OptionsBehavior.Editable = false;
-            this.gdvBoxes.OptionsScrollAnnotations.ShowFocusedRow = DevExpress.Utils.DefaultBoolean.False;
-            this.gdvBoxes.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gdvBoxes.OptionsView.ShowIndicator = false;
-            this.gdvBoxes.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.False;
+            this.gdvSets.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.None;
+            this.gdvSets.GridControl = this.gdcSet;
+            this.gdvSets.Name = "gdvSets";
+            this.gdvSets.OptionsBehavior.Editable = false;
+            this.gdvSets.OptionsScrollAnnotations.ShowFocusedRow = DevExpress.Utils.DefaultBoolean.False;
+            this.gdvSets.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gdvSets.OptionsView.ShowIndicator = false;
+            this.gdvSets.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.False;
             // 
             // gvcSpeciality
             // 
@@ -144,7 +144,7 @@
             this.pnlNewItem.Location = new System.Drawing.Point(0, 0);
             this.pnlNewItem.Name = "pnlNewItem";
             this.pnlNewItem.Size = new System.Drawing.Size(1384, 62);
-            this.pnlNewItem.TabIndex = 2;
+            this.pnlNewItem.TabIndex = 4;
             // 
             // btnNew
             // 
@@ -163,22 +163,20 @@
             this.btnNew.UseVisualStyleBackColor = false;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // BoxesForm
+            // SetsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1384, 756);
-            this.Controls.Add(this.gdcBoxes);
+            this.Controls.Add(this.gdcSet);
             this.Controls.Add(this.pnlNewItem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "BoxesForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BoxesForm";
+            this.Name = "SetsForm";
+            this.Text = "SetsForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.BoxesForm_Load);
-            this.Shown += new System.EventHandler(this.BoxesForm_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.gdcBoxes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gdvBoxes)).EndInit();
+            this.Load += new System.EventHandler(this.SetsForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gdcSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdvSets)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlNewItem)).EndInit();
             this.pnlNewItem.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -187,8 +185,8 @@
 
         #endregion
 
-        private DevExpress.XtraGrid.GridControl gdcBoxes;
-        private DevExpress.XtraGrid.Views.Grid.GridView gdvBoxes;
+        private DevExpress.XtraGrid.GridControl gdcSet;
+        private DevExpress.XtraGrid.Views.Grid.GridView gdvSets;
         private DevExpress.XtraGrid.Columns.GridColumn gvcSpeciality;
         private DevExpress.XtraGrid.Columns.GridColumn gvcCode;
         private DevExpress.XtraGrid.Columns.GridColumn gvcBox;

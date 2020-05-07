@@ -1,6 +1,6 @@
-﻿namespace TrazinsAtenea.Forms.Inventory.Box
+﻿namespace TrazinsAtenea.Forms.Inventory.Set
 {
-    partial class BoxDetailsForm
+    partial class SetDetailsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.pnlHeader = new DevExpress.XtraEditors.PanelControl();
             this.btnHistorical = new System.Windows.Forms.Button();
             this.btnModifyInstrumental = new System.Windows.Forms.Button();
-            this.btnModifyBox = new System.Windows.Forms.Button();
+            this.btnModifySet = new System.Windows.Forms.Button();
             this.lblNewBoxTitle = new DevExpress.XtraEditors.LabelControl();
             this.spcBackArrow = new DevExpress.XtraEditors.SeparatorControl();
             this.pcbBack = new System.Windows.Forms.PictureBox();
@@ -50,7 +50,7 @@
             this.pnlHeader.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.pnlHeader.Controls.Add(this.btnHistorical);
             this.pnlHeader.Controls.Add(this.btnModifyInstrumental);
-            this.pnlHeader.Controls.Add(this.btnModifyBox);
+            this.pnlHeader.Controls.Add(this.btnModifySet);
             this.pnlHeader.Controls.Add(this.lblNewBoxTitle);
             this.pnlHeader.Controls.Add(this.spcBackArrow);
             this.pnlHeader.Controls.Add(this.pcbBack);
@@ -60,7 +60,7 @@
             this.pnlHeader.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1384, 75);
-            this.pnlHeader.TabIndex = 1;
+            this.pnlHeader.TabIndex = 2;
             // 
             // btnHistorical
             // 
@@ -94,21 +94,21 @@
             this.btnModifyInstrumental.Text = "Modificar Instrumental";
             this.btnModifyInstrumental.UseVisualStyleBackColor = false;
             // 
-            // btnModifyBox
+            // btnModifySet
             // 
-            this.btnModifyBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModifyBox.BackColor = System.Drawing.Color.White;
-            this.btnModifyBox.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
-            this.btnModifyBox.FlatAppearance.BorderSize = 2;
-            this.btnModifyBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModifyBox.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModifyBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
-            this.btnModifyBox.Location = new System.Drawing.Point(1206, 13);
-            this.btnModifyBox.Name = "btnModifyBox";
-            this.btnModifyBox.Size = new System.Drawing.Size(166, 48);
-            this.btnModifyBox.TabIndex = 3;
-            this.btnModifyBox.Text = "Modificar caja";
-            this.btnModifyBox.UseVisualStyleBackColor = false;
+            this.btnModifySet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModifySet.BackColor = System.Drawing.Color.White;
+            this.btnModifySet.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
+            this.btnModifySet.FlatAppearance.BorderSize = 2;
+            this.btnModifySet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModifySet.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifySet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
+            this.btnModifySet.Location = new System.Drawing.Point(1206, 13);
+            this.btnModifySet.Name = "btnModifySet";
+            this.btnModifySet.Size = new System.Drawing.Size(166, 48);
+            this.btnModifySet.TabIndex = 3;
+            this.btnModifySet.Text = "Modificar caja";
+            this.btnModifySet.UseVisualStyleBackColor = false;
             // 
             // lblNewBoxTitle
             // 
@@ -144,7 +144,7 @@
             this.pcbBack.TabIndex = 0;
             this.pcbBack.TabStop = false;
             // 
-            // BoxDetailsForm
+            // SetDetailsForm
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.Appearance.Options.UseBackColor = true;
@@ -152,8 +152,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1384, 756);
             this.Controls.Add(this.pnlHeader);
-            this.Name = "BoxDetailsForm";
-            this.Text = "BoxDetailsForm";
+            this.Name = "SetDetailsForm";
+            this.Text = "SetDetailsForm";
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
@@ -168,7 +168,7 @@
         private DevExpress.XtraEditors.PanelControl pnlHeader;
         private System.Windows.Forms.Button btnHistorical;
         private System.Windows.Forms.Button btnModifyInstrumental;
-        private System.Windows.Forms.Button btnModifyBox;
+        private System.Windows.Forms.Button btnModifySet;
         private DevExpress.XtraEditors.LabelControl lblNewBoxTitle;
         private DevExpress.XtraEditors.SeparatorControl spcBackArrow;
         private System.Windows.Forms.PictureBox pcbBack;

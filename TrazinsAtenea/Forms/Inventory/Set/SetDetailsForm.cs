@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace TrazinsAtenea.Forms.Inventory.Box
+namespace TrazinsAtenea.Forms.Inventory.Set
 {
-    public partial class BoxDetailsForm : DevExpress.XtraEditors.XtraForm
+    public partial class SetDetailsForm : DevExpress.XtraEditors.XtraForm
     {
-        public BoxDetailsForm()
+        public SetDetailsForm()
         {
             InitializeComponent();
         }

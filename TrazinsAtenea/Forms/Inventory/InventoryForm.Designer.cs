@@ -43,7 +43,7 @@
             this.separatorControl2 = new DevExpress.XtraEditors.SeparatorControl();
             this.btnInstrumental = new DevExpress.XtraEditors.SimpleButton();
             this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
-            this.btnBox = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSet = new DevExpress.XtraEditors.SimpleButton();
             this.pnlInventoryBody = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pnlInventoryMenu)).BeginInit();
             this.pnlInventoryMenu.SuspendLayout();
@@ -73,7 +73,7 @@
             this.pnlInventoryMenu.Controls.Add(this.separatorControl2);
             this.pnlInventoryMenu.Controls.Add(this.btnInstrumental);
             this.pnlInventoryMenu.Controls.Add(this.separatorControl1);
-            this.pnlInventoryMenu.Controls.Add(this.btnBox);
+            this.pnlInventoryMenu.Controls.Add(this.btnSet);
             this.pnlInventoryMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlInventoryMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlInventoryMenu.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
@@ -250,20 +250,20 @@
             this.separatorControl1.Size = new System.Drawing.Size(10, 60);
             this.separatorControl1.TabIndex = 1;
             // 
-            // btnBox
+            // btnSet
             // 
-            this.btnBox.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            this.btnBox.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBox.Appearance.Options.UseBackColor = true;
-            this.btnBox.Appearance.Options.UseFont = true;
-            this.btnBox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnBox.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.caja_18x18;
-            this.btnBox.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnBox.Location = new System.Drawing.Point(0, 0);
-            this.btnBox.Name = "btnBox";
-            this.btnBox.Size = new System.Drawing.Size(147, 60);
-            this.btnBox.TabIndex = 0;
-            this.btnBox.Text = "CAJA";
+            this.btnSet.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            this.btnSet.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSet.Appearance.Options.UseBackColor = true;
+            this.btnSet.Appearance.Options.UseFont = true;
+            this.btnSet.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnSet.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.caja_18x18;
+            this.btnSet.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnSet.Location = new System.Drawing.Point(0, 0);
+            this.btnSet.Name = "btnSet";
+            this.btnSet.Size = new System.Drawing.Size(147, 60);
+            this.btnSet.TabIndex = 0;
+            this.btnSet.Text = "CAJA";
             // 
             // pnlInventoryBody
             // 
@@ -311,7 +311,7 @@
 
         private DevExpress.XtraEditors.PanelControl pnlInventoryMenu;
         private DevExpress.XtraEditors.PanelControl pnlInventoryBody;
-        private DevExpress.XtraEditors.SimpleButton btnBox;
+        private DevExpress.XtraEditors.SimpleButton btnSet;
         private DevExpress.XtraEditors.SeparatorControl separatorControl1;
         private DevExpress.XtraEditors.SeparatorControl separatorControl6;
         private DevExpress.XtraEditors.SimpleButton btnCaducity;

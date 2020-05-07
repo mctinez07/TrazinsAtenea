@@ -61,15 +61,6 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Caja.
-        /// </summary>
-        internal static string Box {
-            get {
-                return ResourceManager.GetString("Box", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Caducidad.
         /// </summary>
         internal static string Caducity {
@@ -169,20 +160,20 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Modificar caja.
-        /// </summary>
-        internal static string ModifyBox {
-            get {
-                return ResourceManager.GetString("ModifyBox", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Modificar Instrumental.
         /// </summary>
         internal static string ModifyInstrumental {
             get {
                 return ResourceManager.GetString("ModifyInstrumental", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar caja.
+        /// </summary>
+        internal static string ModifySet {
+            get {
+                return ResourceManager.GetString("ModifySet", resourceCulture);
             }
         }
         
@@ -207,9 +198,9 @@ namespace TrazinsAtenea.GlobalResources {
         /// <summary>
         ///   Busca una cadena traducida similar a Nueva Caja.
         /// </summary>
-        internal static string NewBoxTitle {
+        internal static string NewSetTitle {
             get {
-                return ResourceManager.GetString("NewBoxTitle", resourceCulture);
+                return ResourceManager.GetString("NewSetTitle", resourceCulture);
             }
         }
         
@@ -228,6 +219,15 @@ namespace TrazinsAtenea.GlobalResources {
         internal static string Save {
             get {
                 return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Caja.
+        /// </summary>
+        internal static string Set {
+            get {
+                return ResourceManager.GetString("Set", resourceCulture);
             }
         }
         

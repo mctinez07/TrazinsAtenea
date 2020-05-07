@@ -1,6 +1,6 @@
-﻿namespace TrazinsAtenea.Forms.Inventory.Box
+﻿namespace TrazinsAtenea.Forms.Inventory.Set
 {
-    partial class BoxManagmentForm
+    partial class SetManagmentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -58,7 +58,7 @@
             this.pnlHeader.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1384, 75);
-            this.pnlHeader.TabIndex = 0;
+            this.pnlHeader.TabIndex = 1;
             // 
             // btnExit
             // 
@@ -128,24 +128,20 @@
             this.pcbBack.TabStop = false;
             this.pcbBack.Click += new System.EventHandler(this.pcbBack_Click);
             // 
-            // BoxManagmentForm
+            // SetManagmentForm
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.Appearance.Options.UseBackColor = true;
-            this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1384, 756);
             this.Controls.Add(this.pnlHeader);
-            this.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "BoxManagmentForm";
+            this.Name = "SetManagmentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BoxManagmentForm";
+            this.Text = "SetManagmentForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.BoxManagmentForm_Load);
+            this.Load += new System.EventHandler(this.SetManagmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
@@ -158,10 +154,10 @@
         #endregion
 
         private DevExpress.XtraEditors.PanelControl pnlHeader;
-        private System.Windows.Forms.PictureBox pcbBack;
-        private DevExpress.XtraEditors.SeparatorControl spcBackArrow;
-        private DevExpress.XtraEditors.LabelControl lblNewBoxTitle;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSave;
+        private DevExpress.XtraEditors.LabelControl lblNewBoxTitle;
+        private DevExpress.XtraEditors.SeparatorControl spcBackArrow;
+        private System.Windows.Forms.PictureBox pcbBack;
     }
 }

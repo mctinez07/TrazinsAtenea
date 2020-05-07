@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using TrazinsAtenea.GlobalEngine;
-using TrazinsAtenea.Forms.Inventory.Box;
+using TrazinsAtenea.Forms.Inventory.Set;
 
 namespace TrazinsAtenea.Forms.Inventory
 {
@@ -33,7 +33,7 @@ namespace TrazinsAtenea.Forms.Inventory
                     }
                 }
 
-                Engine.OpenForm(new BoxesForm(), pnlInventoryBody);
+                Engine.OpenForm(new SetsForm(), pnlInventoryBody);
             }
             catch (Exception ex)
             {

@@ -8,18 +8,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using TrazinsAtenea.GlobalEngine;
 using TrazinsAtenea.Forms.GlobalForms;
+using TrazinsAtenea.GlobalEngine;
 
-namespace TrazinsAtenea.Forms.Inventory.Box
+namespace TrazinsAtenea.Forms.Inventory.Set
 {
-    public partial class BoxManagmentForm : DevExpress.XtraEditors.XtraForm
+    public partial class SetManagmentForm : DevExpress.XtraEditors.XtraForm
     {
-        public BoxManagmentForm()
+        public SetManagmentForm()
         {
             InitializeComponent();
-
-            
         }
 
         private void MultilanguageFormat()
@@ -35,7 +33,7 @@ namespace TrazinsAtenea.Forms.Inventory.Box
             this.Close();
         }
 
-        private void BoxManagmentForm_Load(object sender, EventArgs e)
+        private void SetManagmentForm_Load(object sender, EventArgs e)
         {
             MultilanguageFormat();
         }
@@ -44,7 +42,7 @@ namespace TrazinsAtenea.Forms.Inventory.Box
         {
             MessageForm frm = new MessageForm(190);
             frm.ShowDialog();
-            
         }
+        
     }
 }

@@ -112,7 +112,7 @@
   <data name="Washes" xml:space="preserve">
     <value>Lavados</value>
   </data>
-  <data name="Box" xml:space="preserve">
+  <data name="Set" xml:space="preserve">
     <value>Caja</value>
   </data>
   <data name="Instrumental" xml:space="preserve">
@@ -151,10 +151,10 @@
   <data name="ModifyInstrumental" xml:space="preserve">
     <value>Modificar Instrumental</value>
   </data>
-  <data name="ModifyBox" xml:space="preserve">
+  <data name="ModifySet" xml:space="preserve">
     <value>Modificar caja</value>
   </data>
-  <data name="NewBoxTitle" xml:space="preserve">
+  <data name="NewSetTitle" xml:space="preserve">
     <value>Nueva Caja</value>
   </data>
   <data name="Save" xml:space="preserve">
