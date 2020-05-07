@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using TrazinsAtenea.Forms.GlobalForms;
 using TrazinsAtenea.GlobalEngine;
+using DevExpress.XtraTab;
 
 namespace TrazinsAtenea.Forms.Inventory.Set
 {
@@ -22,9 +23,32 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         private void MultilanguageFormat()
         {
-            foreach (Control item in pnlHeader.Controls)
+            
+            foreach (Control item in this.Controls)
             {
-                item.Text = Engine.GetLanguageResource(item.Name);
+                if(item is PanelControl)
+                {
+                    foreach (Control subItem in item.Controls)
+                    {
+                        if(subItem is XtraTabControl)
+                        {
+                            foreach (XtraTabPage tb in subItem.Controls)
+                            {
+                                //Traducir Cabeceras
+                                tb.Text = Engine.GetLanguageResource(tb.Name);
+                                foreach (LabelControl lbl in tb.Controls)
+                                {
+                                    //Traducimos los labels
+                                    lbl.Text = Engine.GetLanguageResource(lbl.Name);
+                                }
+                            }
+                        }
+
+                        //Traducir elementos de los paneles
+                        subItem.Text = Engine.GetLanguageResource(subItem.Name);
+                    }
+                }
+                
             };
         }
 
@@ -35,14 +59,19 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         private void SetManagmentForm_Load(object sender, EventArgs e)
         {
-            MultilanguageFormat();
+            //MultilanguageFormat();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             MessageForm frm = new MessageForm(190);
             frm.ShowDialog();
-        }
-        
+
+            if(frm.DialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }       
+
     }
 }

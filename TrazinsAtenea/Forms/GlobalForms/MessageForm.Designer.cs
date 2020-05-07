@@ -30,9 +30,9 @@
         {
             this.btnYes = new DevExpress.XtraEditors.SimpleButton();
             this.btnNo = new DevExpress.XtraEditors.SimpleButton();
-            this.pcbAtention = new System.Windows.Forms.PictureBox();
             this.lblMessage = new System.Windows.Forms.Label();
             this.lblMessageTitle = new System.Windows.Forms.Label();
+            this.pcbAtention = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbAtention)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +53,7 @@
             this.btnYes.Size = new System.Drawing.Size(106, 52);
             this.btnYes.TabIndex = 0;
             this.btnYes.Text = "Sí";
+            this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
             // 
             // btnNo
             // 
@@ -74,23 +75,14 @@
             this.btnNo.Size = new System.Drawing.Size(106, 52);
             this.btnNo.TabIndex = 1;
             this.btnNo.Text = "No";
-            // 
-            // pcbAtention
-            // 
-            this.pcbAtention.BackColor = System.Drawing.Color.White;
-            this.pcbAtention.Location = new System.Drawing.Point(169, 12);
-            this.pcbAtention.Name = "pcbAtention";
-            this.pcbAtention.Size = new System.Drawing.Size(126, 126);
-            this.pcbAtention.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbAtention.TabIndex = 15;
-            this.pcbAtention.TabStop = false;
+            this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
             // 
             // lblMessage
             // 
             this.lblMessage.BackColor = System.Drawing.Color.White;
             this.lblMessage.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.Black;
-            this.lblMessage.Location = new System.Drawing.Point(44, 196);
+            this.lblMessage.Location = new System.Drawing.Point(55, 228);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(363, 22);
             this.lblMessage.TabIndex = 14;
@@ -103,11 +95,21 @@
             this.lblMessageTitle.BackColor = System.Drawing.Color.White;
             this.lblMessageTitle.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessageTitle.ForeColor = System.Drawing.Color.Black;
-            this.lblMessageTitle.Location = new System.Drawing.Point(157, 152);
+            this.lblMessageTitle.Location = new System.Drawing.Point(168, 184);
             this.lblMessageTitle.Name = "lblMessageTitle";
             this.lblMessageTitle.Size = new System.Drawing.Size(150, 40);
             this.lblMessageTitle.TabIndex = 13;
             this.lblMessageTitle.Text = "Atención";
+            // 
+            // pcbAtention
+            // 
+            this.pcbAtention.BackColor = System.Drawing.Color.White;
+            this.pcbAtention.Location = new System.Drawing.Point(180, 44);
+            this.pcbAtention.Name = "pcbAtention";
+            this.pcbAtention.Size = new System.Drawing.Size(126, 126);
+            this.pcbAtention.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbAtention.TabIndex = 15;
+            this.pcbAtention.TabStop = false;
             // 
             // MessageForm
             // 

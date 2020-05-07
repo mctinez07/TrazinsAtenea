@@ -88,6 +88,15 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a 1 - Datos y procesos.
+        /// </summary>
+        internal static string DataProcesses {
+            get {
+                return ResourceManager.GetString("DataProcesses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Salir.
         /// </summary>
         internal static string Exit {
@@ -124,11 +133,29 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a 2 - Imágenes y vídeos.
+        /// </summary>
+        internal static string ImageVideo {
+            get {
+                return ResourceManager.GetString("ImageVideo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Suelto.
         /// </summary>
         internal static string Instrumental {
             get {
                 return ResourceManager.GetString("Instrumental", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a 3 - Instrumental.
+        /// </summary>
+        internal static string InstrumentalSet {
+            get {
+                return ResourceManager.GetString("InstrumentalSet", resourceCulture);
             }
         }
         

@@ -30,8 +30,6 @@
         {
             this.pnlInventoryMenu = new DevExpress.XtraEditors.PanelControl();
             this.pnlLocateButtons = new DevExpress.XtraEditors.PanelControl();
-            this.btnLocate = new System.Windows.Forms.Button();
-            this.btnRead = new System.Windows.Forms.Button();
             this.separatorControl6 = new DevExpress.XtraEditors.SeparatorControl();
             this.btnCaducity = new DevExpress.XtraEditors.SimpleButton();
             this.separatorControl5 = new DevExpress.XtraEditors.SeparatorControl();
@@ -45,6 +43,8 @@
             this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
             this.btnSet = new DevExpress.XtraEditors.SimpleButton();
             this.pnlInventoryBody = new DevExpress.XtraEditors.PanelControl();
+            this.btnRead = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLocator = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pnlInventoryMenu)).BeginInit();
             this.pnlInventoryMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlLocateButtons)).BeginInit();
@@ -85,39 +85,13 @@
             // pnlLocateButtons
             // 
             this.pnlLocateButtons.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pnlLocateButtons.Controls.Add(this.btnLocate);
+            this.pnlLocateButtons.Controls.Add(this.btnLocator);
             this.pnlLocateButtons.Controls.Add(this.btnRead);
             this.pnlLocateButtons.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlLocateButtons.Location = new System.Drawing.Point(1110, 0);
             this.pnlLocateButtons.Name = "pnlLocateButtons";
             this.pnlLocateButtons.Size = new System.Drawing.Size(276, 60);
             this.pnlLocateButtons.TabIndex = 12;
-            // 
-            // btnLocate
-            // 
-            this.btnLocate.BackColor = System.Drawing.Color.White;
-            this.btnLocate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
-            this.btnLocate.FlatAppearance.BorderSize = 2;
-            this.btnLocate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocate.Location = new System.Drawing.Point(146, 6);
-            this.btnLocate.Name = "btnLocate";
-            this.btnLocate.Size = new System.Drawing.Size(48, 48);
-            this.btnLocate.TabIndex = 1;
-            this.btnLocate.Text = "button1";
-            this.btnLocate.UseVisualStyleBackColor = false;
-            // 
-            // btnRead
-            // 
-            this.btnRead.BackColor = System.Drawing.Color.White;
-            this.btnRead.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
-            this.btnRead.FlatAppearance.BorderSize = 2;
-            this.btnRead.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRead.Location = new System.Drawing.Point(216, 6);
-            this.btnRead.Name = "btnRead";
-            this.btnRead.Size = new System.Drawing.Size(48, 48);
-            this.btnRead.TabIndex = 0;
-            this.btnRead.Text = "button1";
-            this.btnRead.UseVisualStyleBackColor = false;
             // 
             // separatorControl6
             // 
@@ -276,6 +250,26 @@
             this.pnlInventoryBody.Size = new System.Drawing.Size(1386, 728);
             this.pnlInventoryBody.TabIndex = 1;
             // 
+            // btnRead
+            // 
+            this.btnRead.Location = new System.Drawing.Point(216, 6);
+            this.btnRead.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnRead.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnRead.Name = "btnRead";
+            this.btnRead.Size = new System.Drawing.Size(48, 48);
+            this.btnRead.TabIndex = 2;
+            this.btnRead.Text = "simpleButton1";
+            // 
+            // btnLocator
+            // 
+            this.btnLocator.Location = new System.Drawing.Point(153, 6);
+            this.btnLocator.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnLocator.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnLocator.Name = "btnLocator";
+            this.btnLocator.Size = new System.Drawing.Size(48, 48);
+            this.btnLocator.TabIndex = 3;
+            this.btnLocator.Text = "simpleButton1";
+            // 
             // InventoryForm
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
@@ -324,7 +318,7 @@
         private DevExpress.XtraEditors.SeparatorControl separatorControl2;
         private DevExpress.XtraEditors.SimpleButton btnInstrumental;
         private DevExpress.XtraEditors.PanelControl pnlLocateButtons;
-        private System.Windows.Forms.Button btnLocate;
-        private System.Windows.Forms.Button btnRead;
+        private DevExpress.XtraEditors.SimpleButton btnRead;
+        private DevExpress.XtraEditors.SimpleButton btnLocator;
     }
 }

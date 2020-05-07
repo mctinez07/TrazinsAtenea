@@ -22,7 +22,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         public SetsForm()
         {
             InitializeComponent();
-            this.BaseModel = BaseModelClient.Instance;
+            this.BaseModel = BaseModelClient.Instance;            
         }
 
         private void GridFormat(GridView gridView)
@@ -31,12 +31,6 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             {
                 item.Caption = Engine.GetLanguageResource(item.Name);
             }
-        }
-
-        private void btnNew_Click(object sender, EventArgs e)
-        {
-            SetManagmentForm frm = new SetManagmentForm();
-            frm.ShowDialog();
         }
 
         private void SetsForm_Load(object sender, EventArgs e)
@@ -54,8 +48,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 gdcSet.DataSource = sets;
 
                 GridFormat(gdvSets);
-                btnNew.Text = Engine.GetLanguageResource(btnNew.Name);
-                btnNew.Focus();
+                btnNew.Text = Engine.GetLanguageResource(btnNew.Name);                
 
                 Cursor.Current = Cursors.Default;
             }
@@ -63,6 +56,12 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             {
                 MessageBox.Show("Error en SetsForm_Load: " + ex.Message);
             }
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            SetManagmentForm frm = new SetManagmentForm();
+            frm.ShowDialog();
         }
     }
 }

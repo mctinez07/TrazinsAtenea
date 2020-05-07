@@ -54,5 +54,20 @@ namespace TrazinsAtenea.Forms.GlobalForms
             }
             
         }
+
+        private void btnYes_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Yes;
+        }
+
+        private void btnNo_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pcbExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

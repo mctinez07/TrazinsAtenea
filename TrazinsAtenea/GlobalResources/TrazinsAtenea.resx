@@ -169,4 +169,13 @@
   <data name="MessageTitle" xml:space="preserve">
     <value>Título</value>
   </data>
+  <data name="DataProcesses" xml:space="preserve">
+    <value>1 - Datos y procesos</value>
+  </data>
+  <data name="ImageVideo" xml:space="preserve">
+    <value>2 - Imágenes y vídeos</value>
+  </data>
+  <data name="InstrumentalSet" xml:space="preserve">
+    <value>3 - Instrumental</value>
+  </data>
 </root>

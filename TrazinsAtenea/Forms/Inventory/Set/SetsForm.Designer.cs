@@ -37,7 +37,7 @@
             this.gvcUbication = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gvcActive = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pnlNewItem = new DevExpress.XtraEditors.PanelControl();
-            this.btnNew = new System.Windows.Forms.Button();
+            this.btnNew = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gdcSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvSets)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlNewItem)).BeginInit();
@@ -51,7 +51,7 @@
             this.gdcSet.MainView = this.gdvSets;
             this.gdcSet.Name = "gdcSet";
             this.gdcSet.Size = new System.Drawing.Size(1384, 694);
-            this.gdcSet.TabIndex = 3;
+            this.gdcSet.TabIndex = 2;
             this.gdcSet.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gdvSets});
             // 
@@ -144,23 +144,22 @@
             this.pnlNewItem.Location = new System.Drawing.Point(0, 0);
             this.pnlNewItem.Name = "pnlNewItem";
             this.pnlNewItem.Size = new System.Drawing.Size(1384, 62);
-            this.pnlNewItem.TabIndex = 4;
+            this.pnlNewItem.TabIndex = 0;
             // 
             // btnNew
             // 
             this.btnNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNew.BackColor = System.Drawing.Color.White;
-            this.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
-            this.btnNew.FlatAppearance.BorderSize = 2;
-            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNew.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
-            this.btnNew.Location = new System.Drawing.Point(1256, 7);
+            this.btnNew.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnNew.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
+            this.btnNew.Appearance.Options.UseFont = true;
+            this.btnNew.Appearance.Options.UseForeColor = true;
+            this.btnNew.Location = new System.Drawing.Point(1263, 7);
+            this.btnNew.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnNew.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(116, 48);
-            this.btnNew.TabIndex = 2;
+            this.btnNew.TabIndex = 1;
             this.btnNew.Text = "Nuevo";
-            this.btnNew.UseVisualStyleBackColor = false;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // SetsForm
@@ -194,6 +193,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gvcUbication;
         private DevExpress.XtraGrid.Columns.GridColumn gvcActive;
         private DevExpress.XtraEditors.PanelControl pnlNewItem;
-        private System.Windows.Forms.Button btnNew;
+        private DevExpress.XtraEditors.SimpleButton btnNew;
     }
 }
