@@ -32,7 +32,7 @@
             this.btnNo = new DevExpress.XtraEditors.SimpleButton();
             this.pcbAtention = new System.Windows.Forms.PictureBox();
             this.lblMessage = new System.Windows.Forms.Label();
-            this.lbl = new System.Windows.Forms.Label();
+            this.lblMessageTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcbAtention)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,17 +97,17 @@
             this.lblMessage.Text = "Mensaje";
             this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl
+            // lblMessageTitle
             // 
-            this.lbl.AutoSize = true;
-            this.lbl.BackColor = System.Drawing.Color.White;
-            this.lbl.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl.ForeColor = System.Drawing.Color.Black;
-            this.lbl.Location = new System.Drawing.Point(157, 152);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(150, 40);
-            this.lbl.TabIndex = 13;
-            this.lbl.Text = "Atención";
+            this.lblMessageTitle.AutoSize = true;
+            this.lblMessageTitle.BackColor = System.Drawing.Color.White;
+            this.lblMessageTitle.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessageTitle.ForeColor = System.Drawing.Color.Black;
+            this.lblMessageTitle.Location = new System.Drawing.Point(157, 152);
+            this.lblMessageTitle.Name = "lblMessageTitle";
+            this.lblMessageTitle.Size = new System.Drawing.Size(150, 40);
+            this.lblMessageTitle.TabIndex = 13;
+            this.lblMessageTitle.Text = "Atención";
             // 
             // MessageForm
             // 
@@ -121,7 +121,7 @@
             this.ClientSize = new System.Drawing.Size(473, 481);
             this.Controls.Add(this.pcbAtention);
             this.Controls.Add(this.lblMessage);
-            this.Controls.Add(this.lbl);
+            this.Controls.Add(this.lblMessageTitle);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.btnYes);
             this.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,6 +145,6 @@
         private DevExpress.XtraEditors.SimpleButton btnNo;
         private System.Windows.Forms.PictureBox pcbAtention;
         private System.Windows.Forms.Label lblMessage;
-        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.Label lblMessageTitle;
     }
 }

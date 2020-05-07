@@ -9,19 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using TrazinsAtenea.GlobalEngine;
+using TrazinsAtenea.ServiceWSTrazinsAtenea;
 
 namespace TrazinsAtenea.Forms.GlobalForms
 {
     public partial class MessageForm : DevExpress.XtraEditors.XtraForm
     {
         private string Lang;
+        private int MessageId;
 
         //Pendiente desarrollo recuperar mensaje desde DB
         //Es posible que cambie el titulo según el tipo de mensaje.
 
-        public MessageForm()
+        public MessageForm(int messageId)
         {
             InitializeComponent();
+
+            this.MessageId = messageId;
 
             //Obtenemos el idioma para la traducción de los mensajes desde DB
             this.Lang = System.Threading.Thread.CurrentThread.CurrentUICulture.ToString();
@@ -29,11 +33,26 @@ namespace TrazinsAtenea.Forms.GlobalForms
 
         private void MessageForm_Load(object sender, EventArgs e)
         {
-            foreach (Control item in this.Controls)
+            try
             {
-                if(item is SimpleButton)
-                    item.Text = Engine.GetLanguageResource(item.Name);
+                var service = BaseModelClient.Instance.Service;
+
+                var message = service.Mensaje_Select(new Mensaje() { Id = MessageId, Idioma = Lang });
+
+                foreach (Control item in this.Controls)
+                {
+                    if (item is SimpleButton)
+                        item.Text = Engine.GetLanguageResource(item.Name);
+                }
+
+                lblMessageTitle.Text = message.Titulo;
+                lblMessage.Text = message.Texto;
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en MessageForm_Load: " + ex.Message);
+            }
+            
         }
     }
 }

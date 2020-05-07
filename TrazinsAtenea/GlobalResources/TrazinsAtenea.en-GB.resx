@@ -113,7 +113,7 @@
     <value>Washes</value>
   </data>
   <data name="Box" xml:space="preserve">
-    <value>Box</value>
+    <value>Set</value>
   </data>
   <data name="Instrumental" xml:space="preserve">
     <value>Instrumental</value>
@@ -152,10 +152,10 @@
     <value>Modify instrumental</value>
   </data>
   <data name="ModifyBox" xml:space="preserve">
-    <value>Modify box</value>
+    <value>Modify set</value>
   </data>
   <data name="NewBoxTitle" xml:space="preserve">
-    <value>New Box</value>
+    <value>New Set</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>
@@ -165,5 +165,8 @@
   </data>
   <data name="No" xml:space="preserve">
     <value>No</value>
+  </data>
+  <data name="MessageTitle" xml:space="preserve">
+    <value>Title</value>
   </data>
 </root>

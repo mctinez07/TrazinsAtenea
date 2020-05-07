@@ -160,6 +160,15 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Título.
+        /// </summary>
+        internal static string MessageTitle {
+            get {
+                return ResourceManager.GetString("MessageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Modificar caja.
         /// </summary>
         internal static string ModifyBox {

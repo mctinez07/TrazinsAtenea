@@ -287,10 +287,16 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdiomaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TextoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int TipoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TituloField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -311,6 +317,19 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
                 if ((this.IdField.Equals(value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Idioma {
+            get {
+                return this.IdiomaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdiomaField, value) != true)) {
+                    this.IdiomaField = value;
+                    this.RaisePropertyChanged("Idioma");
                 }
             }
         }
@@ -337,6 +356,19 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
                 if ((this.TipoField.Equals(value) != true)) {
                     this.TipoField = value;
                     this.RaisePropertyChanged("Tipo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Titulo {
+            get {
+                return this.TituloField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TituloField, value) != true)) {
+                    this.TituloField = value;
+                    this.RaisePropertyChanged("Titulo");
                 }
             }
         }

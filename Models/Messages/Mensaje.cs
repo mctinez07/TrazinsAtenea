@@ -16,8 +16,15 @@ namespace Models.Messages
         [DataMember]
         public int Tipo { get; set; }
 
-        //El idioma lo recuperamos desde DB
+        //La traducción se selecciona desde DB
         [DataMember]
         public string Texto { get; set; }
+
+        [DataMember]
+        public string Titulo { get; set; }
+
+        //El idioma lo recuperamos desde DB
+        [DataMember]
+        public string Idioma { get; set; }
     }
 }

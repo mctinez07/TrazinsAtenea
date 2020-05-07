@@ -42,7 +42,7 @@ namespace TrazinsAtenea.Forms.Inventory.Box
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            MessageForm frm = new MessageForm();
+            MessageForm frm = new MessageForm(190);
             frm.ShowDialog();
             
         }
