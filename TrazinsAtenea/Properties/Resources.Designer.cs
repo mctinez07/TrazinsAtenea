@@ -123,6 +123,16 @@ namespace TrazinsAtenea.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_obligatory {
+            get {
+                object obj = ResourceManager.GetObject("ic_obligatory", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap instrumental_18x18 {
             get {
                 object obj = ResourceManager.GetObject("instrumental-18x18", resourceCulture);

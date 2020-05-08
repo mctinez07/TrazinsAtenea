@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using TrazinsAtenea.Forms.GlobalForms;
 using TrazinsAtenea.GlobalEngine;
 using DevExpress.XtraTab;
+using DevExpress.XtraLayout;
 
 namespace TrazinsAtenea.Forms.Inventory.Set
 {
@@ -23,33 +24,49 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         private void MultilanguageFormat()
         {
-            
-            foreach (Control item in this.Controls)
+            try
             {
-                if(item is PanelControl)
+                foreach (Control item in this.Controls)
                 {
-                    foreach (Control subItem in item.Controls)
+                    if (item is PanelControl)
                     {
-                        if(subItem is XtraTabControl)
+                        foreach (Control subItem in item.Controls)
                         {
-                            foreach (XtraTabPage tb in subItem.Controls)
+                            if (subItem is XtraTabControl)
                             {
-                                //Traducir Cabeceras
-                                tb.Text = Engine.GetLanguageResource(tb.Name);
-                                foreach (LabelControl lbl in tb.Controls)
+                                foreach (XtraTabPage tb in subItem.Controls)
                                 {
-                                    //Traducimos los labels
-                                    lbl.Text = Engine.GetLanguageResource(lbl.Name);
+                                    //Traducir Cabeceras
+                                    tb.Text = Engine.GetLanguageResource(tb.Name);
+                                    foreach (Control control in tb.Controls)
+                                    {
+                                        //Traducimos los controles labels y buttons
+                                        if (control is SimpleButton || control is LabelControl)
+                                            control.Text = Engine.GetLanguageResource(control.Name);
+                                    }
                                 }
                             }
+                            //Traducir elementos de los paneles
+                            subItem.Text = Engine.GetLanguageResource(subItem.Name);
                         }
-
-                        //Traducir elementos de los paneles
-                        subItem.Text = Engine.GetLanguageResource(subItem.Name);
                     }
+                };
+
+                //Traducimos los controles del tableLayoutPrincipal
+                foreach (LayoutControlItem layoutControl in Root.Items)
+                {
+                    layoutControl.Text = Engine.GetLanguageResource(layoutControl.Name);
+                    if (layoutControl.Control is LabelControl || layoutControl.Control is SimpleButton)
+                        layoutControl.Control.Text = Engine.GetLanguageResource(layoutControl.Control.Name);
                 }
-                
-            };
+
+                //Traducir el subroot layout
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en MultilanguageFormat: " + ex.Message);  
+            }
+            
         }
 
         private void pcbBack_Click(object sender, EventArgs e)
@@ -59,7 +76,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         private void SetManagmentForm_Load(object sender, EventArgs e)
         {
-            //MultilanguageFormat();
+            MultilanguageFormat();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

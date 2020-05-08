@@ -178,4 +178,31 @@
   <data name="InstrumentalSet" xml:space="preserve">
     <value>3 - Instrumental</value>
   </data>
+  <data name="GeneralData" xml:space="preserve">
+    <value>Datos Generales</value>
+  </data>
+  <data name="Property" xml:space="preserve">
+    <value>Propiedad</value>
+  </data>
+  <data name="SetType" xml:space="preserve">
+    <value>Tipo de caja</value>
+  </data>
+  <data name="CostCenter" xml:space="preserve">
+    <value>Centro de Coste</value>
+  </data>
+  <data name="Package" xml:space="preserve">
+    <value>Embalaje</value>
+  </data>
+  <data name="SetName" xml:space="preserve">
+    <value>Nombre caja</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Activa</value>
+  </data>
+  <data name="Maintenance" xml:space="preserve">
+    <value>Ciclos hasta mantenimiento preventivo</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Precio</value>
+  </data>
 </root>

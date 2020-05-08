@@ -23,7 +23,8 @@ namespace TrazinsAtenea
             dlmLoginInfo.SetValues("María García", "TAP");
 
             lblMainTimer.Text = DateTime.Now.ToString();
-            //Traducir();
+
+            Traducir();
         }
         
         // Metodo para probar las traducciones.

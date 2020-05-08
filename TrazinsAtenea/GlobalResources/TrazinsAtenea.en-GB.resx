@@ -169,4 +169,13 @@
   <data name="MessageTitle" xml:space="preserve">
     <value>Title</value>
   </data>
+  <data name="Property" xml:space="preserve">
+    <value>Property</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Package" xml:space="preserve">
+    <value>Package</value>
+  </data>
 </root>
