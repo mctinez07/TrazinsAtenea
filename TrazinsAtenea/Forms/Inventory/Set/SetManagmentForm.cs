@@ -22,6 +22,11 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             InitializeComponent();
         }
 
+        private void SetManagmentForm_Load(object sender, EventArgs e)
+        {
+            MultilanguageFormat();
+        }
+
         private void MultilanguageFormat()
         {
             try
@@ -72,12 +77,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         private void pcbBack_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void SetManagmentForm_Load(object sender, EventArgs e)
-        {
-            MultilanguageFormat();
-        }
+        }        
 
         private void btnExit_Click(object sender, EventArgs e)
         {

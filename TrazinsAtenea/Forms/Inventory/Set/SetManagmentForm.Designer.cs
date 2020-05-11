@@ -51,6 +51,20 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition15 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition16 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition17 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition18 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition19 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition20 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition21 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition22 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition23 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition24 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition25 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition26 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition27 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition28 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition29 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition30 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition31 = new DevExpress.XtraLayout.RowDefinition();
             this.pnlHeader = new DevExpress.XtraEditors.PanelControl();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
@@ -61,7 +75,35 @@
             this.tbcSet = new DevExpress.XtraTab.XtraTabControl();
             this.xtpDataProcesses = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.cmbPosition = new System.Windows.Forms.ComboBox();
+            this.cmbSelf = new System.Windows.Forms.ComboBox();
+            this.cmbBlock = new System.Windows.Forms.ComboBox();
+            this.cmbDefaultLocation = new System.Windows.Forms.ComboBox();
+            this.lblSelectDefaultLocation = new DevExpress.XtraEditors.LabelControl();
+            this.lblDefaultLocation = new DevExpress.XtraEditors.LabelControl();
+            this.txtRemaksSteri = new DevExpress.XtraEditors.MemoEdit();
+            this.lblSteriRemarks = new DevExpress.XtraEditors.LabelControl();
+            this.cmbThirdMethodSteri = new System.Windows.Forms.ComboBox();
+            this.cmbSecondMethodSteri = new System.Windows.Forms.ComboBox();
+            this.cmbFirstMethodSteri = new System.Windows.Forms.ComboBox();
+            this.lblSelectSterilizationMethods = new DevExpress.XtraEditors.LabelControl();
+            this.lblSterilization = new DevExpress.XtraEditors.LabelControl();
+            this.txtRemaksAssemblyPackaging = new DevExpress.XtraEditors.MemoEdit();
+            this.lblAssemblyPackagingRemarks = new DevExpress.XtraEditors.LabelControl();
+            this.lblAssemblyPackaging = new DevExpress.XtraEditors.LabelControl();
+            this.txtRemaksWashes = new DevExpress.XtraEditors.MemoEdit();
+            this.lblWashingRemarks = new DevExpress.XtraEditors.LabelControl();
+            this.cmbThirdMethodWashing = new System.Windows.Forms.ComboBox();
+            this.cmbSecondMethodWashing = new System.Windows.Forms.ComboBox();
+            this.cmbFirstMethodWashing = new System.Windows.Forms.ComboBox();
+            this.lblSelectWashesMethods = new DevExpress.XtraEditors.LabelControl();
+            this.lblProcesses = new DevExpress.XtraEditors.LabelControl();
+            this.lblSetWashes = new DevExpress.XtraEditors.LabelControl();
+            this.ckbSetSample = new DevExpress.XtraEditors.CheckEdit();
+            this.lblSetSampleInfo = new System.Windows.Forms.Label();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.tgsYesNo = new DevExpress.XtraEditors.ToggleSwitch();
+            this.lblActive = new DevExpress.XtraEditors.LabelControl();
             this.txtPrice = new DevExpress.XtraEditors.TextEdit();
             this.lblMaintenace = new DevExpress.XtraEditors.LabelControl();
             this.lblPrice = new DevExpress.XtraEditors.LabelControl();
@@ -73,6 +115,8 @@
             this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lblSetName = new DevExpress.XtraEditors.LabelControl();
             this.txtSetName = new DevExpress.XtraEditors.TextEdit();
             this.cmbCostCenter = new System.Windows.Forms.ComboBox();
@@ -94,24 +138,43 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem28 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem32 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem34 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem37 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem38 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem39 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem40 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem41 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem42 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem43 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem44 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem45 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem46 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciBlock = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciSelf = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lciPosition = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtpImageVideo = new DevExpress.XtraTab.XtraTabPage();
             this.xtpInstrumentalSet = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lblActive = new DevExpress.XtraEditors.LabelControl();
-            this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.tgsYesNo = new DevExpress.XtraEditors.ToggleSwitch();
-            this.label1 = new System.Windows.Forms.Label();
-            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.label2 = new System.Windows.Forms.Label();
-            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).BeginInit();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcBackArrow)).BeginInit();
@@ -123,8 +186,13 @@
             this.xtpDataProcesses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRemaksSteri.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRemaksAssemblyPackaging.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRemaksWashes.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckbSetSample.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tgsYesNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speMaintenance.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -133,6 +201,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSetName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -142,19 +212,41 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tgsYesNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBlock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSelf)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPosition)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -174,7 +266,7 @@
             this.pnlHeader.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.pnlHeader.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1604, 75);
+            this.pnlHeader.Size = new System.Drawing.Size(1386, 75);
             this.pnlHeader.TabIndex = 1;
             // 
             // btnSave
@@ -186,7 +278,7 @@
             this.btnSave.Appearance.Options.UseBackColor = true;
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.Appearance.Options.UseForeColor = true;
-            this.btnSave.Location = new System.Drawing.Point(1493, 13);
+            this.btnSave.Location = new System.Drawing.Point(1275, 13);
             this.btnSave.LookAndFeel.SkinName = "DevExpress Style";
             this.btnSave.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnSave.Name = "btnSave";
@@ -201,7 +293,7 @@
             this.btnExit.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
             this.btnExit.Appearance.Options.UseFont = true;
             this.btnExit.Appearance.Options.UseForeColor = true;
-            this.btnExit.Location = new System.Drawing.Point(1413, 13);
+            this.btnExit.Location = new System.Drawing.Point(1195, 13);
             this.btnExit.LookAndFeel.SkinName = "DevExpress Style";
             this.btnExit.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnExit.Name = "btnExit";
@@ -256,7 +348,7 @@
             this.pnlBody.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.pnlBody.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(1604, 681);
+            this.pnlBody.Size = new System.Drawing.Size(1386, 681);
             this.pnlBody.TabIndex = 2;
             // 
             // tbcSet
@@ -284,7 +376,7 @@
             this.tbcSet.Margin = new System.Windows.Forms.Padding(0);
             this.tbcSet.Name = "tbcSet";
             this.tbcSet.SelectedTabPage = this.xtpDataProcesses;
-            this.tbcSet.Size = new System.Drawing.Size(1604, 681);
+            this.tbcSet.Size = new System.Drawing.Size(1386, 681);
             this.tbcSet.TabIndex = 0;
             this.tbcSet.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpDataProcesses,
@@ -299,13 +391,37 @@
             this.xtpDataProcesses.Appearance.Header.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.xtpDataProcesses.Controls.Add(this.layoutControl1);
             this.xtpDataProcesses.Name = "xtpDataProcesses";
-            this.xtpDataProcesses.Size = new System.Drawing.Size(1356, 679);
+            this.xtpDataProcesses.Size = new System.Drawing.Size(1138, 679);
             this.xtpDataProcesses.Text = "1 - Datos y procesos";
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.label2);
-            this.layoutControl1.Controls.Add(this.label1);
+            this.layoutControl1.Controls.Add(this.cmbPosition);
+            this.layoutControl1.Controls.Add(this.cmbSelf);
+            this.layoutControl1.Controls.Add(this.cmbBlock);
+            this.layoutControl1.Controls.Add(this.cmbDefaultLocation);
+            this.layoutControl1.Controls.Add(this.lblSelectDefaultLocation);
+            this.layoutControl1.Controls.Add(this.lblDefaultLocation);
+            this.layoutControl1.Controls.Add(this.txtRemaksSteri);
+            this.layoutControl1.Controls.Add(this.lblSteriRemarks);
+            this.layoutControl1.Controls.Add(this.cmbThirdMethodSteri);
+            this.layoutControl1.Controls.Add(this.cmbSecondMethodSteri);
+            this.layoutControl1.Controls.Add(this.cmbFirstMethodSteri);
+            this.layoutControl1.Controls.Add(this.lblSelectSterilizationMethods);
+            this.layoutControl1.Controls.Add(this.lblSterilization);
+            this.layoutControl1.Controls.Add(this.txtRemaksAssemblyPackaging);
+            this.layoutControl1.Controls.Add(this.lblAssemblyPackagingRemarks);
+            this.layoutControl1.Controls.Add(this.lblAssemblyPackaging);
+            this.layoutControl1.Controls.Add(this.txtRemaksWashes);
+            this.layoutControl1.Controls.Add(this.lblWashingRemarks);
+            this.layoutControl1.Controls.Add(this.cmbThirdMethodWashing);
+            this.layoutControl1.Controls.Add(this.cmbSecondMethodWashing);
+            this.layoutControl1.Controls.Add(this.cmbFirstMethodWashing);
+            this.layoutControl1.Controls.Add(this.lblSelectWashesMethods);
+            this.layoutControl1.Controls.Add(this.lblProcesses);
+            this.layoutControl1.Controls.Add(this.lblSetWashes);
+            this.layoutControl1.Controls.Add(this.ckbSetSample);
+            this.layoutControl1.Controls.Add(this.lblSetSampleInfo);
             this.layoutControl1.Controls.Add(this.layoutControl2);
             this.layoutControl1.Controls.Add(this.lblSetName);
             this.layoutControl1.Controls.Add(this.txtSetName);
@@ -323,10 +439,276 @@
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(716, 17, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1356, 679);
+            this.layoutControl1.Size = new System.Drawing.Size(1138, 679);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // cmbPosition
+            // 
+            this.cmbPosition.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPosition.FormattingEnabled = true;
+            this.cmbPosition.Location = new System.Drawing.Point(821, 526);
+            this.cmbPosition.MaximumSize = new System.Drawing.Size(150, 0);
+            this.cmbPosition.Name = "cmbPosition";
+            this.cmbPosition.Size = new System.Drawing.Size(150, 32);
+            this.cmbPosition.TabIndex = 64;
+            // 
+            // cmbSelf
+            // 
+            this.cmbSelf.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSelf.FormattingEnabled = true;
+            this.cmbSelf.Location = new System.Drawing.Point(451, 526);
+            this.cmbSelf.MaximumSize = new System.Drawing.Size(150, 0);
+            this.cmbSelf.Name = "cmbSelf";
+            this.cmbSelf.Size = new System.Drawing.Size(150, 32);
+            this.cmbSelf.TabIndex = 63;
+            // 
+            // cmbBlock
+            // 
+            this.cmbBlock.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBlock.FormattingEnabled = true;
+            this.cmbBlock.Location = new System.Drawing.Point(80, 526);
+            this.cmbBlock.MaximumSize = new System.Drawing.Size(150, 0);
+            this.cmbBlock.Name = "cmbBlock";
+            this.cmbBlock.Size = new System.Drawing.Size(150, 32);
+            this.cmbBlock.TabIndex = 62;
+            // 
+            // cmbDefaultLocation
+            // 
+            this.cmbDefaultLocation.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDefaultLocation.FormattingEnabled = true;
+            this.cmbDefaultLocation.Location = new System.Drawing.Point(12, 481);
+            this.cmbDefaultLocation.Name = "cmbDefaultLocation";
+            this.cmbDefaultLocation.Size = new System.Drawing.Size(353, 32);
+            this.cmbDefaultLocation.TabIndex = 61;
+            // 
+            // lblSelectDefaultLocation
+            // 
+            this.lblSelectDefaultLocation.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectDefaultLocation.Appearance.Options.UseFont = true;
+            this.lblSelectDefaultLocation.Location = new System.Drawing.Point(12, 453);
+            this.lblSelectDefaultLocation.Name = "lblSelectDefaultLocation";
+            this.lblSelectDefaultLocation.Size = new System.Drawing.Size(705, 24);
+            this.lblSelectDefaultLocation.StyleController = this.layoutControl1;
+            this.lblSelectDefaultLocation.TabIndex = 60;
+            this.lblSelectDefaultLocation.Text = "Selecciona una ubicación donde se almacenará esta caja de forma predeterminada";
+            // 
+            // lblDefaultLocation
+            // 
+            this.lblDefaultLocation.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDefaultLocation.Appearance.Options.UseFont = true;
+            this.lblDefaultLocation.Location = new System.Drawing.Point(12, 420);
+            this.lblDefaultLocation.Name = "lblDefaultLocation";
+            this.lblDefaultLocation.Size = new System.Drawing.Size(335, 29);
+            this.lblDefaultLocation.StyleController = this.layoutControl1;
+            this.lblDefaultLocation.TabIndex = 59;
+            this.lblDefaultLocation.Text = "4 - Ubicación predeterminada";
+            // 
+            // txtRemaksSteri
+            // 
+            this.txtRemaksSteri.Location = new System.Drawing.Point(12, 282);
+            this.txtRemaksSteri.Name = "txtRemaksSteri";
+            this.txtRemaksSteri.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRemaksSteri.Properties.Appearance.Options.UseFont = true;
+            this.txtRemaksSteri.Size = new System.Drawing.Size(1087, 76);
+            this.txtRemaksSteri.StyleController = this.layoutControl1;
+            this.txtRemaksSteri.TabIndex = 58;
+            // 
+            // lblSteriRemarks
+            // 
+            this.lblSteriRemarks.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSteriRemarks.Appearance.Options.UseFont = true;
+            this.lblSteriRemarks.Location = new System.Drawing.Point(12, 254);
+            this.lblSteriRemarks.Name = "lblSteriRemarks";
+            this.lblSteriRemarks.Size = new System.Drawing.Size(363, 24);
+            this.lblSteriRemarks.StyleController = this.layoutControl1;
+            this.lblSteriRemarks.TabIndex = 57;
+            this.lblSteriRemarks.Text = "Observaciones específicas de esterilización";
+            // 
+            // cmbThirdMethodSteri
+            // 
+            this.cmbThirdMethodSteri.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbThirdMethodSteri.FormattingEnabled = true;
+            this.cmbThirdMethodSteri.Location = new System.Drawing.Point(746, 209);
+            this.cmbThirdMethodSteri.Name = "cmbThirdMethodSteri";
+            this.cmbThirdMethodSteri.Size = new System.Drawing.Size(353, 31);
+            this.cmbThirdMethodSteri.TabIndex = 56;
+            // 
+            // cmbSecondMethodSteri
+            // 
+            this.cmbSecondMethodSteri.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSecondMethodSteri.FormattingEnabled = true;
+            this.cmbSecondMethodSteri.Location = new System.Drawing.Point(379, 209);
+            this.cmbSecondMethodSteri.Name = "cmbSecondMethodSteri";
+            this.cmbSecondMethodSteri.Size = new System.Drawing.Size(353, 32);
+            this.cmbSecondMethodSteri.TabIndex = 55;
+            // 
+            // cmbFirstMethodSteri
+            // 
+            this.cmbFirstMethodSteri.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFirstMethodSteri.FormattingEnabled = true;
+            this.cmbFirstMethodSteri.Location = new System.Drawing.Point(12, 209);
+            this.cmbFirstMethodSteri.Name = "cmbFirstMethodSteri";
+            this.cmbFirstMethodSteri.Size = new System.Drawing.Size(353, 32);
+            this.cmbFirstMethodSteri.TabIndex = 54;
+            // 
+            // lblSelectSterilizationMethods
+            // 
+            this.lblSelectSterilizationMethods.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectSterilizationMethods.Appearance.Options.UseFont = true;
+            this.lblSelectSterilizationMethods.Location = new System.Drawing.Point(12, 181);
+            this.lblSelectSterilizationMethods.Name = "lblSelectSterilizationMethods";
+            this.lblSelectSterilizationMethods.Size = new System.Drawing.Size(453, 24);
+            this.lblSelectSterilizationMethods.StyleController = this.layoutControl1;
+            this.lblSelectSterilizationMethods.TabIndex = 53;
+            this.lblSelectSterilizationMethods.Text = "Selecciona desde 1 hasta 3 métodos de esterilización";
+            // 
+            // lblSterilization
+            // 
+            this.lblSterilization.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSterilization.Appearance.Options.UseFont = true;
+            this.lblSterilization.Location = new System.Drawing.Point(12, 120);
+            this.lblSterilization.Name = "lblSterilization";
+            this.lblSterilization.Size = new System.Drawing.Size(263, 29);
+            this.lblSterilization.StyleController = this.layoutControl1;
+            this.lblSterilization.TabIndex = 52;
+            this.lblSterilization.Text = "3 - Ciclos/Esterilización";
+            // 
+            // txtRemaksAssemblyPackaging
+            // 
+            this.txtRemaksAssemblyPackaging.Location = new System.Drawing.Point(12, -18);
+            this.txtRemaksAssemblyPackaging.Name = "txtRemaksAssemblyPackaging";
+            this.txtRemaksAssemblyPackaging.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRemaksAssemblyPackaging.Properties.Appearance.Options.UseFont = true;
+            this.txtRemaksAssemblyPackaging.Size = new System.Drawing.Size(1087, 76);
+            this.txtRemaksAssemblyPackaging.StyleController = this.layoutControl1;
+            this.txtRemaksAssemblyPackaging.TabIndex = 51;
+            // 
+            // lblAssemblyPackagingRemarks
+            // 
+            this.lblAssemblyPackagingRemarks.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAssemblyPackagingRemarks.Appearance.Options.UseFont = true;
+            this.lblAssemblyPackagingRemarks.Location = new System.Drawing.Point(12, -46);
+            this.lblAssemblyPackagingRemarks.Name = "lblAssemblyPackagingRemarks";
+            this.lblAssemblyPackagingRemarks.Size = new System.Drawing.Size(467, 24);
+            this.lblAssemblyPackagingRemarks.StyleController = this.layoutControl1;
+            this.lblAssemblyPackagingRemarks.TabIndex = 50;
+            this.lblAssemblyPackagingRemarks.Text = "Observaciones específicas de montaje o empaquetado ";
+            // 
+            // lblAssemblyPackaging
+            // 
+            this.lblAssemblyPackaging.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAssemblyPackaging.Appearance.Options.UseFont = true;
+            this.lblAssemblyPackaging.Location = new System.Drawing.Point(12, -107);
+            this.lblAssemblyPackaging.Name = "lblAssemblyPackaging";
+            this.lblAssemblyPackaging.Size = new System.Drawing.Size(312, 29);
+            this.lblAssemblyPackaging.StyleController = this.layoutControl1;
+            this.lblAssemblyPackaging.TabIndex = 49;
+            this.lblAssemblyPackaging.Text = "2 - Montaje | Empaquetado";
+            // 
+            // txtRemaksWashes
+            // 
+            this.txtRemaksWashes.Location = new System.Drawing.Point(12, -245);
+            this.txtRemaksWashes.Name = "txtRemaksWashes";
+            this.txtRemaksWashes.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRemaksWashes.Properties.Appearance.Options.UseFont = true;
+            this.txtRemaksWashes.Size = new System.Drawing.Size(1087, 76);
+            this.txtRemaksWashes.StyleController = this.layoutControl1;
+            this.txtRemaksWashes.TabIndex = 48;
+            // 
+            // lblWashingRemarks
+            // 
+            this.lblWashingRemarks.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWashingRemarks.Appearance.Options.UseFont = true;
+            this.lblWashingRemarks.Location = new System.Drawing.Point(12, -273);
+            this.lblWashingRemarks.Name = "lblWashingRemarks";
+            this.lblWashingRemarks.Size = new System.Drawing.Size(307, 24);
+            this.lblWashingRemarks.StyleController = this.layoutControl1;
+            this.lblWashingRemarks.TabIndex = 47;
+            this.lblWashingRemarks.Text = "Observaciones específicas de lavado";
+            // 
+            // cmbThirdMethodWashing
+            // 
+            this.cmbThirdMethodWashing.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbThirdMethodWashing.FormattingEnabled = true;
+            this.cmbThirdMethodWashing.Location = new System.Drawing.Point(746, -318);
+            this.cmbThirdMethodWashing.Name = "cmbThirdMethodWashing";
+            this.cmbThirdMethodWashing.Size = new System.Drawing.Size(353, 32);
+            this.cmbThirdMethodWashing.TabIndex = 46;
+            // 
+            // cmbSecondMethodWashing
+            // 
+            this.cmbSecondMethodWashing.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSecondMethodWashing.FormattingEnabled = true;
+            this.cmbSecondMethodWashing.Location = new System.Drawing.Point(379, -318);
+            this.cmbSecondMethodWashing.Name = "cmbSecondMethodWashing";
+            this.cmbSecondMethodWashing.Size = new System.Drawing.Size(353, 32);
+            this.cmbSecondMethodWashing.TabIndex = 45;
+            // 
+            // cmbFirstMethodWashing
+            // 
+            this.cmbFirstMethodWashing.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFirstMethodWashing.FormattingEnabled = true;
+            this.cmbFirstMethodWashing.Location = new System.Drawing.Point(12, -318);
+            this.cmbFirstMethodWashing.Name = "cmbFirstMethodWashing";
+            this.cmbFirstMethodWashing.Size = new System.Drawing.Size(353, 32);
+            this.cmbFirstMethodWashing.TabIndex = 44;
+            // 
+            // lblSelectWashesMethods
+            // 
+            this.lblSelectWashesMethods.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectWashesMethods.Appearance.Options.UseFont = true;
+            this.lblSelectWashesMethods.Location = new System.Drawing.Point(12, -346);
+            this.lblSelectWashesMethods.Name = "lblSelectWashesMethods";
+            this.lblSelectWashesMethods.Size = new System.Drawing.Size(308, 24);
+            this.lblSelectWashesMethods.StyleController = this.layoutControl1;
+            this.lblSelectWashesMethods.TabIndex = 43;
+            this.lblSelectWashesMethods.Text = "Selecciona desde 1 hasta 3 métodos";
+            // 
+            // lblProcesses
+            // 
+            this.lblProcesses.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProcesses.Appearance.Options.UseFont = true;
+            this.lblProcesses.Location = new System.Drawing.Point(12, -476);
+            this.lblProcesses.Name = "lblProcesses";
+            this.lblProcesses.Size = new System.Drawing.Size(131, 40);
+            this.lblProcesses.StyleController = this.layoutControl1;
+            this.lblProcesses.TabIndex = 42;
+            this.lblProcesses.Text = "Procesos";
+            // 
+            // lblSetWashes
+            // 
+            this.lblSetWashes.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSetWashes.Appearance.Options.UseFont = true;
+            this.lblSetWashes.Location = new System.Drawing.Point(12, -406);
+            this.lblSetWashes.Name = "lblSetWashes";
+            this.lblSetWashes.Size = new System.Drawing.Size(127, 29);
+            this.lblSetWashes.StyleController = this.layoutControl1;
+            this.lblSetWashes.TabIndex = 41;
+            this.lblSetWashes.Text = "1 - Lavados";
+            // 
+            // ckbSetSample
+            // 
+            this.ckbSetSample.Location = new System.Drawing.Point(12, -601);
+            this.ckbSetSample.Name = "ckbSetSample";
+            this.ckbSetSample.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbSetSample.Properties.Appearance.Options.UseFont = true;
+            this.ckbSetSample.Properties.Caption = "Caja Muestra";
+            this.ckbSetSample.Size = new System.Drawing.Size(363, 31);
+            this.ckbSetSample.StyleController = this.layoutControl1;
+            this.ckbSetSample.TabIndex = 40;
+            // 
+            // lblSetSampleInfo
+            // 
+            this.lblSetSampleInfo.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSetSampleInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(126)))), ((int)(((byte)(143)))));
+            this.lblSetSampleInfo.Location = new System.Drawing.Point(12, -566);
+            this.lblSetSampleInfo.Name = "lblSetSampleInfo";
+            this.lblSetSampleInfo.Size = new System.Drawing.Size(730, 86);
+            this.lblSetSampleInfo.TabIndex = 38;
+            this.lblSetSampleInfo.Text = "Marca esta opción si esta caja se usa como plantilla para preparar nuevas cajas";
             // 
             // layoutControl2
             // 
@@ -337,13 +719,36 @@
             this.layoutControl2.Controls.Add(this.lblPrice);
             this.layoutControl2.Controls.Add(this.btnRestart);
             this.layoutControl2.Controls.Add(this.speMaintenance);
-            this.layoutControl2.Location = new System.Drawing.Point(10, 289);
+            this.layoutControl2.Location = new System.Drawing.Point(10, -678);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1142, 466, 650, 400);
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(879, 75);
+            this.layoutControl2.Size = new System.Drawing.Size(734, 75);
             this.layoutControl2.TabIndex = 37;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // tgsYesNo
+            // 
+            this.tgsYesNo.Location = new System.Drawing.Point(607, 30);
+            this.tgsYesNo.Name = "tgsYesNo";
+            this.tgsYesNo.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tgsYesNo.Properties.Appearance.Options.UseFont = true;
+            this.tgsYesNo.Properties.OffText = "NO";
+            this.tgsYesNo.Properties.OnText = "SÍ";
+            this.tgsYesNo.Size = new System.Drawing.Size(125, 31);
+            this.tgsYesNo.StyleController = this.layoutControl2;
+            this.tgsYesNo.TabIndex = 11;
+            // 
+            // lblActive
+            // 
+            this.lblActive.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActive.Appearance.Options.UseFont = true;
+            this.lblActive.Location = new System.Drawing.Point(607, 2);
+            this.lblActive.Name = "lblActive";
+            this.lblActive.Size = new System.Drawing.Size(52, 24);
+            this.lblActive.StyleController = this.layoutControl2;
+            this.lblActive.TabIndex = 10;
+            this.lblActive.Text = "Activa";
             // 
             // txtPrice
             // 
@@ -351,7 +756,7 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Properties.Appearance.Options.UseFont = true;
-            this.txtPrice.Size = new System.Drawing.Size(112, 34);
+            this.txtPrice.Size = new System.Drawing.Size(90, 34);
             this.txtPrice.StyleController = this.layoutControl2;
             this.txtPrice.TabIndex = 6;
             // 
@@ -360,7 +765,7 @@
             this.lblMaintenace.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaintenace.Appearance.Options.UseFont = true;
             this.lblMaintenace.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.lblMaintenace.Location = new System.Drawing.Point(149, 2);
+            this.lblMaintenace.Location = new System.Drawing.Point(127, 2);
             this.lblMaintenace.Name = "lblMaintenace";
             this.lblMaintenace.Size = new System.Drawing.Size(330, 24);
             this.lblMaintenace.StyleController = this.layoutControl2;
@@ -384,7 +789,7 @@
             this.btnRestart.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
             this.btnRestart.Appearance.Options.UseFont = true;
             this.btnRestart.Appearance.Options.UseForeColor = true;
-            this.btnRestart.Location = new System.Drawing.Point(372, 30);
+            this.btnRestart.Location = new System.Drawing.Point(301, 30);
             this.btnRestart.MaximumSize = new System.Drawing.Size(114, 34);
             this.btnRestart.Name = "btnRestart";
             this.btnRestart.Size = new System.Drawing.Size(114, 34);
@@ -399,7 +804,7 @@
             0,
             0,
             0});
-            this.speMaintenance.Location = new System.Drawing.Point(146, 30);
+            this.speMaintenance.Location = new System.Drawing.Point(124, 30);
             this.speMaintenance.MaximumSize = new System.Drawing.Size(114, 0);
             this.speMaintenance.Name = "speMaintenance";
             this.speMaintenance.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -455,7 +860,7 @@
             rowDefinition2});
             this.layoutControlGroup1.OptionsTableLayoutItem.ColumnSpan = 2;
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(879, 75);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(734, 75);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem17
@@ -463,18 +868,18 @@
             this.layoutControlItem17.Control = this.lblPrice;
             this.layoutControlItem17.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(134, 28);
+            this.layoutControlItem17.Size = new System.Drawing.Size(112, 28);
             this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem17.TextVisible = false;
             // 
             // layoutControlItem18
             // 
             this.layoutControlItem18.Control = this.lblMaintenace;
-            this.layoutControlItem18.Location = new System.Drawing.Point(134, 0);
+            this.layoutControlItem18.Location = new System.Drawing.Point(112, 0);
             this.layoutControlItem18.Name = "layoutControlItem18";
             this.layoutControlItem18.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem18.Padding = new DevExpress.XtraLayout.Utils.Padding(15, 2, 2, 2);
-            this.layoutControlItem18.Size = new System.Drawing.Size(591, 28);
+            this.layoutControlItem18.Size = new System.Drawing.Size(493, 28);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextVisible = false;
             // 
@@ -485,7 +890,7 @@
             this.layoutControlItem20.Name = "layoutControlItem20";
             this.layoutControlItem20.OptionsTableLayoutItem.RowIndex = 1;
             this.layoutControlItem20.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 20, 2, 2);
-            this.layoutControlItem20.Size = new System.Drawing.Size(134, 47);
+            this.layoutControlItem20.Size = new System.Drawing.Size(112, 47);
             this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem20.TextVisible = false;
             // 
@@ -493,13 +898,13 @@
             // 
             this.layoutControlItem22.ContentHorzAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.layoutControlItem22.Control = this.btnRestart;
-            this.layoutControlItem22.Location = new System.Drawing.Point(134, 28);
+            this.layoutControlItem22.Location = new System.Drawing.Point(112, 28);
             this.layoutControlItem22.MaxSize = new System.Drawing.Size(118, 38);
             this.layoutControlItem22.MinSize = new System.Drawing.Size(93, 36);
             this.layoutControlItem22.Name = "layoutControlItem22";
             this.layoutControlItem22.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem22.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem22.Size = new System.Drawing.Size(591, 47);
+            this.layoutControlItem22.Size = new System.Drawing.Size(493, 47);
             this.layoutControlItem22.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem22.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem22.TextVisible = false;
@@ -507,14 +912,37 @@
             // layoutControlItem21
             // 
             this.layoutControlItem21.Control = this.speMaintenance;
-            this.layoutControlItem21.Location = new System.Drawing.Point(134, 28);
+            this.layoutControlItem21.Location = new System.Drawing.Point(112, 28);
             this.layoutControlItem21.Name = "layoutControlItem21";
             this.layoutControlItem21.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem21.OptionsTableLayoutItem.RowIndex = 1;
             this.layoutControlItem21.Padding = new DevExpress.XtraLayout.Utils.Padding(12, 2, 2, 2);
-            this.layoutControlItem21.Size = new System.Drawing.Size(591, 47);
+            this.layoutControlItem21.Size = new System.Drawing.Size(493, 47);
             this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem21.TextVisible = false;
+            // 
+            // layoutControlItem23
+            // 
+            this.layoutControlItem23.AppearanceItemCaption.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem23.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem23.Control = this.lblActive;
+            this.layoutControlItem23.Location = new System.Drawing.Point(605, 0);
+            this.layoutControlItem23.Name = "layoutControlItem23";
+            this.layoutControlItem23.OptionsTableLayoutItem.ColumnIndex = 2;
+            this.layoutControlItem23.Size = new System.Drawing.Size(129, 28);
+            this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem23.TextVisible = false;
+            // 
+            // layoutControlItem24
+            // 
+            this.layoutControlItem24.Control = this.tgsYesNo;
+            this.layoutControlItem24.Location = new System.Drawing.Point(605, 28);
+            this.layoutControlItem24.Name = "layoutControlItem24";
+            this.layoutControlItem24.OptionsTableLayoutItem.ColumnIndex = 2;
+            this.layoutControlItem24.OptionsTableLayoutItem.RowIndex = 1;
+            this.layoutControlItem24.Size = new System.Drawing.Size(129, 47);
+            this.layoutControlItem24.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem24.TextVisible = false;
             // 
             // lblSetName
             // 
@@ -522,7 +950,7 @@
             this.lblSetName.Appearance.Options.UseFont = true;
             this.lblSetName.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightTop;
             this.lblSetName.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.ic_obligatory;
-            this.lblSetName.Location = new System.Drawing.Point(12, 218);
+            this.lblSetName.Location = new System.Drawing.Point(12, -749);
             this.lblSetName.Name = "lblSetName";
             this.lblSetName.Size = new System.Drawing.Size(121, 24);
             this.lblSetName.StyleController = this.layoutControl1;
@@ -531,11 +959,11 @@
             // 
             // txtSetName
             // 
-            this.txtSetName.Location = new System.Drawing.Point(12, 246);
+            this.txtSetName.Location = new System.Drawing.Point(12, -721);
             this.txtSetName.Name = "txtSetName";
             this.txtSetName.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSetName.Properties.Appearance.Options.UseFont = true;
-            this.txtSetName.Size = new System.Drawing.Size(865, 34);
+            this.txtSetName.Size = new System.Drawing.Size(720, 34);
             this.txtSetName.StyleController = this.layoutControl1;
             this.txtSetName.TabIndex = 33;
             // 
@@ -543,27 +971,27 @@
             // 
             this.cmbCostCenter.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCostCenter.FormattingEnabled = true;
-            this.cmbCostCenter.Location = new System.Drawing.Point(451, 173);
+            this.cmbCostCenter.Location = new System.Drawing.Point(379, -794);
             this.cmbCostCenter.Name = "cmbCostCenter";
-            this.cmbCostCenter.Size = new System.Drawing.Size(426, 35);
+            this.cmbCostCenter.Size = new System.Drawing.Size(353, 35);
             this.cmbCostCenter.TabIndex = 32;
             // 
             // cmbPackage
             // 
             this.cmbPackage.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPackage.FormattingEnabled = true;
-            this.cmbPackage.Location = new System.Drawing.Point(12, 173);
+            this.cmbPackage.Location = new System.Drawing.Point(12, -794);
             this.cmbPackage.Name = "cmbPackage";
-            this.cmbPackage.Size = new System.Drawing.Size(425, 35);
+            this.cmbPackage.Size = new System.Drawing.Size(353, 35);
             this.cmbPackage.TabIndex = 31;
             // 
             // cmbSpeciality
             // 
             this.cmbSpeciality.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSpeciality.FormattingEnabled = true;
-            this.cmbSpeciality.Location = new System.Drawing.Point(12, 100);
+            this.cmbSpeciality.Location = new System.Drawing.Point(12, -867);
             this.cmbSpeciality.Name = "cmbSpeciality";
-            this.cmbSpeciality.Size = new System.Drawing.Size(425, 35);
+            this.cmbSpeciality.Size = new System.Drawing.Size(353, 35);
             this.cmbSpeciality.TabIndex = 29;
             // 
             // cmbSetType
@@ -573,9 +1001,9 @@
             this.cmbSetType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbSetType.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSetType.FormattingEnabled = true;
-            this.cmbSetType.Location = new System.Drawing.Point(891, 100);
+            this.cmbSetType.Location = new System.Drawing.Point(746, -867);
             this.cmbSetType.Name = "cmbSetType";
-            this.cmbSetType.Size = new System.Drawing.Size(436, 35);
+            this.cmbSetType.Size = new System.Drawing.Size(363, 35);
             this.cmbSetType.TabIndex = 27;
             // 
             // lblSetType
@@ -583,7 +1011,7 @@
             this.lblSetType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSetType.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSetType.Appearance.Options.UseFont = true;
-            this.lblSetType.Location = new System.Drawing.Point(891, 72);
+            this.lblSetType.Location = new System.Drawing.Point(746, -895);
             this.lblSetType.Name = "lblSetType";
             this.lblSetType.Size = new System.Drawing.Size(108, 24);
             this.lblSetType.StyleController = this.layoutControl1;
@@ -596,9 +1024,9 @@
             this.cmbProperty.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbProperty.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbProperty.FormattingEnabled = true;
-            this.cmbProperty.Location = new System.Drawing.Point(451, 100);
+            this.cmbProperty.Location = new System.Drawing.Point(379, -867);
             this.cmbProperty.Name = "cmbProperty";
-            this.cmbProperty.Size = new System.Drawing.Size(426, 35);
+            this.cmbProperty.Size = new System.Drawing.Size(353, 35);
             this.cmbProperty.TabIndex = 25;
             // 
             // lblProperty
@@ -607,7 +1035,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblProperty.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProperty.Appearance.Options.UseFont = true;
-            this.lblProperty.Location = new System.Drawing.Point(451, 72);
+            this.lblProperty.Location = new System.Drawing.Point(379, -895);
             this.lblProperty.Name = "lblProperty";
             this.lblProperty.Size = new System.Drawing.Size(86, 24);
             this.lblProperty.StyleController = this.layoutControl1;
@@ -620,7 +1048,7 @@
             this.lblSpeciality.Appearance.Options.UseFont = true;
             this.lblSpeciality.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightTop;
             this.lblSpeciality.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.ic_obligatory;
-            this.lblSpeciality.Location = new System.Drawing.Point(12, 72);
+            this.lblSpeciality.Location = new System.Drawing.Point(12, -895);
             this.lblSpeciality.Name = "lblSpeciality";
             this.lblSpeciality.Size = new System.Drawing.Size(119, 24);
             this.lblSpeciality.StyleController = this.layoutControl1;
@@ -631,7 +1059,7 @@
             // 
             this.lblGeneralData.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGeneralData.Appearance.Options.UseFont = true;
-            this.lblGeneralData.Location = new System.Drawing.Point(451, 12);
+            this.lblGeneralData.Location = new System.Drawing.Point(12, -955);
             this.lblGeneralData.Name = "lblGeneralData";
             this.lblGeneralData.Size = new System.Drawing.Size(241, 40);
             this.lblGeneralData.StyleController = this.layoutControl1;
@@ -644,7 +1072,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPackage.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPackage.Appearance.Options.UseFont = true;
-            this.lblPackage.Location = new System.Drawing.Point(12, 145);
+            this.lblPackage.Location = new System.Drawing.Point(12, -822);
             this.lblPackage.Name = "lblPackage";
             this.lblPackage.Size = new System.Drawing.Size(80, 24);
             this.lblPackage.StyleController = this.layoutControl1;
@@ -657,7 +1085,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCostCenter.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCostCenter.Appearance.Options.UseFont = true;
-            this.lblCostCenter.Location = new System.Drawing.Point(451, 145);
+            this.lblCostCenter.Location = new System.Drawing.Point(379, -822);
             this.lblCostCenter.Name = "lblCostCenter";
             this.lblCostCenter.Size = new System.Drawing.Size(136, 24);
             this.lblCostCenter.StyleController = this.layoutControl1;
@@ -678,15 +1106,39 @@
             this.layoutControlItem7,
             this.layoutControlItem8,
             this.layoutControlItem3,
-            this.layoutControlItem1,
             this.layoutControlItem9,
             this.layoutControlItem12,
             this.layoutControlItem13,
             this.layoutControlItem14,
             this.layoutControlItem10,
             this.layoutControlItem15,
+            this.layoutControlItem1,
+            this.layoutControlItem26,
             this.layoutControlItem16,
-            this.layoutControlItem19});
+            this.layoutControlItem27,
+            this.layoutControlItem19,
+            this.layoutControlItem28,
+            this.layoutControlItem29,
+            this.layoutControlItem30,
+            this.layoutControlItem31,
+            this.layoutControlItem32,
+            this.layoutControlItem33,
+            this.layoutControlItem34,
+            this.layoutControlItem35,
+            this.layoutControlItem36,
+            this.layoutControlItem37,
+            this.layoutControlItem38,
+            this.layoutControlItem39,
+            this.layoutControlItem40,
+            this.layoutControlItem41,
+            this.layoutControlItem42,
+            this.layoutControlItem43,
+            this.layoutControlItem44,
+            this.layoutControlItem45,
+            this.layoutControlItem46,
+            this.lciBlock,
+            this.lciSelf,
+            this.lciPosition});
             this.Root.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.Root.Name = "Root";
             this.Root.OptionsTableLayoutGroup.AutoSizeDefaultDefinitionLength = 100;
@@ -716,20 +1168,48 @@
             rowDefinition9.SizeType = System.Windows.Forms.SizeType.Absolute;
             rowDefinition10.Height = 75D;
             rowDefinition10.SizeType = System.Windows.Forms.SizeType.Absolute;
-            rowDefinition11.Height = 24D;
+            rowDefinition11.Height = 35D;
             rowDefinition11.SizeType = System.Windows.Forms.SizeType.AutoSize;
-            rowDefinition12.Height = 24D;
-            rowDefinition12.SizeType = System.Windows.Forms.SizeType.AutoSize;
-            rowDefinition13.Height = 100D;
-            rowDefinition13.SizeType = System.Windows.Forms.SizeType.AutoSize;
-            rowDefinition14.Height = 100D;
-            rowDefinition14.SizeType = System.Windows.Forms.SizeType.AutoSize;
-            rowDefinition15.Height = 100D;
+            rowDefinition12.Height = 90D;
+            rowDefinition12.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition13.Height = 70D;
+            rowDefinition13.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition14.Height = 60D;
+            rowDefinition14.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition15.Height = 28D;
             rowDefinition15.SizeType = System.Windows.Forms.SizeType.AutoSize;
-            rowDefinition16.Height = 100D;
-            rowDefinition16.SizeType = System.Windows.Forms.SizeType.AutoSize;
-            rowDefinition17.Height = 100D;
+            rowDefinition16.Height = 45D;
+            rowDefinition16.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition17.Height = 28D;
             rowDefinition17.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            rowDefinition18.Height = 80D;
+            rowDefinition18.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition19.Height = 91D;
+            rowDefinition19.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            rowDefinition20.Height = 56D;
+            rowDefinition20.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            rowDefinition21.Height = 80D;
+            rowDefinition21.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition22.Height = 91D;
+            rowDefinition22.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            rowDefinition23.Height = 56D;
+            rowDefinition23.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            rowDefinition24.Height = 45D;
+            rowDefinition24.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition25.Height = 28D;
+            rowDefinition25.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            rowDefinition26.Height = 80D;
+            rowDefinition26.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition27.Height = 91D;
+            rowDefinition27.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            rowDefinition28.Height = 28D;
+            rowDefinition28.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            rowDefinition29.Height = 45D;
+            rowDefinition29.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition30.Height = 45D;
+            rowDefinition30.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition31.Height = 100D;
+            rowDefinition31.SizeType = System.Windows.Forms.SizeType.AutoSize;
             this.Root.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
             rowDefinition3,
             rowDefinition4,
@@ -745,8 +1225,22 @@
             rowDefinition14,
             rowDefinition15,
             rowDefinition16,
-            rowDefinition17});
-            this.Root.Size = new System.Drawing.Size(1339, 922);
+            rowDefinition17,
+            rowDefinition18,
+            rowDefinition19,
+            rowDefinition20,
+            rowDefinition21,
+            rowDefinition22,
+            rowDefinition23,
+            rowDefinition24,
+            rowDefinition25,
+            rowDefinition26,
+            rowDefinition27,
+            rowDefinition28,
+            rowDefinition29,
+            rowDefinition30,
+            rowDefinition31});
+            this.Root.Size = new System.Drawing.Size(1121, 1646);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem2
@@ -755,52 +1249,52 @@
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 60);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem2.Size = new System.Drawing.Size(439, 28);
+            this.layoutControlItem2.Size = new System.Drawing.Size(367, 28);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.lblProperty;
-            this.layoutControlItem4.Location = new System.Drawing.Point(439, 60);
+            this.layoutControlItem4.Location = new System.Drawing.Point(367, 60);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem4.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem4.Size = new System.Drawing.Size(440, 28);
+            this.layoutControlItem4.Size = new System.Drawing.Size(367, 28);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.cmbProperty;
-            this.layoutControlItem5.Location = new System.Drawing.Point(439, 88);
+            this.layoutControlItem5.Location = new System.Drawing.Point(367, 88);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem5.OptionsTableLayoutItem.RowIndex = 2;
             this.layoutControlItem5.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 12, 2, 2);
-            this.layoutControlItem5.Size = new System.Drawing.Size(440, 45);
+            this.layoutControlItem5.Size = new System.Drawing.Size(367, 45);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.cmbSetType;
-            this.layoutControlItem6.Location = new System.Drawing.Point(879, 88);
+            this.layoutControlItem6.Location = new System.Drawing.Point(734, 88);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.OptionsTableLayoutItem.ColumnIndex = 2;
             this.layoutControlItem6.OptionsTableLayoutItem.RowIndex = 2;
-            this.layoutControlItem6.Size = new System.Drawing.Size(440, 45);
+            this.layoutControlItem6.Size = new System.Drawing.Size(367, 45);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.lblSetType;
-            this.layoutControlItem7.Location = new System.Drawing.Point(879, 60);
+            this.layoutControlItem7.Location = new System.Drawing.Point(734, 60);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.OptionsTableLayoutItem.ColumnIndex = 2;
             this.layoutControlItem7.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem7.Size = new System.Drawing.Size(440, 28);
+            this.layoutControlItem7.Size = new System.Drawing.Size(367, 28);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
@@ -810,7 +1304,7 @@
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 133);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.OptionsTableLayoutItem.RowIndex = 3;
-            this.layoutControlItem8.Size = new System.Drawing.Size(439, 28);
+            this.layoutControlItem8.Size = new System.Drawing.Size(367, 28);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
@@ -822,31 +1316,21 @@
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.OptionsTableLayoutItem.RowIndex = 2;
             this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 12, 2, 2);
-            this.layoutControlItem3.Size = new System.Drawing.Size(439, 45);
+            this.layoutControlItem3.Size = new System.Drawing.Size(367, 45);
             this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.lblGeneralData;
-            this.layoutControlItem1.Location = new System.Drawing.Point(439, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.OptionsTableLayoutItem.ColumnIndex = 1;
-            this.layoutControlItem1.Size = new System.Drawing.Size(440, 60);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.lblCostCenter;
             this.layoutControlItem9.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem9.CustomizationFormText = "layoutControlItem8";
-            this.layoutControlItem9.Location = new System.Drawing.Point(439, 133);
+            this.layoutControlItem9.Location = new System.Drawing.Point(367, 133);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem9.OptionsTableLayoutItem.RowIndex = 3;
-            this.layoutControlItem9.Size = new System.Drawing.Size(440, 28);
+            this.layoutControlItem9.Size = new System.Drawing.Size(367, 28);
             this.layoutControlItem9.Text = "layoutControlItem8";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
@@ -858,19 +1342,19 @@
             this.layoutControlItem12.Name = "layoutControlItem12";
             this.layoutControlItem12.OptionsTableLayoutItem.RowIndex = 4;
             this.layoutControlItem12.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 12, 2, 2);
-            this.layoutControlItem12.Size = new System.Drawing.Size(439, 45);
+            this.layoutControlItem12.Size = new System.Drawing.Size(367, 45);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.cmbCostCenter;
-            this.layoutControlItem13.Location = new System.Drawing.Point(439, 161);
+            this.layoutControlItem13.Location = new System.Drawing.Point(367, 161);
             this.layoutControlItem13.Name = "layoutControlItem13";
             this.layoutControlItem13.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem13.OptionsTableLayoutItem.RowIndex = 4;
             this.layoutControlItem13.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 12, 2, 2);
-            this.layoutControlItem13.Size = new System.Drawing.Size(440, 45);
+            this.layoutControlItem13.Size = new System.Drawing.Size(367, 45);
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextVisible = false;
             // 
@@ -882,7 +1366,7 @@
             this.layoutControlItem14.OptionsTableLayoutItem.ColumnSpan = 2;
             this.layoutControlItem14.OptionsTableLayoutItem.RowIndex = 6;
             this.layoutControlItem14.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 12, 2, 2);
-            this.layoutControlItem14.Size = new System.Drawing.Size(879, 45);
+            this.layoutControlItem14.Size = new System.Drawing.Size(734, 45);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextVisible = false;
             // 
@@ -892,7 +1376,7 @@
             this.layoutControlItem10.Location = new System.Drawing.Point(0, 206);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.OptionsTableLayoutItem.RowIndex = 5;
-            this.layoutControlItem10.Size = new System.Drawing.Size(439, 28);
+            this.layoutControlItem10.Size = new System.Drawing.Size(367, 28);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
             // 
@@ -904,9 +1388,328 @@
             this.layoutControlItem15.OptionsTableLayoutItem.ColumnSpan = 2;
             this.layoutControlItem15.OptionsTableLayoutItem.RowIndex = 7;
             this.layoutControlItem15.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlItem15.Size = new System.Drawing.Size(879, 75);
+            this.layoutControlItem15.Size = new System.Drawing.Size(734, 75);
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem15.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.lblGeneralData;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(367, 60);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlItem26
+            // 
+            this.layoutControlItem26.Control = this.ckbSetSample;
+            this.layoutControlItem26.Location = new System.Drawing.Point(0, 354);
+            this.layoutControlItem26.Name = "layoutControlItem26";
+            this.layoutControlItem26.OptionsTableLayoutItem.RowIndex = 8;
+            this.layoutControlItem26.Size = new System.Drawing.Size(367, 35);
+            this.layoutControlItem26.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem26.TextVisible = false;
+            // 
+            // layoutControlItem16
+            // 
+            this.layoutControlItem16.Control = this.lblSetSampleInfo;
+            this.layoutControlItem16.Location = new System.Drawing.Point(0, 389);
+            this.layoutControlItem16.Name = "layoutControlItem16";
+            this.layoutControlItem16.OptionsTableLayoutItem.ColumnSpan = 2;
+            this.layoutControlItem16.OptionsTableLayoutItem.RowIndex = 9;
+            this.layoutControlItem16.Size = new System.Drawing.Size(734, 90);
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem16.TextVisible = false;
+            // 
+            // layoutControlItem27
+            // 
+            this.layoutControlItem27.Control = this.lblSetWashes;
+            this.layoutControlItem27.Location = new System.Drawing.Point(0, 549);
+            this.layoutControlItem27.Name = "layoutControlItem27";
+            this.layoutControlItem27.OptionsTableLayoutItem.RowIndex = 11;
+            this.layoutControlItem27.Size = new System.Drawing.Size(367, 60);
+            this.layoutControlItem27.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem27.TextVisible = false;
+            // 
+            // layoutControlItem19
+            // 
+            this.layoutControlItem19.Control = this.lblProcesses;
+            this.layoutControlItem19.Location = new System.Drawing.Point(0, 479);
+            this.layoutControlItem19.Name = "layoutControlItem19";
+            this.layoutControlItem19.OptionsTableLayoutItem.RowIndex = 10;
+            this.layoutControlItem19.Size = new System.Drawing.Size(367, 70);
+            this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem19.TextVisible = false;
+            // 
+            // layoutControlItem28
+            // 
+            this.layoutControlItem28.Control = this.lblSelectWashesMethods;
+            this.layoutControlItem28.Location = new System.Drawing.Point(0, 609);
+            this.layoutControlItem28.Name = "layoutControlItem28";
+            this.layoutControlItem28.OptionsTableLayoutItem.ColumnSpan = 2;
+            this.layoutControlItem28.OptionsTableLayoutItem.RowIndex = 12;
+            this.layoutControlItem28.Size = new System.Drawing.Size(734, 28);
+            this.layoutControlItem28.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem28.TextVisible = false;
+            // 
+            // layoutControlItem29
+            // 
+            this.layoutControlItem29.AppearanceItemCaption.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem29.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem29.Control = this.cmbFirstMethodWashing;
+            this.layoutControlItem29.Location = new System.Drawing.Point(0, 637);
+            this.layoutControlItem29.Name = "layoutControlItem29";
+            this.layoutControlItem29.OptionsTableLayoutItem.RowIndex = 13;
+            this.layoutControlItem29.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 12, 2, 2);
+            this.layoutControlItem29.Size = new System.Drawing.Size(367, 45);
+            this.layoutControlItem29.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem29.TextVisible = false;
+            // 
+            // layoutControlItem30
+            // 
+            this.layoutControlItem30.Control = this.cmbSecondMethodWashing;
+            this.layoutControlItem30.Location = new System.Drawing.Point(367, 637);
+            this.layoutControlItem30.Name = "layoutControlItem30";
+            this.layoutControlItem30.OptionsTableLayoutItem.ColumnIndex = 1;
+            this.layoutControlItem30.OptionsTableLayoutItem.RowIndex = 13;
+            this.layoutControlItem30.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 12, 2, 2);
+            this.layoutControlItem30.Size = new System.Drawing.Size(367, 45);
+            this.layoutControlItem30.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem30.TextVisible = false;
+            // 
+            // layoutControlItem31
+            // 
+            this.layoutControlItem31.Control = this.cmbThirdMethodWashing;
+            this.layoutControlItem31.Location = new System.Drawing.Point(734, 637);
+            this.layoutControlItem31.Name = "layoutControlItem31";
+            this.layoutControlItem31.OptionsTableLayoutItem.ColumnIndex = 2;
+            this.layoutControlItem31.OptionsTableLayoutItem.RowIndex = 13;
+            this.layoutControlItem31.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 12, 2, 2);
+            this.layoutControlItem31.Size = new System.Drawing.Size(367, 45);
+            this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem31.TextVisible = false;
+            // 
+            // layoutControlItem32
+            // 
+            this.layoutControlItem32.Control = this.lblWashingRemarks;
+            this.layoutControlItem32.Location = new System.Drawing.Point(0, 682);
+            this.layoutControlItem32.Name = "layoutControlItem32";
+            this.layoutControlItem32.OptionsTableLayoutItem.RowIndex = 14;
+            this.layoutControlItem32.Size = new System.Drawing.Size(367, 28);
+            this.layoutControlItem32.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem32.TextVisible = false;
+            // 
+            // layoutControlItem33
+            // 
+            this.layoutControlItem33.Control = this.txtRemaksWashes;
+            this.layoutControlItem33.Location = new System.Drawing.Point(0, 710);
+            this.layoutControlItem33.Name = "layoutControlItem33";
+            this.layoutControlItem33.OptionsTableLayoutItem.ColumnSpan = 3;
+            this.layoutControlItem33.OptionsTableLayoutItem.RowIndex = 15;
+            this.layoutControlItem33.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 12, 2, 2);
+            this.layoutControlItem33.Size = new System.Drawing.Size(1101, 80);
+            this.layoutControlItem33.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem33.TextVisible = false;
+            // 
+            // layoutControlItem34
+            // 
+            this.layoutControlItem34.Control = this.lblAssemblyPackaging;
+            this.layoutControlItem34.Location = new System.Drawing.Point(0, 790);
+            this.layoutControlItem34.Name = "layoutControlItem34";
+            this.layoutControlItem34.OptionsTableLayoutItem.RowIndex = 16;
+            this.layoutControlItem34.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 60, 2);
+            this.layoutControlItem34.Size = new System.Drawing.Size(367, 91);
+            this.layoutControlItem34.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem34.TextVisible = false;
+            // 
+            // layoutControlItem35
+            // 
+            this.layoutControlItem35.Control = this.lblAssemblyPackagingRemarks;
+            this.layoutControlItem35.Location = new System.Drawing.Point(0, 881);
+            this.layoutControlItem35.Name = "layoutControlItem35";
+            this.layoutControlItem35.OptionsTableLayoutItem.ColumnSpan = 2;
+            this.layoutControlItem35.OptionsTableLayoutItem.RowIndex = 17;
+            this.layoutControlItem35.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 30, 2);
+            this.layoutControlItem35.Size = new System.Drawing.Size(734, 56);
+            this.layoutControlItem35.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem35.TextVisible = false;
+            // 
+            // layoutControlItem36
+            // 
+            this.layoutControlItem36.Control = this.txtRemaksAssemblyPackaging;
+            this.layoutControlItem36.Location = new System.Drawing.Point(0, 937);
+            this.layoutControlItem36.Name = "layoutControlItem36";
+            this.layoutControlItem36.OptionsTableLayoutItem.ColumnSpan = 3;
+            this.layoutControlItem36.OptionsTableLayoutItem.RowIndex = 18;
+            this.layoutControlItem36.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 12, 2, 2);
+            this.layoutControlItem36.Size = new System.Drawing.Size(1101, 80);
+            this.layoutControlItem36.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem36.TextVisible = false;
+            // 
+            // layoutControlItem37
+            // 
+            this.layoutControlItem37.Control = this.lblSterilization;
+            this.layoutControlItem37.Location = new System.Drawing.Point(0, 1017);
+            this.layoutControlItem37.Name = "layoutControlItem37";
+            this.layoutControlItem37.OptionsTableLayoutItem.RowIndex = 19;
+            this.layoutControlItem37.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 60, 2);
+            this.layoutControlItem37.Size = new System.Drawing.Size(367, 91);
+            this.layoutControlItem37.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem37.TextVisible = false;
+            // 
+            // layoutControlItem38
+            // 
+            this.layoutControlItem38.Control = this.lblSelectSterilizationMethods;
+            this.layoutControlItem38.Location = new System.Drawing.Point(0, 1108);
+            this.layoutControlItem38.Name = "layoutControlItem38";
+            this.layoutControlItem38.OptionsTableLayoutItem.ColumnSpan = 2;
+            this.layoutControlItem38.OptionsTableLayoutItem.RowIndex = 20;
+            this.layoutControlItem38.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 30, 2);
+            this.layoutControlItem38.Size = new System.Drawing.Size(734, 56);
+            this.layoutControlItem38.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem38.TextVisible = false;
+            // 
+            // layoutControlItem39
+            // 
+            this.layoutControlItem39.Control = this.cmbFirstMethodSteri;
+            this.layoutControlItem39.Location = new System.Drawing.Point(0, 1164);
+            this.layoutControlItem39.Name = "layoutControlItem39";
+            this.layoutControlItem39.OptionsTableLayoutItem.RowIndex = 21;
+            this.layoutControlItem39.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 12, 2, 2);
+            this.layoutControlItem39.Size = new System.Drawing.Size(367, 45);
+            this.layoutControlItem39.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem39.TextVisible = false;
+            // 
+            // layoutControlItem40
+            // 
+            this.layoutControlItem40.Control = this.cmbSecondMethodSteri;
+            this.layoutControlItem40.Location = new System.Drawing.Point(367, 1164);
+            this.layoutControlItem40.Name = "layoutControlItem40";
+            this.layoutControlItem40.OptionsTableLayoutItem.ColumnIndex = 1;
+            this.layoutControlItem40.OptionsTableLayoutItem.RowIndex = 21;
+            this.layoutControlItem40.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 12, 2, 2);
+            this.layoutControlItem40.Size = new System.Drawing.Size(367, 45);
+            this.layoutControlItem40.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem40.TextVisible = false;
+            // 
+            // layoutControlItem41
+            // 
+            this.layoutControlItem41.Control = this.cmbThirdMethodSteri;
+            this.layoutControlItem41.Location = new System.Drawing.Point(734, 1164);
+            this.layoutControlItem41.Name = "layoutControlItem41";
+            this.layoutControlItem41.OptionsTableLayoutItem.ColumnIndex = 2;
+            this.layoutControlItem41.OptionsTableLayoutItem.RowIndex = 21;
+            this.layoutControlItem41.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 12, 2, 2);
+            this.layoutControlItem41.Size = new System.Drawing.Size(367, 45);
+            this.layoutControlItem41.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem41.TextVisible = false;
+            // 
+            // layoutControlItem42
+            // 
+            this.layoutControlItem42.Control = this.lblSteriRemarks;
+            this.layoutControlItem42.Location = new System.Drawing.Point(0, 1209);
+            this.layoutControlItem42.Name = "layoutControlItem42";
+            this.layoutControlItem42.OptionsTableLayoutItem.ColumnSpan = 2;
+            this.layoutControlItem42.OptionsTableLayoutItem.RowIndex = 22;
+            this.layoutControlItem42.Size = new System.Drawing.Size(734, 28);
+            this.layoutControlItem42.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem42.TextVisible = false;
+            // 
+            // layoutControlItem43
+            // 
+            this.layoutControlItem43.Control = this.txtRemaksSteri;
+            this.layoutControlItem43.Location = new System.Drawing.Point(0, 1237);
+            this.layoutControlItem43.Name = "layoutControlItem43";
+            this.layoutControlItem43.OptionsTableLayoutItem.ColumnSpan = 3;
+            this.layoutControlItem43.OptionsTableLayoutItem.RowIndex = 23;
+            this.layoutControlItem43.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 12, 2, 2);
+            this.layoutControlItem43.Size = new System.Drawing.Size(1101, 80);
+            this.layoutControlItem43.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem43.TextVisible = false;
+            // 
+            // layoutControlItem44
+            // 
+            this.layoutControlItem44.Control = this.lblDefaultLocation;
+            this.layoutControlItem44.Location = new System.Drawing.Point(0, 1317);
+            this.layoutControlItem44.Name = "layoutControlItem44";
+            this.layoutControlItem44.OptionsTableLayoutItem.ColumnSpan = 2;
+            this.layoutControlItem44.OptionsTableLayoutItem.RowIndex = 24;
+            this.layoutControlItem44.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 60, 2);
+            this.layoutControlItem44.Size = new System.Drawing.Size(734, 91);
+            this.layoutControlItem44.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem44.TextVisible = false;
+            // 
+            // layoutControlItem45
+            // 
+            this.layoutControlItem45.Control = this.lblSelectDefaultLocation;
+            this.layoutControlItem45.Location = new System.Drawing.Point(0, 1408);
+            this.layoutControlItem45.Name = "layoutControlItem45";
+            this.layoutControlItem45.OptionsTableLayoutItem.ColumnSpan = 3;
+            this.layoutControlItem45.OptionsTableLayoutItem.RowIndex = 25;
+            this.layoutControlItem45.Size = new System.Drawing.Size(1101, 28);
+            this.layoutControlItem45.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem45.TextVisible = false;
+            // 
+            // layoutControlItem46
+            // 
+            this.layoutControlItem46.Control = this.cmbDefaultLocation;
+            this.layoutControlItem46.Location = new System.Drawing.Point(0, 1436);
+            this.layoutControlItem46.Name = "layoutControlItem46";
+            this.layoutControlItem46.OptionsTableLayoutItem.RowIndex = 26;
+            this.layoutControlItem46.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 12, 2, 2);
+            this.layoutControlItem46.Size = new System.Drawing.Size(367, 45);
+            this.layoutControlItem46.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem46.TextVisible = false;
+            // 
+            // lciBlock
+            // 
+            this.lciBlock.AppearanceItemCaption.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lciBlock.AppearanceItemCaption.Options.UseFont = true;
+            this.lciBlock.ContentHorzAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.lciBlock.Control = this.cmbBlock;
+            this.lciBlock.Location = new System.Drawing.Point(0, 1481);
+            this.lciBlock.Name = "lciBlock";
+            this.lciBlock.OptionsTableLayoutItem.RowIndex = 27;
+            this.lciBlock.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 12, 2, 2);
+            this.lciBlock.Size = new System.Drawing.Size(367, 45);
+            this.lciBlock.Text = "Bloque";
+            this.lciBlock.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.lciBlock.TextLocation = DevExpress.Utils.Locations.Left;
+            this.lciBlock.TextSize = new System.Drawing.Size(68, 24);
+            this.lciBlock.TextToControlDistance = 0;
+            // 
+            // lciSelf
+            // 
+            this.lciSelf.AppearanceItemCaption.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lciSelf.AppearanceItemCaption.Options.UseFont = true;
+            this.lciSelf.ContentHorzAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.lciSelf.Control = this.cmbSelf;
+            this.lciSelf.Location = new System.Drawing.Point(367, 1481);
+            this.lciSelf.Name = "lciSelf";
+            this.lciSelf.OptionsTableLayoutItem.ColumnIndex = 1;
+            this.lciSelf.OptionsTableLayoutItem.RowIndex = 27;
+            this.lciSelf.Padding = new DevExpress.XtraLayout.Utils.Padding(6, 12, 2, 2);
+            this.lciSelf.Size = new System.Drawing.Size(367, 45);
+            this.lciSelf.Text = "Estante";
+            this.lciSelf.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.lciSelf.TextSize = new System.Drawing.Size(68, 24);
+            this.lciSelf.TextToControlDistance = 0;
+            // 
+            // lciPosition
+            // 
+            this.lciPosition.AppearanceItemCaption.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lciPosition.AppearanceItemCaption.Options.UseFont = true;
+            this.lciPosition.ContentHorzAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.lciPosition.Control = this.cmbPosition;
+            this.lciPosition.Location = new System.Drawing.Point(734, 1481);
+            this.lciPosition.Name = "lciPosition";
+            this.lciPosition.OptionsTableLayoutItem.ColumnIndex = 2;
+            this.lciPosition.OptionsTableLayoutItem.RowIndex = 27;
+            this.lciPosition.Padding = new DevExpress.XtraLayout.Utils.Padding(6, 12, 2, 2);
+            this.lciPosition.Size = new System.Drawing.Size(367, 45);
+            this.lciPosition.Text = "Posición";
+            this.lciPosition.TextSize = new System.Drawing.Size(68, 24);
             // 
             // xtpImageVideo
             // 
@@ -915,7 +1718,7 @@
             this.xtpImageVideo.Appearance.Header.Options.UseTextOptions = true;
             this.xtpImageVideo.Appearance.Header.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.xtpImageVideo.Name = "xtpImageVideo";
-            this.xtpImageVideo.Size = new System.Drawing.Size(1356, 679);
+            this.xtpImageVideo.Size = new System.Drawing.Size(1138, 679);
             this.xtpImageVideo.Text = "2 - Imágenes y vídeos";
             // 
             // xtpInstrumentalSet
@@ -925,7 +1728,7 @@
             this.xtpInstrumentalSet.Appearance.Header.Options.UseTextOptions = true;
             this.xtpInstrumentalSet.Appearance.Header.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.xtpInstrumentalSet.Name = "xtpInstrumentalSet";
-            this.xtpInstrumentalSet.Size = new System.Drawing.Size(1356, 679);
+            this.xtpInstrumentalSet.Size = new System.Drawing.Size(1138, 679);
             this.xtpInstrumentalSet.Text = "3 - Instrumental";
             // 
             // layoutControlItem11
@@ -935,87 +1738,15 @@
             this.layoutControlItem11.Size = new System.Drawing.Size(1336, 25);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(50, 20);
             // 
-            // layoutControlItem23
+            // layoutControlItem25
             // 
-            this.layoutControlItem23.AppearanceItemCaption.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem23.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem23.Control = this.lblActive;
-            this.layoutControlItem23.Location = new System.Drawing.Point(725, 0);
-            this.layoutControlItem23.Name = "layoutControlItem23";
-            this.layoutControlItem23.OptionsTableLayoutItem.ColumnIndex = 2;
-            this.layoutControlItem23.Size = new System.Drawing.Size(154, 28);
-            this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem23.TextVisible = false;
-            // 
-            // lblActive
-            // 
-            this.lblActive.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActive.Appearance.Options.UseFont = true;
-            this.lblActive.Location = new System.Drawing.Point(727, 2);
-            this.lblActive.Name = "lblActive";
-            this.lblActive.Size = new System.Drawing.Size(52, 24);
-            this.lblActive.StyleController = this.layoutControl2;
-            this.lblActive.TabIndex = 10;
-            this.lblActive.Text = "Activa";
-            // 
-            // layoutControlItem24
-            // 
-            this.layoutControlItem24.Control = this.tgsYesNo;
-            this.layoutControlItem24.Location = new System.Drawing.Point(725, 28);
-            this.layoutControlItem24.Name = "layoutControlItem24";
-            this.layoutControlItem24.OptionsTableLayoutItem.ColumnIndex = 2;
-            this.layoutControlItem24.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem24.Size = new System.Drawing.Size(154, 47);
-            this.layoutControlItem24.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem24.TextVisible = false;
-            // 
-            // tgsYesNo
-            // 
-            this.tgsYesNo.Location = new System.Drawing.Point(727, 30);
-            this.tgsYesNo.Name = "tgsYesNo";
-            this.tgsYesNo.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tgsYesNo.Properties.Appearance.Options.UseFont = true;
-            this.tgsYesNo.Properties.OffText = "NO";
-            this.tgsYesNo.Properties.OnText = "SÍ";
-            this.tgsYesNo.Size = new System.Drawing.Size(150, 31);
-            this.tgsYesNo.StyleController = this.layoutControl2;
-            this.tgsYesNo.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(12, 366);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(435, 20);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "label1";
-            // 
-            // layoutControlItem16
-            // 
-            this.layoutControlItem16.Control = this.label1;
-            this.layoutControlItem16.Location = new System.Drawing.Point(0, 354);
-            this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.OptionsTableLayoutItem.RowIndex = 8;
-            this.layoutControlItem16.Size = new System.Drawing.Size(439, 24);
-            this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem16.TextVisible = false;
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(12, 390);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(435, 20);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "label2";
-            // 
-            // layoutControlItem19
-            // 
-            this.layoutControlItem19.Control = this.label2;
-            this.layoutControlItem19.Location = new System.Drawing.Point(0, 378);
-            this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.OptionsTableLayoutItem.RowIndex = 9;
-            this.layoutControlItem19.Size = new System.Drawing.Size(439, 24);
-            this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem19.TextVisible = false;
+            this.layoutControlItem25.Location = new System.Drawing.Point(0, 354);
+            this.layoutControlItem25.Name = "layoutControlItem25";
+            this.layoutControlItem25.OptionsTableLayoutItem.ColumnSpan = 2;
+            this.layoutControlItem25.OptionsTableLayoutItem.RowIndex = 8;
+            this.layoutControlItem25.Size = new System.Drawing.Size(745, 30);
+            this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem25.TextVisible = false;
             // 
             // SetManagmentForm
             // 
@@ -1023,7 +1754,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1604, 756);
+            this.ClientSize = new System.Drawing.Size(1386, 756);
             this.Controls.Add(this.pnlBody);
             this.Controls.Add(this.pnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1044,9 +1775,13 @@
             this.xtpDataProcesses.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtRemaksSteri.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRemaksAssemblyPackaging.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRemaksWashes.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckbSetSample.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
-            this.layoutControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tgsYesNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.speMaintenance.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
@@ -1055,6 +1790,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSetName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -1064,19 +1801,41 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tgsYesNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem37)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBlock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciSelf)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciPosition)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1112,7 +1871,6 @@
         private System.Windows.Forms.ComboBox cmbSpeciality;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraEditors.LabelControl lblCostCenter;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private System.Windows.Forms.ComboBox cmbCostCenter;
@@ -1140,9 +1898,59 @@
         private DevExpress.XtraEditors.LabelControl lblActive;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem24;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSetSampleInfo;
+        private DevExpress.XtraEditors.CheckEdit ckbSetSample;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem26;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
+        private DevExpress.XtraEditors.LabelControl lblSetWashes;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem27;
+        private DevExpress.XtraEditors.LabelControl lblProcesses;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
+        private DevExpress.XtraEditors.LabelControl lblSelectWashesMethods;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem28;
+        private System.Windows.Forms.ComboBox cmbThirdMethodWashing;
+        private System.Windows.Forms.ComboBox cmbSecondMethodWashing;
+        private System.Windows.Forms.ComboBox cmbFirstMethodWashing;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem29;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem30;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem31;
+        private DevExpress.XtraEditors.LabelControl lblWashingRemarks;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem32;
+        private DevExpress.XtraEditors.MemoEdit txtRemaksWashes;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem33;
+        private DevExpress.XtraEditors.LabelControl lblAssemblyPackaging;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem34;
+        private DevExpress.XtraEditors.LabelControl lblAssemblyPackagingRemarks;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem35;
+        private DevExpress.XtraEditors.MemoEdit txtRemaksAssemblyPackaging;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem36;
+        private DevExpress.XtraEditors.LabelControl lblSterilization;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem37;
+        private DevExpress.XtraEditors.LabelControl lblSelectSterilizationMethods;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem38;
+        private DevExpress.XtraEditors.LabelControl lblSteriRemarks;
+        private System.Windows.Forms.ComboBox cmbThirdMethodSteri;
+        private System.Windows.Forms.ComboBox cmbSecondMethodSteri;
+        private System.Windows.Forms.ComboBox cmbFirstMethodSteri;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem39;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem40;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem41;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem42;
+        private DevExpress.XtraEditors.MemoEdit txtRemaksSteri;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem43;
+        private DevExpress.XtraEditors.LabelControl lblDefaultLocation;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem44;
+        private DevExpress.XtraEditors.LabelControl lblSelectDefaultLocation;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem45;
+        private System.Windows.Forms.ComboBox cmbDefaultLocation;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem46;
+        private System.Windows.Forms.ComboBox cmbBlock;
+        private DevExpress.XtraLayout.LayoutControlItem lciBlock;
+        private System.Windows.Forms.ComboBox cmbSelf;
+        private DevExpress.XtraLayout.LayoutControlItem lciSelf;
+        private System.Windows.Forms.ComboBox cmbPosition;
+        private DevExpress.XtraLayout.LayoutControlItem lciPosition;
     }
 }

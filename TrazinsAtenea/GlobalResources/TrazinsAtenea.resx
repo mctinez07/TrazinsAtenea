@@ -205,4 +205,52 @@
   <data name="Price" xml:space="preserve">
     <value>Precio</value>
   </data>
+  <data name="SetSample" xml:space="preserve">
+    <value>Caja de Muestra</value>
+  </data>
+  <data name="SetSampleInfo" xml:space="preserve">
+    <value>Marca esta opción si esta caja se usa como plantilla para preparar nuevas cajas</value>
+  </data>
+  <data name="Processes" xml:space="preserve">
+    <value>Procesos</value>
+  </data>
+  <data name="SetWashes" xml:space="preserve">
+    <value>1 - Lavados</value>
+  </data>
+  <data name="SelectWashesMethods" xml:space="preserve">
+    <value>Selecciona desde 1 hasta 3 métodos de lavados</value>
+  </data>
+  <data name="WashingRemarks" xml:space="preserve">
+    <value>Observaciones específicas de lavado</value>
+  </data>
+  <data name="AssemblyPackaging" xml:space="preserve">
+    <value>2 - Montaje | Empaquetado</value>
+  </data>
+  <data name="AssemblyPackagingRemarks" xml:space="preserve">
+    <value>Observaciones específicas de montaje o empaquetado</value>
+  </data>
+  <data name="Sterilization" xml:space="preserve">
+    <value>3 - Ciclos/Esterilización</value>
+  </data>
+  <data name="SelectSterilizationMethods" xml:space="preserve">
+    <value>Selecciona desde 1 hasta 3 métodos de esterilización</value>
+  </data>
+  <data name="SteriRemarks" xml:space="preserve">
+    <value>Observaciones específicas de esterilización</value>
+  </data>
+  <data name="DefaultLocation" xml:space="preserve">
+    <value>4 - Ubicación predeterminada</value>
+  </data>
+  <data name="SelectDefaultLocation" xml:space="preserve">
+    <value>Selecciona una ubicación donde se almacenará esta caja de forma predeterminada</value>
+  </data>
+  <data name="Block" xml:space="preserve">
+    <value>Bloque</value>
+  </data>
+  <data name="Self" xml:space="preserve">
+    <value>Estante</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Posición</value>
+  </data>
 </root>

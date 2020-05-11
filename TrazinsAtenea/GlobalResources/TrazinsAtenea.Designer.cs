@@ -70,6 +70,33 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a 2 - Montaje | Empaquetado.
+        /// </summary>
+        internal static string AssemblyPackaging {
+            get {
+                return ResourceManager.GetString("AssemblyPackaging", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Observaciones específicas de montaje o empaquetado.
+        /// </summary>
+        internal static string AssemblyPackagingRemarks {
+            get {
+                return ResourceManager.GetString("AssemblyPackagingRemarks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Bloque.
+        /// </summary>
+        internal static string Block {
+            get {
+                return ResourceManager.GetString("Block", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Caducidad.
         /// </summary>
         internal static string Caducity {
@@ -111,6 +138,15 @@ namespace TrazinsAtenea.GlobalResources {
         internal static string DataProcesses {
             get {
                 return ResourceManager.GetString("DataProcesses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a 4 - Ubicación predeterminada.
+        /// </summary>
+        internal static string DefaultLocation {
+            get {
+                return ResourceManager.GetString("DefaultLocation", resourceCulture);
             }
         }
         
@@ -286,11 +322,29 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Posición.
+        /// </summary>
+        internal static string Position {
+            get {
+                return ResourceManager.GetString("Position", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Precio.
         /// </summary>
         internal static string Price {
             get {
                 return ResourceManager.GetString("Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Procesos.
+        /// </summary>
+        internal static string Processes {
+            get {
+                return ResourceManager.GetString("Processes", resourceCulture);
             }
         }
         
@@ -313,6 +367,42 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Selecciona una ubicación donde se almacenará esta caja de forma predeterminada.
+        /// </summary>
+        internal static string SelectDefaultLocation {
+            get {
+                return ResourceManager.GetString("SelectDefaultLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Selecciona desde 1 hasta 3 métodos de esterilización.
+        /// </summary>
+        internal static string SelectSterilizationMethods {
+            get {
+                return ResourceManager.GetString("SelectSterilizationMethods", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Selecciona desde 1 hasta 3 métodos de lavados.
+        /// </summary>
+        internal static string SelectWashesMethods {
+            get {
+                return ResourceManager.GetString("SelectWashesMethods", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Estante.
+        /// </summary>
+        internal static string Self {
+            get {
+                return ResourceManager.GetString("Self", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Caja.
         /// </summary>
         internal static string Set {
@@ -331,11 +421,38 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Caja de Muestra.
+        /// </summary>
+        internal static string SetSample {
+            get {
+                return ResourceManager.GetString("SetSample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Marca esta opción si esta caja se usa como plantilla para preparar nuevas cajas.
+        /// </summary>
+        internal static string SetSampleInfo {
+            get {
+                return ResourceManager.GetString("SetSampleInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Tipo de caja.
         /// </summary>
         internal static string SetType {
             get {
                 return ResourceManager.GetString("SetType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a 1 - Lavados.
+        /// </summary>
+        internal static string SetWashes {
+            get {
+                return ResourceManager.GetString("SetWashes", resourceCulture);
             }
         }
         
@@ -358,6 +475,24 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a 3 - Ciclos/Esterilización.
+        /// </summary>
+        internal static string Sterilization {
+            get {
+                return ResourceManager.GetString("Sterilization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Observaciones específicas de esterilización.
+        /// </summary>
+        internal static string SteriRemarks {
+            get {
+                return ResourceManager.GetString("SteriRemarks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ubicación.
         /// </summary>
         internal static string Ubication {
@@ -372,6 +507,15 @@ namespace TrazinsAtenea.GlobalResources {
         internal static string Washes {
             get {
                 return ResourceManager.GetString("Washes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Observaciones específicas de lavado.
+        /// </summary>
+        internal static string WashingRemarks {
+            get {
+                return ResourceManager.GetString("WashingRemarks", resourceCulture);
             }
         }
         

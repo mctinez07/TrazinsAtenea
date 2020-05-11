@@ -178,4 +178,7 @@
   <data name="Package" xml:space="preserve">
     <value>Package</value>
   </data>
+  <data name="Processes" xml:space="preserve">
+    <value>Processes</value>
+  </data>
 </root>

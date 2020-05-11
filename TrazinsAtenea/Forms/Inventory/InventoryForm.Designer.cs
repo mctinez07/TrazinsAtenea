@@ -30,6 +30,8 @@
         {
             this.pnlInventoryMenu = new DevExpress.XtraEditors.PanelControl();
             this.pnlLocateButtons = new DevExpress.XtraEditors.PanelControl();
+            this.btnLocator = new DevExpress.XtraEditors.SimpleButton();
+            this.btnRead = new DevExpress.XtraEditors.SimpleButton();
             this.separatorControl6 = new DevExpress.XtraEditors.SeparatorControl();
             this.btnCaducity = new DevExpress.XtraEditors.SimpleButton();
             this.separatorControl5 = new DevExpress.XtraEditors.SeparatorControl();
@@ -43,8 +45,6 @@
             this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
             this.btnSet = new DevExpress.XtraEditors.SimpleButton();
             this.pnlInventoryBody = new DevExpress.XtraEditors.PanelControl();
-            this.btnRead = new DevExpress.XtraEditors.SimpleButton();
-            this.btnLocator = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pnlInventoryMenu)).BeginInit();
             this.pnlInventoryMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlLocateButtons)).BeginInit();
@@ -88,10 +88,30 @@
             this.pnlLocateButtons.Controls.Add(this.btnLocator);
             this.pnlLocateButtons.Controls.Add(this.btnRead);
             this.pnlLocateButtons.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlLocateButtons.Location = new System.Drawing.Point(1110, 0);
+            this.pnlLocateButtons.Location = new System.Drawing.Point(1236, 0);
             this.pnlLocateButtons.Name = "pnlLocateButtons";
-            this.pnlLocateButtons.Size = new System.Drawing.Size(276, 60);
+            this.pnlLocateButtons.Size = new System.Drawing.Size(150, 60);
             this.pnlLocateButtons.TabIndex = 12;
+            // 
+            // btnLocator
+            // 
+            this.btnLocator.Location = new System.Drawing.Point(18, 6);
+            this.btnLocator.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnLocator.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnLocator.Name = "btnLocator";
+            this.btnLocator.Size = new System.Drawing.Size(48, 48);
+            this.btnLocator.TabIndex = 3;
+            this.btnLocator.Text = "simpleButton1";
+            // 
+            // btnRead
+            // 
+            this.btnRead.Location = new System.Drawing.Point(94, 6);
+            this.btnRead.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnRead.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnRead.Name = "btnRead";
+            this.btnRead.Size = new System.Drawing.Size(48, 48);
+            this.btnRead.TabIndex = 2;
+            this.btnRead.Text = "simpleButton1";
             // 
             // separatorControl6
             // 
@@ -249,26 +269,6 @@
             this.pnlInventoryBody.Name = "pnlInventoryBody";
             this.pnlInventoryBody.Size = new System.Drawing.Size(1386, 728);
             this.pnlInventoryBody.TabIndex = 1;
-            // 
-            // btnRead
-            // 
-            this.btnRead.Location = new System.Drawing.Point(216, 6);
-            this.btnRead.LookAndFeel.SkinName = "DevExpress Style";
-            this.btnRead.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnRead.Name = "btnRead";
-            this.btnRead.Size = new System.Drawing.Size(48, 48);
-            this.btnRead.TabIndex = 2;
-            this.btnRead.Text = "simpleButton1";
-            // 
-            // btnLocator
-            // 
-            this.btnLocator.Location = new System.Drawing.Point(153, 6);
-            this.btnLocator.LookAndFeel.SkinName = "DevExpress Style";
-            this.btnLocator.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnLocator.Name = "btnLocator";
-            this.btnLocator.Size = new System.Drawing.Size(48, 48);
-            this.btnLocator.TabIndex = 3;
-            this.btnLocator.Text = "simpleButton1";
             // 
             // InventoryForm
             // 
