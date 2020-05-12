@@ -50,6 +50,22 @@ namespace WSTrazinsAtenea
 
         #endregion
 
+        #region Embalajes
+
+        [OperationContract]
+        List<Embalaje> Embalaje_Select_List(Embalaje embalaje);
+
+        [OperationContract]
+        Embalaje Embalaje_Select(Embalaje embalaje);
+
+        [OperationContract]
+        string Embalaje_Insert(Embalaje embalaje);
+
+        [OperationContract]
+        string Embalaje_Update(Embalaje embalaje);
+
+        #endregion
+
         #region Mensajes
 
         [OperationContract]

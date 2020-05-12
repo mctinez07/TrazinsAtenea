@@ -163,6 +163,81 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Embalaje_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="embalaje" nillable="true" type="tns:Embalaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Embalaje">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CaducidadDias" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CaducidadMeses" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ConId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Embalaje" nillable="true" type="tns:Embalaje" />
+  <xs:element name="Embalaje_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Embalaje_Select_ListResult" nillable="true" type="tns:ArrayOfEmbalaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfEmbalaje">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Embalaje" nillable="true" type="tns:Embalaje" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmbalaje" nillable="true" type="tns:ArrayOfEmbalaje" />
+  <xs:element name="Embalaje_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="embalaje" nillable="true" type="tns:Embalaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Embalaje_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Embalaje_SelectResult" nillable="true" type="tns:Embalaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Embalaje_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="embalaje" nillable="true" type="tns:Embalaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Embalaje_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Embalaje_InsertResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Embalaje_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="embalaje" nillable="true" type="tns:Embalaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Embalaje_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Embalaje_UpdateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Mensaje_Select">
     <xs:complexType>
       <xs:sequence>

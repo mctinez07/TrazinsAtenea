@@ -65,6 +65,29 @@ namespace WSTrazinsAtenea
 
         #endregion
 
+        #region Embalajes
+
+        public string Embalaje_Insert(Embalaje embalaje)
+        {
+            return EmbalajeManager.Embalaje_Insert(embalaje);
+        }
+
+        public Embalaje Embalaje_Select(Embalaje embalaje)
+        {
+            return EmbalajeManager.Embalaje_Select(embalaje);
+        }
+
+        public List<Embalaje> Embalaje_Select_List(Embalaje embalaje)
+        {
+            return EmbalajeManager.Embalaje_Select_List(embalaje);
+        }
+
+        public string Embalaje_Update(Embalaje embalaje)
+        {
+            return EmbalajeManager.Embalaje_Update(embalaje);
+        }
+        #endregion
+
         #region Mensajes
 
         public Mensaje Mensaje_Select(Mensaje mensaje)

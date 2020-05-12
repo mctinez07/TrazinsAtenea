@@ -7,6 +7,7 @@ using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using TrazinsAtenea.Forms.GlobalForms;
 using TrazinsAtenea.GlobalEngine;
@@ -23,13 +24,13 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         public SetManagmentForm()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void SetManagmentForm_Load(object sender, EventArgs e)
         {
             MultilanguageFormat();
-
+            
             //CargarCombos
             LoadComboBoxInformation();            
            
@@ -40,23 +41,52 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             //Tener en cuenta que si no es caja nueva hay que seleccionar los elementos
             //si es caja nueva el elemento seleccionado es 0;
             SpecialitiesLoad();
+            PackagingLoad();
+            PropertyLoad();
+
+            //Pendiente crear modelo
+
+            //TypeSetLoad();
+            //CostCenterLoad();           
+
+        }
+
+        private void PropertyLoad()
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en PropertyLoad:" + ex.Message);
+            }
+        }
+
+        private void PackagingLoad()
+        {
+            try
+            {
+                var packagesList = BaseModelClient.Service.Embalaje_Select_List(new Embalaje()
+                {ChId = BaseModelClient.BaseModel.ChId });
+
+                Engine.ComboBoxFormat(cmbPackage, "Descripcion", "ConId", packagesList);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en PackagingLoad: " + ex.Message);
+            }
         }
 
         private void SpecialitiesLoad()
         {
             try
             {
+                
                 var specialitiesList = BaseModelClient.Service.Especialidad_Select_List(new Especialidad()
                 { ChId = BaseModelClient.BaseModel.ChId });
 
-                if(specialitiesList != null)
-                {
-                    cmbSpeciality.DataSource = specialitiesList;
-                    cmbSpeciality.DisplayMember = "Descripcion";
-                    cmbSpeciality.ValueMember = "EspId";
-                    cmbSpeciality.SelectedIndex = -1;
-                    cmbSpeciality.Select(0, 0);
-                }
+                Engine.ComboBoxFormat(cmbSpeciality, "Descripcion", "EspId", specialitiesList);
                 
             }
             catch (Exception ex)

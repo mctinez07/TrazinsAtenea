@@ -18,6 +18,7 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
     [System.Runtime.Serialization.DataContractAttribute(Name="BaseModel", Namespace="http://WSTrazinsAtenea.com")]
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja))]
     public partial class BaseModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -158,6 +159,77 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
                 if ((this.EspIdField.Equals(value) != true)) {
                     this.EspIdField = value;
                     this.RaisePropertyChanged("EspId");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Embalaje", Namespace="http://WSTrazinsAtenea.com")]
+    [System.SerializableAttribute()]
+    public partial class Embalaje : TrazinsAtenea.ServiceWSTrazinsAtenea.BaseModel {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> CaducidadDiasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> CaducidadMesesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> ConIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescripcionField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> CaducidadDias {
+            get {
+                return this.CaducidadDiasField;
+            }
+            set {
+                if ((this.CaducidadDiasField.Equals(value) != true)) {
+                    this.CaducidadDiasField = value;
+                    this.RaisePropertyChanged("CaducidadDias");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> CaducidadMeses {
+            get {
+                return this.CaducidadMesesField;
+            }
+            set {
+                if ((this.CaducidadMesesField.Equals(value) != true)) {
+                    this.CaducidadMesesField = value;
+                    this.RaisePropertyChanged("CaducidadMeses");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> ConId {
+            get {
+                return this.ConIdField;
+            }
+            set {
+                if ((this.ConIdField.Equals(value) != true)) {
+                    this.ConIdField = value;
+                    this.RaisePropertyChanged("ConId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion {
+            get {
+                return this.DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
+                    this.DescripcionField = value;
+                    this.RaisePropertyChanged("Descripcion");
                 }
             }
         }
@@ -475,6 +547,30 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_UpdateResponse")]
         System.Threading.Tasks.Task<string> Especialidad_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_ListResponse")]
+        TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje[] Embalaje_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_ListResponse")]
+        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje[]> Embalaje_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_SelectResponse")]
+        TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje Embalaje_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_SelectResponse")]
+        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje> Embalaje_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_InsertResponse")]
+        string Embalaje_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_InsertResponse")]
+        System.Threading.Tasks.Task<string> Embalaje_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_UpdateResponse")]
+        string Embalaje_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_UpdateResponse")]
+        System.Threading.Tasks.Task<string> Embalaje_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_SelectResponse")]
         TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje Mensaje_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje mensaje);
         
@@ -571,6 +667,38 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         
         public System.Threading.Tasks.Task<string> Especialidad_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad) {
             return base.Channel.Especialidad_UpdateAsync(especialidad);
+        }
+        
+        public TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje[] Embalaje_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje) {
+            return base.Channel.Embalaje_Select_List(embalaje);
+        }
+        
+        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje[]> Embalaje_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje) {
+            return base.Channel.Embalaje_Select_ListAsync(embalaje);
+        }
+        
+        public TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje Embalaje_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje) {
+            return base.Channel.Embalaje_Select(embalaje);
+        }
+        
+        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje> Embalaje_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje) {
+            return base.Channel.Embalaje_SelectAsync(embalaje);
+        }
+        
+        public string Embalaje_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje) {
+            return base.Channel.Embalaje_Insert(embalaje);
+        }
+        
+        public System.Threading.Tasks.Task<string> Embalaje_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje) {
+            return base.Channel.Embalaje_InsertAsync(embalaje);
+        }
+        
+        public string Embalaje_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje) {
+            return base.Channel.Embalaje_Update(embalaje);
+        }
+        
+        public System.Threading.Tasks.Task<string> Embalaje_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje) {
+            return base.Channel.Embalaje_UpdateAsync(embalaje);
         }
         
         public TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje Mensaje_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje mensaje) {
