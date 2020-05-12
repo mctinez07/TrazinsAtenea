@@ -17,6 +17,7 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BaseModel", Namespace="http://WSTrazinsAtenea.com")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja))]
     public partial class BaseModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -119,6 +120,45 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Especialidad", Namespace="http://WSTrazinsAtenea.com")]
+    [System.SerializableAttribute()]
+    public partial class Especialidad : TrazinsAtenea.ServiceWSTrazinsAtenea.BaseModel {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> EspIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion {
+            get {
+                return this.DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
+                    this.DescripcionField = value;
+                    this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> EspId {
+            get {
+                return this.EspIdField;
+            }
+            set {
+                if ((this.EspIdField.Equals(value) != true)) {
+                    this.EspIdField = value;
+                    this.RaisePropertyChanged("EspId");
+                }
             }
         }
     }
@@ -411,6 +451,30 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_UpdateResponse")]
         System.Threading.Tasks.Task<string> Caja_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_ListResponse")]
+        TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad[] Especialidad_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_ListResponse")]
+        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad[]> Especialidad_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_SelectResponse")]
+        TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad Especialidad_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_SelectResponse")]
+        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad> Especialidad_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_InsertResponse")]
+        string Especialidad_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_InsertResponse")]
+        System.Threading.Tasks.Task<string> Especialidad_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_UpdateResponse")]
+        string Especialidad_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_UpdateResponse")]
+        System.Threading.Tasks.Task<string> Especialidad_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_SelectResponse")]
         TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje Mensaje_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje mensaje);
         
@@ -475,6 +539,38 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         
         public System.Threading.Tasks.Task<string> Caja_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja) {
             return base.Channel.Caja_UpdateAsync(caja);
+        }
+        
+        public TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad[] Especialidad_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad) {
+            return base.Channel.Especialidad_Select_List(especialidad);
+        }
+        
+        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad[]> Especialidad_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad) {
+            return base.Channel.Especialidad_Select_ListAsync(especialidad);
+        }
+        
+        public TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad Especialidad_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad) {
+            return base.Channel.Especialidad_Select(especialidad);
+        }
+        
+        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad> Especialidad_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad) {
+            return base.Channel.Especialidad_SelectAsync(especialidad);
+        }
+        
+        public string Especialidad_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad) {
+            return base.Channel.Especialidad_Insert(especialidad);
+        }
+        
+        public System.Threading.Tasks.Task<string> Especialidad_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad) {
+            return base.Channel.Especialidad_InsertAsync(especialidad);
+        }
+        
+        public string Especialidad_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad) {
+            return base.Channel.Especialidad_Update(especialidad);
+        }
+        
+        public System.Threading.Tasks.Task<string> Especialidad_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad) {
+            return base.Channel.Especialidad_UpdateAsync(especialidad);
         }
         
         public TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje Mensaje_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje mensaje) {

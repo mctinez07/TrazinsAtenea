@@ -127,8 +127,6 @@ namespace SqlEngine
 
                 throw new Exception("Error en IsSelectList: "+ ex.Message);
             }
-           
-
         }
 
         public static T IsSelect<T>(T model)
@@ -305,7 +303,10 @@ namespace SqlEngine
                     foreach (var item in columnName)
                     {
                         PropertyInfo pr = s.Where(t => t.Name.ToLower().Equals(item)).FirstOrDefault();
-                        returnedProperties.Add(pr);
+                        if(pr!= null)
+                        {
+                            returnedProperties.Add(pr);
+                        }
                     }
 
                     foreach (PropertyInfo prop in returnedProperties)

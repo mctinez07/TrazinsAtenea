@@ -90,6 +90,79 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Especialidad_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="especialidad" nillable="true" type="tns:Especialidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Especialidad">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EspId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Especialidad" nillable="true" type="tns:Especialidad" />
+  <xs:element name="Especialidad_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Especialidad_Select_ListResult" nillable="true" type="tns:ArrayOfEspecialidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfEspecialidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Especialidad" nillable="true" type="tns:Especialidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEspecialidad" nillable="true" type="tns:ArrayOfEspecialidad" />
+  <xs:element name="Especialidad_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="especialidad" nillable="true" type="tns:Especialidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Especialidad_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Especialidad_SelectResult" nillable="true" type="tns:Especialidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Especialidad_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="especialidad" nillable="true" type="tns:Especialidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Especialidad_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Especialidad_InsertResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Especialidad_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="especialidad" nillable="true" type="tns:Especialidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Especialidad_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Especialidad_UpdateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Mensaje_Select">
     <xs:complexType>
       <xs:sequence>

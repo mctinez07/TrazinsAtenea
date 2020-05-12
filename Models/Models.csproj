@@ -43,11 +43,10 @@
   <ItemGroup>
     <Compile Include="BaseModel.cs" />
     <Compile Include="Inventory\Caja.cs" />
+    <Compile Include="Masters\Especialidad.cs" />
     <Compile Include="Messages\Mensaje.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Masters\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

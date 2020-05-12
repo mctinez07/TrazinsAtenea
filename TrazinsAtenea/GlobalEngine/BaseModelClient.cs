@@ -18,11 +18,7 @@ namespace TrazinsAtenea.GlobalEngine
 
         #region Properties
 
-        public string ChId { get; set; }
-
-        public string HosId { get; set; }
-
-        public string AuditUsuario { get; set; }
+        public BaseModel BaseModel { get; set; }      
 
         public WSTrazinsAteneaClient Service;
 
@@ -33,9 +29,11 @@ namespace TrazinsAtenea.GlobalEngine
         public BaseModelClient()
         {
             //Asigno temporalmente los valores del modelo
-            this.ChId = "002";
-            this.HosId = "002";
-            this.AuditUsuario = "andres";
+            this.BaseModel = new BaseModel();
+
+            this.BaseModel.ChId = "002";
+            this.BaseModel.HosId = "002";
+            this.BaseModel.AuditUsuario = "andres";
 
             //Instanciamos el Web Service
             this.Service = new WSTrazinsAteneaClient();

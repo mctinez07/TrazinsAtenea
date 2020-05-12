@@ -12,11 +12,15 @@ using TrazinsAtenea.Forms.GlobalForms;
 using TrazinsAtenea.GlobalEngine;
 using DevExpress.XtraTab;
 using DevExpress.XtraLayout;
+using TrazinsAtenea.ServiceWSTrazinsAtenea;
 
 namespace TrazinsAtenea.Forms.Inventory.Set
 {
     public partial class SetManagmentForm : DevExpress.XtraEditors.XtraForm
     {
+        public Caja Caja;
+        private BaseModelClient BaseModelClient = BaseModelClient.Instance;        
+
         public SetManagmentForm()
         {
             InitializeComponent();
@@ -25,6 +29,40 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         private void SetManagmentForm_Load(object sender, EventArgs e)
         {
             MultilanguageFormat();
+
+            //CargarCombos
+            LoadComboBoxInformation();            
+           
+        }
+
+        private void LoadComboBoxInformation()
+        {
+            //Tener en cuenta que si no es caja nueva hay que seleccionar los elementos
+            //si es caja nueva el elemento seleccionado es 0;
+            SpecialitiesLoad();
+        }
+
+        private void SpecialitiesLoad()
+        {
+            try
+            {
+                var specialitiesList = BaseModelClient.Service.Especialidad_Select_List(new Especialidad()
+                { ChId = BaseModelClient.BaseModel.ChId });
+
+                if(specialitiesList != null)
+                {
+                    cmbSpeciality.DataSource = specialitiesList;
+                    cmbSpeciality.DisplayMember = "Descripcion";
+                    cmbSpeciality.ValueMember = "EspId";
+                    cmbSpeciality.SelectedIndex = -1;
+                    cmbSpeciality.Select(0, 0);
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en SpecialitiesLoad: " + ex.Message);
+            }            
         }
 
         private void MultilanguageFormat()

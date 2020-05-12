@@ -17,12 +17,12 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 {
     public partial class SetsForm : DevExpress.XtraEditors.XtraForm
     {
-        private BaseModelClient BaseModel;
+        private BaseModelClient BaseModelClient;
 
         public SetsForm()
         {
             InitializeComponent();
-            this.BaseModel = BaseModelClient.Instance;            
+            this.BaseModelClient = BaseModelClient.Instance;            
         }
 
         private void GridFormat(GridView gridView)
@@ -41,9 +41,10 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 //Añadir progrssForm
                 Cursor.Current = Cursors.WaitCursor;
 
-                var service = BaseModel.Service;
+                var service = BaseModelClient.Service;
 
-                var sets = service.Caja_Select_List(new Caja() { HosId = BaseModel.HosId, ChId = BaseModel.ChId });
+                var sets = service.Caja_Select_List(new Caja()
+                { HosId = BaseModelClient.BaseModel.HosId, ChId = BaseModelClient.BaseModel.ChId });
 
                 gdcSet.DataSource = sets;
 

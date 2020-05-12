@@ -1,4 +1,5 @@
 ﻿using Models.Inventory;
+using Models.Masters;
 using Models.Messages;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,22 @@ namespace WSTrazinsAtenea
 
         [OperationContract]
         string Caja_Update(Caja caja);
+
+        #endregion
+
+        #region Especialidades
+
+        [OperationContract]
+        List<Especialidad> Especialidad_Select_List(Especialidad especialidad);
+
+        [OperationContract]
+        Especialidad Especialidad_Select(Especialidad especialidad);
+
+        [OperationContract]
+        string Especialidad_Insert(Especialidad especialidad);
+
+        [OperationContract]
+        string Especialidad_Update(Especialidad especialidad);
 
         #endregion
 
