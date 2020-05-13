@@ -88,6 +88,30 @@ namespace WSTrazinsAtenea
         }
         #endregion
 
+        #region Hospitales
+
+        public List<Hospital> Hospital_Select_List(Hospital hospital)
+        {
+            return HospitalManager.Hospital_Select_List(hospital);
+        }
+
+        public Hospital Hospital_Select(Hospital hospital)
+        {
+            return HospitalManager.Hospital_Select(hospital);
+        }
+
+        public string Hospital_Insert(Hospital hospital)
+        {
+            return HospitalManager.Hospital_Insert(hospital);
+        }
+
+        public string Hospital_Update(Hospital hospital)
+        {
+            return HospitalManager.Hospital_Update(hospital);
+        }
+
+        #endregion
+
         #region Mensajes
 
         public Mensaje Mensaje_Select(Mensaje mensaje)

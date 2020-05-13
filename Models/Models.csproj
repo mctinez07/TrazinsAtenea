@@ -45,6 +45,7 @@
     <Compile Include="Inventory\Caja.cs" />
     <Compile Include="Masters\Embalaje.cs" />
     <Compile Include="Masters\Especialidad.cs" />
+    <Compile Include="Masters\Hospital.cs" />
     <Compile Include="Messages\Mensaje.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

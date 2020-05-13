@@ -238,6 +238,85 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Hospital_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hospital" nillable="true" type="tns:Hospital" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Hospital">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ConFirma" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EmbIdArt" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EmbIdCaj" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EmbIdSC" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IntOrion" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IntSelene" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NomHospital" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Siglas" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Hospital" nillable="true" type="tns:Hospital" />
+  <xs:element name="Hospital_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Hospital_Select_ListResult" nillable="true" type="tns:ArrayOfHospital" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfHospital">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Hospital" nillable="true" type="tns:Hospital" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHospital" nillable="true" type="tns:ArrayOfHospital" />
+  <xs:element name="Hospital_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hospital" nillable="true" type="tns:Hospital" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Hospital_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Hospital_SelectResult" nillable="true" type="tns:Hospital" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Hospital_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hospital" nillable="true" type="tns:Hospital" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Hospital_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Hospital_InsertResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Hospital_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hospital" nillable="true" type="tns:Hospital" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Hospital_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Hospital_UpdateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Mensaje_Select">
     <xs:complexType>
       <xs:sequence>

@@ -19,6 +19,7 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja))]
     public partial class BaseModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -230,6 +231,141 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
                 if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
                     this.DescripcionField = value;
                     this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Hospital", Namespace="http://WSTrazinsAtenea.com")]
+    [System.SerializableAttribute()]
+    public partial class Hospital : TrazinsAtenea.ServiceWSTrazinsAtenea.BaseModel {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ConFirmaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> EmbIdArtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> EmbIdCajField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> EmbIdSCField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IntOrionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IntSeleneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NomHospitalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SiglasField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool ConFirma {
+            get {
+                return this.ConFirmaField;
+            }
+            set {
+                if ((this.ConFirmaField.Equals(value) != true)) {
+                    this.ConFirmaField = value;
+                    this.RaisePropertyChanged("ConFirma");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> EmbIdArt {
+            get {
+                return this.EmbIdArtField;
+            }
+            set {
+                if ((this.EmbIdArtField.Equals(value) != true)) {
+                    this.EmbIdArtField = value;
+                    this.RaisePropertyChanged("EmbIdArt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> EmbIdCaj {
+            get {
+                return this.EmbIdCajField;
+            }
+            set {
+                if ((this.EmbIdCajField.Equals(value) != true)) {
+                    this.EmbIdCajField = value;
+                    this.RaisePropertyChanged("EmbIdCaj");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> EmbIdSC {
+            get {
+                return this.EmbIdSCField;
+            }
+            set {
+                if ((this.EmbIdSCField.Equals(value) != true)) {
+                    this.EmbIdSCField = value;
+                    this.RaisePropertyChanged("EmbIdSC");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IntOrion {
+            get {
+                return this.IntOrionField;
+            }
+            set {
+                if ((this.IntOrionField.Equals(value) != true)) {
+                    this.IntOrionField = value;
+                    this.RaisePropertyChanged("IntOrion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IntSelene {
+            get {
+                return this.IntSeleneField;
+            }
+            set {
+                if ((this.IntSeleneField.Equals(value) != true)) {
+                    this.IntSeleneField = value;
+                    this.RaisePropertyChanged("IntSelene");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NomHospital {
+            get {
+                return this.NomHospitalField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NomHospitalField, value) != true)) {
+                    this.NomHospitalField = value;
+                    this.RaisePropertyChanged("NomHospital");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Siglas {
+            get {
+                return this.SiglasField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SiglasField, value) != true)) {
+                    this.SiglasField = value;
+                    this.RaisePropertyChanged("Siglas");
                 }
             }
         }
@@ -571,6 +707,30 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_UpdateResponse")]
         System.Threading.Tasks.Task<string> Embalaje_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_ListResponse")]
+        TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital[] Hospital_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_ListResponse")]
+        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital[]> Hospital_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_SelectResponse")]
+        TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital Hospital_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_SelectResponse")]
+        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital> Hospital_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_InsertResponse")]
+        string Hospital_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_InsertResponse")]
+        System.Threading.Tasks.Task<string> Hospital_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_UpdateResponse")]
+        string Hospital_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_UpdateResponse")]
+        System.Threading.Tasks.Task<string> Hospital_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_SelectResponse")]
         TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje Mensaje_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje mensaje);
         
@@ -699,6 +859,38 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         
         public System.Threading.Tasks.Task<string> Embalaje_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje) {
             return base.Channel.Embalaje_UpdateAsync(embalaje);
+        }
+        
+        public TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital[] Hospital_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital) {
+            return base.Channel.Hospital_Select_List(hospital);
+        }
+        
+        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital[]> Hospital_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital) {
+            return base.Channel.Hospital_Select_ListAsync(hospital);
+        }
+        
+        public TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital Hospital_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital) {
+            return base.Channel.Hospital_Select(hospital);
+        }
+        
+        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital> Hospital_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital) {
+            return base.Channel.Hospital_SelectAsync(hospital);
+        }
+        
+        public string Hospital_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital) {
+            return base.Channel.Hospital_Insert(hospital);
+        }
+        
+        public System.Threading.Tasks.Task<string> Hospital_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital) {
+            return base.Channel.Hospital_InsertAsync(hospital);
+        }
+        
+        public string Hospital_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital) {
+            return base.Channel.Hospital_Update(hospital);
+        }
+        
+        public System.Threading.Tasks.Task<string> Hospital_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital) {
+            return base.Channel.Hospital_UpdateAsync(hospital);
         }
         
         public TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje Mensaje_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje mensaje) {

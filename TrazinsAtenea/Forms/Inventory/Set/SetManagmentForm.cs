@@ -42,6 +42,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             //si es caja nueva el elemento seleccionado es 0;
             SpecialitiesLoad();
             PackagingLoad();
+            
             PropertyLoad();
 
             //Pendiente crear modelo
@@ -51,10 +52,15 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         }
 
+        //Mostrar los hospitales
         private void PropertyLoad()
         {
             try
             {
+                var hospitalList = BaseModelClient.Service.Hospital_Select_List(new Hospital()
+                { ChId = BaseModelClient.BaseModel.ChId });
+
+                Engine.ComboBoxFormat(cmbProperty, "NomHospital", "HosId", hospitalList);
 
             }
             catch (Exception ex)

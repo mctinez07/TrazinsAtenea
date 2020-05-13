@@ -75,6 +75,7 @@
             this.tbcSet = new DevExpress.XtraTab.XtraTabControl();
             this.xtpDataProcesses = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.lblSetCode = new DevExpress.XtraEditors.LabelControl();
             this.cmbPosition = new System.Windows.Forms.ComboBox();
             this.cmbSelf = new System.Windows.Forms.ComboBox();
             this.cmbBlock = new System.Windows.Forms.ComboBox();
@@ -175,6 +176,9 @@
             this.xtpInstrumentalSet = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txtSetCode = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem47 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem49 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).BeginInit();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcBackArrow)).BeginInit();
@@ -247,6 +251,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciPosition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSetCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -396,6 +403,8 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.txtSetCode);
+            this.layoutControl1.Controls.Add(this.lblSetCode);
             this.layoutControl1.Controls.Add(this.cmbPosition);
             this.layoutControl1.Controls.Add(this.cmbSelf);
             this.layoutControl1.Controls.Add(this.cmbBlock);
@@ -444,6 +453,17 @@
             this.layoutControl1.Size = new System.Drawing.Size(1138, 679);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // lblSetCode
+            // 
+            this.lblSetCode.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSetCode.Appearance.Options.UseFont = true;
+            this.lblSetCode.Location = new System.Drawing.Point(746, 218);
+            this.lblSetCode.Name = "lblSetCode";
+            this.lblSetCode.Size = new System.Drawing.Size(124, 23);
+            this.lblSetCode.StyleController = this.layoutControl1;
+            this.lblSetCode.TabIndex = 65;
+            this.lblSetCode.Text = "Código de caja";
             // 
             // cmbPosition
             // 
@@ -1133,7 +1153,9 @@
             this.layoutControlItem46,
             this.lciBlock,
             this.lciSelf,
-            this.lciPosition});
+            this.lciPosition,
+            this.layoutControlItem47,
+            this.layoutControlItem49});
             this.Root.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.Root.Name = "Root";
             this.Root.OptionsTableLayoutGroup.AutoSizeDefaultDefinitionLength = 100;
@@ -1744,6 +1766,39 @@
             this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem25.TextVisible = false;
             // 
+            // txtSetCode
+            // 
+            this.txtSetCode.Location = new System.Drawing.Point(746, 246);
+            this.txtSetCode.MaximumSize = new System.Drawing.Size(200, 0);
+            this.txtSetCode.Name = "txtSetCode";
+            this.txtSetCode.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetCode.Properties.Appearance.Options.UseFont = true;
+            this.txtSetCode.Size = new System.Drawing.Size(200, 34);
+            this.txtSetCode.StyleController = this.layoutControl1;
+            this.txtSetCode.TabIndex = 67;
+            // 
+            // layoutControlItem47
+            // 
+            this.layoutControlItem47.Control = this.lblSetCode;
+            this.layoutControlItem47.Location = new System.Drawing.Point(734, 206);
+            this.layoutControlItem47.Name = "layoutControlItem47";
+            this.layoutControlItem47.OptionsTableLayoutItem.ColumnIndex = 2;
+            this.layoutControlItem47.OptionsTableLayoutItem.RowIndex = 5;
+            this.layoutControlItem47.Size = new System.Drawing.Size(367, 28);
+            this.layoutControlItem47.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem47.TextVisible = false;
+            // 
+            // layoutControlItem49
+            // 
+            this.layoutControlItem49.Control = this.txtSetCode;
+            this.layoutControlItem49.Location = new System.Drawing.Point(734, 234);
+            this.layoutControlItem49.Name = "layoutControlItem49";
+            this.layoutControlItem49.OptionsTableLayoutItem.ColumnIndex = 2;
+            this.layoutControlItem49.OptionsTableLayoutItem.RowIndex = 6;
+            this.layoutControlItem49.Size = new System.Drawing.Size(367, 45);
+            this.layoutControlItem49.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem49.TextVisible = false;
+            // 
             // SetManagmentForm
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
@@ -1777,7 +1832,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ckbSetSample.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
-            this.layoutControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tgsYesNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.speMaintenance.Properties)).EndInit();
@@ -1833,6 +1887,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciPosition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSetCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1949,5 +2006,9 @@
         private DevExpress.XtraLayout.LayoutControlItem lciSelf;
         private System.Windows.Forms.ComboBox cmbPosition;
         private DevExpress.XtraLayout.LayoutControlItem lciPosition;
+        private DevExpress.XtraEditors.LabelControl lblSetCode;
+        private DevExpress.XtraEditors.TextEdit txtSetCode;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem47;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem49;
     }
 }

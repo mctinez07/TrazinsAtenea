@@ -253,4 +253,7 @@
   <data name="Position" xml:space="preserve">
     <value>Posición</value>
   </data>
+  <data name="SetCode" xml:space="preserve">
+    <value>Código de caja</value>
+  </data>
 </root>

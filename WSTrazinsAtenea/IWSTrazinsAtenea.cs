@@ -66,6 +66,22 @@ namespace WSTrazinsAtenea
 
         #endregion
 
+        #region Hospitales
+
+        [OperationContract]
+        List<Hospital> Hospital_Select_List(Hospital hospital);
+
+        [OperationContract]
+        Hospital Hospital_Select(Hospital hospital);
+
+        [OperationContract]
+        string Hospital_Insert(Hospital hospital);
+
+        [OperationContract]
+        string Hospital_Update(Hospital hospital);
+
+        #endregion
+
         #region Mensajes
 
         [OperationContract]

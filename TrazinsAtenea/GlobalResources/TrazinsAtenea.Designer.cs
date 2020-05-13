@@ -412,6 +412,15 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Código de caja.
+        /// </summary>
+        internal static string SetCode {
+            get {
+                return ResourceManager.GetString("SetCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Nombre caja.
         /// </summary>
         internal static string SetName {
