@@ -20,6 +20,7 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja))]
     public partial class BaseModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -366,6 +367,45 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
                 if ((object.ReferenceEquals(this.SiglasField, value) != true)) {
                     this.SiglasField = value;
                     this.RaisePropertyChanged("Siglas");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TipoCaja", Namespace="http://WSTrazinsAtenea.com")]
+    [System.SerializableAttribute()]
+    public partial class TipoCaja : TrazinsAtenea.ServiceWSTrazinsAtenea.BaseModel {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> IdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion {
+            get {
+                return this.DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
+                    this.DescripcionField = value;
+                    this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
                 }
             }
         }
@@ -731,6 +771,30 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_UpdateResponse")]
         System.Threading.Tasks.Task<string> Hospital_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_ListResponse")]
+        TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja[] TipoCaja_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_ListResponse")]
+        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja[]> TipoCaja_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_SelectResponse")]
+        TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja TipoCaja_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_SelectResponse")]
+        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja> TipoCaja_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_InsertResponse")]
+        string TipoCaja_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_InsertResponse")]
+        System.Threading.Tasks.Task<string> TipoCaja_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_UpdateResponse")]
+        string TipoCaja_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_UpdateResponse")]
+        System.Threading.Tasks.Task<string> TipoCaja_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_SelectResponse")]
         TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje Mensaje_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje mensaje);
         
@@ -891,6 +955,38 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         
         public System.Threading.Tasks.Task<string> Hospital_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital) {
             return base.Channel.Hospital_UpdateAsync(hospital);
+        }
+        
+        public TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja[] TipoCaja_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja) {
+            return base.Channel.TipoCaja_Select_List(tipoCaja);
+        }
+        
+        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja[]> TipoCaja_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja) {
+            return base.Channel.TipoCaja_Select_ListAsync(tipoCaja);
+        }
+        
+        public TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja TipoCaja_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja) {
+            return base.Channel.TipoCaja_Select(tipoCaja);
+        }
+        
+        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja> TipoCaja_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja) {
+            return base.Channel.TipoCaja_SelectAsync(tipoCaja);
+        }
+        
+        public string TipoCaja_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja) {
+            return base.Channel.TipoCaja_Insert(tipoCaja);
+        }
+        
+        public System.Threading.Tasks.Task<string> TipoCaja_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja) {
+            return base.Channel.TipoCaja_InsertAsync(tipoCaja);
+        }
+        
+        public string TipoCaja_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja) {
+            return base.Channel.TipoCaja_Update(tipoCaja);
+        }
+        
+        public System.Threading.Tasks.Task<string> TipoCaja_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja) {
+            return base.Channel.TipoCaja_UpdateAsync(tipoCaja);
         }
         
         public TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje Mensaje_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje mensaje) {

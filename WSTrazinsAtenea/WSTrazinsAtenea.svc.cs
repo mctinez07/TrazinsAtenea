@@ -112,6 +112,30 @@ namespace WSTrazinsAtenea
 
         #endregion
 
+        #region TiposCajas
+
+        public List<TipoCaja> TipoCaja_Select_List(TipoCaja tipoCaja)
+        {
+            return TipoCajaManager.TipoCaja_Select_List(tipoCaja);
+        }
+
+        public TipoCaja TipoCaja_Select(TipoCaja tipoCaja)
+        {
+            return TipoCajaManager.TipoCaja_Select(tipoCaja);
+        }
+
+        public string TipoCaja_Insert(TipoCaja tipoCaja)
+        {
+            return TipoCajaManager.TipoCaja_Insert(tipoCaja);
+        }
+
+        public string TipoCaja_Update(TipoCaja tipoCaja)
+        {
+            return TipoCajaManager.TipoCaja_Update(tipoCaja);
+        }
+
+        #endregion
+
         #region Mensajes
 
         public Mensaje Mensaje_Select(Mensaje mensaje)
@@ -120,6 +144,8 @@ namespace WSTrazinsAtenea
         }
 
         #endregion
+
+
 
         //public List<Usuario> Usuario_Select(Usuario usuario)
         //{

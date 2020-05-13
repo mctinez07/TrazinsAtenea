@@ -82,6 +82,22 @@ namespace WSTrazinsAtenea
 
         #endregion
 
+        #region TiposCajas
+
+        [OperationContract]
+        List<TipoCaja> TipoCaja_Select_List(TipoCaja tipoCaja);
+
+        [OperationContract]
+        TipoCaja TipoCaja_Select(TipoCaja tipoCaja);
+
+        [OperationContract]
+        string TipoCaja_Insert(TipoCaja tipoCaja);
+
+        [OperationContract]
+        string TipoCaja_Update(TipoCaja tipoCaja);
+
+        #endregion
+
         #region Mensajes
 
         [OperationContract]

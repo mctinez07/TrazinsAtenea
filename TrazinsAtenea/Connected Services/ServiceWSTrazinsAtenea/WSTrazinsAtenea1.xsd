@@ -317,6 +317,79 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="TipoCaja_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoCaja" nillable="true" type="tns:TipoCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="TipoCaja">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TipoCaja" nillable="true" type="tns:TipoCaja" />
+  <xs:element name="TipoCaja_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TipoCaja_Select_ListResult" nillable="true" type="tns:ArrayOfTipoCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfTipoCaja">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TipoCaja" nillable="true" type="tns:TipoCaja" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTipoCaja" nillable="true" type="tns:ArrayOfTipoCaja" />
+  <xs:element name="TipoCaja_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoCaja" nillable="true" type="tns:TipoCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoCaja_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TipoCaja_SelectResult" nillable="true" type="tns:TipoCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoCaja_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoCaja" nillable="true" type="tns:TipoCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoCaja_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TipoCaja_InsertResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoCaja_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoCaja" nillable="true" type="tns:TipoCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoCaja_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TipoCaja_UpdateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Mensaje_Select">
     <xs:complexType>
       <xs:sequence>

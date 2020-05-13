@@ -41,15 +41,29 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             //Tener en cuenta que si no es caja nueva hay que seleccionar los elementos
             //si es caja nueva el elemento seleccionado es 0;
             SpecialitiesLoad();
-            PackagingLoad();
-            
+            PackagingLoad();            
             PropertyLoad();
+            SetTypeLoad();
 
             //Pendiente crear modelo
-
-            //TypeSetLoad();
             //CostCenterLoad();           
 
+        }
+
+        private void SetTypeLoad()
+        {
+            try
+            {
+                var setTypeList = BaseModelClient.Service.TipoCaja_Select_List(new TipoCaja()
+                { ChId = BaseModelClient.BaseModel.ChId, HosId = BaseModelClient.BaseModel.HosId });
+
+                Engine.ComboBoxFormat(cmbSetType, "Descripcion", "Id", setTypeList);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en SetTypeLoad: " + ex.Message);
+            }
         }
 
         //Mostrar los hospitales
@@ -58,7 +72,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             try
             {
                 var hospitalList = BaseModelClient.Service.Hospital_Select_List(new Hospital()
-                { ChId = BaseModelClient.BaseModel.ChId });
+                { ChId = BaseModelClient.BaseModel.ChId, HosId = BaseModelClient.BaseModel.HosId });
 
                 Engine.ComboBoxFormat(cmbProperty, "NomHospital", "HosId", hospitalList);
 
