@@ -1,6 +1,7 @@
 ﻿using Models.Inventory;
 using Models.Masters;
 using Models.Messages;
+using Models.Processes.Methods;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -95,6 +96,22 @@ namespace WSTrazinsAtenea
 
         [OperationContract]
         string TipoCaja_Update(TipoCaja tipoCaja);
+
+        #endregion
+
+        #region Métodos Limpieza
+
+        [OperationContract]
+        List<Limpieza> Limpieza_Select_List(Limpieza limpieza);
+
+        [OperationContract]
+        Limpieza Limpieza_Select(Limpieza limpieza);
+
+        [OperationContract]
+        string Limpieza_Insert(Limpieza limpieza);
+
+        [OperationContract]
+        string Limpieza_Update(Limpieza limpieza);
 
         #endregion
 

@@ -185,6 +185,9 @@
     <None Include="Connected Services\ServiceWSTrazinsAtenea\TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServiceWSTrazinsAtenea\TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceWSTrazinsAtenea\TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

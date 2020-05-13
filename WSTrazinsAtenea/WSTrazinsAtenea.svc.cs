@@ -11,6 +11,8 @@ using Models.Messages;
 using ManagerModels.Messages;
 using Models.Masters;
 using ManagerModels.Masters;
+using Models.Processes.Methods;
+using ManagerModels.Processes.Methods;
 
 namespace WSTrazinsAtenea
 {
@@ -133,6 +135,30 @@ namespace WSTrazinsAtenea
         {
             return TipoCajaManager.TipoCaja_Update(tipoCaja);
         }
+
+        #endregion
+
+        #region Métodos Limpieza
+
+        public List<Limpieza> Limpieza_Select_List(Limpieza limpieza)
+        {
+            return LimpiezaManager.Limpieza_Select_List(limpieza);
+        }
+
+        public Limpieza Limpieza_Select(Limpieza limpieza)
+        {
+            return LimpiezaManager.Limpieza_Select(limpieza);
+        }
+
+        public string Limpieza_Insert(Limpieza limpieza)
+        {
+            return LimpiezaManager.Limpieza_Insert(limpieza);
+        }
+
+        public string Limpieza_Update(Limpieza limpieza)
+        {
+            return LimpiezaManager.Limpieza_Update(limpieza);
+        } 
 
         #endregion
 

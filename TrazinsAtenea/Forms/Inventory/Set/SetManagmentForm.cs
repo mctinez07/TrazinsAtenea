@@ -48,10 +48,26 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             PackagingLoad();            
             PropertyLoad();
             SetTypeLoad();
+            MethodsWashingLoad();
 
             //Pendiente crear modelo
             //CostCenterLoad();           
 
+        }
+
+        private void MethodsWashingLoad()
+        {
+            try
+            {
+                var methodsWashingList = BaseModelClient.Service.Limpieza_Select_List(new Limpieza()
+                { ChId = BaseModelClient.BaseModel.ChId });
+
+                Engine.ComboBoxFormat(cmbFirstMethodWashing, "Descripcion", "TipoLavId", methodsWashingList);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en MethodWashingLoad: " + ex.Message);
+            }
         }
 
         #region Load Data ComboBoxes

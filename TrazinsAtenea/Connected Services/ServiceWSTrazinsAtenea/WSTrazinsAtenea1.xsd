@@ -390,6 +390,83 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Limpieza_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="limpieza" nillable="true" type="tns:Limpieza" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Limpieza">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Control1" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Control2" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Control3" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Control4" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoLavId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Limpieza" nillable="true" type="tns:Limpieza" />
+  <xs:element name="Limpieza_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Limpieza_Select_ListResult" nillable="true" type="tns:ArrayOfLimpieza" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfLimpieza">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Limpieza" nillable="true" type="tns:Limpieza" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLimpieza" nillable="true" type="tns:ArrayOfLimpieza" />
+  <xs:element name="Limpieza_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="limpieza" nillable="true" type="tns:Limpieza" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Limpieza_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Limpieza_SelectResult" nillable="true" type="tns:Limpieza" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Limpieza_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="limpieza" nillable="true" type="tns:Limpieza" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Limpieza_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Limpieza_InsertResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Limpieza_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="limpieza" nillable="true" type="tns:Limpieza" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Limpieza_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Limpieza_UpdateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Mensaje_Select">
     <xs:complexType>
       <xs:sequence>
