@@ -75,6 +75,7 @@
             this.tbcSet = new DevExpress.XtraTab.XtraTabControl();
             this.xtpDataProcesses = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.txtSetCode = new DevExpress.XtraEditors.TextEdit();
             this.lblSetCode = new DevExpress.XtraEditors.LabelControl();
             this.cmbPosition = new System.Windows.Forms.ComboBox();
             this.cmbSelf = new System.Windows.Forms.ComboBox();
@@ -172,13 +173,13 @@
             this.lciBlock = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciSelf = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciPosition = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem47 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem49 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtpImageVideo = new DevExpress.XtraTab.XtraTabPage();
             this.xtpInstrumentalSet = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtSetCode = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem47 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem49 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::TrazinsAtenea.Forms.GlobalForms.GlobalWaitForm), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).BeginInit();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcBackArrow)).BeginInit();
@@ -190,6 +191,7 @@
             this.xtpDataProcesses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSetCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemaksSteri.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemaksAssemblyPackaging.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemaksWashes.Properties)).BeginInit();
@@ -249,11 +251,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciBlock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSelf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPosition)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSetCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -453,6 +454,17 @@
             this.layoutControl1.Size = new System.Drawing.Size(1138, 679);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // txtSetCode
+            // 
+            this.txtSetCode.Location = new System.Drawing.Point(746, 246);
+            this.txtSetCode.MaximumSize = new System.Drawing.Size(200, 0);
+            this.txtSetCode.Name = "txtSetCode";
+            this.txtSetCode.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSetCode.Properties.Appearance.Options.UseFont = true;
+            this.txtSetCode.Size = new System.Drawing.Size(200, 34);
+            this.txtSetCode.StyleController = this.layoutControl1;
+            this.txtSetCode.TabIndex = 67;
             // 
             // lblSetCode
             // 
@@ -816,6 +828,7 @@
             this.btnRestart.StyleController = this.layoutControl2;
             this.btnRestart.TabIndex = 8;
             this.btnRestart.Text = "Reiniciar";
+            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
             // 
             // speMaintenance
             // 
@@ -1729,6 +1742,28 @@
             this.lciPosition.Text = "Posición";
             this.lciPosition.TextSize = new System.Drawing.Size(68, 24);
             // 
+            // layoutControlItem47
+            // 
+            this.layoutControlItem47.Control = this.lblSetCode;
+            this.layoutControlItem47.Location = new System.Drawing.Point(734, 206);
+            this.layoutControlItem47.Name = "layoutControlItem47";
+            this.layoutControlItem47.OptionsTableLayoutItem.ColumnIndex = 2;
+            this.layoutControlItem47.OptionsTableLayoutItem.RowIndex = 5;
+            this.layoutControlItem47.Size = new System.Drawing.Size(367, 28);
+            this.layoutControlItem47.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem47.TextVisible = false;
+            // 
+            // layoutControlItem49
+            // 
+            this.layoutControlItem49.Control = this.txtSetCode;
+            this.layoutControlItem49.Location = new System.Drawing.Point(734, 234);
+            this.layoutControlItem49.Name = "layoutControlItem49";
+            this.layoutControlItem49.OptionsTableLayoutItem.ColumnIndex = 2;
+            this.layoutControlItem49.OptionsTableLayoutItem.RowIndex = 6;
+            this.layoutControlItem49.Size = new System.Drawing.Size(367, 45);
+            this.layoutControlItem49.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem49.TextVisible = false;
+            // 
             // xtpImageVideo
             // 
             this.xtpImageVideo.Appearance.Header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
@@ -1766,38 +1801,9 @@
             this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem25.TextVisible = false;
             // 
-            // txtSetCode
+            // splashScreenManager1
             // 
-            this.txtSetCode.Location = new System.Drawing.Point(746, 246);
-            this.txtSetCode.MaximumSize = new System.Drawing.Size(200, 0);
-            this.txtSetCode.Name = "txtSetCode";
-            this.txtSetCode.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSetCode.Properties.Appearance.Options.UseFont = true;
-            this.txtSetCode.Size = new System.Drawing.Size(200, 34);
-            this.txtSetCode.StyleController = this.layoutControl1;
-            this.txtSetCode.TabIndex = 67;
-            // 
-            // layoutControlItem47
-            // 
-            this.layoutControlItem47.Control = this.lblSetCode;
-            this.layoutControlItem47.Location = new System.Drawing.Point(734, 206);
-            this.layoutControlItem47.Name = "layoutControlItem47";
-            this.layoutControlItem47.OptionsTableLayoutItem.ColumnIndex = 2;
-            this.layoutControlItem47.OptionsTableLayoutItem.RowIndex = 5;
-            this.layoutControlItem47.Size = new System.Drawing.Size(367, 28);
-            this.layoutControlItem47.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem47.TextVisible = false;
-            // 
-            // layoutControlItem49
-            // 
-            this.layoutControlItem49.Control = this.txtSetCode;
-            this.layoutControlItem49.Location = new System.Drawing.Point(734, 234);
-            this.layoutControlItem49.Name = "layoutControlItem49";
-            this.layoutControlItem49.OptionsTableLayoutItem.ColumnIndex = 2;
-            this.layoutControlItem49.OptionsTableLayoutItem.RowIndex = 6;
-            this.layoutControlItem49.Size = new System.Drawing.Size(367, 45);
-            this.layoutControlItem49.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem49.TextVisible = false;
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // SetManagmentForm
             // 
@@ -1826,6 +1832,7 @@
             this.xtpDataProcesses.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtSetCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemaksSteri.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemaksAssemblyPackaging.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemaksWashes.Properties)).EndInit();
@@ -1885,11 +1892,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciBlock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciSelf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPosition)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSetCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2010,5 +2016,6 @@
         private DevExpress.XtraEditors.TextEdit txtSetCode;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem47;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem49;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

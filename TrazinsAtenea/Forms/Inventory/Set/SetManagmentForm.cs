@@ -30,9 +30,13 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         private void SetManagmentForm_Load(object sender, EventArgs e)
         {
             MultilanguageFormat();
-            
+
+            splashScreenManager1.ShowWaitForm();
+
             //CargarCombos
-            LoadComboBoxInformation();            
+            LoadComboBoxInformation();
+
+            splashScreenManager1.CloseWaitForm();
            
         }
 
@@ -49,6 +53,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             //CostCenterLoad();           
 
         }
+
+        #region Load Data ComboBoxes
 
         private void SetTypeLoad()
         {
@@ -88,7 +94,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             try
             {
                 var packagesList = BaseModelClient.Service.Embalaje_Select_List(new Embalaje()
-                {ChId = BaseModelClient.BaseModel.ChId });
+                { ChId = BaseModelClient.BaseModel.ChId });
 
                 Engine.ComboBoxFormat(cmbPackage, "Descripcion", "ConId", packagesList);
             }
@@ -102,18 +108,20 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             try
             {
-                
+
                 var specialitiesList = BaseModelClient.Service.Especialidad_Select_List(new Especialidad()
                 { ChId = BaseModelClient.BaseModel.ChId });
 
                 Engine.ComboBoxFormat(cmbSpeciality, "Descripcion", "EspId", specialitiesList);
-                
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error en SpecialitiesLoad: " + ex.Message);
-            }            
+            }
         }
+
+        #endregion
 
         private void MultilanguageFormat()
         {
@@ -176,7 +184,12 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             {
                 this.Close();
             }
-        }       
+        }
 
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            //Reiniciar y salir o necesario click guardar
+            speMaintenance.Value = 0;
+        }
     }
 }
