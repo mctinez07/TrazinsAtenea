@@ -12,6 +12,9 @@ using System.Windows.Forms;
 
 namespace TrazinsAtenea.GlobalEngine
 {
+    //Indica el tipo de operación para la gestión de los formularios.
+    public enum EnumOperationType { Nuevo, Modificar, Eliminar}
+
     public class Engine
     {
         //Método para obtener el texto a mostrar.

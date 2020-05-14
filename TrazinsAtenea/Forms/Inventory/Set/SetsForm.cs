@@ -61,7 +61,11 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            SetManagmentForm frm = new SetManagmentForm();
+            SetManagmentForm frm = new SetManagmentForm
+            {
+                Operation = EnumOperationType.Nuevo
+            };
+
             frm.ShowDialog();
         }
     }

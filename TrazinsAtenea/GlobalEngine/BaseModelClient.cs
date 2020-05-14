@@ -29,11 +29,12 @@ namespace TrazinsAtenea.GlobalEngine
         public BaseModelClient()
         {
             //Asigno temporalmente los valores del modelo
-            this.BaseModel = new BaseModel();
-
-            this.BaseModel.ChId = "002";
-            this.BaseModel.HosId = "002";
-            this.BaseModel.AuditUsuario = "andres";
+            this.BaseModel = new BaseModel
+            {
+                ChId = "002",
+                HosId = "002",
+                AuditUsuario = "andres"
+            };
 
             //Instanciamos el Web Service
             this.Service = new WSTrazinsAteneaClient();

@@ -7,7 +7,6 @@ using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using TrazinsAtenea.Forms.GlobalForms;
 using TrazinsAtenea.GlobalEngine;
@@ -20,7 +19,9 @@ namespace TrazinsAtenea.Forms.Inventory.Set
     public partial class SetManagmentForm : DevExpress.XtraEditors.XtraForm
     {
         public Caja Caja;
-        private BaseModelClient BaseModelClient = BaseModelClient.Instance;        
+        private BaseModelClient BaseModelClient = BaseModelClient.Instance;
+        public EnumOperationType Operation;
+        private List<Limpieza> MethodsWashingList;
 
         public SetManagmentForm()
         {
@@ -32,7 +33,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             MultilanguageFormat();
 
             splashScreenManager1.ShowWaitForm();
-
+                    
             //CargarCombos
             LoadComboBoxInformation();
 
@@ -57,6 +58,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         }
 
+        #region Load Data ComboBoxes
+
         private void StorageLoad()
         {
             try
@@ -72,8 +75,6 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 MessageBox.Show("Error en StorageLoad: " + ex.Message);
             }
         }
-
-        #region Load Data ComboBoxes
 
         private void MethodsSteriLoad()
         {
@@ -95,10 +96,10 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             try
             {
-                var methodsWashingList = BaseModelClient.Service.Limpieza_Select_List(new Limpieza()
-                { ChId = BaseModelClient.BaseModel.ChId });
+                MethodsWashingList = BaseModelClient.Service.Limpieza_Select_List(new Limpieza()
+                { ChId = BaseModelClient.BaseModel.ChId }).ToList();
 
-                Engine.ComboBoxFormat(cmbFirstMethodWashing, "Descripcion", "TipoLavId", methodsWashingList);
+                Engine.ComboBoxFormat(cmbFirstMethodWashing, "Descripcion", "TipoLavId", MethodsWashingList);
             }
             catch (Exception ex)
             {
@@ -131,6 +132,13 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 { ChId = BaseModelClient.BaseModel.ChId, HosId = BaseModelClient.BaseModel.HosId });
 
                 Engine.ComboBoxFormat(cmbProperty, "NomHospital", "HosId", hospitalList);
+
+                //Solo se pueden añadir cajas al hospital con el que nos hemos logeado
+                if(Operation == EnumOperationType.Nuevo)
+                {
+                    cmbProperty.Enabled = false;
+                    cmbProperty.SelectedValue = BaseModelClient.BaseModel.HosId;
+                }
 
             }
             catch (Exception ex)
@@ -240,6 +248,31 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             //Reiniciar y salir o necesario click guardar
             speMaintenance.Value = 0;
+        }
+        
+
+        private void cmbFirstMethodWashing_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            var selected = (Limpieza)cmbFirstMethodWashing.SelectedItem;
+            if (selected != null)
+            {
+                var lista = MethodsWashingList.Where(l => l.TipoLavId != selected.TipoLavId).ToList();
+                Engine.ComboBoxFormat(cmbSecondMethodWashing, "Descripcion", "TipoLavId", lista);
+            }
+        }
+
+        private void cmbSecondMethodWashing_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            var selected = (Limpieza)cmbSecondMethodWashing.SelectedItem;
+            var selected2 = (Limpieza)cmbFirstMethodWashing.SelectedItem;
+
+            if (selected != null && selected2 != null)
+            {
+                var lista = MethodsWashingList.Where
+                    (l => l.TipoLavId != selected.TipoLavId && l.TipoLavId != selected2.TipoLavId).ToList();
+
+                Engine.ComboBoxFormat(cmbThirdMethodWashing, "Descripcion", "TipoLavId", lista);
+            }
         }
     }
 }
