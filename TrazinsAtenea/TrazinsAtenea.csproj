@@ -173,6 +173,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Connected Services\ServiceWSTrazinsAtenea\TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceWSTrazinsAtenea\TrazinsAtenea.ServiceWSTrazinsAtenea.Caja.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

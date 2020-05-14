@@ -1,5 +1,6 @@
 ﻿using Models.Inventory;
 using Models.Masters;
+using Models.Masters.Storage;
 using Models.Messages;
 using Models.Processes.Methods;
 using System;
@@ -128,6 +129,22 @@ namespace WSTrazinsAtenea
 
         [OperationContract]
         string Esterilizacion_Update(Esterilizacion esterilizacion);
+
+        #endregion
+
+        #region Almacenes
+
+        [OperationContract]
+        List<Almacen> Almacen_Select_List(Almacen almacen);
+
+        [OperationContract]
+        Almacen Almacen_Select(Almacen almacen);
+
+        [OperationContract]
+        string Almacen_Insert(Almacen almacen);
+
+        [OperationContract]
+        string Almacen_Update(Almacen almacen);
 
         #endregion
 

@@ -544,6 +544,80 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Almacen_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="almacen" nillable="true" type="tns:Almacen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Almacen">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AlmId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Almacen" nillable="true" type="tns:Almacen" />
+  <xs:element name="Almacen_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Almacen_Select_ListResult" nillable="true" type="tns:ArrayOfAlmacen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfAlmacen">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Almacen" nillable="true" type="tns:Almacen" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlmacen" nillable="true" type="tns:ArrayOfAlmacen" />
+  <xs:element name="Almacen_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="almacen" nillable="true" type="tns:Almacen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Almacen_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Almacen_SelectResult" nillable="true" type="tns:Almacen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Almacen_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="almacen" nillable="true" type="tns:Almacen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Almacen_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Almacen_InsertResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Almacen_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="almacen" nillable="true" type="tns:Almacen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Almacen_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Almacen_UpdateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Mensaje_Select">
     <xs:complexType>
       <xs:sequence>

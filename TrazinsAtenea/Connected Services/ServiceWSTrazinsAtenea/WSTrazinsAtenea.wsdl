@@ -174,6 +174,30 @@
   <wsdl:message name="IWSTrazinsAtenea_Esterilizacion_Update_OutputMessage">
     <wsdl:part name="parameters" element="tns:Esterilizacion_UpdateResponse" />
   </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Almacen_Select_List_InputMessage">
+    <wsdl:part name="parameters" element="tns:Almacen_Select_List" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Almacen_Select_List_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Almacen_Select_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Almacen_Select_InputMessage">
+    <wsdl:part name="parameters" element="tns:Almacen_Select" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Almacen_Select_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Almacen_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Almacen_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Almacen_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Almacen_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Almacen_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Almacen_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Almacen_Update" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Almacen_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Almacen_UpdateResponse" />
+  </wsdl:message>
   <wsdl:message name="IWSTrazinsAtenea_Mensaje_Select_InputMessage">
     <wsdl:part name="parameters" element="tns:Mensaje_Select" />
   </wsdl:message>
@@ -292,6 +316,22 @@
     <wsdl:operation name="Esterilizacion_Update">
       <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Update" message="tns:IWSTrazinsAtenea_Esterilizacion_Update_InputMessage" />
       <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_UpdateResponse" message="tns:IWSTrazinsAtenea_Esterilizacion_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Almacen_Select_List">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Select_List" message="tns:IWSTrazinsAtenea_Almacen_Select_List_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Select_ListResponse" message="tns:IWSTrazinsAtenea_Almacen_Select_List_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Almacen_Select">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Select" message="tns:IWSTrazinsAtenea_Almacen_Select_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_SelectResponse" message="tns:IWSTrazinsAtenea_Almacen_Select_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Almacen_Insert">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Insert" message="tns:IWSTrazinsAtenea_Almacen_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_InsertResponse" message="tns:IWSTrazinsAtenea_Almacen_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Almacen_Update">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Update" message="tns:IWSTrazinsAtenea_Almacen_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_UpdateResponse" message="tns:IWSTrazinsAtenea_Almacen_Update_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Mensaje_Select">
       <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_Select" message="tns:IWSTrazinsAtenea_Mensaje_Select_InputMessage" />
@@ -545,6 +585,42 @@
     </wsdl:operation>
     <wsdl:operation name="Esterilizacion_Update">
       <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Almacen_Select_List">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Select_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Almacen_Select">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Almacen_Insert">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Almacen_Update">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Update" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -50,13 +50,28 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             SetTypeLoad();
             MethodsWashingLoad();
             MethodsSteriLoad();
+            StorageLoad();
 
             //Pendiente crear modelo
             //CostCenterLoad();           
 
         }
 
+        private void StorageLoad()
+        {
+            try
+            {
+                var storageList = BaseModelClient.Service.Almacen_Select_List(new Almacen()
+                { ChId = BaseModelClient.BaseModel.ChId, HosId = BaseModelClient.BaseModel.HosId });
 
+                Engine.ComboBoxFormat(cmbDefaultUbication, "Descripcion", "AlmId", storageList);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en StorageLoad: " + ex.Message);
+            }
+        }
 
         #region Load Data ComboBoxes
 

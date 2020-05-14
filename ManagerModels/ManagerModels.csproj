@@ -45,6 +45,7 @@
     <Compile Include="Masters\EmbalajeManager.cs" />
     <Compile Include="Masters\EspecialidadManager.cs" />
     <Compile Include="Masters\HospitalManager.cs" />
+    <Compile Include="Masters\Storage\AlmacenManager.cs" />
     <Compile Include="Masters\TipoCajaManager.cs" />
     <Compile Include="Messages\MensajesManager.cs" />
     <Compile Include="Processes\Methods\EsterilizacionManager.cs" />

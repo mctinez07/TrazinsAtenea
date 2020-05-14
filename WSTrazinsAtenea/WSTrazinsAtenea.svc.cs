@@ -13,6 +13,8 @@ using Models.Masters;
 using ManagerModels.Masters;
 using Models.Processes.Methods;
 using ManagerModels.Processes.Methods;
+using Models.Masters.Storage;
+using ManagerModels.Masters.Storage;
 
 namespace WSTrazinsAtenea
 {
@@ -186,12 +188,38 @@ namespace WSTrazinsAtenea
 
         #endregion
 
+        #region Almacenes
+
+        public List<Almacen> Almacen_Select_List(Almacen almacen)
+        {
+            return AlmacenManager.Almacen_Select_List(almacen);
+        }
+
+        public Almacen Almacen_Select(Almacen almacen)
+        {
+            return AlmacenManager.Almacen_Select(almacen);
+        }
+
+        public string Almacen_Insert(Almacen almacen)
+        {
+            return AlmacenManager.Almacen_Insert(almacen);
+        }
+
+        public string Almacen_Update(Almacen almacen)
+        {
+            return AlmacenManager.Almacen_Update(almacen);
+        }
+
+        #endregion
+
         #region Mensajes
 
         public Mensaje Mensaje_Select(Mensaje mensaje)
         {
             return MensajesManager.Mensaje_Select(mensaje);
         }
+
+        
         #endregion
 
 

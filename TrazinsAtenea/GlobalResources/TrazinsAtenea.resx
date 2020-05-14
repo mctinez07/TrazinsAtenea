@@ -238,10 +238,10 @@
   <data name="SteriRemarks" xml:space="preserve">
     <value>Observaciones específicas de esterilización</value>
   </data>
-  <data name="DefaultLocation" xml:space="preserve">
+  <data name="DefaultUbication" xml:space="preserve">
     <value>4 - Ubicación predeterminada</value>
   </data>
-  <data name="SelectDefaultLocation" xml:space="preserve">
+  <data name="SelectDefaultUbication" xml:space="preserve">
     <value>Selecciona una ubicación donde se almacenará esta caja de forma predeterminada</value>
   </data>
   <data name="Block" xml:space="preserve">
