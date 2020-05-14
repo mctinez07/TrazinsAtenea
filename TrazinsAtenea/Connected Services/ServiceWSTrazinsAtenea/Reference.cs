@@ -22,6 +22,7 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja))]
     public partial class BaseModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -517,6 +518,109 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Esterilizacion", Namespace="http://WSTrazinsAtenea.com")]
+    [System.SerializableAttribute()]
+    public partial class Esterilizacion : TrazinsAtenea.ServiceWSTrazinsAtenea.BaseModel {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool Control1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool Control2Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool Control3Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool Control4Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> EstIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Control1 {
+            get {
+                return this.Control1Field;
+            }
+            set {
+                if ((this.Control1Field.Equals(value) != true)) {
+                    this.Control1Field = value;
+                    this.RaisePropertyChanged("Control1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Control2 {
+            get {
+                return this.Control2Field;
+            }
+            set {
+                if ((this.Control2Field.Equals(value) != true)) {
+                    this.Control2Field = value;
+                    this.RaisePropertyChanged("Control2");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Control3 {
+            get {
+                return this.Control3Field;
+            }
+            set {
+                if ((this.Control3Field.Equals(value) != true)) {
+                    this.Control3Field = value;
+                    this.RaisePropertyChanged("Control3");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Control4 {
+            get {
+                return this.Control4Field;
+            }
+            set {
+                if ((this.Control4Field.Equals(value) != true)) {
+                    this.Control4Field = value;
+                    this.RaisePropertyChanged("Control4");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion {
+            get {
+                return this.DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
+                    this.DescripcionField = value;
+                    this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> EstId {
+            get {
+                return this.EstIdField;
+            }
+            set {
+                if ((this.EstIdField.Equals(value) != true)) {
+                    this.EstIdField = value;
+                    this.RaisePropertyChanged("EstId");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Caja", Namespace="http://WSTrazinsAtenea.com")]
     [System.SerializableAttribute()]
     public partial class Caja : TrazinsAtenea.ServiceWSTrazinsAtenea.BaseModel {
@@ -923,6 +1027,30 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_UpdateResponse")]
         System.Threading.Tasks.Task<string> Limpieza_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza limpieza);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_ListResponse")]
+        TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion[] Esterilizacion_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_ListResponse")]
+        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion[]> Esterilizacion_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_SelectResponse")]
+        TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion Esterilizacion_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_SelectResponse")]
+        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion> Esterilizacion_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_InsertResponse")]
+        string Esterilizacion_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_InsertResponse")]
+        System.Threading.Tasks.Task<string> Esterilizacion_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_UpdateResponse")]
+        string Esterilizacion_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_UpdateResponse")]
+        System.Threading.Tasks.Task<string> Esterilizacion_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_SelectResponse")]
         TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje Mensaje_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje mensaje);
         
@@ -1147,6 +1275,38 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         
         public System.Threading.Tasks.Task<string> Limpieza_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza limpieza) {
             return base.Channel.Limpieza_UpdateAsync(limpieza);
+        }
+        
+        public TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion[] Esterilizacion_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion) {
+            return base.Channel.Esterilizacion_Select_List(esterilizacion);
+        }
+        
+        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion[]> Esterilizacion_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion) {
+            return base.Channel.Esterilizacion_Select_ListAsync(esterilizacion);
+        }
+        
+        public TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion Esterilizacion_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion) {
+            return base.Channel.Esterilizacion_Select(esterilizacion);
+        }
+        
+        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion> Esterilizacion_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion) {
+            return base.Channel.Esterilizacion_SelectAsync(esterilizacion);
+        }
+        
+        public string Esterilizacion_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion) {
+            return base.Channel.Esterilizacion_Insert(esterilizacion);
+        }
+        
+        public System.Threading.Tasks.Task<string> Esterilizacion_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion) {
+            return base.Channel.Esterilizacion_InsertAsync(esterilizacion);
+        }
+        
+        public string Esterilizacion_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion) {
+            return base.Channel.Esterilizacion_Update(esterilizacion);
+        }
+        
+        public System.Threading.Tasks.Task<string> Esterilizacion_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion) {
+            return base.Channel.Esterilizacion_UpdateAsync(esterilizacion);
         }
         
         public TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje Mensaje_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje mensaje) {

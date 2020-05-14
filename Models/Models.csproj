@@ -48,6 +48,7 @@
     <Compile Include="Masters\Hospital.cs" />
     <Compile Include="Masters\TipoCaja.cs" />
     <Compile Include="Messages\Mensaje.cs" />
+    <Compile Include="Processes\Methods\Esterilizacion.cs" />
     <Compile Include="Processes\Methods\Limpieza.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

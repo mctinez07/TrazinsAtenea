@@ -182,6 +182,9 @@
     <None Include="Connected Services\ServiceWSTrazinsAtenea\TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServiceWSTrazinsAtenea\TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceWSTrazinsAtenea\TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -267,6 +270,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ic_obligatory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_18x18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qr-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qr-24x24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

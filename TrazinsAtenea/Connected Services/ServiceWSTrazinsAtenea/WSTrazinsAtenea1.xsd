@@ -467,6 +467,83 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Esterilizacion_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="esterilizacion" nillable="true" type="tns:Esterilizacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Esterilizacion">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Control1" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Control2" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Control3" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Control4" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EstId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Esterilizacion" nillable="true" type="tns:Esterilizacion" />
+  <xs:element name="Esterilizacion_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Esterilizacion_Select_ListResult" nillable="true" type="tns:ArrayOfEsterilizacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfEsterilizacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Esterilizacion" nillable="true" type="tns:Esterilizacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEsterilizacion" nillable="true" type="tns:ArrayOfEsterilizacion" />
+  <xs:element name="Esterilizacion_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="esterilizacion" nillable="true" type="tns:Esterilizacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Esterilizacion_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Esterilizacion_SelectResult" nillable="true" type="tns:Esterilizacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Esterilizacion_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="esterilizacion" nillable="true" type="tns:Esterilizacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Esterilizacion_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Esterilizacion_InsertResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Esterilizacion_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="esterilizacion" nillable="true" type="tns:Esterilizacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Esterilizacion_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Esterilizacion_UpdateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Mensaje_Select">
     <xs:complexType>
       <xs:sequence>

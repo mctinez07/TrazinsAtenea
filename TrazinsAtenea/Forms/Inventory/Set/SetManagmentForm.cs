@@ -49,10 +49,31 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             PropertyLoad();
             SetTypeLoad();
             MethodsWashingLoad();
+            MethodsSteriLoad();
 
             //Pendiente crear modelo
             //CostCenterLoad();           
 
+        }
+
+
+
+        #region Load Data ComboBoxes
+
+        private void MethodsSteriLoad()
+        {
+            try
+            {
+                var steriMethodsList = BaseModelClient.Service.Esterilizacion_Select_List(new Esterilizacion()
+                { ChId = BaseModelClient.BaseModel.ChId });
+
+                Engine.ComboBoxFormat(cmbFirstMethodSteri, "Descripcion", "EstId", steriMethodsList);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en MethodsSterisLoad: " + ex.Message);
+            }
         }
 
         private void MethodsWashingLoad()
@@ -69,8 +90,6 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 MessageBox.Show("Error en MethodWashingLoad: " + ex.Message);
             }
         }
-
-        #region Load Data ComboBoxes
 
         private void SetTypeLoad()
         {

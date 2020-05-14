@@ -158,7 +158,31 @@ namespace WSTrazinsAtenea
         public string Limpieza_Update(Limpieza limpieza)
         {
             return LimpiezaManager.Limpieza_Update(limpieza);
-        } 
+        }
+
+        #endregion
+
+        #region Métodos Esterilización
+
+        public List<Esterilizacion> Esterilizacion_Select_List(Esterilizacion esterilizacion)
+        {
+            return EsterilizacionManager.Esterilizacion_Select_List(esterilizacion);
+        }
+
+        public Esterilizacion Esterilizacion_Select(Esterilizacion esterilizacion)
+        {
+            return EsterilizacionManager.Esterilizacion_Select(esterilizacion);
+        }
+
+        public string Esterilizacion_Insert(Esterilizacion esterilizacion)
+        {
+            return EsterilizacionManager.Esterilizacion_Insert(esterilizacion);
+        }
+
+        public string Esterilizacion_Update(Esterilizacion esterilizacion)
+        {
+            return EsterilizacionManager.Esterilizacion_Update(esterilizacion);
+        }
 
         #endregion
 
@@ -168,7 +192,6 @@ namespace WSTrazinsAtenea
         {
             return MensajesManager.Mensaje_Select(mensaje);
         }
-
         #endregion
 
 

@@ -115,6 +115,22 @@ namespace WSTrazinsAtenea
 
         #endregion
 
+        #region Métodos Esterilización
+
+        [OperationContract]
+        List<Esterilizacion> Esterilizacion_Select_List(Esterilizacion esterilizacion);
+
+        [OperationContract]
+        Esterilizacion Esterilizacion_Select(Esterilizacion esterilizacion);
+
+        [OperationContract]
+        string Esterilizacion_Insert(Esterilizacion esterilizacion);
+
+        [OperationContract]
+        string Esterilizacion_Update(Esterilizacion esterilizacion);
+
+        #endregion
+
         #region Mensajes
 
         [OperationContract]
