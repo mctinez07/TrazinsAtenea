@@ -69,14 +69,22 @@ namespace TrazinsAtenea.GlobalEngine
         public static void ComboBoxFormat
             (System.Windows.Forms.ComboBox combo, string displayMember, string valueMember, object dataSource)
         {
-            if (dataSource != null)
+            try
             {
-                combo.DataSource = dataSource;
-                combo.DisplayMember = displayMember;
-                combo.ValueMember = valueMember;
-                combo.SelectedIndex = -1;
-                combo.Select(0, 0);
+                if (dataSource != null)
+                {
+                    combo.DataSource = dataSource;
+                    combo.DisplayMember = displayMember;
+                    combo.ValueMember = valueMember;
+                    combo.SelectedIndex = -1;
+                    combo.Select(0, 0);
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en ComboBoxFormat: " + ex.Message);
+            }
+            
         }
     }
 }

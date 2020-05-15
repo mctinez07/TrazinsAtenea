@@ -22,6 +22,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         private BaseModelClient BaseModelClient = BaseModelClient.Instance;
         public EnumOperationType Operation;
         private List<Limpieza> MethodsWashingList;
+        private List<Esterilizacion> MethodsSteriList;
 
         public SetManagmentForm()
         {
@@ -80,10 +81,10 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             try
             {
-                var steriMethodsList = BaseModelClient.Service.Esterilizacion_Select_List(new Esterilizacion()
-                { ChId = BaseModelClient.BaseModel.ChId });
+                MethodsSteriList = BaseModelClient.Service.Esterilizacion_Select_List(new Esterilizacion()
+                { ChId = BaseModelClient.BaseModel.ChId }).ToList();
 
-                Engine.ComboBoxFormat(cmbFirstMethodSteri, "Descripcion", "EstId", steriMethodsList);
+                Engine.ComboBoxFormat(cmbFirstMethodSteri, "Descripcion", "EstId", MethodsSteriList);
 
             }
             catch (Exception ex)
@@ -181,6 +182,113 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         #endregion
 
+        #region Combobox Methods
+
+        private void cmbFirstMethodWashing_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            var selected = (Limpieza)cmbFirstMethodWashing.SelectedItem;
+
+            if (cmbSecondMethodWashing.SelectedIndex == -1)
+            {
+                var list = MethodsWashingList.Where(l => l.TipoLavId != selected.TipoLavId).ToList();
+                Engine.ComboBoxFormat(cmbSecondMethodWashing, "Descripcion", "TipoLavId", list);
+            }
+            else
+            {
+                if (selected == (Limpieza)cmbSecondMethodWashing.SelectedItem)
+                {
+                    var list = MethodsWashingList.Where(l => l.TipoLavId != selected.TipoLavId).ToList();
+                    Engine.ComboBoxFormat(cmbSecondMethodWashing, "Descripcion", "TipoLavId", list);
+                }
+
+                if (selected == (Limpieza)cmbThirdMethodWashing.SelectedItem)
+                {
+                    var selected2 = (Limpieza)cmbSecondMethodWashing.SelectedItem;
+                    var list = MethodsWashingList.Where
+                    (l => l.TipoLavId != selected.TipoLavId && l.TipoLavId != selected2.TipoLavId).ToList();
+
+                    Engine.ComboBoxFormat(cmbThirdMethodWashing, "Descripcion", "TipoLavId", list);
+                }
+            }
+
+        }
+
+        private void cmbSecondMethodWashing_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            var selected2 = (Limpieza)cmbSecondMethodWashing.SelectedItem;
+            var selected = (Limpieza)cmbFirstMethodWashing.SelectedItem;
+
+            if (cmbThirdMethodWashing.SelectedIndex == -1 && cmbSecondMethodWashing.SelectedIndex != -1)
+            {
+                var list = MethodsWashingList.Where
+                    (l => l.TipoLavId != selected.TipoLavId && l.TipoLavId != selected2.TipoLavId).ToList();
+
+                Engine.ComboBoxFormat(cmbThirdMethodWashing, "Descripcion", "TipoLavId", list);
+            }
+            else
+            {
+                if ((Limpieza)cmbThirdMethodWashing.SelectedItem == selected2)
+                {
+                    var list = MethodsWashingList.Where
+                    (l => l.TipoLavId != selected.TipoLavId && l.TipoLavId != selected2.TipoLavId).ToList();
+
+                    Engine.ComboBoxFormat(cmbThirdMethodWashing, "Descripcion", "TipoLavId", list);
+                }
+            }
+        }
+
+        private void cmbFirstMethodSteri_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            var selected = (Esterilizacion)cmbFirstMethodSteri.SelectedItem;
+
+            if (cmbSecondMethodSteri.SelectedIndex == -1)
+            {
+                var list = MethodsSteriList.Where(l => l.EstId != selected.EstId).ToList();
+                Engine.ComboBoxFormat(cmbSecondMethodSteri, "Descripcion", "EstId", list);
+            }
+            else
+            {
+                if (selected == (Esterilizacion)cmbSecondMethodSteri.SelectedItem)
+                {
+                    var list = MethodsSteriList.Where(l => l.EstId != selected.EstId).ToList();
+                    Engine.ComboBoxFormat(cmbSecondMethodSteri, "Descripcion", "EstId", list);
+                }
+
+                if (selected == (Esterilizacion)cmbThirdMethodSteri.SelectedItem)
+                {
+                    var selected2 = (Esterilizacion)cmbSecondMethodSteri.SelectedItem;
+                    var list = MethodsSteriList.Where
+                    (l => l.EstId != selected.EstId && l.EstId != selected2.EstId).ToList();
+
+                    Engine.ComboBoxFormat(cmbThirdMethodSteri, "Descripcion", "EstId", list);
+                }
+            }
+        }
+
+        private void cmbSecondMethodSteri_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            var selected = (Esterilizacion)cmbFirstMethodSteri.SelectedItem;
+            var selected2 = (Esterilizacion)cmbSecondMethodSteri.SelectedItem;
+
+            if (cmbThirdMethodSteri.SelectedIndex == -1 && cmbSecondMethodSteri.SelectedIndex != -1)
+            {
+                var list = MethodsSteriList.Where
+                    (es => es.EstId != selected.EstId && es.EstId != selected2.EstId).ToList();
+                Engine.ComboBoxFormat(cmbThirdMethodSteri, "Descripcion", "EstId", list);
+            }
+            else
+            {
+                if ((Esterilizacion)cmbThirdMethodSteri.SelectedItem == selected2)
+                {
+                    var list = MethodsSteriList.Where
+                    (es => es.EstId != selected.EstId && es.EstId != selected2.EstId).ToList();
+                    Engine.ComboBoxFormat(cmbThirdMethodSteri, "Descripcion", "EstId", list);
+                }
+            }
+        }
+
+        #endregion
+
         private void MultilanguageFormat()
         {
             try
@@ -249,30 +357,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             //Reiniciar y salir o necesario click guardar
             speMaintenance.Value = 0;
         }
+
+
         
-
-        private void cmbFirstMethodWashing_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            var selected = (Limpieza)cmbFirstMethodWashing.SelectedItem;
-            if (selected != null)
-            {
-                var lista = MethodsWashingList.Where(l => l.TipoLavId != selected.TipoLavId).ToList();
-                Engine.ComboBoxFormat(cmbSecondMethodWashing, "Descripcion", "TipoLavId", lista);
-            }
-        }
-
-        private void cmbSecondMethodWashing_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            var selected = (Limpieza)cmbSecondMethodWashing.SelectedItem;
-            var selected2 = (Limpieza)cmbFirstMethodWashing.SelectedItem;
-
-            if (selected != null && selected2 != null)
-            {
-                var lista = MethodsWashingList.Where
-                    (l => l.TipoLavId != selected.TipoLavId && l.TipoLavId != selected2.TipoLavId).ToList();
-
-                Engine.ComboBoxFormat(cmbThirdMethodWashing, "Descripcion", "TipoLavId", lista);
-            }
-        }
     }
 }
