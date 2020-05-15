@@ -212,6 +212,30 @@ namespace WSTrazinsAtenea
 
         #endregion
 
+        #region AlmacenesUbicaciones
+
+        public List<AlmacenesUbicaciones> AlmacenesUbicaciones_Select_List(AlmacenesUbicaciones almacenesUbicaciones)
+        {            
+            return AlmacenesUbicacionesManager.AlmacenesUbicaciones_Select_List(almacenesUbicaciones);
+        }
+
+        public AlmacenesUbicaciones AlmacenesUbicaciones_Select(AlmacenesUbicaciones almacenesUbicaciones)
+        {
+            return AlmacenesUbicacionesManager.AlmacenesUbicaciones_Select(almacenesUbicaciones);
+        }
+
+        public string AlmacenesUbicaciones_Insert(AlmacenesUbicaciones almacenesUbicaciones)
+        {
+            return AlmacenesUbicacionesManager.AlmacenesUbicaciones_Insert(almacenesUbicaciones);
+        }
+
+        public string AlmacenesUbicaciones_Update(AlmacenesUbicaciones almacenesUbicaciones)
+        {
+            return AlmacenesUbicacionesManager.AlmacenesUbicaciones_Update(almacenesUbicaciones);
+        }
+
+        #endregion
+
         #region Mensajes
 
         public Mensaje Mensaje_Select(Mensaje mensaje)
@@ -220,6 +244,8 @@ namespace WSTrazinsAtenea
         }
 
         
+
+
         #endregion
 
 

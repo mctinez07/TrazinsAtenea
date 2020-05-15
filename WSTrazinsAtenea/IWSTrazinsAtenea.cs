@@ -148,6 +148,22 @@ namespace WSTrazinsAtenea
 
         #endregion
 
+        #region Almacenes Ubicaciones
+
+        [OperationContract]
+        List<AlmacenesUbicaciones> AlmacenesUbicaciones_Select_List(AlmacenesUbicaciones almacenesUbicaciones);
+
+        [OperationContract]
+        AlmacenesUbicaciones AlmacenesUbicaciones_Select(AlmacenesUbicaciones almacenesUbicaciones);
+
+        [OperationContract]
+        string AlmacenesUbicaciones_Insert(AlmacenesUbicaciones almacenesUbicaciones);
+
+        [OperationContract]
+        string AlmacenesUbicaciones_Update(AlmacenesUbicaciones almacenesUbicaciones);
+
+        #endregion
+
         #region Mensajes
 
         [OperationContract]

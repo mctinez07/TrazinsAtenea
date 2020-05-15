@@ -47,6 +47,7 @@
     <Compile Include="Masters\Especialidad.cs" />
     <Compile Include="Masters\Hospital.cs" />
     <Compile Include="Masters\Storage\Almacen.cs" />
+    <Compile Include="Masters\Storage\AlmacenesUbicaciones.cs" />
     <Compile Include="Masters\TipoCaja.cs" />
     <Compile Include="Messages\Mensaje.cs" />
     <Compile Include="Processes\Methods\Esterilizacion.cs" />

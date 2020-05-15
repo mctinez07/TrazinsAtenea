@@ -457,7 +457,7 @@
             // 
             // txtSetCode
             // 
-            this.txtSetCode.Location = new System.Drawing.Point(746, -474);
+            this.txtSetCode.Location = new System.Drawing.Point(746, -721);
             this.txtSetCode.MaximumSize = new System.Drawing.Size(200, 0);
             this.txtSetCode.Name = "txtSetCode";
             this.txtSetCode.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -471,7 +471,7 @@
             // 
             this.lblSetCode.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSetCode.Appearance.Options.UseFont = true;
-            this.lblSetCode.Location = new System.Drawing.Point(746, -502);
+            this.lblSetCode.Location = new System.Drawing.Point(746, -749);
             this.lblSetCode.Name = "lblSetCode";
             this.lblSetCode.Size = new System.Drawing.Size(124, 23);
             this.lblSetCode.StyleController = this.layoutControl1;
@@ -482,7 +482,7 @@
             // 
             this.cmbPosition.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPosition.FormattingEnabled = true;
-            this.cmbPosition.Location = new System.Drawing.Point(821, 773);
+            this.cmbPosition.Location = new System.Drawing.Point(821, 526);
             this.cmbPosition.MaximumSize = new System.Drawing.Size(150, 0);
             this.cmbPosition.Name = "cmbPosition";
             this.cmbPosition.Size = new System.Drawing.Size(150, 32);
@@ -492,36 +492,39 @@
             // 
             this.cmbSelf.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSelf.FormattingEnabled = true;
-            this.cmbSelf.Location = new System.Drawing.Point(451, 773);
+            this.cmbSelf.Location = new System.Drawing.Point(451, 526);
             this.cmbSelf.MaximumSize = new System.Drawing.Size(150, 0);
             this.cmbSelf.Name = "cmbSelf";
             this.cmbSelf.Size = new System.Drawing.Size(150, 32);
             this.cmbSelf.TabIndex = 63;
+            this.cmbSelf.SelectionChangeCommitted += new System.EventHandler(this.cmbSelf_SelectionChangeCommitted);
             // 
             // cmbBlock
             // 
             this.cmbBlock.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBlock.FormattingEnabled = true;
-            this.cmbBlock.Location = new System.Drawing.Point(80, 773);
+            this.cmbBlock.Location = new System.Drawing.Point(80, 526);
             this.cmbBlock.MaximumSize = new System.Drawing.Size(150, 0);
             this.cmbBlock.Name = "cmbBlock";
             this.cmbBlock.Size = new System.Drawing.Size(150, 32);
             this.cmbBlock.TabIndex = 62;
+            this.cmbBlock.SelectionChangeCommitted += new System.EventHandler(this.cmbBlock_SelectionChangeCommitted);
             // 
             // cmbDefaultUbication
             // 
             this.cmbDefaultUbication.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDefaultUbication.FormattingEnabled = true;
-            this.cmbDefaultUbication.Location = new System.Drawing.Point(12, 728);
+            this.cmbDefaultUbication.Location = new System.Drawing.Point(12, 481);
             this.cmbDefaultUbication.Name = "cmbDefaultUbication";
             this.cmbDefaultUbication.Size = new System.Drawing.Size(353, 32);
             this.cmbDefaultUbication.TabIndex = 61;
+            this.cmbDefaultUbication.SelectionChangeCommitted += new System.EventHandler(this.cmbDefaultUbication_SelectionChangeCommitted);
             // 
             // lblSelectDefaultUbication
             // 
             this.lblSelectDefaultUbication.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelectDefaultUbication.Appearance.Options.UseFont = true;
-            this.lblSelectDefaultUbication.Location = new System.Drawing.Point(12, 700);
+            this.lblSelectDefaultUbication.Location = new System.Drawing.Point(12, 453);
             this.lblSelectDefaultUbication.Name = "lblSelectDefaultUbication";
             this.lblSelectDefaultUbication.Size = new System.Drawing.Size(705, 24);
             this.lblSelectDefaultUbication.StyleController = this.layoutControl1;
@@ -532,7 +535,7 @@
             // 
             this.lblDefaultUbication.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDefaultUbication.Appearance.Options.UseFont = true;
-            this.lblDefaultUbication.Location = new System.Drawing.Point(12, 667);
+            this.lblDefaultUbication.Location = new System.Drawing.Point(12, 420);
             this.lblDefaultUbication.Name = "lblDefaultUbication";
             this.lblDefaultUbication.Size = new System.Drawing.Size(335, 29);
             this.lblDefaultUbication.StyleController = this.layoutControl1;
@@ -541,7 +544,7 @@
             // 
             // txtRemaksSteri
             // 
-            this.txtRemaksSteri.Location = new System.Drawing.Point(12, 529);
+            this.txtRemaksSteri.Location = new System.Drawing.Point(12, 282);
             this.txtRemaksSteri.Name = "txtRemaksSteri";
             this.txtRemaksSteri.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRemaksSteri.Properties.Appearance.Options.UseFont = true;
@@ -553,7 +556,7 @@
             // 
             this.lblSteriRemarks.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSteriRemarks.Appearance.Options.UseFont = true;
-            this.lblSteriRemarks.Location = new System.Drawing.Point(12, 501);
+            this.lblSteriRemarks.Location = new System.Drawing.Point(12, 254);
             this.lblSteriRemarks.Name = "lblSteriRemarks";
             this.lblSteriRemarks.Size = new System.Drawing.Size(363, 24);
             this.lblSteriRemarks.StyleController = this.layoutControl1;
@@ -564,7 +567,7 @@
             // 
             this.cmbThirdMethodSteri.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbThirdMethodSteri.FormattingEnabled = true;
-            this.cmbThirdMethodSteri.Location = new System.Drawing.Point(746, 456);
+            this.cmbThirdMethodSteri.Location = new System.Drawing.Point(746, 209);
             this.cmbThirdMethodSteri.Name = "cmbThirdMethodSteri";
             this.cmbThirdMethodSteri.Size = new System.Drawing.Size(353, 31);
             this.cmbThirdMethodSteri.TabIndex = 56;
@@ -573,7 +576,7 @@
             // 
             this.cmbSecondMethodSteri.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSecondMethodSteri.FormattingEnabled = true;
-            this.cmbSecondMethodSteri.Location = new System.Drawing.Point(379, 456);
+            this.cmbSecondMethodSteri.Location = new System.Drawing.Point(379, 209);
             this.cmbSecondMethodSteri.Name = "cmbSecondMethodSteri";
             this.cmbSecondMethodSteri.Size = new System.Drawing.Size(353, 32);
             this.cmbSecondMethodSteri.TabIndex = 55;
@@ -583,7 +586,7 @@
             // 
             this.cmbFirstMethodSteri.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFirstMethodSteri.FormattingEnabled = true;
-            this.cmbFirstMethodSteri.Location = new System.Drawing.Point(12, 456);
+            this.cmbFirstMethodSteri.Location = new System.Drawing.Point(12, 209);
             this.cmbFirstMethodSteri.Name = "cmbFirstMethodSteri";
             this.cmbFirstMethodSteri.Size = new System.Drawing.Size(353, 32);
             this.cmbFirstMethodSteri.TabIndex = 54;
@@ -593,7 +596,7 @@
             // 
             this.lblSelectSterilizationMethods.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelectSterilizationMethods.Appearance.Options.UseFont = true;
-            this.lblSelectSterilizationMethods.Location = new System.Drawing.Point(12, 428);
+            this.lblSelectSterilizationMethods.Location = new System.Drawing.Point(12, 181);
             this.lblSelectSterilizationMethods.Name = "lblSelectSterilizationMethods";
             this.lblSelectSterilizationMethods.Size = new System.Drawing.Size(453, 24);
             this.lblSelectSterilizationMethods.StyleController = this.layoutControl1;
@@ -604,7 +607,7 @@
             // 
             this.lblSterilization.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSterilization.Appearance.Options.UseFont = true;
-            this.lblSterilization.Location = new System.Drawing.Point(12, 367);
+            this.lblSterilization.Location = new System.Drawing.Point(12, 120);
             this.lblSterilization.Name = "lblSterilization";
             this.lblSterilization.Size = new System.Drawing.Size(263, 29);
             this.lblSterilization.StyleController = this.layoutControl1;
@@ -613,7 +616,7 @@
             // 
             // txtRemaksAssemblyPackaging
             // 
-            this.txtRemaksAssemblyPackaging.Location = new System.Drawing.Point(12, 229);
+            this.txtRemaksAssemblyPackaging.Location = new System.Drawing.Point(12, -18);
             this.txtRemaksAssemblyPackaging.Name = "txtRemaksAssemblyPackaging";
             this.txtRemaksAssemblyPackaging.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRemaksAssemblyPackaging.Properties.Appearance.Options.UseFont = true;
@@ -625,7 +628,7 @@
             // 
             this.lblAssemblyPackagingRemarks.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAssemblyPackagingRemarks.Appearance.Options.UseFont = true;
-            this.lblAssemblyPackagingRemarks.Location = new System.Drawing.Point(12, 201);
+            this.lblAssemblyPackagingRemarks.Location = new System.Drawing.Point(12, -46);
             this.lblAssemblyPackagingRemarks.Name = "lblAssemblyPackagingRemarks";
             this.lblAssemblyPackagingRemarks.Size = new System.Drawing.Size(467, 24);
             this.lblAssemblyPackagingRemarks.StyleController = this.layoutControl1;
@@ -636,7 +639,7 @@
             // 
             this.lblAssemblyPackaging.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAssemblyPackaging.Appearance.Options.UseFont = true;
-            this.lblAssemblyPackaging.Location = new System.Drawing.Point(12, 140);
+            this.lblAssemblyPackaging.Location = new System.Drawing.Point(12, -107);
             this.lblAssemblyPackaging.Name = "lblAssemblyPackaging";
             this.lblAssemblyPackaging.Size = new System.Drawing.Size(312, 29);
             this.lblAssemblyPackaging.StyleController = this.layoutControl1;
@@ -645,7 +648,7 @@
             // 
             // txtRemaksWashes
             // 
-            this.txtRemaksWashes.Location = new System.Drawing.Point(12, 2);
+            this.txtRemaksWashes.Location = new System.Drawing.Point(12, -245);
             this.txtRemaksWashes.Name = "txtRemaksWashes";
             this.txtRemaksWashes.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRemaksWashes.Properties.Appearance.Options.UseFont = true;
@@ -657,7 +660,7 @@
             // 
             this.lblWashingRemarks.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWashingRemarks.Appearance.Options.UseFont = true;
-            this.lblWashingRemarks.Location = new System.Drawing.Point(12, -26);
+            this.lblWashingRemarks.Location = new System.Drawing.Point(12, -273);
             this.lblWashingRemarks.Name = "lblWashingRemarks";
             this.lblWashingRemarks.Size = new System.Drawing.Size(307, 24);
             this.lblWashingRemarks.StyleController = this.layoutControl1;
@@ -668,7 +671,7 @@
             // 
             this.cmbThirdMethodWashing.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbThirdMethodWashing.FormattingEnabled = true;
-            this.cmbThirdMethodWashing.Location = new System.Drawing.Point(746, -71);
+            this.cmbThirdMethodWashing.Location = new System.Drawing.Point(746, -318);
             this.cmbThirdMethodWashing.Name = "cmbThirdMethodWashing";
             this.cmbThirdMethodWashing.Size = new System.Drawing.Size(353, 32);
             this.cmbThirdMethodWashing.TabIndex = 46;
@@ -677,7 +680,7 @@
             // 
             this.cmbSecondMethodWashing.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSecondMethodWashing.FormattingEnabled = true;
-            this.cmbSecondMethodWashing.Location = new System.Drawing.Point(379, -71);
+            this.cmbSecondMethodWashing.Location = new System.Drawing.Point(379, -318);
             this.cmbSecondMethodWashing.Name = "cmbSecondMethodWashing";
             this.cmbSecondMethodWashing.Size = new System.Drawing.Size(353, 32);
             this.cmbSecondMethodWashing.TabIndex = 45;
@@ -687,7 +690,7 @@
             // 
             this.cmbFirstMethodWashing.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFirstMethodWashing.FormattingEnabled = true;
-            this.cmbFirstMethodWashing.Location = new System.Drawing.Point(12, -71);
+            this.cmbFirstMethodWashing.Location = new System.Drawing.Point(12, -318);
             this.cmbFirstMethodWashing.Name = "cmbFirstMethodWashing";
             this.cmbFirstMethodWashing.Size = new System.Drawing.Size(353, 32);
             this.cmbFirstMethodWashing.TabIndex = 44;
@@ -697,7 +700,7 @@
             // 
             this.lblSelectWashesMethods.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelectWashesMethods.Appearance.Options.UseFont = true;
-            this.lblSelectWashesMethods.Location = new System.Drawing.Point(12, -99);
+            this.lblSelectWashesMethods.Location = new System.Drawing.Point(12, -346);
             this.lblSelectWashesMethods.Name = "lblSelectWashesMethods";
             this.lblSelectWashesMethods.Size = new System.Drawing.Size(308, 24);
             this.lblSelectWashesMethods.StyleController = this.layoutControl1;
@@ -708,7 +711,7 @@
             // 
             this.lblProcesses.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProcesses.Appearance.Options.UseFont = true;
-            this.lblProcesses.Location = new System.Drawing.Point(12, -229);
+            this.lblProcesses.Location = new System.Drawing.Point(12, -476);
             this.lblProcesses.Name = "lblProcesses";
             this.lblProcesses.Size = new System.Drawing.Size(131, 40);
             this.lblProcesses.StyleController = this.layoutControl1;
@@ -719,7 +722,7 @@
             // 
             this.lblSetWashes.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSetWashes.Appearance.Options.UseFont = true;
-            this.lblSetWashes.Location = new System.Drawing.Point(12, -159);
+            this.lblSetWashes.Location = new System.Drawing.Point(12, -406);
             this.lblSetWashes.Name = "lblSetWashes";
             this.lblSetWashes.Size = new System.Drawing.Size(127, 29);
             this.lblSetWashes.StyleController = this.layoutControl1;
@@ -728,7 +731,7 @@
             // 
             // ckbSetSample
             // 
-            this.ckbSetSample.Location = new System.Drawing.Point(12, -354);
+            this.ckbSetSample.Location = new System.Drawing.Point(12, -601);
             this.ckbSetSample.Name = "ckbSetSample";
             this.ckbSetSample.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckbSetSample.Properties.Appearance.Options.UseFont = true;
@@ -741,7 +744,7 @@
             // 
             this.lblSetSampleInfo.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSetSampleInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(126)))), ((int)(((byte)(143)))));
-            this.lblSetSampleInfo.Location = new System.Drawing.Point(12, -319);
+            this.lblSetSampleInfo.Location = new System.Drawing.Point(12, -566);
             this.lblSetSampleInfo.Name = "lblSetSampleInfo";
             this.lblSetSampleInfo.Size = new System.Drawing.Size(730, 86);
             this.lblSetSampleInfo.TabIndex = 38;
@@ -756,7 +759,7 @@
             this.layoutControl2.Controls.Add(this.lblPrice);
             this.layoutControl2.Controls.Add(this.btnRestart);
             this.layoutControl2.Controls.Add(this.speMaintenance);
-            this.layoutControl2.Location = new System.Drawing.Point(10, -431);
+            this.layoutControl2.Location = new System.Drawing.Point(10, -678);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1142, 466, 650, 400);
             this.layoutControl2.Root = this.layoutControlGroup1;
@@ -984,7 +987,7 @@
             this.lblSetName.Appearance.Options.UseFont = true;
             this.lblSetName.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightTop;
             this.lblSetName.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.ic_obligatory;
-            this.lblSetName.Location = new System.Drawing.Point(12, -502);
+            this.lblSetName.Location = new System.Drawing.Point(12, -749);
             this.lblSetName.Name = "lblSetName";
             this.lblSetName.Size = new System.Drawing.Size(121, 24);
             this.lblSetName.StyleController = this.layoutControl1;
@@ -993,7 +996,7 @@
             // 
             // txtSetName
             // 
-            this.txtSetName.Location = new System.Drawing.Point(12, -474);
+            this.txtSetName.Location = new System.Drawing.Point(12, -721);
             this.txtSetName.Name = "txtSetName";
             this.txtSetName.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSetName.Properties.Appearance.Options.UseFont = true;
@@ -1006,7 +1009,7 @@
             // 
             this.cmbCostCenter.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCostCenter.FormattingEnabled = true;
-            this.cmbCostCenter.Location = new System.Drawing.Point(379, -547);
+            this.cmbCostCenter.Location = new System.Drawing.Point(379, -794);
             this.cmbCostCenter.Name = "cmbCostCenter";
             this.cmbCostCenter.Size = new System.Drawing.Size(353, 35);
             this.cmbCostCenter.TabIndex = 32;
@@ -1015,7 +1018,7 @@
             // 
             this.cmbPackage.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPackage.FormattingEnabled = true;
-            this.cmbPackage.Location = new System.Drawing.Point(12, -547);
+            this.cmbPackage.Location = new System.Drawing.Point(12, -794);
             this.cmbPackage.Name = "cmbPackage";
             this.cmbPackage.Size = new System.Drawing.Size(353, 35);
             this.cmbPackage.TabIndex = 31;
@@ -1024,7 +1027,7 @@
             // 
             this.cmbSpeciality.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSpeciality.FormattingEnabled = true;
-            this.cmbSpeciality.Location = new System.Drawing.Point(12, -620);
+            this.cmbSpeciality.Location = new System.Drawing.Point(12, -867);
             this.cmbSpeciality.Name = "cmbSpeciality";
             this.cmbSpeciality.Size = new System.Drawing.Size(353, 35);
             this.cmbSpeciality.TabIndex = 29;
@@ -1036,7 +1039,7 @@
             this.cmbSetType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbSetType.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSetType.FormattingEnabled = true;
-            this.cmbSetType.Location = new System.Drawing.Point(746, -620);
+            this.cmbSetType.Location = new System.Drawing.Point(746, -867);
             this.cmbSetType.Name = "cmbSetType";
             this.cmbSetType.Size = new System.Drawing.Size(353, 35);
             this.cmbSetType.TabIndex = 27;
@@ -1046,7 +1049,7 @@
             this.lblSetType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSetType.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSetType.Appearance.Options.UseFont = true;
-            this.lblSetType.Location = new System.Drawing.Point(746, -648);
+            this.lblSetType.Location = new System.Drawing.Point(746, -895);
             this.lblSetType.Name = "lblSetType";
             this.lblSetType.Size = new System.Drawing.Size(108, 24);
             this.lblSetType.StyleController = this.layoutControl1;
@@ -1059,7 +1062,7 @@
             this.cmbProperty.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbProperty.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbProperty.FormattingEnabled = true;
-            this.cmbProperty.Location = new System.Drawing.Point(379, -620);
+            this.cmbProperty.Location = new System.Drawing.Point(379, -867);
             this.cmbProperty.Name = "cmbProperty";
             this.cmbProperty.Size = new System.Drawing.Size(353, 35);
             this.cmbProperty.TabIndex = 25;
@@ -1070,7 +1073,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblProperty.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProperty.Appearance.Options.UseFont = true;
-            this.lblProperty.Location = new System.Drawing.Point(379, -648);
+            this.lblProperty.Location = new System.Drawing.Point(379, -895);
             this.lblProperty.Name = "lblProperty";
             this.lblProperty.Size = new System.Drawing.Size(86, 24);
             this.lblProperty.StyleController = this.layoutControl1;
@@ -1083,7 +1086,7 @@
             this.lblSpeciality.Appearance.Options.UseFont = true;
             this.lblSpeciality.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightTop;
             this.lblSpeciality.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.ic_obligatory;
-            this.lblSpeciality.Location = new System.Drawing.Point(12, -648);
+            this.lblSpeciality.Location = new System.Drawing.Point(12, -895);
             this.lblSpeciality.Name = "lblSpeciality";
             this.lblSpeciality.Size = new System.Drawing.Size(119, 24);
             this.lblSpeciality.StyleController = this.layoutControl1;
@@ -1094,7 +1097,7 @@
             // 
             this.lblGeneralData.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGeneralData.Appearance.Options.UseFont = true;
-            this.lblGeneralData.Location = new System.Drawing.Point(12, -708);
+            this.lblGeneralData.Location = new System.Drawing.Point(12, -955);
             this.lblGeneralData.Name = "lblGeneralData";
             this.lblGeneralData.Size = new System.Drawing.Size(241, 40);
             this.lblGeneralData.StyleController = this.layoutControl1;
@@ -1107,7 +1110,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPackage.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPackage.Appearance.Options.UseFont = true;
-            this.lblPackage.Location = new System.Drawing.Point(12, -575);
+            this.lblPackage.Location = new System.Drawing.Point(12, -822);
             this.lblPackage.Name = "lblPackage";
             this.lblPackage.Size = new System.Drawing.Size(80, 24);
             this.lblPackage.StyleController = this.layoutControl1;
@@ -1120,7 +1123,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCostCenter.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCostCenter.Appearance.Options.UseFont = true;
-            this.lblCostCenter.Location = new System.Drawing.Point(379, -575);
+            this.lblCostCenter.Location = new System.Drawing.Point(379, -822);
             this.lblCostCenter.Name = "lblCostCenter";
             this.lblCostCenter.Size = new System.Drawing.Size(136, 24);
             this.lblCostCenter.StyleController = this.layoutControl1;

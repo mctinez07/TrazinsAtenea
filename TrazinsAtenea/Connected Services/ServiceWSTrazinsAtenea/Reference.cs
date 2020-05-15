@@ -24,6 +24,7 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja))]
     public partial class BaseModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -624,6 +625,7 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Almacen", Namespace="http://WSTrazinsAtenea.com")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones))]
     public partial class Almacen : TrazinsAtenea.ServiceWSTrazinsAtenea.BaseModel {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -670,6 +672,77 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
                 if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
                     this.DescripcionField = value;
                     this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AlmacenesUbicaciones", Namespace="http://WSTrazinsAtenea.com")]
+    [System.SerializableAttribute()]
+    public partial class AlmacenesUbicaciones : TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> BloqueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> EstanteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> PosicionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> UbiIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Bloque {
+            get {
+                return this.BloqueField;
+            }
+            set {
+                if ((this.BloqueField.Equals(value) != true)) {
+                    this.BloqueField = value;
+                    this.RaisePropertyChanged("Bloque");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Estante {
+            get {
+                return this.EstanteField;
+            }
+            set {
+                if ((this.EstanteField.Equals(value) != true)) {
+                    this.EstanteField = value;
+                    this.RaisePropertyChanged("Estante");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Posicion {
+            get {
+                return this.PosicionField;
+            }
+            set {
+                if ((this.PosicionField.Equals(value) != true)) {
+                    this.PosicionField = value;
+                    this.RaisePropertyChanged("Posicion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> UbiId {
+            get {
+                return this.UbiIdField;
+            }
+            set {
+                if ((this.UbiIdField.Equals(value) != true)) {
+                    this.UbiIdField = value;
+                    this.RaisePropertyChanged("UbiId");
                 }
             }
         }
@@ -1131,6 +1204,32 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_UpdateResponse")]
         System.Threading.Tasks.Task<string> Almacen_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen almacen);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Select_ListRespo" +
+            "nse")]
+        TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones[] AlmacenesUbicaciones_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Select_ListRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones[]> AlmacenesUbicaciones_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_SelectResponse")]
+        TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones AlmacenesUbicaciones_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_SelectResponse")]
+        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones> AlmacenesUbicaciones_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_InsertResponse")]
+        string AlmacenesUbicaciones_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_InsertResponse")]
+        System.Threading.Tasks.Task<string> AlmacenesUbicaciones_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_UpdateResponse")]
+        string AlmacenesUbicaciones_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_UpdateResponse")]
+        System.Threading.Tasks.Task<string> AlmacenesUbicaciones_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_SelectResponse")]
         TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje Mensaje_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje mensaje);
         
@@ -1419,6 +1518,38 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         
         public System.Threading.Tasks.Task<string> Almacen_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen almacen) {
             return base.Channel.Almacen_UpdateAsync(almacen);
+        }
+        
+        public TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones[] AlmacenesUbicaciones_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones) {
+            return base.Channel.AlmacenesUbicaciones_Select_List(almacenesUbicaciones);
+        }
+        
+        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones[]> AlmacenesUbicaciones_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones) {
+            return base.Channel.AlmacenesUbicaciones_Select_ListAsync(almacenesUbicaciones);
+        }
+        
+        public TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones AlmacenesUbicaciones_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones) {
+            return base.Channel.AlmacenesUbicaciones_Select(almacenesUbicaciones);
+        }
+        
+        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones> AlmacenesUbicaciones_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones) {
+            return base.Channel.AlmacenesUbicaciones_SelectAsync(almacenesUbicaciones);
+        }
+        
+        public string AlmacenesUbicaciones_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones) {
+            return base.Channel.AlmacenesUbicaciones_Insert(almacenesUbicaciones);
+        }
+        
+        public System.Threading.Tasks.Task<string> AlmacenesUbicaciones_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones) {
+            return base.Channel.AlmacenesUbicaciones_InsertAsync(almacenesUbicaciones);
+        }
+        
+        public string AlmacenesUbicaciones_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones) {
+            return base.Channel.AlmacenesUbicaciones_Update(almacenesUbicaciones);
+        }
+        
+        public System.Threading.Tasks.Task<string> AlmacenesUbicaciones_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones) {
+            return base.Channel.AlmacenesUbicaciones_UpdateAsync(almacenesUbicaciones);
         }
         
         public TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje Mensaje_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje mensaje) {

@@ -618,6 +618,81 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="AlmacenesUbicaciones_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="almacenesUbicaciones" nillable="true" type="tns:AlmacenesUbicaciones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="AlmacenesUbicaciones">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Almacen">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Bloque" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Estante" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Posicion" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UbiId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AlmacenesUbicaciones" nillable="true" type="tns:AlmacenesUbicaciones" />
+  <xs:element name="AlmacenesUbicaciones_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AlmacenesUbicaciones_Select_ListResult" nillable="true" type="tns:ArrayOfAlmacenesUbicaciones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfAlmacenesUbicaciones">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlmacenesUbicaciones" nillable="true" type="tns:AlmacenesUbicaciones" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlmacenesUbicaciones" nillable="true" type="tns:ArrayOfAlmacenesUbicaciones" />
+  <xs:element name="AlmacenesUbicaciones_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="almacenesUbicaciones" nillable="true" type="tns:AlmacenesUbicaciones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlmacenesUbicaciones_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AlmacenesUbicaciones_SelectResult" nillable="true" type="tns:AlmacenesUbicaciones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlmacenesUbicaciones_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="almacenesUbicaciones" nillable="true" type="tns:AlmacenesUbicaciones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlmacenesUbicaciones_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AlmacenesUbicaciones_InsertResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlmacenesUbicaciones_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="almacenesUbicaciones" nillable="true" type="tns:AlmacenesUbicaciones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlmacenesUbicaciones_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AlmacenesUbicaciones_UpdateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Mensaje_Select">
     <xs:complexType>
       <xs:sequence>

@@ -23,6 +23,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         public EnumOperationType Operation;
         private List<Limpieza> MethodsWashingList;
         private List<Esterilizacion> MethodsSteriList;
+        private List<AlmacenesUbicaciones> UbicationList;
 
         public SetManagmentForm()
         {
@@ -358,7 +359,41 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             speMaintenance.Value = 0;
         }
 
+        private void cmbDefaultUbication_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            try
+            {
+                var selected = (Almacen)cmbDefaultUbication.SelectedItem;
+                UbicationList = BaseModelClient.Service.AlmacenesUbicaciones_Select_List(new AlmacenesUbicaciones()
+                {
+                    ChId = BaseModelClient.BaseModel.ChId,
+                    HosId = BaseModelClient.BaseModel.HosId,
+                    AlmId = selected.AlmId
+                }).ToList();
 
-        
+                Engine.ComboBoxFormat(cmbBlock, "Bloque", "Bloque", UbicationList);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en cmbDefaultUbication_SelectionChangeCommitted: " + ex.Message);
+            }
+        }
+
+        private void cmbBlock_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            var selected = (AlmacenesUbicaciones)cmbBlock.SelectedItem;
+            var list = UbicationList.Where(b => b.Bloque == selected.Bloque && b.AlmId == selected.AlmId).ToList();
+            Engine.ComboBoxFormat(cmbSelf, "Estante", "Estante", list);
+        }
+
+        private void cmbSelf_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            var block = (AlmacenesUbicaciones)cmbBlock.SelectedItem;
+            var self = (AlmacenesUbicaciones)cmbSelf.SelectedItem;
+
+            var list = UbicationList.Where
+                (b => b.Bloque == block.Bloque && b.AlmId == block.AlmId && b.Estante == self.Estante).ToList();
+            Engine.ComboBoxFormat(cmbPosition, "Posicion", "Posicion", list);
+        }
     }
 }

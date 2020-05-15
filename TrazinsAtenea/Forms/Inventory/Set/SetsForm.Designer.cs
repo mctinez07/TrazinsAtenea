@@ -38,6 +38,7 @@
             this.gvcActive = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pnlNewItem = new DevExpress.XtraEditors.PanelControl();
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::TrazinsAtenea.Forms.GlobalForms.GlobalWaitForm), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.gdcSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvSets)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlNewItem)).BeginInit();
@@ -162,6 +163,10 @@
             this.btnNew.Text = "Nuevo";
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
             // SetsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,5 +199,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gvcActive;
         private DevExpress.XtraEditors.PanelControl pnlNewItem;
         private DevExpress.XtraEditors.SimpleButton btnNew;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

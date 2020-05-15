@@ -37,9 +37,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             try
             {
-                //Mostrar que está cargando datos
-                //Añadir progrssForm
-                Cursor.Current = Cursors.WaitCursor;
+                splashScreenManager1.ShowWaitForm();                
 
                 var service = BaseModelClient.Service;
 
@@ -49,9 +47,10 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 gdcSet.DataSource = sets;
 
                 GridFormat(gdvSets);
-                btnNew.Text = Engine.GetLanguageResource(btnNew.Name);                
+                btnNew.Text = Engine.GetLanguageResource(btnNew.Name);
 
-                Cursor.Current = Cursors.Default;
+                splashScreenManager1.CloseWaitForm();
+                
             }
             catch (Exception ex)
             {
