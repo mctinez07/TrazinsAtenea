@@ -286,6 +286,12 @@
   <ItemGroup>
     <None Include="Resources\qr-24x24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-24x24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>ROBOCOPY "$(TargetDir) " "$(TargetDir)libs\ " /XF *.exe *.config *.manifest /XD libs logs data /E /IS /MOVE

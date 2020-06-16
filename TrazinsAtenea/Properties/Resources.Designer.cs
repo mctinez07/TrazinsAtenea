@@ -123,6 +123,26 @@ namespace TrazinsAtenea.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_24x24 {
+            get {
+                object obj = ResourceManager.GetObject("delete-24x24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_48x48 {
+            get {
+                object obj = ResourceManager.GetObject("delete-48x48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_arrow_drop_down {
             get {
                 object obj = ResourceManager.GetObject("ic_arrow_drop_down", resourceCulture);
