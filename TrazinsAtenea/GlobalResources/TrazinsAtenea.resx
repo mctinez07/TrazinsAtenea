@@ -256,4 +256,7 @@
   <data name="SetCode" xml:space="preserve">
     <value>Código de caja</value>
   </data>
+  <data name="FilterType" xml:space="preserve">
+    <value>Imágenes</value>
+  </data>
 </root>

@@ -181,4 +181,7 @@
   <data name="Processes" xml:space="preserve">
     <value>Processes</value>
   </data>
+  <data name="FilterType" xml:space="preserve">
+    <value>Images</value>
+  </data>
 </root>

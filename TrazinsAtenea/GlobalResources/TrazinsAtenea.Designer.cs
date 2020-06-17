@@ -144,9 +144,9 @@ namespace TrazinsAtenea.GlobalResources {
         /// <summary>
         ///   Busca una cadena traducida similar a 4 - Ubicación predeterminada.
         /// </summary>
-        internal static string DefaultLocation {
+        internal static string DefaultUbication {
             get {
-                return ResourceManager.GetString("DefaultLocation", resourceCulture);
+                return ResourceManager.GetString("DefaultUbication", resourceCulture);
             }
         }
         
@@ -165,6 +165,15 @@ namespace TrazinsAtenea.GlobalResources {
         internal static string External {
             get {
                 return ResourceManager.GetString("External", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Imágenes.
+        /// </summary>
+        internal static string FilterType {
+            get {
+                return ResourceManager.GetString("FilterType", resourceCulture);
             }
         }
         
@@ -369,9 +378,9 @@ namespace TrazinsAtenea.GlobalResources {
         /// <summary>
         ///   Busca una cadena traducida similar a Selecciona una ubicación donde se almacenará esta caja de forma predeterminada.
         /// </summary>
-        internal static string SelectDefaultLocation {
+        internal static string SelectDefaultUbication {
             get {
-                return ResourceManager.GetString("SelectDefaultLocation", resourceCulture);
+                return ResourceManager.GetString("SelectDefaultUbication", resourceCulture);
             }
         }
         

@@ -43,12 +43,81 @@ namespace TrazinsAtenea.Forms.Inventory.Set
            
         }
 
+        private void MultilanguageFormat()
+        {
+            try
+            {
+                foreach (Control item in this.Controls)
+                {
+                    if (item is PanelControl)
+                    {
+                        foreach (Control subItem in item.Controls)
+                        {
+                            if (subItem is XtraTabControl)
+                            {
+                                foreach (XtraTabPage tb in subItem.Controls)
+                                {
+                                    //Traducir Cabeceras
+                                    tb.Text = Engine.GetLanguageResource(tb.Name);
+                                    foreach (Control control in tb.Controls)
+                                    {
+                                        //Traducimos los controles labels y buttons
+                                        if (control is SimpleButton || control is LabelControl)
+                                            control.Text = Engine.GetLanguageResource(control.Name);
+                                    }
+                                }
+                            }
+                            //Traducir elementos de los paneles
+                            subItem.Text = Engine.GetLanguageResource(subItem.Name);
+                        }
+                    }
+                };
+
+                //Traducimos los controles del tableLayoutPrincipal
+                foreach (LayoutControlItem layoutControl in Root.Items)
+                {
+                    layoutControl.Text = Engine.GetLanguageResource(layoutControl.Name);
+                    if (layoutControl.Control is LabelControl || layoutControl.Control is SimpleButton)
+                        layoutControl.Control.Text = Engine.GetLanguageResource(layoutControl.Control.Name);
+                }
+
+                //Traducir el subroot layout
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en MultilanguageFormat: " + ex.Message);
+            }
+
+        }
+
+        private void pcbBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            MessageForm frm = new MessageForm(190);
+            frm.ShowDialog();
+
+            if (frm.DialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        //La carga de modelos se hará desde la clase GlobalEngine
+        //Revisar try-catch
+        #region Data and Proceses TabPage
+
+        #region Load Data ComboBoxes
+
         private void LoadComboBoxInformation()
         {
             //Tener en cuenta que si no es caja nueva hay que seleccionar los elementos
             //si es caja nueva el elemento seleccionado es 0;
             SpecialitiesLoad();
-            PackagingLoad();            
+            PackagingLoad();
             PropertyLoad();
             SetTypeLoad();
             MethodsWashingLoad();
@@ -59,8 +128,6 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             //CostCenterLoad();           
 
         }
-
-        #region Load Data ComboBoxes
 
         private void StorageLoad()
         {
@@ -136,7 +203,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 Engine.ComboBoxFormat(cmbProperty, "NomHospital", "HosId", hospitalList);
 
                 //Solo se pueden añadir cajas al hospital con el que nos hemos logeado
-                if(Operation == EnumOperationType.Nuevo)
+                if (Operation == EnumOperationType.Nuevo)
                 {
                     cmbProperty.Enabled = false;
                     cmbProperty.SelectedValue = BaseModelClient.BaseModel.HosId;
@@ -327,75 +394,65 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         #endregion
 
-        private void MultilanguageFormat()
-        {
-            try
-            {
-                foreach (Control item in this.Controls)
-                {
-                    if (item is PanelControl)
-                    {
-                        foreach (Control subItem in item.Controls)
-                        {
-                            if (subItem is XtraTabControl)
-                            {
-                                foreach (XtraTabPage tb in subItem.Controls)
-                                {
-                                    //Traducir Cabeceras
-                                    tb.Text = Engine.GetLanguageResource(tb.Name);
-                                    foreach (Control control in tb.Controls)
-                                    {
-                                        //Traducimos los controles labels y buttons
-                                        if (control is SimpleButton || control is LabelControl)
-                                            control.Text = Engine.GetLanguageResource(control.Name);
-                                    }
-                                }
-                            }
-                            //Traducir elementos de los paneles
-                            subItem.Text = Engine.GetLanguageResource(subItem.Name);
-                        }
-                    }
-                };
-
-                //Traducimos los controles del tableLayoutPrincipal
-                foreach (LayoutControlItem layoutControl in Root.Items)
-                {
-                    layoutControl.Text = Engine.GetLanguageResource(layoutControl.Name);
-                    if (layoutControl.Control is LabelControl || layoutControl.Control is SimpleButton)
-                        layoutControl.Control.Text = Engine.GetLanguageResource(layoutControl.Control.Name);
-                }
-
-                //Traducir el subroot layout
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error en MultilanguageFormat: " + ex.Message);  
-            }
-            
-        }
-
-        private void pcbBack_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }        
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            MessageForm frm = new MessageForm(190);
-            frm.ShowDialog();
-
-            if(frm.DialogResult == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
-
         private void btnRestart_Click(object sender, EventArgs e)
         {
             //Reiniciar y salir o necesario click guardar
             speMaintenance.Value = 0;
-        }
+        } 
 
-        
+        #endregion
+
+        private void btnFromComputer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Comprobamos que hay algún sitio disponible
+                int numImages = 0;
+
+                foreach (PanelControl panel in tableLayoutPanel1.Controls)
+                {
+                    foreach (Control item in panel.Controls)
+                    {
+                        if (item is PictureBox)
+                        {
+                            var pictureBox = (PictureBox)item;
+
+                            if(pictureBox.Image != null && !pictureBox.Name.Equals("pcbSixthPosition"))
+                            {
+                                numImages++;
+                                MessageBox.Show(item.Name + "imagen asociada");
+                            }
+                               
+                        }
+                    }
+
+                    if(numImages == 5)
+                    {
+                        //Traducir desde bd
+                        MessageBox.Show("No hay hueco");
+                    }
+                    
+                }
+
+                //Pasarlo al archivo de recursos
+                ofdImageVideo.Filter = GlobalResources.TrazinsAtenea.FilterType +
+                    " (*.jpeg, *.jpg, *.png, *.gif)|*.jpeg;*.jpg;*.png;*.gif";
+                ofdImageVideo.Filter += "|Archivos vídeo (*.avi,*.mp4, *.mpeg, *.mpg, *.wmv)|*.avi;*.mp4;*.mpeg;*.mpg;*.wmv";
+                ofdImageVideo.FilterIndex = 1;
+                ofdImageVideo.InitialDirectory = @"C:\";
+                ofdImageVideo.Title = "Open File";
+                ofdImageVideo.CheckFileExists = false;
+
+                DialogResult = ofdImageVideo.ShowDialog();
+                if(DialogResult == DialogResult.OK)
+                {
+                    //Creamos un nuevo modelo de CajaImagen
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en btnFromComputer: " + ex.Message);
+            }
+        }
     }
 }
