@@ -17,6 +17,7 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BaseModel", Namespace="http://WSTrazinsAtenea.com")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital))]
@@ -127,6 +128,157 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CajaImagen", Namespace="http://WSTrazinsAtenea.com")]
+    [System.SerializableAttribute()]
+    public partial class CajaImagen : TrazinsAtenea.ServiceWSTrazinsAtenea.BaseModel {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CajaIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool CargarImagenesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool EsImagenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool EsVideoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Drawing.Image ImageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] ImagenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TipoField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CajaId {
+            get {
+                return this.CajaIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CajaIdField, value) != true)) {
+                    this.CajaIdField = value;
+                    this.RaisePropertyChanged("CajaId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool CargarImagenes {
+            get {
+                return this.CargarImagenesField;
+            }
+            set {
+                if ((this.CargarImagenesField.Equals(value) != true)) {
+                    this.CargarImagenesField = value;
+                    this.RaisePropertyChanged("CargarImagenes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool EsImagen {
+            get {
+                return this.EsImagenField;
+            }
+            set {
+                if ((this.EsImagenField.Equals(value) != true)) {
+                    this.EsImagenField = value;
+                    this.RaisePropertyChanged("EsImagen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool EsVideo {
+            get {
+                return this.EsVideoField;
+            }
+            set {
+                if ((this.EsVideoField.Equals(value) != true)) {
+                    this.EsVideoField = value;
+                    this.RaisePropertyChanged("EsVideo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Drawing.Image Image {
+            get {
+                return this.ImageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ImageField, value) != true)) {
+                    this.ImageField = value;
+                    this.RaisePropertyChanged("Image");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] Imagen {
+            get {
+                return this.ImagenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ImagenField, value) != true)) {
+                    this.ImagenField = value;
+                    this.RaisePropertyChanged("Imagen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Tipo {
+            get {
+                return this.TipoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TipoField, value) != true)) {
+                    this.TipoField = value;
+                    this.RaisePropertyChanged("Tipo");
+                }
             }
         }
     }
@@ -1036,6 +1188,30 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_UpdateResponse")]
         System.Threading.Tasks.Task<string> Caja_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_ListResponse")]
+        TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen[] CajaImagen_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_ListResponse")]
+        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen[]> CajaImagen_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_SelectResponse")]
+        TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen CajaImagen_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_SelectResponse")]
+        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen> CajaImagen_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_InsertResponse")]
+        string CajaImagen_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_InsertResponse")]
+        System.Threading.Tasks.Task<string> CajaImagen_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_UpdateResponse")]
+        string CajaImagen_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_UpdateResponse")]
+        System.Threading.Tasks.Task<string> CajaImagen_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_ListResponse")]
         TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad[] Especialidad_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad);
         
@@ -1294,6 +1470,38 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         
         public System.Threading.Tasks.Task<string> Caja_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja) {
             return base.Channel.Caja_UpdateAsync(caja);
+        }
+        
+        public TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen[] CajaImagen_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen) {
+            return base.Channel.CajaImagen_Select_List(cajaImagen);
+        }
+        
+        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen[]> CajaImagen_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen) {
+            return base.Channel.CajaImagen_Select_ListAsync(cajaImagen);
+        }
+        
+        public TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen CajaImagen_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen) {
+            return base.Channel.CajaImagen_Select(cajaImagen);
+        }
+        
+        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen> CajaImagen_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen) {
+            return base.Channel.CajaImagen_SelectAsync(cajaImagen);
+        }
+        
+        public string CajaImagen_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen) {
+            return base.Channel.CajaImagen_Insert(cajaImagen);
+        }
+        
+        public System.Threading.Tasks.Task<string> CajaImagen_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen) {
+            return base.Channel.CajaImagen_InsertAsync(cajaImagen);
+        }
+        
+        public string CajaImagen_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen) {
+            return base.Channel.CajaImagen_Update(cajaImagen);
+        }
+        
+        public System.Threading.Tasks.Task<string> CajaImagen_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen) {
+            return base.Channel.CajaImagen_UpdateAsync(cajaImagen);
         }
         
         public TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad[] Especialidad_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad) {

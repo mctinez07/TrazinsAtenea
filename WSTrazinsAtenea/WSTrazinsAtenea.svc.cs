@@ -45,6 +45,30 @@ namespace WSTrazinsAtenea
 
         #endregion
 
+        #region CajaImagen
+
+        public List<CajaImagen> CajaImagen_Select_List(CajaImagen cajaImagen)
+        {
+            return CajaImagenManager.CajaImagen_Select_List(cajaImagen);
+        }
+
+        public CajaImagen CajaImagen_Select(CajaImagen cajaImagen)
+        {
+            return CajaImagenManager.CajaImagen_Select(cajaImagen);
+        }
+
+        public string CajaImagen_Insert(CajaImagen cajaImagen)
+        {
+            return CajaImagenManager.CajaImagen_Insert(cajaImagen);
+        }
+
+        public string CajaImagen_Update(CajaImagen cajaImagen)
+        {
+            return CajaImagenManager.CajaImagen_Update(cajaImagen);
+        }
+
+        #endregion
+
         #region Especialidades
 
         public string Especialidad_Insert(Especialidad especialidad)
@@ -242,10 +266,6 @@ namespace WSTrazinsAtenea
         {
             return MensajesManager.Mensaje_Select(mensaje);
         }
-
-        
-
-
         #endregion
 
 

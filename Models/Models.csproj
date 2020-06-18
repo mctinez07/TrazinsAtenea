@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,6 +44,7 @@
   <ItemGroup>
     <Compile Include="BaseModel.cs" />
     <Compile Include="Inventory\Caja.cs" />
+    <Compile Include="Inventory\CajaImagen.cs" />
     <Compile Include="Masters\Embalaje.cs" />
     <Compile Include="Masters\Especialidad.cs" />
     <Compile Include="Masters\Hospital.cs" />
@@ -53,6 +55,7 @@
     <Compile Include="Processes\Methods\Esterilizacion.cs" />
     <Compile Include="Processes\Methods\Limpieza.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\MIMEAssistant.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

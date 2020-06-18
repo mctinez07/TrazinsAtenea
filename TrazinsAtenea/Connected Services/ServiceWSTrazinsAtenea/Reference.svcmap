@@ -25,6 +25,7 @@
     <MetadataFile FileName="WSTrazinsAtenea.xsd" MetadataType="Schema" ID="9a3896fe-fb9e-41e0-b323-9fbdb9004da0" SourceId="1" SourceUrl="http://localhost:53110/WSTrazinsAtenea.svc?xsd=xsd1" />
     <MetadataFile FileName="WSTrazinsAtenea.disco" MetadataType="Disco" ID="bdf0898f-912b-4859-bf98-4a5c6bfae0c3" SourceId="1" SourceUrl="http://localhost:53110/WSTrazinsAtenea.svc?disco" />
     <MetadataFile FileName="WSTrazinsAtenea1.xsd" MetadataType="Schema" ID="b40128e6-a112-4093-8fdd-4d39ece4bdc7" SourceId="1" SourceUrl="http://localhost:53110/WSTrazinsAtenea.svc?xsd=xsd0" />
+    <MetadataFile FileName="WSTrazinsAtenea2.xsd" MetadataType="Schema" ID="b7b57fa3-b96a-446e-9a62-73011b305ff2" SourceId="1" SourceUrl="http://localhost:53110/WSTrazinsAtenea.svc?xsd=xsd2" />
     <MetadataFile FileName="WSTrazinsAtenea.wsdl" MetadataType="Wsdl" ID="9aabba9b-7f98-47b5-9676-c737b8a53eb3" SourceId="1" SourceUrl="http://localhost:53110/WSTrazinsAtenea.svc?wsdl" />
   </Metadata>
   <Extensions>

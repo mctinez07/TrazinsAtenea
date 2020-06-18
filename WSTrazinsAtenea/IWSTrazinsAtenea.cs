@@ -36,6 +36,22 @@ namespace WSTrazinsAtenea
 
         #endregion
 
+        #region CajaImagen
+
+        [OperationContract]
+        List<CajaImagen> CajaImagen_Select_List(CajaImagen cajaImagen);
+
+        [OperationContract]
+        CajaImagen CajaImagen_Select(CajaImagen cajaImagen);
+
+        [OperationContract]
+        string CajaImagen_Insert(CajaImagen cajaImagen);
+
+        [OperationContract]
+        string CajaImagen_Update(CajaImagen cajaImagen);
+
+        #endregion
+
         #region Especialidades
 
         [OperationContract]

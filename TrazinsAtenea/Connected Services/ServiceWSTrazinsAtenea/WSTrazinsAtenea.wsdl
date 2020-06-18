@@ -4,6 +4,7 @@
     <xsd:schema targetNamespace="http://WSTrazinsAtenea.com/Imports">
       <xsd:import schemaLocation="http://localhost:53110/WSTrazinsAtenea.svc?xsd=xsd0" namespace="http://WSTrazinsAtenea.com" />
       <xsd:import schemaLocation="http://localhost:53110/WSTrazinsAtenea.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53110/WSTrazinsAtenea.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Drawing" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IWSTrazinsAtenea_Caja_Select_List_InputMessage">
@@ -29,6 +30,30 @@
   </wsdl:message>
   <wsdl:message name="IWSTrazinsAtenea_Caja_Update_OutputMessage">
     <wsdl:part name="parameters" element="tns:Caja_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Select_List_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajaImagen_Select_List" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Select_List_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajaImagen_Select_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Select_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajaImagen_Select" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Select_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajaImagen_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajaImagen_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajaImagen_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajaImagen_Update" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajaImagen_UpdateResponse" />
   </wsdl:message>
   <wsdl:message name="IWSTrazinsAtenea_Especialidad_Select_List_InputMessage">
     <wsdl:part name="parameters" element="tns:Especialidad_Select_List" />
@@ -245,6 +270,22 @@
       <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Update" message="tns:IWSTrazinsAtenea_Caja_Update_InputMessage" />
       <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_UpdateResponse" message="tns:IWSTrazinsAtenea_Caja_Update_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="CajaImagen_Select_List">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_List" message="tns:IWSTrazinsAtenea_CajaImagen_Select_List_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_ListResponse" message="tns:IWSTrazinsAtenea_CajaImagen_Select_List_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CajaImagen_Select">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select" message="tns:IWSTrazinsAtenea_CajaImagen_Select_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_SelectResponse" message="tns:IWSTrazinsAtenea_CajaImagen_Select_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CajaImagen_Insert">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Insert" message="tns:IWSTrazinsAtenea_CajaImagen_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_InsertResponse" message="tns:IWSTrazinsAtenea_CajaImagen_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CajaImagen_Update">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update" message="tns:IWSTrazinsAtenea_CajaImagen_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_UpdateResponse" message="tns:IWSTrazinsAtenea_CajaImagen_Update_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Especialidad_Select_List">
       <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_List" message="tns:IWSTrazinsAtenea_Especialidad_Select_List_InputMessage" />
       <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_ListResponse" message="tns:IWSTrazinsAtenea_Especialidad_Select_List_OutputMessage" />
@@ -409,6 +450,42 @@
     </wsdl:operation>
     <wsdl:operation name="Caja_Update">
       <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajaImagen_Select_List">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajaImagen_Select">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajaImagen_Insert">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajaImagen_Update">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

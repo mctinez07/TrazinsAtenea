@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassBaseConnection.cs" />
+    <Compile Include="Inventory\CajaImagenManager.cs" />
     <Compile Include="Inventory\CajaManager.cs" />
     <Compile Include="Masters\EmbalajeManager.cs" />
     <Compile Include="Masters\EspecialidadManager.cs" />

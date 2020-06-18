@@ -332,6 +332,8 @@ namespace SqlEngine
             }
         }
 
+        //Crear metodo que devuelva el elemento insertad???
+        //Tendre que mirar la direccion de parametro, creo que ya esta definido cuando obtnemos los argumentos del procedure
         private static string QueryTypeExecuteNonQuery(SqlCommand sqlCmd)
         {
             try
