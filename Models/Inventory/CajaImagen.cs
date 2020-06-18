@@ -5,8 +5,8 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
-using Models.Utils;
 using System.Xml.Serialization;
+using Utils;
 
 namespace Models.Inventory
 {
@@ -41,8 +41,7 @@ namespace Models.Inventory
         }
 
         private MIMEAssistant.ContentType _contentType = new MIMEAssistant.ContentType();
-
-        [XmlIgnore]
+        
         public MIMEAssistant.ContentType ContentType
         {
             get
@@ -61,11 +60,17 @@ namespace Models.Inventory
         public string Tipo
         {
             get { return _tipo; }
-            set { _contentType = new MIMEAssistant.ContentType(_tipo); }
+            set { if(_tipo != null) _contentType = new MIMEAssistant.ContentType(_tipo); }
         }
 
         [DataMember]
-        public bool EsVideo { get { return ContentType.Type == "video"; } }
+        public bool EsVideo
+        {
+            get
+            {
+                return ContentType.Type == "video";
+            }
+        }
 
         [DataMember]
         public bool EsImagen { get { return ContentType.Type == "image"; } }

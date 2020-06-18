@@ -13,6 +13,7 @@ using TrazinsAtenea.GlobalEngine;
 using DevExpress.XtraTab;
 using DevExpress.XtraLayout;
 using TrazinsAtenea.ServiceWSTrazinsAtenea;
+using Utils;
 
 namespace TrazinsAtenea.Forms.Inventory.Set
 {
@@ -407,33 +408,10 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             try
             {
                 //Comprobamos que hay algún sitio disponible
-                //PTDE. probar
-                int numImages = 0;
-
-                foreach (PanelControl panel in tableLayoutPanel1.Controls)
+                if (!SearchEmptyPictureBox())
                 {
-                    foreach (Control item in panel.Controls)
-                    {
-                        if (item is PictureBox)
-                        {
-                            var pictureBox = (PictureBox)item;
-
-                            if(pictureBox.Image != null && !pictureBox.Name.Equals("pcbSixthPosition"))
-                            {
-                                numImages++;
-                                MessageBox.Show(item.Name + "imagen asociada");
-                            }
-                               
-                        }
-                    }
-
-                    if(numImages == 5)
-                    {
-                        //Traducir desde bd
-                        MessageBox.Show("No hay hueco");
-                    }
-                    
-                }
+                    return;
+                }               
 
                 //Pasarlo al archivo de recursos
                 ofdImageVideo.Filter = GlobalResources.TrazinsAtenea.FilterType +
@@ -446,14 +424,67 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
                 DialogResult = ofdImageVideo.ShowDialog();
                 if(DialogResult == DialogResult.OK)
-                { 
+                {
                     //Creamos un nuevo modelo de CajaImagen
+                    CajaImagen cajaImagen = new CajaImagen()
+                    {
+                        Imagen = System.IO.File.ReadAllBytes(ofdImageVideo.FileName),
+                        Nombre = ofdImageVideo.SafeFileName,
+                        Tipo = MIMEAssistant.GetMIMEType(ofdImageVideo.FileName),
+                    
+                    };
+
+                    //Obtenemos el tipo de archivo para asignar el valor.
+                    var type = MIMEAssistant.FromFileName(ofdImageVideo.FileName).Type;
+                    switch (type)
+                    {
+                        case "image":
+                            cajaImagen.EsImagen = true;
+                            break;
+                        case "video":
+                            cajaImagen.EsVideo = false;
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error en btnFromComputer: " + ex.Message);
             }
+        }
+
+        private bool SearchEmptyPictureBox()
+        {
+            int numImages = 0;
+
+            foreach (PanelControl panel in tableLayoutPanel1.Controls)
+            {
+                foreach (Control item in panel.Controls)
+                {
+                    if (item is PictureBox)
+                    {
+                        var pictureBox = (PictureBox)item;
+
+                        if (pictureBox.Image != null && !pictureBox.Name.Equals("pcbSixthPosition"))
+                        {
+                            numImages++;
+                            MessageBox.Show(item.Name + "imagen asociada");
+                        }
+
+                    }
+                }
+            }
+
+            if (numImages == 5)
+            {
+                //Traducir desde bd
+                MessageBox.Show("No hay hueco");
+                return false;
+            }
+
+            return true;
         }
     }
 }

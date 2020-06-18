@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models.Utils
+namespace Utils
 {
     //Clase para obtener el tipo de archivo
     public static class MIMEAssistant
@@ -250,7 +250,6 @@ namespace Models.Utils
         {
             return new ContentType(GetMIMEType(fileName));
         }
+        
     }
-
-    
 }
