@@ -407,6 +407,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             try
             {
                 //Comprobamos que hay algún sitio disponible
+                //PTDE. probar
                 int numImages = 0;
 
                 foreach (PanelControl panel in tableLayoutPanel1.Controls)
@@ -445,7 +446,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
                 DialogResult = ofdImageVideo.ShowDialog();
                 if(DialogResult == DialogResult.OK)
-                {
+                { 
                     //Creamos un nuevo modelo de CajaImagen
                 }
             }
