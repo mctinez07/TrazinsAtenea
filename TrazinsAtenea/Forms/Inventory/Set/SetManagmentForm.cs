@@ -440,9 +440,11 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                     {
                         case "image":
                             cajaImagen.EsImagen = true;
+                            AddImageVideo(cajaImagen);
                             break;
                         case "video":
-                            cajaImagen.EsVideo = false;
+                            cajaImagen.EsVideo = true;
+                            AddImageVideo(cajaImagen);
                             break;
                         default:
                             break;
@@ -452,6 +454,14 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             catch (Exception ex)
             {
                 MessageBox.Show("Error en btnFromComputer: " + ex.Message);
+            }
+        }
+
+        private void AddImageVideo(CajaImagen cajaImagen)
+        {
+            if (cajaImagen.EsVideo)
+            {
+
             }
         }
 
