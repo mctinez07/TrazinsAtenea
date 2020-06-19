@@ -440,16 +440,17 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                     {
                         case "image":
                             cajaImagen.EsImagen = true;
-                            AddImageVideo(cajaImagen);
+                            AddImageVideo(cajaImagen, null);
                             break;
                         case "video":
                             cajaImagen.EsVideo = true;
-                            AddImageVideo(cajaImagen);
+                            AddImageVideo(cajaImagen, ofdImageVideo.FileName);
                             break;
                         default:
                             break;
                     }
                 }
+                DialogResult = DialogResult.None;
             }
             catch (Exception ex)
             {
@@ -457,11 +458,11 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             }
         }
 
-        private void AddImageVideo(CajaImagen cajaImagen)
+        private void AddImageVideo(CajaImagen cajaImagen, string url)
         {
             if (cajaImagen.EsVideo)
             {
-
+                wmpVideo.URL = url;
             }
         }
 
@@ -477,7 +478,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                     {
                         var pictureBox = (PictureBox)item;
 
-                        if (pictureBox.Image != null && !pictureBox.Name.Equals("pcbSixthPosition"))
+                        if (pictureBox.Image != null)
                         {
                             numImages++;
                             MessageBox.Show(item.Name + "imagen asociada");

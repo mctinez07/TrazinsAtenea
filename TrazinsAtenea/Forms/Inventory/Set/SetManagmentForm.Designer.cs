@@ -66,6 +66,7 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition29 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition30 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition31 = new DevExpress.XtraLayout.RowDefinition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SetManagmentForm));
             this.pnlHeader = new DevExpress.XtraEditors.PanelControl();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
@@ -201,7 +202,6 @@
             this.pcbFirstPosition = new System.Windows.Forms.PictureBox();
             this.pnlSixthPosition = new DevExpress.XtraEditors.PanelControl();
             this.btnSixthPosition = new DevExpress.XtraEditors.SimpleButton();
-            this.pcbSixthPosition = new System.Windows.Forms.PictureBox();
             this.txtSixthPosition = new DevExpress.XtraEditors.TextEdit();
             this.pnlImageVideoHeader = new DevExpress.XtraEditors.PanelControl();
             this.btnFromCam = new DevExpress.XtraEditors.SimpleButton();
@@ -212,6 +212,7 @@
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::TrazinsAtenea.Forms.GlobalForms.GlobalWaitForm), true, true);
             this.ofdImageVideo = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
+            this.wmpVideo = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).BeginInit();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcBackArrow)).BeginInit();
@@ -311,12 +312,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbFirstPosition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlSixthPosition)).BeginInit();
             this.pnlSixthPosition.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbSixthPosition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSixthPosition.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlImageVideoHeader)).BeginInit();
             this.pnlImageVideoHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wmpVideo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -2112,8 +2113,8 @@
             // pnlSixthPosition
             // 
             this.pnlSixthPosition.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlSixthPosition.Controls.Add(this.wmpVideo);
             this.pnlSixthPosition.Controls.Add(this.btnSixthPosition);
-            this.pnlSixthPosition.Controls.Add(this.pcbSixthPosition);
             this.pnlSixthPosition.Controls.Add(this.txtSixthPosition);
             this.pnlSixthPosition.Location = new System.Drawing.Point(779, 317);
             this.pnlSixthPosition.Name = "pnlSixthPosition";
@@ -2135,16 +2136,6 @@
             this.btnSixthPosition.Name = "btnSixthPosition";
             this.btnSixthPosition.Size = new System.Drawing.Size(32, 32);
             this.btnSixthPosition.TabIndex = 10;
-            // 
-            // pcbSixthPosition
-            // 
-            this.pcbSixthPosition.BackColor = System.Drawing.Color.White;
-            this.pcbSixthPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pcbSixthPosition.Location = new System.Drawing.Point(8, 13);
-            this.pcbSixthPosition.Name = "pcbSixthPosition";
-            this.pcbSixthPosition.Size = new System.Drawing.Size(320, 154);
-            this.pcbSixthPosition.TabIndex = 8;
-            this.pcbSixthPosition.TabStop = false;
             // 
             // txtSixthPosition
             // 
@@ -2242,6 +2233,15 @@
             // splashScreenManager1
             // 
             this.splashScreenManager1.ClosingDelay = 500;
+            // 
+            // wmpVideo
+            // 
+            this.wmpVideo.Enabled = true;
+            this.wmpVideo.Location = new System.Drawing.Point(12, 13);
+            this.wmpVideo.Name = "wmpVideo";
+            this.wmpVideo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("wmpVideo.OcxState")));
+            this.wmpVideo.Size = new System.Drawing.Size(316, 154);
+            this.wmpVideo.TabIndex = 11;
             // 
             // SetManagmentForm
             // 
@@ -2358,13 +2358,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbFirstPosition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlSixthPosition)).EndInit();
             this.pnlSixthPosition.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbSixthPosition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSixthPosition.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlImageVideoHeader)).EndInit();
             this.pnlImageVideoHeader.ResumeLayout(false);
             this.pnlImageVideoHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wmpVideo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2514,8 +2514,8 @@
         private System.Windows.Forms.PictureBox pcbFourthPosition;
         private DevExpress.XtraEditors.PanelControl pnlSixthPosition;
         private DevExpress.XtraEditors.SimpleButton btnSixthPosition;
-        private System.Windows.Forms.PictureBox pcbSixthPosition;
         private DevExpress.XtraEditors.TextEdit txtSixthPosition;
         private DevExpress.XtraEditors.XtraOpenFileDialog ofdImageVideo;
+        private AxWMPLib.AxWindowsMediaPlayer wmpVideo;
     }
 }
