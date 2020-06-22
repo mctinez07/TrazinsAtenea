@@ -1912,6 +1912,7 @@
             this.btnFirstPosition.Name = "btnFirstPosition";
             this.btnFirstPosition.Size = new System.Drawing.Size(32, 32);
             this.btnFirstPosition.TabIndex = 7;
+            this.btnFirstPosition.Click += new System.EventHandler(this.btnFirstPosition_Click);
             // 
             // txtFirstPosition
             // 
@@ -1928,6 +1929,7 @@
             this.pcbFirstPosition.Location = new System.Drawing.Point(8, 9);
             this.pcbFirstPosition.Name = "pcbFirstPosition";
             this.pcbFirstPosition.Size = new System.Drawing.Size(320, 154);
+            this.pcbFirstPosition.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbFirstPosition.TabIndex = 0;
             this.pcbFirstPosition.TabStop = false;
             // 
@@ -1957,6 +1959,7 @@
             this.btnSecondPosition.Name = "btnSecondPosition";
             this.btnSecondPosition.Size = new System.Drawing.Size(32, 32);
             this.btnSecondPosition.TabIndex = 10;
+            this.btnSecondPosition.Click += new System.EventHandler(this.btnSecondPosition_Click);
             // 
             // txtSecondPosition
             // 
@@ -1973,6 +1976,7 @@
             this.pcbSecondPosition.Location = new System.Drawing.Point(8, 13);
             this.pcbSecondPosition.Name = "pcbSecondPosition";
             this.pcbSecondPosition.Size = new System.Drawing.Size(320, 154);
+            this.pcbSecondPosition.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbSecondPosition.TabIndex = 8;
             this.pcbSecondPosition.TabStop = false;
             // 
@@ -2002,6 +2006,7 @@
             this.btnTirthPosition.Name = "btnTirthPosition";
             this.btnTirthPosition.Size = new System.Drawing.Size(32, 32);
             this.btnTirthPosition.TabIndex = 10;
+            this.btnTirthPosition.Click += new System.EventHandler(this.btnTirthPosition_Click);
             // 
             // txtTirthPosition
             // 
@@ -2018,6 +2023,7 @@
             this.pcbTirthPosition.Location = new System.Drawing.Point(8, 13);
             this.pcbTirthPosition.Name = "pcbTirthPosition";
             this.pcbTirthPosition.Size = new System.Drawing.Size(320, 154);
+            this.pcbTirthPosition.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbTirthPosition.TabIndex = 8;
             this.pcbTirthPosition.TabStop = false;
             // 
@@ -2047,6 +2053,7 @@
             this.btnFourthPosition.Name = "btnFourthPosition";
             this.btnFourthPosition.Size = new System.Drawing.Size(32, 32);
             this.btnFourthPosition.TabIndex = 10;
+            this.btnFourthPosition.Click += new System.EventHandler(this.btnFourthPosition_Click);
             // 
             // txtFourthPosition
             // 
@@ -2063,6 +2070,7 @@
             this.pcbFourthPosition.Location = new System.Drawing.Point(8, 13);
             this.pcbFourthPosition.Name = "pcbFourthPosition";
             this.pcbFourthPosition.Size = new System.Drawing.Size(320, 154);
+            this.pcbFourthPosition.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbFourthPosition.TabIndex = 8;
             this.pcbFourthPosition.TabStop = false;
             // 
@@ -2092,6 +2100,7 @@
             this.btnFifthPosition.Name = "btnFifthPosition";
             this.btnFifthPosition.Size = new System.Drawing.Size(32, 32);
             this.btnFifthPosition.TabIndex = 10;
+            this.btnFifthPosition.Click += new System.EventHandler(this.btnFifthPosition_Click);
             // 
             // pcbFifthPosition
             // 
@@ -2100,6 +2109,7 @@
             this.pcbFifthPosition.Location = new System.Drawing.Point(8, 13);
             this.pcbFifthPosition.Name = "pcbFifthPosition";
             this.pcbFifthPosition.Size = new System.Drawing.Size(320, 154);
+            this.pcbFifthPosition.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbFifthPosition.TabIndex = 8;
             this.pcbFifthPosition.TabStop = false;
             // 
@@ -2225,6 +2235,7 @@
             this.btnFromCam.Size = new System.Drawing.Size(156, 48);
             this.btnFromCam.TabIndex = 8;
             this.btnFromCam.Text = "Desde cámara";
+            this.btnFromCam.Click += new System.EventHandler(this.btnFromCam_Click);
             // 
             // labelControl1
             // 

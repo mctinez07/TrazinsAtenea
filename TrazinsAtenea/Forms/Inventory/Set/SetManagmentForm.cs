@@ -15,6 +15,7 @@ using DevExpress.XtraLayout;
 using TrazinsAtenea.ServiceWSTrazinsAtenea;
 using Utils;
 using System.IO;
+using System.Drawing.Imaging;
 
 namespace TrazinsAtenea.Forms.Inventory.Set
 {
@@ -431,44 +432,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 DialogResult = ofdImageVideo.ShowDialog();
                 if(DialogResult == DialogResult.OK)
                 {
-                    //Creamos un nuevo modelo de CajaImagen
-                    CajaImagen cajaImagen = new CajaImagen()
-                    {
-                        Imagen = System.IO.File.ReadAllBytes(ofdImageVideo.FileName),
-                        Nombre = ofdImageVideo.SafeFileName,
-                        Tipo = MIMEAssistant.GetMIMEType(ofdImageVideo.FileName)
-                    };
-
-                    //Obtenemos el tipo de archivo para asignar el valor.
-                    var type = MIMEAssistant.FromFileName(ofdImageVideo.FileName).Type;
-                    switch (type)
-                    {
-                        case "image":
-                            cajaImagen.EsImagen = true;
-
-                            //Obtenemos la imagen para mostrar en el picturebox
-                            using (MemoryStream ms = new MemoryStream(cajaImagen.Imagen))
-                            {
-                                cajaImagen.Image = Image.FromStream(ms);
-                            }
-
-                            AddImageVideo(cajaImagen, null);
-                            break;
-
-                        case "video":
-                            //Comprobar que no machaque si hay uno asociado
-                            if (!string.IsNullOrEmpty(wmpVideo.URL))
-                            {
-                                MessageBox.Show("Hay un video asociado");
-                                DialogResult = DialogResult.None;
-                                return;
-                            }
-                            cajaImagen.EsVideo = true;
-                            AddImageVideo(cajaImagen, ofdImageVideo.FileName);
-                            break;
-                        default:
-                            break;
-                    }
+                    CreateImageModel(false);
                 }
 
                 DialogResult = DialogResult.None;
@@ -534,6 +498,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             return true;
         }
 
+        #region Video Panel
         private void btnPlayVideo_Click(object sender, EventArgs e)
         {
             wmpVideo.Ctlcontrols.play();
@@ -549,6 +514,37 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             DeleteImageVideo(wmpVideo);
         }
+        #endregion
+
+        #region Delete Buttons
+
+        private void btnFirstPosition_Click(object sender, EventArgs e)
+        {
+            DeleteImageVideo(pcbFirstPosition);
+        }
+
+        private void btnSecondPosition_Click(object sender, EventArgs e)
+        {
+            DeleteImageVideo(pcbSecondPosition);
+        }
+
+        private void btnTirthPosition_Click(object sender, EventArgs e)
+        {
+            DeleteImageVideo(pcbTirthPosition);
+        }
+
+        private void btnFourthPosition_Click(object sender, EventArgs e)
+        {
+            DeleteImageVideo(pcbFourthPosition);
+        }
+
+        private void btnFifthPosition_Click(object sender, EventArgs e)
+        {
+            DeleteImageVideo(pcbFifthPosition);
+        }
+
+
+        #endregion
 
         private void DeleteImageVideo(Control control)
         {
@@ -561,6 +557,78 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             {
                 wmpVideo.URL = null;
                 wmpVideo.Visible = false;
+            }
+        }
+
+        private void btnFromCam_Click(object sender, EventArgs e)
+        {
+            WebCamForm frm = new WebCamForm();
+            if(frm.ShowDialog() == DialogResult.OK)
+            {
+                CapturedImage = frm.ImageData;
+                CreateImageModel(true);
+            }
+        }
+
+        private Image CapturedImage;
+
+        private void CreateImageModel(bool fromWebCam)
+        {  
+            CajaImagen cajaImagen = new CajaImagen();
+            string type = string.Empty;
+
+            if (fromWebCam)
+            {
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    //Creamos un nuevo modelo de CajaImagen desde la webcam
+                    CapturedImage.Save(stream, ImageFormat.Jpeg);
+                    cajaImagen.Imagen = stream.ToArray();
+                    cajaImagen.Image = CapturedImage;
+                    cajaImagen.Nombre = DateTime.Now.ToShortDateString().ToString();
+                    cajaImagen.Tipo = "image/jpeg";
+                    type = "image";
+                }
+                
+            }
+            else
+            {
+                //Creamos un nuevo modelo de CajaImagen desde el archivo
+                cajaImagen.Imagen = System.IO.File.ReadAllBytes(ofdImageVideo.FileName);
+                cajaImagen.Nombre = ofdImageVideo.SafeFileName;
+                cajaImagen.Tipo = MIMEAssistant.GetMIMEType(ofdImageVideo.FileName);
+
+                //Obtenemos el tipo de archivo para asignar el valor.
+                type = MIMEAssistant.FromFileName(ofdImageVideo.FileName).Type;
+            }
+           
+            switch (type)
+            {
+                case "image":
+                    cajaImagen.EsImagen = true;
+
+                    //Obtenemos la imagen para mostrar en el picturebox
+                    using (MemoryStream ms = new MemoryStream(cajaImagen.Imagen))
+                    {
+                        cajaImagen.Image = Image.FromStream(ms);
+                    }
+
+                    AddImageVideo(cajaImagen, null);
+                    break;
+
+                case "video":
+                    //Comprobar que no machaque si hay uno asociado
+                    if (!string.IsNullOrEmpty(wmpVideo.URL))
+                    {
+                        MessageBox.Show("Hay un video asociado");
+                        DialogResult = DialogResult.None;
+                        return;
+                    }
+                    cajaImagen.EsVideo = true;
+                    AddImageVideo(cajaImagen, ofdImageVideo.FileName);
+                    break;
+                default:
+                    break;
             }
         }
     }

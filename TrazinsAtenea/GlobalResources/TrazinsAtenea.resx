@@ -259,4 +259,10 @@
   <data name="FilterType" xml:space="preserve">
     <value>Imágenes</value>
   </data>
+  <data name="Accept" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="Capture" xml:space="preserve">
+    <value>Capturar</value>
+  </data>
 </root>

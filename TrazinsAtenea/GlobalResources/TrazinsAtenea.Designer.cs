@@ -61,6 +61,15 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Aceptar.
+        /// </summary>
+        internal static string Accept {
+            get {
+                return ResourceManager.GetString("Accept", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Activa.
         /// </summary>
         internal static string Active {
@@ -102,6 +111,15 @@ namespace TrazinsAtenea.GlobalResources {
         internal static string Caducity {
             get {
                 return ResourceManager.GetString("Caducity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Capturar.
+        /// </summary>
+        internal static string Capture {
+            get {
+                return ResourceManager.GetString("Capture", resourceCulture);
             }
         }
         
