@@ -14,6 +14,7 @@ using DevExpress.XtraTab;
 using DevExpress.XtraLayout;
 using TrazinsAtenea.ServiceWSTrazinsAtenea;
 using Utils;
+using System.IO;
 
 namespace TrazinsAtenea.Forms.Inventory.Set
 {
@@ -408,7 +409,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             try
             {
                 //Comprobamos que hay algún sitio disponible
-                if (!SearchEmptyPictureBox())
+                if (!SearchEmptyPictureBox(null))
                 {
                     return;
                 }               
@@ -430,9 +431,14 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                     {
                         Imagen = System.IO.File.ReadAllBytes(ofdImageVideo.FileName),
                         Nombre = ofdImageVideo.SafeFileName,
-                        Tipo = MIMEAssistant.GetMIMEType(ofdImageVideo.FileName),
-                    
+                        Tipo = MIMEAssistant.GetMIMEType(ofdImageVideo.FileName)
                     };
+
+                    //Obtenemos la imagen para mostrar en el picturebox
+                    using (MemoryStream ms = new MemoryStream(cajaImagen.Imagen))
+                    {
+                        cajaImagen.Image = Image.FromStream(ms);
+                    }
 
                     //Obtenemos el tipo de archivo para asignar el valor.
                     var type = MIMEAssistant.FromFileName(ofdImageVideo.FileName).Type;
@@ -450,11 +456,12 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                             break;
                     }
                 }
+
                 DialogResult = DialogResult.None;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error en btnFromComputer: " + ex.Message);
+                MessageBox.Show("Error en btnFromComputer_Click: " + ex.Message);
             }
         }
 
@@ -464,9 +471,13 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             {
                 wmpVideo.URL = url;
             }
+            if (cajaImagen.EsImagen)
+            {
+                SearchEmptyPictureBox(cajaImagen.Image);
+            }
         }
 
-        private bool SearchEmptyPictureBox()
+        private bool SearchEmptyPictureBox(Image image)
         {
             int numImages = 0;
 
@@ -478,12 +489,20 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                     {
                         var pictureBox = (PictureBox)item;
 
-                        if (pictureBox.Image != null)
+                        //Si no le pasamos una imagen, en el primero libre insertamos la imagen
+                        if(image == null)
                         {
-                            numImages++;
-                            MessageBox.Show(item.Name + "imagen asociada");
+                            if (pictureBox.Image != null)
+                            {
+                                numImages++;
+                                MessageBox.Show(item.Name + "imagen asociada");
+                            }
                         }
-
+                        else
+                        {
+                            pictureBox.Image = image;
+                            return true;
+                        }
                     }
                 }
             }

@@ -201,6 +201,7 @@
             this.txtFirstPosition = new DevExpress.XtraEditors.TextEdit();
             this.pcbFirstPosition = new System.Windows.Forms.PictureBox();
             this.pnlSixthPosition = new DevExpress.XtraEditors.PanelControl();
+            this.wmpVideo = new AxWMPLib.AxWindowsMediaPlayer();
             this.btnSixthPosition = new DevExpress.XtraEditors.SimpleButton();
             this.txtSixthPosition = new DevExpress.XtraEditors.TextEdit();
             this.pnlImageVideoHeader = new DevExpress.XtraEditors.PanelControl();
@@ -212,7 +213,6 @@
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::TrazinsAtenea.Forms.GlobalForms.GlobalWaitForm), true, true);
             this.ofdImageVideo = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
-            this.wmpVideo = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).BeginInit();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcBackArrow)).BeginInit();
@@ -312,12 +312,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbFirstPosition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlSixthPosition)).BeginInit();
             this.pnlSixthPosition.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wmpVideo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSixthPosition.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlImageVideoHeader)).BeginInit();
             this.pnlImageVideoHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wmpVideo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -1893,7 +1893,7 @@
             this.pnlTirthPosition.Location = new System.Drawing.Point(779, 14);
             this.pnlTirthPosition.Name = "pnlTirthPosition";
             this.pnlTirthPosition.Size = new System.Drawing.Size(337, 274);
-            this.pnlTirthPosition.TabIndex = 1;
+            this.pnlTirthPosition.TabIndex = 2;
             // 
             // btnTirthPosition
             // 
@@ -1938,7 +1938,7 @@
             this.pnlFifthPosition.Location = new System.Drawing.Point(400, 317);
             this.pnlFifthPosition.Name = "pnlFifthPosition";
             this.pnlFifthPosition.Size = new System.Drawing.Size(337, 274);
-            this.pnlFifthPosition.TabIndex = 1;
+            this.pnlFifthPosition.TabIndex = 4;
             // 
             // btnFifthPosition
             // 
@@ -2029,7 +2029,7 @@
             this.pnlFourthPosition.Location = new System.Drawing.Point(21, 317);
             this.pnlFourthPosition.Name = "pnlFourthPosition";
             this.pnlFourthPosition.Size = new System.Drawing.Size(337, 274);
-            this.pnlFourthPosition.TabIndex = 1;
+            this.pnlFourthPosition.TabIndex = 3;
             // 
             // btnFourthPosition
             // 
@@ -2119,7 +2119,16 @@
             this.pnlSixthPosition.Location = new System.Drawing.Point(779, 317);
             this.pnlSixthPosition.Name = "pnlSixthPosition";
             this.pnlSixthPosition.Size = new System.Drawing.Size(337, 274);
-            this.pnlSixthPosition.TabIndex = 11;
+            this.pnlSixthPosition.TabIndex = 5;
+            // 
+            // wmpVideo
+            // 
+            this.wmpVideo.Enabled = true;
+            this.wmpVideo.Location = new System.Drawing.Point(12, 13);
+            this.wmpVideo.Name = "wmpVideo";
+            this.wmpVideo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("wmpVideo.OcxState")));
+            this.wmpVideo.Size = new System.Drawing.Size(316, 154);
+            this.wmpVideo.TabIndex = 11;
             // 
             // btnSixthPosition
             // 
@@ -2233,15 +2242,6 @@
             // splashScreenManager1
             // 
             this.splashScreenManager1.ClosingDelay = 500;
-            // 
-            // wmpVideo
-            // 
-            this.wmpVideo.Enabled = true;
-            this.wmpVideo.Location = new System.Drawing.Point(12, 13);
-            this.wmpVideo.Name = "wmpVideo";
-            this.wmpVideo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("wmpVideo.OcxState")));
-            this.wmpVideo.Size = new System.Drawing.Size(316, 154);
-            this.wmpVideo.TabIndex = 11;
             // 
             // SetManagmentForm
             // 
@@ -2358,13 +2358,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbFirstPosition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlSixthPosition)).EndInit();
             this.pnlSixthPosition.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.wmpVideo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSixthPosition.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlImageVideoHeader)).EndInit();
             this.pnlImageVideoHeader.ResumeLayout(false);
             this.pnlImageVideoHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wmpVideo)).EndInit();
             this.ResumeLayout(false);
 
         }
