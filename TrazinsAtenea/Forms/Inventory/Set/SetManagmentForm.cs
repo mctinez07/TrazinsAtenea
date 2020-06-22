@@ -42,7 +42,10 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             LoadComboBoxInformation();
 
             splashScreenManager1.CloseWaitForm();
-           
+
+            wmpVideo.Visible = false;
+            wmpVideo.settings.autoStart = false;
+            wmpVideo.settings.mute = true;
         }
 
         private void MultilanguageFormat()
@@ -94,6 +97,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         private void pcbBack_Click(object sender, EventArgs e)
         {
+            wmpVideo.Ctlcontrols.stop();
             this.Close();
         }
 
@@ -104,6 +108,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
             if (frm.DialogResult == DialogResult.Yes)
             {
+                wmpVideo.Ctlcontrols.stop();
                 this.Close();
             }
         }
@@ -434,21 +439,30 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                         Tipo = MIMEAssistant.GetMIMEType(ofdImageVideo.FileName)
                     };
 
-                    //Obtenemos la imagen para mostrar en el picturebox
-                    using (MemoryStream ms = new MemoryStream(cajaImagen.Imagen))
-                    {
-                        cajaImagen.Image = Image.FromStream(ms);
-                    }
-
                     //Obtenemos el tipo de archivo para asignar el valor.
                     var type = MIMEAssistant.FromFileName(ofdImageVideo.FileName).Type;
                     switch (type)
                     {
                         case "image":
                             cajaImagen.EsImagen = true;
+
+                            //Obtenemos la imagen para mostrar en el picturebox
+                            using (MemoryStream ms = new MemoryStream(cajaImagen.Imagen))
+                            {
+                                cajaImagen.Image = Image.FromStream(ms);
+                            }
+
                             AddImageVideo(cajaImagen, null);
                             break;
+
                         case "video":
+                            //Comprobar que no machaque si hay uno asociado
+                            if (!string.IsNullOrEmpty(wmpVideo.URL))
+                            {
+                                MessageBox.Show("Hay un video asociado");
+                                DialogResult = DialogResult.None;
+                                return;
+                            }
                             cajaImagen.EsVideo = true;
                             AddImageVideo(cajaImagen, ofdImageVideo.FileName);
                             break;
@@ -469,6 +483,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             if (cajaImagen.EsVideo)
             {
+                wmpVideo.Visible = true;
                 wmpVideo.URL = url;
             }
             if (cajaImagen.EsImagen)
@@ -480,41 +495,73 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         private bool SearchEmptyPictureBox(Image image)
         {
             int numImages = 0;
-
+            
             foreach (PanelControl panel in tableLayoutPanel1.Controls)
-            {
+            {                
                 foreach (Control item in panel.Controls)
                 {
                     if (item is PictureBox)
                     {
                         var pictureBox = (PictureBox)item;
-
-                        //Si no le pasamos una imagen, en el primero libre insertamos la imagen
-                        if(image == null)
+                        if (pictureBox.Image != null)
                         {
-                            if (pictureBox.Image != null)
-                            {
-                                numImages++;
-                                MessageBox.Show(item.Name + "imagen asociada");
-                            }
+                            numImages++;                            
                         }
                         else
                         {
-                            pictureBox.Image = image;
-                            return true;
+                            if(image != null)
+                            {
+                                    pictureBox.Image = image;
+                                    return true;
+                            }
                         }
+                        
+                    }
+
+                    if (numImages == 5 && string.IsNullOrEmpty(wmpVideo.URL))
+                    {
+                        //Traducir desde bd
+                        MessageBox.Show("NO se pueden añadir más elementos");
+                        return false;
+                    }
+                    else if(numImages == 5 && !string.IsNullOrEmpty(wmpVideo.URL))
+                    {
+                        MessageBox.Show("Solo se puede añadir video");
                     }
                 }
-            }
-
-            if (numImages == 5)
-            {
-                //Traducir desde bd
-                MessageBox.Show("No hay hueco");
-                return false;
-            }
+            }            
 
             return true;
+        }
+
+        private void btnPlayVideo_Click(object sender, EventArgs e)
+        {
+            wmpVideo.Ctlcontrols.play();
+            wmpVideo.settings.mute = true;
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            wmpVideo.Ctlcontrols.stop();
+        }
+
+        private void btnSixthPosition_Click(object sender, EventArgs e)
+        {
+            DeleteImageVideo(wmpVideo);
+        }
+
+        private void DeleteImageVideo(Control control)
+        {
+            if(control is PictureBox)
+            {
+                var pcb = (PictureBox)control;
+                pcb.Image = null;
+            }
+            else
+            {
+                wmpVideo.URL = null;
+                wmpVideo.Visible = false;
+            }
         }
     }
 }

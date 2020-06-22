@@ -193,6 +193,16 @@ namespace TrazinsAtenea.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap play_24x24 {
+            get {
+                object obj = ResourceManager.GetObject("play-24x24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap qr_24x24 {
             get {
                 object obj = ResourceManager.GetObject("qr-24x24", resourceCulture);
@@ -206,6 +216,16 @@ namespace TrazinsAtenea.Properties {
         internal static System.Drawing.Bitmap qr_48x48 {
             get {
                 object obj = ResourceManager.GetObject("qr-48x48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stop_24x24 {
+            get {
+                object obj = ResourceManager.GetObject("stop-24x24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

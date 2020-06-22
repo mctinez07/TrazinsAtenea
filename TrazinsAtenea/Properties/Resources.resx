@@ -136,6 +136,9 @@
   <data name="ic_arrow_drop_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_arrow_drop_down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="delete-48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete-48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="arrow_back-48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow_back-48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,8 +154,11 @@
   <data name="caja-24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\caja-24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete-48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete-48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="play-24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play-24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete-24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete-24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="qr-48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\qr-48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,7 +166,7 @@
   <data name="instrumental-18x18" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\instrumental-18x18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete-24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete-24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="stop-24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stop-24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

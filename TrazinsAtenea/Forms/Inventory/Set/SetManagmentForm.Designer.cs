@@ -180,27 +180,29 @@
             this.xtpImageVideo = new DevExpress.XtraTab.XtraTabPage();
             this.pnlImageVideo = new DevExpress.XtraEditors.PanelControl();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pnlTirthPosition = new DevExpress.XtraEditors.PanelControl();
-            this.btnTirthPosition = new DevExpress.XtraEditors.SimpleButton();
-            this.txtTirthPosition = new DevExpress.XtraEditors.TextEdit();
-            this.pcbTirthPosition = new System.Windows.Forms.PictureBox();
-            this.pnlFifthPosition = new DevExpress.XtraEditors.PanelControl();
-            this.btnFifthPosition = new DevExpress.XtraEditors.SimpleButton();
-            this.pcbFifthPosition = new System.Windows.Forms.PictureBox();
-            this.txtFifthPosition = new DevExpress.XtraEditors.TextEdit();
-            this.pnlSecondPosition = new DevExpress.XtraEditors.PanelControl();
-            this.btnSecondPosition = new DevExpress.XtraEditors.SimpleButton();
-            this.txtSecondPosition = new DevExpress.XtraEditors.TextEdit();
-            this.pcbSecondPosition = new System.Windows.Forms.PictureBox();
-            this.pnlFourthPosition = new DevExpress.XtraEditors.PanelControl();
-            this.btnFourthPosition = new DevExpress.XtraEditors.SimpleButton();
-            this.txtFourthPosition = new DevExpress.XtraEditors.TextEdit();
-            this.pcbFourthPosition = new System.Windows.Forms.PictureBox();
             this.pnlFirstPosition = new DevExpress.XtraEditors.PanelControl();
             this.btnFirstPosition = new DevExpress.XtraEditors.SimpleButton();
             this.txtFirstPosition = new DevExpress.XtraEditors.TextEdit();
             this.pcbFirstPosition = new System.Windows.Forms.PictureBox();
+            this.pnlSecondPosition = new DevExpress.XtraEditors.PanelControl();
+            this.btnSecondPosition = new DevExpress.XtraEditors.SimpleButton();
+            this.txtSecondPosition = new DevExpress.XtraEditors.TextEdit();
+            this.pcbSecondPosition = new System.Windows.Forms.PictureBox();
+            this.pnlTirthPosition = new DevExpress.XtraEditors.PanelControl();
+            this.btnTirthPosition = new DevExpress.XtraEditors.SimpleButton();
+            this.txtTirthPosition = new DevExpress.XtraEditors.TextEdit();
+            this.pcbTirthPosition = new System.Windows.Forms.PictureBox();
+            this.pnlFourthPosition = new DevExpress.XtraEditors.PanelControl();
+            this.btnFourthPosition = new DevExpress.XtraEditors.SimpleButton();
+            this.txtFourthPosition = new DevExpress.XtraEditors.TextEdit();
+            this.pcbFourthPosition = new System.Windows.Forms.PictureBox();
+            this.pnlFifthPosition = new DevExpress.XtraEditors.PanelControl();
+            this.btnFifthPosition = new DevExpress.XtraEditors.SimpleButton();
+            this.pcbFifthPosition = new System.Windows.Forms.PictureBox();
+            this.txtFifthPosition = new DevExpress.XtraEditors.TextEdit();
             this.pnlSixthPosition = new DevExpress.XtraEditors.PanelControl();
+            this.btnStop = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPlayVideo = new DevExpress.XtraEditors.SimpleButton();
             this.wmpVideo = new AxWMPLib.AxWindowsMediaPlayer();
             this.btnSixthPosition = new DevExpress.XtraEditors.SimpleButton();
             this.txtSixthPosition = new DevExpress.XtraEditors.TextEdit();
@@ -290,26 +292,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlImageVideo)).BeginInit();
             this.pnlImageVideo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlTirthPosition)).BeginInit();
-            this.pnlTirthPosition.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTirthPosition.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTirthPosition)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlFifthPosition)).BeginInit();
-            this.pnlFifthPosition.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbFifthPosition)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFifthPosition.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlSecondPosition)).BeginInit();
-            this.pnlSecondPosition.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSecondPosition.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbSecondPosition)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlFourthPosition)).BeginInit();
-            this.pnlFourthPosition.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFourthPosition.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbFourthPosition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlFirstPosition)).BeginInit();
             this.pnlFirstPosition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtFirstPosition.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFirstPosition)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlSecondPosition)).BeginInit();
+            this.pnlSecondPosition.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSecondPosition.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbSecondPosition)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlTirthPosition)).BeginInit();
+            this.pnlTirthPosition.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTirthPosition.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTirthPosition)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlFourthPosition)).BeginInit();
+            this.pnlFourthPosition.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFourthPosition.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFourthPosition)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlFifthPosition)).BeginInit();
+            this.pnlFifthPosition.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFifthPosition)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFifthPosition.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlSixthPosition)).BeginInit();
             this.pnlSixthPosition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wmpVideo)).BeginInit();
@@ -1869,11 +1871,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.pnlTirthPosition, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pnlFifthPosition, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.pnlSecondPosition, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pnlFourthPosition, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.pnlFirstPosition, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlSecondPosition, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlTirthPosition, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlFourthPosition, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.pnlFifthPosition, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.pnlSixthPosition, 2, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 73);
@@ -1883,6 +1885,96 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1138, 606);
             this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // pnlFirstPosition
+            // 
+            this.pnlFirstPosition.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlFirstPosition.Controls.Add(this.btnFirstPosition);
+            this.pnlFirstPosition.Controls.Add(this.txtFirstPosition);
+            this.pnlFirstPosition.Controls.Add(this.pcbFirstPosition);
+            this.pnlFirstPosition.Location = new System.Drawing.Point(21, 14);
+            this.pnlFirstPosition.Name = "pnlFirstPosition";
+            this.pnlFirstPosition.Size = new System.Drawing.Size(337, 274);
+            this.pnlFirstPosition.TabIndex = 0;
+            // 
+            // btnFirstPosition
+            // 
+            this.btnFirstPosition.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnFirstPosition.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
+            this.btnFirstPosition.Appearance.Options.UseFont = true;
+            this.btnFirstPosition.Appearance.Options.UseForeColor = true;
+            this.btnFirstPosition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFirstPosition.CausesValidation = false;
+            this.btnFirstPosition.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.delete_24x24;
+            this.btnFirstPosition.Location = new System.Drawing.Point(296, 226);
+            this.btnFirstPosition.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnFirstPosition.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnFirstPosition.Name = "btnFirstPosition";
+            this.btnFirstPosition.Size = new System.Drawing.Size(32, 32);
+            this.btnFirstPosition.TabIndex = 7;
+            // 
+            // txtFirstPosition
+            // 
+            this.txtFirstPosition.Location = new System.Drawing.Point(8, 174);
+            this.txtFirstPosition.Name = "txtFirstPosition";
+            this.txtFirstPosition.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstPosition.Properties.Appearance.Options.UseFont = true;
+            this.txtFirstPosition.Size = new System.Drawing.Size(320, 36);
+            this.txtFirstPosition.TabIndex = 2;
+            // 
+            // pcbFirstPosition
+            // 
+            this.pcbFirstPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcbFirstPosition.Location = new System.Drawing.Point(8, 9);
+            this.pcbFirstPosition.Name = "pcbFirstPosition";
+            this.pcbFirstPosition.Size = new System.Drawing.Size(320, 154);
+            this.pcbFirstPosition.TabIndex = 0;
+            this.pcbFirstPosition.TabStop = false;
+            // 
+            // pnlSecondPosition
+            // 
+            this.pnlSecondPosition.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlSecondPosition.Controls.Add(this.btnSecondPosition);
+            this.pnlSecondPosition.Controls.Add(this.txtSecondPosition);
+            this.pnlSecondPosition.Controls.Add(this.pcbSecondPosition);
+            this.pnlSecondPosition.Location = new System.Drawing.Point(400, 14);
+            this.pnlSecondPosition.Name = "pnlSecondPosition";
+            this.pnlSecondPosition.Size = new System.Drawing.Size(337, 274);
+            this.pnlSecondPosition.TabIndex = 1;
+            // 
+            // btnSecondPosition
+            // 
+            this.btnSecondPosition.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnSecondPosition.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
+            this.btnSecondPosition.Appearance.Options.UseFont = true;
+            this.btnSecondPosition.Appearance.Options.UseForeColor = true;
+            this.btnSecondPosition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSecondPosition.CausesValidation = false;
+            this.btnSecondPosition.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.delete_24x24;
+            this.btnSecondPosition.Location = new System.Drawing.Point(296, 230);
+            this.btnSecondPosition.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnSecondPosition.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnSecondPosition.Name = "btnSecondPosition";
+            this.btnSecondPosition.Size = new System.Drawing.Size(32, 32);
+            this.btnSecondPosition.TabIndex = 10;
+            // 
+            // txtSecondPosition
+            // 
+            this.txtSecondPosition.Location = new System.Drawing.Point(8, 178);
+            this.txtSecondPosition.Name = "txtSecondPosition";
+            this.txtSecondPosition.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSecondPosition.Properties.Appearance.Options.UseFont = true;
+            this.txtSecondPosition.Size = new System.Drawing.Size(320, 36);
+            this.txtSecondPosition.TabIndex = 9;
+            // 
+            // pcbSecondPosition
+            // 
+            this.pcbSecondPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcbSecondPosition.Location = new System.Drawing.Point(8, 13);
+            this.pcbSecondPosition.Name = "pcbSecondPosition";
+            this.pcbSecondPosition.Size = new System.Drawing.Size(320, 154);
+            this.pcbSecondPosition.TabIndex = 8;
+            this.pcbSecondPosition.TabStop = false;
             // 
             // pnlTirthPosition
             // 
@@ -1928,6 +2020,51 @@
             this.pcbTirthPosition.Size = new System.Drawing.Size(320, 154);
             this.pcbTirthPosition.TabIndex = 8;
             this.pcbTirthPosition.TabStop = false;
+            // 
+            // pnlFourthPosition
+            // 
+            this.pnlFourthPosition.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlFourthPosition.Controls.Add(this.btnFourthPosition);
+            this.pnlFourthPosition.Controls.Add(this.txtFourthPosition);
+            this.pnlFourthPosition.Controls.Add(this.pcbFourthPosition);
+            this.pnlFourthPosition.Location = new System.Drawing.Point(21, 317);
+            this.pnlFourthPosition.Name = "pnlFourthPosition";
+            this.pnlFourthPosition.Size = new System.Drawing.Size(337, 274);
+            this.pnlFourthPosition.TabIndex = 3;
+            // 
+            // btnFourthPosition
+            // 
+            this.btnFourthPosition.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnFourthPosition.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
+            this.btnFourthPosition.Appearance.Options.UseFont = true;
+            this.btnFourthPosition.Appearance.Options.UseForeColor = true;
+            this.btnFourthPosition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFourthPosition.CausesValidation = false;
+            this.btnFourthPosition.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.delete_24x24;
+            this.btnFourthPosition.Location = new System.Drawing.Point(296, 230);
+            this.btnFourthPosition.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnFourthPosition.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnFourthPosition.Name = "btnFourthPosition";
+            this.btnFourthPosition.Size = new System.Drawing.Size(32, 32);
+            this.btnFourthPosition.TabIndex = 10;
+            // 
+            // txtFourthPosition
+            // 
+            this.txtFourthPosition.Location = new System.Drawing.Point(8, 178);
+            this.txtFourthPosition.Name = "txtFourthPosition";
+            this.txtFourthPosition.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFourthPosition.Properties.Appearance.Options.UseFont = true;
+            this.txtFourthPosition.Size = new System.Drawing.Size(320, 36);
+            this.txtFourthPosition.TabIndex = 9;
+            // 
+            // pcbFourthPosition
+            // 
+            this.pcbFourthPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcbFourthPosition.Location = new System.Drawing.Point(8, 13);
+            this.pcbFourthPosition.Name = "pcbFourthPosition";
+            this.pcbFourthPosition.Size = new System.Drawing.Size(320, 154);
+            this.pcbFourthPosition.TabIndex = 8;
+            this.pcbFourthPosition.TabStop = false;
             // 
             // pnlFifthPosition
             // 
@@ -1975,144 +2112,11 @@
             this.txtFifthPosition.Size = new System.Drawing.Size(320, 36);
             this.txtFifthPosition.TabIndex = 9;
             // 
-            // pnlSecondPosition
-            // 
-            this.pnlSecondPosition.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlSecondPosition.Controls.Add(this.btnSecondPosition);
-            this.pnlSecondPosition.Controls.Add(this.txtSecondPosition);
-            this.pnlSecondPosition.Controls.Add(this.pcbSecondPosition);
-            this.pnlSecondPosition.Location = new System.Drawing.Point(400, 14);
-            this.pnlSecondPosition.Name = "pnlSecondPosition";
-            this.pnlSecondPosition.Size = new System.Drawing.Size(337, 274);
-            this.pnlSecondPosition.TabIndex = 1;
-            // 
-            // btnSecondPosition
-            // 
-            this.btnSecondPosition.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnSecondPosition.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
-            this.btnSecondPosition.Appearance.Options.UseFont = true;
-            this.btnSecondPosition.Appearance.Options.UseForeColor = true;
-            this.btnSecondPosition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSecondPosition.CausesValidation = false;
-            this.btnSecondPosition.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.delete_24x24;
-            this.btnSecondPosition.Location = new System.Drawing.Point(296, 230);
-            this.btnSecondPosition.LookAndFeel.SkinName = "DevExpress Style";
-            this.btnSecondPosition.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnSecondPosition.Name = "btnSecondPosition";
-            this.btnSecondPosition.Size = new System.Drawing.Size(32, 32);
-            this.btnSecondPosition.TabIndex = 10;
-            // 
-            // txtSecondPosition
-            // 
-            this.txtSecondPosition.Location = new System.Drawing.Point(8, 178);
-            this.txtSecondPosition.Name = "txtSecondPosition";
-            this.txtSecondPosition.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSecondPosition.Properties.Appearance.Options.UseFont = true;
-            this.txtSecondPosition.Size = new System.Drawing.Size(320, 36);
-            this.txtSecondPosition.TabIndex = 9;
-            // 
-            // pcbSecondPosition
-            // 
-            this.pcbSecondPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pcbSecondPosition.Location = new System.Drawing.Point(8, 13);
-            this.pcbSecondPosition.Name = "pcbSecondPosition";
-            this.pcbSecondPosition.Size = new System.Drawing.Size(320, 154);
-            this.pcbSecondPosition.TabIndex = 8;
-            this.pcbSecondPosition.TabStop = false;
-            // 
-            // pnlFourthPosition
-            // 
-            this.pnlFourthPosition.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlFourthPosition.Controls.Add(this.btnFourthPosition);
-            this.pnlFourthPosition.Controls.Add(this.txtFourthPosition);
-            this.pnlFourthPosition.Controls.Add(this.pcbFourthPosition);
-            this.pnlFourthPosition.Location = new System.Drawing.Point(21, 317);
-            this.pnlFourthPosition.Name = "pnlFourthPosition";
-            this.pnlFourthPosition.Size = new System.Drawing.Size(337, 274);
-            this.pnlFourthPosition.TabIndex = 3;
-            // 
-            // btnFourthPosition
-            // 
-            this.btnFourthPosition.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnFourthPosition.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
-            this.btnFourthPosition.Appearance.Options.UseFont = true;
-            this.btnFourthPosition.Appearance.Options.UseForeColor = true;
-            this.btnFourthPosition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFourthPosition.CausesValidation = false;
-            this.btnFourthPosition.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.delete_24x24;
-            this.btnFourthPosition.Location = new System.Drawing.Point(296, 230);
-            this.btnFourthPosition.LookAndFeel.SkinName = "DevExpress Style";
-            this.btnFourthPosition.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnFourthPosition.Name = "btnFourthPosition";
-            this.btnFourthPosition.Size = new System.Drawing.Size(32, 32);
-            this.btnFourthPosition.TabIndex = 10;
-            // 
-            // txtFourthPosition
-            // 
-            this.txtFourthPosition.Location = new System.Drawing.Point(8, 178);
-            this.txtFourthPosition.Name = "txtFourthPosition";
-            this.txtFourthPosition.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFourthPosition.Properties.Appearance.Options.UseFont = true;
-            this.txtFourthPosition.Size = new System.Drawing.Size(320, 36);
-            this.txtFourthPosition.TabIndex = 9;
-            // 
-            // pcbFourthPosition
-            // 
-            this.pcbFourthPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pcbFourthPosition.Location = new System.Drawing.Point(8, 13);
-            this.pcbFourthPosition.Name = "pcbFourthPosition";
-            this.pcbFourthPosition.Size = new System.Drawing.Size(320, 154);
-            this.pcbFourthPosition.TabIndex = 8;
-            this.pcbFourthPosition.TabStop = false;
-            // 
-            // pnlFirstPosition
-            // 
-            this.pnlFirstPosition.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlFirstPosition.Controls.Add(this.btnFirstPosition);
-            this.pnlFirstPosition.Controls.Add(this.txtFirstPosition);
-            this.pnlFirstPosition.Controls.Add(this.pcbFirstPosition);
-            this.pnlFirstPosition.Location = new System.Drawing.Point(21, 14);
-            this.pnlFirstPosition.Name = "pnlFirstPosition";
-            this.pnlFirstPosition.Size = new System.Drawing.Size(337, 274);
-            this.pnlFirstPosition.TabIndex = 0;
-            // 
-            // btnFirstPosition
-            // 
-            this.btnFirstPosition.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnFirstPosition.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
-            this.btnFirstPosition.Appearance.Options.UseFont = true;
-            this.btnFirstPosition.Appearance.Options.UseForeColor = true;
-            this.btnFirstPosition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFirstPosition.CausesValidation = false;
-            this.btnFirstPosition.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.delete_24x24;
-            this.btnFirstPosition.Location = new System.Drawing.Point(296, 226);
-            this.btnFirstPosition.LookAndFeel.SkinName = "DevExpress Style";
-            this.btnFirstPosition.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnFirstPosition.Name = "btnFirstPosition";
-            this.btnFirstPosition.Size = new System.Drawing.Size(32, 32);
-            this.btnFirstPosition.TabIndex = 7;
-            // 
-            // txtFirstPosition
-            // 
-            this.txtFirstPosition.Location = new System.Drawing.Point(8, 174);
-            this.txtFirstPosition.Name = "txtFirstPosition";
-            this.txtFirstPosition.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstPosition.Properties.Appearance.Options.UseFont = true;
-            this.txtFirstPosition.Size = new System.Drawing.Size(320, 36);
-            this.txtFirstPosition.TabIndex = 2;
-            // 
-            // pcbFirstPosition
-            // 
-            this.pcbFirstPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pcbFirstPosition.Location = new System.Drawing.Point(8, 9);
-            this.pcbFirstPosition.Name = "pcbFirstPosition";
-            this.pcbFirstPosition.Size = new System.Drawing.Size(320, 154);
-            this.pcbFirstPosition.TabIndex = 0;
-            this.pcbFirstPosition.TabStop = false;
-            // 
             // pnlSixthPosition
             // 
             this.pnlSixthPosition.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlSixthPosition.Controls.Add(this.btnStop);
+            this.pnlSixthPosition.Controls.Add(this.btnPlayVideo);
             this.pnlSixthPosition.Controls.Add(this.wmpVideo);
             this.pnlSixthPosition.Controls.Add(this.btnSixthPosition);
             this.pnlSixthPosition.Controls.Add(this.txtSixthPosition);
@@ -2120,6 +2124,40 @@
             this.pnlSixthPosition.Name = "pnlSixthPosition";
             this.pnlSixthPosition.Size = new System.Drawing.Size(337, 274);
             this.pnlSixthPosition.TabIndex = 5;
+            // 
+            // btnStop
+            // 
+            this.btnStop.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnStop.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
+            this.btnStop.Appearance.Options.UseFont = true;
+            this.btnStop.Appearance.Options.UseForeColor = true;
+            this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnStop.CausesValidation = false;
+            this.btnStop.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.stop_24x24;
+            this.btnStop.Location = new System.Drawing.Point(247, 230);
+            this.btnStop.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnStop.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(32, 32);
+            this.btnStop.TabIndex = 13;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
+            // btnPlayVideo
+            // 
+            this.btnPlayVideo.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnPlayVideo.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
+            this.btnPlayVideo.Appearance.Options.UseFont = true;
+            this.btnPlayVideo.Appearance.Options.UseForeColor = true;
+            this.btnPlayVideo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPlayVideo.CausesValidation = false;
+            this.btnPlayVideo.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.play_24x24;
+            this.btnPlayVideo.Location = new System.Drawing.Point(198, 230);
+            this.btnPlayVideo.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnPlayVideo.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnPlayVideo.Name = "btnPlayVideo";
+            this.btnPlayVideo.Size = new System.Drawing.Size(32, 32);
+            this.btnPlayVideo.TabIndex = 12;
+            this.btnPlayVideo.Click += new System.EventHandler(this.btnPlayVideo_Click);
             // 
             // wmpVideo
             // 
@@ -2145,6 +2183,7 @@
             this.btnSixthPosition.Name = "btnSixthPosition";
             this.btnSixthPosition.Size = new System.Drawing.Size(32, 32);
             this.btnSixthPosition.TabIndex = 10;
+            this.btnSixthPosition.Click += new System.EventHandler(this.btnSixthPosition_Click);
             // 
             // txtSixthPosition
             // 
@@ -2336,26 +2375,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlImageVideo)).EndInit();
             this.pnlImageVideo.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pnlTirthPosition)).EndInit();
-            this.pnlTirthPosition.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtTirthPosition.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTirthPosition)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlFifthPosition)).EndInit();
-            this.pnlFifthPosition.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbFifthPosition)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFifthPosition.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlSecondPosition)).EndInit();
-            this.pnlSecondPosition.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtSecondPosition.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbSecondPosition)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlFourthPosition)).EndInit();
-            this.pnlFourthPosition.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtFourthPosition.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbFourthPosition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlFirstPosition)).EndInit();
             this.pnlFirstPosition.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtFirstPosition.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFirstPosition)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlSecondPosition)).EndInit();
+            this.pnlSecondPosition.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtSecondPosition.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbSecondPosition)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlTirthPosition)).EndInit();
+            this.pnlTirthPosition.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtTirthPosition.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTirthPosition)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlFourthPosition)).EndInit();
+            this.pnlFourthPosition.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtFourthPosition.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFourthPosition)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlFifthPosition)).EndInit();
+            this.pnlFifthPosition.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFifthPosition)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFifthPosition.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlSixthPosition)).EndInit();
             this.pnlSixthPosition.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.wmpVideo)).EndInit();
@@ -2517,5 +2556,7 @@
         private DevExpress.XtraEditors.TextEdit txtSixthPosition;
         private DevExpress.XtraEditors.XtraOpenFileDialog ofdImageVideo;
         private AxWMPLib.AxWindowsMediaPlayer wmpVideo;
+        private DevExpress.XtraEditors.SimpleButton btnPlayVideo;
+        private DevExpress.XtraEditors.SimpleButton btnStop;
     }
 }
