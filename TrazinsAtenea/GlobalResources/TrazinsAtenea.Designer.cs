@@ -241,6 +241,15 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Nuevo Grupo.
+        /// </summary>
+        internal static string GroupNew {
+            get {
+                return ResourceManager.GetString("GroupNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ver Histórico.
         /// </summary>
         internal static string Historical {

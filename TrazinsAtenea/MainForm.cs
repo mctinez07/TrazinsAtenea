@@ -24,7 +24,7 @@ namespace TrazinsAtenea
 
             lblMainTimer.Text = DateTime.Now.ToString();
 
-            //Traducir();
+            Traducir();
         }
         
         // Método para probar las traducciones.

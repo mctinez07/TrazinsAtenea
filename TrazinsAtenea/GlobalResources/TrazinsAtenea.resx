@@ -277,4 +277,7 @@
   <data name="OpenFileDialogTitle" xml:space="preserve">
     <value>Abrir archivo</value>
   </data>
+  <data name="GroupNew" xml:space="preserve">
+    <value>Nuevo Grupo</value>
+  </data>
 </root>
