@@ -587,8 +587,9 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                     cajaImagen.Image = CapturedImage;
                     cajaImagen.Nombre = DateTime.Now.ToShortDateString().ToString();
                     cajaImagen.Tipo = "image/jpeg";
-                    type = "image";
+                    type = "image";                    
                 }
+                
                 
             }
             else
@@ -597,11 +598,11 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 cajaImagen.Imagen = System.IO.File.ReadAllBytes(ofdImageVideo.FileName);
                 cajaImagen.Nombre = ofdImageVideo.SafeFileName;
                 cajaImagen.Tipo = MIMEAssistant.GetMIMEType(ofdImageVideo.FileName);
-
+                
                 //Obtenemos el tipo de archivo para asignar el valor.
                 type = MIMEAssistant.FromFileName(ofdImageVideo.FileName).Type;
-            }
-           
+            }                        
+
             switch (type)
             {
                 case "image":
@@ -611,6 +612,14 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                     using (MemoryStream ms = new MemoryStream(cajaImagen.Imagen))
                     {
                         cajaImagen.Image = Image.FromStream(ms);
+                        var weight = ms.Length;
+
+                        if (!GetWeightImage(ms))
+                        {
+                            MessageBox.Show("Tamaño de imagen superior al permitido");
+                            DialogResult = DialogResult.None;
+                            return;
+                        }                        
                     }
 
                     AddImageVideo(cajaImagen, null);
@@ -630,6 +639,16 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 default:
                     break;
             }
+        }
+
+        private bool GetWeightImage(MemoryStream ms)
+        {
+            //Falta probar tamaño de vídeos...
+            if (ms.Length > 3670016)//3,5 MB
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
