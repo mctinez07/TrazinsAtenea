@@ -367,6 +367,15 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Abrir archivo.
+        /// </summary>
+        internal static string OpenFileDialogTitle {
+            get {
+                return ResourceManager.GetString("OpenFileDialogTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Embalaje.
         /// </summary>
         internal static string Package {

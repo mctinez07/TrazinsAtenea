@@ -786,7 +786,7 @@
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Idioma" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Texto" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Tipo" type="xs:int" />
+      <xs:element minOccurs="0" name="TipoId" type="xs:int" />
       <xs:element minOccurs="0" name="Titulo" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

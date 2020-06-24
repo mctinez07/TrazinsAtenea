@@ -32,8 +32,9 @@
             this.btnNo = new DevExpress.XtraEditors.SimpleButton();
             this.lblMessage = new System.Windows.Forms.Label();
             this.lblMessageTitle = new System.Windows.Forms.Label();
-            this.pcbAtention = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbAtention)).BeginInit();
+            this.btnAccept = new DevExpress.XtraEditors.SimpleButton();
+            this.pcbMessageIcon = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbMessageIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // btnYes
@@ -95,21 +96,41 @@
             this.lblMessageTitle.BackColor = System.Drawing.Color.White;
             this.lblMessageTitle.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessageTitle.ForeColor = System.Drawing.Color.Black;
-            this.lblMessageTitle.Location = new System.Drawing.Point(168, 184);
+            this.lblMessageTitle.Location = new System.Drawing.Point(161, 184);
             this.lblMessageTitle.Name = "lblMessageTitle";
             this.lblMessageTitle.Size = new System.Drawing.Size(150, 40);
             this.lblMessageTitle.TabIndex = 13;
             this.lblMessageTitle.Text = "Atención";
             // 
-            // pcbAtention
+            // btnAccept
             // 
-            this.pcbAtention.BackColor = System.Drawing.Color.White;
-            this.pcbAtention.Location = new System.Drawing.Point(180, 44);
-            this.pcbAtention.Name = "pcbAtention";
-            this.pcbAtention.Size = new System.Drawing.Size(126, 126);
-            this.pcbAtention.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbAtention.TabIndex = 15;
-            this.pcbAtention.TabStop = false;
+            this.btnAccept.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
+            this.btnAccept.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccept.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnAccept.Appearance.Options.UseBackColor = true;
+            this.btnAccept.Appearance.Options.UseFont = true;
+            this.btnAccept.Appearance.Options.UseForeColor = true;
+            this.btnAccept.Location = new System.Drawing.Point(243, 415);
+            this.btnAccept.LookAndFeel.SkinMaskColor = System.Drawing.Color.White;
+            this.btnAccept.LookAndFeel.SkinMaskColor2 = System.Drawing.Color.White;
+            this.btnAccept.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnAccept.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(106, 52);
+            this.btnAccept.TabIndex = 16;
+            this.btnAccept.Text = "Aceptar";
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
+            // 
+            // pcbMessageIcon
+            // 
+            this.pcbMessageIcon.BackColor = System.Drawing.Color.White;
+            this.pcbMessageIcon.Image = global::TrazinsAtenea.Properties.Resources.info_48x48;
+            this.pcbMessageIcon.Location = new System.Drawing.Point(180, 44);
+            this.pcbMessageIcon.Name = "pcbMessageIcon";
+            this.pcbMessageIcon.Size = new System.Drawing.Size(126, 126);
+            this.pcbMessageIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbMessageIcon.TabIndex = 15;
+            this.pcbMessageIcon.TabStop = false;
             // 
             // MessageForm
             // 
@@ -121,7 +142,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 481);
-            this.Controls.Add(this.pcbAtention);
+            this.Controls.Add(this.btnAccept);
+            this.Controls.Add(this.pcbMessageIcon);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.lblMessageTitle);
             this.Controls.Add(this.btnNo);
@@ -135,7 +157,7 @@
             this.Name = "MessageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.MessageForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbAtention)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbMessageIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,8 +167,9 @@
 
         private DevExpress.XtraEditors.SimpleButton btnYes;
         private DevExpress.XtraEditors.SimpleButton btnNo;
-        private System.Windows.Forms.PictureBox pcbAtention;
+        private System.Windows.Forms.PictureBox pcbMessageIcon;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Label lblMessageTitle;
+        private DevExpress.XtraEditors.SimpleButton btnAccept;
     }
 }

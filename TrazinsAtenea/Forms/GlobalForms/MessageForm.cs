@@ -47,12 +47,34 @@ namespace TrazinsAtenea.Forms.GlobalForms
 
                 lblMessageTitle.Text = message.Titulo;
                 lblMessage.Text = message.Texto;
+
+                //Establecemos los botones según el tipo de mensaje
+                SetButtonsStates(message.TipoId);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error en MessageForm_Load: " + ex.Message);
             }
             
+        }
+
+        private void SetButtonsStates(int tipo)
+        {
+            switch (tipo)
+            {
+                case 1: //Atención
+                    btnAccept.Visible = false;
+                    pcbMessageIcon.Image = Properties.Resources.warning_48x48;
+                    break;
+                case 2://Información.
+                    btnNo.Visible = false;
+                    btnYes.Visible = false;
+                    pcbMessageIcon.Image = Properties.Resources.info_48x48;
+                    btnAccept.Location = new Point(355, 415);
+                    break;
+                default:
+                    break;
+            };
         }
 
         private void btnYes_Click(object sender, EventArgs e)
@@ -68,6 +90,11 @@ namespace TrazinsAtenea.Forms.GlobalForms
         private void pcbExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
         }
     }
 }

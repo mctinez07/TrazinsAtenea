@@ -274,4 +274,7 @@
   <data name="FilterVideoTypes" xml:space="preserve">
     <value>(*.avi, *.mp4, *.mpeg, *.mpg, *.wmv) | *.avi; *.mp4; *.mpeg; *.mpg; *.wmv</value>
   </data>
+  <data name="OpenFileDialogTitle" xml:space="preserve">
+    <value>Abrir archivo</value>
+  </data>
 </root>

@@ -1070,7 +1070,7 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         private string TextoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TipoField;
+        private int TipoIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TituloField;
@@ -1125,14 +1125,14 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Tipo {
+        public int TipoId {
             get {
-                return this.TipoField;
+                return this.TipoIdField;
             }
             set {
-                if ((this.TipoField.Equals(value) != true)) {
-                    this.TipoField = value;
-                    this.RaisePropertyChanged("Tipo");
+                if ((this.TipoIdField.Equals(value) != true)) {
+                    this.TipoIdField = value;
+                    this.RaisePropertyChanged("TipoId");
                 }
             }
         }

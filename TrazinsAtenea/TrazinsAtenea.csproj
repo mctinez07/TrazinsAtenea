@@ -341,6 +341,12 @@
   <ItemGroup>
     <None Include="Resources\stop-24x24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-48x48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>ROBOCOPY "$(TargetDir) " "$(TargetDir)libs\ " /XF *.exe *.config *.manifest /XD libs logs data /E /IS /MOVE

@@ -27,6 +27,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         private List<Limpieza> MethodsWashingList;
         private List<Esterilizacion> MethodsSteriList;
         private List<AlmacenesUbicaciones> UbicationList;
+        private bool onlyVideos = false;
 
         public SetManagmentForm()
         {
@@ -420,15 +421,24 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                     return;
                 }
 
-                ofdImageVideo.Filter = GlobalResources.TrazinsAtenea.FilterImageType + 
+                if (onlyVideos)
+                {
+                    var formatFilterVideo = GlobalResources.TrazinsAtenea.FilterVideoType.Replace('|', ' ');
+                    ofdImageVideo.Filter = formatFilterVideo + GlobalResources.TrazinsAtenea.FilterVideoTypes;
+                }
+                else
+                {
+                    ofdImageVideo.Filter = GlobalResources.TrazinsAtenea.FilterImageType +
                     GlobalResources.TrazinsAtenea.FilterImageTypes;
                     //" (*.jpeg, *.jpg, *.png, *.gif)|*.jpeg;*.jpg;*.png;*.gif";
-                ofdImageVideo.Filter += GlobalResources.TrazinsAtenea.FilterVideoType +
-                    GlobalResources.TrazinsAtenea.FilterVideoTypes;
-                //ofdImageVideo.Filter += "|Archivos vídeo (*.avi,*.mp4, *.mpeg, *.mpg, *.wmv)|*.avi;*.mp4;*.mpeg;*.mpg;*.wmv";
+                    ofdImageVideo.Filter += GlobalResources.TrazinsAtenea.FilterVideoType +
+                        GlobalResources.TrazinsAtenea.FilterVideoTypes;
+                    //ofdImageVideo.Filter += "|Archivos vídeo (*.avi,*.mp4, *.mpeg, *.mpg, *.wmv)|*.avi;*.mp4;*.mpeg;*.mpg;*.wmv";
+                }
+
                 ofdImageVideo.FilterIndex = 1;
                 ofdImageVideo.InitialDirectory = @"C:\";
-                ofdImageVideo.Title = "Open File";
+                ofdImageVideo.Title = GlobalResources.TrazinsAtenea.OpenFileDialogTitle;
                 ofdImageVideo.CheckFileExists = false;
 
                 DialogResult = ofdImageVideo.ShowDialog();
@@ -485,15 +495,20 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                         
                     }
 
-                    if (numImages == 5 && string.IsNullOrEmpty(wmpVideo.URL))
+                    if (numImages == 5 && !string.IsNullOrEmpty(wmpVideo.URL))
                     {
                         //Traducir desde bd
-                        MessageBox.Show("NO se pueden añadir más elementos");
+                        MessageForm frm = new MessageForm(191);
+                        frm.ShowDialog();
                         return false;
                     }
-                    else if(numImages == 5 && !string.IsNullOrEmpty(wmpVideo.URL))
+                    else if(numImages == 5 && string.IsNullOrEmpty(wmpVideo.URL))
                     {
-                        MessageBox.Show("Solo se puede añadir video");
+                        //Crear campo que solo permita archivos de video en el filtro.
+                        onlyVideos = true;
+                        MessageForm frm = new MessageForm(192);
+                        frm.ShowDialog();
+                        return true;
                     }
                 }
             }            
@@ -565,6 +580,11 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         private void btnFromCam_Click(object sender, EventArgs e)
         {
+            if (!SearchEmptyPictureBox(null))
+            {
+                return;
+            }
+
             WebCamForm frm = new WebCamForm();
             if(frm.ShowDialog() == DialogResult.OK)
             {

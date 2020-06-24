@@ -14,7 +14,7 @@ namespace Models.Messages
         public int Id { get; set; }
 
         [DataMember]
-        public int Tipo { get; set; }
+        public int TipoId { get; set; }
 
         //La traducción se selecciona desde DB
         [DataMember]
