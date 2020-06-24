@@ -12,6 +12,7 @@ using TrazinsAtenea.GlobalEngine;
 using TrazinsAtenea.ServiceWSTrazinsAtenea;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Columns;
+using System.Reflection;
 
 namespace TrazinsAtenea.Forms.Inventory.Set
 {
@@ -54,7 +55,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error en SetsForm_Load: " + ex.Message);
+                ErrorMessage.ShowErrorMessage(MethodBase.GetCurrentMethod().Name, ex.Message);
             }
         }
 

@@ -127,6 +127,7 @@
     </Compile>
     <Compile Include="GlobalEngine\BaseModelClient.cs" />
     <Compile Include="GlobalEngine\Engine.cs" />
+    <Compile Include="GlobalEngine\ErrorMessage.cs" />
     <Compile Include="GlobalResources\TrazinsAtenea.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
