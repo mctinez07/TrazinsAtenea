@@ -181,7 +181,7 @@
   <data name="Processes" xml:space="preserve">
     <value>Processes</value>
   </data>
-  <data name="FilterType" xml:space="preserve">
+  <data name="FilterImageType" xml:space="preserve">
     <value>Images</value>
   </data>
   <data name="Accept" xml:space="preserve">
@@ -189,5 +189,11 @@
   </data>
   <data name="Capture" xml:space="preserve">
     <value>Capture</value>
+  </data>
+  <data name="FilterImageTypes" xml:space="preserve">
+    <value> (*.jpeg, *.jpg, *.png, *.gif)|*.jpeg;*.jpg;*.png;*.gif</value>
+  </data>
+  <data name="FilterVideoTypes" xml:space="preserve">
+    <value>(*.avi, *.mp4, *.mpeg, *.mpg, *.wmv) | *.avi; *.mp4; *.mpeg; *.mpg; *.wmv</value>
   </data>
 </root>

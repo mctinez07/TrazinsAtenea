@@ -256,7 +256,7 @@
   <data name="SetCode" xml:space="preserve">
     <value>Código de caja</value>
   </data>
-  <data name="FilterType" xml:space="preserve">
+  <data name="FilterImageType" xml:space="preserve">
     <value>Imágenes</value>
   </data>
   <data name="Accept" xml:space="preserve">
@@ -264,5 +264,14 @@
   </data>
   <data name="Capture" xml:space="preserve">
     <value>Capturar</value>
+  </data>
+  <data name="FilterImageTypes" xml:space="preserve">
+    <value> (*.jpeg, *.jpg, *.png, *.gif)|*.jpeg;*.jpg;*.png;*.gif</value>
+  </data>
+  <data name="FilterVideoType" xml:space="preserve">
+    <value>|Archivos vídeo</value>
+  </data>
+  <data name="FilterVideoTypes" xml:space="preserve">
+    <value>(*.avi, *.mp4, *.mpeg, *.mpg, *.wmv) | *.avi; *.mp4; *.mpeg; *.mpg; *.wmv</value>
   </data>
 </root>

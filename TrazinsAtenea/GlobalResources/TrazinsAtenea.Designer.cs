@@ -189,9 +189,36 @@ namespace TrazinsAtenea.GlobalResources {
         /// <summary>
         ///   Busca una cadena traducida similar a Imágenes.
         /// </summary>
-        internal static string FilterType {
+        internal static string FilterImageType {
             get {
-                return ResourceManager.GetString("FilterType", resourceCulture);
+                return ResourceManager.GetString("FilterImageType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a  (*.jpeg, *.jpg, *.png, *.gif)|*.jpeg;*.jpg;*.png;*.gif.
+        /// </summary>
+        internal static string FilterImageTypes {
+            get {
+                return ResourceManager.GetString("FilterImageTypes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a |Archivos vídeo.
+        /// </summary>
+        internal static string FilterVideoType {
+            get {
+                return ResourceManager.GetString("FilterVideoType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a (*.avi, *.mp4, *.mpeg, *.mpg, *.wmv) | *.avi; *.mp4; *.mpeg; *.mpg; *.wmv.
+        /// </summary>
+        internal static string FilterVideoTypes {
+            get {
+                return ResourceManager.GetString("FilterVideoTypes", resourceCulture);
             }
         }
         

@@ -418,12 +418,14 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 if (!SearchEmptyPictureBox(null))
                 {
                     return;
-                }               
+                }
 
-                //Pasarlo al archivo de recursos
-                ofdImageVideo.Filter = GlobalResources.TrazinsAtenea.FilterType +
-                    " (*.jpeg, *.jpg, *.png, *.gif)|*.jpeg;*.jpg;*.png;*.gif";
-                ofdImageVideo.Filter += "|Archivos vídeo (*.avi,*.mp4, *.mpeg, *.mpg, *.wmv)|*.avi;*.mp4;*.mpeg;*.mpg;*.wmv";
+                ofdImageVideo.Filter = GlobalResources.TrazinsAtenea.FilterImageType + 
+                    GlobalResources.TrazinsAtenea.FilterImageTypes;
+                    //" (*.jpeg, *.jpg, *.png, *.gif)|*.jpeg;*.jpg;*.png;*.gif";
+                ofdImageVideo.Filter += GlobalResources.TrazinsAtenea.FilterVideoType +
+                    GlobalResources.TrazinsAtenea.FilterVideoTypes;
+                //ofdImageVideo.Filter += "|Archivos vídeo (*.avi,*.mp4, *.mpeg, *.mpg, *.wmv)|*.avi;*.mp4;*.mpeg;*.mpg;*.wmv";
                 ofdImageVideo.FilterIndex = 1;
                 ofdImageVideo.InitialDirectory = @"C:\";
                 ofdImageVideo.Title = "Open File";
@@ -439,6 +441,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             }
             catch (Exception ex)
             {
+                //Crear clase de mensajes de error
                 MessageBox.Show("Error en btnFromComputer_Click: " + ex.Message);
             }
         }
@@ -633,6 +636,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                         DialogResult = DialogResult.None;
                         return;
                     }
+                    //Falta probar tamaño de vídeos...
                     cajaImagen.EsVideo = true;
                     AddImageVideo(cajaImagen, ofdImageVideo.FileName);
                     break;

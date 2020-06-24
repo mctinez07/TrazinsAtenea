@@ -115,4 +115,10 @@
   <data name="Set" xml:space="preserve">
     <value>Set</value>
   </data>
+  <data name="FilterImageTypes" xml:space="preserve">
+    <value> (*.jpeg, *.jpg, *.png, *.gif)|*.jpeg;*.jpg;*.png;*.gif</value>
+  </data>
+  <data name="FilterVideoTypes" xml:space="preserve">
+    <value>(*.avi, *.mp4, *.mpeg, *.mpg, *.wmv) | *.avi; *.mp4; *.mpeg; *.mpg; *.wmv</value>
+  </data>
 </root>
