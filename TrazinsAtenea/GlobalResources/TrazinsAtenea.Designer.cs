@@ -277,6 +277,15 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Añadir instrumental.
+        /// </summary>
+        internal static string InstrumentalAdd {
+            get {
+                return ResourceManager.GetString("InstrumentalAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a 3 - Instrumental.
         /// </summary>
         internal static string InstrumentalSet {

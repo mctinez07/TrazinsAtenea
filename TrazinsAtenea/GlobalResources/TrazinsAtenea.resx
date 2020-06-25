@@ -280,4 +280,7 @@
   <data name="GroupNew" xml:space="preserve">
     <value>Nuevo Grupo</value>
   </data>
+  <data name="InstrumentalAdd" xml:space="preserve">
+    <value>Añadir instrumental</value>
+  </data>
 </root>
