@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TrazinsAtenea.Forms.Inventory.Group
 {
-    public partial class GroupForm : Form
+    public partial class GroupManagementForm : Form
     {
-        public GroupForm()
+        public GroupManagementForm()
         {
             InitializeComponent();
         }
