@@ -283,4 +283,13 @@
   <data name="InstrumentalAdd" xml:space="preserve">
     <value>Añadir instrumental</value>
   </data>
+  <data name="GroupTitle" xml:space="preserve">
+    <value>Gestión de Grupos</value>
+  </data>
+  <data name="Modify" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
 </root>

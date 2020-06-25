@@ -17,6 +17,7 @@ using Utils;
 using System.IO;
 using System.Drawing.Imaging;
 using System.Reflection;
+using TrazinsAtenea.Forms.Inventory.Group;
 
 namespace TrazinsAtenea.Forms.Inventory.Set
 {
@@ -483,7 +484,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 }
 
                 if (onlyVideos)
-                {
+                {                    
                     var formatFilterVideo = GlobalResources.TrazinsAtenea.FilterVideoType.Replace('|', ' ');
                     ofdImageVideo.Filter = formatFilterVideo + GlobalResources.TrazinsAtenea.FilterVideoTypes;
                 }
@@ -590,6 +591,13 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             if (cajaImagen.EsVideo)
             {
+                if (!string.IsNullOrEmpty(wmpVideo.URL))
+                {
+                    MessageForm frm = new MessageForm(126);
+                    frm.ShowDialog();
+                    return;
+                }
+
                 wmpVideo.Visible = true;
                 wmpVideo.URL = url;
             }
@@ -740,9 +748,24 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 wmpVideo.URL = null;
                 wmpVideo.Visible = false;
             }
-        }         
+        }
 
         #endregion
 
+        private void btnGroupManagment_Click(object sender, EventArgs e)
+        {
+            //Si no se asignado es necesario el texto escrito en textbox
+            //La asociacion en tabla es con la cajaId por lo tanto tiene que estar creada 
+            //para añadir los elementos.
+            if (string.IsNullOrEmpty(txtSetName.Text))
+            {
+                MessageForm frmMessage = new MessageForm(193);
+                frmMessage.ShowDialog();
+                return;
+            }
+
+            GroupsForm frm = new GroupsForm(txtSetName.Text);
+            frm.ShowDialog();
+        }
     }
 }

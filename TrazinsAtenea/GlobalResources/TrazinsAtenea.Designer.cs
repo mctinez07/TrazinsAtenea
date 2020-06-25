@@ -169,6 +169,15 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Eliminar.
+        /// </summary>
+        internal static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Salir.
         /// </summary>
         internal static string Exit {
@@ -250,6 +259,15 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Gestión de Grupos.
+        /// </summary>
+        internal static string GroupTitle {
+            get {
+                return ResourceManager.GetString("GroupTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ver Histórico.
         /// </summary>
         internal static string Historical {
@@ -327,6 +345,15 @@ namespace TrazinsAtenea.GlobalResources {
         internal static string MessageTitle {
             get {
                 return ResourceManager.GetString("MessageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar.
+        /// </summary>
+        internal static string Modify {
+            get {
+                return ResourceManager.GetString("Modify", resourceCulture);
             }
         }
         

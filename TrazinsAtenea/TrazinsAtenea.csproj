@@ -101,17 +101,17 @@
     <Compile Include="Forms\GlobalForms\WebCamForm.Designer.cs">
       <DependentUpon>WebCamForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Inventory\Group\GroupManagmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inventory\Group\GroupManagmentForm.Designer.cs">
+      <DependentUpon>GroupManagmentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Inventory\Group\GroupsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Inventory\Group\GroupsForm.Designer.cs">
       <DependentUpon>GroupsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Inventory\Group\GroupManagementForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Inventory\Group\GroupManagementForm.Designer.cs">
-      <DependentUpon>GroupManagementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Inventory\InventoryForm.cs">
       <SubType>Form</SubType>
@@ -165,8 +165,8 @@
     <EmbeddedResource Include="Forms\GlobalForms\WebCamForm.resx">
       <DependentUpon>WebCamForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Inventory\Group\GroupManagementForm.resx">
-      <DependentUpon>GroupManagementForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Inventory\Group\GroupManagmentForm.resx">
+      <DependentUpon>GroupManagmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inventory\Group\GroupsForm.resx">
       <DependentUpon>GroupsForm.cs</DependentUpon>
@@ -371,6 +371,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\group-24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-24x241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modificar-24x24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
