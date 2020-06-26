@@ -104,9 +104,22 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         }
 
         private void pcbBack_Click(object sender, EventArgs e)
-        {            
-            wmpVideo.Ctlcontrols.stop();
-            this.Close();
+        {
+            try
+            {
+                MessageForm frm = new MessageForm(190);
+                frm.ShowDialog();
+
+                if (frm.DialogResult == DialogResult.Yes)
+                {
+                    wmpVideo.Ctlcontrols.stop();
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage.ShowErrorMessage("btnExit", ex.Message);
+            }            
         }
 
         private void btnExit_Click(object sender, EventArgs e)

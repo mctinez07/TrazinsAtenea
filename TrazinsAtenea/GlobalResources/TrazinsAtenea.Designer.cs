@@ -475,6 +475,15 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Guardar y salir.
+        /// </summary>
+        internal static string SaveExit {
+            get {
+                return ResourceManager.GetString("SaveExit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Selecciona una ubicación donde se almacenará esta caja de forma predeterminada.
         /// </summary>
         internal static string SelectDefaultUbication {

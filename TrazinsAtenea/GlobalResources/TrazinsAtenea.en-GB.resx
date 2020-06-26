@@ -208,4 +208,7 @@
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
+  <data name="SaveExit" xml:space="preserve">
+    <value>Save and Exit</value>
+  </data>
 </root>

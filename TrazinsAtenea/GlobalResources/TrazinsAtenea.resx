@@ -292,4 +292,7 @@
   <data name="Delete" xml:space="preserve">
     <value>Eliminar</value>
   </data>
+  <data name="SaveExit" xml:space="preserve">
+    <value>Guardar y salir</value>
+  </data>
 </root>
