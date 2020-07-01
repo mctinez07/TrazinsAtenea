@@ -9,6 +9,7 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrazinsAtenea.Forms.GlobalForms;
 
 namespace TrazinsAtenea.GlobalEngine
 {
@@ -85,6 +86,14 @@ namespace TrazinsAtenea.GlobalEngine
                 MessageBox.Show("Error en ComboBoxFormat: " + ex.Message);
             }
             
+        }
+
+        //Método para mostrar el formulario de mensajes para el usuario.
+        public static DialogResult OpenMessageForm(int messageId)
+        {
+            MessageForm messageForm = new MessageForm(messageId);
+            messageForm.ShowDialog();
+            return messageForm.DialogResult;
         }
     }
 }

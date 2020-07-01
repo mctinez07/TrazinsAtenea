@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using TrazinsAtenea.GlobalEngine;
 using TrazinsAtenea.ServiceWSTrazinsAtenea;
+using System.Reflection;
 
 namespace TrazinsAtenea.Forms.GlobalForms
 {
@@ -53,7 +54,7 @@ namespace TrazinsAtenea.Forms.GlobalForms
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error en MessageForm_Load: " + ex.Message);
+                ErrorMessage.ShowErrorMessage(MethodBase.GetCurrentMethod().Name, ex.Message);
             }
             
         }
@@ -84,17 +85,23 @@ namespace TrazinsAtenea.Forms.GlobalForms
 
         private void btnNo_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void pcbExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+            DisposeExit();
+        }       
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
+        }
+
+        private void pcbExit_Click(object sender, EventArgs e)
+        {
+            DisposeExit();
+        }
+
+        private void DisposeExit()
+        {
+            this.Dispose();
+            DialogResult = DialogResult.None;
         }
     }
 }

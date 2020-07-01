@@ -34,7 +34,11 @@
             this.lblMessageTitle = new System.Windows.Forms.Label();
             this.btnAccept = new DevExpress.XtraEditors.SimpleButton();
             this.pcbMessageIcon = new System.Windows.Forms.PictureBox();
+            this.pnlExit = new System.Windows.Forms.Panel();
+            this.pcbExit = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMessageIcon)).BeginInit();
+            this.pnlExit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbExit)).BeginInit();
             this.SuspendLayout();
             // 
             // btnYes
@@ -132,6 +136,27 @@
             this.pcbMessageIcon.TabIndex = 15;
             this.pcbMessageIcon.TabStop = false;
             // 
+            // pnlExit
+            // 
+            this.pnlExit.Controls.Add(this.pcbExit);
+            this.pnlExit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlExit.Location = new System.Drawing.Point(0, 0);
+            this.pnlExit.Name = "pnlExit";
+            this.pnlExit.Size = new System.Drawing.Size(473, 24);
+            this.pnlExit.TabIndex = 19;
+            // 
+            // pcbExit
+            // 
+            this.pcbExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pcbExit.Image = global::TrazinsAtenea.Properties.Resources.cerrar_24x24;
+            this.pcbExit.Location = new System.Drawing.Point(449, 0);
+            this.pcbExit.Name = "pcbExit";
+            this.pcbExit.Size = new System.Drawing.Size(24, 24);
+            this.pcbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pcbExit.TabIndex = 17;
+            this.pcbExit.TabStop = false;
+            this.pcbExit.Click += new System.EventHandler(this.pcbExit_Click);
+            // 
             // MessageForm
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -142,6 +167,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 481);
+            this.Controls.Add(this.pnlExit);
             this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.pcbMessageIcon);
             this.Controls.Add(this.lblMessage);
@@ -149,7 +175,8 @@
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.btnYes);
             this.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IconOptions.ShowIcon = false;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
@@ -158,6 +185,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.MessageForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbMessageIcon)).EndInit();
+            this.pnlExit.ResumeLayout(false);
+            this.pnlExit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,5 +201,7 @@
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Label lblMessageTitle;
         private DevExpress.XtraEditors.SimpleButton btnAccept;
+        private System.Windows.Forms.Panel pnlExit;
+        private System.Windows.Forms.PictureBox pcbExit;
     }
 }

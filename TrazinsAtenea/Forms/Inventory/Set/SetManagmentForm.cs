@@ -107,10 +107,9 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             try
             {
-                MessageForm frm = new MessageForm(190);
-                frm.ShowDialog();
+                DialogResult = Engine.OpenMessageForm(190);
 
-                if (frm.DialogResult == DialogResult.Yes)
+                if (DialogResult == DialogResult.Yes)
                 {
                     wmpVideo.Ctlcontrols.stop();
                     this.Close();
@@ -118,7 +117,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             }
             catch (Exception ex)
             {
-                ErrorMessage.ShowErrorMessage("btnExit", ex.Message);
+                ErrorMessage.ShowErrorMessage(MethodBase.GetCurrentMethod().Name, ex.Message);
             }            
         }
 
@@ -137,7 +136,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             }
             catch (Exception ex)
             {
-                ErrorMessage.ShowErrorMessage("btnExit", ex.Message);
+                ErrorMessage.ShowErrorMessage(MethodBase.GetCurrentMethod().Name, ex.Message);
             }
             
         }
