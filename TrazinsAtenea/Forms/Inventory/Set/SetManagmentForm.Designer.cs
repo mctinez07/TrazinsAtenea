@@ -68,6 +68,7 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition62 = new DevExpress.XtraLayout.RowDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SetManagmentForm));
             this.pnlHeader = new DevExpress.XtraEditors.PanelControl();
+            this.btnSaveContinue = new DevExpress.XtraEditors.SimpleButton();
             this.btnSaveExit = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.lblNewSetTitle = new DevExpress.XtraEditors.LabelControl();
@@ -347,6 +348,7 @@
             this.pnlHeader.Appearance.Options.UseBackColor = true;
             this.pnlHeader.Appearance.Options.UseBorderColor = true;
             this.pnlHeader.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.pnlHeader.Controls.Add(this.btnSaveContinue);
             this.pnlHeader.Controls.Add(this.btnSaveExit);
             this.pnlHeader.Controls.Add(this.btnSave);
             this.pnlHeader.Controls.Add(this.lblNewSetTitle);
@@ -359,6 +361,24 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1386, 75);
             this.pnlHeader.TabIndex = 1;
+            // 
+            // btnSaveContinue
+            // 
+            this.btnSaveContinue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveContinue.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
+            this.btnSaveContinue.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnSaveContinue.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnSaveContinue.Appearance.Options.UseBackColor = true;
+            this.btnSaveContinue.Appearance.Options.UseFont = true;
+            this.btnSaveContinue.Appearance.Options.UseForeColor = true;
+            this.btnSaveContinue.Location = new System.Drawing.Point(830, 12);
+            this.btnSaveContinue.LookAndFeel.SkinName = "DevExpress Style";
+            this.btnSaveContinue.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnSaveContinue.Name = "btnSaveContinue";
+            this.btnSaveContinue.Size = new System.Drawing.Size(217, 48);
+            this.btnSaveContinue.TabIndex = 8;
+            this.btnSaveContinue.Text = "Guardar y Continuar";
+            this.btnSaveContinue.Click += new System.EventHandler(this.btnSaveContinue_Click);
             // 
             // btnSaveExit
             // 
@@ -386,11 +406,11 @@
             this.btnSave.Appearance.Options.UseBackColor = true;
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.Appearance.Options.UseForeColor = true;
-            this.btnSave.Location = new System.Drawing.Point(1087, 13);
+            this.btnSave.Location = new System.Drawing.Point(1053, 13);
             this.btnSave.LookAndFeel.SkinName = "DevExpress Style";
             this.btnSave.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(106, 48);
+            this.btnSave.Size = new System.Drawing.Size(148, 48);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Guardar";
             // 
@@ -2763,5 +2783,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gdcEstate;
         private DevExpress.XtraGrid.Columns.GridColumn gdcGroup;
         private DevExpress.XtraEditors.SimpleButton btnSaveExit;
+        private DevExpress.XtraEditors.SimpleButton btnSaveContinue;
     }
 }

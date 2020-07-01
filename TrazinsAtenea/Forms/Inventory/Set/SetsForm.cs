@@ -63,7 +63,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             SetManagmentForm frm = new SetManagmentForm
             {
-                Operation = EnumOperationType.Nuevo
+                Operation = EnumOperationType.New
             };
 
             frm.ShowDialog();

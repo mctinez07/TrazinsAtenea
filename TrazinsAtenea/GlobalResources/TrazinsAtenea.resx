@@ -295,4 +295,16 @@
   <data name="SaveExit" xml:space="preserve">
     <value>Guardar y salir</value>
   </data>
+  <data name="GroupName" xml:space="preserve">
+    <value>Nombre de grupo</value>
+  </data>
+  <data name="GroupDescription" xml:space="preserve">
+    <value>Descripción de grupo</value>
+  </data>
+  <data name="GroupObservations" xml:space="preserve">
+    <value>Observaciones de grupo</value>
+  </data>
+  <data name="SaveContinue" xml:space="preserve">
+    <value>Guardar y continuar</value>
+  </data>
 </root>

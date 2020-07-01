@@ -14,7 +14,7 @@ using TrazinsAtenea.Forms.GlobalForms;
 namespace TrazinsAtenea.GlobalEngine
 {
     //Indica el tipo de operación para la gestión de los formularios.
-    public enum EnumOperationType { Nuevo, Modificar, Eliminar}
+    public enum EnumOperationType { New, Modify, Delete}
 
     public class Engine
     {
@@ -40,6 +40,8 @@ namespace TrazinsAtenea.GlobalEngine
             }
         }
 
+        #region Formularios
+
         //Método para abrir los formularios en los paneles.
         public static void OpenForm(object Form, PanelControl panel)
         {
@@ -64,9 +66,20 @@ namespace TrazinsAtenea.GlobalEngine
             {
                 MessageBox.Show("Error en OpenForm: " + ex.Message);
             }
-                      
+
         }
 
+        //Método para mostrar el formulario de mensajes para el usuario.
+        public static DialogResult OpenMessageForm(int messageId)
+        {
+            MessageForm messageForm = new MessageForm(messageId);
+            messageForm.ShowDialog();
+            return messageForm.DialogResult;
+        }
+
+        #endregion
+
+        //Método para cargar y dar formato a los comboboxes.
         public static void ComboBoxFormat
             (System.Windows.Forms.ComboBox combo, string displayMember, string valueMember, object dataSource)
         {
@@ -88,12 +101,28 @@ namespace TrazinsAtenea.GlobalEngine
             
         }
 
-        //Método para mostrar el formulario de mensajes para el usuario.
-        public static DialogResult OpenMessageForm(int messageId)
+        public static void BindingControlProperty(Control ctrl, object model, string propiedad)
         {
-            MessageForm messageForm = new MessageForm(messageId);
-            messageForm.ShowDialog();
-            return messageForm.DialogResult;
+            if (ctrl is ListControl)
+                BindingControlProperty(ctrl, "SelectedItem", model, propiedad);
+            else if (ctrl is CheckBox)
+                BindingControlProperty(ctrl, "CheckState", model, propiedad);
+            else if (ctrl is DateTimePicker)
+                BindingControlProperty(ctrl, "Value", model, propiedad);
+            else
+                BindingControlProperty(ctrl, "Text", model, propiedad);
         }
+
+        private static void BindingControlProperty(Control ctrl, string ctrlProperty, object model, string property)
+        {
+            //Validación del control Demomento no se usa
+            //ctrl.Validated -= new EventHandler(ctrl_Validated);
+            //ctrl.Validated += new EventHandler(ctrl_Validated);   
+
+            var binding = new CustomBinding(ctrlProperty, model, property);
+        }
+
+
+
     }
 }

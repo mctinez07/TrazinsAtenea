@@ -52,6 +52,25 @@ namespace WSTrazinsAtenea
 
         #endregion
 
+        #region CajasGrupos
+
+        [OperationContract]
+        List<CajasGrupo> CajasGrupos_Select_List(CajasGrupo cajasGrupo);
+
+        [OperationContract]
+        CajasGrupo CajasGrupos_Select(CajasGrupo cajasGrupo);
+
+        [OperationContract]
+        string CajasGrupos_Insert(CajasGrupo cajasGrupo);
+
+        [OperationContract]
+        string CajasGrupos_Update(CajasGrupo cajasGrupo);
+
+        [OperationContract]
+        string CajasGrupos_Delete(CajasGrupo cajasGrupo);
+
+        #endregion
+
         #region Especialidades
 
         [OperationContract]

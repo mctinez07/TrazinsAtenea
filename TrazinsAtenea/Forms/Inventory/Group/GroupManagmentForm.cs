@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using TrazinsAtenea.GlobalEngine;
 
 namespace TrazinsAtenea.Forms.Inventory.Group
 {
@@ -18,7 +19,7 @@ namespace TrazinsAtenea.Forms.Inventory.Group
             InitializeComponent();
             //Traducir
             //si es edición rellenar los campos
-            //falta crear el modelo.
+            
         }
 
         private void pcbBack_Click(object sender, EventArgs e)
@@ -28,7 +29,7 @@ namespace TrazinsAtenea.Forms.Inventory.Group
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            //Crear método salir en global engine.
+            DialogResult = Engine.OpenMessageForm(190);
         }
     }
 }

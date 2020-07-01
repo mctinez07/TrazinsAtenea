@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bases\CustomBinding.cs" />
     <Compile Include="Connected Services\ServiceWSTrazinsAtenea\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -131,6 +132,12 @@
     <Compile Include="Forms\Inventory\Set\SetManagmentForm.Designer.cs">
       <DependentUpon>SetManagmentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Inventory\Set\SetNewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inventory\Set\SetNewForm.Designer.cs">
+      <DependentUpon>SetNewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Inventory\Set\SetsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inventory\Set\SetManagmentForm.resx">
       <DependentUpon>SetManagmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inventory\Set\SetNewForm.resx">
+      <DependentUpon>SetNewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inventory\Set\SetsForm.resx">
       <DependentUpon>SetsForm.cs</DependentUpon>
@@ -330,6 +340,10 @@
     <None Include="Resources\delete-24x24.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{ea3184c9-e0a4-476c-9324-da914b42bded}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Utils\Utils.csproj">
       <Project>{57C6B4A2-8F21-4BA8-A8D7-82D89C4AE397}</Project>
       <Name>Utils</Name>

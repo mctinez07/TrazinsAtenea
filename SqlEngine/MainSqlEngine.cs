@@ -145,7 +145,6 @@ namespace SqlEngine
             }
             catch (Exception ex)
             {
-
                 throw new Exception ("Error en IsSelect: "+ ex.Message);
             }
             
@@ -202,7 +201,6 @@ namespace SqlEngine
             }
             catch (Exception ex)
             {
-
                 throw new Exception ("Error en IsDelete: " + ex.Message);
             }
             

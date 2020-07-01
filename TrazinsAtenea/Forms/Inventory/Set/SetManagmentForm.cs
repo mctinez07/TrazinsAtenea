@@ -32,7 +32,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         private List<AlmacenesUbicaciones> UbicationList;
 
         private bool onlyVideos = false;
-        private Image CapturedImage;
+        private Image CapturedImage;        
 
         public SetManagmentForm()
         {
@@ -43,12 +43,34 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             MultilanguageFormat();
 
-            splashScreenManager1.ShowWaitForm();
+            splashScreenManager1.ShowWaitForm();            
                     
             //CargarCombos
             LoadComboBoxInformation();
 
-            splashScreenManager1.CloseWaitForm();
+            //Establecer estado de los controles
+            ControlsState();
+
+            splashScreenManager1.CloseWaitForm();            
+        }
+
+        private void ControlsState()
+        {
+            if (Operation == EnumOperationType.New)
+            {
+                xtpImageVideo.PageVisible = false;
+                xtpInstrumentalSet.PageVisible = false;
+                btnSave.Visible = false;
+                btnSaveContinue.Location = new Point(960, 13);
+            }
+
+            if (Operation == EnumOperationType.Modify)
+            {                
+                btnSaveContinue.Visible = false;
+                //Enlazar las propiedades a los controles
+                //Envias el control y la propiedad
+                txtSetName.Text = this.Caja.Descripcion;
+            }
 
             wmpVideo.Visible = false;
             wmpVideo.settings.autoStart = false;
@@ -139,7 +161,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 ErrorMessage.ShowErrorMessage(MethodBase.GetCurrentMethod().Name, ex.Message);
             }
             
-        }
+        }       
 
         //La carga de modelos se hará desde la clase GlobalEngine        
         #region Data and Proceses TabPage
@@ -237,7 +259,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 Engine.ComboBoxFormat(cmbProperty, "NomHospital", "HosId", hospitalList);
 
                 //Solo se pueden añadir cajas al hospital con el que nos hemos logeado
-                if (Operation == EnumOperationType.Nuevo)
+                if (Operation == EnumOperationType.New)
                 {
                     cmbProperty.Enabled = false;
                     cmbProperty.SelectedValue = BaseModelClient.BaseModel.HosId;
@@ -778,6 +800,22 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
             GroupsForm frm = new GroupsForm(txtSetName.Text);
             frm.ShowDialog();
+        }
+
+        private void btnSaveContinue_Click(object sender, EventArgs e)
+        {
+            //Guardamos la caja y volvemos a cargar el from cerrando este.
+            SetManagmentForm frm = new SetManagmentForm
+            {
+                Caja = new Caja()
+                {
+                    Descripcion = "prueba",
+                },
+
+                Operation = EnumOperationType.Modify
+            };
+            frm.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -69,6 +69,35 @@ namespace WSTrazinsAtenea
 
         #endregion
 
+        #region CajasGrupos
+
+        public List<CajasGrupo> CajasGrupos_Select_List(CajasGrupo cajasGrupo)
+        {
+            return CajasGrupoManager.CajasGrupo_Select_List(cajasGrupo);
+        }
+
+        public CajasGrupo CajasGrupos_Select(CajasGrupo cajasGrupo)
+        {
+            return CajasGrupoManager.CajasGrupo_Select(cajasGrupo);
+        }
+
+        public string CajasGrupos_Insert(CajasGrupo cajasGrupo)
+        {
+            return CajasGrupoManager.CajasGrupo_Insert(cajasGrupo);
+        }
+
+        public string CajasGrupos_Update(CajasGrupo cajasGrupo)
+        {
+            return CajasGrupoManager.CajasGrupo_Update(cajasGrupo);
+        }
+
+        public string CajasGrupos_Delete(CajasGrupo cajasGrupo)
+        {
+            return CajasGrupoManager.CajasGrupo_Delete(cajasGrupo);
+        }
+
+        #endregion
+
         #region Especialidades
 
         public string Especialidad_Insert(Especialidad especialidad)
@@ -258,7 +287,7 @@ namespace WSTrazinsAtenea
             return AlmacenesUbicacionesManager.AlmacenesUbicaciones_Update(almacenesUbicaciones);
         }
 
-        #endregion
+        #endregion        
 
         #region Mensajes
 
@@ -266,6 +295,8 @@ namespace WSTrazinsAtenea
         {
             return MensajesManager.Mensaje_Select(mensaje);
         }
+
+        
         #endregion
 
 

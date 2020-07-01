@@ -250,11 +250,38 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Descripción de grupo.
+        /// </summary>
+        internal static string GroupDescription {
+            get {
+                return ResourceManager.GetString("GroupDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre de grupo.
+        /// </summary>
+        internal static string GroupName {
+            get {
+                return ResourceManager.GetString("GroupName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Nuevo Grupo.
         /// </summary>
         internal static string GroupNew {
             get {
                 return ResourceManager.GetString("GroupNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Observaciones de grupo.
+        /// </summary>
+        internal static string GroupObservations {
+            get {
+                return ResourceManager.GetString("GroupObservations", resourceCulture);
             }
         }
         
@@ -471,6 +498,15 @@ namespace TrazinsAtenea.GlobalResources {
         internal static string Save {
             get {
                 return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Guardar y continuar.
+        /// </summary>
+        internal static string SaveContinue {
+            get {
+                return ResourceManager.GetString("SaveContinue", resourceCulture);
             }
         }
         

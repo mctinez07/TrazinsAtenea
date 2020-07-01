@@ -45,8 +45,8 @@ namespace TrazinsAtenea.Forms.Inventory.Group
 
         private void btnGroupNew_Click(object sender, EventArgs e)
         {
-            //GroupManagementForm frm = new GroupManagementForm();
-            //frm.ShowDialog();
+            GroupManagmentForm frm = new GroupManagmentForm();
+            frm.ShowDialog();
         }
     }
 }
