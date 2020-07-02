@@ -9,6 +9,7 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrazinsAtenea.Bases;
 using TrazinsAtenea.Forms.GlobalForms;
 
 namespace TrazinsAtenea.GlobalEngine
@@ -117,9 +118,10 @@ namespace TrazinsAtenea.GlobalEngine
         {
             //Validación del control Demomento no se usa
             //ctrl.Validated -= new EventHandler(ctrl_Validated);
-            //ctrl.Validated += new EventHandler(ctrl_Validated);   
+            //ctrl.Validated += new EventHandler(ctrl_Validated); 
 
             var binding = new CustomBinding(ctrlProperty, model, property);
+
         }
 
 
