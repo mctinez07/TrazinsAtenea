@@ -76,6 +76,7 @@ namespace TrazinsAtenea.Bases
                 if (object.Equals(propValue, e.Value))
                 {
                     e.Value = item;
+                    //Tambien está deshabilitado en el origen
                     //if (combo is ComboBox)
                     //    (combo as ComboBox).SelectedItem = item;
                     //else if (combo is ListBox)
@@ -107,8 +108,8 @@ namespace TrazinsAtenea.Bases
             if (first == null)
                 return new Dictionary<string, PropertyInfo>();
 
-            //return first.PrimaryKeys;
-            return null;
+            return first.PrimaryKeys;
+            
         }
 
         Type _targetPropertyType;
@@ -117,7 +118,59 @@ namespace TrazinsAtenea.Bases
         {
             if (_targetPropertyType == null)
                 _targetPropertyType = BindingManagerBase.GetItemProperties().Find(BindingMemberInfo.BindingField, true).PropertyType;
-            //e.Value = ModModelos.Comun.Convertir(e.Value, _targetPropertyType);
+            e.Value = ConvertValues(e.Value, _targetPropertyType);
+        }
+
+        public static object ConvertValues(object loValue, Type loDestinationType)
+        {
+            var loConvertedValue = loValue;
+            var lbAsignableDirect = (loValue != null && loDestinationType.IsAssignableFrom(loValue.GetType()));
+
+            //Convertimos la cadena vacía a null
+            if ("".Equals(loValue) || loValue == DBNull.Value)
+                loConvertedValue = null;
+
+            if (!lbAsignableDirect)
+            {
+                //Estas variables se emplean para agilizar la evaluación de las condiciones
+                ///bool lbDestinoEsNullable = (loPropType.IsGenericType && loPropType.GetGenericTypeDefinition() == typeof(Nullable<>));
+                bool lbDestinoEsNullable = !loDestinationType.IsValueType || (Nullable.GetUnderlyingType(loDestinationType) != null);
+                bool lbDestinoEsString = loDestinationType == typeof(string);
+                bool lbHayQueConvertir = (loValue != null && !loDestinationType.IsAssignableFrom(loValue.GetType()));
+
+                if (lbDestinoEsNullable && loConvertedValue == null)
+                    return loConvertedValue;
+
+                if (lbDestinoEsNullable || lbDestinoEsString)
+                {
+                    if (lbHayQueConvertir)
+                    {
+                        if (lbDestinoEsNullable)
+                            loConvertedValue = ValueChangeType(loConvertedValue, loDestinationType.GetGenericArguments()[0]);
+                        else
+                            loConvertedValue = ValueChangeType(loConvertedValue, loDestinationType);
+                    }
+
+                }
+                else
+                    if (lbHayQueConvertir)
+                    loConvertedValue = ValueChangeType(loConvertedValue, loDestinationType);
+                else if (loValue == null)
+                {
+                    loConvertedValue = Activator.CreateInstance(loDestinationType);
+                }
+            }
+
+            return loConvertedValue;
+        }
+
+
+        private static object ValueChangeType(object loValue, Type loDestinationType)
+        {
+            if (loDestinationType.IsEnum)
+                return Enum.Parse(loDestinationType, loValue.ToString(), true);
+            else
+                return System.Convert.ChangeType(loValue, loDestinationType);
         }
 
         void SelectedItemParse(ConvertEventArgs e)
@@ -131,31 +184,31 @@ namespace TrazinsAtenea.Bases
             }
             else
             {
-                //if (selected.PrimaryKeys.Count == 1)
-                //{
-                //    var pkProperty = selected.PrimaryKeys.Values.First();
-                //    var selectedValue = pkProperty.GetValue(selected, null);
-                //    e.Value = selectedValue;
-                //    return;
-                //}
-                ////Hay que mover las propiedades primary key del elemento seleccionado
-                ////al objeto de destino.
-                //foreach (var loProp in selected.PrimaryKeys.Values)
-                //{
-                //    System.Reflection.PropertyInfo targetProp = null;
-                //    if (target.Propiedades.TryGetValue(loProp.Name, out targetProp))
-                //    {
-                //        var selectedValue = loProp.GetValue(selected, null);
-                //        targetProp.SetValue(target, selectedValue, null);
-                //        //Para que mueva el valor que debe
-                //        if (loProp.Name == binding.BindingMemberInfo.BindingMember)
-                //            e.Value = selectedValue;
-                //    }
+                if (selected.PrimaryKeys.Count == 1)
+                {
+                    var pkProperty = selected.PrimaryKeys.Values.First();
+                    var selectedValue = pkProperty.GetValue(selected, null);
+                    e.Value = selectedValue;
+                    return;
+                }
+                //Hay que mover las propiedades primary key del elemento seleccionado
+                //al objeto de destino.
+                foreach (var loProp in selected.PrimaryKeys.Values)
+                {
+                    System.Reflection.PropertyInfo targetProp = null;
+                    if (target.Properties.TryGetValue(loProp.Name, out targetProp))
+                    {
+                        var selectedValue = loProp.GetValue(selected, null);
+                        targetProp.SetValue(target, selectedValue, null);
+                        //Para que mueva el valor que debe
+                        if (loProp.Name == binding.BindingMemberInfo.BindingMember)
+                            e.Value = selectedValue;
+                    }
 
-                //}
+                }
             }
 
-
+            //Comentado en el origen.
             //target.GetType().GetProperty(binding.BindingMemberInfo.BindingMember).SetValue(target, e.Value, null);
         }
 
@@ -169,5 +222,21 @@ namespace TrazinsAtenea.Bases
         }
 
 
+    }
+
+    public class DataBindingList : List<Binding>
+    {
+        public DataBindingList() : base()
+        {
+        }
+
+        public Binding this[Control control, string controlPropertyName, string dataSourcePropertyName]
+        {
+            get
+            {
+                return this.FirstOrDefault((b) =>
+                    (b.Control == control) && (b.PropertyName == controlPropertyName) && (b.BindingMemberInfo.BindingField == dataSourcePropertyName));
+            }
+        }
     }
 }

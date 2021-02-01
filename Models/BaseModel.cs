@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization;
@@ -32,54 +33,55 @@ namespace Models
 
         Dictionary<string, PropertyInfo> _primaryKeys;
 
-        Dictionary<string, PropertyInfo> _propiedades;
+        Dictionary<string, PropertyInfo> _properties;
 
-        //[XmlIgnore()]
-        //public Dictionary<string, PropertyInfo> Propiedades
-        //{
-        //    get
-        //    {
-        //        //if (_propiedades == null)
-        //        //{
-        //        //    _propiedades = new Dictionary<string, PropertyInfo>();
-        //        //    _mappings = new Dictionary<string, MappingAttribute>();
-        //        //    _primaryKeys = new Dictionary<string, PropertyInfo>();
-        //        //    var props = this.GetType().GetProperties();
-        //        //    foreach (var prop in props)
-        //        //    {
-        //        //        _propiedades.Add(prop.Name, prop);
-        //        //        var attrs = prop.GetCustomAttributes(typeof(MappingAttribute), true).Cast<MappingAttribute>();
-        //        //        foreach (var attr in attrs)
-        //        //        {
-        //        //            if (!attr.Exclude)
-        //        //                _mappings.Add(prop.Name, attr);
-        //        //        }
+        [XmlIgnore()]
+        public Dictionary<string, PropertyInfo> Properties
+        {
+            get
+            {
+                if (_properties == null)
+                {
+                    _properties = new Dictionary<string, PropertyInfo>();
+                    _mappings = new Dictionary<string, MappingAttribute>();
+                    _primaryKeys = new Dictionary<string, PropertyInfo>();
+                    var props = this.GetType().GetProperties();
+                    foreach (var prop in props)
+                    {
+                        _properties.Add(prop.Name, prop);
+                        var attrs = prop.GetCustomAttributes(typeof(MappingAttribute), true).Cast<MappingAttribute>();
+                        foreach (var attr in attrs)
+                        {
+                            if (!attr.Exclude)
+                                _mappings.Add(prop.Name, attr);
+                        }
 
 
-        //        //        var key = prop.GetCustomAttributes(typeof(KeyAttribute), true).Cast<KeyAttribute>().FirstOrDefault();
-        //        //        if (key != null)
-        //        //        {
-        //        //            _primaryKeys.Add(prop.Name, prop);
-        //        //        }
+                        var key = prop.GetCustomAttributes(typeof(KeyAttribute), true).Cast<KeyAttribute>().FirstOrDefault();
+                        if (key != null)
+                        {
+                            _primaryKeys.Add(prop.Name, prop);
+                        }
 
-        //        //    }
-        //        }
-        //        return _propiedades;
-        //    }
-        //}
+                    }
+                }
+                return _properties;
+            }
+        }
+        Dictionary<string, MappingAttribute> _mappings;
 
-        //[XmlIgnore()]
-        //public Dictionary<string, PropertyInfo> PrimaryKeys
-        //{
-        //    get
-        //    {
-        //        if (_propiedades == null)
-        //        {
-        //            var dummy = Propiedades;
-        //        }
-        //        return _primaryKeys;
-        //    }
-        //}
+        [XmlIgnore()]
+        public Dictionary<string, PropertyInfo> PrimaryKeys
+        {
+            get
+            {
+                if (_properties == null)
+                {
+                    var dummy = Properties;
+                }
+                return _primaryKeys;
+            }
+        }
 
         //[XmlIgnore()]
         //public PrimaryKeysValueList PrimaryKeysValues
@@ -95,5 +97,16 @@ namespace Models
         //        return result;
         //    }
         //}
+
+        public virtual IEnumerable<ValidationResult> ValidateProperty(string propertyName, object value)
+        {
+            var context = new ValidationContext(this, serviceProvider: null, items: null);
+            context.MemberName = propertyName;
+
+            var results = new List<ValidationResult>();
+            var isValid = Validator.TryValidateProperty(value, context, results);
+
+            return results;
+        }
     }
 }

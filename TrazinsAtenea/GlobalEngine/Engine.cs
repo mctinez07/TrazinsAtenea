@@ -1,8 +1,10 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
+using Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
 using System.Resources;
@@ -11,14 +13,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrazinsAtenea.Bases;
 using TrazinsAtenea.Forms.GlobalForms;
+using Utils;
 
 namespace TrazinsAtenea.GlobalEngine
 {
     //Indica el tipo de operación para la gestión de los formularios.
-    public enum EnumOperationType { New, Modify, Delete}
+    public enum EnumOperationType { New, Modify, Delete}    
 
     public class Engine
     {
+        protected static IList<ValidationResult> Success = new List<ValidationResult>().AsReadOnly();
+        public static DataBindingList Links { get; protected set; }
+
         //Método para obtener el texto a mostrar.
         public static string GetLanguageResource(string resource)
         {
@@ -102,29 +108,151 @@ namespace TrazinsAtenea.GlobalEngine
             
         }
 
-        public static void BindingControlProperty(Control ctrl, object model, string propiedad)
+        public static CustomBinding BindingControlProperty(Control ctrl, object model, string propiedad)
         {
             if (ctrl is ListControl)
-                BindingControlProperty(ctrl, "SelectedItem", model, propiedad);
+                return BindingControlProperty(ctrl, "SelectedItem", model, propiedad);
             else if (ctrl is CheckBox)
-                BindingControlProperty(ctrl, "CheckState", model, propiedad);
+                return BindingControlProperty(ctrl, "CheckState", model, propiedad);
             else if (ctrl is DateTimePicker)
-                BindingControlProperty(ctrl, "Value", model, propiedad);
+                return BindingControlProperty(ctrl, "Value", model, propiedad);
             else
-                BindingControlProperty(ctrl, "Text", model, propiedad);
+                return BindingControlProperty(ctrl, "Text", model, propiedad);
         }
 
-        private static void BindingControlProperty(Control ctrl, string ctrlProperty, object model, string property)
+        private static CustomBinding BindingControlProperty(Control ctrl, string ctrlProperty, object model, string property, bool disableParsingAndFormatting = false)
         {
-            //Validación del control Demomento no se usa
-            //ctrl.Validated -= new EventHandler(ctrl_Validated);
-            //ctrl.Validated += new EventHandler(ctrl_Validated); 
+            //Validación del control
+            ctrl.Validated -= new EventHandler(ctrl_Validated);
+            ctrl.Validated += new EventHandler(ctrl_Validated);
 
             var binding = new CustomBinding(ctrlProperty, model, property);
+            binding.DisableBaseParsingAndFormatting = disableParsingAndFormatting;
+
+            Links = new DataBindingList();
+            var existing = Links[ctrl, ctrlProperty, property];
+
+            if (existing != null)
+            {
+                ctrl.DataBindings.Remove(existing);
+                Links.Remove(existing);
+            }
+
+            if (model is BaseModel)
+                SetUp(ctrl, ctrlProperty, (BaseModel)model, property);
+
+            ctrl.DataBindings.Add(binding);
+            Links.Add(binding);
+
+            if (!disableParsingAndFormatting && ctrl is ListControl)
+            {
+                binding.ReadValue();
+                binding.WriteValue();
+            }
+            else
+            {
+                if (binding.Control is TextBox)
+                    binding.NullValue = "";
+            }
+
+            return binding;
+        }
+
+        private static void SetUp(Control ctrl, string ctrlControl, BaseModel model, string property)
+        {
+            var textBox = ctrl as TextBox;
+
+            if (textBox != null && ctrlControl == "Text")
+            {
+                var prop = model.Properties[property];
+                var attr = GetAttribute<StringLengthAttribute>(prop);
+                if (attr != null)
+                    textBox.MaxLength = attr.MaximumLength;
+            }
+
+            var numeric = ctrl as NumericUpDown;
+            if (numeric != null)
+            {
+                var prop = model.Properties[property];
+
+                var mapping = GetAttribute<MappingAttribute>(prop);
+                if (mapping != null)
+                {
+
+                    if (mapping.PrecisionHasValue)
+                    {
+                        var precision = mapping.Precision;
+                        var scale = mapping.ScaleHasValue ? mapping.Scale : 0;
+
+                        numeric.DecimalPlaces = scale;
+                    }
+                }
+
+                var attr = GetAttribute<RangeAttribute>(prop);
+                if (attr != null)
+                {
+                    numeric.Minimum = Convert.ToDecimal(attr.Minimum);
+                    numeric.Maximum = Convert.ToDecimal(attr.Maximum);
+                }
+            }
 
         }
 
+        // Abreviatura para obtener un atributo dado desde una propiedad.
+        private static T GetAttribute<T>(System.Reflection.PropertyInfo prop)
+           where T : System.Attribute
+        {
+            return prop.GetCustomAttributes(typeof(T), true).Cast<T>().FirstOrDefault();
+        }
 
+        static void ctrl_Validated(object sender, EventArgs e)
+        {
+            foreach (Binding item in ((Control)sender).DataBindings)
+            {
+                ValidateBinding(item);
+            }
+        }
+
+        protected static IEnumerable<ValidationResult> ValidateBinding(Binding binding)
+        {
+            //No mostramos errores nada más abrir el formulario
+            //if (boolMostradoPorPrimeraVez)
+            //    return Success;
+
+            //if (!ValidationEnabled)
+            //    return Success;
+
+            var control = binding.Control;
+            var model = binding.DataSource as BaseModel;
+            if (model != null)
+            {
+                //Antes de validar propiamente, forzamos al control a que escriba su valor
+                //en la fuente de datos
+                if (binding.Control is ListControl)
+                {
+                    binding.WriteValue();
+                }
+
+                var modelPropertyName = binding.BindingMemberInfo.BindingField;
+
+                var modelPropertyValue = model.Properties[modelPropertyName].GetValue(model, null);
+
+                var result = model.ValidateProperty(binding.BindingMemberInfo.BindingField, modelPropertyValue);
+                if (result.Count() > 0)
+                    SetError(control, result.First().ErrorMessage);
+                else
+                    SetError(control, "");
+                return result;
+            }
+            else
+                return Success;
+        }
+
+        protected static void SetError(Control control, string errorMessage)
+        {
+            MessageBox.Show(errorMessage);
+            //errorProvider1.SetError(control, errorMessage);
+        }
 
     }
 }
