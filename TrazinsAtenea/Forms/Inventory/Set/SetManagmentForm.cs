@@ -68,6 +68,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             {                
                 btnSaveContinue.Visible = false;
                 //Enlazar las propiedades a los controles
+                //seguir paso a paso para saber como funciona
                 Engine.BindingControlProperty(txtSetName, Caja, "Descripcion");
                 //Envias el control y la propiedad
                 txtSetName.Text = this.Caja.Descripcion;
