@@ -151,6 +151,7 @@ namespace TrazinsAtenea.GlobalEngine
             }
             else
             {
+                //Los textedit de devexpress no cumplen esta condición
                 if (binding.Control is TextBox)
                     binding.NullValue = "";
             }
