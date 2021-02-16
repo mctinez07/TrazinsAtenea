@@ -25,6 +25,9 @@ namespace TrazinsAtenea.GlobalEngine
         protected static IList<ValidationResult> Success = new List<ValidationResult>().AsReadOnly();
         public static DataBindingList Links { get; protected set; }
 
+        //Modelo a enlazar para los controles;
+        public static object _bindedModel;
+
         //Método para obtener el texto a mostrar.
         public static string GetLanguageResource(string resource)
         {
@@ -108,8 +111,11 @@ namespace TrazinsAtenea.GlobalEngine
             
         }
 
+        #region Enlace de propiedades a Control 
+        
         public static CustomBinding BindingControlProperty(Control ctrl, object model, string propiedad)
         {
+            //Método original
             if (ctrl is ListControl)
                 return BindingControlProperty(ctrl, "SelectedItem", model, propiedad);
             else if (ctrl is CheckBox)
@@ -118,6 +124,18 @@ namespace TrazinsAtenea.GlobalEngine
                 return BindingControlProperty(ctrl, "Value", model, propiedad);
             else
                 return BindingControlProperty(ctrl, "Text", model, propiedad);
+        }
+
+        public static CustomBinding BindingControlProperty(Control ctrl, string propiedad)
+        {
+            if (ctrl is ListControl)
+                return BindingControlProperty(ctrl, "SelectedItem", _bindedModel, propiedad);
+            else if (ctrl is CheckBox)
+                return BindingControlProperty(ctrl, "CheckState", _bindedModel, propiedad);
+            else if (ctrl is DateTimePicker)
+                return BindingControlProperty(ctrl, "Value", _bindedModel, propiedad);
+            else
+                return BindingControlProperty(ctrl, "Text", _bindedModel, propiedad);
         }
 
         private static CustomBinding BindingControlProperty(Control ctrl, string ctrlProperty, object model, string property, bool disableParsingAndFormatting = false)
@@ -253,6 +271,8 @@ namespace TrazinsAtenea.GlobalEngine
             MessageBox.Show(errorMessage);
             //errorProvider1.SetError(control, errorMessage);
         }
+
+        #endregion
 
     }
 }

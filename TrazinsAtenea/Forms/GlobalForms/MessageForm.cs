@@ -66,7 +66,8 @@ namespace TrazinsAtenea.Forms.GlobalForms
             {
                 case 1: //Atención
                     btnAccept.Visible = false;
-                    pcbMessageIcon.Image = Properties.Resources.warning_48x48;
+                    //Hay que crear los iconos de 126x126
+                    pcbMessageIcon.Image = Properties.Resources.warning_48x48;                    
                     break;
                 case 2://Información.
                     btnNo.Visible = false;

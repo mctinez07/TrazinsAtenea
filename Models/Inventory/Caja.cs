@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -36,5 +37,19 @@ namespace Models.Inventory
 
         [DataMember]
         public string CajaId_CodigoCaja { get; set; }
+
+        [DataMember]
+        public int? Precio { get; set; }
+
+        [DataMember]
+        //Pendiente verificar
+        [StringLength(50)]
+        public string ObservEmp { get; set; }
+
+        [DataMember]
+        public string ObservCic { get; set; }
+
+        [DataMember]
+        public string ObservLav { get; set; }
     }
 }

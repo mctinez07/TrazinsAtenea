@@ -60,6 +60,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         private void ControlsState()
         {
+            //Enlazar Controles para que se actualicen automáticamente los valores de los controles.
+            BindingControls();
             if (Operation == EnumOperationType.New)
             {
                 xtpImageVideo.PageVisible = false;
@@ -71,16 +73,30 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             if (Operation == EnumOperationType.Modify)
             {                
                 btnSaveContinue.Visible = false;
-                //Enlazar las propiedades a los controles
-                //seguir paso a paso para saber como funciona
-                Engine.BindingControlProperty(txtSetName, Caja, "Descripcion");
-                //Envias el control y la propiedad
+                
                 txtSetName.Text = this.Caja.Descripcion;
             }
 
             wmpVideo.Visible = false;
             wmpVideo.settings.autoStart = false;
             wmpVideo.settings.mute = true;
+        }
+
+        private void BindingControls()
+        {
+            //Enlazar las propiedades a los controles            
+            //seguir paso a paso para saber como funciona es posible que sobren métodos
+            Engine._bindedModel = Caja;
+
+            Engine.BindingControlProperty(txtSetName, "Descripcion");
+            Engine.BindingControlProperty(txtPrice, "Precio");
+            Engine.BindingControlProperty(txtSetCode, "CodigoCaja");
+            Engine.BindingControlProperty(txtRemarksAssemblyPackaging, "ObservEmp");
+            Engine.BindingControlProperty(txtRemarksSteri, "ObservCic");
+            Engine.BindingControlProperty(txtRemarksWashes, "ObservLav");
+
+            Engine.BindingControlProperty(cmbSpeciality, "EspId");
+            
         }
 
         private void MultilanguageFormat()
@@ -104,7 +120,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                                         //Traducimos los controles labels y buttons
                                         if (control is SimpleButton || control is LabelControl)
                                             control.Text = Engine.GetLanguageResource(control.Name);
-                                        //Tendré que traducir los subpaneles dentro de las tabPage!!!
+                                        //Tendré que traducir los subpaneles dentro de las tabPage!!!                                        
                                     }
                                 }
                             }
