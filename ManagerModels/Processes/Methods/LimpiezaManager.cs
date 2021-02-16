@@ -20,12 +20,12 @@ namespace ManagerModels.Processes.Methods
             return MainSqlEngine.IsSelect(limpieza);
         }
 
-        public static string Limpieza_Insert(Limpieza limpieza)
+        public static Limpieza Limpieza_Insert(Limpieza limpieza)
         {
             return MainSqlEngine.IsInsert(limpieza);
         }
 
-        public static string Limpieza_Update(Limpieza limpieza)
+        public static Limpieza Limpieza_Update(Limpieza limpieza)
         {
             return MainSqlEngine.IsUpdate(limpieza);
         }

@@ -20,12 +20,12 @@ namespace ManagerModels.Masters.Storage
             return MainSqlEngine.IsSelect(almacenesUbicaciones);
         }
 
-        public static string AlmacenesUbicaciones_Insert(AlmacenesUbicaciones almacenesUbicaciones)
+        public static AlmacenesUbicaciones AlmacenesUbicaciones_Insert(AlmacenesUbicaciones almacenesUbicaciones)
         {
             return MainSqlEngine.IsInsert(almacenesUbicaciones);
         }
 
-        public static string AlmacenesUbicaciones_Update(AlmacenesUbicaciones almacenesUbicaciones)
+        public static AlmacenesUbicaciones AlmacenesUbicaciones_Update(AlmacenesUbicaciones almacenesUbicaciones)
         {
             return MainSqlEngine.IsUpdate(almacenesUbicaciones);
         }

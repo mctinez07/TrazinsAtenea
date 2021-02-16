@@ -20,12 +20,12 @@ namespace ManagerModels.Masters
             return MainSqlEngine.IsSelect(embalaje);
         }
 
-        public static string Embalaje_Insert(Embalaje embalaje)
+        public static Embalaje Embalaje_Insert(Embalaje embalaje)
         {
             return MainSqlEngine.IsInsert(embalaje);
         }
 
-        public static string Embalaje_Update(Embalaje embalaje)
+        public static Embalaje Embalaje_Update(Embalaje embalaje)
         {
             return MainSqlEngine.IsUpdate(embalaje);
         }

@@ -20,12 +20,12 @@ namespace ManagerModels.Inventory
             return MainSqlEngine.IsSelect(caja);
         }
 
-        public static string Caja_Insert(Caja caja)
+        public static Caja Caja_Insert(Caja caja)
         {
             return MainSqlEngine.IsInsert(caja);
         }
 
-        public static string Caja_Update(Caja caja)
+        public static Caja Caja_Update(Caja caja)
         {
             return MainSqlEngine.IsUpdate(caja);
         }

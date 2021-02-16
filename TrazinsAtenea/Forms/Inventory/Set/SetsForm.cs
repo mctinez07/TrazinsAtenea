@@ -13,6 +13,7 @@ using TrazinsAtenea.ServiceWSTrazinsAtenea;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Columns;
 using System.Reflection;
+using Models.Inventory;
 
 namespace TrazinsAtenea.Forms.Inventory.Set
 {

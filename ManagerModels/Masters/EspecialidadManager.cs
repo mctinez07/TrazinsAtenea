@@ -20,12 +20,12 @@ namespace ManagerModels.Masters
             return MainSqlEngine.IsSelect(especialidad);
         }
 
-        public static string Especialidad_Insert(Especialidad especialidad)
+        public static Especialidad Especialidad_Insert(Especialidad especialidad)
         {
             return MainSqlEngine.IsInsert(especialidad);
         }
 
-        public static string Especialidad_Update(Especialidad especialidad)
+        public static Especialidad Especialidad_Update(Especialidad especialidad)
         {
             return MainSqlEngine.IsUpdate(especialidad);
         }

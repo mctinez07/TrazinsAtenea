@@ -20,12 +20,12 @@ namespace ManagerModels.Processes.Methods
             return MainSqlEngine.IsSelect(esterilizacion);
         }
 
-        public static string Esterilizacion_Insert(Esterilizacion esterilizacion)
+        public static Esterilizacion Esterilizacion_Insert(Esterilizacion esterilizacion)
         {
             return MainSqlEngine.IsInsert(esterilizacion);
         }
 
-        public static string Esterilizacion_Update(Esterilizacion esterilizacion)
+        public static Esterilizacion Esterilizacion_Update(Esterilizacion esterilizacion)
         {
             return MainSqlEngine.IsUpdate(esterilizacion);
         }

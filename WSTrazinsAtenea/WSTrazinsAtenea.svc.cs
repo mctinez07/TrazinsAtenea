@@ -23,7 +23,7 @@ namespace WSTrazinsAtenea
     {
         #region Cajas
 
-        public string Caja_Insert(Caja caja)
+        public Caja Caja_Insert(Caja caja)
         {
             return CajaManager.Caja_Insert(caja);
         }
@@ -38,7 +38,7 @@ namespace WSTrazinsAtenea
             return CajaManager.Caja_Select_List(caja);
         }
 
-        public string Caja_Update(Caja caja)
+        public Caja Caja_Update(Caja caja)
         {
             return CajaManager.Caja_Update(caja);
         }
@@ -57,12 +57,12 @@ namespace WSTrazinsAtenea
             return CajaImagenManager.CajaImagen_Select(cajaImagen);
         }
 
-        public string CajaImagen_Insert(CajaImagen cajaImagen)
+        public CajaImagen CajaImagen_Insert(CajaImagen cajaImagen)
         {
             return CajaImagenManager.CajaImagen_Insert(cajaImagen);
         }
 
-        public string CajaImagen_Update(CajaImagen cajaImagen)
+        public CajaImagen CajaImagen_Update(CajaImagen cajaImagen)
         {
             return CajaImagenManager.CajaImagen_Update(cajaImagen);
         }
@@ -81,17 +81,17 @@ namespace WSTrazinsAtenea
             return CajasGrupoManager.CajasGrupo_Select(cajasGrupo);
         }
 
-        public string CajasGrupos_Insert(CajasGrupo cajasGrupo)
+        public CajasGrupo CajasGrupos_Insert(CajasGrupo cajasGrupo)
         {
             return CajasGrupoManager.CajasGrupo_Insert(cajasGrupo);
         }
 
-        public string CajasGrupos_Update(CajasGrupo cajasGrupo)
+        public CajasGrupo CajasGrupos_Update(CajasGrupo cajasGrupo)
         {
             return CajasGrupoManager.CajasGrupo_Update(cajasGrupo);
         }
 
-        public string CajasGrupos_Delete(CajasGrupo cajasGrupo)
+        public CajasGrupo CajasGrupos_Delete(CajasGrupo cajasGrupo)
         {
             return CajasGrupoManager.CajasGrupo_Delete(cajasGrupo);
         }
@@ -100,7 +100,7 @@ namespace WSTrazinsAtenea
 
         #region Especialidades
 
-        public string Especialidad_Insert(Especialidad especialidad)
+        public Especialidad Especialidad_Insert(Especialidad especialidad)
         {
             return EspecialidadManager.Especialidad_Insert(especialidad);
         }
@@ -115,7 +115,7 @@ namespace WSTrazinsAtenea
             return EspecialidadManager.Especialidad_Select_List(especialidad);
         }
 
-        public string Especialidad_Update(Especialidad especialidad)
+        public Especialidad Especialidad_Update(Especialidad especialidad)
         {
             return EspecialidadManager.Especialidad_Update(especialidad);
         }
@@ -124,7 +124,7 @@ namespace WSTrazinsAtenea
 
         #region Embalajes
 
-        public string Embalaje_Insert(Embalaje embalaje)
+        public Embalaje Embalaje_Insert(Embalaje embalaje)
         {
             return EmbalajeManager.Embalaje_Insert(embalaje);
         }
@@ -139,7 +139,7 @@ namespace WSTrazinsAtenea
             return EmbalajeManager.Embalaje_Select_List(embalaje);
         }
 
-        public string Embalaje_Update(Embalaje embalaje)
+        public Embalaje Embalaje_Update(Embalaje embalaje)
         {
             return EmbalajeManager.Embalaje_Update(embalaje);
         }
@@ -157,12 +157,12 @@ namespace WSTrazinsAtenea
             return HospitalManager.Hospital_Select(hospital);
         }
 
-        public string Hospital_Insert(Hospital hospital)
+        public Hospital Hospital_Insert(Hospital hospital)
         {
             return HospitalManager.Hospital_Insert(hospital);
         }
 
-        public string Hospital_Update(Hospital hospital)
+        public Hospital Hospital_Update(Hospital hospital)
         {
             return HospitalManager.Hospital_Update(hospital);
         }
@@ -181,12 +181,12 @@ namespace WSTrazinsAtenea
             return TipoCajaManager.TipoCaja_Select(tipoCaja);
         }
 
-        public string TipoCaja_Insert(TipoCaja tipoCaja)
+        public TipoCaja TipoCaja_Insert(TipoCaja tipoCaja)
         {
             return TipoCajaManager.TipoCaja_Insert(tipoCaja);
         }
 
-        public string TipoCaja_Update(TipoCaja tipoCaja)
+        public TipoCaja TipoCaja_Update(TipoCaja tipoCaja)
         {
             return TipoCajaManager.TipoCaja_Update(tipoCaja);
         }
@@ -205,12 +205,12 @@ namespace WSTrazinsAtenea
             return LimpiezaManager.Limpieza_Select(limpieza);
         }
 
-        public string Limpieza_Insert(Limpieza limpieza)
+        public Limpieza Limpieza_Insert(Limpieza limpieza)
         {
             return LimpiezaManager.Limpieza_Insert(limpieza);
         }
 
-        public string Limpieza_Update(Limpieza limpieza)
+        public Limpieza Limpieza_Update(Limpieza limpieza)
         {
             return LimpiezaManager.Limpieza_Update(limpieza);
         }
@@ -229,12 +229,12 @@ namespace WSTrazinsAtenea
             return EsterilizacionManager.Esterilizacion_Select(esterilizacion);
         }
 
-        public string Esterilizacion_Insert(Esterilizacion esterilizacion)
+        public Esterilizacion Esterilizacion_Insert(Esterilizacion esterilizacion)
         {
             return EsterilizacionManager.Esterilizacion_Insert(esterilizacion);
         }
 
-        public string Esterilizacion_Update(Esterilizacion esterilizacion)
+        public Esterilizacion Esterilizacion_Update(Esterilizacion esterilizacion)
         {
             return EsterilizacionManager.Esterilizacion_Update(esterilizacion);
         }
@@ -253,12 +253,12 @@ namespace WSTrazinsAtenea
             return AlmacenManager.Almacen_Select(almacen);
         }
 
-        public string Almacen_Insert(Almacen almacen)
+        public Almacen Almacen_Insert(Almacen almacen)
         {
             return AlmacenManager.Almacen_Insert(almacen);
         }
 
-        public string Almacen_Update(Almacen almacen)
+        public Almacen Almacen_Update(Almacen almacen)
         {
             return AlmacenManager.Almacen_Update(almacen);
         }
@@ -277,12 +277,12 @@ namespace WSTrazinsAtenea
             return AlmacenesUbicacionesManager.AlmacenesUbicaciones_Select(almacenesUbicaciones);
         }
 
-        public string AlmacenesUbicaciones_Insert(AlmacenesUbicaciones almacenesUbicaciones)
+        public AlmacenesUbicaciones AlmacenesUbicaciones_Insert(AlmacenesUbicaciones almacenesUbicaciones)
         {
             return AlmacenesUbicacionesManager.AlmacenesUbicaciones_Insert(almacenesUbicaciones);
         }
 
-        public string AlmacenesUbicaciones_Update(AlmacenesUbicaciones almacenesUbicaciones)
+        public AlmacenesUbicaciones AlmacenesUbicaciones_Update(AlmacenesUbicaciones almacenesUbicaciones)
         {
             return AlmacenesUbicacionesManager.AlmacenesUbicaciones_Update(almacenesUbicaciones);
         }

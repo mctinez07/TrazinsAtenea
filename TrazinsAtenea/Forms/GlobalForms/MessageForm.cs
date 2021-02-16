@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using TrazinsAtenea.GlobalEngine;
 using TrazinsAtenea.ServiceWSTrazinsAtenea;
 using System.Reflection;
+using Models.Messages;
 
 namespace TrazinsAtenea.Forms.GlobalForms
 {

@@ -145,12 +145,12 @@ namespace SqlEngine
             }
             catch (Exception ex)
             {
-                throw new Exception ("Error en IsSelect: "+ ex.Message);
+                throw new Exception ("Error en IsSelect: " + ex.Message);
             }
             
         }
 
-        public static string IsInsert<T>(T model)
+        public static T IsInsert<T>(T model)
         {
             try
             {
@@ -159,7 +159,7 @@ namespace SqlEngine
 
                 var sqlCommand = CreateSqlCmd(Connection, command, model);
 
-                return QueryTypeExecuteNonQuery(sqlCommand);
+                return QueryTypeExecuteNonQuery(sqlCommand, model);
 
             }
             catch (Exception ex)
@@ -169,7 +169,7 @@ namespace SqlEngine
             }
         }
 
-        public static string IsUpdate<T>(T model)
+        public static T IsUpdate<T>(T model)
         {
             try
             {
@@ -178,7 +178,7 @@ namespace SqlEngine
 
                 var sqlCommand = CreateSqlCmd(Connection, command, model);
 
-                return QueryTypeExecuteNonQuery(sqlCommand);
+                return QueryTypeExecuteNonQuery(sqlCommand, model);
             }
             catch (Exception ex)
             {
@@ -188,7 +188,7 @@ namespace SqlEngine
             
         }
 
-        public static string IsDelete<T>(T model)
+        public static T IsDelete<T>(T model)
         {
             try
             {
@@ -197,7 +197,7 @@ namespace SqlEngine
 
                 var sqlCommand = CreateSqlCmd(Connection, command, model);
 
-                return QueryTypeExecuteNonQuery(sqlCommand);
+                return QueryTypeExecuteNonQuery(sqlCommand, model);
             }
             catch (Exception ex)
             {
@@ -332,24 +332,20 @@ namespace SqlEngine
 
         //Crear metodo que devuelva el elemento insertad???
         //Tendre que mirar la direccion de parametro, creo que ya esta definido cuando obtnemos los argumentos del procedure
-        private static string QueryTypeExecuteNonQuery(SqlCommand sqlCmd)
+        private static T QueryTypeExecuteNonQuery<T>(SqlCommand sqlCmd, T model)
         {
             try
             {
+                //Devolución del identificador de registro desde BD para obtener los datos
                 int result = sqlCmd.ExecuteNonQuery();
-
-                if (result > 0)
-                {
-                    return "OK";
-                }
-                else
-                {
-                    return "ERROR";
-                }
+                //Como tenemos el modelo ya casteado solo hay que 
+                var elementInserted = IsSelect(model);
+                return elementInserted;                
+                
             }
             catch (Exception ex)
             {
-                return ex.Message;
+                throw new Exception("Error en " + ex.Message);
             }
             finally
             {

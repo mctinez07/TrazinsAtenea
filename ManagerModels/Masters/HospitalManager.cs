@@ -20,12 +20,12 @@ namespace ManagerModels.Masters
             return MainSqlEngine.IsSelect(hospital);
         }
 
-        public static string Hospital_Insert(Hospital hospital)
+        public static Hospital Hospital_Insert(Hospital hospital)
         {
             return MainSqlEngine.IsInsert(hospital);
         }
 
-        public static string Hospital_Update(Hospital hospital)
+        public static Hospital Hospital_Update(Hospital hospital)
         {
             return MainSqlEngine.IsUpdate(hospital);
         }

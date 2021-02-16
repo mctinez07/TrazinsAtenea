@@ -20,12 +20,12 @@ namespace ManagerModels.Inventory
             return MainSqlEngine.IsSelect(cajaImagen);
         }
 
-        public static string CajaImagen_Insert(CajaImagen cajaImagen)
+        public static CajaImagen CajaImagen_Insert(CajaImagen cajaImagen)
         {
             return MainSqlEngine.IsInsert(cajaImagen);
         }
 
-        public static string CajaImagen_Update(CajaImagen cajaImagen)
+        public static CajaImagen CajaImagen_Update(CajaImagen cajaImagen)
         {
             return MainSqlEngine.IsUpdate(cajaImagen);
         }

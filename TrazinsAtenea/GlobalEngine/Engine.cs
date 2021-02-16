@@ -150,9 +150,8 @@ namespace TrazinsAtenea.GlobalEngine
                 binding.WriteValue();
             }
             else
-            {
-                //Los textedit de devexpress no cumplen esta condición
-                if (binding.Control is TextBox)
+            {                
+                if (binding.Control is TextBox || binding.Control is TextEdit)
                     binding.NullValue = "";
             }
 

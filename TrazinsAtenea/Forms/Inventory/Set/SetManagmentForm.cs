@@ -18,6 +18,10 @@ using System.IO;
 using System.Drawing.Imaging;
 using System.Reflection;
 using TrazinsAtenea.Forms.Inventory.Group;
+using Models.Masters.Storage;
+using Models.Inventory;
+using Models.Processes.Methods;
+using Models.Masters;
 
 namespace TrazinsAtenea.Forms.Inventory.Set
 {
@@ -655,7 +659,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                     //Creamos un nuevo modelo de CajaImagen desde la webcam
                     CapturedImage.Save(stream, ImageFormat.Jpeg);
                     cajaImagen.Imagen = stream.ToArray();
-                    cajaImagen.Image = CapturedImage;
+                    //cajaImagen.Image = CapturedImage;
                     cajaImagen.Nombre = DateTime.Now.ToShortDateString().ToString();
                     cajaImagen.Tipo = "image/jpeg";
                     type = "image";
@@ -677,12 +681,12 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             switch (type)
             {
                 case "image":
-                    cajaImagen.EsImagen = true;
+                    //cajaImagen.EsImagen = true;
 
                     //Obtenemos la imagen para mostrar en el picturebox
                     using (MemoryStream ms = new MemoryStream(cajaImagen.Imagen))
                     {
-                        cajaImagen.Image = Image.FromStream(ms);
+                        /*cajaImagen.Image = Image.FromStream(ms);*/
                         var weight = ms.Length;
 
                         if (!GetWeightImage(ms))
@@ -705,7 +709,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                         return;
                     }
                     //Falta probar tamaño de vídeos...
-                    cajaImagen.EsVideo = true;
+                    //cajaImagen.EsVideo = true;
                     AddImageVideo(cajaImagen, ofdImageVideo.FileName);
                     break;
                 default:

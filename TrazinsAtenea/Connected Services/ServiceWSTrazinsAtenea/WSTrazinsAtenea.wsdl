@@ -55,6 +55,36 @@
   <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Update_OutputMessage">
     <wsdl:part name="parameters" element="tns:CajaImagen_UpdateResponse" />
   </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Select_List_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_Select_List" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Select_List_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_Select_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Select_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_Select" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Select_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_Update" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_Delete" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_DeleteResponse" />
+  </wsdl:message>
   <wsdl:message name="IWSTrazinsAtenea_Especialidad_Select_List_InputMessage">
     <wsdl:part name="parameters" element="tns:Especialidad_Select_List" />
   </wsdl:message>
@@ -286,6 +316,26 @@
       <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update" message="tns:IWSTrazinsAtenea_CajaImagen_Update_InputMessage" />
       <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_UpdateResponse" message="tns:IWSTrazinsAtenea_CajaImagen_Update_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Select_List">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_List" message="tns:IWSTrazinsAtenea_CajasGrupos_Select_List_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_ListResponse" message="tns:IWSTrazinsAtenea_CajasGrupos_Select_List_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Select">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select" message="tns:IWSTrazinsAtenea_CajasGrupos_Select_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_SelectResponse" message="tns:IWSTrazinsAtenea_CajasGrupos_Select_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Insert">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Insert" message="tns:IWSTrazinsAtenea_CajasGrupos_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_InsertResponse" message="tns:IWSTrazinsAtenea_CajasGrupos_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Update">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Update" message="tns:IWSTrazinsAtenea_CajasGrupos_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_UpdateResponse" message="tns:IWSTrazinsAtenea_CajasGrupos_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Delete">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Delete" message="tns:IWSTrazinsAtenea_CajasGrupos_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_DeleteResponse" message="tns:IWSTrazinsAtenea_CajasGrupos_Delete_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Especialidad_Select_List">
       <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_List" message="tns:IWSTrazinsAtenea_Especialidad_Select_List_InputMessage" />
       <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_ListResponse" message="tns:IWSTrazinsAtenea_Especialidad_Select_List_OutputMessage" />
@@ -486,6 +536,51 @@
     </wsdl:operation>
     <wsdl:operation name="CajaImagen_Update">
       <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Select_List">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Select">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Insert">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Update">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Delete">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Delete" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -20,12 +20,12 @@ namespace ManagerModels.Masters.Storage
             return MainSqlEngine.IsSelect(almacen);
         }
 
-        public static string Almacen_Insert(Almacen almacen)
+        public static Almacen Almacen_Insert(Almacen almacen)
         {
             return MainSqlEngine.IsInsert(almacen);
         }
 
-        public static string Almacen_Update(Almacen almacen)
+        public static Almacen Almacen_Update(Almacen almacen)
         {
             return MainSqlEngine.IsUpdate(almacen);
         }

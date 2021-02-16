@@ -20,17 +20,17 @@ namespace ManagerModels.Inventory
             return MainSqlEngine.IsSelect(cajasGrupo);
         }
 
-        public static string CajasGrupo_Insert(CajasGrupo cajasGrupo)
+        public static CajasGrupo CajasGrupo_Insert(CajasGrupo cajasGrupo)
         {
             return MainSqlEngine.IsInsert(cajasGrupo);
         }
 
-        public static string CajasGrupo_Update(CajasGrupo cajasGrupo)
+        public static CajasGrupo CajasGrupo_Update(CajasGrupo cajasGrupo)
         {
             return MainSqlEngine.IsUpdate(cajasGrupo);
         }
 
-        public static string CajasGrupo_Delete(CajasGrupo cajasGrupo)
+        public static CajasGrupo CajasGrupo_Delete(CajasGrupo cajasGrupo)
         {
             return MainSqlEngine.IsDelete(cajasGrupo);
         }

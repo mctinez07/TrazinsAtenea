@@ -171,6 +171,94 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="CajasGrupos_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cajasGrupo" nillable="true" type="tns:CajasGrupo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CajasGrupo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CajaId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contador" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DesGrupo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GrupoId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NomGrupo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumOrden" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CajasGrupo" nillable="true" type="tns:CajasGrupo" />
+  <xs:element name="CajasGrupos_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CajasGrupos_Select_ListResult" nillable="true" type="tns:ArrayOfCajasGrupo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfCajasGrupo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CajasGrupo" nillable="true" type="tns:CajasGrupo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCajasGrupo" nillable="true" type="tns:ArrayOfCajasGrupo" />
+  <xs:element name="CajasGrupos_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cajasGrupo" nillable="true" type="tns:CajasGrupo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajasGrupos_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CajasGrupos_SelectResult" nillable="true" type="tns:CajasGrupo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajasGrupos_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cajasGrupo" nillable="true" type="tns:CajasGrupo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajasGrupos_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CajasGrupos_InsertResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajasGrupos_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cajasGrupo" nillable="true" type="tns:CajasGrupo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajasGrupos_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CajasGrupos_UpdateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajasGrupos_Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cajasGrupo" nillable="true" type="tns:CajasGrupo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajasGrupos_DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CajasGrupos_DeleteResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Especialidad_Select_List">
     <xs:complexType>
       <xs:sequence>

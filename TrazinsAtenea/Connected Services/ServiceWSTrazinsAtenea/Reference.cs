@@ -9,1408 +9,293 @@
 //------------------------------------------------------------------------------
 
 namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
-    using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BaseModel", Namespace="http://WSTrazinsAtenea.com")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja))]
-    public partial class BaseModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AuditMaquinaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AuditProcesoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AuditUsuarioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ChIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string HosIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AuditMaquina {
-            get {
-                return this.AuditMaquinaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AuditMaquinaField, value) != true)) {
-                    this.AuditMaquinaField = value;
-                    this.RaisePropertyChanged("AuditMaquina");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AuditProceso {
-            get {
-                return this.AuditProcesoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AuditProcesoField, value) != true)) {
-                    this.AuditProcesoField = value;
-                    this.RaisePropertyChanged("AuditProceso");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AuditUsuario {
-            get {
-                return this.AuditUsuarioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AuditUsuarioField, value) != true)) {
-                    this.AuditUsuarioField = value;
-                    this.RaisePropertyChanged("AuditUsuario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ChId {
-            get {
-                return this.ChIdField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ChIdField, value) != true)) {
-                    this.ChIdField = value;
-                    this.RaisePropertyChanged("ChId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string HosId {
-            get {
-                return this.HosIdField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.HosIdField, value) != true)) {
-                    this.HosIdField = value;
-                    this.RaisePropertyChanged("HosId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CajaImagen", Namespace="http://WSTrazinsAtenea.com")]
-    [System.SerializableAttribute()]
-    public partial class CajaImagen : TrazinsAtenea.ServiceWSTrazinsAtenea.BaseModel {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CajaIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool CargarImagenesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool EsImagenField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool EsVideoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Drawing.Image ImageField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private byte[] ImagenField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TipoField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CajaId {
-            get {
-                return this.CajaIdField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CajaIdField, value) != true)) {
-                    this.CajaIdField = value;
-                    this.RaisePropertyChanged("CajaId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool CargarImagenes {
-            get {
-                return this.CargarImagenesField;
-            }
-            set {
-                if ((this.CargarImagenesField.Equals(value) != true)) {
-                    this.CargarImagenesField = value;
-                    this.RaisePropertyChanged("CargarImagenes");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool EsImagen {
-            get {
-                return this.EsImagenField;
-            }
-            set {
-                if ((this.EsImagenField.Equals(value) != true)) {
-                    this.EsImagenField = value;
-                    this.RaisePropertyChanged("EsImagen");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool EsVideo {
-            get {
-                return this.EsVideoField;
-            }
-            set {
-                if ((this.EsVideoField.Equals(value) != true)) {
-                    this.EsVideoField = value;
-                    this.RaisePropertyChanged("EsVideo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Drawing.Image Image {
-            get {
-                return this.ImageField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ImageField, value) != true)) {
-                    this.ImageField = value;
-                    this.RaisePropertyChanged("Image");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public byte[] Imagen {
-            get {
-                return this.ImagenField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ImagenField, value) != true)) {
-                    this.ImagenField = value;
-                    this.RaisePropertyChanged("Imagen");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Nombre {
-            get {
-                return this.NombreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
-                    this.NombreField = value;
-                    this.RaisePropertyChanged("Nombre");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Tipo {
-            get {
-                return this.TipoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TipoField, value) != true)) {
-                    this.TipoField = value;
-                    this.RaisePropertyChanged("Tipo");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Especialidad", Namespace="http://WSTrazinsAtenea.com")]
-    [System.SerializableAttribute()]
-    public partial class Especialidad : TrazinsAtenea.ServiceWSTrazinsAtenea.BaseModel {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescripcionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> EspIdField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descripcion {
-            get {
-                return this.DescripcionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
-                    this.DescripcionField = value;
-                    this.RaisePropertyChanged("Descripcion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> EspId {
-            get {
-                return this.EspIdField;
-            }
-            set {
-                if ((this.EspIdField.Equals(value) != true)) {
-                    this.EspIdField = value;
-                    this.RaisePropertyChanged("EspId");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Embalaje", Namespace="http://WSTrazinsAtenea.com")]
-    [System.SerializableAttribute()]
-    public partial class Embalaje : TrazinsAtenea.ServiceWSTrazinsAtenea.BaseModel {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> CaducidadDiasField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> CaducidadMesesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> ConIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescripcionField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> CaducidadDias {
-            get {
-                return this.CaducidadDiasField;
-            }
-            set {
-                if ((this.CaducidadDiasField.Equals(value) != true)) {
-                    this.CaducidadDiasField = value;
-                    this.RaisePropertyChanged("CaducidadDias");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> CaducidadMeses {
-            get {
-                return this.CaducidadMesesField;
-            }
-            set {
-                if ((this.CaducidadMesesField.Equals(value) != true)) {
-                    this.CaducidadMesesField = value;
-                    this.RaisePropertyChanged("CaducidadMeses");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> ConId {
-            get {
-                return this.ConIdField;
-            }
-            set {
-                if ((this.ConIdField.Equals(value) != true)) {
-                    this.ConIdField = value;
-                    this.RaisePropertyChanged("ConId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descripcion {
-            get {
-                return this.DescripcionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
-                    this.DescripcionField = value;
-                    this.RaisePropertyChanged("Descripcion");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Hospital", Namespace="http://WSTrazinsAtenea.com")]
-    [System.SerializableAttribute()]
-    public partial class Hospital : TrazinsAtenea.ServiceWSTrazinsAtenea.BaseModel {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ConFirmaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> EmbIdArtField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> EmbIdCajField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> EmbIdSCField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool IntOrionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool IntSeleneField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NomHospitalField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SiglasField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool ConFirma {
-            get {
-                return this.ConFirmaField;
-            }
-            set {
-                if ((this.ConFirmaField.Equals(value) != true)) {
-                    this.ConFirmaField = value;
-                    this.RaisePropertyChanged("ConFirma");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> EmbIdArt {
-            get {
-                return this.EmbIdArtField;
-            }
-            set {
-                if ((this.EmbIdArtField.Equals(value) != true)) {
-                    this.EmbIdArtField = value;
-                    this.RaisePropertyChanged("EmbIdArt");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> EmbIdCaj {
-            get {
-                return this.EmbIdCajField;
-            }
-            set {
-                if ((this.EmbIdCajField.Equals(value) != true)) {
-                    this.EmbIdCajField = value;
-                    this.RaisePropertyChanged("EmbIdCaj");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> EmbIdSC {
-            get {
-                return this.EmbIdSCField;
-            }
-            set {
-                if ((this.EmbIdSCField.Equals(value) != true)) {
-                    this.EmbIdSCField = value;
-                    this.RaisePropertyChanged("EmbIdSC");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IntOrion {
-            get {
-                return this.IntOrionField;
-            }
-            set {
-                if ((this.IntOrionField.Equals(value) != true)) {
-                    this.IntOrionField = value;
-                    this.RaisePropertyChanged("IntOrion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IntSelene {
-            get {
-                return this.IntSeleneField;
-            }
-            set {
-                if ((this.IntSeleneField.Equals(value) != true)) {
-                    this.IntSeleneField = value;
-                    this.RaisePropertyChanged("IntSelene");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NomHospital {
-            get {
-                return this.NomHospitalField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NomHospitalField, value) != true)) {
-                    this.NomHospitalField = value;
-                    this.RaisePropertyChanged("NomHospital");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Siglas {
-            get {
-                return this.SiglasField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SiglasField, value) != true)) {
-                    this.SiglasField = value;
-                    this.RaisePropertyChanged("Siglas");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="TipoCaja", Namespace="http://WSTrazinsAtenea.com")]
-    [System.SerializableAttribute()]
-    public partial class TipoCaja : TrazinsAtenea.ServiceWSTrazinsAtenea.BaseModel {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescripcionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> IdField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descripcion {
-            get {
-                return this.DescripcionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
-                    this.DescripcionField = value;
-                    this.RaisePropertyChanged("Descripcion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Limpieza", Namespace="http://WSTrazinsAtenea.com")]
-    [System.SerializableAttribute()]
-    public partial class Limpieza : TrazinsAtenea.ServiceWSTrazinsAtenea.BaseModel {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool Control1Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool Control2Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool Control3Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool Control4Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescripcionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> TipoLavIdField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Control1 {
-            get {
-                return this.Control1Field;
-            }
-            set {
-                if ((this.Control1Field.Equals(value) != true)) {
-                    this.Control1Field = value;
-                    this.RaisePropertyChanged("Control1");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Control2 {
-            get {
-                return this.Control2Field;
-            }
-            set {
-                if ((this.Control2Field.Equals(value) != true)) {
-                    this.Control2Field = value;
-                    this.RaisePropertyChanged("Control2");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Control3 {
-            get {
-                return this.Control3Field;
-            }
-            set {
-                if ((this.Control3Field.Equals(value) != true)) {
-                    this.Control3Field = value;
-                    this.RaisePropertyChanged("Control3");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Control4 {
-            get {
-                return this.Control4Field;
-            }
-            set {
-                if ((this.Control4Field.Equals(value) != true)) {
-                    this.Control4Field = value;
-                    this.RaisePropertyChanged("Control4");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descripcion {
-            get {
-                return this.DescripcionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
-                    this.DescripcionField = value;
-                    this.RaisePropertyChanged("Descripcion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> TipoLavId {
-            get {
-                return this.TipoLavIdField;
-            }
-            set {
-                if ((this.TipoLavIdField.Equals(value) != true)) {
-                    this.TipoLavIdField = value;
-                    this.RaisePropertyChanged("TipoLavId");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Esterilizacion", Namespace="http://WSTrazinsAtenea.com")]
-    [System.SerializableAttribute()]
-    public partial class Esterilizacion : TrazinsAtenea.ServiceWSTrazinsAtenea.BaseModel {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool Control1Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool Control2Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool Control3Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool Control4Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescripcionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> EstIdField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Control1 {
-            get {
-                return this.Control1Field;
-            }
-            set {
-                if ((this.Control1Field.Equals(value) != true)) {
-                    this.Control1Field = value;
-                    this.RaisePropertyChanged("Control1");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Control2 {
-            get {
-                return this.Control2Field;
-            }
-            set {
-                if ((this.Control2Field.Equals(value) != true)) {
-                    this.Control2Field = value;
-                    this.RaisePropertyChanged("Control2");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Control3 {
-            get {
-                return this.Control3Field;
-            }
-            set {
-                if ((this.Control3Field.Equals(value) != true)) {
-                    this.Control3Field = value;
-                    this.RaisePropertyChanged("Control3");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Control4 {
-            get {
-                return this.Control4Field;
-            }
-            set {
-                if ((this.Control4Field.Equals(value) != true)) {
-                    this.Control4Field = value;
-                    this.RaisePropertyChanged("Control4");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descripcion {
-            get {
-                return this.DescripcionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
-                    this.DescripcionField = value;
-                    this.RaisePropertyChanged("Descripcion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> EstId {
-            get {
-                return this.EstIdField;
-            }
-            set {
-                if ((this.EstIdField.Equals(value) != true)) {
-                    this.EstIdField = value;
-                    this.RaisePropertyChanged("EstId");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Almacen", Namespace="http://WSTrazinsAtenea.com")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones))]
-    public partial class Almacen : TrazinsAtenea.ServiceWSTrazinsAtenea.BaseModel {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> AlmIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CodigoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescripcionField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> AlmId {
-            get {
-                return this.AlmIdField;
-            }
-            set {
-                if ((this.AlmIdField.Equals(value) != true)) {
-                    this.AlmIdField = value;
-                    this.RaisePropertyChanged("AlmId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Codigo {
-            get {
-                return this.CodigoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CodigoField, value) != true)) {
-                    this.CodigoField = value;
-                    this.RaisePropertyChanged("Codigo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descripcion {
-            get {
-                return this.DescripcionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
-                    this.DescripcionField = value;
-                    this.RaisePropertyChanged("Descripcion");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AlmacenesUbicaciones", Namespace="http://WSTrazinsAtenea.com")]
-    [System.SerializableAttribute()]
-    public partial class AlmacenesUbicaciones : TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> BloqueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> EstanteField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> PosicionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> UbiIdField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> Bloque {
-            get {
-                return this.BloqueField;
-            }
-            set {
-                if ((this.BloqueField.Equals(value) != true)) {
-                    this.BloqueField = value;
-                    this.RaisePropertyChanged("Bloque");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> Estante {
-            get {
-                return this.EstanteField;
-            }
-            set {
-                if ((this.EstanteField.Equals(value) != true)) {
-                    this.EstanteField = value;
-                    this.RaisePropertyChanged("Estante");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> Posicion {
-            get {
-                return this.PosicionField;
-            }
-            set {
-                if ((this.PosicionField.Equals(value) != true)) {
-                    this.PosicionField = value;
-                    this.RaisePropertyChanged("Posicion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> UbiId {
-            get {
-                return this.UbiIdField;
-            }
-            set {
-                if ((this.UbiIdField.Equals(value) != true)) {
-                    this.UbiIdField = value;
-                    this.RaisePropertyChanged("UbiId");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Caja", Namespace="http://WSTrazinsAtenea.com")]
-    [System.SerializableAttribute()]
-    public partial class Caja : TrazinsAtenea.ServiceWSTrazinsAtenea.BaseModel {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActivaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CHIdPropietarioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CajaIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CajaId_CodigoCajaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CodigoCajaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescripcionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> EspIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Especialidad_DescripcionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string HosIdPropietarioField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Activa {
-            get {
-                return this.ActivaField;
-            }
-            set {
-                if ((this.ActivaField.Equals(value) != true)) {
-                    this.ActivaField = value;
-                    this.RaisePropertyChanged("Activa");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CHIdPropietario {
-            get {
-                return this.CHIdPropietarioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CHIdPropietarioField, value) != true)) {
-                    this.CHIdPropietarioField = value;
-                    this.RaisePropertyChanged("CHIdPropietario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CajaId {
-            get {
-                return this.CajaIdField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CajaIdField, value) != true)) {
-                    this.CajaIdField = value;
-                    this.RaisePropertyChanged("CajaId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CajaId_CodigoCaja {
-            get {
-                return this.CajaId_CodigoCajaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CajaId_CodigoCajaField, value) != true)) {
-                    this.CajaId_CodigoCajaField = value;
-                    this.RaisePropertyChanged("CajaId_CodigoCaja");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CodigoCaja {
-            get {
-                return this.CodigoCajaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CodigoCajaField, value) != true)) {
-                    this.CodigoCajaField = value;
-                    this.RaisePropertyChanged("CodigoCaja");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descripcion {
-            get {
-                return this.DescripcionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
-                    this.DescripcionField = value;
-                    this.RaisePropertyChanged("Descripcion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> EspId {
-            get {
-                return this.EspIdField;
-            }
-            set {
-                if ((this.EspIdField.Equals(value) != true)) {
-                    this.EspIdField = value;
-                    this.RaisePropertyChanged("EspId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Especialidad_Descripcion {
-            get {
-                return this.Especialidad_DescripcionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Especialidad_DescripcionField, value) != true)) {
-                    this.Especialidad_DescripcionField = value;
-                    this.RaisePropertyChanged("Especialidad_Descripcion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string HosIdPropietario {
-            get {
-                return this.HosIdPropietarioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.HosIdPropietarioField, value) != true)) {
-                    this.HosIdPropietarioField = value;
-                    this.RaisePropertyChanged("HosIdPropietario");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Mensaje", Namespace="http://WSTrazinsAtenea.com")]
-    [System.SerializableAttribute()]
-    public partial class Mensaje : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string IdiomaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TextoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TipoIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TituloField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Idioma {
-            get {
-                return this.IdiomaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.IdiomaField, value) != true)) {
-                    this.IdiomaField = value;
-                    this.RaisePropertyChanged("Idioma");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Texto {
-            get {
-                return this.TextoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TextoField, value) != true)) {
-                    this.TextoField = value;
-                    this.RaisePropertyChanged("Texto");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TipoId {
-            get {
-                return this.TipoIdField;
-            }
-            set {
-                if ((this.TipoIdField.Equals(value) != true)) {
-                    this.TipoIdField = value;
-                    this.RaisePropertyChanged("TipoId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Titulo {
-            get {
-                return this.TituloField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TituloField, value) != true)) {
-                    this.TituloField = value;
-                    this.RaisePropertyChanged("Titulo");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://WSTrazinsAtenea.com", ConfigurationName="ServiceWSTrazinsAtenea.IWSTrazinsAtenea")]
     public interface IWSTrazinsAtenea {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_ListResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.Caja[] Caja_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja);
+        Models.Inventory.Caja[] Caja_Select_List(Models.Inventory.Caja caja);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_ListResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Caja[]> Caja_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja);
+        System.Threading.Tasks.Task<Models.Inventory.Caja[]> Caja_Select_ListAsync(Models.Inventory.Caja caja);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_SelectResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.Caja Caja_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja);
+        Models.Inventory.Caja Caja_Select(Models.Inventory.Caja caja);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_SelectResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Caja> Caja_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja);
+        System.Threading.Tasks.Task<Models.Inventory.Caja> Caja_SelectAsync(Models.Inventory.Caja caja);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_InsertResponse")]
-        string Caja_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja);
+        string Caja_Insert(Models.Inventory.Caja caja);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_InsertResponse")]
-        System.Threading.Tasks.Task<string> Caja_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja);
+        System.Threading.Tasks.Task<string> Caja_InsertAsync(Models.Inventory.Caja caja);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_UpdateResponse")]
-        string Caja_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja);
+        string Caja_Update(Models.Inventory.Caja caja);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_UpdateResponse")]
-        System.Threading.Tasks.Task<string> Caja_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja);
+        System.Threading.Tasks.Task<string> Caja_UpdateAsync(Models.Inventory.Caja caja);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_ListResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen[] CajaImagen_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen);
+        Models.Inventory.CajaImagen[] CajaImagen_Select_List(Models.Inventory.CajaImagen cajaImagen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_ListResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen[]> CajaImagen_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen);
+        System.Threading.Tasks.Task<Models.Inventory.CajaImagen[]> CajaImagen_Select_ListAsync(Models.Inventory.CajaImagen cajaImagen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_SelectResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen CajaImagen_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen);
+        Models.Inventory.CajaImagen CajaImagen_Select(Models.Inventory.CajaImagen cajaImagen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_SelectResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen> CajaImagen_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen);
+        System.Threading.Tasks.Task<Models.Inventory.CajaImagen> CajaImagen_SelectAsync(Models.Inventory.CajaImagen cajaImagen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_InsertResponse")]
-        string CajaImagen_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen);
+        string CajaImagen_Insert(Models.Inventory.CajaImagen cajaImagen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_InsertResponse")]
-        System.Threading.Tasks.Task<string> CajaImagen_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen);
+        System.Threading.Tasks.Task<string> CajaImagen_InsertAsync(Models.Inventory.CajaImagen cajaImagen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_UpdateResponse")]
-        string CajaImagen_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen);
+        string CajaImagen_Update(Models.Inventory.CajaImagen cajaImagen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_UpdateResponse")]
-        System.Threading.Tasks.Task<string> CajaImagen_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen);
+        System.Threading.Tasks.Task<string> CajaImagen_UpdateAsync(Models.Inventory.CajaImagen cajaImagen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_ListResponse")]
+        Models.Inventory.CajasGrupo[] CajasGrupos_Select_List(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_ListResponse")]
+        System.Threading.Tasks.Task<Models.Inventory.CajasGrupo[]> CajasGrupos_Select_ListAsync(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_SelectResponse")]
+        Models.Inventory.CajasGrupo CajasGrupos_Select(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_SelectResponse")]
+        System.Threading.Tasks.Task<Models.Inventory.CajasGrupo> CajasGrupos_SelectAsync(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_InsertResponse")]
+        string CajasGrupos_Insert(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_InsertResponse")]
+        System.Threading.Tasks.Task<string> CajasGrupos_InsertAsync(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_UpdateResponse")]
+        string CajasGrupos_Update(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_UpdateResponse")]
+        System.Threading.Tasks.Task<string> CajasGrupos_UpdateAsync(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Delete", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_DeleteResponse")]
+        string CajasGrupos_Delete(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Delete", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_DeleteResponse")]
+        System.Threading.Tasks.Task<string> CajasGrupos_DeleteAsync(Models.Inventory.CajasGrupo cajasGrupo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_ListResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad[] Especialidad_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad);
+        Models.Masters.Especialidad[] Especialidad_Select_List(Models.Masters.Especialidad especialidad);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_ListResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad[]> Especialidad_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad);
+        System.Threading.Tasks.Task<Models.Masters.Especialidad[]> Especialidad_Select_ListAsync(Models.Masters.Especialidad especialidad);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_SelectResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad Especialidad_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad);
+        Models.Masters.Especialidad Especialidad_Select(Models.Masters.Especialidad especialidad);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_SelectResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad> Especialidad_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad);
+        System.Threading.Tasks.Task<Models.Masters.Especialidad> Especialidad_SelectAsync(Models.Masters.Especialidad especialidad);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_InsertResponse")]
-        string Especialidad_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad);
+        string Especialidad_Insert(Models.Masters.Especialidad especialidad);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_InsertResponse")]
-        System.Threading.Tasks.Task<string> Especialidad_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad);
+        System.Threading.Tasks.Task<string> Especialidad_InsertAsync(Models.Masters.Especialidad especialidad);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_UpdateResponse")]
-        string Especialidad_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad);
+        string Especialidad_Update(Models.Masters.Especialidad especialidad);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_UpdateResponse")]
-        System.Threading.Tasks.Task<string> Especialidad_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad);
+        System.Threading.Tasks.Task<string> Especialidad_UpdateAsync(Models.Masters.Especialidad especialidad);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_ListResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje[] Embalaje_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje);
+        Models.Masters.Embalaje[] Embalaje_Select_List(Models.Masters.Embalaje embalaje);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_ListResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje[]> Embalaje_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje);
+        System.Threading.Tasks.Task<Models.Masters.Embalaje[]> Embalaje_Select_ListAsync(Models.Masters.Embalaje embalaje);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_SelectResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje Embalaje_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje);
+        Models.Masters.Embalaje Embalaje_Select(Models.Masters.Embalaje embalaje);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_SelectResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje> Embalaje_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje);
+        System.Threading.Tasks.Task<Models.Masters.Embalaje> Embalaje_SelectAsync(Models.Masters.Embalaje embalaje);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_InsertResponse")]
-        string Embalaje_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje);
+        string Embalaje_Insert(Models.Masters.Embalaje embalaje);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_InsertResponse")]
-        System.Threading.Tasks.Task<string> Embalaje_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje);
+        System.Threading.Tasks.Task<string> Embalaje_InsertAsync(Models.Masters.Embalaje embalaje);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_UpdateResponse")]
-        string Embalaje_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje);
+        string Embalaje_Update(Models.Masters.Embalaje embalaje);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_UpdateResponse")]
-        System.Threading.Tasks.Task<string> Embalaje_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje);
+        System.Threading.Tasks.Task<string> Embalaje_UpdateAsync(Models.Masters.Embalaje embalaje);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_ListResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital[] Hospital_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital);
+        Models.Masters.Hospital[] Hospital_Select_List(Models.Masters.Hospital hospital);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_ListResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital[]> Hospital_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital);
+        System.Threading.Tasks.Task<Models.Masters.Hospital[]> Hospital_Select_ListAsync(Models.Masters.Hospital hospital);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_SelectResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital Hospital_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital);
+        Models.Masters.Hospital Hospital_Select(Models.Masters.Hospital hospital);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_SelectResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital> Hospital_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital);
+        System.Threading.Tasks.Task<Models.Masters.Hospital> Hospital_SelectAsync(Models.Masters.Hospital hospital);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_InsertResponse")]
-        string Hospital_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital);
+        string Hospital_Insert(Models.Masters.Hospital hospital);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_InsertResponse")]
-        System.Threading.Tasks.Task<string> Hospital_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital);
+        System.Threading.Tasks.Task<string> Hospital_InsertAsync(Models.Masters.Hospital hospital);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_UpdateResponse")]
-        string Hospital_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital);
+        string Hospital_Update(Models.Masters.Hospital hospital);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_UpdateResponse")]
-        System.Threading.Tasks.Task<string> Hospital_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital);
+        System.Threading.Tasks.Task<string> Hospital_UpdateAsync(Models.Masters.Hospital hospital);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_ListResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja[] TipoCaja_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja);
+        Models.Masters.TipoCaja[] TipoCaja_Select_List(Models.Masters.TipoCaja tipoCaja);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_ListResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja[]> TipoCaja_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja);
+        System.Threading.Tasks.Task<Models.Masters.TipoCaja[]> TipoCaja_Select_ListAsync(Models.Masters.TipoCaja tipoCaja);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_SelectResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja TipoCaja_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja);
+        Models.Masters.TipoCaja TipoCaja_Select(Models.Masters.TipoCaja tipoCaja);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_SelectResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja> TipoCaja_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja);
+        System.Threading.Tasks.Task<Models.Masters.TipoCaja> TipoCaja_SelectAsync(Models.Masters.TipoCaja tipoCaja);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_InsertResponse")]
-        string TipoCaja_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja);
+        string TipoCaja_Insert(Models.Masters.TipoCaja tipoCaja);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_InsertResponse")]
-        System.Threading.Tasks.Task<string> TipoCaja_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja);
+        System.Threading.Tasks.Task<string> TipoCaja_InsertAsync(Models.Masters.TipoCaja tipoCaja);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_UpdateResponse")]
-        string TipoCaja_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja);
+        string TipoCaja_Update(Models.Masters.TipoCaja tipoCaja);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_UpdateResponse")]
-        System.Threading.Tasks.Task<string> TipoCaja_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja);
+        System.Threading.Tasks.Task<string> TipoCaja_UpdateAsync(Models.Masters.TipoCaja tipoCaja);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select_ListResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza[] Limpieza_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza limpieza);
+        Models.Processes.Methods.Limpieza[] Limpieza_Select_List(Models.Processes.Methods.Limpieza limpieza);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select_ListResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza[]> Limpieza_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza limpieza);
+        System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza[]> Limpieza_Select_ListAsync(Models.Processes.Methods.Limpieza limpieza);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_SelectResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza Limpieza_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza limpieza);
+        Models.Processes.Methods.Limpieza Limpieza_Select(Models.Processes.Methods.Limpieza limpieza);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_SelectResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza> Limpieza_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza limpieza);
+        System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza> Limpieza_SelectAsync(Models.Processes.Methods.Limpieza limpieza);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_InsertResponse")]
-        string Limpieza_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza limpieza);
+        string Limpieza_Insert(Models.Processes.Methods.Limpieza limpieza);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_InsertResponse")]
-        System.Threading.Tasks.Task<string> Limpieza_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza limpieza);
+        System.Threading.Tasks.Task<string> Limpieza_InsertAsync(Models.Processes.Methods.Limpieza limpieza);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_UpdateResponse")]
-        string Limpieza_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza limpieza);
+        string Limpieza_Update(Models.Processes.Methods.Limpieza limpieza);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_UpdateResponse")]
-        System.Threading.Tasks.Task<string> Limpieza_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza limpieza);
+        System.Threading.Tasks.Task<string> Limpieza_UpdateAsync(Models.Processes.Methods.Limpieza limpieza);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_ListResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion[] Esterilizacion_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion);
+        Models.Processes.Methods.Esterilizacion[] Esterilizacion_Select_List(Models.Processes.Methods.Esterilizacion esterilizacion);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_ListResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion[]> Esterilizacion_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion);
+        System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion[]> Esterilizacion_Select_ListAsync(Models.Processes.Methods.Esterilizacion esterilizacion);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_SelectResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion Esterilizacion_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion);
+        Models.Processes.Methods.Esterilizacion Esterilizacion_Select(Models.Processes.Methods.Esterilizacion esterilizacion);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_SelectResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion> Esterilizacion_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion);
+        System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion> Esterilizacion_SelectAsync(Models.Processes.Methods.Esterilizacion esterilizacion);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_InsertResponse")]
-        string Esterilizacion_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion);
+        string Esterilizacion_Insert(Models.Processes.Methods.Esterilizacion esterilizacion);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_InsertResponse")]
-        System.Threading.Tasks.Task<string> Esterilizacion_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion);
+        System.Threading.Tasks.Task<string> Esterilizacion_InsertAsync(Models.Processes.Methods.Esterilizacion esterilizacion);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_UpdateResponse")]
-        string Esterilizacion_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion);
+        string Esterilizacion_Update(Models.Processes.Methods.Esterilizacion esterilizacion);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_UpdateResponse")]
-        System.Threading.Tasks.Task<string> Esterilizacion_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion);
+        System.Threading.Tasks.Task<string> Esterilizacion_UpdateAsync(Models.Processes.Methods.Esterilizacion esterilizacion);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Select_ListResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen[] Almacen_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen almacen);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Models.Masters.Storage.AlmacenesUbicaciones))]
+        Models.Masters.Storage.Almacen[] Almacen_Select_List(Models.Masters.Storage.Almacen almacen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Select_ListResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen[]> Almacen_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen almacen);
+        System.Threading.Tasks.Task<Models.Masters.Storage.Almacen[]> Almacen_Select_ListAsync(Models.Masters.Storage.Almacen almacen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_SelectResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen Almacen_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen almacen);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Models.Masters.Storage.AlmacenesUbicaciones))]
+        Models.Masters.Storage.Almacen Almacen_Select(Models.Masters.Storage.Almacen almacen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_SelectResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen> Almacen_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen almacen);
+        System.Threading.Tasks.Task<Models.Masters.Storage.Almacen> Almacen_SelectAsync(Models.Masters.Storage.Almacen almacen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_InsertResponse")]
-        string Almacen_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen almacen);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Models.Masters.Storage.AlmacenesUbicaciones))]
+        string Almacen_Insert(Models.Masters.Storage.Almacen almacen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_InsertResponse")]
-        System.Threading.Tasks.Task<string> Almacen_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen almacen);
+        System.Threading.Tasks.Task<string> Almacen_InsertAsync(Models.Masters.Storage.Almacen almacen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_UpdateResponse")]
-        string Almacen_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen almacen);
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Models.Masters.Storage.AlmacenesUbicaciones))]
+        string Almacen_Update(Models.Masters.Storage.Almacen almacen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_UpdateResponse")]
-        System.Threading.Tasks.Task<string> Almacen_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen almacen);
+        System.Threading.Tasks.Task<string> Almacen_UpdateAsync(Models.Masters.Storage.Almacen almacen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Select_ListRespo" +
             "nse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones[] AlmacenesUbicaciones_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones);
+        Models.Masters.Storage.AlmacenesUbicaciones[] AlmacenesUbicaciones_Select_List(Models.Masters.Storage.AlmacenesUbicaciones almacenesUbicaciones);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Select_ListRespo" +
             "nse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones[]> AlmacenesUbicaciones_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones);
+        System.Threading.Tasks.Task<Models.Masters.Storage.AlmacenesUbicaciones[]> AlmacenesUbicaciones_Select_ListAsync(Models.Masters.Storage.AlmacenesUbicaciones almacenesUbicaciones);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_SelectResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones AlmacenesUbicaciones_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones);
+        Models.Masters.Storage.AlmacenesUbicaciones AlmacenesUbicaciones_Select(Models.Masters.Storage.AlmacenesUbicaciones almacenesUbicaciones);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_SelectResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones> AlmacenesUbicaciones_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones);
+        System.Threading.Tasks.Task<Models.Masters.Storage.AlmacenesUbicaciones> AlmacenesUbicaciones_SelectAsync(Models.Masters.Storage.AlmacenesUbicaciones almacenesUbicaciones);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_InsertResponse")]
-        string AlmacenesUbicaciones_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones);
+        string AlmacenesUbicaciones_Insert(Models.Masters.Storage.AlmacenesUbicaciones almacenesUbicaciones);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_InsertResponse")]
-        System.Threading.Tasks.Task<string> AlmacenesUbicaciones_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones);
+        System.Threading.Tasks.Task<string> AlmacenesUbicaciones_InsertAsync(Models.Masters.Storage.AlmacenesUbicaciones almacenesUbicaciones);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_UpdateResponse")]
-        string AlmacenesUbicaciones_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones);
+        string AlmacenesUbicaciones_Update(Models.Masters.Storage.AlmacenesUbicaciones almacenesUbicaciones);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_UpdateResponse")]
-        System.Threading.Tasks.Task<string> AlmacenesUbicaciones_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones);
+        System.Threading.Tasks.Task<string> AlmacenesUbicaciones_UpdateAsync(Models.Masters.Storage.AlmacenesUbicaciones almacenesUbicaciones);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_SelectResponse")]
-        TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje Mensaje_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje mensaje);
+        Models.Messages.Mensaje Mensaje_Select(Models.Messages.Mensaje mensaje);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_SelectResponse")]
-        System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje> Mensaje_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje mensaje);
+        System.Threading.Tasks.Task<Models.Messages.Mensaje> Mensaje_SelectAsync(Models.Messages.Mensaje mensaje);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1440,331 +325,371 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
                 base(binding, remoteAddress) {
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.Caja[] Caja_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja) {
+        public Models.Inventory.Caja[] Caja_Select_List(Models.Inventory.Caja caja) {
             return base.Channel.Caja_Select_List(caja);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Caja[]> Caja_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja) {
+        public System.Threading.Tasks.Task<Models.Inventory.Caja[]> Caja_Select_ListAsync(Models.Inventory.Caja caja) {
             return base.Channel.Caja_Select_ListAsync(caja);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.Caja Caja_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja) {
+        public Models.Inventory.Caja Caja_Select(Models.Inventory.Caja caja) {
             return base.Channel.Caja_Select(caja);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Caja> Caja_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja) {
+        public System.Threading.Tasks.Task<Models.Inventory.Caja> Caja_SelectAsync(Models.Inventory.Caja caja) {
             return base.Channel.Caja_SelectAsync(caja);
         }
         
-        public string Caja_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja) {
+        public string Caja_Insert(Models.Inventory.Caja caja) {
             return base.Channel.Caja_Insert(caja);
         }
         
-        public System.Threading.Tasks.Task<string> Caja_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja) {
+        public System.Threading.Tasks.Task<string> Caja_InsertAsync(Models.Inventory.Caja caja) {
             return base.Channel.Caja_InsertAsync(caja);
         }
         
-        public string Caja_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja) {
+        public string Caja_Update(Models.Inventory.Caja caja) {
             return base.Channel.Caja_Update(caja);
         }
         
-        public System.Threading.Tasks.Task<string> Caja_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Caja caja) {
+        public System.Threading.Tasks.Task<string> Caja_UpdateAsync(Models.Inventory.Caja caja) {
             return base.Channel.Caja_UpdateAsync(caja);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen[] CajaImagen_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen) {
+        public Models.Inventory.CajaImagen[] CajaImagen_Select_List(Models.Inventory.CajaImagen cajaImagen) {
             return base.Channel.CajaImagen_Select_List(cajaImagen);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen[]> CajaImagen_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen) {
+        public System.Threading.Tasks.Task<Models.Inventory.CajaImagen[]> CajaImagen_Select_ListAsync(Models.Inventory.CajaImagen cajaImagen) {
             return base.Channel.CajaImagen_Select_ListAsync(cajaImagen);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen CajaImagen_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen) {
+        public Models.Inventory.CajaImagen CajaImagen_Select(Models.Inventory.CajaImagen cajaImagen) {
             return base.Channel.CajaImagen_Select(cajaImagen);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen> CajaImagen_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen) {
+        public System.Threading.Tasks.Task<Models.Inventory.CajaImagen> CajaImagen_SelectAsync(Models.Inventory.CajaImagen cajaImagen) {
             return base.Channel.CajaImagen_SelectAsync(cajaImagen);
         }
         
-        public string CajaImagen_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen) {
+        public string CajaImagen_Insert(Models.Inventory.CajaImagen cajaImagen) {
             return base.Channel.CajaImagen_Insert(cajaImagen);
         }
         
-        public System.Threading.Tasks.Task<string> CajaImagen_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen) {
+        public System.Threading.Tasks.Task<string> CajaImagen_InsertAsync(Models.Inventory.CajaImagen cajaImagen) {
             return base.Channel.CajaImagen_InsertAsync(cajaImagen);
         }
         
-        public string CajaImagen_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen) {
+        public string CajaImagen_Update(Models.Inventory.CajaImagen cajaImagen) {
             return base.Channel.CajaImagen_Update(cajaImagen);
         }
         
-        public System.Threading.Tasks.Task<string> CajaImagen_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.CajaImagen cajaImagen) {
+        public System.Threading.Tasks.Task<string> CajaImagen_UpdateAsync(Models.Inventory.CajaImagen cajaImagen) {
             return base.Channel.CajaImagen_UpdateAsync(cajaImagen);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad[] Especialidad_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad) {
+        public Models.Inventory.CajasGrupo[] CajasGrupos_Select_List(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_Select_List(cajasGrupo);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Inventory.CajasGrupo[]> CajasGrupos_Select_ListAsync(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_Select_ListAsync(cajasGrupo);
+        }
+        
+        public Models.Inventory.CajasGrupo CajasGrupos_Select(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_Select(cajasGrupo);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Inventory.CajasGrupo> CajasGrupos_SelectAsync(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_SelectAsync(cajasGrupo);
+        }
+        
+        public string CajasGrupos_Insert(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_Insert(cajasGrupo);
+        }
+        
+        public System.Threading.Tasks.Task<string> CajasGrupos_InsertAsync(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_InsertAsync(cajasGrupo);
+        }
+        
+        public string CajasGrupos_Update(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_Update(cajasGrupo);
+        }
+        
+        public System.Threading.Tasks.Task<string> CajasGrupos_UpdateAsync(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_UpdateAsync(cajasGrupo);
+        }
+        
+        public string CajasGrupos_Delete(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_Delete(cajasGrupo);
+        }
+        
+        public System.Threading.Tasks.Task<string> CajasGrupos_DeleteAsync(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_DeleteAsync(cajasGrupo);
+        }
+        
+        public Models.Masters.Especialidad[] Especialidad_Select_List(Models.Masters.Especialidad especialidad) {
             return base.Channel.Especialidad_Select_List(especialidad);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad[]> Especialidad_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad) {
+        public System.Threading.Tasks.Task<Models.Masters.Especialidad[]> Especialidad_Select_ListAsync(Models.Masters.Especialidad especialidad) {
             return base.Channel.Especialidad_Select_ListAsync(especialidad);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad Especialidad_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad) {
+        public Models.Masters.Especialidad Especialidad_Select(Models.Masters.Especialidad especialidad) {
             return base.Channel.Especialidad_Select(especialidad);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad> Especialidad_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad) {
+        public System.Threading.Tasks.Task<Models.Masters.Especialidad> Especialidad_SelectAsync(Models.Masters.Especialidad especialidad) {
             return base.Channel.Especialidad_SelectAsync(especialidad);
         }
         
-        public string Especialidad_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad) {
+        public string Especialidad_Insert(Models.Masters.Especialidad especialidad) {
             return base.Channel.Especialidad_Insert(especialidad);
         }
         
-        public System.Threading.Tasks.Task<string> Especialidad_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad) {
+        public System.Threading.Tasks.Task<string> Especialidad_InsertAsync(Models.Masters.Especialidad especialidad) {
             return base.Channel.Especialidad_InsertAsync(especialidad);
         }
         
-        public string Especialidad_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad) {
+        public string Especialidad_Update(Models.Masters.Especialidad especialidad) {
             return base.Channel.Especialidad_Update(especialidad);
         }
         
-        public System.Threading.Tasks.Task<string> Especialidad_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Especialidad especialidad) {
+        public System.Threading.Tasks.Task<string> Especialidad_UpdateAsync(Models.Masters.Especialidad especialidad) {
             return base.Channel.Especialidad_UpdateAsync(especialidad);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje[] Embalaje_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje) {
+        public Models.Masters.Embalaje[] Embalaje_Select_List(Models.Masters.Embalaje embalaje) {
             return base.Channel.Embalaje_Select_List(embalaje);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje[]> Embalaje_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje) {
+        public System.Threading.Tasks.Task<Models.Masters.Embalaje[]> Embalaje_Select_ListAsync(Models.Masters.Embalaje embalaje) {
             return base.Channel.Embalaje_Select_ListAsync(embalaje);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje Embalaje_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje) {
+        public Models.Masters.Embalaje Embalaje_Select(Models.Masters.Embalaje embalaje) {
             return base.Channel.Embalaje_Select(embalaje);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje> Embalaje_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje) {
+        public System.Threading.Tasks.Task<Models.Masters.Embalaje> Embalaje_SelectAsync(Models.Masters.Embalaje embalaje) {
             return base.Channel.Embalaje_SelectAsync(embalaje);
         }
         
-        public string Embalaje_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje) {
+        public string Embalaje_Insert(Models.Masters.Embalaje embalaje) {
             return base.Channel.Embalaje_Insert(embalaje);
         }
         
-        public System.Threading.Tasks.Task<string> Embalaje_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje) {
+        public System.Threading.Tasks.Task<string> Embalaje_InsertAsync(Models.Masters.Embalaje embalaje) {
             return base.Channel.Embalaje_InsertAsync(embalaje);
         }
         
-        public string Embalaje_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje) {
+        public string Embalaje_Update(Models.Masters.Embalaje embalaje) {
             return base.Channel.Embalaje_Update(embalaje);
         }
         
-        public System.Threading.Tasks.Task<string> Embalaje_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Embalaje embalaje) {
+        public System.Threading.Tasks.Task<string> Embalaje_UpdateAsync(Models.Masters.Embalaje embalaje) {
             return base.Channel.Embalaje_UpdateAsync(embalaje);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital[] Hospital_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital) {
+        public Models.Masters.Hospital[] Hospital_Select_List(Models.Masters.Hospital hospital) {
             return base.Channel.Hospital_Select_List(hospital);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital[]> Hospital_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital) {
+        public System.Threading.Tasks.Task<Models.Masters.Hospital[]> Hospital_Select_ListAsync(Models.Masters.Hospital hospital) {
             return base.Channel.Hospital_Select_ListAsync(hospital);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital Hospital_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital) {
+        public Models.Masters.Hospital Hospital_Select(Models.Masters.Hospital hospital) {
             return base.Channel.Hospital_Select(hospital);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital> Hospital_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital) {
+        public System.Threading.Tasks.Task<Models.Masters.Hospital> Hospital_SelectAsync(Models.Masters.Hospital hospital) {
             return base.Channel.Hospital_SelectAsync(hospital);
         }
         
-        public string Hospital_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital) {
+        public string Hospital_Insert(Models.Masters.Hospital hospital) {
             return base.Channel.Hospital_Insert(hospital);
         }
         
-        public System.Threading.Tasks.Task<string> Hospital_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital) {
+        public System.Threading.Tasks.Task<string> Hospital_InsertAsync(Models.Masters.Hospital hospital) {
             return base.Channel.Hospital_InsertAsync(hospital);
         }
         
-        public string Hospital_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital) {
+        public string Hospital_Update(Models.Masters.Hospital hospital) {
             return base.Channel.Hospital_Update(hospital);
         }
         
-        public System.Threading.Tasks.Task<string> Hospital_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Hospital hospital) {
+        public System.Threading.Tasks.Task<string> Hospital_UpdateAsync(Models.Masters.Hospital hospital) {
             return base.Channel.Hospital_UpdateAsync(hospital);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja[] TipoCaja_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja) {
+        public Models.Masters.TipoCaja[] TipoCaja_Select_List(Models.Masters.TipoCaja tipoCaja) {
             return base.Channel.TipoCaja_Select_List(tipoCaja);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja[]> TipoCaja_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja) {
+        public System.Threading.Tasks.Task<Models.Masters.TipoCaja[]> TipoCaja_Select_ListAsync(Models.Masters.TipoCaja tipoCaja) {
             return base.Channel.TipoCaja_Select_ListAsync(tipoCaja);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja TipoCaja_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja) {
+        public Models.Masters.TipoCaja TipoCaja_Select(Models.Masters.TipoCaja tipoCaja) {
             return base.Channel.TipoCaja_Select(tipoCaja);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja> TipoCaja_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja) {
+        public System.Threading.Tasks.Task<Models.Masters.TipoCaja> TipoCaja_SelectAsync(Models.Masters.TipoCaja tipoCaja) {
             return base.Channel.TipoCaja_SelectAsync(tipoCaja);
         }
         
-        public string TipoCaja_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja) {
+        public string TipoCaja_Insert(Models.Masters.TipoCaja tipoCaja) {
             return base.Channel.TipoCaja_Insert(tipoCaja);
         }
         
-        public System.Threading.Tasks.Task<string> TipoCaja_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja) {
+        public System.Threading.Tasks.Task<string> TipoCaja_InsertAsync(Models.Masters.TipoCaja tipoCaja) {
             return base.Channel.TipoCaja_InsertAsync(tipoCaja);
         }
         
-        public string TipoCaja_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja) {
+        public string TipoCaja_Update(Models.Masters.TipoCaja tipoCaja) {
             return base.Channel.TipoCaja_Update(tipoCaja);
         }
         
-        public System.Threading.Tasks.Task<string> TipoCaja_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.TipoCaja tipoCaja) {
+        public System.Threading.Tasks.Task<string> TipoCaja_UpdateAsync(Models.Masters.TipoCaja tipoCaja) {
             return base.Channel.TipoCaja_UpdateAsync(tipoCaja);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza[] Limpieza_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza limpieza) {
+        public Models.Processes.Methods.Limpieza[] Limpieza_Select_List(Models.Processes.Methods.Limpieza limpieza) {
             return base.Channel.Limpieza_Select_List(limpieza);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza[]> Limpieza_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza limpieza) {
+        public System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza[]> Limpieza_Select_ListAsync(Models.Processes.Methods.Limpieza limpieza) {
             return base.Channel.Limpieza_Select_ListAsync(limpieza);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza Limpieza_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza limpieza) {
+        public Models.Processes.Methods.Limpieza Limpieza_Select(Models.Processes.Methods.Limpieza limpieza) {
             return base.Channel.Limpieza_Select(limpieza);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza> Limpieza_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza limpieza) {
+        public System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza> Limpieza_SelectAsync(Models.Processes.Methods.Limpieza limpieza) {
             return base.Channel.Limpieza_SelectAsync(limpieza);
         }
         
-        public string Limpieza_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza limpieza) {
+        public string Limpieza_Insert(Models.Processes.Methods.Limpieza limpieza) {
             return base.Channel.Limpieza_Insert(limpieza);
         }
         
-        public System.Threading.Tasks.Task<string> Limpieza_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza limpieza) {
+        public System.Threading.Tasks.Task<string> Limpieza_InsertAsync(Models.Processes.Methods.Limpieza limpieza) {
             return base.Channel.Limpieza_InsertAsync(limpieza);
         }
         
-        public string Limpieza_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza limpieza) {
+        public string Limpieza_Update(Models.Processes.Methods.Limpieza limpieza) {
             return base.Channel.Limpieza_Update(limpieza);
         }
         
-        public System.Threading.Tasks.Task<string> Limpieza_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Limpieza limpieza) {
+        public System.Threading.Tasks.Task<string> Limpieza_UpdateAsync(Models.Processes.Methods.Limpieza limpieza) {
             return base.Channel.Limpieza_UpdateAsync(limpieza);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion[] Esterilizacion_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion) {
+        public Models.Processes.Methods.Esterilizacion[] Esterilizacion_Select_List(Models.Processes.Methods.Esterilizacion esterilizacion) {
             return base.Channel.Esterilizacion_Select_List(esterilizacion);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion[]> Esterilizacion_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion) {
+        public System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion[]> Esterilizacion_Select_ListAsync(Models.Processes.Methods.Esterilizacion esterilizacion) {
             return base.Channel.Esterilizacion_Select_ListAsync(esterilizacion);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion Esterilizacion_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion) {
+        public Models.Processes.Methods.Esterilizacion Esterilizacion_Select(Models.Processes.Methods.Esterilizacion esterilizacion) {
             return base.Channel.Esterilizacion_Select(esterilizacion);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion> Esterilizacion_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion) {
+        public System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion> Esterilizacion_SelectAsync(Models.Processes.Methods.Esterilizacion esterilizacion) {
             return base.Channel.Esterilizacion_SelectAsync(esterilizacion);
         }
         
-        public string Esterilizacion_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion) {
+        public string Esterilizacion_Insert(Models.Processes.Methods.Esterilizacion esterilizacion) {
             return base.Channel.Esterilizacion_Insert(esterilizacion);
         }
         
-        public System.Threading.Tasks.Task<string> Esterilizacion_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion) {
+        public System.Threading.Tasks.Task<string> Esterilizacion_InsertAsync(Models.Processes.Methods.Esterilizacion esterilizacion) {
             return base.Channel.Esterilizacion_InsertAsync(esterilizacion);
         }
         
-        public string Esterilizacion_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion) {
+        public string Esterilizacion_Update(Models.Processes.Methods.Esterilizacion esterilizacion) {
             return base.Channel.Esterilizacion_Update(esterilizacion);
         }
         
-        public System.Threading.Tasks.Task<string> Esterilizacion_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Esterilizacion esterilizacion) {
+        public System.Threading.Tasks.Task<string> Esterilizacion_UpdateAsync(Models.Processes.Methods.Esterilizacion esterilizacion) {
             return base.Channel.Esterilizacion_UpdateAsync(esterilizacion);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen[] Almacen_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen almacen) {
+        public Models.Masters.Storage.Almacen[] Almacen_Select_List(Models.Masters.Storage.Almacen almacen) {
             return base.Channel.Almacen_Select_List(almacen);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen[]> Almacen_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen almacen) {
+        public System.Threading.Tasks.Task<Models.Masters.Storage.Almacen[]> Almacen_Select_ListAsync(Models.Masters.Storage.Almacen almacen) {
             return base.Channel.Almacen_Select_ListAsync(almacen);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen Almacen_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen almacen) {
+        public Models.Masters.Storage.Almacen Almacen_Select(Models.Masters.Storage.Almacen almacen) {
             return base.Channel.Almacen_Select(almacen);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen> Almacen_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen almacen) {
+        public System.Threading.Tasks.Task<Models.Masters.Storage.Almacen> Almacen_SelectAsync(Models.Masters.Storage.Almacen almacen) {
             return base.Channel.Almacen_SelectAsync(almacen);
         }
         
-        public string Almacen_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen almacen) {
+        public string Almacen_Insert(Models.Masters.Storage.Almacen almacen) {
             return base.Channel.Almacen_Insert(almacen);
         }
         
-        public System.Threading.Tasks.Task<string> Almacen_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen almacen) {
+        public System.Threading.Tasks.Task<string> Almacen_InsertAsync(Models.Masters.Storage.Almacen almacen) {
             return base.Channel.Almacen_InsertAsync(almacen);
         }
         
-        public string Almacen_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen almacen) {
+        public string Almacen_Update(Models.Masters.Storage.Almacen almacen) {
             return base.Channel.Almacen_Update(almacen);
         }
         
-        public System.Threading.Tasks.Task<string> Almacen_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Almacen almacen) {
+        public System.Threading.Tasks.Task<string> Almacen_UpdateAsync(Models.Masters.Storage.Almacen almacen) {
             return base.Channel.Almacen_UpdateAsync(almacen);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones[] AlmacenesUbicaciones_Select_List(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones) {
+        public Models.Masters.Storage.AlmacenesUbicaciones[] AlmacenesUbicaciones_Select_List(Models.Masters.Storage.AlmacenesUbicaciones almacenesUbicaciones) {
             return base.Channel.AlmacenesUbicaciones_Select_List(almacenesUbicaciones);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones[]> AlmacenesUbicaciones_Select_ListAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones) {
+        public System.Threading.Tasks.Task<Models.Masters.Storage.AlmacenesUbicaciones[]> AlmacenesUbicaciones_Select_ListAsync(Models.Masters.Storage.AlmacenesUbicaciones almacenesUbicaciones) {
             return base.Channel.AlmacenesUbicaciones_Select_ListAsync(almacenesUbicaciones);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones AlmacenesUbicaciones_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones) {
+        public Models.Masters.Storage.AlmacenesUbicaciones AlmacenesUbicaciones_Select(Models.Masters.Storage.AlmacenesUbicaciones almacenesUbicaciones) {
             return base.Channel.AlmacenesUbicaciones_Select(almacenesUbicaciones);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones> AlmacenesUbicaciones_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones) {
+        public System.Threading.Tasks.Task<Models.Masters.Storage.AlmacenesUbicaciones> AlmacenesUbicaciones_SelectAsync(Models.Masters.Storage.AlmacenesUbicaciones almacenesUbicaciones) {
             return base.Channel.AlmacenesUbicaciones_SelectAsync(almacenesUbicaciones);
         }
         
-        public string AlmacenesUbicaciones_Insert(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones) {
+        public string AlmacenesUbicaciones_Insert(Models.Masters.Storage.AlmacenesUbicaciones almacenesUbicaciones) {
             return base.Channel.AlmacenesUbicaciones_Insert(almacenesUbicaciones);
         }
         
-        public System.Threading.Tasks.Task<string> AlmacenesUbicaciones_InsertAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones) {
+        public System.Threading.Tasks.Task<string> AlmacenesUbicaciones_InsertAsync(Models.Masters.Storage.AlmacenesUbicaciones almacenesUbicaciones) {
             return base.Channel.AlmacenesUbicaciones_InsertAsync(almacenesUbicaciones);
         }
         
-        public string AlmacenesUbicaciones_Update(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones) {
+        public string AlmacenesUbicaciones_Update(Models.Masters.Storage.AlmacenesUbicaciones almacenesUbicaciones) {
             return base.Channel.AlmacenesUbicaciones_Update(almacenesUbicaciones);
         }
         
-        public System.Threading.Tasks.Task<string> AlmacenesUbicaciones_UpdateAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.AlmacenesUbicaciones almacenesUbicaciones) {
+        public System.Threading.Tasks.Task<string> AlmacenesUbicaciones_UpdateAsync(Models.Masters.Storage.AlmacenesUbicaciones almacenesUbicaciones) {
             return base.Channel.AlmacenesUbicaciones_UpdateAsync(almacenesUbicaciones);
         }
         
-        public TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje Mensaje_Select(TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje mensaje) {
+        public Models.Messages.Mensaje Mensaje_Select(Models.Messages.Mensaje mensaje) {
             return base.Channel.Mensaje_Select(mensaje);
         }
         
-        public System.Threading.Tasks.Task<TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje> Mensaje_SelectAsync(TrazinsAtenea.ServiceWSTrazinsAtenea.Mensaje mensaje) {
+        public System.Threading.Tasks.Task<Models.Messages.Mensaje> Mensaje_SelectAsync(Models.Messages.Mensaje mensaje) {
             return base.Channel.Mensaje_SelectAsync(mensaje);
         }
     }

@@ -20,12 +20,12 @@ namespace ManagerModels.Masters
             return MainSqlEngine.IsSelect(tipoCaja);
         }
 
-        public static string TipoCaja_Insert(TipoCaja tipoCaja)
+        public static TipoCaja TipoCaja_Insert(TipoCaja tipoCaja)
         {
             return MainSqlEngine.IsInsert(tipoCaja);
         }
 
-        public static string TipoCaja_Update(TipoCaja tipoCaja)
+        public static TipoCaja TipoCaja_Update(TipoCaja tipoCaja)
         {
             return MainSqlEngine.IsUpdate(tipoCaja);
         }

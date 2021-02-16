@@ -29,10 +29,10 @@ namespace WSTrazinsAtenea
         Caja Caja_Select(Caja caja);
 
         [OperationContract]
-        string Caja_Insert(Caja caja);
+        Caja Caja_Insert(Caja caja);
 
         [OperationContract]
-        string Caja_Update(Caja caja);
+        Caja Caja_Update(Caja caja);
 
         #endregion
 
@@ -45,10 +45,10 @@ namespace WSTrazinsAtenea
         CajaImagen CajaImagen_Select(CajaImagen cajaImagen);
 
         [OperationContract]
-        string CajaImagen_Insert(CajaImagen cajaImagen);
+        CajaImagen CajaImagen_Insert(CajaImagen cajaImagen);
 
         [OperationContract]
-        string CajaImagen_Update(CajaImagen cajaImagen);
+        CajaImagen CajaImagen_Update(CajaImagen cajaImagen);
 
         #endregion
 
@@ -61,13 +61,13 @@ namespace WSTrazinsAtenea
         CajasGrupo CajasGrupos_Select(CajasGrupo cajasGrupo);
 
         [OperationContract]
-        string CajasGrupos_Insert(CajasGrupo cajasGrupo);
+        CajasGrupo CajasGrupos_Insert(CajasGrupo cajasGrupo);
 
         [OperationContract]
-        string CajasGrupos_Update(CajasGrupo cajasGrupo);
+        CajasGrupo CajasGrupos_Update(CajasGrupo cajasGrupo);
 
         [OperationContract]
-        string CajasGrupos_Delete(CajasGrupo cajasGrupo);
+        CajasGrupo CajasGrupos_Delete(CajasGrupo cajasGrupo);
 
         #endregion
 
@@ -80,10 +80,10 @@ namespace WSTrazinsAtenea
         Especialidad Especialidad_Select(Especialidad especialidad);
 
         [OperationContract]
-        string Especialidad_Insert(Especialidad especialidad);
+        Especialidad Especialidad_Insert(Especialidad especialidad);
 
         [OperationContract]
-        string Especialidad_Update(Especialidad especialidad);
+        Especialidad Especialidad_Update(Especialidad especialidad);
 
         #endregion
 
@@ -96,10 +96,10 @@ namespace WSTrazinsAtenea
         Embalaje Embalaje_Select(Embalaje embalaje);
 
         [OperationContract]
-        string Embalaje_Insert(Embalaje embalaje);
+        Embalaje Embalaje_Insert(Embalaje embalaje);
 
         [OperationContract]
-        string Embalaje_Update(Embalaje embalaje);
+        Embalaje Embalaje_Update(Embalaje embalaje);
 
         #endregion
 
@@ -112,10 +112,10 @@ namespace WSTrazinsAtenea
         Hospital Hospital_Select(Hospital hospital);
 
         [OperationContract]
-        string Hospital_Insert(Hospital hospital);
+        Hospital Hospital_Insert(Hospital hospital);
 
         [OperationContract]
-        string Hospital_Update(Hospital hospital);
+        Hospital Hospital_Update(Hospital hospital);
 
         #endregion
 
@@ -128,10 +128,10 @@ namespace WSTrazinsAtenea
         TipoCaja TipoCaja_Select(TipoCaja tipoCaja);
 
         [OperationContract]
-        string TipoCaja_Insert(TipoCaja tipoCaja);
+        TipoCaja TipoCaja_Insert(TipoCaja tipoCaja);
 
         [OperationContract]
-        string TipoCaja_Update(TipoCaja tipoCaja);
+        TipoCaja TipoCaja_Update(TipoCaja tipoCaja);
 
         #endregion
 
@@ -144,10 +144,10 @@ namespace WSTrazinsAtenea
         Limpieza Limpieza_Select(Limpieza limpieza);
 
         [OperationContract]
-        string Limpieza_Insert(Limpieza limpieza);
+        Limpieza Limpieza_Insert(Limpieza limpieza);
 
         [OperationContract]
-        string Limpieza_Update(Limpieza limpieza);
+        Limpieza Limpieza_Update(Limpieza limpieza);
 
         #endregion
 
@@ -160,10 +160,10 @@ namespace WSTrazinsAtenea
         Esterilizacion Esterilizacion_Select(Esterilizacion esterilizacion);
 
         [OperationContract]
-        string Esterilizacion_Insert(Esterilizacion esterilizacion);
+        Esterilizacion Esterilizacion_Insert(Esterilizacion esterilizacion);
 
         [OperationContract]
-        string Esterilizacion_Update(Esterilizacion esterilizacion);
+        Esterilizacion Esterilizacion_Update(Esterilizacion esterilizacion);
 
         #endregion
 
@@ -176,10 +176,10 @@ namespace WSTrazinsAtenea
         Almacen Almacen_Select(Almacen almacen);
 
         [OperationContract]
-        string Almacen_Insert(Almacen almacen);
+        Almacen Almacen_Insert(Almacen almacen);
 
         [OperationContract]
-        string Almacen_Update(Almacen almacen);
+        Almacen Almacen_Update(Almacen almacen);
 
         #endregion
 
@@ -192,10 +192,10 @@ namespace WSTrazinsAtenea
         AlmacenesUbicaciones AlmacenesUbicaciones_Select(AlmacenesUbicaciones almacenesUbicaciones);
 
         [OperationContract]
-        string AlmacenesUbicaciones_Insert(AlmacenesUbicaciones almacenesUbicaciones);
+        AlmacenesUbicaciones AlmacenesUbicaciones_Insert(AlmacenesUbicaciones almacenesUbicaciones);
 
         [OperationContract]
-        string AlmacenesUbicaciones_Update(AlmacenesUbicaciones almacenesUbicaciones);
+        AlmacenesUbicaciones AlmacenesUbicaciones_Update(AlmacenesUbicaciones almacenesUbicaciones);
 
         #endregion
 
