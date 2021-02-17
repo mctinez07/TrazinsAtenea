@@ -11,8 +11,19 @@ namespace Models.Inventory
     [DataContract(Namespace = "http://WSTrazinsAtenea.com")]
     public class Caja : BaseModel
     {
+        private string _cajaId;
+
         [DataMember]
-        public string CajaId { get; set; }
+        [StringLength(14)]
+        public string CajaId
+        {
+            get { return _cajaId; }
+            set
+            {
+                if (value == CajaId) return;
+                _cajaId = value;
+            }
+        }
 
         [DataMember]
         public string CHIdPropietario { get; set; }
@@ -20,11 +31,30 @@ namespace Models.Inventory
         [DataMember]
         public string HosIdPropietario { get; set; }
 
+        private string _descripcion;
         [DataMember]
-        public string Descripcion { get; set; }
+        [StringLength(50)]
+        public string Descripcion
+        {
+            get { return _descripcion; }
+            set
+            {
+                if (value == Descripcion) return;
+                _descripcion = value;
+            }
+        }
 
+        private int? _espId;
         [DataMember]
-        public int? EspId { get; set; }
+        public int? EspId
+        {
+            get { return _espId; }
+            set
+            {
+                if (value == EspId) return;
+                _espId = value;
+            }
+        }
 
         [DataMember]
         public string Especialidad_Descripcion { get; set; }
@@ -83,11 +113,18 @@ namespace Models.Inventory
         [DataMember]
         public int? Precio { get; set; }
 
-        [DataMember]
-        //Pendiente verificar
+        private string _observEmp;
+        [DataMember]        
         [StringLength(50)]
-        public string ObservEmp { get; set; }
-
+        public string ObservEmp
+        {
+            get { return _observEmp; }
+            set
+            {
+                if (value == ObservEmp) return;
+                _observEmp = value;
+            }
+        }
         [DataMember]
         public string ObservCic { get; set; }
 

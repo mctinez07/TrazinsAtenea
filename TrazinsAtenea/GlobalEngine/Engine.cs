@@ -26,7 +26,7 @@ namespace TrazinsAtenea.GlobalEngine
         public static DataBindingList Links { get; protected set; }
 
         //Modelo a enlazar para los controles;
-        public static object _bindedModel;        
+        public static BaseModel _bindedModel;        
 
         //Método para obtener el texto a mostrar.
         public static string GetLanguageResource(string resource)
@@ -111,70 +111,58 @@ namespace TrazinsAtenea.GlobalEngine
             
         }
 
-        #region Enlace de propiedades a Control         
-
-        public static CustomBinding BindingControlProperty(Control ctrl, object model, string propiedad)
+        #region Enlace de propiedades a Control   
+        
+        public static void BindingControlProperty(Control ctrl, string property)
         {
-            //Método original
-            if (ctrl is ListControl)
-                return BindingControlProperty(ctrl, "SelectedItem", model, propiedad);
-            else if (ctrl is CheckBox)
-                return BindingControlProperty(ctrl, "CheckState", model, propiedad);
-            else if (ctrl is DateTimePicker)
-                return BindingControlProperty(ctrl, "Value", model, propiedad);
+            if(ctrl is ListControl)
+                ctrl.DataBindings.Add("SelectedValue", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);
+            else if(ctrl is CheckBox || ctrl is CheckEdit)
+                ctrl.DataBindings.Add("CheckState", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);
+            else if (ctrl is DateTimePicker || ctrl is SpinEdit)
+                ctrl.DataBindings.Add("Value", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);
+            else if (ctrl is ToggleSwitch)
+                ctrl.DataBindings.Add("IsOn", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);
             else
-                return BindingControlProperty(ctrl, "Text", model, propiedad);
-        }
-
-        public static CustomBinding BindingControlProperty(Control ctrl, string propiedad)
-        {
-            if (ctrl is ListControl)
-                return BindingControlProperty(ctrl, "SelectedItem", _bindedModel, propiedad);
-            else if (ctrl is CheckBox)
-                return BindingControlProperty(ctrl, "CheckState", _bindedModel, propiedad);
-            else if (ctrl is DateTimePicker)
-                return BindingControlProperty(ctrl, "Value", _bindedModel, propiedad);
-            else
-                return BindingControlProperty(ctrl, "Text", _bindedModel, propiedad);            
-        }
-
-        private static CustomBinding BindingControlProperty(Control ctrl, string ctrlProperty, object model, string property, bool disableParsingAndFormatting = false)
-        {
-            //Validación del control
-            ctrl.Validated -= new EventHandler(ctrl_Validated);
-            ctrl.Validated += new EventHandler(ctrl_Validated);
-
-            var binding = new CustomBinding(ctrlProperty, model, property);
-            binding.DisableBaseParsingAndFormatting = disableParsingAndFormatting;
-
-            Links = new DataBindingList();
-            var existing = Links[ctrl, ctrlProperty, property];
-
-            if (existing != null)
             {
-                ctrl.DataBindings.Remove(existing);
-                Links.Remove(existing);
+                ctrl.DataBindings.Add("Text", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);
+
+                //Asignamos el tamaño según las propiedades del modelo.
+                if (ctrl is TextEdit || ctrl is TextBox)
+                {
+                    var textbox = ctrl as TextBox;
+                    var textEdit = ctrl as TextEdit;
+                    var prop = _bindedModel.Properties[property];
+                    var attr = GetAttribute<StringLengthAttribute>(prop);
+                    if (attr != null)
+                    {
+                        if(ctrl is TextEdit)
+                        {
+                            textEdit.Properties.MaxLength = attr.MaximumLength;
+                        }
+                        else
+                        {
+                            textbox.MaxLength = attr.MaximumLength;
+                        }
+                    }
+                        
+                }
             }
-
-            if (model is BaseModel)
-                SetUp(ctrl, ctrlProperty, (BaseModel)model, property);
-
-            ctrl.DataBindings.Add(binding);
-            Links.Add(binding);
-
-            if (!disableParsingAndFormatting && ctrl is ListControl)
-            {
-                binding.ReadValue();
-                binding.WriteValue();
-            }
-            else
-            {                
-                if (binding.Control is TextBox || binding.Control is TextEdit)
-                    binding.NullValue = "";
-            }
-
-            return binding;
+            
         }
+
+        //public static CustomBinding BindingControlPropertyT(Control ctrl, object model, string propiedad)
+        //{
+        //    //Método original
+        //    if (ctrl is ListControl)
+        //        return BindingControlProperty(ctrl, "SelectedItem", model, propiedad);
+        //    else if (ctrl is CheckBox)
+        //        return BindingControlProperty(ctrl, "CheckState", model, propiedad);
+        //    else if (ctrl is DateTimePicker)
+        //        return BindingControlProperty(ctrl, "Value", model, propiedad);
+        //    else
+        //        return BindingControlProperty(ctrl, "Text", model, propiedad);
+        //} 
 
         private static void SetUp(Control ctrl, string ctrlControl, BaseModel model, string property)
         {

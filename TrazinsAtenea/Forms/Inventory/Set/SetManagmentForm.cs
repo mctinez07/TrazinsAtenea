@@ -27,7 +27,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 {
     public partial class SetManagmentForm : DevExpress.XtraEditors.XtraForm
     {
-        public Caja Caja;
+        public Caja Caja = new Caja();
         private BaseModelClient BaseModelClient = BaseModelClient.Instance;
         public EnumOperationType Operation;
 
@@ -47,21 +47,19 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             MultilanguageFormat();
 
-            splashScreenManager1.ShowWaitForm();            
-                    
             //CargarCombos
             LoadComboBoxInformation();
 
+            splashScreenManager1.ShowWaitForm();
             //Establecer estado de los controles
-            ControlsState();
+            ControlsState();            
 
             splashScreenManager1.CloseWaitForm();            
         }
 
         private void ControlsState()
         {
-            //Enlazar Controles para que se actualicen automáticamente los valores de los controles.
-            BindingControls();
+            
 
             if (Operation == EnumOperationType.New)
             {
@@ -78,6 +76,9 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 txtSetName.Text = this.Caja.Descripcion;
             }
 
+            //Enlazar Controles para que se actualicen automáticamente los valores de los controles.
+            BindingControls();
+
             wmpVideo.Visible = false;
             wmpVideo.settings.autoStart = false;
             wmpVideo.settings.mute = true;
@@ -87,42 +88,44 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             //Enlazar las propiedades a los controles            
             //seguir paso a paso para saber como funciona es posible que sobren métodos
-            
+
             Engine._bindedModel = new Caja();
+
+            Engine.BindingControlProperty(txtSetName, "Descripcion");
             
-            //Controles TextBox
-            Engine.BindingControlProperty(txtSetName, "Descripcion"); 
-            Engine.BindingControlProperty(txtPrice, "Precio");
-            Engine.BindingControlProperty(txtSetCode, "CodigoCaja");
+            ////Controles TextBox
+            //Engine.BindingControlProperty(txtSetName, "Descripcion"); 
+            //Engine.BindingControlProperty(txtPrice, "Precio");
+            //Engine.BindingControlProperty(txtSetCode, "CodigoCaja");
             Engine.BindingControlProperty(txtRemarksAssemblyPackaging, "ObservEmp");
-            Engine.BindingControlProperty(txtRemarksSteri, "ObservCic");
-            Engine.BindingControlProperty(txtRemarksWashes, "ObservLav");
+            //Engine.BindingControlProperty(txtRemarksSteri, "ObservCic");
+            //Engine.BindingControlProperty(txtRemarksWashes, "ObservLav");
 
-            //Controles Combo Cabecera
+            ////Controles Combo Cabecera
             Engine.BindingControlProperty(cmbSpeciality, "EspId");
-            Engine.BindingControlProperty(cmbSetType, "TipoCajaId");
-            Engine.BindingControlProperty(cmbProperty, "HosId");
-            Engine.BindingControlProperty(cmbPackage, "EmbId");
-            Engine.BindingControlProperty(cmbCostCenter, "CentroCosteId");
+            //Engine.BindingControlProperty(cmbSetType, "TipoCajaId");
+            //Engine.BindingControlProperty(cmbProperty, "HosId");
+            //Engine.BindingControlProperty(cmbPackage, "EmbId");
+            //Engine.BindingControlProperty(cmbCostCenter, "CentroCosteId");
 
-            //Controles Combo Métodos
-            Engine.BindingControlProperty(cmbFirstMethodWashing, "TipoLavId1");
-            Engine.BindingControlProperty(cmbSecondMethodWashing, "TipoLavId2");
-            Engine.BindingControlProperty(cmbThirdMethodWashing, "TipoLavId3");
-            Engine.BindingControlProperty(cmbFirstMethodSteri, "EstId1");
-            Engine.BindingControlProperty(cmbSecondMethodSteri, "EstId2");
-            Engine.BindingControlProperty(cmbThirdMethodSteri, "EstId3");
+            ////Controles Combo Métodos
+            //Engine.BindingControlProperty(cmbFirstMethodWashing, "TipoLavId1");
+            //Engine.BindingControlProperty(cmbSecondMethodWashing, "TipoLavId2");
+            //Engine.BindingControlProperty(cmbThirdMethodWashing, "TipoLavId3");
+            //Engine.BindingControlProperty(cmbFirstMethodSteri, "EstId1");
+            //Engine.BindingControlProperty(cmbSecondMethodSteri, "EstId2");
+            //Engine.BindingControlProperty(cmbThirdMethodSteri, "EstId3");
 
-            //Controles Combo Ubicación
-            //Penidente comprobar como va a funcionar. Es posible que usemos el modelo de Almacen
-            //Engine.BindingControlProperty(cmbDefaultUbication, "UbiId");
-            //Engine.BindingControlProperty(cmbBlock, "")
+            ////Controles Combo Ubicación
+            ////Penidente comprobar como va a funcionar. Es posible que usemos el modelo de Almacen
+            ////Engine.BindingControlProperty(cmbDefaultUbication, "UbiId");
+            ////Engine.BindingControlProperty(cmbBlock, "")
 
-            //Otros Controles
-            Engine.BindingControlProperty(speMaintenance, "MantCiclos");
+            ////Otros Controles
+            Engine.BindingControlProperty(speMaintenance,"MantCiclos");
             Engine.BindingControlProperty(tgsYesNo, "Activa");
             Engine.BindingControlProperty(ckbSetSample, "CajaMuestra");
-
+            
         }
 
         private void MultilanguageFormat()
@@ -853,6 +856,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         private void btnSaveContinue_Click(object sender, EventArgs e)
         {
             //Guardamos la caja y volvemos a cargar el from cerrando este.
+
+            var a = Caja.Descripcion;
             SetManagmentForm frm = new SetManagmentForm
             {
                 Caja = new Caja()
