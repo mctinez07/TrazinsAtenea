@@ -26,7 +26,7 @@ namespace TrazinsAtenea.GlobalEngine
         public static DataBindingList Links { get; protected set; }
 
         //Modelo a enlazar para los controles;
-        public static object _bindedModel;
+        public static object _bindedModel;        
 
         //Método para obtener el texto a mostrar.
         public static string GetLanguageResource(string resource)
@@ -111,8 +111,8 @@ namespace TrazinsAtenea.GlobalEngine
             
         }
 
-        #region Enlace de propiedades a Control 
-        
+        #region Enlace de propiedades a Control         
+
         public static CustomBinding BindingControlProperty(Control ctrl, object model, string propiedad)
         {
             //Método original
@@ -135,7 +135,7 @@ namespace TrazinsAtenea.GlobalEngine
             else if (ctrl is DateTimePicker)
                 return BindingControlProperty(ctrl, "Value", _bindedModel, propiedad);
             else
-                return BindingControlProperty(ctrl, "Text", _bindedModel, propiedad);
+                return BindingControlProperty(ctrl, "Text", _bindedModel, propiedad);            
         }
 
         private static CustomBinding BindingControlProperty(Control ctrl, string ctrlProperty, object model, string property, bool disableParsingAndFormatting = false)
@@ -272,7 +272,8 @@ namespace TrazinsAtenea.GlobalEngine
             //errorProvider1.SetError(control, errorMessage);
         }
 
-        #endregion
+        #endregion       
 
     }
+    
 }

@@ -39,6 +39,48 @@ namespace Models.Inventory
         public string CajaId_CodigoCaja { get; set; }
 
         [DataMember]
+        public int? TipoCajaId { get; set; }
+
+        [DataMember]
+        public string TipoCaja_Descripcion { get; set; }
+
+        [DataMember]
+        public int? EmbId { get; set; }
+
+        [DataMember]
+        public string Embalaje_Descripcion { get; set; }
+
+        [DataMember]
+        public int? CentroCosteId { get; set; }
+
+        [DataMember]
+        public string CentroCoste_Descripcion { get; set; }
+
+        [DataMember]
+        public int? TipoLavId1 { get; set; }
+
+        [DataMember]
+        public int? TipoLavId2 { get; set; }
+
+        [DataMember]
+        public int? TipoLavId3 { get; set; }
+
+        [DataMember]
+        public int? EstId1 { get; set; }
+
+        [DataMember]
+        public int? EstId2 { get; set; }
+
+        [DataMember]
+        public int? EstId3 { get; set; }
+
+        [DataMember]
+        public int? MantCiclos { get; set; }
+
+        [DataMember]
+        public bool CajaMuestra { get; set; }
+
+        [DataMember]
         public int? Precio { get; set; }
 
         [DataMember]
