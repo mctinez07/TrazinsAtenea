@@ -25,13 +25,34 @@ namespace Models.Inventory
             }
         }
 
-        [DataMember]
-        public string CHIdPropietario { get; set; }
+        private string _cHId;
 
         [DataMember]
-        public string HosIdPropietario { get; set; }
+        [StringLength(3)]
+        public string CHId
+        {
+            get { return _cHId; }
+            set
+            {
+                if (value == CHId) return;
+                _cHId = value;
+            }
+        }
+
+        [DataMember]
+        [StringLength(3)]
+        public string HosIdPropietario
+        {
+            get { return _cHId; }
+            set
+            {
+                if (value == CHId) return;
+                _cHId = value;
+            }
+        }
 
         private string _descripcion;
+
         [DataMember]
         [StringLength(50)]
         public string Descripcion
@@ -45,6 +66,7 @@ namespace Models.Inventory
         }
 
         private int? _espId;
+
         [DataMember]
         public int? EspId
         {
@@ -56,64 +78,273 @@ namespace Models.Inventory
             }
         }
 
-        [DataMember]
-        public string Especialidad_Descripcion { get; set; }
+        private string _especialidadDescripcion;
 
         [DataMember]
-        public bool Activa { get; set; }
+        [StringLength(50)]
+        public string EspecialidadDescripcion
+        {
+            get { return _especialidadDescripcion; }
+            set
+            {
+                if (value == EspecialidadDescripcion) return;
+                _especialidadDescripcion = value;
+            }
+        }
+
+        private bool _activa;
 
         [DataMember]
-        public string CodigoCaja { get; set; }
+        public bool Activa
+        {
+            get { return _activa; }
+            set
+            {
+                if (value == Activa) return;
+                _activa = value;
+            }
+        }
+
+        private string _codigoCaja;
 
         [DataMember]
-        public string CajaId_CodigoCaja { get; set; }
+        [StringLength(14)]
+        public string CodigoCaja
+        {
+            get { return _codigoCaja; }
+            set
+            {
+                if (value == CodigoCaja) return;
+                _codigoCaja = value;
+            }
+        }
+
+        private string _cajaId_CodigoCaja;
 
         [DataMember]
-        public int? TipoCajaId { get; set; }
+        [StringLength(14)]
+        public string CajaId_CodigoCaja
+        {
+            get
+            {
+                if(CodigoCaja == null)
+                {
+                    _cajaId_CodigoCaja = CajaId;
+                }
+                else
+                {
+                    _cajaId_CodigoCaja = CodigoCaja;
+                }
+
+                return _cajaId_CodigoCaja;
+            }
+            set
+            {
+                if (value == CajaId_CodigoCaja) return;
+                _cajaId_CodigoCaja = value;
+            }
+        }
+
+        private int? _tipoCajaId;
 
         [DataMember]
-        public string TipoCaja_Descripcion { get; set; }
+        public int? TipoCajaId
+        {
+            get { return _tipoCajaId; }
+            set
+            {
+                if (value == TipoCajaId) return;
+                _tipoCajaId = value;
+            }
+        }
+
+        private string _tipoCajaDescripcion;
 
         [DataMember]
-        public int? EmbId { get; set; }
+        [StringLength(50)]
+        public string TipoCajaDescripcion
+        {
+            get { return _tipoCajaDescripcion; }
+            set
+            {
+                if (value == TipoCajaDescripcion) return;
+                _tipoCajaDescripcion = value;
+            }
+        }
+
+        private int? _embId;
 
         [DataMember]
-        public string Embalaje_Descripcion { get; set; }
+        public int? EmbId
+        {
+            get { return _embId; }
+            set
+            {
+                if (value == EmbId) return;
+                _embId = value;
+            }
+        }
+
+        private string _embalajeDescripcion;
 
         [DataMember]
-        public int? CentroCosteId { get; set; }
+        [StringLength(50)]
+        public string EmbalajeDescripcion
+        {
+            get { return _embalajeDescripcion; }
+            set
+            {
+                if (value == EmbalajeDescripcion) return;
+                _embalajeDescripcion = value;
+            }
+        }
+
+        private int? _centroCosteId;
+
+        [DataMember]        
+        public int? CentroCosteId
+        {
+            get { return _centroCosteId; }
+            set
+            {
+                if (value == CentroCosteId) return;
+                _centroCosteId = value;
+            }
+        }
+
+        private string _centroCosteDescripcion;
 
         [DataMember]
-        public string CentroCoste_Descripcion { get; set; }
+        [StringLength(50)]
+        public string CentroCosteDescripcion
+        {
+            get { return _centroCosteDescripcion; }
+            set
+            {
+                if (value == CentroCosteDescripcion) return;
+                _centroCosteDescripcion = value;
+            }
+        }
+
+        private int? _tipoLavId1;
 
         [DataMember]
-        public int? TipoLavId1 { get; set; }
+        public int? TipoLavId1
+        {
+            get { return _tipoLavId1; }
+            set
+            {
+                if (value == TipoLavId1) return;
+                _tipoLavId1 = value;
+            }
+        }
+
+        private int? _tipoLavId2;
 
         [DataMember]
-        public int? TipoLavId2 { get; set; }
+        public int? TipoLavId2
+        {
+            get { return _tipoLavId2; }
+            set
+            {
+                if (value == TipoLavId2) return;
+                _tipoLavId2 = value;
+            }
+        }
+
+        private int? _tipoLavId3;
 
         [DataMember]
-        public int? TipoLavId3 { get; set; }
+        public int? TipoLavId3
+        {
+            get { return _tipoLavId3; }
+            set
+            {
+                if (value == TipoLavId3) return;
+                _tipoLavId3 = value;
+            }
+        }
+
+        private int? _estId1;
 
         [DataMember]
-        public int? EstId1 { get; set; }
+        public int? EstId1
+        {
+            get { return _estId1; }
+            set
+            {
+                if (value == EstId1) return;
+                _estId1 = value;
+            }
+        }
+
+        private int? _estId2;
 
         [DataMember]
-        public int? EstId2 { get; set; }
+        public int? EstId2
+        {
+            get { return _estId2; }
+            set
+            {
+                if (value == EstId2) return;
+                _estId2 = value;
+            }
+        }
+
+        private int? _estId3;
 
         [DataMember]
-        public int? EstId3 { get; set; }
+        public int? EstId3
+        {
+            get { return _estId3; }
+            set
+            {
+                if (value == EstId3) return;
+                _estId3 = value;
+            }
+        }
+
+        private int? _mantCiclos;
 
         [DataMember]
-        public int? MantCiclos { get; set; }
+        public int? MantCiclos
+        {
+            get { return _mantCiclos; }
+            set
+            {
+                if (value == MantCiclos) return;
+                _mantCiclos = value;
+            }
+        }
+
+        private bool _cajaMuestra;
 
         [DataMember]
-        public bool CajaMuestra { get; set; }
+        public bool CajaMuestra
+        {
+            get { return _cajaMuestra; }
+            set
+            {
+                if (value == CajaMuestra) return;
+                _cajaMuestra = value;
+            }
+        }
+
+        private int? _precio;
 
         [DataMember]
-        public int? Precio { get; set; }
+        public int? Precio
+        {
+            get { return _precio; }
+            set
+            {
+                if (value == Precio) return;
+                _precio = value;
+            }
+        }
 
         private string _observEmp;
+
         [DataMember]        
         [StringLength(50)]
         public string ObservEmp
@@ -125,10 +356,33 @@ namespace Models.Inventory
                 _observEmp = value;
             }
         }
-        [DataMember]
-        public string ObservCic { get; set; }
+
+        private string _observCic;
 
         [DataMember]
-        public string ObservLav { get; set; }
+        [StringLength(50)]
+        public string ObservCic
+        {
+            get { return _observCic; }
+            set
+            {
+                if (value == ObservCic) return;
+                _observCic = value;
+            }
+        }
+
+        private string _observLav;
+
+        [DataMember]
+        [StringLength(50)]
+        public string ObservLav
+        {
+            get { return _observLav; }
+            set
+            {
+                if (value == ObservLav) return;
+                _observLav = value;
+            }
+        }
     }
 }

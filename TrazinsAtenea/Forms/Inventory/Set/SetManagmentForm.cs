@@ -79,6 +79,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             //Enlazar Controles para que se actualicen automáticamente los valores de los controles.
             BindingControls();
 
+            //Despúes de enlazar hay que recuperar datos
+
             wmpVideo.Visible = false;
             wmpVideo.settings.autoStart = false;
             wmpVideo.settings.mute = true;
@@ -92,34 +94,34 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             Engine._bindedModel = new Caja();
 
             Engine.BindingControlProperty(txtSetName, "Descripcion");
-            
+
             ////Controles TextBox
-            //Engine.BindingControlProperty(txtSetName, "Descripcion"); 
-            //Engine.BindingControlProperty(txtPrice, "Precio");
-            //Engine.BindingControlProperty(txtSetCode, "CodigoCaja");
+            Engine.BindingControlProperty(txtSetName, "Descripcion");
+            Engine.BindingControlProperty(txtPrice, "Precio");
+            Engine.BindingControlProperty(txtSetCode, "CodigoCaja");
             Engine.BindingControlProperty(txtRemarksAssemblyPackaging, "ObservEmp");
-            //Engine.BindingControlProperty(txtRemarksSteri, "ObservCic");
-            //Engine.BindingControlProperty(txtRemarksWashes, "ObservLav");
+            Engine.BindingControlProperty(txtRemarksSteri, "ObservCic");
+            Engine.BindingControlProperty(txtRemarksWashes, "ObservLav");
 
             ////Controles Combo Cabecera
             Engine.BindingControlProperty(cmbSpeciality, "EspId");
-            //Engine.BindingControlProperty(cmbSetType, "TipoCajaId");
-            //Engine.BindingControlProperty(cmbProperty, "HosId");
-            //Engine.BindingControlProperty(cmbPackage, "EmbId");
-            //Engine.BindingControlProperty(cmbCostCenter, "CentroCosteId");
+            Engine.BindingControlProperty(cmbSetType, "TipoCajaId");
+            Engine.BindingControlProperty(cmbProperty, "HosId");
+            Engine.BindingControlProperty(cmbPackage, "EmbId");
+            Engine.BindingControlProperty(cmbCostCenter, "CentroCosteId");
 
             ////Controles Combo Métodos
-            //Engine.BindingControlProperty(cmbFirstMethodWashing, "TipoLavId1");
-            //Engine.BindingControlProperty(cmbSecondMethodWashing, "TipoLavId2");
-            //Engine.BindingControlProperty(cmbThirdMethodWashing, "TipoLavId3");
-            //Engine.BindingControlProperty(cmbFirstMethodSteri, "EstId1");
-            //Engine.BindingControlProperty(cmbSecondMethodSteri, "EstId2");
-            //Engine.BindingControlProperty(cmbThirdMethodSteri, "EstId3");
+            Engine.BindingControlProperty(cmbFirstMethodWashing, "TipoLavId1");
+            Engine.BindingControlProperty(cmbSecondMethodWashing, "TipoLavId2");
+            Engine.BindingControlProperty(cmbThirdMethodWashing, "TipoLavId3");
+            Engine.BindingControlProperty(cmbFirstMethodSteri, "EstId1");
+            Engine.BindingControlProperty(cmbSecondMethodSteri, "EstId2");
+            Engine.BindingControlProperty(cmbThirdMethodSteri, "EstId3");
 
-            ////Controles Combo Ubicación
-            ////Penidente comprobar como va a funcionar. Es posible que usemos el modelo de Almacen
-            ////Engine.BindingControlProperty(cmbDefaultUbication, "UbiId");
-            ////Engine.BindingControlProperty(cmbBlock, "")
+            //Controles Combo Ubicación
+            //Penidente comprobar como va a funcionar. Es posible que usemos el modelo de Almacen
+            //Engine.BindingControlProperty(cmbDefaultUbication, "UbiId");
+            //Engine.BindingControlProperty(cmbBlock, "")
 
             ////Otros Controles
             Engine.BindingControlProperty(speMaintenance,"MantCiclos");
