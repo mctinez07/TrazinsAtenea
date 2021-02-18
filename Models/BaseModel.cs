@@ -14,7 +14,7 @@ using Utils;
 namespace Models
 {
     [DataContract(Namespace = "http://WSTrazinsAtenea.com")]
-    //Mirar que herede com en la palicación android??Pendiente
+    
     public class BaseModel : INotifyPropertyChanged
     {
         [DataMember]
@@ -150,7 +150,7 @@ namespace Models
 
         #region INotifyPropertyChanged + Changing
 
-        public event PropertyChangingEventHandler PropertyChanging;
+        //public event PropertyChangingEventHandler PropertyChanging;
 
         //protected virtual bool OnPropertyChanging<T>(string propertyName, T originalValue, T newValue)
         //{

@@ -26,7 +26,7 @@ namespace TrazinsAtenea.GlobalEngine
         public static DataBindingList Links { get; protected set; }
 
         //Modelo a enlazar para los controles;
-        public static BaseModel _bindedModel;        
+        public static object _bindedModel;        
 
         //Método para obtener el texto a mostrar.
         public static string GetLanguageResource(string resource)
@@ -106,7 +106,7 @@ namespace TrazinsAtenea.GlobalEngine
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error en ComboBoxFormat: " + ex.Message);
+                ErrorMessage.ShowErrorMessage(MethodBase.GetCurrentMethod().Name, ex.Message);
             }
             
         }
@@ -125,18 +125,18 @@ namespace TrazinsAtenea.GlobalEngine
                 ctrl.DataBindings.Add("IsOn", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);
             else
             {
-                ctrl.DataBindings.Add("Text", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);
+                ctrl.DataBindings.Add("Text", _bindedModel, property, false, DataSourceUpdateMode.OnPropertyChanged);
 
                 //Asignamos el tamaño según las propiedades del modelo.
                 if (ctrl is TextEdit || ctrl is TextBox)
                 {
                     var textbox = ctrl as TextBox;
                     var textEdit = ctrl as TextEdit;
-                    var prop = _bindedModel.Properties[property];
+                    var prop = _bindedModel.GetType().GetProperty(property);
                     var attr = GetAttribute<StringLengthAttribute>(prop);
                     if (attr != null)
                     {
-                        if(ctrl is TextEdit)
+                        if (ctrl is TextEdit)
                         {
                             textEdit.Properties.MaxLength = attr.MaximumLength;
                         }
@@ -145,7 +145,7 @@ namespace TrazinsAtenea.GlobalEngine
                             textbox.MaxLength = attr.MaximumLength;
                         }
                     }
-                        
+
                 }
             }
             

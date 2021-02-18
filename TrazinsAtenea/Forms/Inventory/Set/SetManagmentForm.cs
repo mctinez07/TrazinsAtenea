@@ -33,10 +33,20 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         private List<Limpieza> MethodsWashingList;
         private List<Esterilizacion> MethodsSteriList;
-        private List<AlmacenesUbicaciones> UbicationList;
+        private List<AlmacenesUbicaciones> UbicationList;        
 
         private bool onlyVideos = false;
-        private Image CapturedImage;        
+        private Image CapturedImage; 
+
+        private Limpieza FirstSelected
+        {
+            get { return (Limpieza)cmbFirstMethodWashing.SelectedItem; }
+        }
+
+        private Limpieza SecondSelected
+        {
+            get { return (Limpieza)cmbSecondMethodWashing.SelectedItem; }
+        }
 
         public SetManagmentForm()
         {
@@ -45,21 +55,24 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         private void SetManagmentForm_Load(object sender, EventArgs e)
         {
-            MultilanguageFormat();
+            MultilanguageFormat();            
 
+            splashScreenManager1.ShowWaitForm();
+            
             //CargarCombos
             LoadComboBoxInformation();
 
-            splashScreenManager1.ShowWaitForm();
+            //Enlazar Controles para que se actualicen automáticamente los valores de los controles.
+            BindingControls();
+
             //Establecer estado de los controles
-            ControlsState();            
+            ControlsState();
 
             splashScreenManager1.CloseWaitForm();            
         }
 
         private void ControlsState()
-        {
-            
+        {           
 
             if (Operation == EnumOperationType.New)
             {
@@ -76,9 +89,6 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 txtSetName.Text = this.Caja.Descripcion;
             }
 
-            //Enlazar Controles para que se actualicen automáticamente los valores de los controles.
-            BindingControls();
-
             //Despúes de enlazar hay que recuperar datos
 
             wmpVideo.Visible = false;
@@ -91,43 +101,42 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             //Enlazar las propiedades a los controles            
             //seguir paso a paso para saber como funciona es posible que sobren métodos
 
-            Engine._bindedModel = new Caja();
-
-            Engine.BindingControlProperty(txtSetName, "Descripcion");
+            Engine._bindedModel = Caja;            
 
             ////Controles TextBox
-            Engine.BindingControlProperty(txtSetName, "Descripcion");
+            Engine.BindingControlProperty(txtSetName,"Descripcion");
             Engine.BindingControlProperty(txtPrice, "Precio");
             Engine.BindingControlProperty(txtSetCode, "CodigoCaja");
             Engine.BindingControlProperty(txtRemarksAssemblyPackaging, "ObservEmp");
             Engine.BindingControlProperty(txtRemarksSteri, "ObservCic");
             Engine.BindingControlProperty(txtRemarksWashes, "ObservLav");
 
-            ////Controles Combo Cabecera
+            //Controles Combo Cabecera
             Engine.BindingControlProperty(cmbSpeciality, "EspId");
             Engine.BindingControlProperty(cmbSetType, "TipoCajaId");
-            Engine.BindingControlProperty(cmbProperty, "HosId");
+            Engine.BindingControlProperty(cmbProperty, "HosIdPropietario");
             Engine.BindingControlProperty(cmbPackage, "EmbId");
             Engine.BindingControlProperty(cmbCostCenter, "CentroCosteId");
 
-            ////Controles Combo Métodos
-            Engine.BindingControlProperty(cmbFirstMethodWashing, "TipoLavId1");
-            Engine.BindingControlProperty(cmbSecondMethodWashing, "TipoLavId2");
-            Engine.BindingControlProperty(cmbThirdMethodWashing, "TipoLavId3");
-            Engine.BindingControlProperty(cmbFirstMethodSteri, "EstId1");
-            Engine.BindingControlProperty(cmbSecondMethodSteri, "EstId2");
-            Engine.BindingControlProperty(cmbThirdMethodSteri, "EstId3");
+            //Controles Combo Métodos
+            //No se pueden enlazar porque son modelos diferentes, utilizamos las propiedades.
+            //Engine.BindingControlProperty(cmbFirstMethodWashing, "TipoLavId1");
+            //Engine.BindingControlProperty(cmbSecondMethodWashing, "TipoLavId2");
+            //Engine.BindingControlProperty(cmbThirdMethodWashing, "TipoLavId3");
+
+            //Engine.BindingControlProperty(cmbFirstMethodSteri, "EstId1");
+            //Engine.BindingControlProperty(cmbSecondMethodSteri, "EstId2");
+            //Engine.BindingControlProperty(cmbThirdMethodSteri, "EstId3");
 
             //Controles Combo Ubicación
             //Penidente comprobar como va a funcionar. Es posible que usemos el modelo de Almacen
             //Engine.BindingControlProperty(cmbDefaultUbication, "UbiId");
             //Engine.BindingControlProperty(cmbBlock, "")
 
-            ////Otros Controles
-            Engine.BindingControlProperty(speMaintenance,"MantCiclos");
+            //Otros Controles
+            Engine.BindingControlProperty(speMaintenance, "MantCiclos");
             Engine.BindingControlProperty(tgsYesNo, "Activa");
             Engine.BindingControlProperty(ckbSetSample, "CajaMuestra");
-            
         }
 
         private void MultilanguageFormat()
@@ -263,6 +272,18 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
                 Engine.ComboBoxFormat(cmbFirstMethodSteri, "Descripcion", "EstId", MethodsSteriList);
 
+                if(Caja.EstId2 != null)
+                {
+                    Engine.ComboBoxFormat(cmbSecondMethodSteri, "Descripcion", "EstId", MethodsSteriList);
+                    cmbSecondMethodSteri.SelectedValue = Caja.EstId2;
+                }
+
+                if(Caja.EstId3 != null)
+                {
+                    Engine.ComboBoxFormat(cmbThirdMethodSteri, "Descripcion", "EstId", MethodsSteriList);
+
+                }
+
             }
             catch (Exception ex)
             {
@@ -278,6 +299,30 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 { ChId = BaseModelClient.BaseModel.ChId }).ToList();
 
                 Engine.ComboBoxFormat(cmbFirstMethodWashing, "Descripcion", "TipoLavId", MethodsWashingList);
+
+                if(Operation == EnumOperationType.Modify)
+                {
+                    if (Caja.TipoLavId1 != null)
+                    {                        
+                        cmbFirstMethodWashing.SelectedValue = Caja.TipoLavId1;
+                    }
+
+                    //Falla la caraga de valores!!!!!!!!!!!!!!1
+                    //Si hay valor asignado hay que cargar los datos para que los muestre por pantalla
+                    if (Caja.TipoLavId2 != null)
+                    {
+                        Engine.ComboBoxFormat(cmbSecondMethodWashing, "Descripcion", "TipoLavId", MethodsWashingList);
+                        cmbSecondMethodWashing.SelectedValue = Caja.TipoLavId2;
+                    }
+
+                    if (Caja.TipoLavId3 != null)
+                    {
+                        Engine.ComboBoxFormat(cmbThirdMethodWashing, "Descripcion", "TipoLavId", MethodsWashingList);
+                        cmbThirdMethodWashing.SelectedValue = Caja.TipoLavId3;
+                    }
+                }
+
+                
             }
             catch (Exception ex)
             {
@@ -389,6 +434,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                         Engine.ComboBoxFormat(cmbThirdMethodWashing, "Descripcion", "TipoLavId", list);
                     }
                 }
+
             }
             catch (Exception ex)
             {
@@ -402,6 +448,11 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             {
                 var selected2 = (Limpieza)cmbSecondMethodWashing.SelectedItem;
                 var selected = (Limpieza)cmbFirstMethodWashing.SelectedItem;
+
+                if(selected == null)
+                {
+                    return;
+                }
 
                 if (cmbThirdMethodWashing.SelectedIndex == -1 && cmbSecondMethodWashing.SelectedIndex != -1)
                 {
@@ -420,6 +471,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                         Engine.ComboBoxFormat(cmbThirdMethodWashing, "Descripcion", "TipoLavId", list);
                     }
                 }
+                
             }
             catch (Exception ex)
             {
@@ -456,6 +508,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                         Engine.ComboBoxFormat(cmbThirdMethodSteri, "Descripcion", "EstId", list);
                     }
                 }
+                cmbFirstMethodSteri.SelectedItem = selected;
             }
             catch (Exception ex)
             {
@@ -486,6 +539,9 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                         Engine.ComboBoxFormat(cmbThirdMethodSteri, "Descripcion", "EstId", list);
                     }
                 }
+
+                cmbFirstMethodSteri.SelectedItem = selected;
+                cmbSecondMethodSteri.SelectedItem = selected2;
             }
             catch (Exception ex)
             {
@@ -858,15 +914,12 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         private void btnSaveContinue_Click(object sender, EventArgs e)
         {
             //Guardamos la caja y volvemos a cargar el from cerrando este.
+            Caja.TipoLavId1 = FirstSelected.TipoLavId;
+            Caja.TipoLavId2 = SecondSelected.TipoLavId;
 
-            var a = Caja.Descripcion;
             SetManagmentForm frm = new SetManagmentForm
             {
-                Caja = new Caja()
-                {
-                    Descripcion = "prueba",
-                },
-
+                Caja = Caja,
                 Operation = EnumOperationType.Modify
             };
             frm.ShowDialog();

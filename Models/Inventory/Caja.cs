@@ -25,29 +25,31 @@ namespace Models.Inventory
             }
         }
 
-        private string _cHId;
+        private string _cHIdPropietario;
 
         [DataMember]
         [StringLength(3)]
-        public string CHId
+        public string CHIdPropietario
         {
-            get { return _cHId; }
+            get { return _cHIdPropietario; }
             set
             {
-                if (value == CHId) return;
-                _cHId = value;
+                if (value == CHIdPropietario) return;
+                _cHIdPropietario = value;
             }
         }
+
+        private string _hosIdPropietario;
 
         [DataMember]
         [StringLength(3)]
         public string HosIdPropietario
         {
-            get { return _cHId; }
+            get { return _hosIdPropietario; }
             set
             {
-                if (value == CHId) return;
-                _cHId = value;
+                if (value == HosIdPropietario) return;
+                _hosIdPropietario = value;
             }
         }
 

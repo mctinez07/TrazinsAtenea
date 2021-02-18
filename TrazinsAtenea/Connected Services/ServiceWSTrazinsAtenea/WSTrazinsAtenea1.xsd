@@ -16,11 +16,29 @@
           <xs:element minOccurs="0" name="CHIdPropietario" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="CajaId" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="CajaId_CodigoCaja" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CajaMuestra" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CentroCosteDescripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CentroCosteId" nillable="true" type="xs:int" />
           <xs:element minOccurs="0" name="CodigoCaja" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmbId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EmbalajeDescripcion" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="EspId" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="Especialidad_Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EspecialidadDescripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EstId1" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EstId2" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EstId3" nillable="true" type="xs:int" />
           <xs:element minOccurs="0" name="HosIdPropietario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MantCiclos" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ObservCic" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ObservEmp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ObservLav" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Precio" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TipoCajaDescripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoCajaId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TipoLavId1" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TipoLavId2" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TipoLavId3" nillable="true" type="xs:int" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -73,7 +91,7 @@
   <xs:element name="Caja_InsertResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Caja_InsertResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Caja_InsertResult" nillable="true" type="tns:Caja" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -87,7 +105,7 @@
   <xs:element name="Caja_UpdateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Caja_UpdateResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Caja_UpdateResult" nillable="true" type="tns:Caja" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -153,7 +171,7 @@
   <xs:element name="CajaImagen_InsertResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="CajaImagen_InsertResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CajaImagen_InsertResult" nillable="true" type="tns:CajaImagen" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -167,7 +185,7 @@
   <xs:element name="CajaImagen_UpdateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="CajaImagen_UpdateResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CajaImagen_UpdateResult" nillable="true" type="tns:CajaImagen" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -227,7 +245,7 @@
   <xs:element name="CajasGrupos_InsertResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="CajasGrupos_InsertResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CajasGrupos_InsertResult" nillable="true" type="tns:CajasGrupo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -241,7 +259,7 @@
   <xs:element name="CajasGrupos_UpdateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="CajasGrupos_UpdateResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CajasGrupos_UpdateResult" nillable="true" type="tns:CajasGrupo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -255,7 +273,7 @@
   <xs:element name="CajasGrupos_DeleteResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="CajasGrupos_DeleteResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CajasGrupos_DeleteResult" nillable="true" type="tns:CajasGrupo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -314,7 +332,7 @@
   <xs:element name="Especialidad_InsertResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Especialidad_InsertResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Especialidad_InsertResult" nillable="true" type="tns:Especialidad" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -328,7 +346,7 @@
   <xs:element name="Especialidad_UpdateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Especialidad_UpdateResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Especialidad_UpdateResult" nillable="true" type="tns:Especialidad" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -389,7 +407,7 @@
   <xs:element name="Embalaje_InsertResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Embalaje_InsertResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Embalaje_InsertResult" nillable="true" type="tns:Embalaje" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -403,7 +421,7 @@
   <xs:element name="Embalaje_UpdateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Embalaje_UpdateResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Embalaje_UpdateResult" nillable="true" type="tns:Embalaje" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -468,7 +486,7 @@
   <xs:element name="Hospital_InsertResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Hospital_InsertResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Hospital_InsertResult" nillable="true" type="tns:Hospital" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -482,7 +500,7 @@
   <xs:element name="Hospital_UpdateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Hospital_UpdateResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Hospital_UpdateResult" nillable="true" type="tns:Hospital" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -541,7 +559,7 @@
   <xs:element name="TipoCaja_InsertResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="TipoCaja_InsertResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TipoCaja_InsertResult" nillable="true" type="tns:TipoCaja" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -555,7 +573,7 @@
   <xs:element name="TipoCaja_UpdateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="TipoCaja_UpdateResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TipoCaja_UpdateResult" nillable="true" type="tns:TipoCaja" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -618,7 +636,7 @@
   <xs:element name="Limpieza_InsertResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Limpieza_InsertResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Limpieza_InsertResult" nillable="true" type="tns:Limpieza" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -632,7 +650,7 @@
   <xs:element name="Limpieza_UpdateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Limpieza_UpdateResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Limpieza_UpdateResult" nillable="true" type="tns:Limpieza" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -695,7 +713,7 @@
   <xs:element name="Esterilizacion_InsertResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Esterilizacion_InsertResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Esterilizacion_InsertResult" nillable="true" type="tns:Esterilizacion" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -709,7 +727,7 @@
   <xs:element name="Esterilizacion_UpdateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Esterilizacion_UpdateResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Esterilizacion_UpdateResult" nillable="true" type="tns:Esterilizacion" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -769,7 +787,7 @@
   <xs:element name="Almacen_InsertResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Almacen_InsertResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Almacen_InsertResult" nillable="true" type="tns:Almacen" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -783,7 +801,7 @@
   <xs:element name="Almacen_UpdateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Almacen_UpdateResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Almacen_UpdateResult" nillable="true" type="tns:Almacen" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -844,7 +862,7 @@
   <xs:element name="AlmacenesUbicaciones_InsertResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="AlmacenesUbicaciones_InsertResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AlmacenesUbicaciones_InsertResult" nillable="true" type="tns:AlmacenesUbicaciones" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -858,7 +876,7 @@
   <xs:element name="AlmacenesUbicaciones_UpdateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="AlmacenesUbicaciones_UpdateResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AlmacenesUbicaciones_UpdateResult" nillable="true" type="tns:AlmacenesUbicaciones" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
