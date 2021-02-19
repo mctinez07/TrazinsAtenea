@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace SqlEngine
 {
@@ -220,6 +221,8 @@ namespace SqlEngine
             
         }
 
+        private static SqlParameter OutPutParameter;
+
         private static SqlCommand CreateSqlCmd<T>(SqlConnection con, string command, T modelo)
         {
             try
@@ -256,6 +259,11 @@ namespace SqlEngine
                 {
                     var SqlParameter = discoveredParameters.FirstOrDefault((d) => string.Equals(d.ParameterName, "@" + property.Name, StringComparison.InvariantCultureIgnoreCase));
                     SqlParameter.Value = property.GetValue(modelo) ?? (object)DBNull.Value;
+                    //Establecemos el paramaetro de output.
+                    if (SqlParameter.Direction == ParameterDirection.InputOutput)
+                    {                        
+                        OutPutParameter = SqlParameter;
+                    }
                 }
 
                 return SqlCmd;
@@ -336,15 +344,20 @@ namespace SqlEngine
         {
             try
             {
-                //Devolución del identificador de registro desde BD para obtener los datos
-                int result = sqlCmd.ExecuteNonQuery();
-                //Como tenemos el modelo ya casteado solo hay que 
-                var elementInserted = IsSelect(model);
-                return elementInserted;                
-                
+                using (var tnx = CreateTransactionScope())
+                {
+                    //Devolución del identificador de registro desde BD para obtener los datos
+                    var result = sqlCmd.ExecuteNonQuery();
+                    //if (result < 1)
+                    //
+                    //Como tenemos el modelo ya casteado solo hay que 
+                    var elementInserted = IsSelect(model);
+                    return elementInserted;
+                }
+                              
             }
             catch (Exception ex)
-            {
+            {                
                 throw new Exception("Error en " + ex.Message);
             }
             finally
@@ -354,5 +367,14 @@ namespace SqlEngine
         }
 
         #endregion
+
+        private static TransactionScope CreateTransactionScope()
+        {
+            var transactionOptions = new TransactionOptions();
+            transactionOptions.IsolationLevel = System.Transactions.IsolationLevel.ReadCommitted;
+            transactionOptions.Timeout = TransactionManager.MaximumTimeout;
+            return new TransactionScope(TransactionScopeOption.Required, transactionOptions);
+
+        }
     }
 }

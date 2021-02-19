@@ -306,6 +306,19 @@ namespace Models.Inventory
             }
         }
 
+        private int? _contMantCiclos;
+
+        [DataMember]
+        public int? ContMantCiclos
+        {
+            get { return _contMantCiclos; }
+            set
+            {
+                if (value == ContMantCiclos) return;
+                _contMantCiclos = value;
+            }
+        }
+
         private int? _mantCiclos;
 
         [DataMember]
@@ -332,6 +345,19 @@ namespace Models.Inventory
             }
         }
 
+        private bool _cajaSuelto;
+
+        [DataMember]
+        public bool CajaSuelto
+        {
+            get { return _cajaSuelto; }
+            set
+            {
+                if (value == CajaSuelto) return;
+                _cajaSuelto = value;
+            }
+        }
+
         private int? _precio;
 
         [DataMember]
@@ -345,10 +371,24 @@ namespace Models.Inventory
             }
         }
 
+        private string _ubicacion;
+
+        [DataMember]
+        [StringLength(255)]
+        public string Ubicacion
+        {
+            get { return _ubicacion; }
+            set
+            {
+                if (value == Ubicacion) return;
+                _ubicacion = value;
+            }
+        }
+
         private string _observEmp;
 
         [DataMember]        
-        [StringLength(50)]
+        [StringLength(512)]
         public string ObservEmp
         {
             get { return _observEmp; }
@@ -362,7 +402,7 @@ namespace Models.Inventory
         private string _observCic;
 
         [DataMember]
-        [StringLength(50)]
+        [StringLength(512)]
         public string ObservCic
         {
             get { return _observCic; }
@@ -376,7 +416,7 @@ namespace Models.Inventory
         private string _observLav;
 
         [DataMember]
-        [StringLength(50)]
+        [StringLength(512)]
         public string ObservLav
         {
             get { return _observLav; }

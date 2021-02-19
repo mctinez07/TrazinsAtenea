@@ -15,5 +15,7 @@ namespace ManagerModels
         {
             CNX_DB = MainSqlEngine.CNX_DB();
         }
+
+
     }
 }

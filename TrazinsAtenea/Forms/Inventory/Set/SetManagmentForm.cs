@@ -81,7 +81,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             BindingControls();
             //Establecer estado de los controles
             ControlsState();
-
+            Caja.HosId = BaseModelClient.BaseModel.HosId;
+            Caja.ChId = BaseModelClient.BaseModel.ChId;
             splashScreenManager1.CloseWaitForm();            
         }
 
@@ -940,11 +941,15 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             Caja.EstId3 = ThirdSteriMethodSelected?.EstId;
 
             //Guardamos la caja y volvemos a cargar el from cerrando este pero con las nuevas secciones.
+
+            var res = BaseModelClient.Service.Caja_Insert(Caja);
+
             SetManagmentForm frm = new SetManagmentForm
             {
                 Caja = Caja,
                 Operation = EnumOperationType.Modify
             };
+
             frm.ShowDialog();
             this.Close();
         }
