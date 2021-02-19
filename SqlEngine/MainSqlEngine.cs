@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
+using Utils;
 
 namespace SqlEngine
 {
@@ -346,13 +347,20 @@ namespace SqlEngine
             {
                 using (var tnx = CreateTransactionScope())
                 {
-                    //Devolución del identificador de registro desde BD para obtener los datos
-                    var result = sqlCmd.ExecuteNonQuery();
-                    //if (result < 1)
-                    //
-                    //Como tenemos el modelo ya casteado solo hay que 
-                    var elementInserted = IsSelect(model);
-                    return elementInserted;
+                    //Insertamos el nuevo registro
+                    int result = sqlCmd.ExecuteNonQuery();
+
+                    //Obtenemos el valor devuelto en el parámetro Output.
+                    var a = sqlCmd.Parameters[OutPutParameter.ParameterName].Value;
+
+                    //Obtenemos la propiedad asociada como output y agregamos el valor
+                    var prop = model.GetType().GetProperty(OutPutParameter.ParameterName.Remove(0,1));
+                    prop.SetValue(model, a, null);
+
+                    //Marcamos como terminada la transacción aunque en este caso solo hay una operación.
+                    tnx.Complete();
+                    //Devolvemos el modelo insertado con el resultado de la inserción
+                    return model;
                 }
                               
             }
@@ -375,6 +383,6 @@ namespace SqlEngine
             transactionOptions.Timeout = TransactionManager.MaximumTimeout;
             return new TransactionScope(TransactionScopeOption.Required, transactionOptions);
 
-        }
+        }        
     }
 }

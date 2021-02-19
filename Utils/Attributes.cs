@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Utils
 {
+    //Clase para el mapeo de parametros a propiedades
     public class MappingAttribute : System.Attribute
     {
         public bool Exclude { get; set; }

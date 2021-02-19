@@ -49,6 +49,10 @@
       <Project>{1c88cbd8-279e-4cca-8828-9417fc0a99b2}</Project>
       <Name>ConnectionBuilder</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{57C6B4A2-8F21-4BA8-A8D7-82D89C4AE397}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
