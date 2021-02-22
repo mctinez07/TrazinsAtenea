@@ -11,7 +11,6 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TrazinsAtenea.Bases;
 using TrazinsAtenea.Forms.GlobalForms;
 using Utils;
 
@@ -21,10 +20,7 @@ namespace TrazinsAtenea.GlobalEngine
     public enum EnumOperationType { New, Modify, Delete}    
 
     public class Engine
-    {
-        protected static IList<ValidationResult> Success = new List<ValidationResult>().AsReadOnly();
-        public static DataBindingList Links { get; protected set; }
-
+    { 
         //Modelo a enlazar para los controles;
         public static object _bindedModel;        
 
@@ -113,6 +109,7 @@ namespace TrazinsAtenea.GlobalEngine
 
         #region Enlace de propiedades a Control   
         
+        //Probar cuando es combo y enlazar SelectedItem??
         public static void BindingControlProperty(Control ctrl, string property)
         {
             if(ctrl is ListControl)
@@ -149,116 +146,14 @@ namespace TrazinsAtenea.GlobalEngine
                 }
             }
             
-        }
-
-        //public static CustomBinding BindingControlPropertyT(Control ctrl, object model, string propiedad)
-        //{
-        //    //Método original
-        //    if (ctrl is ListControl)
-        //        return BindingControlProperty(ctrl, "SelectedItem", model, propiedad);
-        //    else if (ctrl is CheckBox)
-        //        return BindingControlProperty(ctrl, "CheckState", model, propiedad);
-        //    else if (ctrl is DateTimePicker)
-        //        return BindingControlProperty(ctrl, "Value", model, propiedad);
-        //    else
-        //        return BindingControlProperty(ctrl, "Text", model, propiedad);
-        //} 
-
-        private static void SetUp(Control ctrl, string ctrlControl, BaseModel model, string property)
-        {
-            var textBox = ctrl as TextBox;
-
-            if (textBox != null && ctrlControl == "Text")
-            {
-                var prop = model.Properties[property];
-                var attr = GetAttribute<StringLengthAttribute>(prop);
-                if (attr != null)
-                    textBox.MaxLength = attr.MaximumLength;
-            }
-
-            var numeric = ctrl as NumericUpDown;
-            if (numeric != null)
-            {
-                var prop = model.Properties[property];
-
-                var mapping = GetAttribute<MappingAttribute>(prop);
-                if (mapping != null)
-                {
-
-                    if (mapping.PrecisionHasValue)
-                    {
-                        var precision = mapping.Precision;
-                        var scale = mapping.ScaleHasValue ? mapping.Scale : 0;
-
-                        numeric.DecimalPlaces = scale;
-                    }
-                }
-
-                var attr = GetAttribute<RangeAttribute>(prop);
-                if (attr != null)
-                {
-                    numeric.Minimum = Convert.ToDecimal(attr.Minimum);
-                    numeric.Maximum = Convert.ToDecimal(attr.Maximum);
-                }
-            }
-
-        }
+        }       
 
         // Abreviatura para obtener un atributo dado desde una propiedad.
         private static T GetAttribute<T>(System.Reflection.PropertyInfo prop)
            where T : System.Attribute
         {
             return prop.GetCustomAttributes(typeof(T), true).Cast<T>().FirstOrDefault();
-        }
-
-        static void ctrl_Validated(object sender, EventArgs e)
-        {
-            foreach (Binding item in ((Control)sender).DataBindings)
-            {
-                ValidateBinding(item);
-            }
-        }
-
-        protected static IEnumerable<ValidationResult> ValidateBinding(Binding binding)
-        {
-            //No mostramos errores nada más abrir el formulario
-            //if (boolMostradoPorPrimeraVez)
-            //    return Success;
-
-            //if (!ValidationEnabled)
-            //    return Success;
-
-            var control = binding.Control;
-            var model = binding.DataSource as BaseModel;
-            if (model != null)
-            {
-                //Antes de validar propiamente, forzamos al control a que escriba su valor
-                //en la fuente de datos
-                if (binding.Control is ListControl)
-                {
-                    binding.WriteValue();
-                }
-
-                var modelPropertyName = binding.BindingMemberInfo.BindingField;
-
-                var modelPropertyValue = model.Properties[modelPropertyName].GetValue(model, null);
-
-                var result = model.ValidateProperty(binding.BindingMemberInfo.BindingField, modelPropertyValue);
-                if (result.Count() > 0)
-                    SetError(control, result.First().ErrorMessage);
-                else
-                    SetError(control, "");
-                return result;
-            }
-            else
-                return Success;
-        }
-
-        protected static void SetError(Control control, string errorMessage)
-        {
-            MessageBox.Show(errorMessage);
-            //errorProvider1.SetError(control, errorMessage);
-        }
+        }        
 
         #endregion       
 

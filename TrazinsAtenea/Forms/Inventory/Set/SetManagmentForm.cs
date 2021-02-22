@@ -28,15 +28,23 @@ namespace TrazinsAtenea.Forms.Inventory.Set
     public partial class SetManagmentForm : DevExpress.XtraEditors.XtraForm
     {
         public Caja Caja = new Caja();
+
+        //Creamos la instancia con los valores cargados en memoria
         private BaseModelClient BaseModelClient = BaseModelClient.Instance;
+
+        //Nos indica que tipo de operación hay que realizar para la gestión de la interfaz
         public EnumOperationType Operation;
 
+        //Listas para la gestión en memória de los datos de BD
         private List<Limpieza> MethodsWashingList;
         private List<Esterilizacion> MethodsSteriList;
         private List<AlmacenesUbicaciones> UbicationList;        
 
         private bool onlyVideos = false;
-        private Image CapturedImage; 
+        private Image CapturedImage;
+
+        //Propiedades para la obtención automáica de los elementos seleccionados en los combo.
+        #region Properties Getters 
 
         private Limpieza FirstWashingMethodSelected
         {
@@ -64,6 +72,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             get { return (Esterilizacion)cmbThirdMethodSteri.SelectedItem; }
         }
 
+        #endregion
+
         public SetManagmentForm()
         {
             InitializeComponent();            
@@ -81,8 +91,10 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             BindingControls();
             //Establecer estado de los controles
             ControlsState();
+
             Caja.HosId = BaseModelClient.BaseModel.HosId;
             Caja.ChId = BaseModelClient.BaseModel.ChId;
+
             splashScreenManager1.CloseWaitForm();            
         }
 
@@ -932,7 +944,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         private void btnSaveContinue_Click(object sender, EventArgs e)
         {            
-            //Hay que asiociar manualmente los métodos.
+            //Hay que asociar manualmente los métodos.
             Caja.TipoLavId1 = FirstWashingMethodSelected?.TipoLavId;
             Caja.TipoLavId2 = SecondWashingMethodSelected?.TipoLavId;
             Caja.TipoLavId3 = ThirdWashingMethodSelected?.TipoLavId;
@@ -941,7 +953,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             Caja.EstId3 = ThirdSteriMethodSelected?.EstId;
 
             //Guardamos la caja y volvemos a cargar el from cerrando este pero con las nuevas secciones.
-
+            //Revisar cierre del form actual??
             var res = BaseModelClient.Service.Caja_Insert(Caja);
 
             SetManagmentForm frm = new SetManagmentForm
@@ -954,6 +966,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             this.Close();
         }
 
+        //Salir y guardar// actualiza la página principal?
         private void btnSave_Click(object sender, EventArgs e)
         {
             var a = Caja;

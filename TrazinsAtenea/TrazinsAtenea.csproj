@@ -67,7 +67,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bases\CustomBinding.cs" />
     <Compile Include="Connected Services\ServiceWSTrazinsAtenea\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
