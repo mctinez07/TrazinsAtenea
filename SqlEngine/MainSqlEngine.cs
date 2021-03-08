@@ -263,7 +263,8 @@ namespace SqlEngine
                 //Quitamos los valores nulos para evitar errores y creamos los parámetros con los valores correspondientes.
                 foreach (PropertyInfo property in result.Where(p => p != null))
                 {
-                    var SqlParameter = discoveredParameters.FirstOrDefault((d) => string.Equals(d.ParameterName, "@" + property.Name, StringComparison.InvariantCultureIgnoreCase));
+                    var SqlParameter = discoveredParameters.FirstOrDefault((d) => 
+                                    string.Equals(d.ParameterName, "@" + property.Name, StringComparison.InvariantCultureIgnoreCase));
                     SqlParameter.Value = property.GetValue(modelo) ?? (object)DBNull.Value;
                     //Establecemos el parametro de output.
                     if (SqlParameter.Direction == ParameterDirection.InputOutput)
