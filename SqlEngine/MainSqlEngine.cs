@@ -228,6 +228,7 @@ namespace SqlEngine
         {
             try
             {
+                //Array que contedrá los parámetros del procedimiento
                 SqlParameter[] discoveredParameters;
 
                 SqlCommand SqlCmd = new SqlCommand
@@ -240,27 +241,31 @@ namespace SqlEngine
                 //Obtener los parámetros del procedure
                 SqlCommandBuilder.DeriveParameters(SqlCmd);
 
+                //Inicializamos el array con el número de parámetros del procedimiento
                 discoveredParameters = new SqlParameter[SqlCmd.Parameters.Count - 1 + 1];
+
+                //Copiamos el array obtenido al array contenedor de parametros
                 SqlCmd.Parameters.CopyTo(discoveredParameters, 0);
 
-                //Obtener las propiedades que necesita el procedure
+                //Obtener las propiedades que necesita el procedimento a partir de las propiedades del modelo
                 var Properties = modelo.GetType().GetProperties();
 
                 List<PropertyInfo> result = new List<PropertyInfo>();
-                foreach (var item in discoveredParameters)
+                foreach (var parameter in discoveredParameters)
                 {
-                    var item1 = item.ParameterName.Remove(0, 1);
-                    PropertyInfo e = Properties.Where(p => p.Name.Equals(item1)).FirstOrDefault();
-                    result.Add(e);
+                    //Quitamos la @ del nombre del parámetro
+                    var propertyName = parameter.ParameterName.Remove(0, 1);
+                    PropertyInfo property = Properties.Where(p => p.Name.Equals(propertyName)).FirstOrDefault();
+                    result.Add(property);
                 }
 
                 //Ya tenemos los propiedades que necesita el procedure
-                //Quitamos los valores nulos para evitar errores
+                //Quitamos los valores nulos para evitar errores y creamos los parámetros con los valores correspondientes.
                 foreach (PropertyInfo property in result.Where(p => p != null))
                 {
                     var SqlParameter = discoveredParameters.FirstOrDefault((d) => string.Equals(d.ParameterName, "@" + property.Name, StringComparison.InvariantCultureIgnoreCase));
                     SqlParameter.Value = property.GetValue(modelo) ?? (object)DBNull.Value;
-                    //Establecemos el paramaetro de output.
+                    //Establecemos el parametro de output.
                     if (SqlParameter.Direction == ParameterDirection.InputOutput)
                     {                        
                         OutPutParameter = SqlParameter;
