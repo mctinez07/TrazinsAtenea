@@ -17,9 +17,11 @@
           <xs:element minOccurs="0" name="CajaId" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="CajaId_CodigoCaja" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="CajaMuestra" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CajaSuelto" type="xs:boolean" />
           <xs:element minOccurs="0" name="CentroCosteDescripcion" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="CentroCosteId" nillable="true" type="xs:int" />
           <xs:element minOccurs="0" name="CodigoCaja" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContMantCiclos" nillable="true" type="xs:int" />
           <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="EmbId" nillable="true" type="xs:int" />
           <xs:element minOccurs="0" name="EmbalajeDescripcion" nillable="true" type="xs:string" />
@@ -33,12 +35,13 @@
           <xs:element minOccurs="0" name="ObservCic" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="ObservEmp" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="ObservLav" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Precio" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Peso" nillable="true" type="xs:decimal" />
           <xs:element minOccurs="0" name="TipoCajaDescripcion" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="TipoCajaId" nillable="true" type="xs:int" />
           <xs:element minOccurs="0" name="TipoLavId1" nillable="true" type="xs:int" />
           <xs:element minOccurs="0" name="TipoLavId2" nillable="true" type="xs:int" />
           <xs:element minOccurs="0" name="TipoLavId3" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Ubicacion" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -805,7 +808,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AlmacenesUbicaciones_Select_List">
+  <xs:element name="AlmacenesUbicaciones_GetStructure">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="almacenesUbicaciones" nillable="true" type="tns:AlmacenesUbicaciones" />
@@ -825,10 +828,10 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="AlmacenesUbicaciones" nillable="true" type="tns:AlmacenesUbicaciones" />
-  <xs:element name="AlmacenesUbicaciones_Select_ListResponse">
+  <xs:element name="AlmacenesUbicaciones_GetStructureResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="AlmacenesUbicaciones_Select_ListResult" nillable="true" type="tns:ArrayOfAlmacenesUbicaciones" />
+        <xs:element minOccurs="0" name="AlmacenesUbicaciones_GetStructureResult" nillable="true" type="tns:ArrayOfAlmacenesUbicaciones" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -838,6 +841,20 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfAlmacenesUbicaciones" nillable="true" type="tns:ArrayOfAlmacenesUbicaciones" />
+  <xs:element name="AlmacenesUbicaciones_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="almacenesUbicaciones" nillable="true" type="tns:AlmacenesUbicaciones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlmacenesUbicaciones_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AlmacenesUbicaciones_Select_ListResult" nillable="true" type="tns:ArrayOfAlmacenesUbicaciones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="AlmacenesUbicaciones_Select">
     <xs:complexType>
       <xs:sequence>

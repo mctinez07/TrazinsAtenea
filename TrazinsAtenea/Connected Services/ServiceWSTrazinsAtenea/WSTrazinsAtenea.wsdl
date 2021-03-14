@@ -253,6 +253,12 @@
   <wsdl:message name="IWSTrazinsAtenea_Almacen_Update_OutputMessage">
     <wsdl:part name="parameters" element="tns:Almacen_UpdateResponse" />
   </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_AlmacenesUbicaciones_GetStructure_InputMessage">
+    <wsdl:part name="parameters" element="tns:AlmacenesUbicaciones_GetStructure" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_AlmacenesUbicaciones_GetStructure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlmacenesUbicaciones_GetStructureResponse" />
+  </wsdl:message>
   <wsdl:message name="IWSTrazinsAtenea_AlmacenesUbicaciones_Select_List_InputMessage">
     <wsdl:part name="parameters" element="tns:AlmacenesUbicaciones_Select_List" />
   </wsdl:message>
@@ -447,6 +453,10 @@
     <wsdl:operation name="Almacen_Update">
       <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Update" message="tns:IWSTrazinsAtenea_Almacen_Update_InputMessage" />
       <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_UpdateResponse" message="tns:IWSTrazinsAtenea_Almacen_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AlmacenesUbicaciones_GetStructure">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_GetStructure" message="tns:IWSTrazinsAtenea_AlmacenesUbicaciones_GetStructure_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_GetStructureResponse" message="tns:IWSTrazinsAtenea_AlmacenesUbicaciones_GetStructure_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AlmacenesUbicaciones_Select_List">
       <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Select_List" message="tns:IWSTrazinsAtenea_AlmacenesUbicaciones_Select_List_InputMessage" />
@@ -833,6 +843,15 @@
     </wsdl:operation>
     <wsdl:operation name="Almacen_Update">
       <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlmacenesUbicaciones_GetStructure">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_GetStructure" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

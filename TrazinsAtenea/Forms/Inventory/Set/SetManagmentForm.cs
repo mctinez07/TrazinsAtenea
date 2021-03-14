@@ -37,14 +37,18 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         //Listas para la gestión en memória de los datos de BD
         private List<Limpieza> MethodsWashingList;
-        private List<Esterilizacion> MethodsSteriList;
-        private List<AlmacenesUbicaciones> UbicationList;        
+        private List<Esterilizacion> MethodsSteriList;             
 
         private bool onlyVideos = false;
         private Image CapturedImage;
 
         //Propiedades para la obtención automáica de los elementos seleccionados en los combo.
         #region Properties Getters 
+
+        private Almacen StorageSelected
+        {
+            get { return (Almacen)cmbDefaultUbication.SelectedItem; }
+        }
 
         private Limpieza FirstWashingMethodSelected
         {
@@ -585,15 +589,15 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             try
             {
-                var selected = (Almacen)cmbDefaultUbication.SelectedItem;
-                UbicationList = BaseModelClient.Service.AlmacenesUbicaciones_Select_List(new AlmacenesUbicaciones()
+                var blockList = BaseModelClient.Service.AlmacenesUbicaciones_GetStructure(new AlmacenesUbicaciones()
                 {
-                    ChId = BaseModelClient.BaseModel.ChId,
-                    HosId = BaseModelClient.BaseModel.HosId,
-                    AlmId = selected.AlmId
+                    AlmId = StorageSelected.AlmId
                 }).ToList();
 
-                Engine.ComboBoxFormat(cmbBlock, "Bloque", "Bloque", UbicationList);
+                Engine.ComboBoxFormat(cmbBlock, "Bloque", "Bloque", blockList);
+                //Al cambiar debemos de asegurarnos que se borran los datos de los otros combos asociados.
+                cmbSelf.DataSource = null;
+                cmbPosition.DataSource = null;
             }
             catch (Exception ex)
             {
@@ -605,9 +609,13 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             try
             {
-                var selected = (AlmacenesUbicaciones)cmbBlock.SelectedItem;
-                var list = UbicationList.Where(b => b.Bloque == selected.Bloque && b.AlmId == selected.AlmId).ToList();
-                Engine.ComboBoxFormat(cmbSelf, "Estante", "Estante", list);
+                var blockSelected = cmbBlock.SelectedValue;
+                var selfList = BaseModelClient.Service.AlmacenesUbicaciones_GetStructure(new AlmacenesUbicaciones()
+                {
+                    AlmId = StorageSelected.AlmId,
+                    Bloque = (int?)blockSelected
+                }).ToList();
+                Engine.ComboBoxFormat(cmbSelf, "Estante", "Estante", selfList);
             }
             catch (Exception ex)
             {
@@ -620,12 +628,17 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             try
             {
-                var block = (AlmacenesUbicaciones)cmbBlock.SelectedItem;
-                var self = (AlmacenesUbicaciones)cmbSelf.SelectedItem;
+                var block = cmbBlock.SelectedValue;
+                var self = cmbSelf.SelectedValue;
 
-                var list = UbicationList.Where
-                    (b => b.Bloque == block.Bloque && b.AlmId == block.AlmId && b.Estante == self.Estante).ToList();
-                Engine.ComboBoxFormat(cmbPosition, "Posicion", "Posicion", list);
+                var postionList = BaseModelClient.Service.AlmacenesUbicaciones_GetStructure(new AlmacenesUbicaciones()
+                {
+                    AlmId = StorageSelected.AlmId,
+                    Bloque = (int?)block,
+                    Estante = (int?)self
+                }).ToList();
+
+                Engine.ComboBoxFormat(cmbPosition, "Posicion", "Posicion", postionList);
 
             }
             catch (Exception ex)
@@ -942,8 +955,9 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             frm.ShowDialog();
         }
 
+        #region Main Buttons Actions
         private void btnSaveContinue_Click(object sender, EventArgs e)
-        {            
+        {
             //Hay que asociar manualmente los métodos.
             Caja.TipoLavId1 = FirstWashingMethodSelected?.TipoLavId;
             Caja.TipoLavId2 = SecondWashingMethodSelected?.TipoLavId;
@@ -970,6 +984,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         private void btnSave_Click(object sender, EventArgs e)
         {
             var a = Caja;
-        }
+        } 
+        #endregion
     }
 }

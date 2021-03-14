@@ -11,6 +11,7 @@ using Utils;
 
 namespace SqlEngine
 {
+    //Obtener el nombre del del metodo en el que se produce el error para mostrarlo por pantalla
     public class MainSqlEngine
     {
         #region Atributos
@@ -107,6 +108,25 @@ namespace SqlEngine
         #endregion
 
         #region Gestión Tipo Query
+
+        //Sobreescritura del método genérico para indicar un procedimiento en concreto
+        public static List<T> IsSelectList<T>(T model, string procedureName)
+        {
+            try
+            {
+                //Abrimos la conexión
+                OpenConnection();               
+                
+                //Crear el SqlCommand del procedimiento indicado y los parámetros del procdure.
+                var sqlCommand = CreateSqlCmd(Connection, procedureName, model);
+
+                return QueryTypeSelect(sqlCommand, model);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error en IsSelectList: " + ex.Message);
+            }
+        }
 
         public static List<T> IsSelectList<T>(T model)
         {

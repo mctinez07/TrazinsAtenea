@@ -186,6 +186,9 @@ namespace WSTrazinsAtenea
         #region Almacenes Ubicaciones
 
         [OperationContract]
+        List<AlmacenesUbicaciones> AlmacenesUbicaciones_GetStructure(AlmacenesUbicaciones almacenesUbicaciones);
+
+        [OperationContract]
         List<AlmacenesUbicaciones> AlmacenesUbicaciones_Select_List(AlmacenesUbicaciones almacenesUbicaciones);
 
         [OperationContract]

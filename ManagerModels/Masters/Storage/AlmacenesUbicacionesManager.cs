@@ -10,6 +10,12 @@ namespace ManagerModels.Masters.Storage
 {
     public static class AlmacenesUbicacionesManager
     {
+        public static List<AlmacenesUbicaciones> AlmacenesUbicaciones_GetStructure(AlmacenesUbicaciones almacenesUbicaciones)
+        {
+            var procedureName = string.Format("{0}_{1}", almacenesUbicaciones.GetType().Name, "RecuperarEstructura");
+            return MainSqlEngine.IsSelectList(almacenesUbicaciones, procedureName);
+        }
+
         public static List<AlmacenesUbicaciones> AlmacenesUbicaciones_Select_List(AlmacenesUbicaciones almacenesUbicaciones)
         {
             return MainSqlEngine.IsSelectList(almacenesUbicaciones);

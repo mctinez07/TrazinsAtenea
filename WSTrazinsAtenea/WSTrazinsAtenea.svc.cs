@@ -267,6 +267,11 @@ namespace WSTrazinsAtenea
 
         #region AlmacenesUbicaciones
 
+        public List<AlmacenesUbicaciones> AlmacenesUbicaciones_GetStructure(AlmacenesUbicaciones almacenesUbicaciones)
+        {
+            return AlmacenesUbicacionesManager.AlmacenesUbicaciones_GetStructure(almacenesUbicaciones);
+        }
+
         public List<AlmacenesUbicaciones> AlmacenesUbicaciones_Select_List(AlmacenesUbicaciones almacenesUbicaciones)
         {            
             return AlmacenesUbicacionesManager.AlmacenesUbicaciones_Select_List(almacenesUbicaciones);
