@@ -358,16 +358,16 @@ namespace Models.Inventory
             }
         }
 
-        private int? _precio;
+        private decimal? _peso;
 
-        [DataMember]
-        public int? Precio
+        [DataMember]        
+        public decimal? Peso
         {
-            get { return _precio; }
+            get { return _peso; }
             set
             {
-                if (value == Precio) return;
-                _precio = value;
+                if (value == Peso) return;
+                _peso = value;
             }
         }
 

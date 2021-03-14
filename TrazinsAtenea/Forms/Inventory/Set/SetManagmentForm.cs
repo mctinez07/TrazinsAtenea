@@ -132,7 +132,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
             ////Controles TextBox
             Engine.BindingControlProperty(txtSetName,"Descripcion");
-            Engine.BindingControlProperty(txtPrice, "Precio");
+            Engine.BindingControlProperty(speWheight, "Peso");
             Engine.BindingControlProperty(txtSetCode, "CodigoCaja");
             Engine.BindingControlProperty(txtRemarksAssemblyPackaging, "ObservEmp");
             Engine.BindingControlProperty(txtRemarksSteri, "ObservCic");
