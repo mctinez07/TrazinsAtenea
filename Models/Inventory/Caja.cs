@@ -371,6 +371,19 @@ namespace Models.Inventory
             }
         }
 
+        private int? _ubiId;
+
+        [DataMember]        
+        public int? UbiId
+        {
+            get { return _ubiId; }
+            set
+            {
+                if (value == UbiId) return;
+                _ubiId = value;
+            }
+        }
+
         private string _ubicacion;
 
         [DataMember]

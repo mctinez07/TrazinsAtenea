@@ -93,6 +93,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             LoadComboBoxInformation();
             //Enlazar Controles para que se actualicen automáticamente los valores de los controles.
             BindingControls();
+            //PDte!!! Cuando recuperamos los datos hay que mostrar los valores en los combos de ubicacioón
             //Establecer estado de los controles
             ControlsState();
 
@@ -150,9 +151,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             Engine.BindingControlProperty(cmbCostCenter, "CentroCosteId");
 
             //Controles Combo Ubicación
-            //Penidente comprobar como va a funcionar. Es posible que usemos el modelo de Almacen
-            //Engine.BindingControlProperty(cmbDefaultUbication, "UbiId");
-            //Engine.BindingControlProperty(cmbBlock, "")
+            Engine.BindingControlProperty(cmbPosition, "UbiId");            
 
             //Otros Controles
             Engine.BindingControlProperty(speMaintenance, "MantCiclos");
@@ -638,7 +637,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                     Estante = (int?)self
                 }).ToList();
 
-                Engine.ComboBoxFormat(cmbPosition, "Posicion", "Posicion", postionList);
+                Engine.ComboBoxFormat(cmbPosition, "Posicion", "UbiId", postionList);
 
             }
             catch (Exception ex)
@@ -964,8 +963,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             Caja.TipoLavId3 = ThirdWashingMethodSelected?.TipoLavId;
             Caja.EstId1 = FirstSteriMethodSelected?.EstId;
             Caja.EstId2 = SecondSteriMethodSelected?.EstId;
-            Caja.EstId3 = ThirdSteriMethodSelected?.EstId;
-
+            Caja.EstId3 = ThirdSteriMethodSelected?.EstId;           
+            
             //Guardamos la caja y volvemos a cargar el from cerrando este pero con las nuevas secciones.
             //Revisar cierre del form actual??
             var res = BaseModelClient.Service.Caja_Insert(Caja);
