@@ -47,6 +47,7 @@
     <Compile Include="Inventory\Caja.cs" />
     <Compile Include="Inventory\CajaImagen.cs" />
     <Compile Include="Inventory\CajasGrupo.cs" />
+    <Compile Include="Masters\CentroCoste.cs" />
     <Compile Include="Masters\Embalaje.cs" />
     <Compile Include="Masters\Especialidad.cs" />
     <Compile Include="Masters\Hospital.cs" />

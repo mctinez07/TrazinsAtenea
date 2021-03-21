@@ -19,154 +19,6 @@ namespace WSTrazinsAtenea
 
         //[OperationContract]
         //List<Usuario> Usuario_Select(Usuario usuario);
-
-        #region Cajas
-
-        [OperationContract]
-        List<Caja> Caja_Select_List(Caja caja);
-
-        [OperationContract]
-        Caja Caja_Select(Caja caja);
-
-        [OperationContract]
-        Caja Caja_Insert(Caja caja);
-
-        [OperationContract]
-        Caja Caja_Update(Caja caja);
-
-        #endregion
-
-        #region CajaImagen
-
-        [OperationContract]
-        List<CajaImagen> CajaImagen_Select_List(CajaImagen cajaImagen);
-
-        [OperationContract]
-        CajaImagen CajaImagen_Select(CajaImagen cajaImagen);
-
-        [OperationContract]
-        CajaImagen CajaImagen_Insert(CajaImagen cajaImagen);
-
-        [OperationContract]
-        CajaImagen CajaImagen_Update(CajaImagen cajaImagen);
-
-        #endregion
-
-        #region CajasGrupos
-
-        [OperationContract]
-        List<CajasGrupo> CajasGrupos_Select_List(CajasGrupo cajasGrupo);
-
-        [OperationContract]
-        CajasGrupo CajasGrupos_Select(CajasGrupo cajasGrupo);
-
-        [OperationContract]
-        CajasGrupo CajasGrupos_Insert(CajasGrupo cajasGrupo);
-
-        [OperationContract]
-        CajasGrupo CajasGrupos_Update(CajasGrupo cajasGrupo);
-
-        [OperationContract]
-        CajasGrupo CajasGrupos_Delete(CajasGrupo cajasGrupo);
-
-        #endregion
-
-        #region Especialidades
-
-        [OperationContract]
-        List<Especialidad> Especialidad_Select_List(Especialidad especialidad);
-
-        [OperationContract]
-        Especialidad Especialidad_Select(Especialidad especialidad);
-
-        [OperationContract]
-        Especialidad Especialidad_Insert(Especialidad especialidad);
-
-        [OperationContract]
-        Especialidad Especialidad_Update(Especialidad especialidad);
-
-        #endregion
-
-        #region Embalajes
-
-        [OperationContract]
-        List<Embalaje> Embalaje_Select_List(Embalaje embalaje);
-
-        [OperationContract]
-        Embalaje Embalaje_Select(Embalaje embalaje);
-
-        [OperationContract]
-        Embalaje Embalaje_Insert(Embalaje embalaje);
-
-        [OperationContract]
-        Embalaje Embalaje_Update(Embalaje embalaje);
-
-        #endregion
-
-        #region Hospitales
-
-        [OperationContract]
-        List<Hospital> Hospital_Select_List(Hospital hospital);
-
-        [OperationContract]
-        Hospital Hospital_Select(Hospital hospital);
-
-        [OperationContract]
-        Hospital Hospital_Insert(Hospital hospital);
-
-        [OperationContract]
-        Hospital Hospital_Update(Hospital hospital);
-
-        #endregion
-
-        #region TiposCajas
-
-        [OperationContract]
-        List<TipoCaja> TipoCaja_Select_List(TipoCaja tipoCaja);
-
-        [OperationContract]
-        TipoCaja TipoCaja_Select(TipoCaja tipoCaja);
-
-        [OperationContract]
-        TipoCaja TipoCaja_Insert(TipoCaja tipoCaja);
-
-        [OperationContract]
-        TipoCaja TipoCaja_Update(TipoCaja tipoCaja);
-
-        #endregion
-
-        #region Métodos Limpieza
-
-        [OperationContract]
-        List<Limpieza> Limpieza_Select_List(Limpieza limpieza);
-
-        [OperationContract]
-        Limpieza Limpieza_Select(Limpieza limpieza);
-
-        [OperationContract]
-        Limpieza Limpieza_Insert(Limpieza limpieza);
-
-        [OperationContract]
-        Limpieza Limpieza_Update(Limpieza limpieza);
-
-        #endregion
-
-        #region Métodos Esterilización
-
-        [OperationContract]
-        List<Esterilizacion> Esterilizacion_Select_List(Esterilizacion esterilizacion);
-
-        [OperationContract]
-        Esterilizacion Esterilizacion_Select(Esterilizacion esterilizacion);
-
-        [OperationContract]
-        Esterilizacion Esterilizacion_Insert(Esterilizacion esterilizacion);
-
-        [OperationContract]
-        Esterilizacion Esterilizacion_Update(Esterilizacion esterilizacion);
-
-        #endregion
-
         #region Almacenes
 
         [OperationContract]
@@ -202,10 +54,173 @@ namespace WSTrazinsAtenea
 
         #endregion
 
+        #region Cajas
+
+        [OperationContract]
+        List<Caja> Caja_Select_List(Caja caja);
+
+        [OperationContract]
+        Caja Caja_Select(Caja caja);
+
+        [OperationContract]
+        Caja Caja_Insert(Caja caja);
+
+        [OperationContract]
+        Caja Caja_Update(Caja caja);
+
+        #endregion
+
+        #region CajasGrupos
+
+        [OperationContract]
+        List<CajasGrupo> CajasGrupos_Select_List(CajasGrupo cajasGrupo);
+
+        [OperationContract]
+        CajasGrupo CajasGrupos_Select(CajasGrupo cajasGrupo);
+
+        [OperationContract]
+        CajasGrupo CajasGrupos_Insert(CajasGrupo cajasGrupo);
+
+        [OperationContract]
+        CajasGrupo CajasGrupos_Update(CajasGrupo cajasGrupo);
+
+        [OperationContract]
+        CajasGrupo CajasGrupos_Delete(CajasGrupo cajasGrupo);
+
+        #endregion
+
+        #region CajaImagen
+
+        [OperationContract]
+        List<CajaImagen> CajaImagen_Select_List(CajaImagen cajaImagen);
+
+        [OperationContract]
+        CajaImagen CajaImagen_Select(CajaImagen cajaImagen);
+
+        [OperationContract]
+        CajaImagen CajaImagen_Insert(CajaImagen cajaImagen);
+
+        [OperationContract]
+        CajaImagen CajaImagen_Update(CajaImagen cajaImagen);
+
+        #endregion
+
+        #region CentroCoste
+
+        [OperationContract]
+        List<CentroCoste> CentroCoste_Select_List(CentroCoste centrocoste);
+
+        [OperationContract]
+        CentroCoste CentroCoste_Select(CentroCoste centrocoste);
+
+        [OperationContract]
+        CentroCoste CentroCoste_Insert(CentroCoste centrocoste);
+
+        [OperationContract]
+        CentroCoste CentroCoste_Update(CentroCoste centrocoste);
+
+        #endregion
+
+        #region Embalajes
+
+        [OperationContract]
+        List<Embalaje> Embalaje_Select_List(Embalaje embalaje);
+
+        [OperationContract]
+        Embalaje Embalaje_Select(Embalaje embalaje);
+
+        [OperationContract]
+        Embalaje Embalaje_Insert(Embalaje embalaje);
+
+        [OperationContract]
+        Embalaje Embalaje_Update(Embalaje embalaje);
+
+        #endregion
+
+        #region Especialidades
+
+        [OperationContract]
+        List<Especialidad> Especialidad_Select_List(Especialidad especialidad);
+
+        [OperationContract]
+        Especialidad Especialidad_Select(Especialidad especialidad);
+
+        [OperationContract]
+        Especialidad Especialidad_Insert(Especialidad especialidad);
+
+        [OperationContract]
+        Especialidad Especialidad_Update(Especialidad especialidad);
+
+        #endregion        
+
+        #region Hospitales
+
+        [OperationContract]
+        List<Hospital> Hospital_Select_List(Hospital hospital);
+
+        [OperationContract]
+        Hospital Hospital_Select(Hospital hospital);
+
+        [OperationContract]
+        Hospital Hospital_Insert(Hospital hospital);
+
+        [OperationContract]
+        Hospital Hospital_Update(Hospital hospital);
+
+        #endregion
+
         #region Mensajes
 
         [OperationContract]
-        Mensaje Mensaje_Select(Mensaje mensaje); 
+        Mensaje Mensaje_Select(Mensaje mensaje);
+
+        #endregion
+
+        #region Métodos Esterilización
+
+        [OperationContract]
+        List<Esterilizacion> Esterilizacion_Select_List(Esterilizacion esterilizacion);
+
+        [OperationContract]
+        Esterilizacion Esterilizacion_Select(Esterilizacion esterilizacion);
+
+        [OperationContract]
+        Esterilizacion Esterilizacion_Insert(Esterilizacion esterilizacion);
+
+        [OperationContract]
+        Esterilizacion Esterilizacion_Update(Esterilizacion esterilizacion);
+
+        #endregion        
+
+        #region Métodos Limpieza
+
+        [OperationContract]
+        List<Limpieza> Limpieza_Select_List(Limpieza limpieza);
+
+        [OperationContract]
+        Limpieza Limpieza_Select(Limpieza limpieza);
+
+        [OperationContract]
+        Limpieza Limpieza_Insert(Limpieza limpieza);
+
+        [OperationContract]
+        Limpieza Limpieza_Update(Limpieza limpieza);
+
+        #endregion
+
+        #region TiposCajas
+
+        [OperationContract]
+        List<TipoCaja> TipoCaja_Select_List(TipoCaja tipoCaja);
+
+        [OperationContract]
+        TipoCaja TipoCaja_Select(TipoCaja tipoCaja);
+
+        [OperationContract]
+        TipoCaja TipoCaja_Insert(TipoCaja tipoCaja);
+
+        [OperationContract]
+        TipoCaja TipoCaja_Update(TipoCaja tipoCaja);
 
         #endregion
 

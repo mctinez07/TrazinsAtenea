@@ -301,10 +301,31 @@ namespace WSTrazinsAtenea
             return MensajesManager.Mensaje_Select(mensaje);
         }
 
-        
         #endregion
 
+        #region CentroCoste
 
+        public List<CentroCoste> CentroCoste_Select_List(CentroCoste centrocoste)
+        {
+            return CentroCosteManager.CentroCoste_Select_List(centrocoste);
+        }
+
+        public CentroCoste CentroCoste_Select(CentroCoste centrocoste)
+        {
+            return CentroCosteManager.CentroCoste_Select(centrocoste);
+        }
+
+        public CentroCoste CentroCoste_Insert(CentroCoste centrocoste)
+        {
+            return CentroCosteManager.CentroCoste_Insert(centrocoste);
+        }
+
+        public CentroCoste CentroCoste_Update(CentroCoste centrocoste)
+        {
+            return CentroCosteManager.CentroCoste_Update(centrocoste);
+        }
+
+        #endregion
 
         //public List<Usuario> Usuario_Select(Usuario usuario)
         //{

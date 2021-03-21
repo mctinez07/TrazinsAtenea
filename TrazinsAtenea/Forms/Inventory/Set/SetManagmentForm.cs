@@ -91,9 +91,13 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
             //CargarCombos
             LoadComboBoxInformation();
+
             //Enlazar Controles para que se actualicen automáticamente los valores de los controles.
             BindingControls();
+
+            //PDte!!! Crear atributo en BD CentroCoste
             //PDte!!! Cuando recuperamos los datos hay que mostrar los valores en los combos de ubicacioón
+
             //Establecer estado de los controles
             ControlsState();
 
@@ -260,11 +264,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             SetTypeLoad();
             MethodsWashingLoad();
             MethodsSteriLoad();
-            StorageLoad();
-
-            //Pendiente crear modelo
-            //CostCenterLoad();           
-
+            StorageLoad();            
+            CostCenterLoad();
         }
 
         private void StorageLoad()
@@ -414,6 +415,23 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 { ChId = BaseModelClient.BaseModel.ChId });
 
                 Engine.ComboBoxFormat(cmbSpeciality, "Descripcion", "EspId", specialitiesList);
+
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage.ShowErrorMessage(MethodBase.GetCurrentMethod().Name, ex.Message);
+            }
+        }
+
+        private void CostCenterLoad()
+        {
+            try
+            {
+
+                var costcenterList = BaseModelClient.Service.CentroCoste_Select_List(new CentroCoste()
+                { ChId = BaseModelClient.BaseModel.ChId });
+
+                Engine.ComboBoxFormat(cmbCostCenter, "Descripcion", "Id", costcenterList);
 
             }
             catch (Exception ex)

@@ -1,739 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://WSTrazinsAtenea.com" elementFormDefault="qualified" targetNamespace="http://WSTrazinsAtenea.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:53110/WSTrazinsAtenea.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Drawing" />
-  <xs:element name="Caja_Select_List">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="caja" nillable="true" type="tns:Caja" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="Caja">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:BaseModel">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="Activa" type="xs:boolean" />
-          <xs:element minOccurs="0" name="CHIdPropietario" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CajaId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CajaId_CodigoCaja" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CajaMuestra" type="xs:boolean" />
-          <xs:element minOccurs="0" name="CajaSuelto" type="xs:boolean" />
-          <xs:element minOccurs="0" name="CentroCosteDescripcion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CentroCosteId" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="CodigoCaja" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ContMantCiclos" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="EmbId" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="EmbalajeDescripcion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="EspId" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="EspecialidadDescripcion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="EstId1" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="EstId2" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="EstId3" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="HosIdPropietario" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="MantCiclos" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="ObservCic" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ObservEmp" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="ObservLav" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Peso" nillable="true" type="xs:decimal" />
-          <xs:element minOccurs="0" name="TipoCajaDescripcion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TipoCajaId" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="TipoLavId1" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="TipoLavId2" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="TipoLavId3" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="Ubicacion" nillable="true" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="Caja" nillable="true" type="tns:Caja" />
-  <xs:complexType name="BaseModel">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="AuditMaquina" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="AuditProceso" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="AuditUsuario" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ChId" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="HosId" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="BaseModel" nillable="true" type="tns:BaseModel" />
-  <xs:element name="Caja_Select_ListResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Caja_Select_ListResult" nillable="true" type="tns:ArrayOfCaja" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="ArrayOfCaja">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Caja" nillable="true" type="tns:Caja" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfCaja" nillable="true" type="tns:ArrayOfCaja" />
-  <xs:element name="Caja_Select">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="caja" nillable="true" type="tns:Caja" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Caja_SelectResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Caja_SelectResult" nillable="true" type="tns:Caja" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Caja_Insert">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="caja" nillable="true" type="tns:Caja" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Caja_InsertResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Caja_InsertResult" nillable="true" type="tns:Caja" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Caja_Update">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="caja" nillable="true" type="tns:Caja" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Caja_UpdateResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Caja_UpdateResult" nillable="true" type="tns:Caja" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CajaImagen_Select_List">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="cajaImagen" nillable="true" type="tns:CajaImagen" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="CajaImagen">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:BaseModel">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="CajaId" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="CargarImagenes" type="xs:boolean" />
-          <xs:element minOccurs="0" name="EsImagen" type="xs:boolean" />
-          <xs:element minOccurs="0" name="EsVideo" type="xs:boolean" />
-          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
-          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Drawing" minOccurs="0" name="Image" nillable="true" type="q1:Image" />
-          <xs:element minOccurs="0" name="Imagen" nillable="true" type="xs:base64Binary" />
-          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="CajaImagen" nillable="true" type="tns:CajaImagen" />
-  <xs:element name="CajaImagen_Select_ListResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="CajaImagen_Select_ListResult" nillable="true" type="tns:ArrayOfCajaImagen" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="ArrayOfCajaImagen">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="CajaImagen" nillable="true" type="tns:CajaImagen" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfCajaImagen" nillable="true" type="tns:ArrayOfCajaImagen" />
-  <xs:element name="CajaImagen_Select">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="cajaImagen" nillable="true" type="tns:CajaImagen" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CajaImagen_SelectResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="CajaImagen_SelectResult" nillable="true" type="tns:CajaImagen" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CajaImagen_Insert">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="cajaImagen" nillable="true" type="tns:CajaImagen" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CajaImagen_InsertResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="CajaImagen_InsertResult" nillable="true" type="tns:CajaImagen" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CajaImagen_Update">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="cajaImagen" nillable="true" type="tns:CajaImagen" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CajaImagen_UpdateResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="CajaImagen_UpdateResult" nillable="true" type="tns:CajaImagen" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CajasGrupos_Select_List">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="cajasGrupo" nillable="true" type="tns:CajasGrupo" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="CajasGrupo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="CajaId" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Contador" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="DesGrupo" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="GrupoId" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="NomGrupo" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="NumOrden" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="CajasGrupo" nillable="true" type="tns:CajasGrupo" />
-  <xs:element name="CajasGrupos_Select_ListResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="CajasGrupos_Select_ListResult" nillable="true" type="tns:ArrayOfCajasGrupo" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="ArrayOfCajasGrupo">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="CajasGrupo" nillable="true" type="tns:CajasGrupo" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfCajasGrupo" nillable="true" type="tns:ArrayOfCajasGrupo" />
-  <xs:element name="CajasGrupos_Select">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="cajasGrupo" nillable="true" type="tns:CajasGrupo" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CajasGrupos_SelectResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="CajasGrupos_SelectResult" nillable="true" type="tns:CajasGrupo" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CajasGrupos_Insert">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="cajasGrupo" nillable="true" type="tns:CajasGrupo" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CajasGrupos_InsertResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="CajasGrupos_InsertResult" nillable="true" type="tns:CajasGrupo" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CajasGrupos_Update">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="cajasGrupo" nillable="true" type="tns:CajasGrupo" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CajasGrupos_UpdateResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="CajasGrupos_UpdateResult" nillable="true" type="tns:CajasGrupo" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CajasGrupos_Delete">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="cajasGrupo" nillable="true" type="tns:CajasGrupo" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CajasGrupos_DeleteResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="CajasGrupos_DeleteResult" nillable="true" type="tns:CajasGrupo" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Especialidad_Select_List">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="especialidad" nillable="true" type="tns:Especialidad" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="Especialidad">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:BaseModel">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="EspId" nillable="true" type="xs:int" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="Especialidad" nillable="true" type="tns:Especialidad" />
-  <xs:element name="Especialidad_Select_ListResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Especialidad_Select_ListResult" nillable="true" type="tns:ArrayOfEspecialidad" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="ArrayOfEspecialidad">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Especialidad" nillable="true" type="tns:Especialidad" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfEspecialidad" nillable="true" type="tns:ArrayOfEspecialidad" />
-  <xs:element name="Especialidad_Select">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="especialidad" nillable="true" type="tns:Especialidad" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Especialidad_SelectResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Especialidad_SelectResult" nillable="true" type="tns:Especialidad" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Especialidad_Insert">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="especialidad" nillable="true" type="tns:Especialidad" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Especialidad_InsertResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Especialidad_InsertResult" nillable="true" type="tns:Especialidad" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Especialidad_Update">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="especialidad" nillable="true" type="tns:Especialidad" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Especialidad_UpdateResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Especialidad_UpdateResult" nillable="true" type="tns:Especialidad" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Embalaje_Select_List">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="embalaje" nillable="true" type="tns:Embalaje" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="Embalaje">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:BaseModel">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="CaducidadDias" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="CaducidadMeses" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="ConId" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="Embalaje" nillable="true" type="tns:Embalaje" />
-  <xs:element name="Embalaje_Select_ListResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Embalaje_Select_ListResult" nillable="true" type="tns:ArrayOfEmbalaje" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="ArrayOfEmbalaje">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Embalaje" nillable="true" type="tns:Embalaje" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfEmbalaje" nillable="true" type="tns:ArrayOfEmbalaje" />
-  <xs:element name="Embalaje_Select">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="embalaje" nillable="true" type="tns:Embalaje" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Embalaje_SelectResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Embalaje_SelectResult" nillable="true" type="tns:Embalaje" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Embalaje_Insert">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="embalaje" nillable="true" type="tns:Embalaje" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Embalaje_InsertResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Embalaje_InsertResult" nillable="true" type="tns:Embalaje" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Embalaje_Update">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="embalaje" nillable="true" type="tns:Embalaje" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Embalaje_UpdateResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Embalaje_UpdateResult" nillable="true" type="tns:Embalaje" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Hospital_Select_List">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="hospital" nillable="true" type="tns:Hospital" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="Hospital">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:BaseModel">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="ConFirma" type="xs:boolean" />
-          <xs:element minOccurs="0" name="EmbIdArt" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="EmbIdCaj" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="EmbIdSC" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" name="IntOrion" type="xs:boolean" />
-          <xs:element minOccurs="0" name="IntSelene" type="xs:boolean" />
-          <xs:element minOccurs="0" name="NomHospital" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Siglas" nillable="true" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="Hospital" nillable="true" type="tns:Hospital" />
-  <xs:element name="Hospital_Select_ListResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Hospital_Select_ListResult" nillable="true" type="tns:ArrayOfHospital" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="ArrayOfHospital">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Hospital" nillable="true" type="tns:Hospital" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfHospital" nillable="true" type="tns:ArrayOfHospital" />
-  <xs:element name="Hospital_Select">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="hospital" nillable="true" type="tns:Hospital" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Hospital_SelectResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Hospital_SelectResult" nillable="true" type="tns:Hospital" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Hospital_Insert">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="hospital" nillable="true" type="tns:Hospital" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Hospital_InsertResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Hospital_InsertResult" nillable="true" type="tns:Hospital" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Hospital_Update">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="hospital" nillable="true" type="tns:Hospital" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Hospital_UpdateResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Hospital_UpdateResult" nillable="true" type="tns:Hospital" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="TipoCaja_Select_List">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="tipoCaja" nillable="true" type="tns:TipoCaja" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="TipoCaja">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:BaseModel">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="TipoCaja" nillable="true" type="tns:TipoCaja" />
-  <xs:element name="TipoCaja_Select_ListResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="TipoCaja_Select_ListResult" nillable="true" type="tns:ArrayOfTipoCaja" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="ArrayOfTipoCaja">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="TipoCaja" nillable="true" type="tns:TipoCaja" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfTipoCaja" nillable="true" type="tns:ArrayOfTipoCaja" />
-  <xs:element name="TipoCaja_Select">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="tipoCaja" nillable="true" type="tns:TipoCaja" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="TipoCaja_SelectResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="TipoCaja_SelectResult" nillable="true" type="tns:TipoCaja" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="TipoCaja_Insert">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="tipoCaja" nillable="true" type="tns:TipoCaja" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="TipoCaja_InsertResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="TipoCaja_InsertResult" nillable="true" type="tns:TipoCaja" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="TipoCaja_Update">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="tipoCaja" nillable="true" type="tns:TipoCaja" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="TipoCaja_UpdateResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="TipoCaja_UpdateResult" nillable="true" type="tns:TipoCaja" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Limpieza_Select_List">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="limpieza" nillable="true" type="tns:Limpieza" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="Limpieza">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:BaseModel">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="Control1" type="xs:boolean" />
-          <xs:element minOccurs="0" name="Control2" type="xs:boolean" />
-          <xs:element minOccurs="0" name="Control3" type="xs:boolean" />
-          <xs:element minOccurs="0" name="Control4" type="xs:boolean" />
-          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="TipoLavId" nillable="true" type="xs:int" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="Limpieza" nillable="true" type="tns:Limpieza" />
-  <xs:element name="Limpieza_Select_ListResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Limpieza_Select_ListResult" nillable="true" type="tns:ArrayOfLimpieza" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="ArrayOfLimpieza">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Limpieza" nillable="true" type="tns:Limpieza" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfLimpieza" nillable="true" type="tns:ArrayOfLimpieza" />
-  <xs:element name="Limpieza_Select">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="limpieza" nillable="true" type="tns:Limpieza" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Limpieza_SelectResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Limpieza_SelectResult" nillable="true" type="tns:Limpieza" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Limpieza_Insert">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="limpieza" nillable="true" type="tns:Limpieza" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Limpieza_InsertResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Limpieza_InsertResult" nillable="true" type="tns:Limpieza" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Limpieza_Update">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="limpieza" nillable="true" type="tns:Limpieza" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Limpieza_UpdateResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Limpieza_UpdateResult" nillable="true" type="tns:Limpieza" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Esterilizacion_Select_List">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="esterilizacion" nillable="true" type="tns:Esterilizacion" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="Esterilizacion">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:BaseModel">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="Control1" type="xs:boolean" />
-          <xs:element minOccurs="0" name="Control2" type="xs:boolean" />
-          <xs:element minOccurs="0" name="Control3" type="xs:boolean" />
-          <xs:element minOccurs="0" name="Control4" type="xs:boolean" />
-          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="EstId" nillable="true" type="xs:int" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="Esterilizacion" nillable="true" type="tns:Esterilizacion" />
-  <xs:element name="Esterilizacion_Select_ListResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Esterilizacion_Select_ListResult" nillable="true" type="tns:ArrayOfEsterilizacion" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:complexType name="ArrayOfEsterilizacion">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Esterilizacion" nillable="true" type="tns:Esterilizacion" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfEsterilizacion" nillable="true" type="tns:ArrayOfEsterilizacion" />
-  <xs:element name="Esterilizacion_Select">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="esterilizacion" nillable="true" type="tns:Esterilizacion" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Esterilizacion_SelectResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Esterilizacion_SelectResult" nillable="true" type="tns:Esterilizacion" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Esterilizacion_Insert">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="esterilizacion" nillable="true" type="tns:Esterilizacion" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Esterilizacion_InsertResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Esterilizacion_InsertResult" nillable="true" type="tns:Esterilizacion" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Esterilizacion_Update">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="esterilizacion" nillable="true" type="tns:Esterilizacion" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Esterilizacion_UpdateResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Esterilizacion_UpdateResult" nillable="true" type="tns:Esterilizacion" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="Almacen_Select_List">
     <xs:complexType>
       <xs:sequence>
@@ -753,6 +20,16 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="Almacen" nillable="true" type="tns:Almacen" />
+  <xs:complexType name="BaseModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuditMaquina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AuditProceso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AuditUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HosId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseModel" nillable="true" type="tns:BaseModel" />
   <xs:element name="Almacen_Select_ListResponse">
     <xs:complexType>
       <xs:sequence>
@@ -897,6 +174,577 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Caja_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caja" nillable="true" type="tns:Caja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Caja">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activa" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CHIdPropietario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CajaId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CajaId_CodigoCaja" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CajaMuestra" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CajaSuelto" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CentroCosteDescripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CentroCosteId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CodigoCaja" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContMantCiclos" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmbId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EmbalajeDescripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EspId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EspecialidadDescripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EstId1" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EstId2" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EstId3" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="HosIdPropietario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MantCiclos" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ObservCic" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ObservEmp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ObservLav" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Peso" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TipoCajaDescripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoCajaId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TipoLavId1" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TipoLavId2" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TipoLavId3" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UbiId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Ubicacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Caja" nillable="true" type="tns:Caja" />
+  <xs:element name="Caja_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Caja_Select_ListResult" nillable="true" type="tns:ArrayOfCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfCaja">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Caja" nillable="true" type="tns:Caja" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCaja" nillable="true" type="tns:ArrayOfCaja" />
+  <xs:element name="Caja_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caja" nillable="true" type="tns:Caja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Caja_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Caja_SelectResult" nillable="true" type="tns:Caja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Caja_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caja" nillable="true" type="tns:Caja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Caja_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Caja_InsertResult" nillable="true" type="tns:Caja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Caja_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caja" nillable="true" type="tns:Caja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Caja_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Caja_UpdateResult" nillable="true" type="tns:Caja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajasGrupos_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cajasGrupo" nillable="true" type="tns:CajasGrupo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CajasGrupo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CajaId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contador" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DesGrupo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GrupoId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NomGrupo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumOrden" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CajasGrupo" nillable="true" type="tns:CajasGrupo" />
+  <xs:element name="CajasGrupos_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CajasGrupos_Select_ListResult" nillable="true" type="tns:ArrayOfCajasGrupo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfCajasGrupo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CajasGrupo" nillable="true" type="tns:CajasGrupo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCajasGrupo" nillable="true" type="tns:ArrayOfCajasGrupo" />
+  <xs:element name="CajasGrupos_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cajasGrupo" nillable="true" type="tns:CajasGrupo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajasGrupos_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CajasGrupos_SelectResult" nillable="true" type="tns:CajasGrupo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajasGrupos_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cajasGrupo" nillable="true" type="tns:CajasGrupo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajasGrupos_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CajasGrupos_InsertResult" nillable="true" type="tns:CajasGrupo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajasGrupos_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cajasGrupo" nillable="true" type="tns:CajasGrupo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajasGrupos_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CajasGrupos_UpdateResult" nillable="true" type="tns:CajasGrupo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajasGrupos_Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cajasGrupo" nillable="true" type="tns:CajasGrupo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajasGrupos_DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CajasGrupos_DeleteResult" nillable="true" type="tns:CajasGrupo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajaImagen_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cajaImagen" nillable="true" type="tns:CajaImagen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CajaImagen">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CajaId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CargarImagenes" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EsImagen" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EsVideo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Drawing" minOccurs="0" name="Image" nillable="true" type="q1:Image" />
+          <xs:element minOccurs="0" name="Imagen" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CajaImagen" nillable="true" type="tns:CajaImagen" />
+  <xs:element name="CajaImagen_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CajaImagen_Select_ListResult" nillable="true" type="tns:ArrayOfCajaImagen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfCajaImagen">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CajaImagen" nillable="true" type="tns:CajaImagen" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCajaImagen" nillable="true" type="tns:ArrayOfCajaImagen" />
+  <xs:element name="CajaImagen_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cajaImagen" nillable="true" type="tns:CajaImagen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajaImagen_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CajaImagen_SelectResult" nillable="true" type="tns:CajaImagen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajaImagen_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cajaImagen" nillable="true" type="tns:CajaImagen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajaImagen_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CajaImagen_InsertResult" nillable="true" type="tns:CajaImagen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajaImagen_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cajaImagen" nillable="true" type="tns:CajaImagen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CajaImagen_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CajaImagen_UpdateResult" nillable="true" type="tns:CajaImagen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroCoste_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centrocoste" nillable="true" type="tns:CentroCoste" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CentroCoste">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodigoCentro" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CentroCoste" nillable="true" type="tns:CentroCoste" />
+  <xs:element name="CentroCoste_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CentroCoste_Select_ListResult" nillable="true" type="tns:ArrayOfCentroCoste" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfCentroCoste">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CentroCoste" nillable="true" type="tns:CentroCoste" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCentroCoste" nillable="true" type="tns:ArrayOfCentroCoste" />
+  <xs:element name="CentroCoste_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centrocoste" nillable="true" type="tns:CentroCoste" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroCoste_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CentroCoste_SelectResult" nillable="true" type="tns:CentroCoste" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroCoste_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centrocoste" nillable="true" type="tns:CentroCoste" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroCoste_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CentroCoste_InsertResult" nillable="true" type="tns:CentroCoste" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroCoste_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="centrocoste" nillable="true" type="tns:CentroCoste" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CentroCoste_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CentroCoste_UpdateResult" nillable="true" type="tns:CentroCoste" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Embalaje_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="embalaje" nillable="true" type="tns:Embalaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Embalaje">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CaducidadDias" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CaducidadMeses" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ConId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Embalaje" nillable="true" type="tns:Embalaje" />
+  <xs:element name="Embalaje_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Embalaje_Select_ListResult" nillable="true" type="tns:ArrayOfEmbalaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfEmbalaje">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Embalaje" nillable="true" type="tns:Embalaje" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmbalaje" nillable="true" type="tns:ArrayOfEmbalaje" />
+  <xs:element name="Embalaje_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="embalaje" nillable="true" type="tns:Embalaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Embalaje_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Embalaje_SelectResult" nillable="true" type="tns:Embalaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Embalaje_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="embalaje" nillable="true" type="tns:Embalaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Embalaje_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Embalaje_InsertResult" nillable="true" type="tns:Embalaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Embalaje_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="embalaje" nillable="true" type="tns:Embalaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Embalaje_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Embalaje_UpdateResult" nillable="true" type="tns:Embalaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Especialidad_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="especialidad" nillable="true" type="tns:Especialidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Especialidad">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EspId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Especialidad" nillable="true" type="tns:Especialidad" />
+  <xs:element name="Especialidad_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Especialidad_Select_ListResult" nillable="true" type="tns:ArrayOfEspecialidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfEspecialidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Especialidad" nillable="true" type="tns:Especialidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEspecialidad" nillable="true" type="tns:ArrayOfEspecialidad" />
+  <xs:element name="Especialidad_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="especialidad" nillable="true" type="tns:Especialidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Especialidad_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Especialidad_SelectResult" nillable="true" type="tns:Especialidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Especialidad_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="especialidad" nillable="true" type="tns:Especialidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Especialidad_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Especialidad_InsertResult" nillable="true" type="tns:Especialidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Especialidad_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="especialidad" nillable="true" type="tns:Especialidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Especialidad_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Especialidad_UpdateResult" nillable="true" type="tns:Especialidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Hospital_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hospital" nillable="true" type="tns:Hospital" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Hospital">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ConFirma" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EmbIdArt" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EmbIdCaj" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EmbIdSC" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IntOrion" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IntSelene" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NomHospital" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Siglas" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Hospital" nillable="true" type="tns:Hospital" />
+  <xs:element name="Hospital_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Hospital_Select_ListResult" nillable="true" type="tns:ArrayOfHospital" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfHospital">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Hospital" nillable="true" type="tns:Hospital" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHospital" nillable="true" type="tns:ArrayOfHospital" />
+  <xs:element name="Hospital_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hospital" nillable="true" type="tns:Hospital" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Hospital_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Hospital_SelectResult" nillable="true" type="tns:Hospital" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Hospital_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hospital" nillable="true" type="tns:Hospital" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Hospital_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Hospital_InsertResult" nillable="true" type="tns:Hospital" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Hospital_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hospital" nillable="true" type="tns:Hospital" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Hospital_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Hospital_UpdateResult" nillable="true" type="tns:Hospital" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Mensaje_Select">
     <xs:complexType>
       <xs:sequence>
@@ -918,6 +766,233 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Mensaje_SelectResult" nillable="true" type="tns:Mensaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Esterilizacion_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="esterilizacion" nillable="true" type="tns:Esterilizacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Esterilizacion">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Control1" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Control2" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Control3" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Control4" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EstId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Esterilizacion" nillable="true" type="tns:Esterilizacion" />
+  <xs:element name="Esterilizacion_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Esterilizacion_Select_ListResult" nillable="true" type="tns:ArrayOfEsterilizacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfEsterilizacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Esterilizacion" nillable="true" type="tns:Esterilizacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEsterilizacion" nillable="true" type="tns:ArrayOfEsterilizacion" />
+  <xs:element name="Esterilizacion_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="esterilizacion" nillable="true" type="tns:Esterilizacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Esterilizacion_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Esterilizacion_SelectResult" nillable="true" type="tns:Esterilizacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Esterilizacion_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="esterilizacion" nillable="true" type="tns:Esterilizacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Esterilizacion_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Esterilizacion_InsertResult" nillable="true" type="tns:Esterilizacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Esterilizacion_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="esterilizacion" nillable="true" type="tns:Esterilizacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Esterilizacion_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Esterilizacion_UpdateResult" nillable="true" type="tns:Esterilizacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Limpieza_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="limpieza" nillable="true" type="tns:Limpieza" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Limpieza">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Control1" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Control2" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Control3" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Control4" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoLavId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Limpieza" nillable="true" type="tns:Limpieza" />
+  <xs:element name="Limpieza_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Limpieza_Select_ListResult" nillable="true" type="tns:ArrayOfLimpieza" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfLimpieza">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Limpieza" nillable="true" type="tns:Limpieza" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLimpieza" nillable="true" type="tns:ArrayOfLimpieza" />
+  <xs:element name="Limpieza_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="limpieza" nillable="true" type="tns:Limpieza" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Limpieza_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Limpieza_SelectResult" nillable="true" type="tns:Limpieza" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Limpieza_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="limpieza" nillable="true" type="tns:Limpieza" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Limpieza_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Limpieza_InsertResult" nillable="true" type="tns:Limpieza" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Limpieza_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="limpieza" nillable="true" type="tns:Limpieza" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Limpieza_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Limpieza_UpdateResult" nillable="true" type="tns:Limpieza" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoCaja_Select_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoCaja" nillable="true" type="tns:TipoCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="TipoCaja">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TipoCaja" nillable="true" type="tns:TipoCaja" />
+  <xs:element name="TipoCaja_Select_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TipoCaja_Select_ListResult" nillable="true" type="tns:ArrayOfTipoCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfTipoCaja">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TipoCaja" nillable="true" type="tns:TipoCaja" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTipoCaja" nillable="true" type="tns:ArrayOfTipoCaja" />
+  <xs:element name="TipoCaja_Select">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoCaja" nillable="true" type="tns:TipoCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoCaja_SelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TipoCaja_SelectResult" nillable="true" type="tns:TipoCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoCaja_Insert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoCaja" nillable="true" type="tns:TipoCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoCaja_InsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TipoCaja_InsertResult" nillable="true" type="tns:TipoCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoCaja_Update">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoCaja" nillable="true" type="tns:TipoCaja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoCaja_UpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TipoCaja_UpdateResult" nillable="true" type="tns:TipoCaja" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

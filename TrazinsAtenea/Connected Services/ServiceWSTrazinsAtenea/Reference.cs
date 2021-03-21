@@ -15,228 +15,6 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://WSTrazinsAtenea.com", ConfigurationName="ServiceWSTrazinsAtenea.IWSTrazinsAtenea")]
     public interface IWSTrazinsAtenea {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_ListResponse")]
-        Models.Inventory.Caja[] Caja_Select_List(Models.Inventory.Caja caja);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_ListResponse")]
-        System.Threading.Tasks.Task<Models.Inventory.Caja[]> Caja_Select_ListAsync(Models.Inventory.Caja caja);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_SelectResponse")]
-        Models.Inventory.Caja Caja_Select(Models.Inventory.Caja caja);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_SelectResponse")]
-        System.Threading.Tasks.Task<Models.Inventory.Caja> Caja_SelectAsync(Models.Inventory.Caja caja);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_InsertResponse")]
-        Models.Inventory.Caja Caja_Insert(Models.Inventory.Caja caja);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_InsertResponse")]
-        System.Threading.Tasks.Task<Models.Inventory.Caja> Caja_InsertAsync(Models.Inventory.Caja caja);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_UpdateResponse")]
-        Models.Inventory.Caja Caja_Update(Models.Inventory.Caja caja);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_UpdateResponse")]
-        System.Threading.Tasks.Task<Models.Inventory.Caja> Caja_UpdateAsync(Models.Inventory.Caja caja);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_ListResponse")]
-        Models.Inventory.CajaImagen[] CajaImagen_Select_List(Models.Inventory.CajaImagen cajaImagen);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_ListResponse")]
-        System.Threading.Tasks.Task<Models.Inventory.CajaImagen[]> CajaImagen_Select_ListAsync(Models.Inventory.CajaImagen cajaImagen);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_SelectResponse")]
-        Models.Inventory.CajaImagen CajaImagen_Select(Models.Inventory.CajaImagen cajaImagen);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_SelectResponse")]
-        System.Threading.Tasks.Task<Models.Inventory.CajaImagen> CajaImagen_SelectAsync(Models.Inventory.CajaImagen cajaImagen);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_InsertResponse")]
-        Models.Inventory.CajaImagen CajaImagen_Insert(Models.Inventory.CajaImagen cajaImagen);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_InsertResponse")]
-        System.Threading.Tasks.Task<Models.Inventory.CajaImagen> CajaImagen_InsertAsync(Models.Inventory.CajaImagen cajaImagen);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_UpdateResponse")]
-        Models.Inventory.CajaImagen CajaImagen_Update(Models.Inventory.CajaImagen cajaImagen);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_UpdateResponse")]
-        System.Threading.Tasks.Task<Models.Inventory.CajaImagen> CajaImagen_UpdateAsync(Models.Inventory.CajaImagen cajaImagen);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_ListResponse")]
-        Models.Inventory.CajasGrupo[] CajasGrupos_Select_List(Models.Inventory.CajasGrupo cajasGrupo);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_ListResponse")]
-        System.Threading.Tasks.Task<Models.Inventory.CajasGrupo[]> CajasGrupos_Select_ListAsync(Models.Inventory.CajasGrupo cajasGrupo);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_SelectResponse")]
-        Models.Inventory.CajasGrupo CajasGrupos_Select(Models.Inventory.CajasGrupo cajasGrupo);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_SelectResponse")]
-        System.Threading.Tasks.Task<Models.Inventory.CajasGrupo> CajasGrupos_SelectAsync(Models.Inventory.CajasGrupo cajasGrupo);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_InsertResponse")]
-        Models.Inventory.CajasGrupo CajasGrupos_Insert(Models.Inventory.CajasGrupo cajasGrupo);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_InsertResponse")]
-        System.Threading.Tasks.Task<Models.Inventory.CajasGrupo> CajasGrupos_InsertAsync(Models.Inventory.CajasGrupo cajasGrupo);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_UpdateResponse")]
-        Models.Inventory.CajasGrupo CajasGrupos_Update(Models.Inventory.CajasGrupo cajasGrupo);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_UpdateResponse")]
-        System.Threading.Tasks.Task<Models.Inventory.CajasGrupo> CajasGrupos_UpdateAsync(Models.Inventory.CajasGrupo cajasGrupo);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Delete", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_DeleteResponse")]
-        Models.Inventory.CajasGrupo CajasGrupos_Delete(Models.Inventory.CajasGrupo cajasGrupo);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Delete", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_DeleteResponse")]
-        System.Threading.Tasks.Task<Models.Inventory.CajasGrupo> CajasGrupos_DeleteAsync(Models.Inventory.CajasGrupo cajasGrupo);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_ListResponse")]
-        Models.Masters.Especialidad[] Especialidad_Select_List(Models.Masters.Especialidad especialidad);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_ListResponse")]
-        System.Threading.Tasks.Task<Models.Masters.Especialidad[]> Especialidad_Select_ListAsync(Models.Masters.Especialidad especialidad);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_SelectResponse")]
-        Models.Masters.Especialidad Especialidad_Select(Models.Masters.Especialidad especialidad);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_SelectResponse")]
-        System.Threading.Tasks.Task<Models.Masters.Especialidad> Especialidad_SelectAsync(Models.Masters.Especialidad especialidad);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_InsertResponse")]
-        Models.Masters.Especialidad Especialidad_Insert(Models.Masters.Especialidad especialidad);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_InsertResponse")]
-        System.Threading.Tasks.Task<Models.Masters.Especialidad> Especialidad_InsertAsync(Models.Masters.Especialidad especialidad);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_UpdateResponse")]
-        Models.Masters.Especialidad Especialidad_Update(Models.Masters.Especialidad especialidad);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_UpdateResponse")]
-        System.Threading.Tasks.Task<Models.Masters.Especialidad> Especialidad_UpdateAsync(Models.Masters.Especialidad especialidad);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_ListResponse")]
-        Models.Masters.Embalaje[] Embalaje_Select_List(Models.Masters.Embalaje embalaje);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_ListResponse")]
-        System.Threading.Tasks.Task<Models.Masters.Embalaje[]> Embalaje_Select_ListAsync(Models.Masters.Embalaje embalaje);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_SelectResponse")]
-        Models.Masters.Embalaje Embalaje_Select(Models.Masters.Embalaje embalaje);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_SelectResponse")]
-        System.Threading.Tasks.Task<Models.Masters.Embalaje> Embalaje_SelectAsync(Models.Masters.Embalaje embalaje);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_InsertResponse")]
-        Models.Masters.Embalaje Embalaje_Insert(Models.Masters.Embalaje embalaje);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_InsertResponse")]
-        System.Threading.Tasks.Task<Models.Masters.Embalaje> Embalaje_InsertAsync(Models.Masters.Embalaje embalaje);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_UpdateResponse")]
-        Models.Masters.Embalaje Embalaje_Update(Models.Masters.Embalaje embalaje);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_UpdateResponse")]
-        System.Threading.Tasks.Task<Models.Masters.Embalaje> Embalaje_UpdateAsync(Models.Masters.Embalaje embalaje);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_ListResponse")]
-        Models.Masters.Hospital[] Hospital_Select_List(Models.Masters.Hospital hospital);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_ListResponse")]
-        System.Threading.Tasks.Task<Models.Masters.Hospital[]> Hospital_Select_ListAsync(Models.Masters.Hospital hospital);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_SelectResponse")]
-        Models.Masters.Hospital Hospital_Select(Models.Masters.Hospital hospital);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_SelectResponse")]
-        System.Threading.Tasks.Task<Models.Masters.Hospital> Hospital_SelectAsync(Models.Masters.Hospital hospital);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_InsertResponse")]
-        Models.Masters.Hospital Hospital_Insert(Models.Masters.Hospital hospital);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_InsertResponse")]
-        System.Threading.Tasks.Task<Models.Masters.Hospital> Hospital_InsertAsync(Models.Masters.Hospital hospital);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_UpdateResponse")]
-        Models.Masters.Hospital Hospital_Update(Models.Masters.Hospital hospital);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_UpdateResponse")]
-        System.Threading.Tasks.Task<Models.Masters.Hospital> Hospital_UpdateAsync(Models.Masters.Hospital hospital);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_ListResponse")]
-        Models.Masters.TipoCaja[] TipoCaja_Select_List(Models.Masters.TipoCaja tipoCaja);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_ListResponse")]
-        System.Threading.Tasks.Task<Models.Masters.TipoCaja[]> TipoCaja_Select_ListAsync(Models.Masters.TipoCaja tipoCaja);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_SelectResponse")]
-        Models.Masters.TipoCaja TipoCaja_Select(Models.Masters.TipoCaja tipoCaja);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_SelectResponse")]
-        System.Threading.Tasks.Task<Models.Masters.TipoCaja> TipoCaja_SelectAsync(Models.Masters.TipoCaja tipoCaja);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_InsertResponse")]
-        Models.Masters.TipoCaja TipoCaja_Insert(Models.Masters.TipoCaja tipoCaja);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_InsertResponse")]
-        System.Threading.Tasks.Task<Models.Masters.TipoCaja> TipoCaja_InsertAsync(Models.Masters.TipoCaja tipoCaja);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_UpdateResponse")]
-        Models.Masters.TipoCaja TipoCaja_Update(Models.Masters.TipoCaja tipoCaja);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_UpdateResponse")]
-        System.Threading.Tasks.Task<Models.Masters.TipoCaja> TipoCaja_UpdateAsync(Models.Masters.TipoCaja tipoCaja);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select_ListResponse")]
-        Models.Processes.Methods.Limpieza[] Limpieza_Select_List(Models.Processes.Methods.Limpieza limpieza);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select_ListResponse")]
-        System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza[]> Limpieza_Select_ListAsync(Models.Processes.Methods.Limpieza limpieza);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_SelectResponse")]
-        Models.Processes.Methods.Limpieza Limpieza_Select(Models.Processes.Methods.Limpieza limpieza);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_SelectResponse")]
-        System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza> Limpieza_SelectAsync(Models.Processes.Methods.Limpieza limpieza);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_InsertResponse")]
-        Models.Processes.Methods.Limpieza Limpieza_Insert(Models.Processes.Methods.Limpieza limpieza);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_InsertResponse")]
-        System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza> Limpieza_InsertAsync(Models.Processes.Methods.Limpieza limpieza);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_UpdateResponse")]
-        Models.Processes.Methods.Limpieza Limpieza_Update(Models.Processes.Methods.Limpieza limpieza);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_UpdateResponse")]
-        System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza> Limpieza_UpdateAsync(Models.Processes.Methods.Limpieza limpieza);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_ListResponse")]
-        Models.Processes.Methods.Esterilizacion[] Esterilizacion_Select_List(Models.Processes.Methods.Esterilizacion esterilizacion);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_ListResponse")]
-        System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion[]> Esterilizacion_Select_ListAsync(Models.Processes.Methods.Esterilizacion esterilizacion);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_SelectResponse")]
-        Models.Processes.Methods.Esterilizacion Esterilizacion_Select(Models.Processes.Methods.Esterilizacion esterilizacion);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_SelectResponse")]
-        System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion> Esterilizacion_SelectAsync(Models.Processes.Methods.Esterilizacion esterilizacion);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_InsertResponse")]
-        Models.Processes.Methods.Esterilizacion Esterilizacion_Insert(Models.Processes.Methods.Esterilizacion esterilizacion);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_InsertResponse")]
-        System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion> Esterilizacion_InsertAsync(Models.Processes.Methods.Esterilizacion esterilizacion);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_UpdateResponse")]
-        Models.Processes.Methods.Esterilizacion Esterilizacion_Update(Models.Processes.Methods.Esterilizacion esterilizacion);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_UpdateResponse")]
-        System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion> Esterilizacion_UpdateAsync(Models.Processes.Methods.Esterilizacion esterilizacion);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Select_ListResponse")]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Models.Masters.Storage.AlmacenesUbicaciones))]
         Models.Masters.Storage.Almacen[] Almacen_Select_List(Models.Masters.Storage.Almacen almacen);
@@ -299,11 +77,257 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_UpdateResponse")]
         System.Threading.Tasks.Task<Models.Masters.Storage.AlmacenesUbicaciones> AlmacenesUbicaciones_UpdateAsync(Models.Masters.Storage.AlmacenesUbicaciones almacenesUbicaciones);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_ListResponse")]
+        Models.Inventory.Caja[] Caja_Select_List(Models.Inventory.Caja caja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_ListResponse")]
+        System.Threading.Tasks.Task<Models.Inventory.Caja[]> Caja_Select_ListAsync(Models.Inventory.Caja caja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_SelectResponse")]
+        Models.Inventory.Caja Caja_Select(Models.Inventory.Caja caja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_SelectResponse")]
+        System.Threading.Tasks.Task<Models.Inventory.Caja> Caja_SelectAsync(Models.Inventory.Caja caja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_InsertResponse")]
+        Models.Inventory.Caja Caja_Insert(Models.Inventory.Caja caja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_InsertResponse")]
+        System.Threading.Tasks.Task<Models.Inventory.Caja> Caja_InsertAsync(Models.Inventory.Caja caja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_UpdateResponse")]
+        Models.Inventory.Caja Caja_Update(Models.Inventory.Caja caja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_UpdateResponse")]
+        System.Threading.Tasks.Task<Models.Inventory.Caja> Caja_UpdateAsync(Models.Inventory.Caja caja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_ListResponse")]
+        Models.Inventory.CajasGrupo[] CajasGrupos_Select_List(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_ListResponse")]
+        System.Threading.Tasks.Task<Models.Inventory.CajasGrupo[]> CajasGrupos_Select_ListAsync(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_SelectResponse")]
+        Models.Inventory.CajasGrupo CajasGrupos_Select(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_SelectResponse")]
+        System.Threading.Tasks.Task<Models.Inventory.CajasGrupo> CajasGrupos_SelectAsync(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_InsertResponse")]
+        Models.Inventory.CajasGrupo CajasGrupos_Insert(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_InsertResponse")]
+        System.Threading.Tasks.Task<Models.Inventory.CajasGrupo> CajasGrupos_InsertAsync(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_UpdateResponse")]
+        Models.Inventory.CajasGrupo CajasGrupos_Update(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_UpdateResponse")]
+        System.Threading.Tasks.Task<Models.Inventory.CajasGrupo> CajasGrupos_UpdateAsync(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Delete", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_DeleteResponse")]
+        Models.Inventory.CajasGrupo CajasGrupos_Delete(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Delete", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_DeleteResponse")]
+        System.Threading.Tasks.Task<Models.Inventory.CajasGrupo> CajasGrupos_DeleteAsync(Models.Inventory.CajasGrupo cajasGrupo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_ListResponse")]
+        Models.Inventory.CajaImagen[] CajaImagen_Select_List(Models.Inventory.CajaImagen cajaImagen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_ListResponse")]
+        System.Threading.Tasks.Task<Models.Inventory.CajaImagen[]> CajaImagen_Select_ListAsync(Models.Inventory.CajaImagen cajaImagen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_SelectResponse")]
+        Models.Inventory.CajaImagen CajaImagen_Select(Models.Inventory.CajaImagen cajaImagen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_SelectResponse")]
+        System.Threading.Tasks.Task<Models.Inventory.CajaImagen> CajaImagen_SelectAsync(Models.Inventory.CajaImagen cajaImagen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_InsertResponse")]
+        Models.Inventory.CajaImagen CajaImagen_Insert(Models.Inventory.CajaImagen cajaImagen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_InsertResponse")]
+        System.Threading.Tasks.Task<Models.Inventory.CajaImagen> CajaImagen_InsertAsync(Models.Inventory.CajaImagen cajaImagen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_UpdateResponse")]
+        Models.Inventory.CajaImagen CajaImagen_Update(Models.Inventory.CajaImagen cajaImagen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_UpdateResponse")]
+        System.Threading.Tasks.Task<Models.Inventory.CajaImagen> CajaImagen_UpdateAsync(Models.Inventory.CajaImagen cajaImagen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Select_ListResponse")]
+        Models.Masters.CentroCoste[] CentroCoste_Select_List(Models.Masters.CentroCoste centrocoste);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Select_ListResponse")]
+        System.Threading.Tasks.Task<Models.Masters.CentroCoste[]> CentroCoste_Select_ListAsync(Models.Masters.CentroCoste centrocoste);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_SelectResponse")]
+        Models.Masters.CentroCoste CentroCoste_Select(Models.Masters.CentroCoste centrocoste);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_SelectResponse")]
+        System.Threading.Tasks.Task<Models.Masters.CentroCoste> CentroCoste_SelectAsync(Models.Masters.CentroCoste centrocoste);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_InsertResponse")]
+        Models.Masters.CentroCoste CentroCoste_Insert(Models.Masters.CentroCoste centrocoste);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_InsertResponse")]
+        System.Threading.Tasks.Task<Models.Masters.CentroCoste> CentroCoste_InsertAsync(Models.Masters.CentroCoste centrocoste);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_UpdateResponse")]
+        Models.Masters.CentroCoste CentroCoste_Update(Models.Masters.CentroCoste centrocoste);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_UpdateResponse")]
+        System.Threading.Tasks.Task<Models.Masters.CentroCoste> CentroCoste_UpdateAsync(Models.Masters.CentroCoste centrocoste);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_ListResponse")]
+        Models.Masters.Embalaje[] Embalaje_Select_List(Models.Masters.Embalaje embalaje);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_ListResponse")]
+        System.Threading.Tasks.Task<Models.Masters.Embalaje[]> Embalaje_Select_ListAsync(Models.Masters.Embalaje embalaje);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_SelectResponse")]
+        Models.Masters.Embalaje Embalaje_Select(Models.Masters.Embalaje embalaje);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_SelectResponse")]
+        System.Threading.Tasks.Task<Models.Masters.Embalaje> Embalaje_SelectAsync(Models.Masters.Embalaje embalaje);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_InsertResponse")]
+        Models.Masters.Embalaje Embalaje_Insert(Models.Masters.Embalaje embalaje);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_InsertResponse")]
+        System.Threading.Tasks.Task<Models.Masters.Embalaje> Embalaje_InsertAsync(Models.Masters.Embalaje embalaje);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_UpdateResponse")]
+        Models.Masters.Embalaje Embalaje_Update(Models.Masters.Embalaje embalaje);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_UpdateResponse")]
+        System.Threading.Tasks.Task<Models.Masters.Embalaje> Embalaje_UpdateAsync(Models.Masters.Embalaje embalaje);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_ListResponse")]
+        Models.Masters.Especialidad[] Especialidad_Select_List(Models.Masters.Especialidad especialidad);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_ListResponse")]
+        System.Threading.Tasks.Task<Models.Masters.Especialidad[]> Especialidad_Select_ListAsync(Models.Masters.Especialidad especialidad);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_SelectResponse")]
+        Models.Masters.Especialidad Especialidad_Select(Models.Masters.Especialidad especialidad);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_SelectResponse")]
+        System.Threading.Tasks.Task<Models.Masters.Especialidad> Especialidad_SelectAsync(Models.Masters.Especialidad especialidad);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_InsertResponse")]
+        Models.Masters.Especialidad Especialidad_Insert(Models.Masters.Especialidad especialidad);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_InsertResponse")]
+        System.Threading.Tasks.Task<Models.Masters.Especialidad> Especialidad_InsertAsync(Models.Masters.Especialidad especialidad);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_UpdateResponse")]
+        Models.Masters.Especialidad Especialidad_Update(Models.Masters.Especialidad especialidad);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_UpdateResponse")]
+        System.Threading.Tasks.Task<Models.Masters.Especialidad> Especialidad_UpdateAsync(Models.Masters.Especialidad especialidad);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_ListResponse")]
+        Models.Masters.Hospital[] Hospital_Select_List(Models.Masters.Hospital hospital);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_ListResponse")]
+        System.Threading.Tasks.Task<Models.Masters.Hospital[]> Hospital_Select_ListAsync(Models.Masters.Hospital hospital);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_SelectResponse")]
+        Models.Masters.Hospital Hospital_Select(Models.Masters.Hospital hospital);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_SelectResponse")]
+        System.Threading.Tasks.Task<Models.Masters.Hospital> Hospital_SelectAsync(Models.Masters.Hospital hospital);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_InsertResponse")]
+        Models.Masters.Hospital Hospital_Insert(Models.Masters.Hospital hospital);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_InsertResponse")]
+        System.Threading.Tasks.Task<Models.Masters.Hospital> Hospital_InsertAsync(Models.Masters.Hospital hospital);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_UpdateResponse")]
+        Models.Masters.Hospital Hospital_Update(Models.Masters.Hospital hospital);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_UpdateResponse")]
+        System.Threading.Tasks.Task<Models.Masters.Hospital> Hospital_UpdateAsync(Models.Masters.Hospital hospital);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_SelectResponse")]
         Models.Messages.Mensaje Mensaje_Select(Models.Messages.Mensaje mensaje);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_SelectResponse")]
         System.Threading.Tasks.Task<Models.Messages.Mensaje> Mensaje_SelectAsync(Models.Messages.Mensaje mensaje);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_ListResponse")]
+        Models.Processes.Methods.Esterilizacion[] Esterilizacion_Select_List(Models.Processes.Methods.Esterilizacion esterilizacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_ListResponse")]
+        System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion[]> Esterilizacion_Select_ListAsync(Models.Processes.Methods.Esterilizacion esterilizacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_SelectResponse")]
+        Models.Processes.Methods.Esterilizacion Esterilizacion_Select(Models.Processes.Methods.Esterilizacion esterilizacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_SelectResponse")]
+        System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion> Esterilizacion_SelectAsync(Models.Processes.Methods.Esterilizacion esterilizacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_InsertResponse")]
+        Models.Processes.Methods.Esterilizacion Esterilizacion_Insert(Models.Processes.Methods.Esterilizacion esterilizacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_InsertResponse")]
+        System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion> Esterilizacion_InsertAsync(Models.Processes.Methods.Esterilizacion esterilizacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_UpdateResponse")]
+        Models.Processes.Methods.Esterilizacion Esterilizacion_Update(Models.Processes.Methods.Esterilizacion esterilizacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_UpdateResponse")]
+        System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion> Esterilizacion_UpdateAsync(Models.Processes.Methods.Esterilizacion esterilizacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select_ListResponse")]
+        Models.Processes.Methods.Limpieza[] Limpieza_Select_List(Models.Processes.Methods.Limpieza limpieza);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select_ListResponse")]
+        System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza[]> Limpieza_Select_ListAsync(Models.Processes.Methods.Limpieza limpieza);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_SelectResponse")]
+        Models.Processes.Methods.Limpieza Limpieza_Select(Models.Processes.Methods.Limpieza limpieza);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_SelectResponse")]
+        System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza> Limpieza_SelectAsync(Models.Processes.Methods.Limpieza limpieza);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_InsertResponse")]
+        Models.Processes.Methods.Limpieza Limpieza_Insert(Models.Processes.Methods.Limpieza limpieza);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_InsertResponse")]
+        System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza> Limpieza_InsertAsync(Models.Processes.Methods.Limpieza limpieza);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_UpdateResponse")]
+        Models.Processes.Methods.Limpieza Limpieza_Update(Models.Processes.Methods.Limpieza limpieza);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_UpdateResponse")]
+        System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza> Limpieza_UpdateAsync(Models.Processes.Methods.Limpieza limpieza);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_ListResponse")]
+        Models.Masters.TipoCaja[] TipoCaja_Select_List(Models.Masters.TipoCaja tipoCaja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_ListResponse")]
+        System.Threading.Tasks.Task<Models.Masters.TipoCaja[]> TipoCaja_Select_ListAsync(Models.Masters.TipoCaja tipoCaja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_SelectResponse")]
+        Models.Masters.TipoCaja TipoCaja_Select(Models.Masters.TipoCaja tipoCaja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_SelectResponse")]
+        System.Threading.Tasks.Task<Models.Masters.TipoCaja> TipoCaja_SelectAsync(Models.Masters.TipoCaja tipoCaja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_InsertResponse")]
+        Models.Masters.TipoCaja TipoCaja_Insert(Models.Masters.TipoCaja tipoCaja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Insert", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_InsertResponse")]
+        System.Threading.Tasks.Task<Models.Masters.TipoCaja> TipoCaja_InsertAsync(Models.Masters.TipoCaja tipoCaja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_UpdateResponse")]
+        Models.Masters.TipoCaja TipoCaja_Update(Models.Masters.TipoCaja tipoCaja);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_UpdateResponse")]
+        System.Threading.Tasks.Task<Models.Masters.TipoCaja> TipoCaja_UpdateAsync(Models.Masters.TipoCaja tipoCaja);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -331,302 +355,6 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         
         public WSTrazinsAteneaClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        public Models.Inventory.Caja[] Caja_Select_List(Models.Inventory.Caja caja) {
-            return base.Channel.Caja_Select_List(caja);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Inventory.Caja[]> Caja_Select_ListAsync(Models.Inventory.Caja caja) {
-            return base.Channel.Caja_Select_ListAsync(caja);
-        }
-        
-        public Models.Inventory.Caja Caja_Select(Models.Inventory.Caja caja) {
-            return base.Channel.Caja_Select(caja);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Inventory.Caja> Caja_SelectAsync(Models.Inventory.Caja caja) {
-            return base.Channel.Caja_SelectAsync(caja);
-        }
-        
-        public Models.Inventory.Caja Caja_Insert(Models.Inventory.Caja caja) {
-            return base.Channel.Caja_Insert(caja);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Inventory.Caja> Caja_InsertAsync(Models.Inventory.Caja caja) {
-            return base.Channel.Caja_InsertAsync(caja);
-        }
-        
-        public Models.Inventory.Caja Caja_Update(Models.Inventory.Caja caja) {
-            return base.Channel.Caja_Update(caja);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Inventory.Caja> Caja_UpdateAsync(Models.Inventory.Caja caja) {
-            return base.Channel.Caja_UpdateAsync(caja);
-        }
-        
-        public Models.Inventory.CajaImagen[] CajaImagen_Select_List(Models.Inventory.CajaImagen cajaImagen) {
-            return base.Channel.CajaImagen_Select_List(cajaImagen);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Inventory.CajaImagen[]> CajaImagen_Select_ListAsync(Models.Inventory.CajaImagen cajaImagen) {
-            return base.Channel.CajaImagen_Select_ListAsync(cajaImagen);
-        }
-        
-        public Models.Inventory.CajaImagen CajaImagen_Select(Models.Inventory.CajaImagen cajaImagen) {
-            return base.Channel.CajaImagen_Select(cajaImagen);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Inventory.CajaImagen> CajaImagen_SelectAsync(Models.Inventory.CajaImagen cajaImagen) {
-            return base.Channel.CajaImagen_SelectAsync(cajaImagen);
-        }
-        
-        public Models.Inventory.CajaImagen CajaImagen_Insert(Models.Inventory.CajaImagen cajaImagen) {
-            return base.Channel.CajaImagen_Insert(cajaImagen);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Inventory.CajaImagen> CajaImagen_InsertAsync(Models.Inventory.CajaImagen cajaImagen) {
-            return base.Channel.CajaImagen_InsertAsync(cajaImagen);
-        }
-        
-        public Models.Inventory.CajaImagen CajaImagen_Update(Models.Inventory.CajaImagen cajaImagen) {
-            return base.Channel.CajaImagen_Update(cajaImagen);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Inventory.CajaImagen> CajaImagen_UpdateAsync(Models.Inventory.CajaImagen cajaImagen) {
-            return base.Channel.CajaImagen_UpdateAsync(cajaImagen);
-        }
-        
-        public Models.Inventory.CajasGrupo[] CajasGrupos_Select_List(Models.Inventory.CajasGrupo cajasGrupo) {
-            return base.Channel.CajasGrupos_Select_List(cajasGrupo);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Inventory.CajasGrupo[]> CajasGrupos_Select_ListAsync(Models.Inventory.CajasGrupo cajasGrupo) {
-            return base.Channel.CajasGrupos_Select_ListAsync(cajasGrupo);
-        }
-        
-        public Models.Inventory.CajasGrupo CajasGrupos_Select(Models.Inventory.CajasGrupo cajasGrupo) {
-            return base.Channel.CajasGrupos_Select(cajasGrupo);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Inventory.CajasGrupo> CajasGrupos_SelectAsync(Models.Inventory.CajasGrupo cajasGrupo) {
-            return base.Channel.CajasGrupos_SelectAsync(cajasGrupo);
-        }
-        
-        public Models.Inventory.CajasGrupo CajasGrupos_Insert(Models.Inventory.CajasGrupo cajasGrupo) {
-            return base.Channel.CajasGrupos_Insert(cajasGrupo);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Inventory.CajasGrupo> CajasGrupos_InsertAsync(Models.Inventory.CajasGrupo cajasGrupo) {
-            return base.Channel.CajasGrupos_InsertAsync(cajasGrupo);
-        }
-        
-        public Models.Inventory.CajasGrupo CajasGrupos_Update(Models.Inventory.CajasGrupo cajasGrupo) {
-            return base.Channel.CajasGrupos_Update(cajasGrupo);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Inventory.CajasGrupo> CajasGrupos_UpdateAsync(Models.Inventory.CajasGrupo cajasGrupo) {
-            return base.Channel.CajasGrupos_UpdateAsync(cajasGrupo);
-        }
-        
-        public Models.Inventory.CajasGrupo CajasGrupos_Delete(Models.Inventory.CajasGrupo cajasGrupo) {
-            return base.Channel.CajasGrupos_Delete(cajasGrupo);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Inventory.CajasGrupo> CajasGrupos_DeleteAsync(Models.Inventory.CajasGrupo cajasGrupo) {
-            return base.Channel.CajasGrupos_DeleteAsync(cajasGrupo);
-        }
-        
-        public Models.Masters.Especialidad[] Especialidad_Select_List(Models.Masters.Especialidad especialidad) {
-            return base.Channel.Especialidad_Select_List(especialidad);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Masters.Especialidad[]> Especialidad_Select_ListAsync(Models.Masters.Especialidad especialidad) {
-            return base.Channel.Especialidad_Select_ListAsync(especialidad);
-        }
-        
-        public Models.Masters.Especialidad Especialidad_Select(Models.Masters.Especialidad especialidad) {
-            return base.Channel.Especialidad_Select(especialidad);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Masters.Especialidad> Especialidad_SelectAsync(Models.Masters.Especialidad especialidad) {
-            return base.Channel.Especialidad_SelectAsync(especialidad);
-        }
-        
-        public Models.Masters.Especialidad Especialidad_Insert(Models.Masters.Especialidad especialidad) {
-            return base.Channel.Especialidad_Insert(especialidad);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Masters.Especialidad> Especialidad_InsertAsync(Models.Masters.Especialidad especialidad) {
-            return base.Channel.Especialidad_InsertAsync(especialidad);
-        }
-        
-        public Models.Masters.Especialidad Especialidad_Update(Models.Masters.Especialidad especialidad) {
-            return base.Channel.Especialidad_Update(especialidad);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Masters.Especialidad> Especialidad_UpdateAsync(Models.Masters.Especialidad especialidad) {
-            return base.Channel.Especialidad_UpdateAsync(especialidad);
-        }
-        
-        public Models.Masters.Embalaje[] Embalaje_Select_List(Models.Masters.Embalaje embalaje) {
-            return base.Channel.Embalaje_Select_List(embalaje);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Masters.Embalaje[]> Embalaje_Select_ListAsync(Models.Masters.Embalaje embalaje) {
-            return base.Channel.Embalaje_Select_ListAsync(embalaje);
-        }
-        
-        public Models.Masters.Embalaje Embalaje_Select(Models.Masters.Embalaje embalaje) {
-            return base.Channel.Embalaje_Select(embalaje);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Masters.Embalaje> Embalaje_SelectAsync(Models.Masters.Embalaje embalaje) {
-            return base.Channel.Embalaje_SelectAsync(embalaje);
-        }
-        
-        public Models.Masters.Embalaje Embalaje_Insert(Models.Masters.Embalaje embalaje) {
-            return base.Channel.Embalaje_Insert(embalaje);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Masters.Embalaje> Embalaje_InsertAsync(Models.Masters.Embalaje embalaje) {
-            return base.Channel.Embalaje_InsertAsync(embalaje);
-        }
-        
-        public Models.Masters.Embalaje Embalaje_Update(Models.Masters.Embalaje embalaje) {
-            return base.Channel.Embalaje_Update(embalaje);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Masters.Embalaje> Embalaje_UpdateAsync(Models.Masters.Embalaje embalaje) {
-            return base.Channel.Embalaje_UpdateAsync(embalaje);
-        }
-        
-        public Models.Masters.Hospital[] Hospital_Select_List(Models.Masters.Hospital hospital) {
-            return base.Channel.Hospital_Select_List(hospital);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Masters.Hospital[]> Hospital_Select_ListAsync(Models.Masters.Hospital hospital) {
-            return base.Channel.Hospital_Select_ListAsync(hospital);
-        }
-        
-        public Models.Masters.Hospital Hospital_Select(Models.Masters.Hospital hospital) {
-            return base.Channel.Hospital_Select(hospital);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Masters.Hospital> Hospital_SelectAsync(Models.Masters.Hospital hospital) {
-            return base.Channel.Hospital_SelectAsync(hospital);
-        }
-        
-        public Models.Masters.Hospital Hospital_Insert(Models.Masters.Hospital hospital) {
-            return base.Channel.Hospital_Insert(hospital);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Masters.Hospital> Hospital_InsertAsync(Models.Masters.Hospital hospital) {
-            return base.Channel.Hospital_InsertAsync(hospital);
-        }
-        
-        public Models.Masters.Hospital Hospital_Update(Models.Masters.Hospital hospital) {
-            return base.Channel.Hospital_Update(hospital);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Masters.Hospital> Hospital_UpdateAsync(Models.Masters.Hospital hospital) {
-            return base.Channel.Hospital_UpdateAsync(hospital);
-        }
-        
-        public Models.Masters.TipoCaja[] TipoCaja_Select_List(Models.Masters.TipoCaja tipoCaja) {
-            return base.Channel.TipoCaja_Select_List(tipoCaja);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Masters.TipoCaja[]> TipoCaja_Select_ListAsync(Models.Masters.TipoCaja tipoCaja) {
-            return base.Channel.TipoCaja_Select_ListAsync(tipoCaja);
-        }
-        
-        public Models.Masters.TipoCaja TipoCaja_Select(Models.Masters.TipoCaja tipoCaja) {
-            return base.Channel.TipoCaja_Select(tipoCaja);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Masters.TipoCaja> TipoCaja_SelectAsync(Models.Masters.TipoCaja tipoCaja) {
-            return base.Channel.TipoCaja_SelectAsync(tipoCaja);
-        }
-        
-        public Models.Masters.TipoCaja TipoCaja_Insert(Models.Masters.TipoCaja tipoCaja) {
-            return base.Channel.TipoCaja_Insert(tipoCaja);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Masters.TipoCaja> TipoCaja_InsertAsync(Models.Masters.TipoCaja tipoCaja) {
-            return base.Channel.TipoCaja_InsertAsync(tipoCaja);
-        }
-        
-        public Models.Masters.TipoCaja TipoCaja_Update(Models.Masters.TipoCaja tipoCaja) {
-            return base.Channel.TipoCaja_Update(tipoCaja);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Masters.TipoCaja> TipoCaja_UpdateAsync(Models.Masters.TipoCaja tipoCaja) {
-            return base.Channel.TipoCaja_UpdateAsync(tipoCaja);
-        }
-        
-        public Models.Processes.Methods.Limpieza[] Limpieza_Select_List(Models.Processes.Methods.Limpieza limpieza) {
-            return base.Channel.Limpieza_Select_List(limpieza);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza[]> Limpieza_Select_ListAsync(Models.Processes.Methods.Limpieza limpieza) {
-            return base.Channel.Limpieza_Select_ListAsync(limpieza);
-        }
-        
-        public Models.Processes.Methods.Limpieza Limpieza_Select(Models.Processes.Methods.Limpieza limpieza) {
-            return base.Channel.Limpieza_Select(limpieza);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza> Limpieza_SelectAsync(Models.Processes.Methods.Limpieza limpieza) {
-            return base.Channel.Limpieza_SelectAsync(limpieza);
-        }
-        
-        public Models.Processes.Methods.Limpieza Limpieza_Insert(Models.Processes.Methods.Limpieza limpieza) {
-            return base.Channel.Limpieza_Insert(limpieza);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza> Limpieza_InsertAsync(Models.Processes.Methods.Limpieza limpieza) {
-            return base.Channel.Limpieza_InsertAsync(limpieza);
-        }
-        
-        public Models.Processes.Methods.Limpieza Limpieza_Update(Models.Processes.Methods.Limpieza limpieza) {
-            return base.Channel.Limpieza_Update(limpieza);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza> Limpieza_UpdateAsync(Models.Processes.Methods.Limpieza limpieza) {
-            return base.Channel.Limpieza_UpdateAsync(limpieza);
-        }
-        
-        public Models.Processes.Methods.Esterilizacion[] Esterilizacion_Select_List(Models.Processes.Methods.Esterilizacion esterilizacion) {
-            return base.Channel.Esterilizacion_Select_List(esterilizacion);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion[]> Esterilizacion_Select_ListAsync(Models.Processes.Methods.Esterilizacion esterilizacion) {
-            return base.Channel.Esterilizacion_Select_ListAsync(esterilizacion);
-        }
-        
-        public Models.Processes.Methods.Esterilizacion Esterilizacion_Select(Models.Processes.Methods.Esterilizacion esterilizacion) {
-            return base.Channel.Esterilizacion_Select(esterilizacion);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion> Esterilizacion_SelectAsync(Models.Processes.Methods.Esterilizacion esterilizacion) {
-            return base.Channel.Esterilizacion_SelectAsync(esterilizacion);
-        }
-        
-        public Models.Processes.Methods.Esterilizacion Esterilizacion_Insert(Models.Processes.Methods.Esterilizacion esterilizacion) {
-            return base.Channel.Esterilizacion_Insert(esterilizacion);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion> Esterilizacion_InsertAsync(Models.Processes.Methods.Esterilizacion esterilizacion) {
-            return base.Channel.Esterilizacion_InsertAsync(esterilizacion);
-        }
-        
-        public Models.Processes.Methods.Esterilizacion Esterilizacion_Update(Models.Processes.Methods.Esterilizacion esterilizacion) {
-            return base.Channel.Esterilizacion_Update(esterilizacion);
-        }
-        
-        public System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion> Esterilizacion_UpdateAsync(Models.Processes.Methods.Esterilizacion esterilizacion) {
-            return base.Channel.Esterilizacion_UpdateAsync(esterilizacion);
         }
         
         public Models.Masters.Storage.Almacen[] Almacen_Select_List(Models.Masters.Storage.Almacen almacen) {
@@ -701,12 +429,340 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
             return base.Channel.AlmacenesUbicaciones_UpdateAsync(almacenesUbicaciones);
         }
         
+        public Models.Inventory.Caja[] Caja_Select_List(Models.Inventory.Caja caja) {
+            return base.Channel.Caja_Select_List(caja);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Inventory.Caja[]> Caja_Select_ListAsync(Models.Inventory.Caja caja) {
+            return base.Channel.Caja_Select_ListAsync(caja);
+        }
+        
+        public Models.Inventory.Caja Caja_Select(Models.Inventory.Caja caja) {
+            return base.Channel.Caja_Select(caja);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Inventory.Caja> Caja_SelectAsync(Models.Inventory.Caja caja) {
+            return base.Channel.Caja_SelectAsync(caja);
+        }
+        
+        public Models.Inventory.Caja Caja_Insert(Models.Inventory.Caja caja) {
+            return base.Channel.Caja_Insert(caja);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Inventory.Caja> Caja_InsertAsync(Models.Inventory.Caja caja) {
+            return base.Channel.Caja_InsertAsync(caja);
+        }
+        
+        public Models.Inventory.Caja Caja_Update(Models.Inventory.Caja caja) {
+            return base.Channel.Caja_Update(caja);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Inventory.Caja> Caja_UpdateAsync(Models.Inventory.Caja caja) {
+            return base.Channel.Caja_UpdateAsync(caja);
+        }
+        
+        public Models.Inventory.CajasGrupo[] CajasGrupos_Select_List(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_Select_List(cajasGrupo);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Inventory.CajasGrupo[]> CajasGrupos_Select_ListAsync(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_Select_ListAsync(cajasGrupo);
+        }
+        
+        public Models.Inventory.CajasGrupo CajasGrupos_Select(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_Select(cajasGrupo);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Inventory.CajasGrupo> CajasGrupos_SelectAsync(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_SelectAsync(cajasGrupo);
+        }
+        
+        public Models.Inventory.CajasGrupo CajasGrupos_Insert(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_Insert(cajasGrupo);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Inventory.CajasGrupo> CajasGrupos_InsertAsync(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_InsertAsync(cajasGrupo);
+        }
+        
+        public Models.Inventory.CajasGrupo CajasGrupos_Update(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_Update(cajasGrupo);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Inventory.CajasGrupo> CajasGrupos_UpdateAsync(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_UpdateAsync(cajasGrupo);
+        }
+        
+        public Models.Inventory.CajasGrupo CajasGrupos_Delete(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_Delete(cajasGrupo);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Inventory.CajasGrupo> CajasGrupos_DeleteAsync(Models.Inventory.CajasGrupo cajasGrupo) {
+            return base.Channel.CajasGrupos_DeleteAsync(cajasGrupo);
+        }
+        
+        public Models.Inventory.CajaImagen[] CajaImagen_Select_List(Models.Inventory.CajaImagen cajaImagen) {
+            return base.Channel.CajaImagen_Select_List(cajaImagen);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Inventory.CajaImagen[]> CajaImagen_Select_ListAsync(Models.Inventory.CajaImagen cajaImagen) {
+            return base.Channel.CajaImagen_Select_ListAsync(cajaImagen);
+        }
+        
+        public Models.Inventory.CajaImagen CajaImagen_Select(Models.Inventory.CajaImagen cajaImagen) {
+            return base.Channel.CajaImagen_Select(cajaImagen);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Inventory.CajaImagen> CajaImagen_SelectAsync(Models.Inventory.CajaImagen cajaImagen) {
+            return base.Channel.CajaImagen_SelectAsync(cajaImagen);
+        }
+        
+        public Models.Inventory.CajaImagen CajaImagen_Insert(Models.Inventory.CajaImagen cajaImagen) {
+            return base.Channel.CajaImagen_Insert(cajaImagen);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Inventory.CajaImagen> CajaImagen_InsertAsync(Models.Inventory.CajaImagen cajaImagen) {
+            return base.Channel.CajaImagen_InsertAsync(cajaImagen);
+        }
+        
+        public Models.Inventory.CajaImagen CajaImagen_Update(Models.Inventory.CajaImagen cajaImagen) {
+            return base.Channel.CajaImagen_Update(cajaImagen);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Inventory.CajaImagen> CajaImagen_UpdateAsync(Models.Inventory.CajaImagen cajaImagen) {
+            return base.Channel.CajaImagen_UpdateAsync(cajaImagen);
+        }
+        
+        public Models.Masters.CentroCoste[] CentroCoste_Select_List(Models.Masters.CentroCoste centrocoste) {
+            return base.Channel.CentroCoste_Select_List(centrocoste);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.CentroCoste[]> CentroCoste_Select_ListAsync(Models.Masters.CentroCoste centrocoste) {
+            return base.Channel.CentroCoste_Select_ListAsync(centrocoste);
+        }
+        
+        public Models.Masters.CentroCoste CentroCoste_Select(Models.Masters.CentroCoste centrocoste) {
+            return base.Channel.CentroCoste_Select(centrocoste);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.CentroCoste> CentroCoste_SelectAsync(Models.Masters.CentroCoste centrocoste) {
+            return base.Channel.CentroCoste_SelectAsync(centrocoste);
+        }
+        
+        public Models.Masters.CentroCoste CentroCoste_Insert(Models.Masters.CentroCoste centrocoste) {
+            return base.Channel.CentroCoste_Insert(centrocoste);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.CentroCoste> CentroCoste_InsertAsync(Models.Masters.CentroCoste centrocoste) {
+            return base.Channel.CentroCoste_InsertAsync(centrocoste);
+        }
+        
+        public Models.Masters.CentroCoste CentroCoste_Update(Models.Masters.CentroCoste centrocoste) {
+            return base.Channel.CentroCoste_Update(centrocoste);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.CentroCoste> CentroCoste_UpdateAsync(Models.Masters.CentroCoste centrocoste) {
+            return base.Channel.CentroCoste_UpdateAsync(centrocoste);
+        }
+        
+        public Models.Masters.Embalaje[] Embalaje_Select_List(Models.Masters.Embalaje embalaje) {
+            return base.Channel.Embalaje_Select_List(embalaje);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.Embalaje[]> Embalaje_Select_ListAsync(Models.Masters.Embalaje embalaje) {
+            return base.Channel.Embalaje_Select_ListAsync(embalaje);
+        }
+        
+        public Models.Masters.Embalaje Embalaje_Select(Models.Masters.Embalaje embalaje) {
+            return base.Channel.Embalaje_Select(embalaje);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.Embalaje> Embalaje_SelectAsync(Models.Masters.Embalaje embalaje) {
+            return base.Channel.Embalaje_SelectAsync(embalaje);
+        }
+        
+        public Models.Masters.Embalaje Embalaje_Insert(Models.Masters.Embalaje embalaje) {
+            return base.Channel.Embalaje_Insert(embalaje);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.Embalaje> Embalaje_InsertAsync(Models.Masters.Embalaje embalaje) {
+            return base.Channel.Embalaje_InsertAsync(embalaje);
+        }
+        
+        public Models.Masters.Embalaje Embalaje_Update(Models.Masters.Embalaje embalaje) {
+            return base.Channel.Embalaje_Update(embalaje);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.Embalaje> Embalaje_UpdateAsync(Models.Masters.Embalaje embalaje) {
+            return base.Channel.Embalaje_UpdateAsync(embalaje);
+        }
+        
+        public Models.Masters.Especialidad[] Especialidad_Select_List(Models.Masters.Especialidad especialidad) {
+            return base.Channel.Especialidad_Select_List(especialidad);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.Especialidad[]> Especialidad_Select_ListAsync(Models.Masters.Especialidad especialidad) {
+            return base.Channel.Especialidad_Select_ListAsync(especialidad);
+        }
+        
+        public Models.Masters.Especialidad Especialidad_Select(Models.Masters.Especialidad especialidad) {
+            return base.Channel.Especialidad_Select(especialidad);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.Especialidad> Especialidad_SelectAsync(Models.Masters.Especialidad especialidad) {
+            return base.Channel.Especialidad_SelectAsync(especialidad);
+        }
+        
+        public Models.Masters.Especialidad Especialidad_Insert(Models.Masters.Especialidad especialidad) {
+            return base.Channel.Especialidad_Insert(especialidad);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.Especialidad> Especialidad_InsertAsync(Models.Masters.Especialidad especialidad) {
+            return base.Channel.Especialidad_InsertAsync(especialidad);
+        }
+        
+        public Models.Masters.Especialidad Especialidad_Update(Models.Masters.Especialidad especialidad) {
+            return base.Channel.Especialidad_Update(especialidad);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.Especialidad> Especialidad_UpdateAsync(Models.Masters.Especialidad especialidad) {
+            return base.Channel.Especialidad_UpdateAsync(especialidad);
+        }
+        
+        public Models.Masters.Hospital[] Hospital_Select_List(Models.Masters.Hospital hospital) {
+            return base.Channel.Hospital_Select_List(hospital);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.Hospital[]> Hospital_Select_ListAsync(Models.Masters.Hospital hospital) {
+            return base.Channel.Hospital_Select_ListAsync(hospital);
+        }
+        
+        public Models.Masters.Hospital Hospital_Select(Models.Masters.Hospital hospital) {
+            return base.Channel.Hospital_Select(hospital);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.Hospital> Hospital_SelectAsync(Models.Masters.Hospital hospital) {
+            return base.Channel.Hospital_SelectAsync(hospital);
+        }
+        
+        public Models.Masters.Hospital Hospital_Insert(Models.Masters.Hospital hospital) {
+            return base.Channel.Hospital_Insert(hospital);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.Hospital> Hospital_InsertAsync(Models.Masters.Hospital hospital) {
+            return base.Channel.Hospital_InsertAsync(hospital);
+        }
+        
+        public Models.Masters.Hospital Hospital_Update(Models.Masters.Hospital hospital) {
+            return base.Channel.Hospital_Update(hospital);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.Hospital> Hospital_UpdateAsync(Models.Masters.Hospital hospital) {
+            return base.Channel.Hospital_UpdateAsync(hospital);
+        }
+        
         public Models.Messages.Mensaje Mensaje_Select(Models.Messages.Mensaje mensaje) {
             return base.Channel.Mensaje_Select(mensaje);
         }
         
         public System.Threading.Tasks.Task<Models.Messages.Mensaje> Mensaje_SelectAsync(Models.Messages.Mensaje mensaje) {
             return base.Channel.Mensaje_SelectAsync(mensaje);
+        }
+        
+        public Models.Processes.Methods.Esterilizacion[] Esterilizacion_Select_List(Models.Processes.Methods.Esterilizacion esterilizacion) {
+            return base.Channel.Esterilizacion_Select_List(esterilizacion);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion[]> Esterilizacion_Select_ListAsync(Models.Processes.Methods.Esterilizacion esterilizacion) {
+            return base.Channel.Esterilizacion_Select_ListAsync(esterilizacion);
+        }
+        
+        public Models.Processes.Methods.Esterilizacion Esterilizacion_Select(Models.Processes.Methods.Esterilizacion esterilizacion) {
+            return base.Channel.Esterilizacion_Select(esterilizacion);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion> Esterilizacion_SelectAsync(Models.Processes.Methods.Esterilizacion esterilizacion) {
+            return base.Channel.Esterilizacion_SelectAsync(esterilizacion);
+        }
+        
+        public Models.Processes.Methods.Esterilizacion Esterilizacion_Insert(Models.Processes.Methods.Esterilizacion esterilizacion) {
+            return base.Channel.Esterilizacion_Insert(esterilizacion);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion> Esterilizacion_InsertAsync(Models.Processes.Methods.Esterilizacion esterilizacion) {
+            return base.Channel.Esterilizacion_InsertAsync(esterilizacion);
+        }
+        
+        public Models.Processes.Methods.Esterilizacion Esterilizacion_Update(Models.Processes.Methods.Esterilizacion esterilizacion) {
+            return base.Channel.Esterilizacion_Update(esterilizacion);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Processes.Methods.Esterilizacion> Esterilizacion_UpdateAsync(Models.Processes.Methods.Esterilizacion esterilizacion) {
+            return base.Channel.Esterilizacion_UpdateAsync(esterilizacion);
+        }
+        
+        public Models.Processes.Methods.Limpieza[] Limpieza_Select_List(Models.Processes.Methods.Limpieza limpieza) {
+            return base.Channel.Limpieza_Select_List(limpieza);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza[]> Limpieza_Select_ListAsync(Models.Processes.Methods.Limpieza limpieza) {
+            return base.Channel.Limpieza_Select_ListAsync(limpieza);
+        }
+        
+        public Models.Processes.Methods.Limpieza Limpieza_Select(Models.Processes.Methods.Limpieza limpieza) {
+            return base.Channel.Limpieza_Select(limpieza);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza> Limpieza_SelectAsync(Models.Processes.Methods.Limpieza limpieza) {
+            return base.Channel.Limpieza_SelectAsync(limpieza);
+        }
+        
+        public Models.Processes.Methods.Limpieza Limpieza_Insert(Models.Processes.Methods.Limpieza limpieza) {
+            return base.Channel.Limpieza_Insert(limpieza);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza> Limpieza_InsertAsync(Models.Processes.Methods.Limpieza limpieza) {
+            return base.Channel.Limpieza_InsertAsync(limpieza);
+        }
+        
+        public Models.Processes.Methods.Limpieza Limpieza_Update(Models.Processes.Methods.Limpieza limpieza) {
+            return base.Channel.Limpieza_Update(limpieza);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Processes.Methods.Limpieza> Limpieza_UpdateAsync(Models.Processes.Methods.Limpieza limpieza) {
+            return base.Channel.Limpieza_UpdateAsync(limpieza);
+        }
+        
+        public Models.Masters.TipoCaja[] TipoCaja_Select_List(Models.Masters.TipoCaja tipoCaja) {
+            return base.Channel.TipoCaja_Select_List(tipoCaja);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.TipoCaja[]> TipoCaja_Select_ListAsync(Models.Masters.TipoCaja tipoCaja) {
+            return base.Channel.TipoCaja_Select_ListAsync(tipoCaja);
+        }
+        
+        public Models.Masters.TipoCaja TipoCaja_Select(Models.Masters.TipoCaja tipoCaja) {
+            return base.Channel.TipoCaja_Select(tipoCaja);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.TipoCaja> TipoCaja_SelectAsync(Models.Masters.TipoCaja tipoCaja) {
+            return base.Channel.TipoCaja_SelectAsync(tipoCaja);
+        }
+        
+        public Models.Masters.TipoCaja TipoCaja_Insert(Models.Masters.TipoCaja tipoCaja) {
+            return base.Channel.TipoCaja_Insert(tipoCaja);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.TipoCaja> TipoCaja_InsertAsync(Models.Masters.TipoCaja tipoCaja) {
+            return base.Channel.TipoCaja_InsertAsync(tipoCaja);
+        }
+        
+        public Models.Masters.TipoCaja TipoCaja_Update(Models.Masters.TipoCaja tipoCaja) {
+            return base.Channel.TipoCaja_Update(tipoCaja);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Masters.TipoCaja> TipoCaja_UpdateAsync(Models.Masters.TipoCaja tipoCaja) {
+            return base.Channel.TipoCaja_UpdateAsync(tipoCaja);
         }
     }
 }

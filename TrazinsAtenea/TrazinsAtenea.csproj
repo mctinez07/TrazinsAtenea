@@ -236,6 +236,7 @@
     <None Include="Models.Messages.Mensaje.datasource" />
     <None Include="Models.Processes.Methods.Esterilizacion.datasource" />
     <None Include="Models.Processes.Methods.Limpieza.datasource" />
+    <None Include="Properties\DataSources\Models.Masters.CentroCoste.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

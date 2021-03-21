@@ -7,228 +7,6 @@
       <xsd:import schemaLocation="http://localhost:53110/WSTrazinsAtenea.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Drawing" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IWSTrazinsAtenea_Caja_Select_List_InputMessage">
-    <wsdl:part name="parameters" element="tns:Caja_Select_List" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Caja_Select_List_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Caja_Select_ListResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Caja_Select_InputMessage">
-    <wsdl:part name="parameters" element="tns:Caja_Select" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Caja_Select_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Caja_SelectResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Caja_Insert_InputMessage">
-    <wsdl:part name="parameters" element="tns:Caja_Insert" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Caja_Insert_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Caja_InsertResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Caja_Update_InputMessage">
-    <wsdl:part name="parameters" element="tns:Caja_Update" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Caja_Update_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Caja_UpdateResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Select_List_InputMessage">
-    <wsdl:part name="parameters" element="tns:CajaImagen_Select_List" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Select_List_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CajaImagen_Select_ListResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Select_InputMessage">
-    <wsdl:part name="parameters" element="tns:CajaImagen_Select" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Select_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CajaImagen_SelectResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Insert_InputMessage">
-    <wsdl:part name="parameters" element="tns:CajaImagen_Insert" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Insert_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CajaImagen_InsertResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Update_InputMessage">
-    <wsdl:part name="parameters" element="tns:CajaImagen_Update" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Update_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CajaImagen_UpdateResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Select_List_InputMessage">
-    <wsdl:part name="parameters" element="tns:CajasGrupos_Select_List" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Select_List_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CajasGrupos_Select_ListResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Select_InputMessage">
-    <wsdl:part name="parameters" element="tns:CajasGrupos_Select" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Select_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CajasGrupos_SelectResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Insert_InputMessage">
-    <wsdl:part name="parameters" element="tns:CajasGrupos_Insert" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Insert_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CajasGrupos_InsertResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Update_InputMessage">
-    <wsdl:part name="parameters" element="tns:CajasGrupos_Update" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Update_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CajasGrupos_UpdateResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Delete_InputMessage">
-    <wsdl:part name="parameters" element="tns:CajasGrupos_Delete" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Delete_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CajasGrupos_DeleteResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Especialidad_Select_List_InputMessage">
-    <wsdl:part name="parameters" element="tns:Especialidad_Select_List" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Especialidad_Select_List_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Especialidad_Select_ListResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Especialidad_Select_InputMessage">
-    <wsdl:part name="parameters" element="tns:Especialidad_Select" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Especialidad_Select_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Especialidad_SelectResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Especialidad_Insert_InputMessage">
-    <wsdl:part name="parameters" element="tns:Especialidad_Insert" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Especialidad_Insert_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Especialidad_InsertResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Especialidad_Update_InputMessage">
-    <wsdl:part name="parameters" element="tns:Especialidad_Update" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Especialidad_Update_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Especialidad_UpdateResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Embalaje_Select_List_InputMessage">
-    <wsdl:part name="parameters" element="tns:Embalaje_Select_List" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Embalaje_Select_List_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Embalaje_Select_ListResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Embalaje_Select_InputMessage">
-    <wsdl:part name="parameters" element="tns:Embalaje_Select" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Embalaje_Select_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Embalaje_SelectResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Embalaje_Insert_InputMessage">
-    <wsdl:part name="parameters" element="tns:Embalaje_Insert" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Embalaje_Insert_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Embalaje_InsertResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Embalaje_Update_InputMessage">
-    <wsdl:part name="parameters" element="tns:Embalaje_Update" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Embalaje_Update_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Embalaje_UpdateResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Hospital_Select_List_InputMessage">
-    <wsdl:part name="parameters" element="tns:Hospital_Select_List" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Hospital_Select_List_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Hospital_Select_ListResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Hospital_Select_InputMessage">
-    <wsdl:part name="parameters" element="tns:Hospital_Select" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Hospital_Select_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Hospital_SelectResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Hospital_Insert_InputMessage">
-    <wsdl:part name="parameters" element="tns:Hospital_Insert" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Hospital_Insert_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Hospital_InsertResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Hospital_Update_InputMessage">
-    <wsdl:part name="parameters" element="tns:Hospital_Update" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Hospital_Update_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Hospital_UpdateResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_TipoCaja_Select_List_InputMessage">
-    <wsdl:part name="parameters" element="tns:TipoCaja_Select_List" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_TipoCaja_Select_List_OutputMessage">
-    <wsdl:part name="parameters" element="tns:TipoCaja_Select_ListResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_TipoCaja_Select_InputMessage">
-    <wsdl:part name="parameters" element="tns:TipoCaja_Select" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_TipoCaja_Select_OutputMessage">
-    <wsdl:part name="parameters" element="tns:TipoCaja_SelectResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_TipoCaja_Insert_InputMessage">
-    <wsdl:part name="parameters" element="tns:TipoCaja_Insert" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_TipoCaja_Insert_OutputMessage">
-    <wsdl:part name="parameters" element="tns:TipoCaja_InsertResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_TipoCaja_Update_InputMessage">
-    <wsdl:part name="parameters" element="tns:TipoCaja_Update" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_TipoCaja_Update_OutputMessage">
-    <wsdl:part name="parameters" element="tns:TipoCaja_UpdateResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Limpieza_Select_List_InputMessage">
-    <wsdl:part name="parameters" element="tns:Limpieza_Select_List" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Limpieza_Select_List_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Limpieza_Select_ListResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Limpieza_Select_InputMessage">
-    <wsdl:part name="parameters" element="tns:Limpieza_Select" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Limpieza_Select_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Limpieza_SelectResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Limpieza_Insert_InputMessage">
-    <wsdl:part name="parameters" element="tns:Limpieza_Insert" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Limpieza_Insert_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Limpieza_InsertResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Limpieza_Update_InputMessage">
-    <wsdl:part name="parameters" element="tns:Limpieza_Update" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Limpieza_Update_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Limpieza_UpdateResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Esterilizacion_Select_List_InputMessage">
-    <wsdl:part name="parameters" element="tns:Esterilizacion_Select_List" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Esterilizacion_Select_List_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Esterilizacion_Select_ListResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Esterilizacion_Select_InputMessage">
-    <wsdl:part name="parameters" element="tns:Esterilizacion_Select" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Esterilizacion_Select_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Esterilizacion_SelectResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Esterilizacion_Insert_InputMessage">
-    <wsdl:part name="parameters" element="tns:Esterilizacion_Insert" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Esterilizacion_Insert_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Esterilizacion_InsertResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Esterilizacion_Update_InputMessage">
-    <wsdl:part name="parameters" element="tns:Esterilizacion_Update" />
-  </wsdl:message>
-  <wsdl:message name="IWSTrazinsAtenea_Esterilizacion_Update_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Esterilizacion_UpdateResponse" />
-  </wsdl:message>
   <wsdl:message name="IWSTrazinsAtenea_Almacen_Select_List_InputMessage">
     <wsdl:part name="parameters" element="tns:Almacen_Select_List" />
   </wsdl:message>
@@ -283,161 +61,259 @@
   <wsdl:message name="IWSTrazinsAtenea_AlmacenesUbicaciones_Update_OutputMessage">
     <wsdl:part name="parameters" element="tns:AlmacenesUbicaciones_UpdateResponse" />
   </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Caja_Select_List_InputMessage">
+    <wsdl:part name="parameters" element="tns:Caja_Select_List" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Caja_Select_List_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Caja_Select_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Caja_Select_InputMessage">
+    <wsdl:part name="parameters" element="tns:Caja_Select" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Caja_Select_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Caja_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Caja_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Caja_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Caja_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Caja_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Caja_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Caja_Update" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Caja_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Caja_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Select_List_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_Select_List" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Select_List_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_Select_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Select_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_Select" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Select_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_Update" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_Delete" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajasGrupos_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajasGrupos_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Select_List_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajaImagen_Select_List" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Select_List_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajaImagen_Select_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Select_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajaImagen_Select" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Select_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajaImagen_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajaImagen_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajaImagen_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajaImagen_Update" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajaImagen_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CentroCoste_Select_List_InputMessage">
+    <wsdl:part name="parameters" element="tns:CentroCoste_Select_List" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CentroCoste_Select_List_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CentroCoste_Select_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CentroCoste_Select_InputMessage">
+    <wsdl:part name="parameters" element="tns:CentroCoste_Select" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CentroCoste_Select_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CentroCoste_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CentroCoste_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:CentroCoste_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CentroCoste_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CentroCoste_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CentroCoste_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:CentroCoste_Update" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CentroCoste_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CentroCoste_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Embalaje_Select_List_InputMessage">
+    <wsdl:part name="parameters" element="tns:Embalaje_Select_List" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Embalaje_Select_List_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Embalaje_Select_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Embalaje_Select_InputMessage">
+    <wsdl:part name="parameters" element="tns:Embalaje_Select" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Embalaje_Select_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Embalaje_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Embalaje_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Embalaje_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Embalaje_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Embalaje_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Embalaje_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Embalaje_Update" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Embalaje_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Embalaje_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Especialidad_Select_List_InputMessage">
+    <wsdl:part name="parameters" element="tns:Especialidad_Select_List" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Especialidad_Select_List_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Especialidad_Select_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Especialidad_Select_InputMessage">
+    <wsdl:part name="parameters" element="tns:Especialidad_Select" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Especialidad_Select_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Especialidad_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Especialidad_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Especialidad_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Especialidad_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Especialidad_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Especialidad_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Especialidad_Update" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Especialidad_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Especialidad_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Hospital_Select_List_InputMessage">
+    <wsdl:part name="parameters" element="tns:Hospital_Select_List" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Hospital_Select_List_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Hospital_Select_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Hospital_Select_InputMessage">
+    <wsdl:part name="parameters" element="tns:Hospital_Select" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Hospital_Select_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Hospital_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Hospital_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Hospital_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Hospital_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Hospital_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Hospital_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Hospital_Update" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Hospital_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Hospital_UpdateResponse" />
+  </wsdl:message>
   <wsdl:message name="IWSTrazinsAtenea_Mensaje_Select_InputMessage">
     <wsdl:part name="parameters" element="tns:Mensaje_Select" />
   </wsdl:message>
   <wsdl:message name="IWSTrazinsAtenea_Mensaje_Select_OutputMessage">
     <wsdl:part name="parameters" element="tns:Mensaje_SelectResponse" />
   </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Esterilizacion_Select_List_InputMessage">
+    <wsdl:part name="parameters" element="tns:Esterilizacion_Select_List" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Esterilizacion_Select_List_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Esterilizacion_Select_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Esterilizacion_Select_InputMessage">
+    <wsdl:part name="parameters" element="tns:Esterilizacion_Select" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Esterilizacion_Select_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Esterilizacion_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Esterilizacion_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Esterilizacion_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Esterilizacion_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Esterilizacion_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Esterilizacion_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Esterilizacion_Update" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Esterilizacion_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Esterilizacion_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Limpieza_Select_List_InputMessage">
+    <wsdl:part name="parameters" element="tns:Limpieza_Select_List" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Limpieza_Select_List_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Limpieza_Select_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Limpieza_Select_InputMessage">
+    <wsdl:part name="parameters" element="tns:Limpieza_Select" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Limpieza_Select_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Limpieza_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Limpieza_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Limpieza_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Limpieza_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Limpieza_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Limpieza_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Limpieza_Update" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_Limpieza_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Limpieza_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_TipoCaja_Select_List_InputMessage">
+    <wsdl:part name="parameters" element="tns:TipoCaja_Select_List" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_TipoCaja_Select_List_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TipoCaja_Select_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_TipoCaja_Select_InputMessage">
+    <wsdl:part name="parameters" element="tns:TipoCaja_Select" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_TipoCaja_Select_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TipoCaja_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_TipoCaja_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:TipoCaja_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_TipoCaja_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TipoCaja_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_TipoCaja_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:TipoCaja_Update" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_TipoCaja_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TipoCaja_UpdateResponse" />
+  </wsdl:message>
   <wsdl:portType name="IWSTrazinsAtenea">
-    <wsdl:operation name="Caja_Select_List">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_List" message="tns:IWSTrazinsAtenea_Caja_Select_List_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_ListResponse" message="tns:IWSTrazinsAtenea_Caja_Select_List_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Caja_Select">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select" message="tns:IWSTrazinsAtenea_Caja_Select_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_SelectResponse" message="tns:IWSTrazinsAtenea_Caja_Select_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Caja_Insert">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Insert" message="tns:IWSTrazinsAtenea_Caja_Insert_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_InsertResponse" message="tns:IWSTrazinsAtenea_Caja_Insert_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Caja_Update">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Update" message="tns:IWSTrazinsAtenea_Caja_Update_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_UpdateResponse" message="tns:IWSTrazinsAtenea_Caja_Update_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="CajaImagen_Select_List">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_List" message="tns:IWSTrazinsAtenea_CajaImagen_Select_List_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_ListResponse" message="tns:IWSTrazinsAtenea_CajaImagen_Select_List_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="CajaImagen_Select">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select" message="tns:IWSTrazinsAtenea_CajaImagen_Select_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_SelectResponse" message="tns:IWSTrazinsAtenea_CajaImagen_Select_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="CajaImagen_Insert">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Insert" message="tns:IWSTrazinsAtenea_CajaImagen_Insert_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_InsertResponse" message="tns:IWSTrazinsAtenea_CajaImagen_Insert_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="CajaImagen_Update">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update" message="tns:IWSTrazinsAtenea_CajaImagen_Update_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_UpdateResponse" message="tns:IWSTrazinsAtenea_CajaImagen_Update_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="CajasGrupos_Select_List">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_List" message="tns:IWSTrazinsAtenea_CajasGrupos_Select_List_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_ListResponse" message="tns:IWSTrazinsAtenea_CajasGrupos_Select_List_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="CajasGrupos_Select">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select" message="tns:IWSTrazinsAtenea_CajasGrupos_Select_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_SelectResponse" message="tns:IWSTrazinsAtenea_CajasGrupos_Select_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="CajasGrupos_Insert">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Insert" message="tns:IWSTrazinsAtenea_CajasGrupos_Insert_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_InsertResponse" message="tns:IWSTrazinsAtenea_CajasGrupos_Insert_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="CajasGrupos_Update">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Update" message="tns:IWSTrazinsAtenea_CajasGrupos_Update_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_UpdateResponse" message="tns:IWSTrazinsAtenea_CajasGrupos_Update_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="CajasGrupos_Delete">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Delete" message="tns:IWSTrazinsAtenea_CajasGrupos_Delete_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_DeleteResponse" message="tns:IWSTrazinsAtenea_CajasGrupos_Delete_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Especialidad_Select_List">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_List" message="tns:IWSTrazinsAtenea_Especialidad_Select_List_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_ListResponse" message="tns:IWSTrazinsAtenea_Especialidad_Select_List_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Especialidad_Select">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select" message="tns:IWSTrazinsAtenea_Especialidad_Select_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_SelectResponse" message="tns:IWSTrazinsAtenea_Especialidad_Select_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Especialidad_Insert">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Insert" message="tns:IWSTrazinsAtenea_Especialidad_Insert_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_InsertResponse" message="tns:IWSTrazinsAtenea_Especialidad_Insert_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Especialidad_Update">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Update" message="tns:IWSTrazinsAtenea_Especialidad_Update_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_UpdateResponse" message="tns:IWSTrazinsAtenea_Especialidad_Update_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Embalaje_Select_List">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_List" message="tns:IWSTrazinsAtenea_Embalaje_Select_List_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_ListResponse" message="tns:IWSTrazinsAtenea_Embalaje_Select_List_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Embalaje_Select">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select" message="tns:IWSTrazinsAtenea_Embalaje_Select_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_SelectResponse" message="tns:IWSTrazinsAtenea_Embalaje_Select_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Embalaje_Insert">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Insert" message="tns:IWSTrazinsAtenea_Embalaje_Insert_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_InsertResponse" message="tns:IWSTrazinsAtenea_Embalaje_Insert_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Embalaje_Update">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Update" message="tns:IWSTrazinsAtenea_Embalaje_Update_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_UpdateResponse" message="tns:IWSTrazinsAtenea_Embalaje_Update_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Hospital_Select_List">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_List" message="tns:IWSTrazinsAtenea_Hospital_Select_List_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_ListResponse" message="tns:IWSTrazinsAtenea_Hospital_Select_List_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Hospital_Select">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select" message="tns:IWSTrazinsAtenea_Hospital_Select_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_SelectResponse" message="tns:IWSTrazinsAtenea_Hospital_Select_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Hospital_Insert">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Insert" message="tns:IWSTrazinsAtenea_Hospital_Insert_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_InsertResponse" message="tns:IWSTrazinsAtenea_Hospital_Insert_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Hospital_Update">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Update" message="tns:IWSTrazinsAtenea_Hospital_Update_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_UpdateResponse" message="tns:IWSTrazinsAtenea_Hospital_Update_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="TipoCaja_Select_List">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_List" message="tns:IWSTrazinsAtenea_TipoCaja_Select_List_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_ListResponse" message="tns:IWSTrazinsAtenea_TipoCaja_Select_List_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="TipoCaja_Select">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select" message="tns:IWSTrazinsAtenea_TipoCaja_Select_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_SelectResponse" message="tns:IWSTrazinsAtenea_TipoCaja_Select_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="TipoCaja_Insert">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Insert" message="tns:IWSTrazinsAtenea_TipoCaja_Insert_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_InsertResponse" message="tns:IWSTrazinsAtenea_TipoCaja_Insert_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="TipoCaja_Update">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Update" message="tns:IWSTrazinsAtenea_TipoCaja_Update_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_UpdateResponse" message="tns:IWSTrazinsAtenea_TipoCaja_Update_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Limpieza_Select_List">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select_List" message="tns:IWSTrazinsAtenea_Limpieza_Select_List_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select_ListResponse" message="tns:IWSTrazinsAtenea_Limpieza_Select_List_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Limpieza_Select">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select" message="tns:IWSTrazinsAtenea_Limpieza_Select_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_SelectResponse" message="tns:IWSTrazinsAtenea_Limpieza_Select_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Limpieza_Insert">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Insert" message="tns:IWSTrazinsAtenea_Limpieza_Insert_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_InsertResponse" message="tns:IWSTrazinsAtenea_Limpieza_Insert_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Limpieza_Update">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Update" message="tns:IWSTrazinsAtenea_Limpieza_Update_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_UpdateResponse" message="tns:IWSTrazinsAtenea_Limpieza_Update_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Esterilizacion_Select_List">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_List" message="tns:IWSTrazinsAtenea_Esterilizacion_Select_List_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_ListResponse" message="tns:IWSTrazinsAtenea_Esterilizacion_Select_List_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Esterilizacion_Select">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select" message="tns:IWSTrazinsAtenea_Esterilizacion_Select_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_SelectResponse" message="tns:IWSTrazinsAtenea_Esterilizacion_Select_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Esterilizacion_Insert">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Insert" message="tns:IWSTrazinsAtenea_Esterilizacion_Insert_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_InsertResponse" message="tns:IWSTrazinsAtenea_Esterilizacion_Insert_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Esterilizacion_Update">
-      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Update" message="tns:IWSTrazinsAtenea_Esterilizacion_Update_InputMessage" />
-      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_UpdateResponse" message="tns:IWSTrazinsAtenea_Esterilizacion_Update_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="Almacen_Select_List">
       <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Select_List" message="tns:IWSTrazinsAtenea_Almacen_Select_List_InputMessage" />
       <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Select_ListResponse" message="tns:IWSTrazinsAtenea_Almacen_Select_List_OutputMessage" />
@@ -474,346 +350,177 @@
       <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_Update" message="tns:IWSTrazinsAtenea_AlmacenesUbicaciones_Update_InputMessage" />
       <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/AlmacenesUbicaciones_UpdateResponse" message="tns:IWSTrazinsAtenea_AlmacenesUbicaciones_Update_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="Caja_Select_List">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_List" message="tns:IWSTrazinsAtenea_Caja_Select_List_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_ListResponse" message="tns:IWSTrazinsAtenea_Caja_Select_List_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Caja_Select">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select" message="tns:IWSTrazinsAtenea_Caja_Select_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_SelectResponse" message="tns:IWSTrazinsAtenea_Caja_Select_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Caja_Insert">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Insert" message="tns:IWSTrazinsAtenea_Caja_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_InsertResponse" message="tns:IWSTrazinsAtenea_Caja_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Caja_Update">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Update" message="tns:IWSTrazinsAtenea_Caja_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_UpdateResponse" message="tns:IWSTrazinsAtenea_Caja_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Select_List">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_List" message="tns:IWSTrazinsAtenea_CajasGrupos_Select_List_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_ListResponse" message="tns:IWSTrazinsAtenea_CajasGrupos_Select_List_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Select">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select" message="tns:IWSTrazinsAtenea_CajasGrupos_Select_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_SelectResponse" message="tns:IWSTrazinsAtenea_CajasGrupos_Select_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Insert">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Insert" message="tns:IWSTrazinsAtenea_CajasGrupos_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_InsertResponse" message="tns:IWSTrazinsAtenea_CajasGrupos_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Update">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Update" message="tns:IWSTrazinsAtenea_CajasGrupos_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_UpdateResponse" message="tns:IWSTrazinsAtenea_CajasGrupos_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Delete">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Delete" message="tns:IWSTrazinsAtenea_CajasGrupos_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_DeleteResponse" message="tns:IWSTrazinsAtenea_CajasGrupos_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CajaImagen_Select_List">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_List" message="tns:IWSTrazinsAtenea_CajaImagen_Select_List_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_ListResponse" message="tns:IWSTrazinsAtenea_CajaImagen_Select_List_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CajaImagen_Select">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select" message="tns:IWSTrazinsAtenea_CajaImagen_Select_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_SelectResponse" message="tns:IWSTrazinsAtenea_CajaImagen_Select_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CajaImagen_Insert">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Insert" message="tns:IWSTrazinsAtenea_CajaImagen_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_InsertResponse" message="tns:IWSTrazinsAtenea_CajaImagen_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CajaImagen_Update">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update" message="tns:IWSTrazinsAtenea_CajaImagen_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_UpdateResponse" message="tns:IWSTrazinsAtenea_CajaImagen_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CentroCoste_Select_List">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Select_List" message="tns:IWSTrazinsAtenea_CentroCoste_Select_List_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Select_ListResponse" message="tns:IWSTrazinsAtenea_CentroCoste_Select_List_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CentroCoste_Select">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Select" message="tns:IWSTrazinsAtenea_CentroCoste_Select_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_SelectResponse" message="tns:IWSTrazinsAtenea_CentroCoste_Select_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CentroCoste_Insert">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Insert" message="tns:IWSTrazinsAtenea_CentroCoste_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_InsertResponse" message="tns:IWSTrazinsAtenea_CentroCoste_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CentroCoste_Update">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Update" message="tns:IWSTrazinsAtenea_CentroCoste_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_UpdateResponse" message="tns:IWSTrazinsAtenea_CentroCoste_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Embalaje_Select_List">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_List" message="tns:IWSTrazinsAtenea_Embalaje_Select_List_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_ListResponse" message="tns:IWSTrazinsAtenea_Embalaje_Select_List_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Embalaje_Select">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select" message="tns:IWSTrazinsAtenea_Embalaje_Select_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_SelectResponse" message="tns:IWSTrazinsAtenea_Embalaje_Select_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Embalaje_Insert">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Insert" message="tns:IWSTrazinsAtenea_Embalaje_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_InsertResponse" message="tns:IWSTrazinsAtenea_Embalaje_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Embalaje_Update">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Update" message="tns:IWSTrazinsAtenea_Embalaje_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_UpdateResponse" message="tns:IWSTrazinsAtenea_Embalaje_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Especialidad_Select_List">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_List" message="tns:IWSTrazinsAtenea_Especialidad_Select_List_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_ListResponse" message="tns:IWSTrazinsAtenea_Especialidad_Select_List_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Especialidad_Select">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select" message="tns:IWSTrazinsAtenea_Especialidad_Select_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_SelectResponse" message="tns:IWSTrazinsAtenea_Especialidad_Select_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Especialidad_Insert">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Insert" message="tns:IWSTrazinsAtenea_Especialidad_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_InsertResponse" message="tns:IWSTrazinsAtenea_Especialidad_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Especialidad_Update">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Update" message="tns:IWSTrazinsAtenea_Especialidad_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_UpdateResponse" message="tns:IWSTrazinsAtenea_Especialidad_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Hospital_Select_List">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_List" message="tns:IWSTrazinsAtenea_Hospital_Select_List_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_ListResponse" message="tns:IWSTrazinsAtenea_Hospital_Select_List_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Hospital_Select">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select" message="tns:IWSTrazinsAtenea_Hospital_Select_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_SelectResponse" message="tns:IWSTrazinsAtenea_Hospital_Select_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Hospital_Insert">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Insert" message="tns:IWSTrazinsAtenea_Hospital_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_InsertResponse" message="tns:IWSTrazinsAtenea_Hospital_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Hospital_Update">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Update" message="tns:IWSTrazinsAtenea_Hospital_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_UpdateResponse" message="tns:IWSTrazinsAtenea_Hospital_Update_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Mensaje_Select">
       <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_Select" message="tns:IWSTrazinsAtenea_Mensaje_Select_InputMessage" />
       <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_SelectResponse" message="tns:IWSTrazinsAtenea_Mensaje_Select_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="Esterilizacion_Select_List">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_List" message="tns:IWSTrazinsAtenea_Esterilizacion_Select_List_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_ListResponse" message="tns:IWSTrazinsAtenea_Esterilizacion_Select_List_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Esterilizacion_Select">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select" message="tns:IWSTrazinsAtenea_Esterilizacion_Select_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_SelectResponse" message="tns:IWSTrazinsAtenea_Esterilizacion_Select_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Esterilizacion_Insert">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Insert" message="tns:IWSTrazinsAtenea_Esterilizacion_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_InsertResponse" message="tns:IWSTrazinsAtenea_Esterilizacion_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Esterilizacion_Update">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Update" message="tns:IWSTrazinsAtenea_Esterilizacion_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_UpdateResponse" message="tns:IWSTrazinsAtenea_Esterilizacion_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Limpieza_Select_List">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select_List" message="tns:IWSTrazinsAtenea_Limpieza_Select_List_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select_ListResponse" message="tns:IWSTrazinsAtenea_Limpieza_Select_List_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Limpieza_Select">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select" message="tns:IWSTrazinsAtenea_Limpieza_Select_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_SelectResponse" message="tns:IWSTrazinsAtenea_Limpieza_Select_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Limpieza_Insert">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Insert" message="tns:IWSTrazinsAtenea_Limpieza_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_InsertResponse" message="tns:IWSTrazinsAtenea_Limpieza_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Limpieza_Update">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Update" message="tns:IWSTrazinsAtenea_Limpieza_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_UpdateResponse" message="tns:IWSTrazinsAtenea_Limpieza_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoCaja_Select_List">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_List" message="tns:IWSTrazinsAtenea_TipoCaja_Select_List_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_ListResponse" message="tns:IWSTrazinsAtenea_TipoCaja_Select_List_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoCaja_Select">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select" message="tns:IWSTrazinsAtenea_TipoCaja_Select_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_SelectResponse" message="tns:IWSTrazinsAtenea_TipoCaja_Select_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoCaja_Insert">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Insert" message="tns:IWSTrazinsAtenea_TipoCaja_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_InsertResponse" message="tns:IWSTrazinsAtenea_TipoCaja_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoCaja_Update">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Update" message="tns:IWSTrazinsAtenea_TipoCaja_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_UpdateResponse" message="tns:IWSTrazinsAtenea_TipoCaja_Update_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IWSTrazinsAtenea" type="tns:IWSTrazinsAtenea">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="Caja_Select_List">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_List" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Caja_Select">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Caja_Insert">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Insert" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Caja_Update">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Update" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="CajaImagen_Select_List">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_List" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="CajaImagen_Select">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="CajaImagen_Insert">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Insert" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="CajaImagen_Update">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="CajasGrupos_Select_List">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_List" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="CajasGrupos_Select">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="CajasGrupos_Insert">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Insert" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="CajasGrupos_Update">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Update" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="CajasGrupos_Delete">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Delete" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Especialidad_Select_List">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_List" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Especialidad_Select">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Especialidad_Insert">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Insert" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Especialidad_Update">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Update" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Embalaje_Select_List">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_List" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Embalaje_Select">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Embalaje_Insert">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Insert" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Embalaje_Update">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Update" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Hospital_Select_List">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_List" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Hospital_Select">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Hospital_Insert">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Insert" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Hospital_Update">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Update" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TipoCaja_Select_List">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_List" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TipoCaja_Select">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TipoCaja_Insert">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Insert" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="TipoCaja_Update">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Update" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Limpieza_Select_List">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select_List" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Limpieza_Select">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Limpieza_Insert">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Insert" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Limpieza_Update">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Update" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Esterilizacion_Select_List">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_List" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Esterilizacion_Select">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Esterilizacion_Insert">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Insert" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Esterilizacion_Update">
-      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Update" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="Almacen_Select_List">
       <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Almacen_Select_List" style="document" />
       <wsdl:input>
@@ -895,8 +602,377 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Caja_Select_List">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Caja_Select">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Caja_Insert">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Caja_Update">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Caja_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Select_List">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Select">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Insert">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Update">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajasGrupos_Delete">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajasGrupos_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajaImagen_Select_List">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajaImagen_Select">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajaImagen_Insert">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajaImagen_Update">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CentroCoste_Select_List">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Select_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CentroCoste_Select">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CentroCoste_Insert">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CentroCoste_Update">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Embalaje_Select_List">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Embalaje_Select">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Embalaje_Insert">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Embalaje_Update">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Embalaje_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Especialidad_Select_List">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Especialidad_Select">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Especialidad_Insert">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Especialidad_Update">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Especialidad_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hospital_Select_List">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hospital_Select">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hospital_Insert">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hospital_Update">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Hospital_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Mensaje_Select">
       <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Mensaje_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Esterilizacion_Select_List">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Esterilizacion_Select">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Esterilizacion_Insert">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Esterilizacion_Update">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Esterilizacion_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Limpieza_Select_List">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Limpieza_Select">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Limpieza_Insert">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Limpieza_Update">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/Limpieza_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoCaja_Select_List">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoCaja_Select">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoCaja_Insert">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoCaja_Update">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/TipoCaja_Update" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
