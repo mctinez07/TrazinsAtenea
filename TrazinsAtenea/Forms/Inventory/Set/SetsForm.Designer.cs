@@ -48,10 +48,12 @@
             // gdcSet
             // 
             this.gdcSet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gdcSet.Location = new System.Drawing.Point(0, 62);
+            this.gdcSet.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gdcSet.Location = new System.Drawing.Point(0, 76);
             this.gdcSet.MainView = this.gdvSets;
+            this.gdcSet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gdcSet.Name = "gdcSet";
-            this.gdcSet.Size = new System.Drawing.Size(1384, 694);
+            this.gdcSet.Size = new System.Drawing.Size(1615, 854);
             this.gdcSet.TabIndex = 2;
             this.gdcSet.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gdvSets});
@@ -85,6 +87,7 @@
             this.gvcLocate,
             this.gvcUbication,
             this.gvcActive});
+            this.gdvSets.DetailHeight = 431;
             this.gdvSets.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.None;
             this.gdvSets.GridControl = this.gdcSet;
             this.gdvSets.Name = "gdvSets";
@@ -97,54 +100,68 @@
             // gvcSpeciality
             // 
             this.gvcSpeciality.Caption = "Especialidad";
-            this.gvcSpeciality.FieldName = "Especialidad_Descripcion";
+            this.gvcSpeciality.FieldName = "EspecialidadDescripcion";
+            this.gvcSpeciality.MinWidth = 23;
             this.gvcSpeciality.Name = "gvcSpeciality";
             this.gvcSpeciality.Visible = true;
             this.gvcSpeciality.VisibleIndex = 0;
+            this.gvcSpeciality.Width = 87;
             // 
             // gvcCode
             // 
             this.gvcCode.Caption = "Código Caja/Id";
             this.gvcCode.FieldName = "CajaId_CodigoCaja";
+            this.gvcCode.MinWidth = 23;
             this.gvcCode.Name = "gvcCode";
             this.gvcCode.Visible = true;
             this.gvcCode.VisibleIndex = 1;
+            this.gvcCode.Width = 87;
             // 
             // gvcBox
             // 
             this.gvcBox.Caption = "Caja";
             this.gvcBox.FieldName = "Descripcion";
+            this.gvcBox.MinWidth = 23;
             this.gvcBox.Name = "gvcBox";
             this.gvcBox.Visible = true;
             this.gvcBox.VisibleIndex = 2;
+            this.gvcBox.Width = 87;
             // 
             // gvcLocate
             // 
             this.gvcLocate.Caption = "Localización";
+            this.gvcLocate.MinWidth = 23;
             this.gvcLocate.Name = "gvcLocate";
             this.gvcLocate.Visible = true;
             this.gvcLocate.VisibleIndex = 3;
+            this.gvcLocate.Width = 87;
             // 
             // gvcUbication
             // 
             this.gvcUbication.Caption = "Ubicación";
+            this.gvcUbication.FieldName = "Ubicacion";
+            this.gvcUbication.MinWidth = 23;
             this.gvcUbication.Name = "gvcUbication";
             this.gvcUbication.Visible = true;
             this.gvcUbication.VisibleIndex = 4;
+            this.gvcUbication.Width = 87;
             // 
             // gvcActive
             // 
             this.gvcActive.Caption = "Activa";
             this.gvcActive.FieldName = "Activa";
+            this.gvcActive.MinWidth = 23;
             this.gvcActive.Name = "gvcActive";
+            this.gvcActive.Width = 87;
             // 
             // pnlNewItem
             // 
             this.pnlNewItem.Controls.Add(this.btnNew);
             this.pnlNewItem.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlNewItem.Location = new System.Drawing.Point(0, 0);
+            this.pnlNewItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlNewItem.Name = "pnlNewItem";
-            this.pnlNewItem.Size = new System.Drawing.Size(1384, 62);
+            this.pnlNewItem.Size = new System.Drawing.Size(1615, 76);
             this.pnlNewItem.TabIndex = 0;
             // 
             // btnNew
@@ -154,11 +171,12 @@
             this.btnNew.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
             this.btnNew.Appearance.Options.UseFont = true;
             this.btnNew.Appearance.Options.UseForeColor = true;
-            this.btnNew.Location = new System.Drawing.Point(1263, 7);
+            this.btnNew.Location = new System.Drawing.Point(1473, 9);
             this.btnNew.LookAndFeel.SkinName = "DevExpress Style";
             this.btnNew.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnNew.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(116, 48);
+            this.btnNew.Size = new System.Drawing.Size(135, 59);
             this.btnNew.TabIndex = 1;
             this.btnNew.Text = "Nuevo";
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
@@ -169,12 +187,13 @@
             // 
             // SetsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1384, 756);
+            this.ClientSize = new System.Drawing.Size(1615, 930);
             this.Controls.Add(this.gdcSet);
             this.Controls.Add(this.pnlNewItem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SetsForm";
             this.Text = "SetsForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

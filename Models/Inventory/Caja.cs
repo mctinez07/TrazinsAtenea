@@ -129,15 +129,6 @@ namespace Models.Inventory
         {
             get
             {
-                if(CodigoCaja == null)
-                {
-                    _cajaId_CodigoCaja = CajaId;
-                }
-                else
-                {
-                    _cajaId_CodigoCaja = CodigoCaja;
-                }
-
                 return _cajaId_CodigoCaja;
             }
             set
