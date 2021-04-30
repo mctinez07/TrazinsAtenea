@@ -115,7 +115,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 xtpImageVideo.PageVisible = false;
                 xtpInstrumentalSet.PageVisible = false;
                 btnSave.Visible = false;
-                btnSaveContinue.Location = new Point(960, 13);
+                btnSaveContinue.Location = new Point(1100, 13);
                 //Solo se pueden añadir cajas nuevas al hospital con el que nos hemos logeado
                 cmbProperty.Enabled = false;
                 cmbProperty.SelectedValue = BaseModelClient.BaseModel.HosId;

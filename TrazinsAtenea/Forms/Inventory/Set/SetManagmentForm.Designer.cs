@@ -107,6 +107,7 @@
             this.ckbSetSample = new DevExpress.XtraEditors.CheckEdit();
             this.lblSetSampleInfo = new System.Windows.Forms.Label();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.speWheight = new DevExpress.XtraEditors.SpinEdit();
             this.tgsYesNo = new DevExpress.XtraEditors.ToggleSwitch();
             this.lblActive = new DevExpress.XtraEditors.LabelControl();
             this.lblMaintenace = new DevExpress.XtraEditors.LabelControl();
@@ -120,6 +121,7 @@
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             this.lblSetName = new DevExpress.XtraEditors.LabelControl();
             this.txtSetName = new DevExpress.XtraEditors.TextEdit();
             this.cmbCostCenter = new System.Windows.Forms.ComboBox();
@@ -225,8 +227,6 @@
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::TrazinsAtenea.Forms.GlobalForms.GlobalWaitForm), true, true);
             this.ofdImageVideo = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
-            this.speWheight = new DevExpress.XtraEditors.SpinEdit();
-            this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).BeginInit();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcBackArrow)).BeginInit();
@@ -245,6 +245,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ckbSetSample.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.speWheight.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tgsYesNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speMaintenance.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -254,6 +255,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSetName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -337,8 +339,6 @@
             this.pnlInstrumentalHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.speWheight.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -365,7 +365,6 @@
             // 
             // btnSaveContinue
             // 
-            this.btnSaveContinue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveContinue.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
             this.btnSaveContinue.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnSaveContinue.Appearance.ForeColor = System.Drawing.Color.White;
@@ -910,6 +909,23 @@
             this.layoutControl2.TabIndex = 37;
             this.layoutControl2.Text = "layoutControl2";
             // 
+            // speWheight
+            // 
+            this.speWheight.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.speWheight.Location = new System.Drawing.Point(2, 35);
+            this.speWheight.Name = "speWheight";
+            this.speWheight.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.speWheight.Properties.Appearance.Options.UseFont = true;
+            this.speWheight.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.speWheight.Size = new System.Drawing.Size(126, 42);
+            this.speWheight.StyleController = this.layoutControl2;
+            this.speWheight.TabIndex = 12;
+            // 
             // tgsYesNo
             // 
             this.tgsYesNo.Location = new System.Drawing.Point(707, 35);
@@ -1107,6 +1123,16 @@
             this.layoutControlItem24.Size = new System.Drawing.Size(150, 46);
             this.layoutControlItem24.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem24.TextVisible = false;
+            // 
+            // layoutControlItem20
+            // 
+            this.layoutControlItem20.Control = this.speWheight;
+            this.layoutControlItem20.Location = new System.Drawing.Point(0, 33);
+            this.layoutControlItem20.Name = "layoutControlItem20";
+            this.layoutControlItem20.OptionsTableLayoutItem.RowIndex = 1;
+            this.layoutControlItem20.Size = new System.Drawing.Size(130, 46);
+            this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem20.TextVisible = false;
             // 
             // lblSetName
             // 
@@ -2575,33 +2601,6 @@
             // 
             this.splashScreenManager1.ClosingDelay = 500;
             // 
-            // speWheight
-            // 
-            this.speWheight.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.speWheight.Location = new System.Drawing.Point(2, 35);
-            this.speWheight.Name = "speWheight";
-            this.speWheight.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.speWheight.Properties.Appearance.Options.UseFont = true;
-            this.speWheight.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.speWheight.Size = new System.Drawing.Size(126, 42);
-            this.speWheight.StyleController = this.layoutControl2;
-            this.speWheight.TabIndex = 12;
-            // 
-            // layoutControlItem20
-            // 
-            this.layoutControlItem20.Control = this.speWheight;
-            this.layoutControlItem20.Location = new System.Drawing.Point(0, 33);
-            this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem20.Size = new System.Drawing.Size(130, 46);
-            this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem20.TextVisible = false;
-            // 
             // SetManagmentForm
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
@@ -2637,6 +2636,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ckbSetSample.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.speWheight.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tgsYesNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.speMaintenance.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
@@ -2646,6 +2646,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSetName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -2730,8 +2731,6 @@
             this.pnlInstrumentalHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.speWheight.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
             this.ResumeLayout(false);
 
         }
