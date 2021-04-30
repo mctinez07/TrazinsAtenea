@@ -10,7 +10,7 @@ namespace TrazinsAtenea.GlobalEngine
     //Clase para la gestión de errores. en caso de solicitar un log se realizaría desde aquí.
     public static class ErrorMessage
     {
-        public static void ShowErrorMessage(string method, string err)
+        public static void ShowErrorMessage(string err, string method)
         {
             string errorMesage = string.Format("Error {0}: {1}", method, err);
             MessageBox.Show(errorMesage, "Trazins Atenea", MessageBoxButtons.OK, MessageBoxIcon.Error);

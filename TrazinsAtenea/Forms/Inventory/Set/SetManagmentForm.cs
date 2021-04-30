@@ -85,28 +85,35 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         private void SetManagmentForm_Load(object sender, EventArgs e)
         {
-            MultilanguageFormat();            
+            try
+            {
+                MultilanguageFormat();
 
-            splashScreenManager1.ShowWaitForm();            
+                splashScreenManager1.ShowWaitForm();
 
-            //CargarCombos
-            LoadComboBoxInformation();
+                //CargarCombos
+                LoadComboBoxInformation();
 
-            //Enlazar Controles para que se actualicen automáticamente los valores de los controles.
-            BindingControls();
-            
-            //PDte!!! Cuando recuperamos los datos hay que mostrar los valores en los combos de ubicacioón
-            //Falta estante y posicion.
-            // ajustar ela posicion del boton gyurdar y seguir
-            //PDTE!!! VAlidar los atributos obligatorios, antes probar el mnesaje de error.
+                //Enlazar Controles para que se actualicen automáticamente los valores de los controles.
+                BindingControls();
 
-            //Establecer estado de los controles
-            ControlsState();
+                // ajustar ela posicion del boton gyurdar y seguir
+                //PDTE!!! VAlidar los atributos obligatorios, antes probar el mnesaje de error.
 
-            Caja.HosId = BaseModelClient.BaseModel.HosId;
-            Caja.ChId = BaseModelClient.BaseModel.ChId;
+                //Establecer estado de los controles
+                ControlsState();
 
-            splashScreenManager1.CloseWaitForm();            
+                Caja.HosId = BaseModelClient.BaseModel.HosId;
+                Caja.ChId = BaseModelClient.BaseModel.ChId;
+
+                splashScreenManager1.CloseWaitForm();
+
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage.ShowErrorMessage(MethodBase.GetCurrentMethod().Name, ex.Message);
+            }
+                        
         }
 
         private void ControlsState()
@@ -314,6 +321,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         private void LoadDefaultUbicationSelectedSet(AlmacenesUbicaciones[] storageStructure)
         {
             Engine.ComboBoxFormat(cmbBlock, "Bloque", "Bloque", storageStructure);
+            Engine.ComboBoxFormat(cmbSelf, "Estante", "Estante", storageStructure);
+            Engine.ComboBoxFormat(cmbPosition, "Posicion", "UbiId", storageStructure);
         }
 
         private void MethodsSteriLoad()
