@@ -167,7 +167,7 @@ namespace SqlEngine
             }
             catch (Exception ex)
             {
-                throw new Exception ("Error en IsSelect: " + ex.Message);
+                throw new Exception ("Web service: " + ex.Message);
             }
             
         }
@@ -186,8 +186,7 @@ namespace SqlEngine
             }
             catch (Exception ex)
             {
-
-                throw new Exception("Error en IsInsert: " + ex.Message);
+                throw new Exception(string.Format("Web service {0}: {1}",MethodBase.GetCurrentMethod().Name, ex.Message));
             }
         }
 

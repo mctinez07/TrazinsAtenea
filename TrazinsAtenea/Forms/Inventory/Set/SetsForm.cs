@@ -19,7 +19,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 {
     public partial class SetsForm : DevExpress.XtraEditors.XtraForm
     {
-        private BaseModelClient BaseModelClient;
+        private BaseModelClient BaseModelClient;        
 
         public SetsForm()
         {
@@ -39,14 +39,9 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             try
             {
-                splashScreenManager1.ShowWaitForm();                
+                splashScreenManager1.ShowWaitForm();
 
-                var service = BaseModelClient.Service;
-
-                var sets = service.Caja_Select_List(new Caja()
-                { HosId = BaseModelClient.BaseModel.HosId, ChId = BaseModelClient.BaseModel.ChId });
-
-                gdcSet.DataSource = sets;
+                UpdateDatasource();
 
                 GridFormat(gdvSets);
                 btnNew.Text = Engine.GetLanguageResource(btnNew.Name);
@@ -60,6 +55,16 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             }
         }
 
+        private void UpdateDatasource()
+        {
+            var service = BaseModelClient.Service;
+
+            var setList = service.Caja_Select_List(new Caja()
+            { HosId = BaseModelClient.BaseModel.HosId, ChId = BaseModelClient.BaseModel.ChId }).ToList();
+
+            gdcSet.DataSource = setList;
+        }
+
         private void btnNew_Click(object sender, EventArgs e)
         {
             SetManagmentForm frm = new SetManagmentForm
@@ -68,6 +73,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             };
 
             frm.ShowDialog();
+            UpdateDatasource();
         }
     }
 }

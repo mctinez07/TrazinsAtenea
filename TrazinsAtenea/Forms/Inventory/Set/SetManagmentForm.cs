@@ -124,7 +124,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 xtpImageVideo.PageVisible = false;
                 xtpInstrumentalSet.PageVisible = false;
                 btnSave.Visible = false;
-                btnSaveContinue.Location = new Point(1100, 13);
+                btnSaveContinue.Location = new Point(1135, 13);
                 //Solo se pueden añadir cajas nuevas al hospital con el que nos hemos logeado
                 cmbProperty.Enabled = false;
                 cmbProperty.SelectedValue = BaseModelClient.BaseModel.HosId;
@@ -1016,35 +1016,64 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         #region Main Buttons Actions
         private void btnSaveContinue_Click(object sender, EventArgs e)
         {
-            //Hay que asociar manualmente los métodos.
-            //Crear metodo para limpiar código.
-            //Añadir try catch para mostrar mesaje error.
+            //Este boton solo actúa cuando la caja es nueva.
+            SaveSetModel(true); 
+            
+        }
+
+        private void SaveSetModel(bool openFormAgain)
+        {
+            try
+            {
+                //Hay que asociar manualmente los métodos.
+                SetComboMethodsValuesToModel();
+
+                //Guardamos la caja y volvemos a cargar el from cerrando este pero con las nuevas secciones.
+                //Pendiente clase intermedia que gestione el tipo de operacion y las auditorias.
+                var res = BaseModelClient.Service.Caja_Insert(Caja);
+
+                //Para la gestión del formulario
+                if (openFormAgain)
+                {
+                    SetManagmentForm frm = new SetManagmentForm
+                    {
+                        Caja = Caja,
+                        Operation = EnumOperationType.Modify
+                    };
+
+                    this.Close();
+                    frm.ShowDialog();
+                }                
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage.ShowErrorMessage(MethodBase.GetCurrentMethod().Name, ex.Message);
+            }
+
+        }
+
+        private void SetComboMethodsValuesToModel()
+        {
             Caja.TipoLavId1 = FirstWashingMethodSelected?.TipoLavId;
             Caja.TipoLavId2 = SecondWashingMethodSelected?.TipoLavId;
             Caja.TipoLavId3 = ThirdWashingMethodSelected?.TipoLavId;
             Caja.EstId1 = FirstSteriMethodSelected?.EstId;
             Caja.EstId2 = SecondSteriMethodSelected?.EstId;
-            Caja.EstId3 = ThirdSteriMethodSelected?.EstId;           
-            
-            //Guardamos la caja y volvemos a cargar el from cerrando este pero con las nuevas secciones.
-            //Revisar cierre del form actual??
-            var res = BaseModelClient.Service.Caja_Insert(Caja);
-
-            SetManagmentForm frm = new SetManagmentForm
-            {
-                Caja = Caja,
-                Operation = EnumOperationType.Modify
-            };
-
-            frm.ShowDialog();
-            this.Close();
+            Caja.EstId3 = ThirdSteriMethodSelected?.EstId;
         }
 
-        //Salir y guardar// actualiza la página principal?
+        //Guarda los datos actuales
         private void btnSave_Click(object sender, EventArgs e)
         {
             var a = Caja;
-        } 
+        }
         #endregion
+
+        //Guarda y sale a la pantalla principal.
+        private void btnSaveExit_Click(object sender, EventArgs e)
+        {
+            SaveSetModel(false);
+            this.Close();
+        }
     }
 }

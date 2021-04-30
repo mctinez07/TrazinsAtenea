@@ -371,7 +371,7 @@
             this.btnSaveContinue.Appearance.Options.UseBackColor = true;
             this.btnSaveContinue.Appearance.Options.UseFont = true;
             this.btnSaveContinue.Appearance.Options.UseForeColor = true;
-            this.btnSaveContinue.Location = new System.Drawing.Point(968, 15);
+            this.btnSaveContinue.Location = new System.Drawing.Point(961, 16);
             this.btnSaveContinue.LookAndFeel.SkinName = "DevExpress Style";
             this.btnSaveContinue.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnSaveContinue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -398,6 +398,7 @@
             this.btnSaveExit.Size = new System.Drawing.Size(195, 59);
             this.btnSaveExit.TabIndex = 7;
             this.btnSaveExit.Text = "Guardar y Salir";
+            this.btnSaveExit.Click += new System.EventHandler(this.btnSaveExit_Click);
             // 
             // btnSave
             // 
