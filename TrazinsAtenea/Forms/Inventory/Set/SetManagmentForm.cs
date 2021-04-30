@@ -94,9 +94,11 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
             //Enlazar Controles para que se actualicen automáticamente los valores de los controles.
             BindingControls();
-
-            //PDte!!! Crear atributo en BD CentroCoste
+            
             //PDte!!! Cuando recuperamos los datos hay que mostrar los valores en los combos de ubicacioón
+            //Falta estante y posicion.
+            // ajustar ela posicion del boton gyurdar y seguir
+            //PDTE!!! VAlidar los atributos obligatorios, antes probar el mnesaje de error.
 
             //Establecer estado de los controles
             ControlsState();
@@ -155,6 +157,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             Engine.BindingControlProperty(cmbCostCenter, "CentroCosteId");
 
             //Controles Combo Ubicación
+            //El valor de la posicion es el que nos indica la ubicación exacta.
             Engine.BindingControlProperty(cmbPosition, "UbiId");            
 
             //Otros Controles
@@ -277,11 +280,40 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
                 Engine.ComboBoxFormat(cmbDefaultUbication, "Descripcion", "AlmId", storageList);
 
+                if(Operation == EnumOperationType.Modify)
+                {
+                    if(Caja.UbiId!= null)
+                    {
+                        //Asignamos el valor y ahora hay que recuperar los otros datos de la ubicación
+                        var storage = BaseModelClient.Service.AlmacenesUbicaciones_Select(new AlmacenesUbicaciones()
+                            { UbiId = Caja.UbiId });
+                        if(storage!= null)
+                        {
+                            cmbDefaultUbication.SelectedValue = storage.AlmId;
+
+                            //Cargamos los combos de la estructura.
+                            var storageStructure = BaseModelClient.Service.AlmacenesUbicaciones_GetStructure(new AlmacenesUbicaciones()
+                            { Bloque = storage.Bloque, Estante = storage.Estante, Posicion = storage.Posicion, AlmId = storage.AlmId });
+                            LoadDefaultUbicationSelectedSet(storageStructure);
+
+                            cmbBlock.SelectedValue = storage.Bloque;
+                            cmbSelf.SelectedValue = storage.Estante;
+                            cmbPosition.SelectedValue = storage.Posicion;
+
+                        }                        
+                    }
+                }
+
             }
             catch (Exception ex)
             {
                 ErrorMessage.ShowErrorMessage(MethodBase.GetCurrentMethod().Name, ex.Message);
             }
+        }
+
+        private void LoadDefaultUbicationSelectedSet(AlmacenesUbicaciones[] storageStructure)
+        {
+            Engine.ComboBoxFormat(cmbBlock, "Bloque", "Bloque", storageStructure);
         }
 
         private void MethodsSteriLoad()
@@ -976,6 +1008,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         private void btnSaveContinue_Click(object sender, EventArgs e)
         {
             //Hay que asociar manualmente los métodos.
+            //Crear metodo para limpiar código.
+            //Añadir try catch para mostrar mesaje error.
             Caja.TipoLavId1 = FirstWashingMethodSelected?.TipoLavId;
             Caja.TipoLavId2 = SecondWashingMethodSelected?.TipoLavId;
             Caja.TipoLavId3 = ThirdWashingMethodSelected?.TipoLavId;

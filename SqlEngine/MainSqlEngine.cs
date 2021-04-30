@@ -109,7 +109,7 @@ namespace SqlEngine
 
         #region Gestión Tipo Query
 
-        //Sobreescritura del método genérico para indicar un procedimiento en concreto
+        //Sobrecarga del método genérico para indicar un procedimiento en concreto
         public static List<T> IsSelectList<T>(T model, string procedureName)
         {
             try
