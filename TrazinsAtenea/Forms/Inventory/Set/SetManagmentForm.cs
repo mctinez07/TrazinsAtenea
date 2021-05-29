@@ -1014,17 +1014,30 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         }
 
         #region Main Buttons Actions
+
+        //Guarda y vuelve abrir la pantalla de gestión de cajas
         private void btnSaveContinue_Click(object sender, EventArgs e)
         {
+
             //Este boton solo actúa cuando la caja es nueva.
             SaveSetModel(true); 
             
+        }
+
+        //Guarda y sale a la pantalla principal.
+        private void btnSaveExit_Click(object sender, EventArgs e)
+        {
+            SaveSetModel(false);
+            this.Close();
         }
 
         private void SaveSetModel(bool openFormAgain)
         {
             try
             {
+                //Comprobar los campos obligatorios.
+                if(!CheckMandatoryAtributtes())
+                    return;
                 //Hay que asociar manualmente los métodos.
                 SetComboMethodsValuesToModel();
 
@@ -1052,6 +1065,31 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         }
 
+        //Método que comprueba los campos obligatorios.
+        private bool CheckMandatoryAtributtes()
+        {
+            if(string.IsNullOrEmpty(Caja.Descripcion)|| Caja.EspId == null)
+            {
+                if (string.IsNullOrEmpty(Caja.Descripcion))
+                {
+                    string[] mandatoryAtributtes = new string[1];
+                    mandatoryAtributtes[0] = lblSetName.Text;
+                    Engine.OpenMessageForm(84, mandatoryAtributtes);
+                    return false;
+                }
+
+                if(Caja.EspId == null)
+                {
+                    string[] mandatoryAtributtes = new string[1];
+                    mandatoryAtributtes[0] = lblSpeciality.Text;
+                    Engine.OpenMessageForm(84, mandatoryAtributtes);
+                    return false;
+                }
+                
+            }
+            return true;
+        }
+
         private void SetComboMethodsValuesToModel()
         {
             Caja.TipoLavId1 = FirstWashingMethodSelected?.TipoLavId;
@@ -1069,11 +1107,6 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         }
         #endregion
 
-        //Guarda y sale a la pantalla principal.
-        private void btnSaveExit_Click(object sender, EventArgs e)
-        {
-            SaveSetModel(false);
-            this.Close();
-        }
+        
     }
 }

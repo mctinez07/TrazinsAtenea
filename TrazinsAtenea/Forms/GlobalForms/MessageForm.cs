@@ -20,7 +20,6 @@ namespace TrazinsAtenea.Forms.GlobalForms
         private string Lang;
         private int MessageId;
 
-        //Pendiente desarrollo recuperar mensaje desde DB
         //Es posible que cambie el titulo según el tipo de mensaje.
 
         public MessageForm(int messageId)

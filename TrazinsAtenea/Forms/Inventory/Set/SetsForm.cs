@@ -14,6 +14,7 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Columns;
 using System.Reflection;
 using Models.Inventory;
+using DevExpress.XtraGrid.Controls;
 
 namespace TrazinsAtenea.Forms.Inventory.Set
 {
@@ -24,7 +25,22 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         public SetsForm()
         {
             InitializeComponent();
-            this.BaseModelClient = BaseModelClient.Instance;            
+            this.BaseModelClient = BaseModelClient.Instance;
+            gdcSet.Layout += GridLayout_FindPanel;
+        }
+
+        private void GridLayout_FindPanel(object sender, LayoutEventArgs e)
+        {
+            if (gdvSets.IsFindPanelVisible)
+            {
+                FindControl findPanel = gdvSets.GridControl.Controls.Find("FindControlCore", false).FirstOrDefault() as FindControl;
+
+                if (findPanel != null)
+                {
+                    findPanel.FindEdit.Font = new Font("Trebuchet MS", 14);
+                    findPanel.Width = 400;
+                }
+            }
         }
 
         private void GridFormat(GridView gridView)
@@ -33,6 +49,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             {
                 item.Caption = Engine.GetLanguageResource(item.Name);
             }
+
+            
         }
 
         private void SetsForm_Load(object sender, EventArgs e)
@@ -75,5 +93,6 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             frm.ShowDialog();
             UpdateDatasource();
         }
+
     }
 }

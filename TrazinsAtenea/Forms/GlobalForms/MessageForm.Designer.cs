@@ -198,10 +198,10 @@
         private DevExpress.XtraEditors.SimpleButton btnYes;
         private DevExpress.XtraEditors.SimpleButton btnNo;
         private System.Windows.Forms.PictureBox pcbMessageIcon;
-        private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Label lblMessageTitle;
         private DevExpress.XtraEditors.SimpleButton btnAccept;
         private System.Windows.Forms.Panel pnlExit;
         private System.Windows.Forms.PictureBox pcbExit;
+        public System.Windows.Forms.Label lblMessage;
     }
 }

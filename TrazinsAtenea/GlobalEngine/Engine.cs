@@ -83,6 +83,18 @@ namespace TrazinsAtenea.GlobalEngine
             return messageForm.DialogResult;
         }
 
+        //No funciona!!!
+        //Método para mostrar el formulario de mensajes para el usuario con información añadida
+        public static DialogResult OpenMessageForm(int messageId, params object[] args)
+        {
+            MessageForm messageForm = new MessageForm(messageId);
+            var b = messageForm.lblMessage.Text;
+            messageForm.lblMessage.Text = string.Format(messageForm.lblMessage.Text, args);
+            var a = messageForm.lblMessage.Text;
+            messageForm.ShowDialog();
+            return messageForm.DialogResult;
+        }
+
         #endregion
 
         //Método para cargar y dar formato a los comboboxes.
