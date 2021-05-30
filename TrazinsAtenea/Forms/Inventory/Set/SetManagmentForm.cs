@@ -95,16 +95,14 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 LoadComboBoxInformation();
 
                 //Enlazar Controles para que se actualicen automáticamente los valores de los controles.
-                BindingControls();
-
-                // ajustar ela posicion del boton gyurdar y seguir
-                //PDTE!!! VAlidar los atributos obligatorios, antes probar el mnesaje de error.
+                BindingControls();                
 
                 //Establecer estado de los controles
                 ControlsState();
 
                 Caja.HosId = BaseModelClient.BaseModel.HosId;
                 Caja.ChId = BaseModelClient.BaseModel.ChId;
+                Caja.CHIdPropietario = Caja.ChId;//Pendiente saber si es necesaria esta propiedad
 
                 splashScreenManager1.CloseWaitForm();
 
@@ -1018,10 +1016,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         //Guarda y vuelve abrir la pantalla de gestión de cajas
         private void btnSaveContinue_Click(object sender, EventArgs e)
         {
-
             //Este boton solo actúa cuando la caja es nueva.
-            SaveSetModel(true); 
-            
+            SaveSetModel(true);             
         }
 
         //Guarda y sale a la pantalla principal.
@@ -1031,6 +1027,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             this.Close();
         }
 
+        //Método que gestiona el guardado del modelo y la apertura del formulario
         private void SaveSetModel(bool openFormAgain)
         {
             try
@@ -1061,10 +1058,12 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 {
                     SetManagmentForm frm = new SetManagmentForm
                     {
-                        Caja = Caja,
+                        //Le pasamos la caja obtenida al insertar
+                        Caja = res,
                         Operation = EnumOperationType.Modify
                     };
 
+                    //CAmbiar cuando cerrar para que no queden dos forms Abiertos??
                     this.Close();
                     frm.ShowDialog();
                 }                
@@ -1074,6 +1073,22 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 ErrorMessage.ShowErrorMessage(MethodBase.GetCurrentMethod().Name, ex.Message);
             }
 
+        }
+
+        //Guarda los datos actuales manteniendo el formulario abierto
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {                
+                var res = BaseModelClient.Service.Caja_Update(Caja);
+                
+                Caja = res;
+            }
+            catch (Exception ex )
+            {
+                ErrorMessage.ShowErrorMessage(MethodBase.GetCurrentMethod().Name, ex.Message);
+            }
+            
         }
 
         //Método que comprueba los campos obligatorios.
@@ -1101,6 +1116,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             return true;
         }
 
+        //Método que asigna los valores de los combo por que no se pueden elazar
         private void SetComboMethodsValuesToModel()
         {
             Caja.TipoLavId1 = FirstWashingMethodSelected?.TipoLavId;
@@ -1111,11 +1127,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             Caja.EstId3 = ThirdSteriMethodSelected?.EstId;
         }
 
-        //Guarda los datos actuales
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            var a = Caja;
-        }
+        
         #endregion
 
         

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -62,8 +63,10 @@ namespace Models.Inventory
             get { return _descripcion; }
             set
             {
-                if (value == Descripcion) return;
+                //if (value == Descripcion) return;
+                //_descripcion = value;
                 _descripcion = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("Descripcion"));
             }
         }
 

@@ -81,7 +81,6 @@ namespace SqlEngine
             }
             catch (Exception ex)
             {
-
                 throw new Exception("Error en OpenConnection: " + ex.Message);
             }
             
