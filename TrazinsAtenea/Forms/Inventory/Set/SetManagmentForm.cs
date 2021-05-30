@@ -1041,9 +1041,20 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 //Hay que asociar manualmente los métodos.
                 SetComboMethodsValuesToModel();
 
-                //Guardamos la caja y volvemos a cargar el from cerrando este pero con las nuevas secciones.
-                //Pendiente clase intermedia que gestione el tipo de operacion y las auditorias.
-                var res = BaseModelClient.Service.Caja_Insert(Caja);
+                //Gestiones del modelo según el tipo de operación.          
+                Caja res = new Caja();
+
+                switch (Operation)
+                {
+                    case EnumOperationType.New:
+                        res = BaseModelClient.Service.Caja_Insert(Caja);
+                        break;
+                    case EnumOperationType.Modify:
+                        res = BaseModelClient.Service.Caja_Update(Caja);
+                        break;                    
+                    default:
+                        break;
+                }               
 
                 //Para la gestión del formulario
                 if (openFormAgain)

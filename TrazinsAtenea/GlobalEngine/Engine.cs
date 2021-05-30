@@ -83,7 +83,7 @@ namespace TrazinsAtenea.GlobalEngine
             return messageForm.DialogResult;
         }
 
-        //No funciona!!!
+        //Modificar funcionamiento!!!
         //Método para mostrar el formulario de mensajes para el usuario con información añadida
         public static DialogResult OpenMessageForm(int messageId, params object[] args)
         {
@@ -165,9 +165,9 @@ namespace TrazinsAtenea.GlobalEngine
            where T : System.Attribute
         {
             return prop.GetCustomAttributes(typeof(T), true).Cast<T>().FirstOrDefault();
-        }        
+        }
 
-        #endregion       
+        #endregion        
 
     }
     
