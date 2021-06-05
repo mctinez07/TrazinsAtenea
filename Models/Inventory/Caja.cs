@@ -78,8 +78,10 @@ namespace Models.Inventory
             get { return _espId; }
             set
             {
-                if (value == EspId) return;
+                //if (value == EspId) return;
+                //_espId = value;
                 _espId = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("EspId"));
             }
         }
 

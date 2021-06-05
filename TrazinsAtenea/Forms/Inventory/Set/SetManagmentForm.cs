@@ -27,7 +27,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 {
     public partial class SetManagmentForm : DevExpress.XtraEditors.XtraForm
     {
-        public Caja Caja = new Caja();
+        public Caja Caja = new Caja();        
 
         //Creamos la instancia con los valores cargados en memoria
         private BaseModelClient BaseModelClient = BaseModelClient.Instance;
@@ -87,31 +87,38 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             try
             {
-                MultilanguageFormat();
-
-                splashScreenManager1.ShowWaitForm();
-
-                //CargarCombos
-                LoadComboBoxInformation();
-
-                //Enlazar Controles para que se actualicen automáticamente los valores de los controles.
-                BindingControls();                
-
-                //Establecer estado de los controles
-                ControlsState();
-
-                Caja.HosId = BaseModelClient.BaseModel.HosId;
-                Caja.ChId = BaseModelClient.BaseModel.ChId;
-                Caja.CHIdPropietario = Caja.ChId;//Pendiente saber si es necesaria esta propiedad
-
-                splashScreenManager1.CloseWaitForm();
+                LoadDataToForm();               
 
             }
             catch (Exception ex)
             {
-                ErrorMessage.ShowErrorMessage(MethodBase.GetCurrentMethod().Name, ex.Message);
-            }
+                splashScreenManager1.CloseWaitForm();
+                ErrorMessage.ShowErrorMessage(MethodBase.GetCurrentMethod().Name, ex.Message);                
+            }            
                         
+        }
+
+        //Método que carga todos los valores para crear el modelo
+        private void LoadDataToForm()
+        {
+            MultilanguageFormat();
+
+            splashScreenManager1.ShowWaitForm();
+
+            //CargarCombos
+            LoadComboBoxInformation();
+
+            //Enlazar Controles para que se actualicen automáticamente los valores de los controles.
+            BindingControls();
+
+            //Establecer estado de los controles
+            ControlsState();
+
+            Caja.HosId = BaseModelClient.BaseModel.HosId;
+            Caja.ChId = BaseModelClient.BaseModel.ChId;
+            Caja.CHIdPropietario = Caja.ChId;//Pendiente saber si es necesaria esta propiedad
+
+            splashScreenManager1.CloseWaitForm();
         }
 
         private void ControlsState()
@@ -130,14 +137,14 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
             if (Operation == EnumOperationType.Modify)
             {                
-                btnSaveContinue.Visible = false;                
-                txtSetName.Text = this.Caja.Descripcion;
+                btnSaveContinue.Visible = false;
+                btnSave.Visible = true;
             }
 
             wmpVideo.Visible = false;
             wmpVideo.settings.autoStart = false;
             wmpVideo.settings.mute = true;
-        }
+        }        
 
         private void BindingControls()
         {
@@ -1056,16 +1063,15 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 //Para la gestión del formulario
                 if (openFormAgain)
                 {
-                    SetManagmentForm frm = new SetManagmentForm
+                    //Nos aseguramos de liberar recursos
+                    this.Close();
+                    this.Dispose();
+                    SetManagmentForm fr = new SetManagmentForm()
                     {
-                        //Le pasamos la caja obtenida al insertar
                         Caja = res,
                         Operation = EnumOperationType.Modify
                     };
-
-                    //CAmbiar cuando cerrar para que no queden dos forms Abiertos??
-                    this.Close();
-                    frm.ShowDialog();
+                    fr.ShowDialog();
                 }                
             }
             catch (Exception ex)
@@ -1079,8 +1085,11 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
-            {                
+            {
+                //Hay que obtener manualmente los controles, el binding solo funciona una vez
+                             
                 var res = BaseModelClient.Service.Caja_Update(Caja);
+                
                 
                 Caja = res;
             }

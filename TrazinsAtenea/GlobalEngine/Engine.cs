@@ -120,11 +120,11 @@ namespace TrazinsAtenea.GlobalEngine
         }
 
         #region Enlace de propiedades a Control   
-        
+        public static DataBindingList Enlaces { get; protected set; }
         //Probar cuando es combo y enlazar SelectedItem??
         public static void BindingControlProperty(Control ctrl, string property)
         {
-            if(ctrl is ListControl)
+            if (ctrl is ListControl)
                 ctrl.DataBindings.Add("SelectedValue", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);
             else if(ctrl is CheckBox || ctrl is CheckEdit)
                 ctrl.DataBindings.Add("CheckState", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);
@@ -134,7 +134,7 @@ namespace TrazinsAtenea.GlobalEngine
                 ctrl.DataBindings.Add("IsOn", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);
             else
             {
-                ctrl.DataBindings.Add("Text", _bindedModel, property, false, DataSourceUpdateMode.OnPropertyChanged);
+                ctrl.DataBindings.Add("Text", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);
 
                 //Asignamos el tamaño según las propiedades del modelo.
                 if (ctrl is TextEdit || ctrl is TextBox)
@@ -168,7 +168,21 @@ namespace TrazinsAtenea.GlobalEngine
         }
 
         #endregion        
+        public class DataBindingList : List<Binding>
+        {
+            public DataBindingList() : base()
+            {
+            }
 
+            public Binding this[Control control, string controlPropertyName, string dataSourcePropertyName]
+            {
+                get
+                {
+                    return this.FirstOrDefault((b) =>
+                        (b.Control == control) && (b.PropertyName == controlPropertyName) && (b.BindingMemberInfo.BindingField == dataSourcePropertyName));
+                }
+            }
+        }
     }
     
 }
