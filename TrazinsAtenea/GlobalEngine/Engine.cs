@@ -134,7 +134,7 @@ namespace TrazinsAtenea.GlobalEngine
                 ctrl.DataBindings.Add("IsOn", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);
             else
             {
-                ctrl.DataBindings.Add("Text", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);
+                ctrl.DataBindings.Add("Text", _bindedModel, property, false, DataSourceUpdateMode.OnPropertyChanged);
 
                 //Asignamos el tamaño según las propiedades del modelo.
                 if (ctrl is TextEdit || ctrl is TextBox)

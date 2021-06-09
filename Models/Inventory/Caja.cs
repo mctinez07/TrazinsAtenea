@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Models.Inventory
 {
     [DataContract(Namespace = "http://WSTrazinsAtenea.com")]
-    public class Caja : BaseModel
+    public class Caja : BaseModel, INotifyPropertyChanged
     {
         private string _cajaId;
 
@@ -435,5 +435,21 @@ namespace Models.Inventory
                 _observLav = value;
             }
         }
+
+        #region INotifyPropertyChanged     
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public void InvokePropertyChanged(PropertyChangedEventArgs e)
+        {
+            PropertyChanged?.Invoke(this, e);
+        }
+
+        #endregion
     }
 }

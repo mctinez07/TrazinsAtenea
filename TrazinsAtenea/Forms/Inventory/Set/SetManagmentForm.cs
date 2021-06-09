@@ -100,7 +100,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         //Método que carga todos los valores para crear el modelo
         private void LoadDataToForm()
-        {
+        {            
             MultilanguageFormat();
 
             splashScreenManager1.ShowWaitForm();
@@ -1086,11 +1086,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             try
             {
-                //Hay que obtener manualmente los controles, el binding solo funciona una vez
-                             
-                var res = BaseModelClient.Service.Caja_Update(Caja);
-                
-                
+                //Hay que obtener manualmente los controles, el binding solo funciona una vez                          
+                var res = BaseModelClient.Service.Caja_Update(Caja); 
                 Caja = res;
             }
             catch (Exception ex )
