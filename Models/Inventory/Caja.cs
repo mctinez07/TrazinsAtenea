@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Models.Inventory
 {
     [DataContract(Namespace = "http://WSTrazinsAtenea.com")]
-    public class Caja : BaseModel, INotifyPropertyChanged
+    public class Caja : BaseModel
     {
         private string _cajaId;
 
@@ -65,8 +65,8 @@ namespace Models.Inventory
             {
                 //if (value == Descripcion) return;
                 //_descripcion = value;
-                _descripcion = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("Descripcion"));
+                //_descripcion = value;
+                //InvokePropertyChanged(new PropertyChangedEventArgs("Descripcion"));
             }
         }
 
@@ -80,8 +80,8 @@ namespace Models.Inventory
             {
                 //if (value == EspId) return;
                 //_espId = value;
-                _espId = value;
-                InvokePropertyChanged(new PropertyChangedEventArgs("EspId"));
+                //_espId = value;
+                //InvokePropertyChanged(new PropertyChangedEventArgs("EspId"));
             }
         }
 
@@ -438,17 +438,17 @@ namespace Models.Inventory
 
         #region INotifyPropertyChanged     
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        //public event PropertyChangedEventHandler PropertyChanged;
 
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        //protected virtual void OnPropertyChanged(string propertyName)
+        //{
+        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        //}
 
-        public void InvokePropertyChanged(PropertyChangedEventArgs e)
-        {
-            PropertyChanged?.Invoke(this, e);
-        }
+        //public void InvokePropertyChanged(PropertyChangedEventArgs e)
+        //{
+        //    PropertyChanged?.Invoke(this, e);
+        //}
 
         #endregion
     }

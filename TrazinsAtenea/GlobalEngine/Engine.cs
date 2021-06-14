@@ -122,7 +122,7 @@ namespace TrazinsAtenea.GlobalEngine
         #region Enlace de propiedades a Control   
         public static DataBindingList Enlaces { get; protected set; }
         //Probar cuando es combo y enlazar SelectedItem??
-        public static void BindingControlProperty(Control ctrl, string property)
+        public static void BindingControlProperty(Control ctrl,string property)
         {
             if (ctrl is ListControl)
                 ctrl.DataBindings.Add("SelectedValue", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);
@@ -167,7 +167,45 @@ namespace TrazinsAtenea.GlobalEngine
             return prop.GetCustomAttributes(typeof(T), true).Cast<T>().FirstOrDefault();
         }
 
-        #endregion        
+        public virtual CustomBinding Enlazar(Control ctrl, string propiedadControl, object modelo, string propiedadModelo, bool disableParsingAndFormatting = false)
+        {
+            ctrl.Validated -= new EventHandler(ctrl_Validated);
+            ctrl.Validated += new EventHandler(ctrl_Validated);
+
+            var binding = new CustomBinding(propiedadControl, modelo, propiedadModelo);
+            binding.DisableBaseParsingAndFormatting = disableParsingAndFormatting;
+
+            var existing = Enlaces[ctrl, propiedadControl, propiedadModelo];
+
+            if (existing != null)
+            {
+                ctrl.DataBindings.Remove(existing);
+                Enlaces.Remove(existing);
+            }
+
+            if (modelo is ModModelos.Bases.ModeloBase)
+                Configurar(ctrl, propiedadControl, (ModeloBase)modelo, propiedadModelo);
+
+            ctrl.DataBindings.Add(binding);
+            Enlaces.Add(binding);
+
+            if (!disableParsingAndFormatting && ctrl is ListControl)
+            {
+                binding.ReadValue();
+                binding.WriteValue();
+            }
+            else
+            {
+                if (binding.Control is TTextBox)
+                    binding.NullValue = "";
+            }
+
+            return binding;
+
+        }
+
+
+        #endregion
         public class DataBindingList : List<Binding>
         {
             public DataBindingList() : base()

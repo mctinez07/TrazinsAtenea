@@ -154,28 +154,28 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             Engine._bindedModel = Caja;            
 
             ////Controles TextBox
-            Engine.BindingControlProperty(txtSetName,"Descripcion");
+            Engine.BindingControlProperty(txtSetName, "Descripcion");
             Engine.BindingControlProperty(speWheight, "Peso");
-            Engine.BindingControlProperty(txtSetCode, "CodigoCaja");
-            Engine.BindingControlProperty(txtRemarksAssemblyPackaging, "ObservEmp");
-            Engine.BindingControlProperty(txtRemarksSteri, "ObservCic");
-            Engine.BindingControlProperty(txtRemarksWashes, "ObservLav");
+            //Engine.BindingControlProperty(txtSetCode, "CodigoCaja");
+            //Engine.BindingControlProperty(txtRemarksAssemblyPackaging, "ObservEmp");
+            //Engine.BindingControlProperty(txtRemarksSteri, "ObservCic");
+            //Engine.BindingControlProperty(txtRemarksWashes, "ObservLav");
 
-            //Controles Combo Cabecera
+            ////Controles Combo Cabecera
             Engine.BindingControlProperty(cmbSpeciality, "EspId");
-            Engine.BindingControlProperty(cmbSetType, "TipoCajaId");
+            //Engine.BindingControlProperty(cmbSetType, "TipoCajaId");
             Engine.BindingControlProperty(cmbProperty, "HosIdPropietario");
-            Engine.BindingControlProperty(cmbPackage, "EmbId");
-            Engine.BindingControlProperty(cmbCostCenter, "CentroCosteId");
+            //Engine.BindingControlProperty(cmbPackage, "EmbId");
+            //Engine.BindingControlProperty(cmbCostCenter, "CentroCosteId");
 
-            //Controles Combo Ubicación
-            //El valor de la posicion es el que nos indica la ubicación exacta.
-            Engine.BindingControlProperty(cmbPosition, "UbiId");            
+            ////Controles Combo Ubicación
+            ////El valor de la posicion es el que nos indica la ubicación exacta.
+            //Engine.BindingControlProperty(cmbPosition, "UbiId");            
 
-            //Otros Controles
-            Engine.BindingControlProperty(speMaintenance, "MantCiclos");
-            Engine.BindingControlProperty(tgsYesNo, "Activa");
-            Engine.BindingControlProperty(ckbSetSample, "CajaMuestra");
+            ////Otros Controles
+            //Engine.BindingControlProperty(speMaintenance, "MantCiclos");
+            //Engine.BindingControlProperty(tgsYesNo, "Activa");
+            //Engine.BindingControlProperty(ckbSetSample, "CajaMuestra");
         }
 
         private void MultilanguageFormat()
@@ -1087,7 +1087,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             try
             {
                 //Hay que obtener manualmente los controles, el binding solo funciona una vez                          
-                var res = BaseModelClient.Service.Caja_Update(Caja); 
+                var res = BaseModelClient.Service.Caja_Update(Caja);
                 Caja = res;
             }
             catch (Exception ex )
@@ -1096,6 +1096,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             }
             
         }
+
+        
 
         //Método que comprueba los campos obligatorios.
         private bool CheckMandatoryAtributtes()
