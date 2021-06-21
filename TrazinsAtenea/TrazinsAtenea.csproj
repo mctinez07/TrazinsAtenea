@@ -145,6 +145,8 @@
       <DependentUpon>SetsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalEngine\BaseModelClient.cs" />
+    <Compile Include="GlobalEngine\BindingSet.cs" />
+    <Compile Include="GlobalEngine\Comun.cs" />
     <Compile Include="GlobalEngine\Engine.cs" />
     <Compile Include="GlobalEngine\ErrorMessage.cs" />
     <Compile Include="GlobalResources\TrazinsAtenea.Designer.cs">

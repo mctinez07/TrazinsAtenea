@@ -214,6 +214,17 @@ namespace Models
                 return Activator.CreateInstance(t);
         }
 
+        public virtual IEnumerable<ValidationResult> ValidateProperty(string propertyName, object value)
+        {
+            var context = new ValidationContext(this, serviceProvider: null, items: null);
+            context.MemberName = propertyName;
+
+            var results = new List<ValidationResult>();
+            var isValid = Validator.TryValidateProperty(value, context, results);
+
+            return results;
+        }
+
         #endregion
 
     }
