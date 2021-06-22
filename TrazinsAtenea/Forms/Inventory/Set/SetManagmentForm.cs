@@ -1055,14 +1055,14 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             //Si no se asignado es necesario el texto escrito en textbox
             //La asociacion en tabla es con la cajaId por lo tanto tiene que estar creada 
             //para añadir los elementos.
-            if (string.IsNullOrEmpty(txtSetName.Text))
+            if (string.IsNullOrEmpty(Caja.CajaId))
             {
                 MessageForm frmMessage = new MessageForm(193);
                 frmMessage.ShowDialog();
                 return;
             }
 
-            GroupsForm frm = new GroupsForm(txtSetName.Text);
+            GroupsForm frm = new GroupsForm(Caja);
             frm.ShowDialog();
         }
 

@@ -9,20 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using TrazinsAtenea.GlobalEngine;
+using Models.Inventory;
 
 namespace TrazinsAtenea.Forms.Inventory.Group
 {
     public partial class GroupsForm : DevExpress.XtraEditors.XtraForm
     {
-        public GroupsForm(string setName)
+        private Caja Caja;
+        public GroupsForm(Caja caja)
         {
             InitializeComponent();
-            
-            lblSetName.Text = setName;
+            this.Caja = caja;
+            lblSetName.Text = caja.Descripcion;
             Multilanguage();
         }
-
-        //Pasar a global engine!!!!
+        
         private void Multilanguage()
         {
             foreach (PanelControl panel in this.Controls)
@@ -46,6 +47,7 @@ namespace TrazinsAtenea.Forms.Inventory.Group
         private void btnGroupNew_Click(object sender, EventArgs e)
         {
             GroupManagmentForm frm = new GroupManagmentForm();
+            frm.Caja = this.Caja;
             frm.ShowDialog();
         }
     }

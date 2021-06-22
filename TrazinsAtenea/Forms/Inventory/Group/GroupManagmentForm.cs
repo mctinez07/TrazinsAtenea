@@ -9,21 +9,37 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using TrazinsAtenea.GlobalEngine;
+using Models.Inventory;
 
 namespace TrazinsAtenea.Forms.Inventory.Group
 {
     public partial class GroupManagmentForm : DevExpress.XtraEditors.XtraForm
     {
+        public Caja Caja;
+
         public GroupManagmentForm()
         {
             InitializeComponent();
             //Traducir
-            //si es edición rellenar los campos
+            Multilanguage();
+            //si es edición rellenar los campos???
+
             
         }
 
-        private void pcbBack_Click(object sender, EventArgs e)
+        private void Multilanguage()
         {
+            foreach (Control item in this.Controls)
+            {
+                if(item is LabelControl)
+                {
+                    Engine.GetLanguageResource(item.Name);
+                }
+            }
+        }
+
+        private void pcbBack_Click(object sender, EventArgs e)
+        {            
             this.Close();
         }
 

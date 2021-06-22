@@ -211,4 +211,13 @@
   <data name="SaveExit" xml:space="preserve">
     <value>Save and Exit</value>
   </data>
+  <data name="GroupObservations" xml:space="preserve">
+    <value>Group remarks</value>
+  </data>
+  <data name="GroupName" xml:space="preserve">
+    <value>Group name</value>
+  </data>
+  <data name="SaveContinue" xml:space="preserve">
+    <value>Save and continue</value>
+  </data>
 </root>
