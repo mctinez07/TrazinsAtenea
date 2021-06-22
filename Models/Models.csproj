@@ -44,7 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseModel.cs" />
-    <Compile Include="Bases\EventArgs.cs" />
     <Compile Include="Inventory\Caja.cs" />
     <Compile Include="Inventory\CajaImagen.cs" />
     <Compile Include="Inventory\CajasGrupo.cs" />
@@ -65,6 +64,9 @@
       <Project>{57C6B4A2-8F21-4BA8-A8D7-82D89C4AE397}</Project>
       <Name>Utils</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bases\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

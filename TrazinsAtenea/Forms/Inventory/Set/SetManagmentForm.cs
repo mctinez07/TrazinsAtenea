@@ -22,12 +22,13 @@ using Models.Masters.Storage;
 using Models.Inventory;
 using Models.Processes.Methods;
 using Models.Masters;
+using TrazinsAtenea.Controls;
 
 namespace TrazinsAtenea.Forms.Inventory.Set
 {
     public partial class SetManagmentForm : DevExpress.XtraEditors.XtraForm
     {
-        public Caja Caja = new Caja();        
+        public Caja Caja = new Caja();
 
         //Creamos la instancia con los valores cargados en memoria
         private BaseModelClient BaseModelClient = BaseModelClient.Instance;
@@ -49,7 +50,6 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             get { return (Almacen)cmbDefaultUbication.SelectedItem; }
         }
-
         private Limpieza FirstWashingMethodSelected
         {
             get { return (Limpieza)cmbFirstMethodWashing.SelectedItem; }
@@ -62,7 +62,6 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             get { return (Limpieza)cmbThirdMethodWashing.SelectedItem; }
         }
-
         private Esterilizacion FirstSteriMethodSelected
         {
             get { return (Esterilizacion)cmbFirstMethodSteri.SelectedItem; }
@@ -74,6 +73,26 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         private Esterilizacion ThirdSteriMethodSelected
         {
             get { return (Esterilizacion)cmbThirdMethodSteri.SelectedItem; }
+        }
+        private Embalaje PackageSelected
+        {
+            get { return (Embalaje)cmbPackage.SelectedItem; }
+        }
+        private CentroCoste CostCenterSelected
+        {
+            get { return (CentroCoste)cmbCostCenter.SelectedItem; }
+        }
+        private Especialidad SpecilitySelected
+        {
+            get { return (Especialidad)cmbSpeciality.SelectedItem; }
+        }
+        private TipoCaja SetTypeSelected
+        {
+            get { return (TipoCaja)cmbSetType.SelectedItem; }
+        }
+        private Hospital OwnerSelected
+        {
+            get { return (Hospital)cmbProperty.SelectedItem; }
         }
 
         #endregion
@@ -108,8 +127,9 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             //CargarCombos
             LoadComboBoxInformation();
 
-            //Enlazar Controles para que se actualicen automáticamente los valores de los controles.
-            BindingControls();
+            //Enlazar Controles para que se actualicen automáticamente los valores de los controles.    
+            //Crear metodo que coja los valores del atributo
+            //BindingControls();
 
             //Establecer estado de los controles
             ControlsState();
@@ -146,36 +166,36 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             wmpVideo.settings.mute = true;
         }        
 
+        //No funciona, lo edjo por si en un futuro lo podemos cambiar.
         private void BindingControls()
         {
-            //Enlazar las propiedades a los controles            
-            //seguir paso a paso para saber como funciona es posible que sobren métodos
+            //Quitar el enlace y configurar solo las carcteristicas de los controle
+            Engine._bindedModel = Caja;          
 
-            Engine._bindedModel = Caja;            
-
-            ////Controles TextBox
+            //////Controles TextBox
             Engine.BindingControlProperty(txtSetName, "Descripcion");
             Engine.BindingControlProperty(speWheight, "Peso");
-            //Engine.BindingControlProperty(txtSetCode, "CodigoCaja");
-            //Engine.BindingControlProperty(txtRemarksAssemblyPackaging, "ObservEmp");
-            //Engine.BindingControlProperty(txtRemarksSteri, "ObservCic");
-            //Engine.BindingControlProperty(txtRemarksWashes, "ObservLav");
+            
+            Engine.BindingControlProperty(txtSetCode, "CodigoCaja");
+            Engine.BindingControlProperty(txtRemarksAssemblyPackaging, "ObservEmp");
+            Engine.BindingControlProperty(txtRemarksSteri, "ObservCic");
+            Engine.BindingControlProperty(txtRemarksWashes, "ObservLav");
 
             ////Controles Combo Cabecera
             Engine.BindingControlProperty(cmbSpeciality, "EspId");
-            //Engine.BindingControlProperty(cmbSetType, "TipoCajaId");
+            Engine.BindingControlProperty(cmbSetType, "TipoCajaId");
             Engine.BindingControlProperty(cmbProperty, "HosIdPropietario");
-            //Engine.BindingControlProperty(cmbPackage, "EmbId");
-            //Engine.BindingControlProperty(cmbCostCenter, "CentroCosteId");
+            Engine.BindingControlProperty(cmbPackage, "EmbId");
+            Engine.BindingControlProperty(cmbCostCenter, "CentroCosteId");
 
             ////Controles Combo Ubicación
             ////El valor de la posicion es el que nos indica la ubicación exacta.
-            //Engine.BindingControlProperty(cmbPosition, "UbiId");            
+            Engine.BindingControlProperty(cmbPosition, "UbiId");            
 
             ////Otros Controles
-            //Engine.BindingControlProperty(speMaintenance, "MantCiclos");
-            //Engine.BindingControlProperty(tgsYesNo, "Activa");
-            //Engine.BindingControlProperty(ckbSetSample, "CajaMuestra");
+            Engine.BindingControlProperty(speMaintenance, "MantCiclos");
+            Engine.BindingControlProperty(tgsYesNo, "Activa");
+            Engine.BindingControlProperty(ckbSetSample, "CajaMuestra");
         }
 
         private void MultilanguageFormat()
@@ -798,10 +818,10 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             {
                 foreach (Control item in panel.Controls)
                 {
-                    if (item is PictureBox)
+                    if (item is SetImageControl)
                     {
-                        var pictureBox = (PictureBox)item;
-                        if (pictureBox.Image != null)
+                        var pictureBox = (SetImageControl)item;
+                        if (pictureBox.ImagePictureBox.Image != null)
                         {
                             numImages++;
                         }
@@ -809,7 +829,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                         {
                             if (image != null)
                             {
-                                pictureBox.Image = image;
+                                pictureBox.ImagePictureBox.Image = image;
                                 return true;
                             }
                         }
@@ -853,14 +873,20 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             }
             if (cajaImagen.EsImagen)
             {
-                SearchEmptyPictureBox(cajaImagen.Image);
+                if (SearchEmptyPictureBox(cajaImagen.Image))
+                {
+                    //Asociar cajaid
+                    //Cambiar los controles de las imágenes
+                    //Borrardo lógico imágenes de bd
+                    BaseModelClient.Service.CajaImagen_Insert(cajaImagen);
+                }
             }
         }
 
         private void CreateImageModel(bool fromWebCam)
-        {
-            CajaImagen cajaImagen = new CajaImagen();
+        {            
             string type = string.Empty;
+            CajaImagen imageSet = new CajaImagen();
 
             if (fromWebCam)
             {
@@ -868,37 +894,29 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 {
                     //Creamos un nuevo modelo de CajaImagen desde la webcam
                     CapturedImage.Save(stream, ImageFormat.Jpeg);
-                    cajaImagen.Imagen = stream.ToArray();
-                    //cajaImagen.Image = CapturedImage;
-                    cajaImagen.Nombre = DateTime.Now.ToShortDateString().ToString();
-                    cajaImagen.Tipo = "image/jpeg";
+                    imageSet.Imagen = stream.ToArray();                    
+                    imageSet.Nombre = DateTime.Now.ToShortDateString().ToString();
+                    imageSet.Tipo = "image/jpeg";
                     type = "image";
                 }
-
-
             }
             else
             {
                 //Creamos un nuevo modelo de CajaImagen desde el archivo
-                cajaImagen.Imagen = System.IO.File.ReadAllBytes(ofdImageVideo.FileName);
-                cajaImagen.Nombre = ofdImageVideo.SafeFileName;
-                cajaImagen.Tipo = MIMEAssistant.GetMIMEType(ofdImageVideo.FileName);
-
+                imageSet.Imagen = System.IO.File.ReadAllBytes(ofdImageVideo.FileName);
+                imageSet.Nombre = ofdImageVideo.SafeFileName;
+                imageSet.Tipo = MIMEAssistant.GetMIMEType(ofdImageVideo.FileName);                
                 //Obtenemos el tipo de archivo para asignar el valor.
                 type = MIMEAssistant.FromFileName(ofdImageVideo.FileName).Type;
             }
 
             switch (type)
             {
-                case "image":
-                    //cajaImagen.EsImagen = true;
+                case "image":                    
 
                     //Obtenemos la imagen para mostrar en el picturebox
-                    using (MemoryStream ms = new MemoryStream(cajaImagen.Imagen))
+                    using (MemoryStream ms = new MemoryStream(imageSet.Imagen))
                     {
-                        /*cajaImagen.Image = Image.FromStream(ms);*/
-                        var weight = ms.Length;
-
                         if (!GetWeightImage(ms))
                         {
                             MessageBox.Show("Tamaño de imagen superior al permitido");
@@ -907,7 +925,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                         }
                     }
 
-                    AddImageVideo(cajaImagen, null);
+                    AddImageVideo(imageSet, null);
                     break;
 
                 case "video":
@@ -918,9 +936,17 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                         DialogResult = DialogResult.None;
                         return;
                     }
-                    //Falta probar tamaño de vídeos...
-                    //cajaImagen.EsVideo = true;
-                    AddImageVideo(cajaImagen, ofdImageVideo.FileName);
+                    using (MemoryStream ms = new MemoryStream(imageSet.Imagen))
+                    {
+                        if (!GetWeightVideo(ms))
+                        {
+                            MessageBox.Show("Tamaño video superior al permitido");
+                            DialogResult = DialogResult.None;
+                            return;
+                        }
+                    }
+                                 
+                    AddImageVideo(imageSet, ofdImageVideo.FileName);
                     break;
                 default:
                     break;
@@ -929,8 +955,18 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         private bool GetWeightImage(MemoryStream ms)
         {
-            //Falta probar tamaño de vídeos...
+            
             if (ms.Length > 3670016)//3,5 MB
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private bool GetWeightVideo(MemoryStream ms)
+        {
+            //Falta probar tamaño de vídeos...
+            if (ms.Length > 31457280)//30 MB
             {
                 return false;
             }
@@ -988,6 +1024,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         private void DeleteImageVideo(Control control)
         {
+            //Borrar de base de datos.
             if (control is PictureBox)
             {
                 var pcb = (PictureBox)control;
@@ -1035,15 +1072,18 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         }
 
         //Método que gestiona el guardado del modelo y la apertura del formulario
+        //Cambiar nombre argumento
         private void SaveSetModel(bool openFormAgain)
         {
             try
-            {
-                //Comprobar los campos obligatorios.
-                if(!CheckMandatoryAtributtes())
-                    return;
+            {                
                 //Hay que asociar manualmente los métodos.
                 SetComboMethodsValuesToModel();
+                SetControlsTopropierties();
+
+                //Comprobar los campos obligatorios.
+                if (!CheckMandatoryAtributtes())
+                    return;
 
                 //Gestiones del modelo según el tipo de operación.          
                 Caja res = new Caja();
@@ -1063,15 +1103,22 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 //Para la gestión del formulario
                 if (openFormAgain)
                 {
+                    xtpImageVideo.PageVisible = true;
+                    xtpInstrumentalSet.PageVisible = true;
+                    btnSaveContinue.Visible = false;
+                    btnSave.Visible = true;
+                    Operation = EnumOperationType.Modify;
+                    Caja.CajaId = res.CajaId;                    
                     //Nos aseguramos de liberar recursos
-                    this.Close();
-                    this.Dispose();
-                    SetManagmentForm fr = new SetManagmentForm()
-                    {
-                        Caja = res,
-                        Operation = EnumOperationType.Modify
-                    };
-                    fr.ShowDialog();
+                    //this.Close();
+                    //this.Dispose();
+                    //SetManagmentForm fr = new SetManagmentForm()
+                    //{
+                    //    Caja = res,
+                    //    Operation = EnumOperationType.Modify
+                    //};
+                    //fr.ShowDialog();
+
                 }                
             }
             catch (Exception ex)
@@ -1081,14 +1128,34 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         }
 
+        private void SetControlsTopropierties()
+        {
+            Caja.EspId = SpecilitySelected.EspId;
+            Caja.HosIdPropietario = OwnerSelected?.HosId;
+            Caja.TipoCajaId = SetTypeSelected?.Id;
+
+            Caja.EmbId = PackageSelected?.ConId;
+            Caja.CentroCosteId = CostCenterSelected?.Id;            
+            Caja.CodigoCaja = string.IsNullOrEmpty(txtSetCode.Text)? null: txtSetCode.Text;
+            Caja.Descripcion = txtSetName.Text;
+
+            Caja.Peso = speWheight.Value;
+            Caja.MantCiclos = Convert.ToInt32(speMaintenance.Value);
+            Caja.Activa = tgsYesNo.IsOn;
+            Caja.CajaMuestra = ckbSetSample.Checked;
+
+            Caja.ObservCic = txtRemarksSteri.Text;
+            Caja.ObservLav = txtRemarksWashes.Text;
+            Caja.ObservEmp = txtRemarksAssemblyPackaging.Text;
+        }
+
         //Guarda los datos actuales manteniendo el formulario abierto
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
                 //Hay que obtener manualmente los controles, el binding solo funciona una vez                          
-                var res = BaseModelClient.Service.Caja_Update(Caja);
-                Caja = res;
+                SaveSetModel(true);                 
             }
             catch (Exception ex )
             {

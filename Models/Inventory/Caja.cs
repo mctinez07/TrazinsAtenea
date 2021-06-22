@@ -21,8 +21,8 @@ namespace Models.Inventory
             get { return _cajaId; }
             set
             {
-                if (value == CajaId) return;
                 _cajaId = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("CajaId"));
             }
         }
 
@@ -35,8 +35,8 @@ namespace Models.Inventory
             get { return _cHIdPropietario; }
             set
             {
-                if (value == CHIdPropietario) return;
                 _cHIdPropietario = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("CHIdPropietario"));
             }
         }
 
@@ -49,8 +49,8 @@ namespace Models.Inventory
             get { return _hosIdPropietario; }
             set
             {
-                if (value == HosIdPropietario) return;
                 _hosIdPropietario = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("HosIdPropietario"));
             }
         }
 
@@ -65,8 +65,9 @@ namespace Models.Inventory
             {
                 //if (value == Descripcion) return;
                 //_descripcion = value;
-                //_descripcion = value;
-                //InvokePropertyChanged(new PropertyChangedEventArgs("Descripcion"));
+                _descripcion = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("Descripcion"));
+                
             }
         }
 
@@ -80,8 +81,8 @@ namespace Models.Inventory
             {
                 //if (value == EspId) return;
                 //_espId = value;
-                //_espId = value;
-                //InvokePropertyChanged(new PropertyChangedEventArgs("EspId"));
+                _espId = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("EspId"));                
             }
         }
 
@@ -94,8 +95,8 @@ namespace Models.Inventory
             get { return _especialidadDescripcion; }
             set
             {
-                if (value == EspecialidadDescripcion) return;
                 _especialidadDescripcion = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("EspecialidadDescripcion"));
             }
         }
 
@@ -107,8 +108,8 @@ namespace Models.Inventory
             get { return _activa; }
             set
             {
-                if (value == Activa) return;
                 _activa = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("Activa"));
             }
         }
 
@@ -121,8 +122,8 @@ namespace Models.Inventory
             get { return _codigoCaja; }
             set
             {
-                if (value == CodigoCaja) return;
                 _codigoCaja = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("CodigoCaja"));
             }
         }
 
@@ -138,8 +139,8 @@ namespace Models.Inventory
             }
             set
             {
-                if (value == CajaId_CodigoCaja) return;
                 _cajaId_CodigoCaja = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("CajaId_CodigoCaja"));
             }
         }
 
@@ -151,8 +152,8 @@ namespace Models.Inventory
             get { return _tipoCajaId; }
             set
             {
-                if (value == TipoCajaId) return;
                 _tipoCajaId = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("TipoCajaId"));
             }
         }
 
@@ -165,8 +166,8 @@ namespace Models.Inventory
             get { return _tipoCajaDescripcion; }
             set
             {
-                if (value == TipoCajaDescripcion) return;
                 _tipoCajaDescripcion = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("TipoCajaDescripcion"));
             }
         }
 
@@ -178,8 +179,8 @@ namespace Models.Inventory
             get { return _embId; }
             set
             {
-                if (value == EmbId) return;
                 _embId = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("EmbId"));
             }
         }
 
@@ -192,8 +193,8 @@ namespace Models.Inventory
             get { return _embalajeDescripcion; }
             set
             {
-                if (value == EmbalajeDescripcion) return;
                 _embalajeDescripcion = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("EmbalajeDescripcion"));
             }
         }
 
@@ -205,8 +206,8 @@ namespace Models.Inventory
             get { return _centroCosteId; }
             set
             {
-                if (value == CentroCosteId) return;
                 _centroCosteId = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("CentroCosteId"));
             }
         }
 
@@ -219,8 +220,8 @@ namespace Models.Inventory
             get { return _centroCosteDescripcion; }
             set
             {
-                if (value == CentroCosteDescripcion) return;
                 _centroCosteDescripcion = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("CentroCosteDescripcion"));
             }
         }
 
@@ -232,8 +233,8 @@ namespace Models.Inventory
             get { return _tipoLavId1; }
             set
             {
-                if (value == TipoLavId1) return;
                 _tipoLavId1 = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("TipoLavId1"));
             }
         }
 
@@ -245,8 +246,8 @@ namespace Models.Inventory
             get { return _tipoLavId2; }
             set
             {
-                if (value == TipoLavId2) return;
                 _tipoLavId2 = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("TipoLavId2"));
             }
         }
 
@@ -258,8 +259,8 @@ namespace Models.Inventory
             get { return _tipoLavId3; }
             set
             {
-                if (value == TipoLavId3) return;
                 _tipoLavId3 = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("TipoLavId3"));
             }
         }
 
@@ -271,8 +272,8 @@ namespace Models.Inventory
             get { return _estId1; }
             set
             {
-                if (value == EstId1) return;
                 _estId1 = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("EstId1"));
             }
         }
 
@@ -284,8 +285,8 @@ namespace Models.Inventory
             get { return _estId2; }
             set
             {
-                if (value == EstId2) return;
                 _estId2 = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("EstId2"));
             }
         }
 
@@ -297,8 +298,8 @@ namespace Models.Inventory
             get { return _estId3; }
             set
             {
-                if (value == EstId3) return;
                 _estId3 = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("EstId3"));
             }
         }
 
@@ -310,8 +311,8 @@ namespace Models.Inventory
             get { return _contMantCiclos; }
             set
             {
-                if (value == ContMantCiclos) return;
                 _contMantCiclos = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("ContMantCiclos"));
             }
         }
 
@@ -323,8 +324,8 @@ namespace Models.Inventory
             get { return _mantCiclos; }
             set
             {
-                if (value == MantCiclos) return;
                 _mantCiclos = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("MantCiclos"));
             }
         }
 
@@ -336,8 +337,8 @@ namespace Models.Inventory
             get { return _cajaMuestra; }
             set
             {
-                if (value == CajaMuestra) return;
                 _cajaMuestra = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("CajaMuestra"));
             }
         }
 
@@ -349,8 +350,8 @@ namespace Models.Inventory
             get { return _cajaSuelto; }
             set
             {
-                if (value == CajaSuelto) return;
                 _cajaSuelto = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("CajaSuelto"));
             }
         }
 
@@ -362,8 +363,8 @@ namespace Models.Inventory
             get { return _peso; }
             set
             {
-                if (value == Peso) return;
                 _peso = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("Peso"));
             }
         }
 
@@ -375,8 +376,8 @@ namespace Models.Inventory
             get { return _ubiId; }
             set
             {
-                if (value == UbiId) return;
                 _ubiId = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("UbiId"));
             }
         }
 
@@ -389,8 +390,8 @@ namespace Models.Inventory
             get { return _ubicacion; }
             set
             {
-                if (value == Ubicacion) return;
                 _ubicacion = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("Ubicacion"));
             }
         }
 
@@ -403,8 +404,8 @@ namespace Models.Inventory
             get { return _observEmp; }
             set
             {
-                if (value == ObservEmp) return;
                 _observEmp = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("ObservEmp"));
             }
         }
 
@@ -417,8 +418,8 @@ namespace Models.Inventory
             get { return _observCic; }
             set
             {
-                if (value == ObservCic) return;
                 _observCic = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("ObservCic"));
             }
         }
 
@@ -431,25 +432,9 @@ namespace Models.Inventory
             get { return _observLav; }
             set
             {
-                if (value == ObservLav) return;
                 _observLav = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("ObservLav"));
             }
-        }
-
-        #region INotifyPropertyChanged     
-
-        //public event PropertyChangedEventHandler PropertyChanged;
-
-        //protected virtual void OnPropertyChanged(string propertyName)
-        //{
-        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        //}
-
-        //public void InvokePropertyChanged(PropertyChangedEventArgs e)
-        //{
-        //    PropertyChanged?.Invoke(this, e);
-        //}
-
-        #endregion
+        }        
     }
 }

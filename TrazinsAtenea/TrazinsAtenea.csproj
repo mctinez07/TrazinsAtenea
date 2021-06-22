@@ -78,6 +78,12 @@
     <Compile Include="Controls\DoubleLabelMenu.Designer.cs">
       <DependentUpon>DoubleLabelMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\SetImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SetImageControl.Designer.cs">
+      <DependentUpon>SetImageControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\GlobalForms\DeleteForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,8 +151,6 @@
       <DependentUpon>SetsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalEngine\BaseModelClient.cs" />
-    <Compile Include="GlobalEngine\BindingSet.cs" />
-    <Compile Include="GlobalEngine\Comun.cs" />
     <Compile Include="GlobalEngine\Engine.cs" />
     <Compile Include="GlobalEngine\ErrorMessage.cs" />
     <Compile Include="GlobalResources\TrazinsAtenea.Designer.cs">
@@ -164,6 +168,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\DoubleLabelMenu.resx">
       <DependentUpon>DoubleLabelMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SetImageControl.resx">
+      <DependentUpon>SetImageControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GlobalForms\GlobalWaitForm.resx">
       <DependentUpon>GlobalWaitForm.cs</DependentUpon>

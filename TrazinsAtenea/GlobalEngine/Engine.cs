@@ -119,13 +119,16 @@ namespace TrazinsAtenea.GlobalEngine
             
         }
 
-        #region Enlace de propiedades a Control   
-        public static DataBindingList Enlaces { get; protected set; }
+        #region Enlace de propiedades a Control          
+
         //Probar cuando es combo y enlazar SelectedItem??
         public static void BindingControlProperty(Control ctrl,string property)
         {
             if (ctrl is ListControl)
+            {
                 ctrl.DataBindings.Add("SelectedValue", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);
+                ctrl.TabStop = false;
+            }                
             else if(ctrl is CheckBox || ctrl is CheckEdit)
                 ctrl.DataBindings.Add("CheckState", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);
             else if (ctrl is DateTimePicker || ctrl is SpinEdit)
@@ -166,170 +169,7 @@ namespace TrazinsAtenea.GlobalEngine
         {
             return prop.GetCustomAttributes(typeof(T), true).Cast<T>().FirstOrDefault();
         }
-
-        public virtual CustomBinding Enlazar(Control ctrl, string propiedadControl, object modelo, string propiedadModelo, bool disableParsingAndFormatting = false)
-        {
-            ctrl.Validated -= new EventHandler(ctrl_Validated);
-            ctrl.Validated += new EventHandler(ctrl_Validated);
-
-            var binding = new CustomBinding(propiedadControl, modelo, propiedadModelo);
-            binding.DisableBaseParsingAndFormatting = disableParsingAndFormatting;
-
-            var existing = Enlaces[ctrl, propiedadControl, propiedadModelo];
-
-            if (existing != null)
-            {
-                ctrl.DataBindings.Remove(existing);
-                Enlaces.Remove(existing);
-            }
-
-            if (modelo is BaseModel)
-                Configurar(ctrl, propiedadControl, (BaseModel)modelo, propiedadModelo);
-
-            ctrl.DataBindings.Add(binding);
-            Enlaces.Add(binding);
-
-            if (!disableParsingAndFormatting && ctrl is ListControl)
-            {
-                binding.ReadValue();
-                binding.WriteValue();
-            }
-            else
-            {
-                if (binding.Control is TextBox || binding.Control is TextEdit)
-                    binding.NullValue = "";
-            }
-
-            return binding;
-
-        }
-
-        private void Configurar(Control ctrl, string propiedadControl, BaseModel modelo, string propiedadModelo)
-        {
-            var textBox = ctrl as TextBox;
-
-            if (textBox != null && propiedadControl == "Text")
-            {
-                var prop = modelo.Propiedades[propiedadModelo];
-                var attr = GetAttribute<StringLengthAttribute>(prop);
-                if (attr != null)
-                    textBox.MaxLength = attr.MaximumLength;
-            }
-
-            var textEdit = ctrl as TextEdit;
-            if (textEdit != null && propiedadControl == "Text")
-            {
-                var prop = modelo.Propiedades[propiedadModelo];
-                var attr = GetAttribute<StringLengthAttribute>(prop);
-                if (attr != null)
-                    textEdit.Properties.MaxLength = attr.MaximumLength;
-            }
-
-            var numeric = ctrl as NumericUpDown;
-            if (numeric != null)
-            {
-                var prop = modelo.Propiedades[propiedadModelo];
-
-                var mapping = GetAttribute<MappingAttribute>(prop);
-                if (mapping != null)
-                {
-
-                    if (mapping.PrecisionHasValue)
-                    {
-                        var precision = mapping.Precision;
-                        var scale = mapping.ScaleHasValue ? mapping.Scale : 0;
-
-                        numeric.DecimalPlaces = scale;
-                    }
-                }
-
-                var attr = GetAttribute<RangeAttribute>(prop);
-                if (attr != null)
-                {
-                    numeric.Minimum = Convert.ToDecimal(attr.Minimum);
-                    numeric.Maximum = Convert.ToDecimal(attr.Maximum);
-                }
-            }
-
-        }
-
-        void ctrl_Validated(object sender, EventArgs e)
-        {
-            foreach (Binding item in ((Control)sender).DataBindings)
-            {
-                ValidateBinding(item);
-            }
-        }
-
-        protected IEnumerable<ValidationResult> ValidateBinding(Binding binding)
-        {
-            //No mostramos errores nada más abrir el formulario
-            if (boolMostradoPorPrimeraVez)
-                return Success;
-
-            if (!ValidationEnabled)
-                return Success;
-
-            var control = binding.Control;
-            var model = binding.DataSource as BaseModel;
-            if (model != null)
-            {
-                //Antes de validar propiamente, forzamos al control a que escriba su valor
-                //en la fuente de datos
-                if (binding.Control is ListControl)
-                {
-                    binding.WriteValue();
-                }
-
-                var modelPropertyName = binding.BindingMemberInfo.BindingField;
-
-                var modelPropertyValue = model.Propiedades[modelPropertyName].GetValue(model, null);
-
-                var result = model.ValidateProperty(binding.BindingMemberInfo.BindingField, modelPropertyValue);
-                if (result.Count() > 0)
-                    SetError(control, result.First().ErrorMessage);
-                else
-                    SetError(control, "");
-                return result;
-            }
-            else
-                return Success;
-        }
-
-        protected bool boolMostradoPorPrimeraVez = true;
-        public bool ValidationEnabled { get; set; }
-
-        protected void SetError(Control control, string errorMessage)
-        {
-            //errorProvider1.SetError(control, errorMessage);
-            MessageBox.Show(errorMessage);
-        }
-
-        #region Validacion
-
-        protected static IList<ValidationResult> Success = new List<ValidationResult>().AsReadOnly();
-
-        public virtual IEnumerable<ValidationResult> Validar()
-        {
-            var result = new List<ValidationResult>();
-            foreach (var enlace in Enlaces)
-            {
-                result.AddRange(ValidateBinding(enlace));
-            }
-            return result;
-        }
-
-        //protected void MTDMostrarErrores(IEnumerable<ValidationResult> errores)
-        //{
-        //    if (errores.Count() > 0)
-        //        //Mensajes.Mostrar(new Mensaje() { Texto = errores.GetMessage(), Tipo = TipoMensaje.Aviso });
-                
-        //}
-
         #endregion
-
-        #endregion
-        
     }
-    
+
 }

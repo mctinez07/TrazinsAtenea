@@ -227,6 +227,7 @@
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::TrazinsAtenea.Forms.GlobalForms.GlobalWaitForm), true, true);
             this.ofdImageVideo = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
+            this.setImageControl1 = new TrazinsAtenea.Controls.SetImageControl();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).BeginInit();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcBackArrow)).BeginInit();
@@ -1993,6 +1994,7 @@
             // pnlFirstPosition
             // 
             this.pnlFirstPosition.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlFirstPosition.Controls.Add(this.setImageControl1);
             this.pnlFirstPosition.Controls.Add(this.btnFirstPosition);
             this.pnlFirstPosition.Controls.Add(this.txtFirstPosition);
             this.pnlFirstPosition.Controls.Add(this.pcbFirstPosition);
@@ -2359,7 +2361,7 @@
             this.btnFromCam.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
             this.btnFromCam.Appearance.Options.UseFont = true;
             this.btnFromCam.Appearance.Options.UseForeColor = true;
-            this.btnFromCam.Location = new System.Drawing.Point(518, 15);
+            this.btnFromCam.Location = new System.Drawing.Point(587, 13);
             this.btnFromCam.LookAndFeel.SkinName = "DevExpress Style";
             this.btnFromCam.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnFromCam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -2386,7 +2388,7 @@
             this.btnFromComputer.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
             this.btnFromComputer.Appearance.Options.UseFont = true;
             this.btnFromComputer.Appearance.Options.UseForeColor = true;
-            this.btnFromComputer.Location = new System.Drawing.Point(329, 15);
+            this.btnFromComputer.Location = new System.Drawing.Point(399, 13);
             this.btnFromComputer.LookAndFeel.SkinName = "DevExpress Style";
             this.btnFromComputer.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnFromComputer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -2601,6 +2603,13 @@
             // splashScreenManager1
             // 
             this.splashScreenManager1.ClosingDelay = 500;
+            // 
+            // setImageControl1
+            // 
+            this.setImageControl1.Location = new System.Drawing.Point(9, 11);
+            this.setImageControl1.Name = "setImageControl1";
+            this.setImageControl1.Size = new System.Drawing.Size(373, 189);
+            this.setImageControl1.TabIndex = 8;
             // 
             // SetManagmentForm
             // 
@@ -2898,5 +2907,6 @@
         private DevExpress.XtraEditors.SimpleButton btnSaveContinue;
         private DevExpress.XtraEditors.SpinEdit speWheight;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
+        private Controls.SetImageControl setImageControl1;
     }
 }
