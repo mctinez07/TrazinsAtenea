@@ -103,6 +103,9 @@ namespace WSTrazinsAtenea
         [OperationContract]
         CajaImagen CajaImagen_Update(CajaImagen cajaImagen);
 
+        [OperationContract]
+        CajaImagen CajaImagen_Delete(CajaImagen cajaImagen);
+
         #endregion
 
         #region CentroCoste

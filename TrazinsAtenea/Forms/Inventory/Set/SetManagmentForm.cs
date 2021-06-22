@@ -32,6 +32,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         //Creamos la instancia con los valores cargados en memoria
         private BaseModelClient BaseModelClient = BaseModelClient.Instance;
+        private SetImageControl LastImageAdded = new SetImageControl();
 
         //Nos indica que tipo de operación hay que realizar para la gestión de la interfaz
         public EnumOperationType Operation;
@@ -810,7 +811,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         }
 
-        private bool SearchEmptyPictureBox(Image image)
+        private bool SearchEmptyPictureBox(CajaImagen setImage)
         {
             int numImages = 0;
 
@@ -820,18 +821,24 @@ namespace TrazinsAtenea.Forms.Inventory.Set
                 {
                     if (item is SetImageControl)
                     {
-                        var pictureBox = (SetImageControl)item;
-                        if (pictureBox.ImagePictureBox.Image != null)
+                        var setImageControl = (SetImageControl)item;
+                        if (setImageControl.ImagePictureBox.Image != null)
                         {
                             numImages++;
                         }
                         else
                         {
-                            if (image != null)
+                            if(setImage != null)
                             {
-                                pictureBox.ImagePictureBox.Image = image;
-                                return true;
+                                if (setImage.Image != null)
+                                {
+                                    setImageControl.ImagePictureBox.Image = setImage.Image;
+                                    setImageControl.CajaImagen = setImage;
+                                    LastImageAdded = setImageControl;
+                                    return true;
+                                }
                             }
+                            
                         }
 
                     }
@@ -873,12 +880,11 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             }
             if (cajaImagen.EsImagen)
             {
-                if (SearchEmptyPictureBox(cajaImagen.Image))
-                {
-                    //Asociar cajaid
-                    //Cambiar los controles de las imágenes
-                    //Borrardo lógico imágenes de bd
-                    BaseModelClient.Service.CajaImagen_Insert(cajaImagen);
+                if (SearchEmptyPictureBox(cajaImagen))
+                {   
+                    cajaImagen.CajaId = Caja.CajaId;
+                    var res = BaseModelClient.Service.CajaImagen_Insert(cajaImagen);
+                    LastImageAdded.CajaImagen.Id = res.Id;
                 }
             }
         }
@@ -985,59 +991,64 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             wmpVideo.Ctlcontrols.stop();
         }
-
-        private void btnSixthPosition_Click(object sender, EventArgs e)
-        {
-            DeleteImageVideo(wmpVideo);
-        }
+        
         #endregion
 
         #region Delete Buttons
 
         private void btnFirstPosition_Click(object sender, EventArgs e)
         {
-            DeleteImageVideo(pcbFirstPosition);
+            DeleteImageVideo(setImageControl1);
         }
 
         private void btnSecondPosition_Click(object sender, EventArgs e)
         {
-            DeleteImageVideo(pcbSecondPosition);
+            DeleteImageVideo(setImageControl2);
         }
 
         private void btnTirthPosition_Click(object sender, EventArgs e)
         {
-            DeleteImageVideo(pcbTirthPosition);
+            DeleteImageVideo(setImageControl3);
         }
 
         private void btnFourthPosition_Click(object sender, EventArgs e)
         {
-            DeleteImageVideo(pcbFourthPosition);
+            DeleteImageVideo(setImageControl4);
         }
 
         private void btnFifthPosition_Click(object sender, EventArgs e)
         {
-            DeleteImageVideo(pcbFifthPosition);
+            DeleteImageVideo(setImageControl5);
         }
 
+        private void btnSixthPosition_Click(object sender, EventArgs e)
+        {
+            DeleteImageVideo(wmpVideo);
+        }
 
         #endregion
 
         private void DeleteImageVideo(Control control)
         {
             //Borrar de base de datos.
-            if (control is PictureBox)
+            if (control is SetImageControl)
             {
-                var pcb = (PictureBox)control;
-                pcb.Image = null;
+                var pcb = (SetImageControl)control;
+                pcb.ImagePictureBox.Image = null;
+                BaseModelClient.Service.CajaImagen_Delete(pcb.CajaImagen);
             }
             else
             {
                 wmpVideo.URL = null;
                 wmpVideo.Visible = false;
             }
+
+            
         }
 
         #endregion
+
+        #region GroupManagment TabPage
 
         private void btnGroupManagment_Click(object sender, EventArgs e)
         {
@@ -1055,6 +1066,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             frm.ShowDialog();
         }
 
+        #endregion        
+
         #region Main Buttons Actions
 
         //Guarda y vuelve abrir la pantalla de gestión de cajas
@@ -1070,6 +1083,22 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             SaveSetModel(false);
             this.Close();
         }
+
+        //Guarda los datos actuales manteniendo el formulario abierto
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Hay que obtener manualmente los controles, el binding solo funciona una vez                          
+                SaveSetModel(true);
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage.ShowErrorMessage(MethodBase.GetCurrentMethod().Name, ex.Message);
+            }
+
+        }
+
 
         //Método que gestiona el guardado del modelo y la apertura del formulario
         //Cambiar nombre argumento
@@ -1130,7 +1159,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         private void SetControlsTopropierties()
         {
-            Caja.EspId = SpecilitySelected.EspId;
+            Caja.EspId = SpecilitySelected?.EspId;
             Caja.HosIdPropietario = OwnerSelected?.HosId;
             Caja.TipoCajaId = SetTypeSelected?.Id;
 
@@ -1147,24 +1176,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             Caja.ObservCic = txtRemarksSteri.Text;
             Caja.ObservLav = txtRemarksWashes.Text;
             Caja.ObservEmp = txtRemarksAssemblyPackaging.Text;
-        }
-
-        //Guarda los datos actuales manteniendo el formulario abierto
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //Hay que obtener manualmente los controles, el binding solo funciona una vez                          
-                SaveSetModel(true);                 
-            }
-            catch (Exception ex )
-            {
-                ErrorMessage.ShowErrorMessage(MethodBase.GetCurrentMethod().Name, ex.Message);
-            }
-            
-        }
-
-        
+        }  
 
         //Método que comprueba los campos obligatorios.
         private bool CheckMandatoryAtributtes()

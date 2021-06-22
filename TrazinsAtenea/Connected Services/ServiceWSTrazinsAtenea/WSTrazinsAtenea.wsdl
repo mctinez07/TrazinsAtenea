@@ -4,7 +4,6 @@
     <xsd:schema targetNamespace="http://WSTrazinsAtenea.com/Imports">
       <xsd:import schemaLocation="http://localhost:53110/WSTrazinsAtenea.svc?xsd=xsd0" namespace="http://WSTrazinsAtenea.com" />
       <xsd:import schemaLocation="http://localhost:53110/WSTrazinsAtenea.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:53110/WSTrazinsAtenea.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Drawing" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IWSTrazinsAtenea_Almacen_Select_List_InputMessage">
@@ -138,6 +137,12 @@
   </wsdl:message>
   <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Update_OutputMessage">
     <wsdl:part name="parameters" element="tns:CajaImagen_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:CajaImagen_Delete" />
+  </wsdl:message>
+  <wsdl:message name="IWSTrazinsAtenea_CajaImagen_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CajaImagen_DeleteResponse" />
   </wsdl:message>
   <wsdl:message name="IWSTrazinsAtenea_CentroCoste_Select_List_InputMessage">
     <wsdl:part name="parameters" element="tns:CentroCoste_Select_List" />
@@ -401,6 +406,10 @@
     <wsdl:operation name="CajaImagen_Update">
       <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update" message="tns:IWSTrazinsAtenea_CajaImagen_Update_InputMessage" />
       <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_UpdateResponse" message="tns:IWSTrazinsAtenea_CajaImagen_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CajaImagen_Delete">
+      <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Delete" message="tns:IWSTrazinsAtenea_CajaImagen_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_DeleteResponse" message="tns:IWSTrazinsAtenea_CajaImagen_Delete_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="CentroCoste_Select_List">
       <wsdl:input wsaw:Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Select_List" message="tns:IWSTrazinsAtenea_CentroCoste_Select_List_InputMessage" />
@@ -712,6 +721,15 @@
     </wsdl:operation>
     <wsdl:operation name="CajaImagen_Update">
       <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CajaImagen_Delete">
+      <soap:operation soapAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Delete" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

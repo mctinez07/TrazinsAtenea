@@ -155,6 +155,12 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Update", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_UpdateResponse")]
         System.Threading.Tasks.Task<Models.Inventory.CajaImagen> CajaImagen_UpdateAsync(Models.Inventory.CajaImagen cajaImagen);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Delete", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_DeleteResponse")]
+        Models.Inventory.CajaImagen CajaImagen_Delete(Models.Inventory.CajaImagen cajaImagen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_Delete", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CajaImagen_DeleteResponse")]
+        System.Threading.Tasks.Task<Models.Inventory.CajaImagen> CajaImagen_DeleteAsync(Models.Inventory.CajaImagen cajaImagen);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Select_List", ReplyAction="http://WSTrazinsAtenea.com/IWSTrazinsAtenea/CentroCoste_Select_ListResponse")]
         Models.Masters.CentroCoste[] CentroCoste_Select_List(Models.Masters.CentroCoste centrocoste);
         
@@ -531,6 +537,14 @@ namespace TrazinsAtenea.ServiceWSTrazinsAtenea {
         
         public System.Threading.Tasks.Task<Models.Inventory.CajaImagen> CajaImagen_UpdateAsync(Models.Inventory.CajaImagen cajaImagen) {
             return base.Channel.CajaImagen_UpdateAsync(cajaImagen);
+        }
+        
+        public Models.Inventory.CajaImagen CajaImagen_Delete(Models.Inventory.CajaImagen cajaImagen) {
+            return base.Channel.CajaImagen_Delete(cajaImagen);
+        }
+        
+        public System.Threading.Tasks.Task<Models.Inventory.CajaImagen> CajaImagen_DeleteAsync(Models.Inventory.CajaImagen cajaImagen) {
+            return base.Channel.CajaImagen_DeleteAsync(cajaImagen);
         }
         
         public Models.Masters.CentroCoste[] CentroCoste_Select_List(Models.Masters.CentroCoste centrocoste) {

@@ -67,6 +67,11 @@ namespace WSTrazinsAtenea
             return CajaImagenManager.CajaImagen_Update(cajaImagen);
         }
 
+        public CajaImagen CajaImagen_Delete(CajaImagen cajaImagen)
+        {
+            return CajaImagenManager.CajaImagen_Delete(cajaImagen);
+        }
+
         #endregion
 
         #region CajasGrupos

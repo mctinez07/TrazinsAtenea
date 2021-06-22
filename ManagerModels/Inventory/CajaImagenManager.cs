@@ -29,5 +29,10 @@ namespace ManagerModels.Inventory
         {
             return MainSqlEngine.IsUpdate(cajaImagen);
         }
+
+        public static CajaImagen CajaImagen_Delete(CajaImagen cajaImagen)
+        {
+            return MainSqlEngine.IsDelete(cajaImagen);
+        }
     }
 }

@@ -230,9 +230,6 @@
     <None Include="Connected Services\ServiceWSTrazinsAtenea\WSTrazinsAtenea1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceWSTrazinsAtenea\WSTrazinsAtenea2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Models.Inventory.Caja.datasource" />
     <None Include="Models.Inventory.CajaImagen.datasource" />
     <None Include="Models.Inventory.CajasGrupo.datasource" />
