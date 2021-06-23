@@ -131,11 +131,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             //Enlazar Controles para que se actualicen automáticamente los valores de los controles.    
             //Crear metodo que coja los valores del atributo
             //BindingControls();
-            Engine.GetAttributeSettings(txtSetName, "Descripcion", Caja);
-            Engine.GetAttributeSettings(txtSetCode, "CodigoCaja", Caja);
-            Engine.GetAttributeSettings(txtRemarksAssemblyPackaging, "ObservEmp", Caja);
-            Engine.GetAttributeSettings(txtRemarksSteri, "ObservCic", Caja);
-            Engine.GetAttributeSettings(txtRemarksWashes, "ObservLav", Caja);
+            GetMaxLengthTextBox();            
 
             //Establecer estado de los controles
             ControlsState();
@@ -145,6 +141,15 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             Caja.CHIdPropietario = Caja.ChId;//Pendiente saber si es necesaria esta propiedad
 
             splashScreenManager1.CloseWaitForm();
+        }
+
+        private void GetMaxLengthTextBox()
+        {
+            Engine.GetAttributeSettings(txtSetName, "Descripcion", Caja);
+            Engine.GetAttributeSettings(txtSetCode, "CodigoCaja", Caja);
+            Engine.GetAttributeSettings(txtRemarksAssemblyPackaging, "ObservEmp", Caja);
+            Engine.GetAttributeSettings(txtRemarksSteri, "ObservCic", Caja);
+            Engine.GetAttributeSettings(txtRemarksWashes, "ObservLav", Caja);
         }
 
         private void ControlsState()
@@ -175,33 +180,34 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         //No funciona, lo edjo por si en un futuro lo podemos cambiar.
         private void BindingControls()
         {
-            //Quitar el enlace y configurar solo las carcteristicas de los controle
-            Engine._bindedModel = Caja;          
+            //Quitar el enlace y configurar solo las carcteristicas de los controles
+            //Creo que está solucionado probar con la b¡nueva configuración
+            //Engine._bindedModel = Caja;          
 
-            //////Controles TextBox
-            Engine.BindingControlProperty(txtSetName, "Descripcion");
-            Engine.BindingControlProperty(speWheight, "Peso");
+            ////////Controles TextBox
+            //Engine.BindingControlProperty(txtSetName, "Descripcion");
+            //Engine.BindingControlProperty(speWheight, "Peso");
             
-            Engine.BindingControlProperty(txtSetCode, "CodigoCaja");
-            Engine.BindingControlProperty(txtRemarksAssemblyPackaging, "ObservEmp");
-            Engine.BindingControlProperty(txtRemarksSteri, "ObservCic");
-            Engine.BindingControlProperty(txtRemarksWashes, "ObservLav");
+            //Engine.BindingControlProperty(txtSetCode, "CodigoCaja");
+            //Engine.BindingControlProperty(txtRemarksAssemblyPackaging, "ObservEmp");
+            //Engine.BindingControlProperty(txtRemarksSteri, "ObservCic");
+            //Engine.BindingControlProperty(txtRemarksWashes, "ObservLav");
 
-            ////Controles Combo Cabecera
-            Engine.BindingControlProperty(cmbSpeciality, "EspId");
-            Engine.BindingControlProperty(cmbSetType, "TipoCajaId");
-            Engine.BindingControlProperty(cmbProperty, "HosIdPropietario");
-            Engine.BindingControlProperty(cmbPackage, "EmbId");
-            Engine.BindingControlProperty(cmbCostCenter, "CentroCosteId");
+            //////Controles Combo Cabecera
+            //Engine.BindingControlProperty(cmbSpeciality, "EspId");
+            //Engine.BindingControlProperty(cmbSetType, "TipoCajaId");
+            //Engine.BindingControlProperty(cmbProperty, "HosIdPropietario");
+            //Engine.BindingControlProperty(cmbPackage, "EmbId");
+            //Engine.BindingControlProperty(cmbCostCenter, "CentroCosteId");
 
-            ////Controles Combo Ubicación
-            ////El valor de la posicion es el que nos indica la ubicación exacta.
-            Engine.BindingControlProperty(cmbPosition, "UbiId");            
+            //////Controles Combo Ubicación
+            //////El valor de la posicion es el que nos indica la ubicación exacta.
+            //Engine.BindingControlProperty(cmbPosition, "UbiId");            
 
-            ////Otros Controles
-            Engine.BindingControlProperty(speMaintenance, "MantCiclos");
-            Engine.BindingControlProperty(tgsYesNo, "Activa");
-            Engine.BindingControlProperty(ckbSetSample, "CajaMuestra");
+            //////Otros Controles
+            //Engine.BindingControlProperty(speMaintenance, "MantCiclos");
+            //Engine.BindingControlProperty(tgsYesNo, "Activa");
+            //Engine.BindingControlProperty(ckbSetSample, "CajaMuestra");
         }
 
         private void MultilanguageFormat()

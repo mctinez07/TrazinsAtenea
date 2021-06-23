@@ -16,14 +16,19 @@ namespace TrazinsAtenea.Forms.Inventory.Group
     public partial class GroupsForm : DevExpress.XtraEditors.XtraForm
     {
         private Caja Caja;
+
         public GroupsForm(Caja caja)
         {
             InitializeComponent();
-            this.Caja = caja;
-            lblSetName.Text = caja.Descripcion;
-            Multilanguage();
+            this.Caja = caja;            
         }
-        
+
+        private void GroupsForm_Load(object sender, EventArgs e)
+        {            
+            Multilanguage();
+            lblSetName.Text = Caja.Descripcion;
+        }
+
         private void Multilanguage()
         {
             foreach (PanelControl panel in this.Controls)
@@ -46,9 +51,20 @@ namespace TrazinsAtenea.Forms.Inventory.Group
 
         private void btnGroupNew_Click(object sender, EventArgs e)
         {
-            GroupManagmentForm frm = new GroupManagmentForm();
-            frm.Caja = this.Caja;
+            GroupManagmentForm frm = new GroupManagmentForm
+            {
+                Caja = this.Caja
+            };
+
             frm.ShowDialog();
         }
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            GroupManagmentForm frm = new GroupManagmentForm(new CajasGrupo() { NomGrupo = "prueba" });
+            frm.ShowDialog();
+        }
+
+        
     }
 }

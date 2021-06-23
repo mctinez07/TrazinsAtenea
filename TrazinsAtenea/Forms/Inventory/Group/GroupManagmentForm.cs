@@ -10,30 +10,58 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using TrazinsAtenea.GlobalEngine;
 using Models.Inventory;
+using System.Reflection;
 
 namespace TrazinsAtenea.Forms.Inventory.Group
 {
     public partial class GroupManagmentForm : DevExpress.XtraEditors.XtraForm
     {
         public Caja Caja;
+        private CajasGrupo CajasGrupoMain = new CajasGrupo();
+        private EnumOperationType OperationType;
 
         public GroupManagmentForm()
         {
-            InitializeComponent();             
+            InitializeComponent();
+            this.OperationType = EnumOperationType.New;
+        }
+
+        public GroupManagmentForm(CajasGrupo cajasGrupo)
+        {
+            InitializeComponent();
+            this.CajasGrupoMain = cajasGrupo;
+            this.OperationType = EnumOperationType.Modify;
         }
 
         private void GroupManagmentForm_Load(object sender, EventArgs e)
         {
-            //Traducir
-            Multilanguage();
+            try
+            {
+                //Traducir
+                Multilanguage();
 
-            //si es edición rellenar los campos
-            BindigControls();
+                SetFormLocation();
+
+                BindigControls();
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage.ShowErrorMessage(MethodBase.GetCurrentMethod().Name, ex.Message);                
+            }
+            
+        }
+
+        private void SetFormLocation()
+        {
+            Screen screen = Screen.FromPoint(Location);
+            Location = new Point(screen.WorkingArea.Left, screen.WorkingArea.Top);
         }
 
         private void BindigControls()
         {
-            throw new NotImplementedException();
+            Engine.BindingControlProperty(TxtGroupName, "NomGrupo", CajasGrupoMain);
+            Engine.BindingControlProperty(TxtGroupDes, "DesGrupo", CajasGrupoMain);
+            Engine.BindingControlProperty(TxtGroupRemarks, "Observaciones", CajasGrupoMain);
         }
 
         private void Multilanguage()
@@ -59,7 +87,29 @@ namespace TrazinsAtenea.Forms.Inventory.Group
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                CajasGrupoMain.CajaId = this.Caja.CajaId;
+                switch (OperationType)
+                {
+                    case EnumOperationType.New:
+                        BaseModelClient.Instance.Service.CajasGrupos_Insert(CajasGrupoMain);
+                        break;
+                    case EnumOperationType.Modify:
+                        BaseModelClient.Instance.Service.CajasGrupos_Update(CajasGrupoMain);
+                        break;
+                    case EnumOperationType.Delete:
+                        break;
+                    default:
+                        break;
+                }
+                
+                
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage.ShowErrorMessage(MethodBase.GetCurrentMethod().Name, ex.Message);
+            }
         }
 
         

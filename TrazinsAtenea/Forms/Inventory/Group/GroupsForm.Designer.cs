@@ -39,7 +39,7 @@
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnModify = new DevExpress.XtraEditors.SimpleButton();
             this.pnlWorkBench = new DevExpress.XtraEditors.PanelControl();
-            this.dgcGroups = new DevExpress.XtraGrid.GridControl();
+            this.DgcGroups = new DevExpress.XtraGrid.GridControl();
             this.gdvGroups = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gdcGroupName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gdcGroupDescription = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -54,7 +54,7 @@
             this.pnlGroupFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlWorkBench)).BeginInit();
             this.pnlWorkBench.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgcGroups)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgcGroups)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvGroups)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,11 +68,12 @@
             this.pnlSetName.Controls.Add(this.btnGroupNew);
             this.pnlSetName.Controls.Add(this.lblSetName);
             this.pnlSetName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSetName.Location = new System.Drawing.Point(0, 75);
+            this.pnlSetName.Location = new System.Drawing.Point(0, 92);
             this.pnlSetName.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.pnlSetName.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnlSetName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlSetName.Name = "pnlSetName";
-            this.pnlSetName.Size = new System.Drawing.Size(955, 73);
+            this.pnlSetName.Size = new System.Drawing.Size(1114, 90);
             this.pnlSetName.TabIndex = 17;
             // 
             // btnGroupNew
@@ -83,11 +84,12 @@
             this.btnGroupNew.Appearance.Options.UseForeColor = true;
             this.btnGroupNew.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.add_24x24;
             this.btnGroupNew.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnGroupNew.Location = new System.Drawing.Point(777, 12);
+            this.btnGroupNew.Location = new System.Drawing.Point(906, 15);
             this.btnGroupNew.LookAndFeel.SkinName = "DevExpress Style";
             this.btnGroupNew.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnGroupNew.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGroupNew.Name = "btnGroupNew";
-            this.btnGroupNew.Size = new System.Drawing.Size(166, 48);
+            this.btnGroupNew.Size = new System.Drawing.Size(194, 59);
             this.btnGroupNew.TabIndex = 8;
             this.btnGroupNew.Text = "Nuevo Grupo";
             this.btnGroupNew.Click += new System.EventHandler(this.btnGroupNew_Click);
@@ -96,9 +98,10 @@
             // 
             this.lblSetName.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSetName.Appearance.Options.UseFont = true;
-            this.lblSetName.Location = new System.Drawing.Point(14, 22);
+            this.lblSetName.Location = new System.Drawing.Point(16, 27);
+            this.lblSetName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblSetName.Name = "lblSetName";
-            this.lblSetName.Size = new System.Drawing.Size(205, 29);
+            this.lblSetName.Size = new System.Drawing.Size(254, 38);
             this.lblSetName.TabIndex = 0;
             this.lblSetName.Text = "Nombre de la caja";
             // 
@@ -116,8 +119,9 @@
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.pnlHeader.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(955, 75);
+            this.pnlHeader.Size = new System.Drawing.Size(1114, 92);
             this.pnlHeader.TabIndex = 16;
             // 
             // lblGroupTitle
@@ -127,9 +131,10 @@
             this.lblGroupTitle.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.lblGroupTitle.ImageOptions.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblGroupTitle.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.group_24x24;
-            this.lblGroupTitle.Location = new System.Drawing.Point(98, 17);
+            this.lblGroupTitle.Location = new System.Drawing.Point(114, 21);
+            this.lblGroupTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblGroupTitle.Name = "lblGroupTitle";
-            this.lblGroupTitle.Size = new System.Drawing.Size(304, 40);
+            this.lblGroupTitle.Size = new System.Drawing.Size(372, 49);
             this.lblGroupTitle.TabIndex = 2;
             this.lblGroupTitle.Text = "Gestión de Grupos";
             // 
@@ -137,10 +142,11 @@
             // 
             this.spcBackArrow.Dock = System.Windows.Forms.DockStyle.Left;
             this.spcBackArrow.LineOrientation = System.Windows.Forms.Orientation.Vertical;
-            this.spcBackArrow.Location = new System.Drawing.Point(77, 2);
+            this.spcBackArrow.Location = new System.Drawing.Point(89, 2);
+            this.spcBackArrow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.spcBackArrow.Name = "spcBackArrow";
-            this.spcBackArrow.Padding = new System.Windows.Forms.Padding(0, 0, 9, 0);
-            this.spcBackArrow.Size = new System.Drawing.Size(15, 71);
+            this.spcBackArrow.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.spcBackArrow.Size = new System.Drawing.Size(17, 88);
             this.spcBackArrow.TabIndex = 1;
             // 
             // pcbBack
@@ -148,8 +154,9 @@
             this.pcbBack.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcbBack.Image = global::TrazinsAtenea.Properties.Resources.arrow_back_48x48;
             this.pcbBack.Location = new System.Drawing.Point(2, 2);
+            this.pcbBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pcbBack.Name = "pcbBack";
-            this.pcbBack.Size = new System.Drawing.Size(75, 71);
+            this.pcbBack.Size = new System.Drawing.Size(87, 88);
             this.pcbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pcbBack.TabIndex = 0;
             this.pcbBack.TabStop = false;
@@ -165,11 +172,12 @@
             this.pnlGroupFooter.Controls.Add(this.btnDelete);
             this.pnlGroupFooter.Controls.Add(this.btnModify);
             this.pnlGroupFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlGroupFooter.Location = new System.Drawing.Point(0, 502);
+            this.pnlGroupFooter.Location = new System.Drawing.Point(0, 618);
             this.pnlGroupFooter.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.pnlGroupFooter.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnlGroupFooter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlGroupFooter.Name = "pnlGroupFooter";
-            this.pnlGroupFooter.Size = new System.Drawing.Size(955, 73);
+            this.pnlGroupFooter.Size = new System.Drawing.Size(1114, 90);
             this.pnlGroupFooter.TabIndex = 15;
             // 
             // btnDelete
@@ -180,11 +188,12 @@
             this.btnDelete.Appearance.Options.UseForeColor = true;
             this.btnDelete.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.delete_24x241;
             this.btnDelete.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnDelete.Location = new System.Drawing.Point(816, 12);
+            this.btnDelete.Location = new System.Drawing.Point(952, 15);
             this.btnDelete.LookAndFeel.SkinName = "DevExpress Style";
             this.btnDelete.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(127, 48);
+            this.btnDelete.Size = new System.Drawing.Size(148, 59);
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Eliminar";
             // 
@@ -196,32 +205,37 @@
             this.btnModify.Appearance.Options.UseForeColor = true;
             this.btnModify.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.modificar_24x24;
             this.btnModify.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnModify.Location = new System.Drawing.Point(666, 12);
+            this.btnModify.Location = new System.Drawing.Point(777, 15);
             this.btnModify.LookAndFeel.SkinName = "DevExpress Style";
             this.btnModify.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnModify.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(134, 48);
+            this.btnModify.Size = new System.Drawing.Size(156, 59);
             this.btnModify.TabIndex = 9;
             this.btnModify.Text = "Modificar";
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // pnlWorkBench
             // 
-            this.pnlWorkBench.Controls.Add(this.dgcGroups);
+            this.pnlWorkBench.Controls.Add(this.DgcGroups);
             this.pnlWorkBench.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlWorkBench.Location = new System.Drawing.Point(0, 148);
+            this.pnlWorkBench.Location = new System.Drawing.Point(0, 182);
+            this.pnlWorkBench.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlWorkBench.Name = "pnlWorkBench";
-            this.pnlWorkBench.Size = new System.Drawing.Size(955, 354);
+            this.pnlWorkBench.Size = new System.Drawing.Size(1114, 436);
             this.pnlWorkBench.TabIndex = 18;
             // 
-            // dgcGroups
+            // DgcGroups
             // 
-            this.dgcGroups.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgcGroups.Location = new System.Drawing.Point(2, 2);
-            this.dgcGroups.MainView = this.gdvGroups;
-            this.dgcGroups.Name = "dgcGroups";
-            this.dgcGroups.Size = new System.Drawing.Size(951, 350);
-            this.dgcGroups.TabIndex = 19;
-            this.dgcGroups.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.DgcGroups.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgcGroups.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.DgcGroups.Location = new System.Drawing.Point(2, 2);
+            this.DgcGroups.MainView = this.gdvGroups;
+            this.DgcGroups.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.DgcGroups.Name = "DgcGroups";
+            this.DgcGroups.Size = new System.Drawing.Size(1110, 432);
+            this.DgcGroups.TabIndex = 19;
+            this.DgcGroups.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gdvGroups});
             // 
             // gdvGroups
@@ -250,44 +264,53 @@
             this.gdcGroupName,
             this.gdcGroupDescription,
             this.gdcGroupObservations});
-            this.gdvGroups.GridControl = this.dgcGroups;
+            this.gdvGroups.DetailHeight = 431;
+            this.gdvGroups.GridControl = this.DgcGroups;
             this.gdvGroups.Name = "gdvGroups";
             // 
             // gdcGroupName
             // 
             this.gdcGroupName.Caption = "Nombre de Grupo";
+            this.gdcGroupName.MinWidth = 23;
             this.gdcGroupName.Name = "gdcGroupName";
             this.gdcGroupName.Visible = true;
             this.gdcGroupName.VisibleIndex = 0;
+            this.gdcGroupName.Width = 87;
             // 
             // gdcGroupDescription
             // 
             this.gdcGroupDescription.Caption = "Descripción de Grupo";
+            this.gdcGroupDescription.MinWidth = 23;
             this.gdcGroupDescription.Name = "gdcGroupDescription";
             this.gdcGroupDescription.Visible = true;
             this.gdcGroupDescription.VisibleIndex = 1;
+            this.gdcGroupDescription.Width = 87;
             // 
             // gdcGroupObservations
             // 
             this.gdcGroupObservations.Caption = "Observaciones de Grupo";
+            this.gdcGroupObservations.MinWidth = 23;
             this.gdcGroupObservations.Name = "gdcGroupObservations";
             this.gdcGroupObservations.Visible = true;
             this.gdcGroupObservations.VisibleIndex = 2;
+            this.gdcGroupObservations.Width = 87;
             // 
             // GroupsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(955, 575);
+            this.ClientSize = new System.Drawing.Size(1114, 708);
             this.Controls.Add(this.pnlWorkBench);
             this.Controls.Add(this.pnlSetName);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.pnlGroupFooter);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "GroupsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GroupForm";
+            this.Load += new System.EventHandler(this.GroupsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnlSetName)).EndInit();
             this.pnlSetName.ResumeLayout(false);
             this.pnlSetName.PerformLayout();
@@ -300,7 +323,7 @@
             this.pnlGroupFooter.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnlWorkBench)).EndInit();
             this.pnlWorkBench.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgcGroups)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgcGroups)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvGroups)).EndInit();
             this.ResumeLayout(false);
 
@@ -318,10 +341,10 @@
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SimpleButton btnModify;
         private DevExpress.XtraEditors.PanelControl pnlWorkBench;
-        private DevExpress.XtraGrid.GridControl dgcGroups;
         private DevExpress.XtraGrid.Views.Grid.GridView gdvGroups;
         private DevExpress.XtraGrid.Columns.GridColumn gdcGroupName;
         private DevExpress.XtraGrid.Columns.GridColumn gdcGroupDescription;
         private DevExpress.XtraGrid.Columns.GridColumn gdcGroupObservations;
+        public DevExpress.XtraGrid.GridControl DgcGroups;
     }
 }

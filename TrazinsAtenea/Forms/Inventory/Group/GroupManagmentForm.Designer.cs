@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupManagmentForm));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtGroupRemarks = new System.Windows.Forms.TextBox();
             this.lblGroupObservations = new DevExpress.XtraEditors.LabelControl();
             this.lblGroupDescription = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.TxtGroupDes = new DevExpress.XtraEditors.TextEdit();
             this.lblGroupName = new DevExpress.XtraEditors.LabelControl();
-            this.txtGroupName = new DevExpress.XtraEditors.TextEdit();
+            this.TxtGroupName = new DevExpress.XtraEditors.TextEdit();
             this.pnlHeader = new DevExpress.XtraEditors.PanelControl();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.lblGroupNew = new DevExpress.XtraEditors.LabelControl();
             this.spcBackArrow = new DevExpress.XtraEditors.SeparatorControl();
             this.pcbBack = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGroupName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtGroupDes.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtGroupName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).BeginInit();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcBackArrow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbBack)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // TxtGroupRemarks
             // 
-            this.textBox1.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(289, 247);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(483, 154);
-            this.textBox1.TabIndex = 19;
+            this.TxtGroupRemarks.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtGroupRemarks.Location = new System.Drawing.Point(289, 247);
+            this.TxtGroupRemarks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TxtGroupRemarks.Multiline = true;
+            this.TxtGroupRemarks.Name = "TxtGroupRemarks";
+            this.TxtGroupRemarks.Size = new System.Drawing.Size(483, 154);
+            this.TxtGroupRemarks.TabIndex = 19;
             // 
             // lblGroupObservations
             // 
@@ -81,15 +81,15 @@
             this.lblGroupDescription.TabIndex = 17;
             this.lblGroupDescription.Text = "Descripción de Grupo";
             // 
-            // textEdit1
+            // TxtGroupDes
             // 
-            this.textEdit1.Location = new System.Drawing.Point(289, 186);
-            this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(484, 36);
-            this.textEdit1.TabIndex = 16;
+            this.TxtGroupDes.Location = new System.Drawing.Point(289, 186);
+            this.TxtGroupDes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TxtGroupDes.Name = "TxtGroupDes";
+            this.TxtGroupDes.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtGroupDes.Properties.Appearance.Options.UseFont = true;
+            this.TxtGroupDes.Size = new System.Drawing.Size(484, 36);
+            this.TxtGroupDes.TabIndex = 16;
             // 
             // lblGroupName
             // 
@@ -102,15 +102,15 @@
             this.lblGroupName.TabIndex = 15;
             this.lblGroupName.Text = "Nombre de Grupo";
             // 
-            // txtGroupName
+            // TxtGroupName
             // 
-            this.txtGroupName.Location = new System.Drawing.Point(289, 129);
-            this.txtGroupName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtGroupName.Name = "txtGroupName";
-            this.txtGroupName.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGroupName.Properties.Appearance.Options.UseFont = true;
-            this.txtGroupName.Size = new System.Drawing.Size(484, 36);
-            this.txtGroupName.TabIndex = 14;
+            this.TxtGroupName.Location = new System.Drawing.Point(289, 129);
+            this.TxtGroupName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TxtGroupName.Name = "TxtGroupName";
+            this.TxtGroupName.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtGroupName.Properties.Appearance.Options.UseFont = true;
+            this.TxtGroupName.Size = new System.Drawing.Size(484, 36);
+            this.TxtGroupName.TabIndex = 14;
             // 
             // pnlHeader
             // 
@@ -216,20 +216,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(787, 422);
             this.Controls.Add(this.pnlHeader);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtGroupRemarks);
             this.Controls.Add(this.lblGroupObservations);
             this.Controls.Add(this.lblGroupDescription);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.TxtGroupDes);
             this.Controls.Add(this.lblGroupName);
-            this.Controls.Add(this.txtGroupName);
+            this.Controls.Add(this.TxtGroupName);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "GroupManagmentForm";
             this.Text = "GroupManagmentForm";
             this.Load += new System.EventHandler(this.GroupManagmentForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGroupName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtGroupDes.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtGroupName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
@@ -242,12 +242,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtGroupRemarks;
         private DevExpress.XtraEditors.LabelControl lblGroupObservations;
         private DevExpress.XtraEditors.LabelControl lblGroupDescription;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit TxtGroupDes;
         private DevExpress.XtraEditors.LabelControl lblGroupName;
-        private DevExpress.XtraEditors.TextEdit txtGroupName;
+        private DevExpress.XtraEditors.TextEdit TxtGroupName;
         private DevExpress.XtraEditors.PanelControl pnlHeader;
         private DevExpress.XtraEditors.LabelControl lblGroupNew;
         private DevExpress.XtraEditors.SeparatorControl spcBackArrow;
