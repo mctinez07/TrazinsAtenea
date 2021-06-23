@@ -119,6 +119,7 @@ namespace TrazinsAtenea.GlobalEngine
             
         }
 
+        //Revisar fto.
         #region Enlace de propiedades a Control          
 
         //Probar cuando es combo y enlazar SelectedItem??
@@ -126,8 +127,7 @@ namespace TrazinsAtenea.GlobalEngine
         {
             if (ctrl is ListControl)
             {
-                ctrl.DataBindings.Add("SelectedValue", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);
-                ctrl.TabStop = false;
+                ctrl.DataBindings.Add("SelectedValue", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);                
             }                
             else if(ctrl is CheckBox || ctrl is CheckEdit)
                 ctrl.DataBindings.Add("CheckState", _bindedModel, property, true, DataSourceUpdateMode.OnPropertyChanged);
@@ -162,6 +162,29 @@ namespace TrazinsAtenea.GlobalEngine
             }
             
         }       
+
+        public static void GetAttributeSettings<T>(Control ctrl, string property, T model)
+        {
+            if (ctrl is TextEdit || ctrl is TextBox)
+            {
+                var textbox = ctrl as TextBox;
+                var textEdit = ctrl as TextEdit;
+                var prop = model.GetType().GetProperty(property);
+                var attr = GetAttribute<StringLengthAttribute>(prop);
+                if (attr != null)
+                {
+                    if (ctrl is TextEdit)
+                    {
+                        textEdit.Properties.MaxLength = attr.MaximumLength;
+                    }
+                    else
+                    {
+                        textbox.MaxLength = attr.MaximumLength;
+                    }
+                }
+
+            }
+        }
 
         // Abreviatura para obtener un atributo dado desde una propiedad.
         private static T GetAttribute<T>(System.Reflection.PropertyInfo prop)

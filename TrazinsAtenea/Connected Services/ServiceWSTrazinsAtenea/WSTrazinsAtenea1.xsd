@@ -283,15 +283,19 @@
     </xs:complexType>
   </xs:element>
   <xs:complexType name="CajasGrupo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="CajaId" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Contador" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="DesGrupo" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="GrupoId" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="NomGrupo" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="NumOrden" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
-    </xs:sequence>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseModel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CajaId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Contador" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DesGrupo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GrupoId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="NomGrupo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumOrden" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <xs:element name="CajasGrupo" nillable="true" type="tns:CajasGrupo" />
   <xs:element name="CajasGrupos_Select_ListResponse">

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupManagmentForm));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblGroupObservations = new DevExpress.XtraEditors.LabelControl();
             this.lblGroupDescription = new DevExpress.XtraEditors.LabelControl();
@@ -35,11 +36,11 @@
             this.lblGroupName = new DevExpress.XtraEditors.LabelControl();
             this.txtGroupName = new DevExpress.XtraEditors.TextEdit();
             this.pnlHeader = new DevExpress.XtraEditors.PanelControl();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.lblGroupNew = new DevExpress.XtraEditors.LabelControl();
             this.spcBackArrow = new DevExpress.XtraEditors.SeparatorControl();
             this.pcbBack = new System.Windows.Forms.PictureBox();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).BeginInit();
@@ -51,19 +52,21 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(248, 201);
+            this.textBox1.Location = new System.Drawing.Point(289, 247);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(415, 126);
+            this.textBox1.Size = new System.Drawing.Size(483, 154);
             this.textBox1.TabIndex = 19;
             // 
             // lblGroupObservations
             // 
             this.lblGroupObservations.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGroupObservations.Appearance.Options.UseFont = true;
-            this.lblGroupObservations.Location = new System.Drawing.Point(21, 203);
+            this.lblGroupObservations.Location = new System.Drawing.Point(24, 250);
+            this.lblGroupObservations.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblGroupObservations.Name = "lblGroupObservations";
-            this.lblGroupObservations.Size = new System.Drawing.Size(204, 24);
+            this.lblGroupObservations.Size = new System.Drawing.Size(258, 29);
             this.lblGroupObservations.TabIndex = 18;
             this.lblGroupObservations.Text = "Observaciones de Grupo";
             // 
@@ -71,38 +74,42 @@
             // 
             this.lblGroupDescription.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGroupDescription.Appearance.Options.UseFont = true;
-            this.lblGroupDescription.Location = new System.Drawing.Point(21, 154);
+            this.lblGroupDescription.Location = new System.Drawing.Point(24, 190);
+            this.lblGroupDescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblGroupDescription.Name = "lblGroupDescription";
-            this.lblGroupDescription.Size = new System.Drawing.Size(180, 24);
+            this.lblGroupDescription.Size = new System.Drawing.Size(228, 29);
             this.lblGroupDescription.TabIndex = 17;
             this.lblGroupDescription.Text = "Descripción de Grupo";
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(248, 151);
+            this.textEdit1.Location = new System.Drawing.Point(289, 186);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(415, 30);
+            this.textEdit1.Size = new System.Drawing.Size(484, 36);
             this.textEdit1.TabIndex = 16;
             // 
             // lblGroupName
             // 
             this.lblGroupName.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGroupName.Appearance.Options.UseFont = true;
-            this.lblGroupName.Location = new System.Drawing.Point(21, 108);
+            this.lblGroupName.Location = new System.Drawing.Point(24, 133);
+            this.lblGroupName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblGroupName.Name = "lblGroupName";
-            this.lblGroupName.Size = new System.Drawing.Size(150, 24);
+            this.lblGroupName.Size = new System.Drawing.Size(187, 29);
             this.lblGroupName.TabIndex = 15;
             this.lblGroupName.Text = "Nombre de Grupo";
             // 
             // txtGroupName
             // 
-            this.txtGroupName.Location = new System.Drawing.Point(248, 105);
+            this.txtGroupName.Location = new System.Drawing.Point(289, 129);
+            this.txtGroupName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGroupName.Name = "txtGroupName";
             this.txtGroupName.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGroupName.Properties.Appearance.Options.UseFont = true;
-            this.txtGroupName.Size = new System.Drawing.Size(415, 30);
+            this.txtGroupName.Size = new System.Drawing.Size(484, 36);
             this.txtGroupName.TabIndex = 14;
             // 
             // pnlHeader
@@ -121,44 +128,10 @@
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.pnlHeader.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(675, 75);
+            this.pnlHeader.Size = new System.Drawing.Size(787, 92);
             this.pnlHeader.TabIndex = 20;
-            // 
-            // lblGroupNew
-            // 
-            this.lblGroupNew.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGroupNew.Appearance.Options.UseFont = true;
-            this.lblGroupNew.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.lblGroupNew.ImageOptions.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblGroupNew.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.group_24x24;
-            this.lblGroupNew.Location = new System.Drawing.Point(98, 17);
-            this.lblGroupNew.Name = "lblGroupNew";
-            this.lblGroupNew.Size = new System.Drawing.Size(223, 40);
-            this.lblGroupNew.TabIndex = 2;
-            this.lblGroupNew.Text = "Nuevo Grupo";
-            // 
-            // spcBackArrow
-            // 
-            this.spcBackArrow.Dock = System.Windows.Forms.DockStyle.Left;
-            this.spcBackArrow.LineOrientation = System.Windows.Forms.Orientation.Vertical;
-            this.spcBackArrow.Location = new System.Drawing.Point(77, 2);
-            this.spcBackArrow.Name = "spcBackArrow";
-            this.spcBackArrow.Padding = new System.Windows.Forms.Padding(0, 0, 9, 0);
-            this.spcBackArrow.Size = new System.Drawing.Size(15, 71);
-            this.spcBackArrow.TabIndex = 1;
-            // 
-            // pcbBack
-            // 
-            this.pcbBack.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pcbBack.Image = global::TrazinsAtenea.Properties.Resources.arrow_back_48x48;
-            this.pcbBack.Location = new System.Drawing.Point(2, 2);
-            this.pcbBack.Name = "pcbBack";
-            this.pcbBack.Size = new System.Drawing.Size(75, 71);
-            this.pcbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pcbBack.TabIndex = 0;
-            this.pcbBack.TabStop = false;
-            this.pcbBack.Click += new System.EventHandler(this.pcbBack_Click);
             // 
             // btnSave
             // 
@@ -169,13 +142,15 @@
             this.btnSave.Appearance.Options.UseBackColor = true;
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.Appearance.Options.UseForeColor = true;
-            this.btnSave.Location = new System.Drawing.Point(557, 13);
+            this.btnSave.Location = new System.Drawing.Point(650, 16);
             this.btnSave.LookAndFeel.SkinName = "DevExpress Style";
             this.btnSave.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(106, 48);
+            this.btnSave.Size = new System.Drawing.Size(124, 59);
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Guardar";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnExit
             // 
@@ -185,22 +160,61 @@
             this.btnExit.Appearance.Options.UseFont = true;
             this.btnExit.Appearance.Options.UseForeColor = true;
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.Location = new System.Drawing.Point(477, 13);
+            this.btnExit.Location = new System.Drawing.Point(556, 16);
             this.btnExit.LookAndFeel.SkinName = "DevExpress Style";
             this.btnExit.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(74, 48);
+            this.btnExit.Size = new System.Drawing.Size(86, 59);
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Salir";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // lblGroupNew
+            // 
+            this.lblGroupNew.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGroupNew.Appearance.Options.UseFont = true;
+            this.lblGroupNew.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.lblGroupNew.ImageOptions.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblGroupNew.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.group_24x24;
+            this.lblGroupNew.Location = new System.Drawing.Point(114, 21);
+            this.lblGroupNew.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblGroupNew.Name = "lblGroupNew";
+            this.lblGroupNew.Size = new System.Drawing.Size(273, 49);
+            this.lblGroupNew.TabIndex = 2;
+            this.lblGroupNew.Text = "Nuevo Grupo";
+            // 
+            // spcBackArrow
+            // 
+            this.spcBackArrow.Dock = System.Windows.Forms.DockStyle.Left;
+            this.spcBackArrow.LineOrientation = System.Windows.Forms.Orientation.Vertical;
+            this.spcBackArrow.Location = new System.Drawing.Point(89, 2);
+            this.spcBackArrow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.spcBackArrow.Name = "spcBackArrow";
+            this.spcBackArrow.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.spcBackArrow.Size = new System.Drawing.Size(17, 88);
+            this.spcBackArrow.TabIndex = 1;
+            // 
+            // pcbBack
+            // 
+            this.pcbBack.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pcbBack.Image = ((System.Drawing.Image)(resources.GetObject("pcbBack.Image")));
+            this.pcbBack.Location = new System.Drawing.Point(2, 2);
+            this.pcbBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pcbBack.Name = "pcbBack";
+            this.pcbBack.Size = new System.Drawing.Size(87, 88);
+            this.pcbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pcbBack.TabIndex = 0;
+            this.pcbBack.TabStop = false;
+            this.pcbBack.Click += new System.EventHandler(this.pcbBack_Click);
             // 
             // GroupManagmentForm
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 343);
+            this.ClientSize = new System.Drawing.Size(787, 422);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblGroupObservations);
@@ -210,8 +224,10 @@
             this.Controls.Add(this.txtGroupName);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "GroupManagmentForm";
             this.Text = "GroupManagmentForm";
+            this.Load += new System.EventHandler(this.GroupManagmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).EndInit();

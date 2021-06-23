@@ -19,12 +19,21 @@ namespace TrazinsAtenea.Forms.Inventory.Group
 
         public GroupManagmentForm()
         {
-            InitializeComponent();
+            InitializeComponent();             
+        }
+
+        private void GroupManagmentForm_Load(object sender, EventArgs e)
+        {
             //Traducir
             Multilanguage();
-            //si es edición rellenar los campos???
 
-            
+            //si es edición rellenar los campos
+            BindigControls();
+        }
+
+        private void BindigControls()
+        {
+            throw new NotImplementedException();
         }
 
         private void Multilanguage()
@@ -47,5 +56,12 @@ namespace TrazinsAtenea.Forms.Inventory.Group
         {
             DialogResult = Engine.OpenMessageForm(190);
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

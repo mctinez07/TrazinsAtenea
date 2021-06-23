@@ -131,6 +131,11 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             //Enlazar Controles para que se actualicen automáticamente los valores de los controles.    
             //Crear metodo que coja los valores del atributo
             //BindingControls();
+            Engine.GetAttributeSettings(txtSetName, "Descripcion", Caja);
+            Engine.GetAttributeSettings(txtSetCode, "CodigoCaja", Caja);
+            Engine.GetAttributeSettings(txtRemarksAssemblyPackaging, "ObservEmp", Caja);
+            Engine.GetAttributeSettings(txtRemarksSteri, "ObservCic", Caja);
+            Engine.GetAttributeSettings(txtRemarksWashes, "ObservLav", Caja);
 
             //Establecer estado de los controles
             ControlsState();

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -8,28 +10,101 @@ using System.Threading.Tasks;
 namespace Models.Inventory
 {
     [DataContract(Namespace = "http://WSTrazinsAtenea.com")]
-    public class CajasGrupo
+    public class CajasGrupo : BaseModel
     {
-        [DataMember]
-        public int? GrupoId { get; set; }
+        private int? _grupoId;
 
         [DataMember]
-        public string CajaId { get; set; }
+        public int? GrupoId
+        {
+            get { return _grupoId; }
+            set
+            {
+                _grupoId = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("GrupoId"));
+            }
+        }
+
+        private string _cajaId;
 
         [DataMember]
-        public string NomGrupo { get; set; }
+        [StringLength(14)]
+        public string CajaId
+        {
+            get { return _cajaId; }
+            set
+            {
+                _cajaId = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("CajaId"));
+            }
+        }
+
+        private string _nomGrupo;
 
         [DataMember]
-        public string DesGrupo { get; set; }
+        [StringLength(50)]
+        public string NomGrupo
+        {
+            get { return _nomGrupo; }
+            set
+            {
+                _nomGrupo = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("NomGrupo"));
+            }
+        }
+
+        private string _desGrupo;
+        [DataMember]
+        [StringLength(50)]
+        public string DesGrupo
+        {
+            get { return _desGrupo; }
+            set
+            {
+                _desGrupo = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("DesGrupo"));
+            }
+        }
+
+        private string _observaciones;
 
         [DataMember]
-        public string Observaciones { get; set; }
+        [StringLength(100)]
+        public string Observaciones
+        {
+            get { return _observaciones; }
+            set
+            {
+                _observaciones = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("Observaciones"));
+            }
+        }
+
+        public int? _numOrden;
 
         [DataMember]
-        public int? NumOrden { get; set; }
+        public int? NumOrden
+        {
+            get { return _numOrden; }
+            set
+            {
+                _numOrden = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("NumOrden"));
+            }
+        }
+
+        private int? _contador;
 
         //Número de articulos del grupo
         [DataMember]
-        public int? Contador { get; set; }
+        public int? Contador
+        {
+            get { return _contador; }
+            set
+            {
+                _contador = value;
+                InvokePropertyChanged(new PropertyChangedEventArgs("Contador"));
+            }
+        }
     }
 }
