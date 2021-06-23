@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using TrazinsAtenea.GlobalEngine;
 using Models.Inventory;
+using TrazinsAtenea.Forms.GlobalForms;
 
 namespace TrazinsAtenea.Forms.Inventory.Group
 {
@@ -27,6 +28,7 @@ namespace TrazinsAtenea.Forms.Inventory.Group
         {            
             Multilanguage();
             lblSetName.Text = Caja.Descripcion;
+            CargarDatos();
         }
 
         private void Multilanguage()
@@ -51,20 +53,41 @@ namespace TrazinsAtenea.Forms.Inventory.Group
 
         private void btnGroupNew_Click(object sender, EventArgs e)
         {
-            GroupManagmentForm frm = new GroupManagmentForm
+            GroupManagmentForm frm = new GroupManagmentForm(this)
             {
                 Caja = this.Caja
             };
 
+            frm.UpdateEventHandler += Agr_Prod_UpdateEventHandler;
+
             frm.ShowDialog();
-        }
+        }        
 
         private void btnModify_Click(object sender, EventArgs e)
         {
-            GroupManagmentForm frm = new GroupManagmentForm(new CajasGrupo() { NomGrupo = "prueba" });
+            CajasGrupo selected = gdvGroups.GetRow(gdvGroups.FocusedRowHandle) as CajasGrupo;
+            GroupManagmentForm frm = new GroupManagmentForm(selected, this);
+            frm.Caja = this.Caja;
+            frm.UpdateEventHandler += Agr_Prod_UpdateEventHandler;
             frm.ShowDialog();
         }
 
-        
+        private void CargarDatos()
+        {
+            var res = BaseModelClient.Instance.Service.CajasGrupos_Select_List(new CajasGrupo() { CajaId = Caja.CajaId });
+            dgcGroups.DataSource = res;
+        }
+
+        private void Agr_Prod_UpdateEventHandler(object sender, GroupManagmentForm.UpdateEventArgs args)
+        {
+            CargarDatos();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            CajasGrupo selected = gdvGroups.GetRow(gdvGroups.FocusedRowHandle) as CajasGrupo;
+            DeleteForm deleteForm = new DeleteForm();
+
+        }
     }
 }

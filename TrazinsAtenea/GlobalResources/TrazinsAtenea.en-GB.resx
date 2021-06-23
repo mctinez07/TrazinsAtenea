@@ -220,4 +220,10 @@
   <data name="SaveContinue" xml:space="preserve">
     <value>Save and continue</value>
   </data>
+  <data name="DeleteMessageTitle" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
+  <data name="YesSend" xml:space="preserve">
+    <value>Yes, send to recicle bin</value>
+  </data>
 </root>

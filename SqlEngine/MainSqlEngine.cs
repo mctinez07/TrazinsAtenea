@@ -248,7 +248,7 @@ namespace SqlEngine
             {
                 //Array que contedrá los parámetros del procedimiento
                 SqlParameter[] discoveredParameters;
-
+                OutPutParameter = null;
                 SqlCommand SqlCmd = new SqlCommand
                 {
                     Connection = con,
@@ -260,7 +260,7 @@ namespace SqlEngine
                 SqlCommandBuilder.DeriveParameters(SqlCmd);
 
                 //Inicializamos el array con el número de parámetros del procedimiento
-                discoveredParameters = new SqlParameter[SqlCmd.Parameters.Count - 1 + 1];
+                discoveredParameters = new SqlParameter[SqlCmd.Parameters.Count - 1 + 1];                
 
                 //Copiamos el array obtenido al array contenedor de parametros
                 SqlCmd.Parameters.CopyTo(discoveredParameters, 0);
@@ -286,7 +286,8 @@ namespace SqlEngine
                     SqlParameter.Value = property.GetValue(modelo) ?? (object)DBNull.Value;
                     //Establecemos el parametro de output.
                     if (SqlParameter.Direction == ParameterDirection.InputOutput)
-                    {                        
+                    {        
+                        //reset parameter
                         OutPutParameter = SqlParameter;
                     }
                 }
@@ -373,11 +374,14 @@ namespace SqlEngine
                     int result = sqlCmd.ExecuteNonQuery();
 
                     //Obtenemos el valor devuelto en el parámetro Output.
-                    var a = sqlCmd.Parameters[OutPutParameter.ParameterName].Value;
+                    if(OutPutParameter!= null)
+                    {
+                        var a = sqlCmd.Parameters[OutPutParameter.ParameterName].Value;
 
-                    //Obtenemos la propiedad asociada como output y agregamos el valor
-                    var prop = model.GetType().GetProperty(OutPutParameter.ParameterName.Remove(0,1));
-                    prop.SetValue(model, a, null);
+                        //Obtenemos la propiedad asociada como output y agregamos el valor
+                        var prop = model.GetType().GetProperty(OutPutParameter.ParameterName.Remove(0, 1));
+                        prop.SetValue(model, a, null);
+                    }
 
                     //Marcamos como terminada la transacción aunque en este caso solo hay una operación.
                     tnx.Complete();

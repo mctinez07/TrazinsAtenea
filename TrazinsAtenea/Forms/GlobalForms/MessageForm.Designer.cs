@@ -87,7 +87,7 @@
             this.lblMessage.BackColor = System.Drawing.Color.White;
             this.lblMessage.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.Black;
-            this.lblMessage.Location = new System.Drawing.Point(55, 228);
+            this.lblMessage.Location = new System.Drawing.Point(62, 228);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(363, 22);
             this.lblMessage.TabIndex = 14;
@@ -100,9 +100,9 @@
             this.lblMessageTitle.BackColor = System.Drawing.Color.White;
             this.lblMessageTitle.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessageTitle.ForeColor = System.Drawing.Color.Black;
-            this.lblMessageTitle.Location = new System.Drawing.Point(161, 184);
+            this.lblMessageTitle.Location = new System.Drawing.Point(149, 184);
             this.lblMessageTitle.Name = "lblMessageTitle";
-            this.lblMessageTitle.Size = new System.Drawing.Size(150, 40);
+            this.lblMessageTitle.Size = new System.Drawing.Size(189, 49);
             this.lblMessageTitle.TabIndex = 13;
             this.lblMessageTitle.Text = "Atención";
             // 
@@ -164,7 +164,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseFont = true;
             this.Appearance.Options.UseForeColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 481);
             this.Controls.Add(this.pnlExit);

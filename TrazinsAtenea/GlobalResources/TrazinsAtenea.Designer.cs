@@ -178,6 +178,15 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ¿Está seguro?.
+        /// </summary>
+        internal static string DeleteMessageTitle {
+            get {
+                return ResourceManager.GetString("DeleteMessageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Salir.
         /// </summary>
         internal static string Exit {
@@ -687,6 +696,15 @@ namespace TrazinsAtenea.GlobalResources {
         internal static string Yes {
             get {
                 return ResourceManager.GetString("Yes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sí, enviar a la papelera.
+        /// </summary>
+        internal static string YesSend {
+            get {
+                return ResourceManager.GetString("YesSend", resourceCulture);
             }
         }
     }

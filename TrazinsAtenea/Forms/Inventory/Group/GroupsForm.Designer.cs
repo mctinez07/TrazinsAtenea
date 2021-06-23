@@ -39,7 +39,7 @@
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnModify = new DevExpress.XtraEditors.SimpleButton();
             this.pnlWorkBench = new DevExpress.XtraEditors.PanelControl();
-            this.DgcGroups = new DevExpress.XtraGrid.GridControl();
+            this.dgcGroups = new DevExpress.XtraGrid.GridControl();
             this.gdvGroups = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gdcGroupName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gdcGroupDescription = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -54,7 +54,7 @@
             this.pnlGroupFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlWorkBench)).BeginInit();
             this.pnlWorkBench.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgcGroups)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgcGroups)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvGroups)).BeginInit();
             this.SuspendLayout();
             // 
@@ -196,6 +196,7 @@
             this.btnDelete.Size = new System.Drawing.Size(148, 59);
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Eliminar";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnModify
             // 
@@ -217,7 +218,7 @@
             // 
             // pnlWorkBench
             // 
-            this.pnlWorkBench.Controls.Add(this.DgcGroups);
+            this.pnlWorkBench.Controls.Add(this.dgcGroups);
             this.pnlWorkBench.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlWorkBench.Location = new System.Drawing.Point(0, 182);
             this.pnlWorkBench.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -225,17 +226,17 @@
             this.pnlWorkBench.Size = new System.Drawing.Size(1114, 436);
             this.pnlWorkBench.TabIndex = 18;
             // 
-            // DgcGroups
+            // dgcGroups
             // 
-            this.DgcGroups.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgcGroups.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.DgcGroups.Location = new System.Drawing.Point(2, 2);
-            this.DgcGroups.MainView = this.gdvGroups;
-            this.DgcGroups.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.DgcGroups.Name = "DgcGroups";
-            this.DgcGroups.Size = new System.Drawing.Size(1110, 432);
-            this.DgcGroups.TabIndex = 19;
-            this.DgcGroups.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgcGroups.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgcGroups.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgcGroups.Location = new System.Drawing.Point(2, 2);
+            this.dgcGroups.MainView = this.gdvGroups;
+            this.dgcGroups.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgcGroups.Name = "dgcGroups";
+            this.dgcGroups.Size = new System.Drawing.Size(1110, 432);
+            this.dgcGroups.TabIndex = 19;
+            this.dgcGroups.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gdvGroups});
             // 
             // gdvGroups
@@ -265,12 +266,13 @@
             this.gdcGroupDescription,
             this.gdcGroupObservations});
             this.gdvGroups.DetailHeight = 431;
-            this.gdvGroups.GridControl = this.DgcGroups;
+            this.gdvGroups.GridControl = this.dgcGroups;
             this.gdvGroups.Name = "gdvGroups";
             // 
             // gdcGroupName
             // 
             this.gdcGroupName.Caption = "Nombre de Grupo";
+            this.gdcGroupName.FieldName = "NomGrupo";
             this.gdcGroupName.MinWidth = 23;
             this.gdcGroupName.Name = "gdcGroupName";
             this.gdcGroupName.Visible = true;
@@ -280,6 +282,7 @@
             // gdcGroupDescription
             // 
             this.gdcGroupDescription.Caption = "Descripción de Grupo";
+            this.gdcGroupDescription.FieldName = "DesGrupo";
             this.gdcGroupDescription.MinWidth = 23;
             this.gdcGroupDescription.Name = "gdcGroupDescription";
             this.gdcGroupDescription.Visible = true;
@@ -289,6 +292,7 @@
             // gdcGroupObservations
             // 
             this.gdcGroupObservations.Caption = "Observaciones de Grupo";
+            this.gdcGroupObservations.FieldName = "Observaciones";
             this.gdcGroupObservations.MinWidth = 23;
             this.gdcGroupObservations.Name = "gdcGroupObservations";
             this.gdcGroupObservations.Visible = true;
@@ -323,7 +327,7 @@
             this.pnlGroupFooter.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnlWorkBench)).EndInit();
             this.pnlWorkBench.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DgcGroups)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgcGroups)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvGroups)).EndInit();
             this.ResumeLayout(false);
 
@@ -345,6 +349,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gdcGroupName;
         private DevExpress.XtraGrid.Columns.GridColumn gdcGroupDescription;
         private DevExpress.XtraGrid.Columns.GridColumn gdcGroupObservations;
-        public DevExpress.XtraGrid.GridControl DgcGroups;
+        public DevExpress.XtraGrid.GridControl dgcGroups;
     }
 }

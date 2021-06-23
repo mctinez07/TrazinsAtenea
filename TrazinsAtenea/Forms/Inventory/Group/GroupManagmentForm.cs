@@ -18,15 +18,15 @@ namespace TrazinsAtenea.Forms.Inventory.Group
     {
         public Caja Caja;
         private CajasGrupo CajasGrupoMain = new CajasGrupo();
-        private EnumOperationType OperationType;
+        private EnumOperationType OperationType;        
 
-        public GroupManagmentForm()
+        public GroupManagmentForm(GroupsForm GroupsForm)
         {
             InitializeComponent();
             this.OperationType = EnumOperationType.New;
         }
 
-        public GroupManagmentForm(CajasGrupo cajasGrupo)
+        public GroupManagmentForm(CajasGrupo cajasGrupo, GroupsForm groupsForm)
         {
             InitializeComponent();
             this.CajasGrupoMain = cajasGrupo;
@@ -103,7 +103,8 @@ namespace TrazinsAtenea.Forms.Inventory.Group
                     default:
                         break;
                 }
-                
+
+                Agregar();
                 
             }
             catch (Exception ex)
@@ -112,6 +113,20 @@ namespace TrazinsAtenea.Forms.Inventory.Group
             }
         }
 
+        //Clase que se encarga de actualizar el grid del formulario padre
+        public delegate void UpdateDelegate(object sender, UpdateEventArgs args);
+        public event UpdateDelegate UpdateEventHandler;
+
+        public class UpdateEventArgs : EventArgs
+        {
+            public string Data { get; set; }
+        }
+
+        protected void Agregar()
+        {
+            UpdateEventArgs args = new UpdateEventArgs();
+            UpdateEventHandler.Invoke(this, args);
+        }
         
     }
 }

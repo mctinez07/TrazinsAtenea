@@ -307,4 +307,10 @@
   <data name="SaveContinue" xml:space="preserve">
     <value>Guardar y continuar</value>
   </data>
+  <data name="DeleteMessageTitle" xml:space="preserve">
+    <value>¿Está seguro?</value>
+  </data>
+  <data name="YesSend" xml:space="preserve">
+    <value>Sí, enviar a la papelera</value>
+  </data>
 </root>

@@ -172,6 +172,9 @@
     <EmbeddedResource Include="Controls\SetImageControl.resx">
       <DependentUpon>SetImageControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GlobalForms\DeleteForm.resx">
+      <DependentUpon>DeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\GlobalForms\GlobalWaitForm.resx">
       <DependentUpon>GlobalWaitForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -377,6 +380,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\modificar-24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group-18x18.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
