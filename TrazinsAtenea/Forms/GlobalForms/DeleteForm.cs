@@ -14,6 +14,7 @@ namespace TrazinsAtenea.Forms.GlobalForms
 {
     public partial class DeleteForm : DevExpress.XtraEditors.XtraForm
     {
+        private List<DeleteObject> DeleteObjectsList = new List<DeleteObject>();
         public DeleteForm()
         {
             InitializeComponent();
@@ -34,17 +35,24 @@ namespace TrazinsAtenea.Forms.GlobalForms
 
         public void GetElement<T>(T model, string objectName)
         {
-            var a = model.GetType().Name;
+            var classType = model.GetType().Name;
 
             DeleteObject deleteObject = new DeleteObject();
             deleteObject.Name = objectName;
-            if (a.Equals("CajasGrupos"))
+            if (classType.Equals("CajasGrupo"))
             {
-                deleteObject.Image = Properties.Resources.group_18x18;
-                
+                deleteObject.Image = Properties.Resources.group_24x24;                
             }
 
-            gdvDeleteObjects.DataSource = deleteObject;
+            DeleteObjectsList.Add(deleteObject);
+
+            grcDeleteObjects.DataSource = DeleteObjectsList;
+        }        
+
+        private void btnNo_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.None;
+            this.Close();
         }
 
         public class DeleteObject

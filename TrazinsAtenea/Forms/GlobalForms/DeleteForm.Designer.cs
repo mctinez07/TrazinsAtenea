@@ -45,7 +45,7 @@
             // pcbDeleteIcon
             // 
             this.pcbDeleteIcon.Image = global::TrazinsAtenea.Properties.Resources.delete_48x48;
-            this.pcbDeleteIcon.Location = new System.Drawing.Point(172, 12);
+            this.pcbDeleteIcon.Location = new System.Drawing.Point(189, 12);
             this.pcbDeleteIcon.Name = "pcbDeleteIcon";
             this.pcbDeleteIcon.Size = new System.Drawing.Size(126, 126);
             this.pcbDeleteIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -72,6 +72,7 @@
             this.btnNo.Size = new System.Drawing.Size(106, 52);
             this.btnNo.TabIndex = 3;
             this.btnNo.Text = "No";
+            this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
             // 
             // btnYesSend
             // 
@@ -97,11 +98,12 @@
             this.lblDeleteMessageTitle.BackColor = System.Drawing.Color.White;
             this.lblDeleteMessageTitle.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeleteMessageTitle.ForeColor = System.Drawing.Color.Black;
-            this.lblDeleteMessageTitle.Location = new System.Drawing.Point(100, 141);
+            this.lblDeleteMessageTitle.Location = new System.Drawing.Point(117, 141);
             this.lblDeleteMessageTitle.Name = "lblDeleteMessageTitle";
             this.lblDeleteMessageTitle.Size = new System.Drawing.Size(271, 49);
             this.lblDeleteMessageTitle.TabIndex = 15;
             this.lblDeleteMessageTitle.Text = "¿Está seguro?";
+            this.lblDeleteMessageTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblMessage
             // 
@@ -117,28 +119,42 @@
             // 
             // grcDeleteObjects
             // 
-            this.grcDeleteObjects.EmbeddedNavigator.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grcDeleteObjects.EmbeddedNavigator.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grcDeleteObjects.EmbeddedNavigator.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.grcDeleteObjects.EmbeddedNavigator.Appearance.Options.UseFont = true;
-            this.grcDeleteObjects.Enabled = false;
-            this.grcDeleteObjects.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grcDeleteObjects.Location = new System.Drawing.Point(12, 220);
+            this.grcDeleteObjects.EmbeddedNavigator.Appearance.Options.UseForeColor = true;
+            this.grcDeleteObjects.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grcDeleteObjects.Location = new System.Drawing.Point(24, 236);
             this.grcDeleteObjects.MainView = this.gdvDeleteObjects;
             this.grcDeleteObjects.Name = "grcDeleteObjects";
-            this.grcDeleteObjects.Size = new System.Drawing.Size(474, 264);
+            this.grcDeleteObjects.Size = new System.Drawing.Size(462, 248);
             this.grcDeleteObjects.TabIndex = 18;
             this.grcDeleteObjects.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gdvDeleteObjects});
             // 
             // gdvDeleteObjects
             // 
+            this.gdvDeleteObjects.Appearance.FocusedRow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.gdvDeleteObjects.Appearance.FocusedRow.Options.UseForeColor = true;
+            this.gdvDeleteObjects.Appearance.Preview.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdvDeleteObjects.Appearance.Preview.Options.UseFont = true;
+            this.gdvDeleteObjects.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdvDeleteObjects.Appearance.Row.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.gdvDeleteObjects.Appearance.Row.Options.UseFont = true;
+            this.gdvDeleteObjects.Appearance.Row.Options.UseForeColor = true;
+            this.gdvDeleteObjects.Appearance.SelectedRow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdvDeleteObjects.Appearance.SelectedRow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.gdvDeleteObjects.Appearance.SelectedRow.Options.UseFont = true;
+            this.gdvDeleteObjects.Appearance.SelectedRow.Options.UseForeColor = true;
+            this.gdvDeleteObjects.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.gdvDeleteObjects.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colImage,
             this.colObjectName});
             this.gdvDeleteObjects.GridControl = this.grcDeleteObjects;
             this.gdvDeleteObjects.Name = "gdvDeleteObjects";
             this.gdvDeleteObjects.OptionsFind.AllowFindPanel = false;
+            this.gdvDeleteObjects.OptionsSelection.EnableAppearanceFocusedRow = false;
             this.gdvDeleteObjects.OptionsSelection.ShowCheckBoxSelectorInGroupRow = DevExpress.Utils.DefaultBoolean.False;
-            this.gdvDeleteObjects.OptionsView.ColumnAutoWidth = false;
             this.gdvDeleteObjects.OptionsView.ShowColumnHeaders = false;
             this.gdvDeleteObjects.OptionsView.ShowGroupPanel = false;
             this.gdvDeleteObjects.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.False;
@@ -153,7 +169,7 @@
             this.colImage.Name = "colImage";
             this.colImage.Visible = true;
             this.colImage.VisibleIndex = 0;
-            this.colImage.Width = 94;
+            this.colImage.Width = 50;
             // 
             // colObjectName
             // 
@@ -166,7 +182,7 @@
             this.colObjectName.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
             this.colObjectName.Visible = true;
             this.colObjectName.VisibleIndex = 1;
-            this.colObjectName.Width = 94;
+            this.colObjectName.Width = 422;
             // 
             // DeleteForm
             // 

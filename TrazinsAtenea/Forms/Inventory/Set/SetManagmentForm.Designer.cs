@@ -186,15 +186,19 @@
             this.btnFirstPosition = new DevExpress.XtraEditors.SimpleButton();
             this.txtFirstPosition = new DevExpress.XtraEditors.TextEdit();
             this.pnlSecondPosition = new DevExpress.XtraEditors.PanelControl();
+            this.setImageControl2 = new TrazinsAtenea.Controls.SetImageControl();
             this.btnSecondPosition = new DevExpress.XtraEditors.SimpleButton();
             this.txtSecondPosition = new DevExpress.XtraEditors.TextEdit();
             this.pnlTirthPosition = new DevExpress.XtraEditors.PanelControl();
+            this.setImageControl3 = new TrazinsAtenea.Controls.SetImageControl();
             this.btnTirthPosition = new DevExpress.XtraEditors.SimpleButton();
             this.txtTirthPosition = new DevExpress.XtraEditors.TextEdit();
             this.pnlFourthPosition = new DevExpress.XtraEditors.PanelControl();
+            this.setImageControl4 = new TrazinsAtenea.Controls.SetImageControl();
             this.btnFourthPosition = new DevExpress.XtraEditors.SimpleButton();
             this.txtFourthPosition = new DevExpress.XtraEditors.TextEdit();
             this.pnlFifthPosition = new DevExpress.XtraEditors.PanelControl();
+            this.setImageControl5 = new TrazinsAtenea.Controls.SetImageControl();
             this.btnFifthPosition = new DevExpress.XtraEditors.SimpleButton();
             this.txtFifthPosition = new DevExpress.XtraEditors.TextEdit();
             this.pnlSixthPosition = new DevExpress.XtraEditors.PanelControl();
@@ -223,10 +227,6 @@
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::TrazinsAtenea.Forms.GlobalForms.GlobalWaitForm), true, true);
             this.ofdImageVideo = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
-            this.setImageControl2 = new TrazinsAtenea.Controls.SetImageControl();
-            this.setImageControl3 = new TrazinsAtenea.Controls.SetImageControl();
-            this.setImageControl4 = new TrazinsAtenea.Controls.SetImageControl();
-            this.setImageControl5 = new TrazinsAtenea.Controls.SetImageControl();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).BeginInit();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcBackArrow)).BeginInit();
@@ -2044,6 +2044,13 @@
             this.pnlSecondPosition.Size = new System.Drawing.Size(393, 337);
             this.pnlSecondPosition.TabIndex = 1;
             // 
+            // setImageControl2
+            // 
+            this.setImageControl2.Location = new System.Drawing.Point(9, 16);
+            this.setImageControl2.Name = "setImageControl2";
+            this.setImageControl2.Size = new System.Drawing.Size(373, 189);
+            this.setImageControl2.TabIndex = 9;
+            // 
             // btnSecondPosition
             // 
             this.btnSecondPosition.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold);
@@ -2083,6 +2090,13 @@
             this.pnlTirthPosition.Name = "pnlTirthPosition";
             this.pnlTirthPosition.Size = new System.Drawing.Size(393, 337);
             this.pnlTirthPosition.TabIndex = 2;
+            // 
+            // setImageControl3
+            // 
+            this.setImageControl3.Location = new System.Drawing.Point(9, 16);
+            this.setImageControl3.Name = "setImageControl3";
+            this.setImageControl3.Size = new System.Drawing.Size(373, 189);
+            this.setImageControl3.TabIndex = 11;
             // 
             // btnTirthPosition
             // 
@@ -2124,6 +2138,13 @@
             this.pnlFourthPosition.Size = new System.Drawing.Size(393, 337);
             this.pnlFourthPosition.TabIndex = 3;
             // 
+            // setImageControl4
+            // 
+            this.setImageControl4.Location = new System.Drawing.Point(9, 16);
+            this.setImageControl4.Name = "setImageControl4";
+            this.setImageControl4.Size = new System.Drawing.Size(373, 189);
+            this.setImageControl4.TabIndex = 11;
+            // 
             // btnFourthPosition
             // 
             this.btnFourthPosition.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold);
@@ -2163,6 +2184,13 @@
             this.pnlFifthPosition.Name = "pnlFifthPosition";
             this.pnlFifthPosition.Size = new System.Drawing.Size(393, 337);
             this.pnlFifthPosition.TabIndex = 4;
+            // 
+            // setImageControl5
+            // 
+            this.setImageControl5.Location = new System.Drawing.Point(9, 16);
+            this.setImageControl5.Name = "setImageControl5";
+            this.setImageControl5.Size = new System.Drawing.Size(373, 189);
+            this.setImageControl5.TabIndex = 11;
             // 
             // btnFifthPosition
             // 
@@ -2509,6 +2537,7 @@
             this.btnInstrumentalAdd.Size = new System.Drawing.Size(278, 59);
             this.btnInstrumentalAdd.TabIndex = 8;
             this.btnInstrumentalAdd.Text = "Añadir Instrumental";
+            this.btnInstrumentalAdd.Click += new System.EventHandler(this.btnInstrumentalAdd_Click);
             // 
             // btnGroupManagment
             // 
@@ -2547,34 +2576,6 @@
             // splashScreenManager1
             // 
             this.splashScreenManager1.ClosingDelay = 500;
-            // 
-            // setImageControl2
-            // 
-            this.setImageControl2.Location = new System.Drawing.Point(9, 16);
-            this.setImageControl2.Name = "setImageControl2";
-            this.setImageControl2.Size = new System.Drawing.Size(373, 189);
-            this.setImageControl2.TabIndex = 9;
-            // 
-            // setImageControl3
-            // 
-            this.setImageControl3.Location = new System.Drawing.Point(9, 16);
-            this.setImageControl3.Name = "setImageControl3";
-            this.setImageControl3.Size = new System.Drawing.Size(373, 189);
-            this.setImageControl3.TabIndex = 11;
-            // 
-            // setImageControl4
-            // 
-            this.setImageControl4.Location = new System.Drawing.Point(9, 16);
-            this.setImageControl4.Name = "setImageControl4";
-            this.setImageControl4.Size = new System.Drawing.Size(373, 189);
-            this.setImageControl4.TabIndex = 11;
-            // 
-            // setImageControl5
-            // 
-            this.setImageControl5.Location = new System.Drawing.Point(9, 16);
-            this.setImageControl5.Name = "setImageControl5";
-            this.setImageControl5.Size = new System.Drawing.Size(373, 189);
-            this.setImageControl5.TabIndex = 11;
             // 
             // SetManagmentForm
             // 

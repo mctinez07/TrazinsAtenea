@@ -120,6 +120,12 @@
     <Compile Include="Forms\Inventory\Group\GroupsForm.Designer.cs">
       <DependentUpon>GroupsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Inventory\Instrumental\InstrumentalNewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inventory\Instrumental\InstrumentalNewForm.Designer.cs">
+      <DependentUpon>InstrumentalNewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Inventory\InventoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inventory\Group\GroupsForm.resx">
       <DependentUpon>GroupsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inventory\Instrumental\InstrumentalNewForm.resx">
+      <DependentUpon>InstrumentalNewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inventory\InventoryForm.resx">
       <DependentUpon>InventoryForm.cs</DependentUpon>
@@ -295,9 +304,7 @@
   <ItemGroup>
     <None Include="Resources\material_especial-18x18.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\Inventory\Instrumental\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\arrow_back-48x48.png" />
   </ItemGroup>

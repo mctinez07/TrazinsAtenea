@@ -130,7 +130,7 @@ namespace Models.Inventory
         private string _cajaId_CodigoCaja;
 
         [DataMember]
-        [StringLength(14)]
+        [StringLength(12)]
         public string CajaId_CodigoCaja
         {
             get

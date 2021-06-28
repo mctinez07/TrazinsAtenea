@@ -107,8 +107,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         {
             try
             {
-                LoadDataToForm();               
-
+                LoadDataToForm(); 
             }
             catch (Exception ex)
             {
@@ -130,8 +129,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
             //Enlazar Controles para que se actualicen automáticamente los valores de los controles.    
             //Crear metodo que coja los valores del atributo
-            //BindingControls();
-            GetMaxLengthTextBox();            
+            BindingControls();
+            //GetMaxLengthTextBox();            
 
             //Establecer estado de los controles
             ControlsState();
@@ -181,33 +180,32 @@ namespace TrazinsAtenea.Forms.Inventory.Set
         private void BindingControls()
         {
             //Quitar el enlace y configurar solo las carcteristicas de los controles
-            //Creo que está solucionado probar con la b¡nueva configuración
-            //Engine._bindedModel = Caja;          
+            //Creo que está solucionado probar con la b¡nueva configuración                   
 
             ////////Controles TextBox
-            //Engine.BindingControlProperty(txtSetName, "Descripcion");
-            //Engine.BindingControlProperty(speWheight, "Peso");
+            Engine.BindingControlProperty(txtSetName, "Descripcion",Caja);
+            Engine.BindingControlProperty(speWheight, "Peso", Caja);
             
-            //Engine.BindingControlProperty(txtSetCode, "CodigoCaja");
-            //Engine.BindingControlProperty(txtRemarksAssemblyPackaging, "ObservEmp");
-            //Engine.BindingControlProperty(txtRemarksSteri, "ObservCic");
-            //Engine.BindingControlProperty(txtRemarksWashes, "ObservLav");
+            Engine.BindingControlProperty(txtSetCode, "CodigoCaja", Caja);
+            Engine.BindingControlProperty(txtRemarksAssemblyPackaging, "ObservEmp", Caja);
+            Engine.BindingControlProperty(txtRemarksSteri, "ObservCic", Caja);
+            Engine.BindingControlProperty(txtRemarksWashes, "ObservLav", Caja);
 
             //////Controles Combo Cabecera
-            //Engine.BindingControlProperty(cmbSpeciality, "EspId");
-            //Engine.BindingControlProperty(cmbSetType, "TipoCajaId");
-            //Engine.BindingControlProperty(cmbProperty, "HosIdPropietario");
-            //Engine.BindingControlProperty(cmbPackage, "EmbId");
-            //Engine.BindingControlProperty(cmbCostCenter, "CentroCosteId");
+            Engine.BindingControlProperty(cmbSpeciality, "EspId",Caja);
+            Engine.BindingControlProperty(cmbSetType, "TipoCajaId", Caja);
+            Engine.BindingControlProperty(cmbProperty, "HosIdPropietario",Caja);
+            Engine.BindingControlProperty(cmbPackage, "EmbId", Caja);
+            Engine.BindingControlProperty(cmbCostCenter, "CentroCosteId", Caja);
 
             //////Controles Combo Ubicación
             //////El valor de la posicion es el que nos indica la ubicación exacta.
-            //Engine.BindingControlProperty(cmbPosition, "UbiId");            
+            Engine.BindingControlProperty(cmbPosition, "UbiId", Caja);            
 
             //////Otros Controles
-            //Engine.BindingControlProperty(speMaintenance, "MantCiclos");
-            //Engine.BindingControlProperty(tgsYesNo, "Activa");
-            //Engine.BindingControlProperty(ckbSetSample, "CajaMuestra");
+            Engine.BindingControlProperty(speMaintenance, "MantCiclos", Caja);
+            Engine.BindingControlProperty(tgsYesNo, "Activa", Caja);
+            Engine.BindingControlProperty(ckbSetSample, "CajaMuestra", Caja);
         }
 
         private void MultilanguageFormat()
@@ -1077,6 +1075,11 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             frm.ShowDialog();
         }
 
+        private void btnInstrumentalAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion        
 
         #region Main Buttons Actions
@@ -1119,7 +1122,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             {                
                 //Hay que asociar manualmente los métodos.
                 SetComboMethodsValuesToModel();
-                SetControlsTopropierties();
+                //SetControlsTopropierties();
 
                 //Comprobar los campos obligatorios.
                 if (!CheckMandatoryAtributtes())
@@ -1168,6 +1171,7 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         }
 
+        //Método por si falla el binding automático.
         private void SetControlsTopropierties()
         {
             Caja.EspId = SpecilitySelected?.EspId;
@@ -1225,9 +1229,6 @@ namespace TrazinsAtenea.Forms.Inventory.Set
             Caja.EstId3 = ThirdSteriMethodSelected?.EstId;
         }
 
-        
-        #endregion
-
-        
+        #endregion        
     }
 }

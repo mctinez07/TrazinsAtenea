@@ -87,7 +87,8 @@ namespace TrazinsAtenea.Forms.Inventory.Group
         {
             CajasGrupo selected = gdvGroups.GetRow(gdvGroups.FocusedRowHandle) as CajasGrupo;
             DeleteForm deleteForm = new DeleteForm();
-
+            deleteForm.GetElement(selected, selected.NomGrupo);
+            deleteForm.ShowDialog();
         }
     }
 }
