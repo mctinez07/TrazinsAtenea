@@ -223,6 +223,26 @@ namespace TrazinsAtenea.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap instrumental_24x24 {
+            get {
+                object obj = ResourceManager.GetObject("instrumental_24x24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap instrumental_48x48 {
+            get {
+                object obj = ResourceManager.GetObject("instrumental_48x48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap material_especial_18x18 {
             get {
                 object obj = ResourceManager.GetObject("material_especial-18x18", resourceCulture);

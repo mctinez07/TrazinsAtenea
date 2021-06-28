@@ -304,7 +304,9 @@
   <ItemGroup>
     <None Include="Resources\material_especial-18x18.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\instrumental_48x48.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrow_back-48x48.png" />
   </ItemGroup>
@@ -390,6 +392,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\group-18x18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instrumental_24x24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -575,7 +575,6 @@
             this.txtSetCode.Properties.Appearance.Options.UseFont = true;
             this.txtSetCode.Properties.MaxLength = 12;
             this.txtSetCode.Size = new System.Drawing.Size(233, 40);
-            this.txtSetCode.StyleController = this.layoutControl1;
             this.txtSetCode.TabIndex = 67;
             // 
             // lblSetCode
@@ -586,7 +585,6 @@
             this.lblSetCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblSetCode.Name = "lblSetCode";
             this.lblSetCode.Size = new System.Drawing.Size(157, 29);
-            this.lblSetCode.StyleController = this.layoutControl1;
             this.lblSetCode.TabIndex = 65;
             this.lblSetCode.Text = "Código de caja";
             // 
@@ -644,7 +642,6 @@
             this.lblSelectDefaultUbication.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblSelectDefaultUbication.Name = "lblSelectDefaultUbication";
             this.lblSelectDefaultUbication.Size = new System.Drawing.Size(896, 29);
-            this.lblSelectDefaultUbication.StyleController = this.layoutControl1;
             this.lblSelectDefaultUbication.TabIndex = 60;
             this.lblSelectDefaultUbication.Text = "Selecciona una ubicación donde se almacenará esta caja de forma predeterminada";
             // 
@@ -656,7 +653,6 @@
             this.lblDefaultUbication.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblDefaultUbication.Name = "lblDefaultUbication";
             this.lblDefaultUbication.Size = new System.Drawing.Size(417, 38);
-            this.lblDefaultUbication.StyleController = this.layoutControl1;
             this.lblDefaultUbication.TabIndex = 59;
             this.lblDefaultUbication.Text = "4 - Ubicación predeterminada";
             // 
@@ -668,7 +664,6 @@
             this.txtRemarksSteri.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRemarksSteri.Properties.Appearance.Options.UseFont = true;
             this.txtRemarksSteri.Size = new System.Drawing.Size(1253, 94);
-            this.txtRemarksSteri.StyleController = this.layoutControl1;
             this.txtRemarksSteri.TabIndex = 58;
             // 
             // lblSteriRemarks
@@ -679,7 +674,6 @@
             this.lblSteriRemarks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblSteriRemarks.Name = "lblSteriRemarks";
             this.lblSteriRemarks.Size = new System.Drawing.Size(465, 29);
-            this.lblSteriRemarks.StyleController = this.layoutControl1;
             this.lblSteriRemarks.TabIndex = 57;
             this.lblSteriRemarks.Text = "Observaciones específicas de esterilización";
             // 
@@ -723,7 +717,6 @@
             this.lblSelectSterilizationMethods.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblSelectSterilizationMethods.Name = "lblSelectSterilizationMethods";
             this.lblSelectSterilizationMethods.Size = new System.Drawing.Size(574, 29);
-            this.lblSelectSterilizationMethods.StyleController = this.layoutControl1;
             this.lblSelectSterilizationMethods.TabIndex = 53;
             this.lblSelectSterilizationMethods.Text = "Selecciona desde 1 hasta 3 métodos de esterilización";
             // 
@@ -735,7 +728,6 @@
             this.lblSterilization.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblSterilization.Name = "lblSterilization";
             this.lblSterilization.Size = new System.Drawing.Size(330, 38);
-            this.lblSterilization.StyleController = this.layoutControl1;
             this.lblSterilization.TabIndex = 52;
             this.lblSterilization.Text = "3 - Ciclos/Esterilización";
             // 
@@ -747,7 +739,6 @@
             this.txtRemarksAssemblyPackaging.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRemarksAssemblyPackaging.Properties.Appearance.Options.UseFont = true;
             this.txtRemarksAssemblyPackaging.Size = new System.Drawing.Size(1253, 94);
-            this.txtRemarksAssemblyPackaging.StyleController = this.layoutControl1;
             this.txtRemarksAssemblyPackaging.TabIndex = 51;
             // 
             // lblAssemblyPackagingRemarks
@@ -758,7 +749,6 @@
             this.lblAssemblyPackagingRemarks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblAssemblyPackagingRemarks.Name = "lblAssemblyPackagingRemarks";
             this.lblAssemblyPackagingRemarks.Size = new System.Drawing.Size(592, 29);
-            this.lblAssemblyPackagingRemarks.StyleController = this.layoutControl1;
             this.lblAssemblyPackagingRemarks.TabIndex = 50;
             this.lblAssemblyPackagingRemarks.Text = "Observaciones específicas de montaje o empaquetado ";
             // 
@@ -770,7 +760,6 @@
             this.lblAssemblyPackaging.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblAssemblyPackaging.Name = "lblAssemblyPackaging";
             this.lblAssemblyPackaging.Size = new System.Drawing.Size(387, 38);
-            this.lblAssemblyPackaging.StyleController = this.layoutControl1;
             this.lblAssemblyPackaging.TabIndex = 49;
             this.lblAssemblyPackaging.Text = "2 - Montaje | Empaquetado";
             // 
@@ -782,7 +771,6 @@
             this.txtRemarksWashes.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRemarksWashes.Properties.Appearance.Options.UseFont = true;
             this.txtRemarksWashes.Size = new System.Drawing.Size(1253, 94);
-            this.txtRemarksWashes.StyleController = this.layoutControl1;
             this.txtRemarksWashes.TabIndex = 48;
             // 
             // lblWashingRemarks
@@ -793,7 +781,6 @@
             this.lblWashingRemarks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblWashingRemarks.Name = "lblWashingRemarks";
             this.lblWashingRemarks.Size = new System.Drawing.Size(391, 29);
-            this.lblWashingRemarks.StyleController = this.layoutControl1;
             this.lblWashingRemarks.TabIndex = 47;
             this.lblWashingRemarks.Text = "Observaciones específicas de lavado";
             // 
@@ -837,7 +824,6 @@
             this.lblSelectWashesMethods.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblSelectWashesMethods.Name = "lblSelectWashesMethods";
             this.lblSelectWashesMethods.Size = new System.Drawing.Size(389, 29);
-            this.lblSelectWashesMethods.StyleController = this.layoutControl1;
             this.lblSelectWashesMethods.TabIndex = 43;
             this.lblSelectWashesMethods.Text = "Selecciona desde 1 hasta 3 métodos";
             // 
@@ -849,7 +835,6 @@
             this.lblProcesses.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblProcesses.Name = "lblProcesses";
             this.lblProcesses.Size = new System.Drawing.Size(163, 49);
-            this.lblProcesses.StyleController = this.layoutControl1;
             this.lblProcesses.TabIndex = 42;
             this.lblProcesses.Text = "Procesos";
             // 
@@ -861,7 +846,6 @@
             this.lblSetWashes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblSetWashes.Name = "lblSetWashes";
             this.lblSetWashes.Size = new System.Drawing.Size(159, 38);
-            this.lblSetWashes.StyleController = this.layoutControl1;
             this.lblSetWashes.TabIndex = 41;
             this.lblSetWashes.Text = "1 - Lavados";
             // 
@@ -874,7 +858,6 @@
             this.ckbSetSample.Properties.Appearance.Options.UseFont = true;
             this.ckbSetSample.Properties.Caption = "Caja Muestra";
             this.ckbSetSample.Size = new System.Drawing.Size(419, 37);
-            this.ckbSetSample.StyleController = this.layoutControl1;
             this.ckbSetSample.TabIndex = 40;
             // 
             // lblSetSampleInfo
@@ -1140,7 +1123,6 @@
             this.lblSetName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblSetName.Name = "lblSetName";
             this.lblSetName.Size = new System.Drawing.Size(150, 29);
-            this.lblSetName.StyleController = this.layoutControl1;
             this.lblSetName.TabIndex = 35;
             this.lblSetName.Text = "Nombre caja";
             // 
@@ -1152,7 +1134,6 @@
             this.txtSetName.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSetName.Properties.Appearance.Options.UseFont = true;
             this.txtSetName.Size = new System.Drawing.Size(830, 40);
-            this.txtSetName.StyleController = this.layoutControl1;
             this.txtSetName.TabIndex = 33;
             // 
             // cmbCostCenter
@@ -1207,7 +1188,6 @@
             this.lblSetType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblSetType.Name = "lblSetType";
             this.lblSetType.Size = new System.Drawing.Size(136, 29);
-            this.lblSetType.StyleController = this.layoutControl1;
             this.lblSetType.TabIndex = 26;
             this.lblSetType.Text = "Tipo de Caja";
             // 
@@ -1233,7 +1213,6 @@
             this.lblProperty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblProperty.Name = "lblProperty";
             this.lblProperty.Size = new System.Drawing.Size(107, 29);
-            this.lblProperty.StyleController = this.layoutControl1;
             this.lblProperty.TabIndex = 24;
             this.lblProperty.Text = "Propiedad";
             // 
@@ -1247,7 +1226,6 @@
             this.lblSpeciality.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblSpeciality.Name = "lblSpeciality";
             this.lblSpeciality.Size = new System.Drawing.Size(147, 29);
-            this.lblSpeciality.StyleController = this.layoutControl1;
             this.lblSpeciality.TabIndex = 22;
             this.lblSpeciality.Text = "Especialidad";
             // 
@@ -1259,7 +1237,6 @@
             this.lblGeneralData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblGeneralData.Name = "lblGeneralData";
             this.lblGeneralData.Size = new System.Drawing.Size(302, 49);
-            this.lblGeneralData.StyleController = this.layoutControl1;
             this.lblGeneralData.TabIndex = 21;
             this.lblGeneralData.Text = "Datos Generales";
             // 
@@ -1273,7 +1250,6 @@
             this.lblPackage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblPackage.Name = "lblPackage";
             this.lblPackage.Size = new System.Drawing.Size(101, 29);
-            this.lblPackage.StyleController = this.layoutControl1;
             this.lblPackage.TabIndex = 28;
             this.lblPackage.Text = "Embalaje";
             // 
@@ -1287,7 +1263,6 @@
             this.lblCostCenter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCostCenter.Name = "lblCostCenter";
             this.lblCostCenter.Size = new System.Drawing.Size(172, 29);
-            this.lblCostCenter.StyleController = this.layoutControl1;
             this.lblCostCenter.TabIndex = 28;
             this.lblCostCenter.Text = "Centro de Coste";
             // 
@@ -2605,6 +2580,7 @@
             this.xtpDataProcesses.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            this.layoutControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSetCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemarksSteri.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemarksAssemblyPackaging.Properties)).EndInit();

@@ -313,4 +313,10 @@
   <data name="YesSend" xml:space="preserve">
     <value>Sí, enviar a la papelera</value>
   </data>
+  <data name="InstrumentalNew" xml:space="preserve">
+    <value>Nuevo instrumento</value>
+  </data>
+  <data name="InstrumentalEdit" xml:space="preserve">
+    <value>Editando instrumento</value>
+  </data>
 </root>

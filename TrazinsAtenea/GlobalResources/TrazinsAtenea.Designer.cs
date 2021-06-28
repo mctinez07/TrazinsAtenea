@@ -340,6 +340,24 @@ namespace TrazinsAtenea.GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Editando instrumento.
+        /// </summary>
+        internal static string InstrumentalEdit {
+            get {
+                return ResourceManager.GetString("InstrumentalEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nuevo instrumento.
+        /// </summary>
+        internal static string InstrumentalNew {
+            get {
+                return ResourceManager.GetString("InstrumentalNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 3 - Instrumental.
         /// </summary>
         internal static string InstrumentalSet {
