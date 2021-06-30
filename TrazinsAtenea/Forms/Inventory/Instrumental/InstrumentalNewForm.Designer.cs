@@ -54,6 +54,10 @@
             this.lciInternalCodeLabel = new DevExpress.XtraLayout.LayoutControlItem();
             this.lblName = new DevExpress.XtraEditors.LabelControl();
             this.lciNameLabel = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txtInternalCode = new DevExpress.XtraEditors.TextEdit();
+            this.lciInternalCode = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txtName = new DevExpress.XtraEditors.TextEdit();
+            this.lciName = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).BeginInit();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcBackArrow)).BeginInit();
@@ -71,6 +75,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciInternalCodeLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciNameLabel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInternalCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciInternalCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciName)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -188,6 +196,8 @@
             this.layoutControl1.Controls.Add(this.cmbManufacturerRef);
             this.layoutControl1.Controls.Add(this.cmbManufacturer);
             this.layoutControl1.Controls.Add(this.lblGeneralData);
+            this.layoutControl1.Controls.Add(this.txtInternalCode);
+            this.layoutControl1.Controls.Add(this.txtName);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -251,7 +261,9 @@
             this.lciPrice,
             this.lciTrazinsRef,
             this.lciInternalCodeLabel,
-            this.lciNameLabel});
+            this.lciNameLabel,
+            this.lciInternalCode,
+            this.lciName});
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.Root.Size = new System.Drawing.Size(963, 643);
@@ -270,9 +282,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 173);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 207);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(963, 470);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(963, 436);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lciManufacturer
@@ -378,7 +390,7 @@
             this.lblInternalCode.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.ic_obligatory;
             this.lblInternalCode.Location = new System.Drawing.Point(2, 147);
             this.lblInternalCode.Name = "lblInternalCode";
-            this.lblInternalCode.Size = new System.Drawing.Size(311, 24);
+            this.lblInternalCode.Size = new System.Drawing.Size(331, 24);
             this.lblInternalCode.StyleController = this.layoutControl1;
             this.lblInternalCode.TabIndex = 9;
             this.lblInternalCode.Text = "Código interno";
@@ -391,7 +403,7 @@
             this.lciInternalCodeLabel.MinSize = new System.Drawing.Size(1, 46);
             this.lciInternalCodeLabel.Name = "lciInternalCodeLabel";
             this.lciInternalCodeLabel.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 20, 2);
-            this.lciInternalCodeLabel.Size = new System.Drawing.Size(315, 46);
+            this.lciInternalCodeLabel.Size = new System.Drawing.Size(335, 46);
             this.lciInternalCodeLabel.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciInternalCodeLabel.TextSize = new System.Drawing.Size(0, 0);
             this.lciInternalCodeLabel.TextVisible = false;
@@ -403,9 +415,9 @@
             this.lblName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
             this.lblName.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
             this.lblName.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.ic_obligatory;
-            this.lblName.Location = new System.Drawing.Point(317, 147);
+            this.lblName.Location = new System.Drawing.Point(337, 147);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(644, 24);
+            this.lblName.Size = new System.Drawing.Size(624, 24);
             this.lblName.StyleController = this.layoutControl1;
             this.lblName.TabIndex = 10;
             this.lblName.Text = "Nombre";
@@ -413,15 +425,54 @@
             // lciNameLabel
             // 
             this.lciNameLabel.Control = this.lblName;
-            this.lciNameLabel.Location = new System.Drawing.Point(315, 127);
+            this.lciNameLabel.Location = new System.Drawing.Point(335, 127);
             this.lciNameLabel.MaxSize = new System.Drawing.Size(0, 46);
             this.lciNameLabel.MinSize = new System.Drawing.Size(1, 46);
             this.lciNameLabel.Name = "lciNameLabel";
             this.lciNameLabel.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 20, 2);
-            this.lciNameLabel.Size = new System.Drawing.Size(648, 46);
+            this.lciNameLabel.Size = new System.Drawing.Size(628, 46);
             this.lciNameLabel.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciNameLabel.TextSize = new System.Drawing.Size(0, 0);
             this.lciNameLabel.TextVisible = false;
+            // 
+            // txtInternalCode
+            // 
+            this.txtInternalCode.Location = new System.Drawing.Point(2, 175);
+            this.txtInternalCode.Name = "txtInternalCode";
+            this.txtInternalCode.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInternalCode.Properties.Appearance.Options.UseFont = true;
+            this.txtInternalCode.Size = new System.Drawing.Size(303, 30);
+            this.txtInternalCode.StyleController = this.layoutControl1;
+            this.txtInternalCode.TabIndex = 11;
+            // 
+            // lciInternalCode
+            // 
+            this.lciInternalCode.Control = this.txtInternalCode;
+            this.lciInternalCode.Location = new System.Drawing.Point(0, 173);
+            this.lciInternalCode.Name = "lciInternalCode";
+            this.lciInternalCode.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 30, 2, 2);
+            this.lciInternalCode.Size = new System.Drawing.Size(335, 34);
+            this.lciInternalCode.TextSize = new System.Drawing.Size(0, 0);
+            this.lciInternalCode.TextVisible = false;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(337, 175);
+            this.txtName.Name = "txtName";
+            this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Properties.Appearance.Options.UseFont = true;
+            this.txtName.Size = new System.Drawing.Size(624, 30);
+            this.txtName.StyleController = this.layoutControl1;
+            this.txtName.TabIndex = 12;
+            // 
+            // lciName
+            // 
+            this.lciName.Control = this.txtName;
+            this.lciName.Location = new System.Drawing.Point(335, 173);
+            this.lciName.Name = "lciName";
+            this.lciName.Size = new System.Drawing.Size(628, 34);
+            this.lciName.TextSize = new System.Drawing.Size(0, 0);
+            this.lciName.TextVisible = false;
             // 
             // InstrumentalNewForm
             // 
@@ -457,6 +508,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciInternalCodeLabel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciNameLabel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInternalCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciInternalCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciName)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -489,5 +544,9 @@
         private DevExpress.XtraEditors.LabelControl lblInternalCode;
         private DevExpress.XtraLayout.LayoutControlItem lciInternalCodeLabel;
         private DevExpress.XtraLayout.LayoutControlItem lciNameLabel;
+        private DevExpress.XtraEditors.TextEdit txtInternalCode;
+        private DevExpress.XtraEditors.TextEdit txtName;
+        private DevExpress.XtraLayout.LayoutControlItem lciInternalCode;
+        private DevExpress.XtraLayout.LayoutControlItem lciName;
     }
 }
