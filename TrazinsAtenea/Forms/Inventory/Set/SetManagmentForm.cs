@@ -23,6 +23,7 @@ using Models.Inventory;
 using Models.Processes.Methods;
 using Models.Masters;
 using TrazinsAtenea.Controls;
+using TrazinsAtenea.Forms.Inventory.Instrumental;
 
 namespace TrazinsAtenea.Forms.Inventory.Set
 {
@@ -1077,7 +1078,8 @@ namespace TrazinsAtenea.Forms.Inventory.Set
 
         private void btnInstrumentalAdd_Click(object sender, EventArgs e)
         {
-
+            InstrumentalNewForm frm = new InstrumentalNewForm();
+            frm.ShowDialog();
         }
 
         #endregion        
