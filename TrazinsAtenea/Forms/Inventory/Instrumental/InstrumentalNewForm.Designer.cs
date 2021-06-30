@@ -58,6 +58,8 @@
             this.lciInternalCode = new DevExpress.XtraLayout.LayoutControlItem();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.lciName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txtAka = new DevExpress.XtraEditors.TextEdit();
+            this.lciAka = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).BeginInit();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcBackArrow)).BeginInit();
@@ -79,6 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciInternalCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAka.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAka)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -174,7 +178,7 @@
             this.pnlLeftAlig.Location = new System.Drawing.Point(0, 75);
             this.pnlLeftAlig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlLeftAlig.Name = "pnlLeftAlig";
-            this.pnlLeftAlig.Size = new System.Drawing.Size(171, 643);
+            this.pnlLeftAlig.Size = new System.Drawing.Size(171, 809);
             this.pnlLeftAlig.TabIndex = 18;
             // 
             // pnlCenter
@@ -184,7 +188,7 @@
             this.pnlCenter.Location = new System.Drawing.Point(171, 75);
             this.pnlCenter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlCenter.Name = "pnlCenter";
-            this.pnlCenter.Size = new System.Drawing.Size(963, 643);
+            this.pnlCenter.Size = new System.Drawing.Size(963, 809);
             this.pnlCenter.TabIndex = 19;
             // 
             // layoutControl1
@@ -198,12 +202,13 @@
             this.layoutControl1.Controls.Add(this.lblGeneralData);
             this.layoutControl1.Controls.Add(this.txtInternalCode);
             this.layoutControl1.Controls.Add(this.txtName);
+            this.layoutControl1.Controls.Add(this.txtAka);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(963, 643);
+            this.layoutControl1.Size = new System.Drawing.Size(963, 809);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -263,10 +268,11 @@
             this.lciInternalCodeLabel,
             this.lciNameLabel,
             this.lciInternalCode,
-            this.lciName});
+            this.lciName,
+            this.lciAka});
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Root.Size = new System.Drawing.Size(963, 643);
+            this.Root.Size = new System.Drawing.Size(963, 809);
             this.Root.TextVisible = false;
             // 
             // lciGeneralData
@@ -282,9 +288,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 207);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 281);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(963, 436);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(963, 528);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lciManufacturer
@@ -346,7 +352,7 @@
             this.pnlRightAlig.Location = new System.Drawing.Point(1134, 75);
             this.pnlRightAlig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlRightAlig.Name = "pnlRightAlig";
-            this.pnlRightAlig.Size = new System.Drawing.Size(116, 643);
+            this.pnlRightAlig.Size = new System.Drawing.Size(116, 809);
             this.pnlRightAlig.TabIndex = 20;
             // 
             // spePrice
@@ -474,13 +480,36 @@
             this.lciName.TextSize = new System.Drawing.Size(0, 0);
             this.lciName.TextVisible = false;
             // 
+            // txtAka
+            // 
+            this.txtAka.Location = new System.Drawing.Point(2, 249);
+            this.txtAka.Name = "txtAka";
+            this.txtAka.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAka.Properties.Appearance.Options.UseFont = true;
+            this.txtAka.Size = new System.Drawing.Size(959, 30);
+            this.txtAka.StyleController = this.layoutControl1;
+            this.txtAka.TabIndex = 13;
+            // 
+            // lciAka
+            // 
+            this.lciAka.AppearanceItemCaption.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lciAka.AppearanceItemCaption.Options.UseFont = true;
+            this.lciAka.Control = this.txtAka;
+            this.lciAka.Location = new System.Drawing.Point(0, 207);
+            this.lciAka.Name = "lciAka";
+            this.lciAka.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 15, 2);
+            this.lciAka.Size = new System.Drawing.Size(963, 74);
+            this.lciAka.Text = "Alias";
+            this.lciAka.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciAka.TextSize = new System.Drawing.Size(215, 24);
+            // 
             // InstrumentalNewForm
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1250, 718);
+            this.ClientSize = new System.Drawing.Size(1250, 884);
             this.Controls.Add(this.pnlCenter);
             this.Controls.Add(this.pnlRightAlig);
             this.Controls.Add(this.pnlLeftAlig);
@@ -512,6 +541,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciInternalCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAka.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciAka)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -548,5 +579,7 @@
         private DevExpress.XtraEditors.TextEdit txtName;
         private DevExpress.XtraLayout.LayoutControlItem lciInternalCode;
         private DevExpress.XtraLayout.LayoutControlItem lciName;
+        private DevExpress.XtraEditors.TextEdit txtAka;
+        private DevExpress.XtraLayout.LayoutControlItem lciAka;
     }
 }
