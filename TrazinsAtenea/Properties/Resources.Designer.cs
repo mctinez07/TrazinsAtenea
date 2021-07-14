@@ -163,6 +163,16 @@ namespace TrazinsAtenea.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap download_24x24 {
+            get {
+                object obj = ResourceManager.GetObject("download-24x24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap group_18x18 {
             get {
                 object obj = ResourceManager.GetObject("group-18x18", resourceCulture);
@@ -306,6 +316,26 @@ namespace TrazinsAtenea.Properties {
         internal static System.Drawing.Bitmap stop_24x24 {
             get {
                 object obj = ResourceManager.GetObject("stop-24x24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sync_18x18 {
+            get {
+                object obj = ResourceManager.GetObject("sync-18x18", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sync_24x24 {
+            get {
+                object obj = ResourceManager.GetObject("sync-24x24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
