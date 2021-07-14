@@ -37,6 +37,9 @@
             this.pnlLeftAlig = new System.Windows.Forms.Panel();
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.dtpManufactureDate = new DevExpress.XtraEditors.DateEdit();
+            this.txtObservations = new DevExpress.XtraEditors.TextEdit();
+            this.txtBatchNumber = new DevExpress.XtraEditors.TextEdit();
             this.lblName = new DevExpress.XtraEditors.LabelControl();
             this.lblInternalCode = new DevExpress.XtraEditors.LabelControl();
             this.spePrice = new DevExpress.XtraEditors.SpinEdit();
@@ -59,13 +62,12 @@
             this.lciInternalCode = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciName = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciAka = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pnlRightAlig = new System.Windows.Forms.Panel();
-            this.txtBatchNumber = new DevExpress.XtraEditors.TextEdit();
             this.lciBatchNumber = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtObservations = new DevExpress.XtraEditors.TextEdit();
             this.lciObservations = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dtpManufactureDate = new DevExpress.XtraEditors.DateEdit();
             this.lciManufactureDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.pnlRightAlig = new System.Windows.Forms.Panel();
+            this.lblImageTitle = new DevExpress.XtraEditors.LabelControl();
+            this.lciImageTitle = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).BeginInit();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcBackArrow)).BeginInit();
@@ -73,6 +75,10 @@
             this.pnlCenter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpManufactureDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpManufactureDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtObservations.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBatchNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spePrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtInternalCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
@@ -89,13 +95,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciInternalCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAka)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBatchNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciBatchNumber)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtObservations.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciObservations)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpManufactureDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpManufactureDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciManufactureDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciImageTitle)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -206,6 +209,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.lblImageTitle);
             this.layoutControl1.Controls.Add(this.dtpManufactureDate);
             this.layoutControl1.Controls.Add(this.txtObservations);
             this.layoutControl1.Controls.Add(this.txtBatchNumber);
@@ -227,6 +231,41 @@
             this.layoutControl1.Size = new System.Drawing.Size(963, 809);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // dtpManufactureDate
+            // 
+            this.dtpManufactureDate.EditValue = null;
+            this.dtpManufactureDate.Location = new System.Drawing.Point(2, 323);
+            this.dtpManufactureDate.Name = "dtpManufactureDate";
+            this.dtpManufactureDate.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpManufactureDate.Properties.Appearance.Options.UseFont = true;
+            this.dtpManufactureDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpManufactureDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpManufactureDate.Size = new System.Drawing.Size(303, 30);
+            this.dtpManufactureDate.StyleController = this.layoutControl1;
+            this.dtpManufactureDate.TabIndex = 17;
+            // 
+            // txtObservations
+            // 
+            this.txtObservations.Location = new System.Drawing.Point(337, 323);
+            this.txtObservations.Name = "txtObservations";
+            this.txtObservations.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservations.Properties.Appearance.Options.UseFont = true;
+            this.txtObservations.Size = new System.Drawing.Size(624, 30);
+            this.txtObservations.StyleController = this.layoutControl1;
+            this.txtObservations.TabIndex = 16;
+            // 
+            // txtBatchNumber
+            // 
+            this.txtBatchNumber.Location = new System.Drawing.Point(2, 249);
+            this.txtBatchNumber.Name = "txtBatchNumber";
+            this.txtBatchNumber.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBatchNumber.Properties.Appearance.Options.UseFont = true;
+            this.txtBatchNumber.Size = new System.Drawing.Size(303, 30);
+            this.txtBatchNumber.StyleController = this.layoutControl1;
+            this.txtBatchNumber.TabIndex = 14;
             // 
             // lblName
             // 
@@ -363,7 +402,8 @@
             this.lciAka,
             this.lciBatchNumber,
             this.lciObservations,
-            this.lciManufactureDate});
+            this.lciManufactureDate,
+            this.lciImageTitle});
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.Root.Size = new System.Drawing.Size(963, 809);
@@ -382,9 +422,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 355);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 427);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(963, 454);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(963, 382);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lciManufacturer
@@ -513,25 +553,6 @@
             this.lciAka.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciAka.TextSize = new System.Drawing.Size(215, 24);
             // 
-            // pnlRightAlig
-            // 
-            this.pnlRightAlig.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRightAlig.Location = new System.Drawing.Point(1134, 75);
-            this.pnlRightAlig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlRightAlig.Name = "pnlRightAlig";
-            this.pnlRightAlig.Size = new System.Drawing.Size(116, 809);
-            this.pnlRightAlig.TabIndex = 20;
-            // 
-            // txtBatchNumber
-            // 
-            this.txtBatchNumber.Location = new System.Drawing.Point(2, 249);
-            this.txtBatchNumber.Name = "txtBatchNumber";
-            this.txtBatchNumber.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBatchNumber.Properties.Appearance.Options.UseFont = true;
-            this.txtBatchNumber.Size = new System.Drawing.Size(303, 30);
-            this.txtBatchNumber.StyleController = this.layoutControl1;
-            this.txtBatchNumber.TabIndex = 14;
-            // 
             // lciBatchNumber
             // 
             this.lciBatchNumber.AppearanceItemCaption.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -544,16 +565,6 @@
             this.lciBatchNumber.Text = "Número de lote";
             this.lciBatchNumber.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciBatchNumber.TextSize = new System.Drawing.Size(215, 24);
-            // 
-            // txtObservations
-            // 
-            this.txtObservations.Location = new System.Drawing.Point(337, 323);
-            this.txtObservations.Name = "txtObservations";
-            this.txtObservations.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservations.Properties.Appearance.Options.UseFont = true;
-            this.txtObservations.Size = new System.Drawing.Size(624, 30);
-            this.txtObservations.StyleController = this.layoutControl1;
-            this.txtObservations.TabIndex = 16;
             // 
             // lciObservations
             // 
@@ -568,21 +579,6 @@
             this.lciObservations.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciObservations.TextSize = new System.Drawing.Size(215, 24);
             // 
-            // dtpManufactureDate
-            // 
-            this.dtpManufactureDate.EditValue = null;
-            this.dtpManufactureDate.Location = new System.Drawing.Point(2, 323);
-            this.dtpManufactureDate.Name = "dtpManufactureDate";
-            this.dtpManufactureDate.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpManufactureDate.Properties.Appearance.Options.UseFont = true;
-            this.dtpManufactureDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpManufactureDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpManufactureDate.Size = new System.Drawing.Size(303, 30);
-            this.dtpManufactureDate.StyleController = this.layoutControl1;
-            this.dtpManufactureDate.TabIndex = 17;
-            // 
             // lciManufactureDate
             // 
             this.lciManufactureDate.AppearanceItemCaption.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -595,6 +591,36 @@
             this.lciManufactureDate.Text = "Fecha de fabricación";
             this.lciManufactureDate.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciManufactureDate.TextSize = new System.Drawing.Size(215, 24);
+            // 
+            // pnlRightAlig
+            // 
+            this.pnlRightAlig.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlRightAlig.Location = new System.Drawing.Point(1134, 75);
+            this.pnlRightAlig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlRightAlig.Name = "pnlRightAlig";
+            this.pnlRightAlig.Size = new System.Drawing.Size(116, 809);
+            this.pnlRightAlig.TabIndex = 20;
+            // 
+            // lblImageTitle
+            // 
+            this.lblImageTitle.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImageTitle.Appearance.Options.UseFont = true;
+            this.lblImageTitle.Location = new System.Drawing.Point(2, 385);
+            this.lblImageTitle.Name = "lblImageTitle";
+            this.lblImageTitle.Size = new System.Drawing.Size(107, 40);
+            this.lblImageTitle.StyleController = this.layoutControl1;
+            this.lblImageTitle.TabIndex = 18;
+            this.lblImageTitle.Text = "Imagen";
+            // 
+            // lciImageTitle
+            // 
+            this.lciImageTitle.Control = this.lblImageTitle;
+            this.lciImageTitle.Location = new System.Drawing.Point(0, 355);
+            this.lciImageTitle.Name = "lciImageTitle";
+            this.lciImageTitle.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 30, 2);
+            this.lciImageTitle.Size = new System.Drawing.Size(963, 72);
+            this.lciImageTitle.TextSize = new System.Drawing.Size(0, 0);
+            this.lciImageTitle.TextVisible = false;
             // 
             // InstrumentalNewForm
             // 
@@ -620,6 +646,10 @@
             this.pnlCenter.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtpManufactureDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpManufactureDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtObservations.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBatchNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spePrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtInternalCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
@@ -636,13 +666,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciInternalCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAka)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBatchNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciBatchNumber)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtObservations.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciObservations)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpManufactureDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpManufactureDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciManufactureDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciImageTitle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -687,5 +714,7 @@
         private DevExpress.XtraEditors.TextEdit txtObservations;
         private DevExpress.XtraLayout.LayoutControlItem lciObservations;
         private DevExpress.XtraLayout.LayoutControlItem lciManufactureDate;
+        private DevExpress.XtraEditors.LabelControl lblImageTitle;
+        private DevExpress.XtraLayout.LayoutControlItem lciImageTitle;
     }
 }
