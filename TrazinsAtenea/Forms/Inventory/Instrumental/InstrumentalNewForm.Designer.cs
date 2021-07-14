@@ -68,6 +68,10 @@
             this.pnlRightAlig = new System.Windows.Forms.Panel();
             this.lblImageTitle = new DevExpress.XtraEditors.LabelControl();
             this.lciImageTitle = new DevExpress.XtraLayout.LayoutControlItem();
+            this.pcbImage = new System.Windows.Forms.PictureBox();
+            this.lciImage = new DevExpress.XtraLayout.LayoutControlItem();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).BeginInit();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcBackArrow)).BeginInit();
@@ -99,6 +103,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciObservations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciManufactureDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciImageTitle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -209,6 +216,8 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.simpleButton1);
+            this.layoutControl1.Controls.Add(this.pcbImage);
             this.layoutControl1.Controls.Add(this.lblImageTitle);
             this.layoutControl1.Controls.Add(this.dtpManufactureDate);
             this.layoutControl1.Controls.Add(this.txtObservations);
@@ -403,7 +412,9 @@
             this.lciBatchNumber,
             this.lciObservations,
             this.lciManufactureDate,
-            this.lciImageTitle});
+            this.lciImageTitle,
+            this.lciImage,
+            this.layoutControlItem1});
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.Root.Size = new System.Drawing.Size(963, 809);
@@ -422,9 +433,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 427);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 727);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(963, 382);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(963, 82);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lciManufacturer
@@ -622,6 +633,49 @@
             this.lciImageTitle.TextSize = new System.Drawing.Size(0, 0);
             this.lciImageTitle.TextVisible = false;
             // 
+            // pcbImage
+            // 
+            this.pcbImage.Location = new System.Drawing.Point(2, 429);
+            this.pcbImage.Name = "pcbImage";
+            this.pcbImage.Size = new System.Drawing.Size(423, 296);
+            this.pcbImage.TabIndex = 19;
+            this.pcbImage.TabStop = false;
+            // 
+            // lciImage
+            // 
+            this.lciImage.Control = this.pcbImage;
+            this.lciImage.Location = new System.Drawing.Point(0, 427);
+            this.lciImage.MinSize = new System.Drawing.Size(104, 300);
+            this.lciImage.Name = "lciImage";
+            this.lciImage.Size = new System.Drawing.Size(427, 300);
+            this.lciImage.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.lciImage.TextSize = new System.Drawing.Size(0, 0);
+            this.lciImage.TextVisible = false;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold);
+            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(116)))), ((int)(((byte)(195)))));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Appearance.Options.UseForeColor = true;
+            this.simpleButton1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.simpleButton1.Location = new System.Drawing.Point(429, 429);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(532, 34);
+            this.simpleButton1.StyleController = this.layoutControl1;
+            this.simpleButton1.TabIndex = 20;
+            this.simpleButton1.Text = "Salir";
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.simpleButton1;
+            this.layoutControlItem1.Location = new System.Drawing.Point(427, 427);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(536, 300);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
             // InstrumentalNewForm
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
@@ -670,6 +724,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.lciObservations)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciManufactureDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciImageTitle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -716,5 +773,9 @@
         private DevExpress.XtraLayout.LayoutControlItem lciManufactureDate;
         private DevExpress.XtraEditors.LabelControl lblImageTitle;
         private DevExpress.XtraLayout.LayoutControlItem lciImageTitle;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.PictureBox pcbImage;
+        private DevExpress.XtraLayout.LayoutControlItem lciImage;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }
