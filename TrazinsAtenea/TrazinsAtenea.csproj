@@ -396,6 +396,15 @@
   <ItemGroup>
     <None Include="Resources\instrumental_24x24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync-18x18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync-24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-24x24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>ROBOCOPY "$(TargetDir) " "$(TargetDir)libs\ " /XF *.exe *.config *.manifest /XD libs logs data /E /IS /MOVE
