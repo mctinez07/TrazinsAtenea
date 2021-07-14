@@ -37,29 +37,31 @@
             this.pnlLeftAlig = new System.Windows.Forms.Panel();
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.lblName = new DevExpress.XtraEditors.LabelControl();
+            this.lblInternalCode = new DevExpress.XtraEditors.LabelControl();
+            this.spePrice = new DevExpress.XtraEditors.SpinEdit();
             this.cmbTrazinsRef = new System.Windows.Forms.ComboBox();
             this.cmbManufacturerRef = new System.Windows.Forms.ComboBox();
             this.cmbManufacturer = new System.Windows.Forms.ComboBox();
             this.lblGeneralData = new DevExpress.XtraEditors.LabelControl();
+            this.txtInternalCode = new DevExpress.XtraEditors.TextEdit();
+            this.txtName = new DevExpress.XtraEditors.TextEdit();
+            this.txtAka = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lciGeneralData = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.lciManufacturer = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciManufacturerRef = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lciTrazinsRef = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pnlRightAlig = new System.Windows.Forms.Panel();
-            this.spePrice = new DevExpress.XtraEditors.SpinEdit();
             this.lciPrice = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lblInternalCode = new DevExpress.XtraEditors.LabelControl();
+            this.lciTrazinsRef = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciInternalCodeLabel = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lblName = new DevExpress.XtraEditors.LabelControl();
             this.lciNameLabel = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtInternalCode = new DevExpress.XtraEditors.TextEdit();
             this.lciInternalCode = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.lciName = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtAka = new DevExpress.XtraEditors.TextEdit();
             this.lciAka = new DevExpress.XtraLayout.LayoutControlItem();
+            this.pnlRightAlig = new System.Windows.Forms.Panel();
+            this.txtBatchNumber = new DevExpress.XtraEditors.TextEdit();
+            this.lciBatchNumber = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHeader)).BeginInit();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcBackArrow)).BeginInit();
@@ -67,22 +69,24 @@
             this.pnlCenter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spePrice.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInternalCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAka.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciGeneralData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciManufacturer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciManufacturerRef)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciTrazinsRef)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spePrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTrazinsRef)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciInternalCodeLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciNameLabel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtInternalCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciInternalCode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAka.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAka)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBatchNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBatchNumber)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -193,6 +197,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.txtBatchNumber);
             this.layoutControl1.Controls.Add(this.lblName);
             this.layoutControl1.Controls.Add(this.lblInternalCode);
             this.layoutControl1.Controls.Add(this.spePrice);
@@ -211,6 +216,51 @@
             this.layoutControl1.Size = new System.Drawing.Size(963, 809);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // lblName
+            // 
+            this.lblName.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Appearance.Options.UseFont = true;
+            this.lblName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.lblName.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            this.lblName.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.ic_obligatory;
+            this.lblName.Location = new System.Drawing.Point(337, 147);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(624, 24);
+            this.lblName.StyleController = this.layoutControl1;
+            this.lblName.TabIndex = 10;
+            this.lblName.Text = "Nombre";
+            // 
+            // lblInternalCode
+            // 
+            this.lblInternalCode.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInternalCode.Appearance.Options.UseFont = true;
+            this.lblInternalCode.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.lblInternalCode.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            this.lblInternalCode.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.ic_obligatory;
+            this.lblInternalCode.Location = new System.Drawing.Point(2, 147);
+            this.lblInternalCode.Name = "lblInternalCode";
+            this.lblInternalCode.Size = new System.Drawing.Size(331, 24);
+            this.lblInternalCode.StyleController = this.layoutControl1;
+            this.lblInternalCode.TabIndex = 9;
+            this.lblInternalCode.Text = "Código interno";
+            // 
+            // spePrice
+            // 
+            this.spePrice.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.spePrice.Location = new System.Drawing.Point(865, 95);
+            this.spePrice.Name = "spePrice";
+            this.spePrice.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spePrice.Properties.Appearance.Options.UseFont = true;
+            this.spePrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.spePrice.Size = new System.Drawing.Size(96, 30);
+            this.spePrice.StyleController = this.layoutControl1;
+            this.spePrice.TabIndex = 8;
             // 
             // cmbTrazinsRef
             // 
@@ -254,6 +304,36 @@
             this.lblGeneralData.TabIndex = 4;
             this.lblGeneralData.Text = "Datos Generales";
             // 
+            // txtInternalCode
+            // 
+            this.txtInternalCode.Location = new System.Drawing.Point(2, 175);
+            this.txtInternalCode.Name = "txtInternalCode";
+            this.txtInternalCode.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInternalCode.Properties.Appearance.Options.UseFont = true;
+            this.txtInternalCode.Size = new System.Drawing.Size(303, 30);
+            this.txtInternalCode.StyleController = this.layoutControl1;
+            this.txtInternalCode.TabIndex = 11;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(337, 175);
+            this.txtName.Name = "txtName";
+            this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Properties.Appearance.Options.UseFont = true;
+            this.txtName.Size = new System.Drawing.Size(624, 30);
+            this.txtName.StyleController = this.layoutControl1;
+            this.txtName.TabIndex = 12;
+            // 
+            // txtAka
+            // 
+            this.txtAka.Location = new System.Drawing.Point(337, 249);
+            this.txtAka.Name = "txtAka";
+            this.txtAka.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAka.Properties.Appearance.Options.UseFont = true;
+            this.txtAka.Size = new System.Drawing.Size(624, 30);
+            this.txtAka.StyleController = this.layoutControl1;
+            this.txtAka.TabIndex = 13;
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -269,7 +349,8 @@
             this.lciNameLabel,
             this.lciInternalCode,
             this.lciName,
-            this.lciAka});
+            this.lciAka,
+            this.lciBatchNumber});
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.Root.Size = new System.Drawing.Size(963, 809);
@@ -327,6 +408,21 @@
             this.lciManufacturerRef.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciManufacturerRef.TextSize = new System.Drawing.Size(215, 24);
             // 
+            // lciPrice
+            // 
+            this.lciPrice.AppearanceItemCaption.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lciPrice.AppearanceItemCaption.Options.UseFont = true;
+            this.lciPrice.Control = this.spePrice;
+            this.lciPrice.Location = new System.Drawing.Point(863, 66);
+            this.lciPrice.MaxSize = new System.Drawing.Size(0, 61);
+            this.lciPrice.MinSize = new System.Drawing.Size(1, 61);
+            this.lciPrice.Name = "lciPrice";
+            this.lciPrice.Size = new System.Drawing.Size(100, 61);
+            this.lciPrice.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.lciPrice.Text = "Precio";
+            this.lciPrice.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciPrice.TextSize = new System.Drawing.Size(215, 24);
+            // 
             // lciTrazinsRef
             // 
             this.lciTrazinsRef.AppearanceItemCaption.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -346,61 +442,6 @@
             this.lciTrazinsRef.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciTrazinsRef.TextSize = new System.Drawing.Size(215, 24);
             // 
-            // pnlRightAlig
-            // 
-            this.pnlRightAlig.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRightAlig.Location = new System.Drawing.Point(1134, 75);
-            this.pnlRightAlig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlRightAlig.Name = "pnlRightAlig";
-            this.pnlRightAlig.Size = new System.Drawing.Size(116, 809);
-            this.pnlRightAlig.TabIndex = 20;
-            // 
-            // spePrice
-            // 
-            this.spePrice.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.spePrice.Location = new System.Drawing.Point(865, 95);
-            this.spePrice.Name = "spePrice";
-            this.spePrice.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spePrice.Properties.Appearance.Options.UseFont = true;
-            this.spePrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spePrice.Size = new System.Drawing.Size(96, 30);
-            this.spePrice.StyleController = this.layoutControl1;
-            this.spePrice.TabIndex = 8;
-            // 
-            // lciPrice
-            // 
-            this.lciPrice.AppearanceItemCaption.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lciPrice.AppearanceItemCaption.Options.UseFont = true;
-            this.lciPrice.Control = this.spePrice;
-            this.lciPrice.Location = new System.Drawing.Point(863, 66);
-            this.lciPrice.MaxSize = new System.Drawing.Size(0, 61);
-            this.lciPrice.MinSize = new System.Drawing.Size(1, 61);
-            this.lciPrice.Name = "lciPrice";
-            this.lciPrice.Size = new System.Drawing.Size(100, 61);
-            this.lciPrice.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.lciPrice.Text = "Precio";
-            this.lciPrice.TextLocation = DevExpress.Utils.Locations.Top;
-            this.lciPrice.TextSize = new System.Drawing.Size(215, 24);
-            // 
-            // lblInternalCode
-            // 
-            this.lblInternalCode.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInternalCode.Appearance.Options.UseFont = true;
-            this.lblInternalCode.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.lblInternalCode.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.lblInternalCode.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.ic_obligatory;
-            this.lblInternalCode.Location = new System.Drawing.Point(2, 147);
-            this.lblInternalCode.Name = "lblInternalCode";
-            this.lblInternalCode.Size = new System.Drawing.Size(331, 24);
-            this.lblInternalCode.StyleController = this.layoutControl1;
-            this.lblInternalCode.TabIndex = 9;
-            this.lblInternalCode.Text = "Código interno";
-            // 
             // lciInternalCodeLabel
             // 
             this.lciInternalCodeLabel.Control = this.lblInternalCode;
@@ -413,20 +454,6 @@
             this.lciInternalCodeLabel.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciInternalCodeLabel.TextSize = new System.Drawing.Size(0, 0);
             this.lciInternalCodeLabel.TextVisible = false;
-            // 
-            // lblName
-            // 
-            this.lblName.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Appearance.Options.UseFont = true;
-            this.lblName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.lblName.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.lblName.ImageOptions.Image = global::TrazinsAtenea.Properties.Resources.ic_obligatory;
-            this.lblName.Location = new System.Drawing.Point(337, 147);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(624, 24);
-            this.lblName.StyleController = this.layoutControl1;
-            this.lblName.TabIndex = 10;
-            this.lblName.Text = "Nombre";
             // 
             // lciNameLabel
             // 
@@ -441,16 +468,6 @@
             this.lciNameLabel.TextSize = new System.Drawing.Size(0, 0);
             this.lciNameLabel.TextVisible = false;
             // 
-            // txtInternalCode
-            // 
-            this.txtInternalCode.Location = new System.Drawing.Point(2, 175);
-            this.txtInternalCode.Name = "txtInternalCode";
-            this.txtInternalCode.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInternalCode.Properties.Appearance.Options.UseFont = true;
-            this.txtInternalCode.Size = new System.Drawing.Size(303, 30);
-            this.txtInternalCode.StyleController = this.layoutControl1;
-            this.txtInternalCode.TabIndex = 11;
-            // 
             // lciInternalCode
             // 
             this.lciInternalCode.Control = this.txtInternalCode;
@@ -461,16 +478,6 @@
             this.lciInternalCode.TextSize = new System.Drawing.Size(0, 0);
             this.lciInternalCode.TextVisible = false;
             // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(337, 175);
-            this.txtName.Name = "txtName";
-            this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Properties.Appearance.Options.UseFont = true;
-            this.txtName.Size = new System.Drawing.Size(624, 30);
-            this.txtName.StyleController = this.layoutControl1;
-            this.txtName.TabIndex = 12;
-            // 
             // lciName
             // 
             this.lciName.Control = this.txtName;
@@ -480,28 +487,50 @@
             this.lciName.TextSize = new System.Drawing.Size(0, 0);
             this.lciName.TextVisible = false;
             // 
-            // txtAka
-            // 
-            this.txtAka.Location = new System.Drawing.Point(2, 249);
-            this.txtAka.Name = "txtAka";
-            this.txtAka.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAka.Properties.Appearance.Options.UseFont = true;
-            this.txtAka.Size = new System.Drawing.Size(959, 30);
-            this.txtAka.StyleController = this.layoutControl1;
-            this.txtAka.TabIndex = 13;
-            // 
             // lciAka
             // 
             this.lciAka.AppearanceItemCaption.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lciAka.AppearanceItemCaption.Options.UseFont = true;
             this.lciAka.Control = this.txtAka;
-            this.lciAka.Location = new System.Drawing.Point(0, 207);
+            this.lciAka.Location = new System.Drawing.Point(335, 207);
             this.lciAka.Name = "lciAka";
             this.lciAka.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 15, 2);
-            this.lciAka.Size = new System.Drawing.Size(963, 74);
+            this.lciAka.Size = new System.Drawing.Size(628, 74);
             this.lciAka.Text = "Alias";
             this.lciAka.TextLocation = DevExpress.Utils.Locations.Top;
             this.lciAka.TextSize = new System.Drawing.Size(215, 24);
+            // 
+            // pnlRightAlig
+            // 
+            this.pnlRightAlig.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlRightAlig.Location = new System.Drawing.Point(1134, 75);
+            this.pnlRightAlig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlRightAlig.Name = "pnlRightAlig";
+            this.pnlRightAlig.Size = new System.Drawing.Size(116, 809);
+            this.pnlRightAlig.TabIndex = 20;
+            // 
+            // txtBatchNumber
+            // 
+            this.txtBatchNumber.Location = new System.Drawing.Point(2, 249);
+            this.txtBatchNumber.Name = "txtBatchNumber";
+            this.txtBatchNumber.Properties.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBatchNumber.Properties.Appearance.Options.UseFont = true;
+            this.txtBatchNumber.Size = new System.Drawing.Size(303, 30);
+            this.txtBatchNumber.StyleController = this.layoutControl1;
+            this.txtBatchNumber.TabIndex = 14;
+            // 
+            // lciBatchNumber
+            // 
+            this.lciBatchNumber.AppearanceItemCaption.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lciBatchNumber.AppearanceItemCaption.Options.UseFont = true;
+            this.lciBatchNumber.Control = this.txtBatchNumber;
+            this.lciBatchNumber.Location = new System.Drawing.Point(0, 207);
+            this.lciBatchNumber.Name = "lciBatchNumber";
+            this.lciBatchNumber.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 30, 15, 2);
+            this.lciBatchNumber.Size = new System.Drawing.Size(335, 74);
+            this.lciBatchNumber.Text = "Número de lote";
+            this.lciBatchNumber.TextLocation = DevExpress.Utils.Locations.Top;
+            this.lciBatchNumber.TextSize = new System.Drawing.Size(215, 24);
             // 
             // InstrumentalNewForm
             // 
@@ -527,22 +556,24 @@
             this.pnlCenter.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spePrice.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInternalCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAka.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciGeneralData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciManufacturer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciManufacturerRef)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciTrazinsRef)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spePrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciTrazinsRef)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciInternalCodeLabel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciNameLabel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtInternalCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciInternalCode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAka.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciAka)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBatchNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciBatchNumber)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -581,5 +612,7 @@
         private DevExpress.XtraLayout.LayoutControlItem lciName;
         private DevExpress.XtraEditors.TextEdit txtAka;
         private DevExpress.XtraLayout.LayoutControlItem lciAka;
+        private DevExpress.XtraEditors.TextEdit txtBatchNumber;
+        private DevExpress.XtraLayout.LayoutControlItem lciBatchNumber;
     }
 }
